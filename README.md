@@ -32,11 +32,11 @@ DES routing:        Claim -> [epistemic state S(t)]  -> Operation -> Model
 ## Installation
 
 ```bash
-pip install anthropic
-export ANTHROPIC_API_KEY=your_key_here
+pip install httpx
+export DEEPSEEK_API_KEY=your_key_here
 ```
 
-Requires Python 3.11+.
+Requires Python 3.11+. Uses the [DeepSeek chat completions API](https://api.deepseek.com) (`deepseek-chat` model).
 
 ---
 

@@ -31,7 +31,7 @@ import sys
 from dataclasses import asdict, dataclass, field
 from typing import Optional
 
-import anthropic
+import httpx
 
 # ---------------------------------------------------------------------------
 # Layer 1: Claim Structure
@@ -139,25 +139,35 @@ def new_branch_id(state: EpistemicState) -> str:
 # LLM Integration (Layer 0)
 # ---------------------------------------------------------------------------
 
-_client: Optional[anthropic.Anthropic] = None
+_DEEPSEEK_BASE = "https://api.deepseek.com/chat/completions"
+_DEEPSEEK_MODEL = "deepseek-chat"
 
 
-def get_client() -> anthropic.Anthropic:
-    """Return (or lazily create) the shared Anthropic client."""
-    global _client
-    if _client is None:
-        _client = anthropic.Anthropic()
-    return _client
+def get_api_key() -> str:
+    """Return the DeepSeek API key from the environment."""
+    key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not key:
+        raise EnvironmentError("DEEPSEEK_API_KEY is not set")
+    return key
 
 
 def _llm_call(prompt: str) -> str:
-    """Single LLM call, returns raw text."""
-    response = get_client().messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=1024,
-        messages=[{"role": "user", "content": prompt}],
+    """Single LLM call via DeepSeek chat completions, returns raw text."""
+    response = httpx.post(
+        _DEEPSEEK_BASE,
+        headers={
+            "Authorization": f"Bearer {get_api_key()}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": _DEEPSEEK_MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 1024,
+        },
+        timeout=60.0,
     )
-    return response.content[0].text
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"]
 
 
 def _extract_json(text: str) -> dict:
