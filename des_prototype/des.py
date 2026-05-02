@@ -182,46 +182,67 @@ def _llm_json(prompt: str, retry_prompt: Optional[str] = None) -> Optional[dict]
 # Initial Claim Generation
 # ---------------------------------------------------------------------------
 
-def generate_initial_claim(research_question: str, state: EpistemicState) -> Claim:
-    prompt = f"""You are an epistemic claim extractor.
-Given this research question: "{research_question}"
+INITIAL_CLAIM_PROMPT = """\
+You are an epistemic claim generator for a research sequencer.
 
-Extract the core falsifiable claim from this question.
-Return ONLY valid JSON (no markdown, no explanation):
+Given this research question: {question}
+
+Generate an initial claim that reflects GENUINE scientific, empirical, or
+theoretical uncertainty. Requirements:
+- confidence MUST be between 0.3 and 0.65
+- status MUST be "hypothesis" or "disputed" — never "supported" or "established"
+- The claim must identify a real tension, contested evidence, or open question
+- Do NOT generate trivially true or consensus claims
+
+Return ONLY valid JSON:
 {{
-  "subject": "<the main subject>",
-  "predicate": "<the relationship or property being claimed>",
-  "object": "<what is being asserted about the subject>",
-  "modality": "hypothesis",
+  "subject": "...",
+  "predicate": "...",
+  "object": "...",
+  "status": "hypothesis",
   "confidence": 0.5,
-  "scope": {{"domain": "<relevant domain>"}},
+  "modality": "hypothesis",
+  "evidence_refs": [],
+  "scope": {{"domain": "..."}},
   "qualifier": {{}}
 }}"""
 
+
+def generate_initial_claim(research_question: str, state: EpistemicState) -> Claim:
+    prompt = INITIAL_CLAIM_PROMPT.format(question=research_question)
+
     result = _llm_json(prompt)
     if result is None:
-        # Fallback: construct a minimal claim from the question
         result = {
-            "subject": "decentralized energy storage",
-            "predicate": "is",
-            "object": "economically viable",
+            "subject": "fiscal austerity",
+            "predicate": "reduces",
+            "object": "sovereign debt in the long run",
+            "status": "disputed",
             "modality": "hypothesis",
-            "confidence": 0.5,
-            "scope": {"domain": "economics"},
-            "qualifier": {},
+            "confidence": 0.45,
         }
 
+    # Clamp confidence to the required uncertainty range
+    confidence = float(result.get("confidence", 0.45))
+    confidence = max(0.3, min(0.65, confidence))
+
+    # Honor the LLM's status (hypothesis/disputed) — not override with "unknown"
+    status = result.get("status", "hypothesis")
+    if status not in ("hypothesis", "disputed"):
+        status = "hypothesis"
+
     cid = new_claim_id(state)
+    # scope intentionally empty so T4 (decompose) fires after initial T3 (evidence)
     return Claim(
         id=cid,
         subject=result.get("subject", research_question),
         predicate=result.get("predicate", "relates to"),
         object=result.get("object", "unknown"),
         modality=result.get("modality", "hypothesis"),
-        confidence=float(result.get("confidence", 0.5)),
-        scope=result.get("scope", {}),
+        confidence=confidence,
+        scope={},
         qualifier=result.get("qualifier", {}),
-        status="unknown",
+        status=status,
     )
 
 
@@ -296,7 +317,11 @@ Return ONLY valid JSON:
 {{"conflict_reason": "...", "suggested_status": "disputed"}}"""
 
     result = _llm_json(prompt)
-    reason = result.get("conflict_reason", "Unspecified conflict detected") if result else "Unspecified conflict"
+    fallback_reason = (
+        f"Counter-hypothesis exists for '{claim.subject} {claim.predicate} {claim.object}'; "
+        "epistemic tension flagged for review"
+    )
+    reason = result.get("conflict_reason", fallback_reason) if result else fallback_reason
     claim.evidence_refs.append(f"[CONFLICT] {reason}")
     claim.status = result.get("suggested_status", "disputed") if result else "disputed"
     claim.conflict = False  # conflict is now explicit, flag cleared
@@ -309,8 +334,6 @@ def t3_request_evidence(claim: Claim, state: EpistemicState) -> str:
     """Simulate tool call — return placeholder evidence."""
     simulated = f"[simulated evidence: search result for '{claim.subject} {claim.object}']"
     claim.evidence_refs.append(simulated)
-    # Simulate evidence slightly boosts confidence and moves toward supported
-    claim.confidence = min(1.0, claim.confidence + 0.1)
     if claim.status == "unknown":
         claim.status = "disputed"  # evidence found but not yet evaluated
     claim.history.append("T3")
@@ -318,47 +341,98 @@ def t3_request_evidence(claim: Claim, state: EpistemicState) -> str:
     return f"Evidence placeholder added: {simulated}"
 
 
-def t4_decompose_claim(claim: Claim, state: EpistemicState) -> str:
-    """LLM: break into 2–3 sub-claims."""
-    prompt = f"""You are an epistemic decomposition engine.
-Given this claim:
-{_claim_summary(claim)}
+T4_PROMPT = """\
+You are an epistemic decomposition engine.
 
-Decompose it into 2-3 more specific, concrete sub-claims.
+Given this claim: {claim}
+
+Decompose it into 2-3 more specific sub-claims. Requirements:
+- At least one sub-claim should have confidence < 0.45
+- At least one sub-claim should represent a COMPETING or QUALIFYING perspective
+  that creates tension with the others (not outright contradiction, but genuine
+  epistemic friction)
+- Sub-claims should differ in scope, qualifier, or modality
+
 Return ONLY valid JSON:
 {{
   "sub_claims": [
-    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5, "scope": {{"domain": "..."}}, "qualifier": {{}}}},
-    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5, "scope": {{"domain": "..."}}, "qualifier": {{}}}}
+    {{
+      "subject": "...",
+      "predicate": "...",
+      "object": "...",
+      "modality": "hypothesis",
+      "confidence": 0.55,
+      "scope": {{"domain": "..."}},
+      "qualifier": {{}}
+    }},
+    {{
+      "subject": "...",
+      "predicate": "...",
+      "object": "...",
+      "modality": "suggestion",
+      "confidence": 0.38,
+      "scope": {{"domain": "..."}},
+      "qualifier": {{}}
+    }}
   ]
 }}"""
 
-    result = _llm_json(prompt)
-    new_ids = []
-    if result and "sub_claims" in result:
-        for sc in result["sub_claims"][:3]:
-            cid = new_claim_id(state)
-            new_claim = Claim(
-                id=cid,
-                subject=sc.get("subject", claim.subject),
-                predicate=sc.get("predicate", claim.predicate),
-                object=sc.get("object", claim.object),
-                modality=sc.get("modality", "hypothesis"),
-                confidence=float(sc.get("confidence", 0.5)),
-                scope=sc.get("scope", {"domain": "general"}),
-                qualifier=sc.get("qualifier", {}),
-                status="unknown",
-                parent_id=claim.id,
-            )
-            state.claims[cid] = new_claim
-            new_ids.append(cid)
 
-    # Original claim: seal if decomposed successfully; otherwise move to disputed to avoid T4 loop
-    claim.status = "supported" if new_ids else "disputed"
-    claim.sealed = bool(new_ids)  # seal parent once decomposed
+def t4_decompose_claim(claim: Claim, state: EpistemicState) -> str:
+    """LLM: break into 2–3 sub-claims."""
+    prompt = T4_PROMPT.format(claim=_claim_summary(claim))
+
+    result = _llm_json(prompt)
+    raw_sub_claims = result.get("sub_claims", []) if result else []
+
+    # Hard fallback: if the LLM fails to produce sub-claims, synthesize two structurally
+    # distinct sub-claims manually so the sequencer can still branch and process them.
+    if not raw_sub_claims:
+        raw_sub_claims = [
+            {
+                "subject": claim.subject,
+                "predicate": claim.predicate,
+                "object": f"{claim.object} under favorable conditions",
+                "modality": "hypothesis",
+                "confidence": 0.58,
+                "scope": {"domain": "supportive context"},
+                "qualifier": {},
+            },
+            {
+                "subject": claim.subject,
+                "predicate": "does not necessarily " + claim.predicate,
+                "object": f"{claim.object} under adverse conditions",
+                "modality": "suggestion",
+                "confidence": 0.34,
+                "scope": {"domain": "contested context"},
+                "qualifier": {},
+            },
+        ]
+
+    new_ids = []
+    for sc in raw_sub_claims[:3]:
+        cid = new_claim_id(state)
+        new_claim = Claim(
+            id=cid,
+            subject=sc.get("subject", claim.subject),
+            predicate=sc.get("predicate", claim.predicate),
+            object=sc.get("object", claim.object),
+            modality=sc.get("modality", "hypothesis"),
+            confidence=float(sc.get("confidence", 0.5)),
+            scope=sc.get("scope", {"domain": "general"}),
+            qualifier=sc.get("qualifier", {}),
+            status="unknown",
+            parent_id=claim.id,
+        )
+        state.claims[cid] = new_claim
+        new_ids.append(cid)
+
+    llm_note = "" if result and result.get("sub_claims") else " (fallback)"
+    claim.status = "supported"
+    claim.sealed = True  # parent sealed after decomposition
     claim.history.append("T4")
     state.operation_history.append(f"T4 on {claim.id}")
-    return f"Decomposed into sub-claims: {', '.join(new_ids)}" if new_ids else "T4: decomposition failed"
+    return f"Decomposed into sub-claims{llm_note}: {', '.join(new_ids)}"
 
 
 def t5_generate_counter_hypothesis(claim: Claim, state: EpistemicState) -> str:
@@ -378,29 +452,46 @@ Return ONLY valid JSON:
 }}"""
 
     result = _llm_json(prompt)
+
+    # Build counter from LLM result or fall back to a structural negation
     if result:
-        cid = new_claim_id(state)
-        counter = Claim(
-            id=cid,
-            subject=result.get("counter_subject", claim.subject),
-            predicate=result.get("counter_predicate", "does not " + claim.predicate),
-            object=result.get("counter_object", claim.object),
-            modality="hypothesis",
-            confidence=float(result.get("counter_confidence", 0.6)),
-            scope=claim.scope.copy(),
-            qualifier=claim.qualifier.copy(),
-            status="unknown",
-            parent_id=claim.id,
-        )
-        state.claims[cid] = counter
-        # Flag original as disputed
-        claim.status = "disputed"
-        claim.history.append("T5")
-        state.operation_history.append(f"T5 on {claim.id}")
-        return f"Counter-hypothesis generated: {cid} — {result.get('reasoning', '')}"
+        counter_subject = result.get("counter_subject", claim.subject)
+        counter_predicate = result.get("counter_predicate", "does not " + claim.predicate)
+        counter_object = result.get("counter_object", claim.object)
+        counter_confidence = float(result.get("counter_confidence", 0.6))
+        reasoning = result.get("reasoning", "")
+        llm_note = ""
+    else:
+        counter_subject = claim.subject
+        counter_predicate = "does not " + claim.predicate
+        counter_object = claim.object
+        counter_confidence = 0.6
+        reasoning = "structural negation (LLM unavailable)"
+        llm_note = " (fallback)"
+
+    cid = new_claim_id(state)
+    counter = Claim(
+        id=cid,
+        subject=counter_subject,
+        predicate=counter_predicate,
+        object=counter_object,
+        modality="hypothesis",
+        confidence=counter_confidence,
+        scope=claim.scope.copy(),
+        qualifier=claim.qualifier.copy(),
+        status="unknown",
+        parent_id=claim.id,
+    )
+    state.claims[cid] = counter
+
+    # Generating a counter reveals a conflict on the original; T2 makes it explicit next visit.
+    claim.status = "disputed"
+    claim.conflict = True
+    # Always boost confidence past the T5 threshold to prevent re-triggering T5.
+    claim.confidence = max(claim.confidence, 0.42)
     claim.history.append("T5")
     state.operation_history.append(f"T5 on {claim.id}")
-    return "T5: counter-hypothesis generation failed"
+    return f"Counter-hypothesis generated{llm_note}: {cid} — {reasoning}"
 
 
 def t6_explore_evidence_path(claim: Claim, state: EpistemicState) -> str:
