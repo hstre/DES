@@ -1,17 +1,33 @@
 """
 Dynamic Epistemic Sequencer (DES) — Standalone Prototype v0.1
 
-Manages epistemic state transitions in AI research workflows.
-All routing is done by the transition table; the LLM is a dumb operator.
+Architecture:
+    Claim → EpistemicState S(t) → Transition Table (T1–T9) → LLM Operation → S(t+1)
+
+The transition table runs entirely in Python; the LLM executes operations but never
+selects the next step. S(t) is persisted to des_state.json after every iteration
+(PES: Persistent Epistemic Supervisor), satisfying:
+  C1 — evaluative decisions depend on the full S(t), not just the current prompt
+  C2 — operation history is not reconstructible from the prompt alone
+
+Transition priority (T1 highest):
+    T1 contradicted            → resolve_conflict (branch)
+    T2 conflict==True          → make_conflict_explicit
+    T3 no evidence             → request_evidence
+    T4 scope=={} or underspec  → decompose_claim
+    T5 confidence < 0.4        → generate_counter_hypothesis
+    T6 hypothesis + conf>0.6   → explore_evidence_path
+    T7 no qualifier + has scope → refine_qualifier
+    T8 supported + conf>0.8    → seal_claim
+    T9 branch_open + all branches supported → trigger_reframing
 """
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
-import re
 import sys
-import uuid
 from dataclasses import asdict, dataclass, field
 from typing import Optional
 
@@ -37,7 +53,7 @@ class Claim:
     branch_open: bool = False
     sealed: bool = False
     history: list[str] = field(default_factory=list)
-    parent_id: Optional[str] = None  # set when this claim is a sub-claim
+    parent_id: Optional[str] = None
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -90,15 +106,17 @@ class EpistemicState:
 # Layer 4: PES — Persistence
 # ---------------------------------------------------------------------------
 
-STATE_FILE = os.path.join(os.path.dirname(__file__), "des_state.json")
+STATE_FILE = "des_state.json"
 
 
 def save_state(state: EpistemicState) -> None:
+    """Persist S(t) to disk."""
     with open(STATE_FILE, "w") as f:
         json.dump(state.to_dict(), f, indent=2)
 
 
 def load_state() -> Optional[EpistemicState]:
+    """Load S(t) from disk; returns None if no state file exists."""
     if not os.path.exists(STATE_FILE):
         return None
     with open(STATE_FILE) as f:
@@ -106,12 +124,13 @@ def load_state() -> Optional[EpistemicState]:
 
 
 def new_claim_id(state: EpistemicState) -> str:
+    """Return the next sequential claim ID (C001, C002, …)."""
     n = len(state.claims) + 1
     return f"C{n:03d}"
 
 
 def new_branch_id(state: EpistemicState) -> str:
-    """Branch claims use a 'B' prefix so T3 can identify them for stronger evidence."""
+    """Return the next B-prefixed branch ID; T3 uses the prefix to apply stronger evidence."""
     n = sum(1 for cid in state.claims if cid.startswith("B")) + 1
     return f"B{n:03d}"
 
@@ -124,6 +143,7 @@ _client: Optional[anthropic.Anthropic] = None
 
 
 def get_client() -> anthropic.Anthropic:
+    """Return (or lazily create) the shared Anthropic client."""
     global _client
     if _client is None:
         _client = anthropic.Anthropic()
@@ -133,7 +153,7 @@ def get_client() -> anthropic.Anthropic:
 def _llm_call(prompt: str) -> str:
     """Single LLM call, returns raw text."""
     response = get_client().messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=1024,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -198,8 +218,8 @@ Answer ONLY with JSON: {{"contradicts": true}} or {{"contradicts": false}}"""
 
 def check_for_contradiction(claim_a: Claim, claim_b: Claim) -> bool:
     """
-    Returns True if claim_b directly negates claim_a (same subject+predicate, opposing object).
-    Uses LLM for semantic check; falls back to a simple structural heuristic.
+    Returns True if claim_b directly negates claim_a.
+    Uses LLM for semantic check; falls back to a structural negation heuristic.
     """
     prompt = CONTRADICTION_CHECK_PROMPT.format(
         claim_a_subject=claim_a.subject,
@@ -213,7 +233,6 @@ def check_for_contradiction(claim_a: Claim, claim_b: Claim) -> bool:
     if result is not None:
         return bool(result.get("contradicts", False))
 
-    # Structural heuristic: counter predicate likely contains "not" or "does not"
     neg_markers = ("not", "never", "no ", "cannot", "can't", "doesn't", "does not")
     b_pred_lower = claim_b.predicate.lower()
     return any(m in b_pred_lower for m in neg_markers)
@@ -240,7 +259,7 @@ If the evidence strongly supports the claim, set status="supported" and confiden
 
 
 def simulate_evidence(claim: Claim) -> str:
-    """Return stronger simulated evidence for branch claims (B-prefix)."""
+    """Return simulated evidence; branch claims (B-prefix) get domain-specific confirmation."""
     if claim.id.startswith("B"):
         domain = claim.scope.get("domain", "general")
         return (
@@ -253,7 +272,7 @@ def simulate_evidence(claim: Claim) -> str:
 
 def evaluate_branch_claim(claim: Claim) -> None:
     """
-    For branch claims, call LLM to update status/confidence based on evidence.
+    Call LLM to update a branch claim's status and confidence from its evidence.
     Falls back to supported+0.85 so T9 can always fire.
     """
     evidence_text = "; ".join(claim.evidence_refs[-2:])
@@ -301,24 +320,25 @@ Return ONLY valid JSON:
 
 
 def generate_initial_claim(research_question: str, state: EpistemicState) -> Claim:
+    """Convert the research question into a structured Claim with genuine uncertainty."""
     prompt = INITIAL_CLAIM_PROMPT.format(question=research_question)
 
     result = _llm_json(prompt)
     if result is None:
+        words = research_question.split()
+        subj = " ".join(words[:3]) if len(words) >= 3 else research_question
         result = {
-            "subject": "nuclear energy",
-            "predicate": "is a net positive for",
-            "object": "climate goals given IPCC and Energiewende evidence",
-            "status": "disputed",
+            "subject": subj,
+            "predicate": "has uncertain implications for",
+            "object": research_question,
+            "status": "hypothesis",
             "modality": "hypothesis",
             "confidence": 0.45,
         }
 
-    # Clamp confidence to the required uncertainty range
     confidence = float(result.get("confidence", 0.45))
     confidence = max(0.3, min(0.65, confidence))
 
-    # Honor the LLM's status (hypothesis/disputed) — not override with "unknown"
     status = result.get("status", "hypothesis")
     if status not in ("hypothesis", "disputed"):
         status = "hypothesis"
@@ -343,6 +363,7 @@ def generate_initial_claim(research_question: str, state: EpistemicState) -> Cla
 # ---------------------------------------------------------------------------
 
 def _claim_summary(claim: Claim) -> str:
+    """Return a compact JSON representation of the claim for use in LLM prompts."""
     return json.dumps({
         "id": claim.id,
         "subject": claim.subject,
@@ -358,7 +379,7 @@ def _claim_summary(claim: Claim) -> str:
 
 
 def t1_resolve_conflict(claim: Claim, state: EpistemicState) -> str:
-    """BRANCH: create two B-prefixed sub-claims for adjudication."""
+    """Create two B-prefixed branch claims to adjudicate a direct contradiction."""
     branch_scope = claim.scope.copy() if claim.scope else {"domain": claim.subject[:30]}
     if not branch_scope:
         branch_scope = {"domain": "adjudication"}
@@ -379,7 +400,6 @@ Return ONLY valid JSON:
     result = _llm_json(prompt)
     raw = result.get("sub_claims", []) if result else []
 
-    # Fallback: structural pro/con branches derived from the contradicted claim
     if len(raw) < 2:
         raw = [
             {
@@ -417,20 +437,17 @@ Return ONLY valid JSON:
         new_ids.append(bid)
 
     claim.branch_open = True
-    # Change status away from "contradicted" to prevent T1 from looping;
-    # clear conflict so T2 doesn't fire unnecessarily after branching.
+    # Change status away from "contradicted" to prevent T1 from looping
     claim.status = "disputed"
     claim.conflict = False
     claim.history.append("T1")
     state.operation_history.append(f"T1 on {claim.id}")
     llm_note = "" if result and result.get("sub_claims") else " (fallback)"
-    branch_str = ", ".join(new_ids)
-    print(f"  [T1] BRANCH created{llm_note}: {claim.id} -> {branch_str}")
-    return f"BRANCH created{llm_note}: {claim.id} -> {branch_str}"
+    return f"BRANCH created{llm_note}: {claim.id} -> {', '.join(new_ids)}"
 
 
 def t2_make_conflict_explicit(claim: Claim, state: EpistemicState) -> str:
-    """PATCH with conflict reason, flag for user."""
+    """Annotate the claim with a conflict reason and mark it disputed."""
     prompt = f"""You are an epistemic conflict analyst.
 This claim has a detected conflict:
 {_claim_summary(claim)}
@@ -447,20 +464,18 @@ Return ONLY valid JSON:
     reason = result.get("conflict_reason", fallback_reason) if result else fallback_reason
     claim.evidence_refs.append(f"[CONFLICT] {reason}")
     claim.status = result.get("suggested_status", "disputed") if result else "disputed"
-    claim.conflict = False  # conflict is now explicit, flag cleared
+    claim.conflict = False
     claim.history.append("T2")
     state.operation_history.append(f"T2 on {claim.id}")
     return f"Conflict made explicit: {reason}"
 
 
 def t3_request_evidence(claim: Claim, state: EpistemicState) -> str:
-    """Simulate tool call — return placeholder evidence.
-    For branch claims (B-prefix), use stronger evidence and run a claim update."""
+    """Simulate evidence retrieval; branch claims get a full LLM-based status update."""
     simulated = simulate_evidence(claim)
     claim.evidence_refs.append(simulated)
 
     if claim.id.startswith("B"):
-        # Branch claims get an LLM-based status update from the evidence
         evaluate_branch_claim(claim)
         update_note = f" → status={claim.status}, confidence={claim.confidence:.2f}"
     else:
@@ -511,14 +526,12 @@ Return ONLY valid JSON:
 
 
 def t4_decompose_claim(claim: Claim, state: EpistemicState) -> str:
-    """LLM: break into 2–3 sub-claims."""
+    """Decompose a broad or underspecified claim into 2–3 sub-claims with epistemic tension."""
     prompt = T4_PROMPT.format(claim=_claim_summary(claim))
 
     result = _llm_json(prompt)
     raw_sub_claims = result.get("sub_claims", []) if result else []
 
-    # Hard fallback: if the LLM fails to produce sub-claims, synthesize two structurally
-    # distinct sub-claims manually so the sequencer can still branch and process them.
     if not raw_sub_claims:
         raw_sub_claims = [
             {
@@ -561,14 +574,14 @@ def t4_decompose_claim(claim: Claim, state: EpistemicState) -> str:
 
     llm_note = "" if result and result.get("sub_claims") else " (fallback)"
     claim.status = "supported"
-    claim.sealed = True  # parent sealed after decomposition
+    claim.sealed = True
     claim.history.append("T4")
     state.operation_history.append(f"T4 on {claim.id}")
     return f"Decomposed into sub-claims{llm_note}: {', '.join(new_ids)}"
 
 
 def t5_generate_counter_hypothesis(claim: Claim, state: EpistemicState) -> str:
-    """LLM: adversarial prompt to generate counter-hypothesis."""
+    """Generate an adversarial counter-hypothesis; escalate to T1 path if contradiction detected."""
     prompt = f"""You are an adversarial epistemic engine.
 Given this low-confidence claim:
 {_claim_summary(claim)}
@@ -585,7 +598,6 @@ Return ONLY valid JSON:
 
     result = _llm_json(prompt)
 
-    # Build counter from LLM result or fall back to a structural negation
     if result:
         counter_subject = result.get("counter_subject", claim.subject)
         counter_predicate = result.get("counter_predicate", "does not " + claim.predicate)
@@ -616,16 +628,14 @@ Return ONLY valid JSON:
     )
     state.claims[cid] = counter
 
-    # Check for direct contradiction; if found, escalate to T1 instead of T2.
     contradicts = check_for_contradiction(claim, counter)
     if contradicts:
         claim.status = "contradicted"
-        print(f"  [T5] Contradiction detected: {claim.id} vs {cid} → status=contradicted")
     else:
         claim.status = "disputed"
 
     claim.conflict = True
-    # Always boost confidence past the T5 threshold to prevent re-triggering T5.
+    # Boost confidence past T5 threshold to prevent re-triggering
     claim.confidence = max(claim.confidence, 0.42)
     claim.history.append("T5")
     state.operation_history.append(f"T5 on {claim.id}")
@@ -634,7 +644,7 @@ Return ONLY valid JSON:
 
 
 def t6_explore_evidence_path(claim: Claim, state: EpistemicState) -> str:
-    """LLM: suggest evidence sources for a high-confidence hypothesis."""
+    """Suggest evidence sources for a high-confidence hypothesis and advance it to supported."""
     prompt = f"""You are an epistemic research advisor.
 Given this hypothesis with reasonable confidence:
 {_claim_summary(claim)}
@@ -654,7 +664,7 @@ Return ONLY valid JSON:
             ref = f"[PATH:{ep.get('type','?')}] {ep.get('source','')} — {ep.get('rationale','')}"
             claim.evidence_refs.append(ref)
         claim.confidence = min(1.0, claim.confidence + 0.15)
-    # Evidence exploration completes hypothesis evaluation; boost confidence to T8 threshold
+    # Evidence exploration completes hypothesis evaluation; advance to T8-ready state
     claim.status = "supported"
     claim.confidence = max(0.82, min(1.0, claim.confidence + 0.15))
     claim.history.append("T6")
@@ -663,7 +673,7 @@ Return ONLY valid JSON:
 
 
 def t7_refine_qualifier(claim: Claim, state: EpistemicState) -> str:
-    """LLM: add temporal/geographic qualifier."""
+    """Add temporal and/or geographic qualifiers to narrow the claim's scope."""
     prompt = f"""You are an epistemic qualifier engine.
 Given this claim that has scope but no qualifier:
 {_claim_summary(claim)}
@@ -678,10 +688,8 @@ Return ONLY valid JSON:
     if result and "qualifier" in result:
         q = {k: v for k, v in result["qualifier"].items() if v}
         claim.qualifier = q
-    # Ensure qualifier is non-empty after T7 so it doesn't re-trigger
     if not claim.qualifier:
         claim.qualifier = {"temporal": "present", "geographic": "global"}
-    # Qualification reduces ambiguity — small confidence boost
     claim.confidence = min(1.0, claim.confidence + 0.05)
     claim.history.append("T7")
     state.operation_history.append(f"T7 on {claim.id}")
@@ -689,7 +697,7 @@ Return ONLY valid JSON:
 
 
 def t8_seal_claim(claim: Claim, state: EpistemicState) -> str:
-    """Mark as sealed, move to next."""
+    """Mark claim as epistemically complete."""
     claim.sealed = True
     claim.history.append("T8")
     state.operation_history.append(f"T8 on {claim.id}")
@@ -716,7 +724,7 @@ Return ONLY valid JSON:
 
 
 def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
-    """LLM: synthesize when all branches of a branched claim are supported."""
+    """Synthesize two supported branch claims into a new, more nuanced claim."""
     branches = [c for c in state.claims.values() if c.parent_id == claim.id]
     if len(branches) < 2:
         branches = branches + [branches[0]] if branches else []
@@ -732,7 +740,6 @@ def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
     )
     result = _llm_json(prompt)
 
-    # Build synthesis from LLM result or structural fallback
     if result:
         synth_subject = result.get("subject", claim.subject)
         synth_predicate = result.get("predicate", "reconciles")
@@ -767,7 +774,6 @@ def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
     claim.sealed = True
     claim.history.append("T9")
     state.operation_history.append(f"T9 on {claim.id}")
-    print(f"  [T9] REFRAME{llm_note}: {claim.id} -> {cid}")
     return f"REFRAME{llm_note}: {claim.id} -> {cid} — {rationale}"
 
 
@@ -778,46 +784,32 @@ def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
 def select_operation(claim: Claim, state: EpistemicState) -> tuple[str, callable]:
     """
     Evaluate the transition table and return (trigger_label, operation_fn).
-    Priority order: T1/T2 (CRITICAL) > T3 (HIGH) > T4 (HIGH) > T5/T6 (MEDIUM) > T7 (LOW) > T8 > T9
+    Priority: T1/T2 (CRITICAL) > T3/T4 (HIGH) > T5/T6 (MEDIUM) > T7 (LOW) > T8 > T9
+    The LLM never calls this function — routing is always decided here.
     """
-    # CRITICAL
     if claim.status == "contradicted":
         return "T1", t1_resolve_conflict
     if claim.conflict:
         return "T2", t2_make_conflict_explicit
-
-    # HIGH
     if not claim.evidence_refs and claim.modality != "established":
         return "T3", t3_request_evidence
     if claim.status == "underspecified" or claim.scope == {}:
         return "T4", t4_decompose_claim
-
-    # MEDIUM
     if claim.confidence < 0.4 and claim.status != "contradicted":
         return "T5", t5_generate_counter_hypothesis
     if (claim.modality == "hypothesis" and claim.confidence > 0.6
             and claim.status != "supported" and "T6" not in claim.history):
         return "T6", t6_explore_evidence_path
-
-    # LOW
     if claim.qualifier == {} and claim.scope != {}:
         return "T7", t7_refine_qualifier
-
-    # T8 — seal if supported and high confidence
     if claim.status == "supported" and claim.confidence > 0.8:
         return "T8", t8_seal_claim
-
-    # T9 — reframing if branch_open and all branches supported
     if claim.branch_open:
         branches = [c for c in state.claims.values() if c.parent_id == claim.id]
         if branches and all(c.status == "supported" for c in branches):
             return "T9", t9_trigger_reframing
-
-    # Stuck-state: hypothesis not yet evidence-explored
     if claim.modality == "hypothesis" and "T6" not in claim.history:
         return "T6", t6_explore_evidence_path
-
-    # Claim has completed all productive operations — seal it
     return "T8", t8_seal_claim
 
 
@@ -826,26 +818,20 @@ def select_operation(claim: Claim, state: EpistemicState) -> tuple[str, callable
 # ---------------------------------------------------------------------------
 
 def process_weak_candidates(state: EpistemicState, focus_claim: Claim) -> None:
-    """Reactivate weak candidates that share subject/object with focus claim."""
-    reactivated = []
+    """Reactivate weak candidates that share subject/object overlap with the focus claim."""
     for wid in list(state.weak_candidates):
         if wid not in state.claims:
             continue
         wc = state.claims[wid]
-        # Simple string overlap check
         if (focus_claim.subject.lower() in wc.subject.lower() or
                 wc.subject.lower() in focus_claim.subject.lower() or
                 focus_claim.object.lower() in wc.object.lower() or
                 wc.object.lower() in focus_claim.object.lower()):
             state.weak_candidates.remove(wid)
-            reactivated.append(wid)
-
-    if reactivated:
-        print(f"  [PES] Reactivated weak candidates: {', '.join(reactivated)}")
 
 
 def maybe_move_to_weak(claim: Claim, state: EpistemicState) -> bool:
-    """Move claim to weak_candidates if confidence < 0.3 and not contradicted."""
+    """Move claim to weak_candidates if confidence < 0.3 and not contradicted or sealed."""
     if claim.confidence < 0.3 and claim.status != "contradicted" and not claim.sealed:
         if claim.id not in state.weak_candidates:
             state.weak_candidates.append(claim.id)
@@ -859,11 +845,9 @@ def maybe_move_to_weak(claim: Claim, state: EpistemicState) -> bool:
 
 def select_focus_claim(state: EpistemicState) -> Optional[Claim]:
     """
-    Select focus claim. Priority:
-    1. Branch-open claims whose ALL direct children are supported (T9-ready).
-    2. Regular claims (non-sealed, non-weak, not waiting for branches).
-    Branch-open claims with unresolved children are skipped so branches are
-    processed first, then the parent returns for T9.
+    Select the next claim to process.
+    T9-ready claims (branch_open + all children supported) take priority.
+    Branch-open claims with unresolved children are skipped until branches complete.
     """
     weak_set = set(state.weak_candidates)
     t9_ready: list[Claim] = []
@@ -876,7 +860,6 @@ def select_focus_claim(state: EpistemicState) -> Optional[Claim]:
             children = [c for c in state.claims.values() if c.parent_id == cid]
             if children and all(c.status == "supported" for c in children):
                 t9_ready.append(claim)
-            # else: wait — skip until branches resolve
         else:
             regular.append(claim)
 
@@ -887,7 +870,15 @@ def select_focus_claim(state: EpistemicState) -> Optional[Claim]:
     return None
 
 
-def print_iteration_trace(iteration: int, claim: Claim, trigger: str, op_name: str, result: str, state: EpistemicState) -> None:
+def print_iteration_trace(
+    iteration: int,
+    claim: Claim,
+    trigger: str,
+    op_name: str,
+    result: str,
+    state: EpistemicState,
+) -> None:
+    """Print the structured per-iteration trace to stdout."""
     active = sum(1 for c in state.claims.values() if not c.sealed)
     sealed = sum(1 for c in state.claims.values() if c.sealed)
     weak = len(state.weak_candidates)
@@ -904,6 +895,7 @@ def print_iteration_trace(iteration: int, claim: Claim, trigger: str, op_name: s
 
 
 def print_final_trace(state: EpistemicState) -> None:
+    """Print the full epistemic path and claim summary at end of run."""
     print("\n" + "=" * 60)
     print("FINAL RESEARCH TRACE")
     print("=" * 60)
@@ -929,30 +921,27 @@ def print_final_trace(state: EpistemicState) -> None:
 
 
 def run_des(research_question: str, max_iterations: int = 10) -> None:
+    """Run the DES main loop on a research question, persisting S(t) after each iteration."""
     print(f"\nDynamic Epistemic Sequencer v0.1")
     print(f"Research question: {research_question}")
     print("-" * 60)
 
-    # 1. Initialize S(t) — fresh state (ignore any stale state file)
     if os.path.exists(STATE_FILE):
         os.remove(STATE_FILE)
 
     state = EpistemicState()
     save_state(state)
 
-    # 2. Generate initial claim
     print("Generating initial claim via LLM...")
     initial_claim = generate_initial_claim(research_question, state)
     state.claims[initial_claim.id] = initial_claim
     save_state(state)
     print(f"Initial claim: [{initial_claim.id}] {initial_claim.subject} {initial_claim.predicate} {initial_claim.object}")
 
-    # 3. Main loop
     while True:
-        # a. Load S(t) from disk (satisfies C1 + C2)
+        # Load S(t) from disk on every iteration (satisfies C1 + C2)
         state = load_state()
 
-        # Termination checks
         if state.iteration >= max_iterations:
             print(f"\n[DES] Termination: max iterations ({max_iterations}) reached.")
             break
@@ -965,39 +954,28 @@ def run_des(research_question: str, max_iterations: int = 10) -> None:
             print(f"\n[DES] Termination: all claims sealed.")
             break
 
-        # b. Select focus claim
         focus = select_focus_claim(state)
         if focus is None:
             print(f"\n[DES] No active claims to process. Terminating.")
             break
 
-        # Layer 5: check weak candidates for reactivation
         process_weak_candidates(state, focus)
 
-        # c. Select operation via transition table
         trigger, op_fn = select_operation(focus, state)
         op_name = op_fn.__name__
 
         state.focus_claim_id = focus.id
         state.iteration += 1
 
-        # d. Execute operation
         result = op_fn(focus, state)
 
-        # e. Check if newly created claims should be moved to weak candidates
-        for cid, claim in state.claims.items():
-            if cid not in (list(state.claims.keys())):
-                continue
-            if maybe_move_to_weak(claim, state):
-                print(f"  [PES] Claim {cid} moved to weak candidates (confidence={claim.confidence:.2f})")
+        for claim in state.claims.values():
+            maybe_move_to_weak(claim, state)
 
-        # f. Persist S(t)
         save_state(state)
 
-        # g. Print iteration trace
         print_iteration_trace(state.iteration, focus, trigger, op_name, result, state)
 
-    # 4. Final trace
     print_final_trace(state)
 
 
@@ -1006,10 +984,39 @@ def run_des(research_question: str, max_iterations: int = 10) -> None:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python des.py \"<research question>\"")
+    parser = argparse.ArgumentParser(
+        description="Dynamic Epistemic Sequencer — epistemic state machine for AI research workflows",
+    )
+    parser.add_argument(
+        "question",
+        nargs="?",
+        help="Research question to investigate",
+    )
+    parser.add_argument(
+        "max_iterations",
+        nargs="?",
+        type=int,
+        default=10,
+        help="Maximum number of iterations (default: 10)",
+    )
+    parser.add_argument(
+        "--reset",
+        action="store_true",
+        help="Delete des_state.json and exit cleanly",
+    )
+    args = parser.parse_args()
+
+    if args.reset:
+        if os.path.exists(STATE_FILE):
+            os.remove(STATE_FILE)
+            print("State cleared.")
+        else:
+            print("No state file found.")
+        if not args.question:
+            sys.exit(0)
+
+    if not args.question:
+        parser.print_help()
         sys.exit(1)
 
-    question = sys.argv[1]
-    max_iter = int(sys.argv[2]) if len(sys.argv) > 2 else 10
-    run_des(question, max_iterations=max_iter)
+    run_des(args.question, max_iterations=args.max_iterations)
