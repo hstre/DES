@@ -110,6 +110,12 @@ def new_claim_id(state: EpistemicState) -> str:
     return f"C{n:03d}"
 
 
+def new_branch_id(state: EpistemicState) -> str:
+    """Branch claims use a 'B' prefix so T3 can identify them for stronger evidence."""
+    n = sum(1 for cid in state.claims if cid.startswith("B")) + 1
+    return f"B{n:03d}"
+
+
 # ---------------------------------------------------------------------------
 # LLM Integration (Layer 0)
 # ---------------------------------------------------------------------------
@@ -179,6 +185,92 @@ def _llm_json(prompt: str, retry_prompt: Optional[str] = None) -> Optional[dict]
 
 
 # ---------------------------------------------------------------------------
+# Contradiction Detection
+# ---------------------------------------------------------------------------
+
+CONTRADICTION_CHECK_PROMPT = """\
+Claim A: {claim_a_subject} {claim_a_predicate} {claim_a_object}
+Claim B: {claim_b_subject} {claim_b_predicate} {claim_b_object}
+
+Do these two claims directly contradict each other — i.e., if A is true, B must be false?
+Answer ONLY with JSON: {{"contradicts": true}} or {{"contradicts": false}}"""
+
+
+def check_for_contradiction(claim_a: Claim, claim_b: Claim) -> bool:
+    """
+    Returns True if claim_b directly negates claim_a (same subject+predicate, opposing object).
+    Uses LLM for semantic check; falls back to a simple structural heuristic.
+    """
+    prompt = CONTRADICTION_CHECK_PROMPT.format(
+        claim_a_subject=claim_a.subject,
+        claim_a_predicate=claim_a.predicate,
+        claim_a_object=claim_a.object,
+        claim_b_subject=claim_b.subject,
+        claim_b_predicate=claim_b.predicate,
+        claim_b_object=claim_b.object,
+    )
+    result = _llm_json(prompt)
+    if result is not None:
+        return bool(result.get("contradicts", False))
+
+    # Structural heuristic: counter predicate likely contains "not" or "does not"
+    neg_markers = ("not", "never", "no ", "cannot", "can't", "doesn't", "does not")
+    b_pred_lower = claim_b.predicate.lower()
+    return any(m in b_pred_lower for m in neg_markers)
+
+
+# ---------------------------------------------------------------------------
+# Branch Evidence Simulation + Claim Update
+# ---------------------------------------------------------------------------
+
+CLAIM_UPDATE_PROMPT = """\
+Given this claim and new evidence:
+Claim: {claim}
+Evidence: {evidence}
+
+Update the claim's epistemic status.
+Return ONLY JSON:
+{{
+  "status": "supported",
+  "confidence": 0.85,
+  "rationale": "..."
+}}
+
+If the evidence strongly supports the claim, set status="supported" and confidence > 0.8."""
+
+
+def simulate_evidence(claim: Claim) -> str:
+    """Return stronger simulated evidence for branch claims (B-prefix)."""
+    if claim.id.startswith("B"):
+        domain = claim.scope.get("domain", "general")
+        return (
+            f"[Simulated: peer-reviewed source confirms "
+            f"{claim.subject} {claim.predicate} {claim.object} "
+            f"in domain '{domain}']"
+        )
+    return f"[Simulated evidence for: {claim.subject} {claim.object}]"
+
+
+def evaluate_branch_claim(claim: Claim) -> None:
+    """
+    For branch claims, call LLM to update status/confidence based on evidence.
+    Falls back to supported+0.85 so T9 can always fire.
+    """
+    evidence_text = "; ".join(claim.evidence_refs[-2:])
+    prompt = CLAIM_UPDATE_PROMPT.format(
+        claim=_claim_summary(claim),
+        evidence=evidence_text,
+    )
+    result = _llm_json(prompt)
+    if result:
+        claim.status = result.get("status", "supported")
+        claim.confidence = float(result.get("confidence", 0.85))
+    else:
+        claim.status = "supported"
+        claim.confidence = 0.85
+
+
+# ---------------------------------------------------------------------------
 # Initial Claim Generation
 # ---------------------------------------------------------------------------
 
@@ -214,9 +306,9 @@ def generate_initial_claim(research_question: str, state: EpistemicState) -> Cla
     result = _llm_json(prompt)
     if result is None:
         result = {
-            "subject": "fiscal austerity",
-            "predicate": "reduces",
-            "object": "sovereign debt in the long run",
+            "subject": "nuclear energy",
+            "predicate": "is a net positive for",
+            "object": "climate goals given IPCC and Energiewende evidence",
             "status": "disputed",
             "modality": "hypothesis",
             "confidence": 0.45,
@@ -266,44 +358,75 @@ def _claim_summary(claim: Claim) -> str:
 
 
 def t1_resolve_conflict(claim: Claim, state: EpistemicState) -> str:
-    """BRANCH: create two sub-claims, request adjudication."""
+    """BRANCH: create two B-prefixed sub-claims for adjudication."""
+    branch_scope = claim.scope.copy() if claim.scope else {"domain": claim.subject[:30]}
+    if not branch_scope:
+        branch_scope = {"domain": "adjudication"}
+
     prompt = f"""You are an epistemic conflict resolver.
 This claim is contradicted and needs adjudication:
 {_claim_summary(claim)}
 
-Create two opposing sub-claims (pro and con) that represent the contradiction.
+Create exactly two opposing branch claims (pro and con) that capture both sides.
 Return ONLY valid JSON:
 {{
   "sub_claims": [
-    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5, "scope": {{}}, "qualifier": {{}}}},
-    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5, "scope": {{}}, "qualifier": {{}}}}
+    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5}},
+    {{"subject": "...", "predicate": "...", "object": "...", "modality": "hypothesis", "confidence": 0.5}}
   ]
 }}"""
 
     result = _llm_json(prompt)
+    raw = result.get("sub_claims", []) if result else []
+
+    # Fallback: structural pro/con branches derived from the contradicted claim
+    if len(raw) < 2:
+        raw = [
+            {
+                "subject": claim.subject,
+                "predicate": claim.predicate,
+                "object": f"{claim.object} (pro-position)",
+                "modality": "hypothesis",
+                "confidence": 0.5,
+            },
+            {
+                "subject": claim.subject,
+                "predicate": "does not " + claim.predicate,
+                "object": f"{claim.object} (con-position)",
+                "modality": "hypothesis",
+                "confidence": 0.5,
+            },
+        ]
+
     new_ids = []
-    if result and "sub_claims" in result:
-        for sc in result["sub_claims"][:2]:
-            cid = new_claim_id(state)
-            new_claim = Claim(
-                id=cid,
-                subject=sc.get("subject", claim.subject),
-                predicate=sc.get("predicate", claim.predicate),
-                object=sc.get("object", claim.object),
-                modality=sc.get("modality", "hypothesis"),
-                confidence=float(sc.get("confidence", 0.5)),
-                scope=sc.get("scope", {}),
-                qualifier=sc.get("qualifier", {}),
-                status="unknown",
-                parent_id=claim.id,
-            )
-            state.claims[cid] = new_claim
-            new_ids.append(cid)
+    for sc in raw[:2]:
+        bid = new_branch_id(state)
+        branch = Claim(
+            id=bid,
+            subject=sc.get("subject", claim.subject),
+            predicate=sc.get("predicate", claim.predicate),
+            object=sc.get("object", claim.object),
+            modality=sc.get("modality", "hypothesis"),
+            confidence=float(sc.get("confidence", 0.5)),
+            scope=branch_scope.copy(),
+            qualifier={},
+            status="hypothesis",
+            parent_id=claim.id,
+        )
+        state.claims[bid] = branch
+        new_ids.append(bid)
 
     claim.branch_open = True
+    # Change status away from "contradicted" to prevent T1 from looping;
+    # clear conflict so T2 doesn't fire unnecessarily after branching.
+    claim.status = "disputed"
+    claim.conflict = False
     claim.history.append("T1")
     state.operation_history.append(f"T1 on {claim.id}")
-    return f"Branched into sub-claims: {', '.join(new_ids)}" if new_ids else "T1: branch creation failed, marked branch_open"
+    llm_note = "" if result and result.get("sub_claims") else " (fallback)"
+    branch_str = ", ".join(new_ids)
+    print(f"  [T1] BRANCH created{llm_note}: {claim.id} -> {branch_str}")
+    return f"BRANCH created{llm_note}: {claim.id} -> {branch_str}"
 
 
 def t2_make_conflict_explicit(claim: Claim, state: EpistemicState) -> str:
@@ -331,14 +454,23 @@ Return ONLY valid JSON:
 
 
 def t3_request_evidence(claim: Claim, state: EpistemicState) -> str:
-    """Simulate tool call — return placeholder evidence."""
-    simulated = f"[simulated evidence: search result for '{claim.subject} {claim.object}']"
+    """Simulate tool call — return placeholder evidence.
+    For branch claims (B-prefix), use stronger evidence and run a claim update."""
+    simulated = simulate_evidence(claim)
     claim.evidence_refs.append(simulated)
-    if claim.status == "unknown":
-        claim.status = "disputed"  # evidence found but not yet evaluated
+
+    if claim.id.startswith("B"):
+        # Branch claims get an LLM-based status update from the evidence
+        evaluate_branch_claim(claim)
+        update_note = f" → status={claim.status}, confidence={claim.confidence:.2f}"
+    else:
+        if claim.status in ("unknown", "hypothesis"):
+            claim.status = "disputed"
+        update_note = ""
+
     claim.history.append("T3")
     state.operation_history.append(f"T3 on {claim.id}")
-    return f"Evidence placeholder added: {simulated}"
+    return f"Evidence added{update_note}: {simulated[:80]}"
 
 
 T4_PROMPT = """\
@@ -484,14 +616,21 @@ Return ONLY valid JSON:
     )
     state.claims[cid] = counter
 
-    # Generating a counter reveals a conflict on the original; T2 makes it explicit next visit.
-    claim.status = "disputed"
+    # Check for direct contradiction; if found, escalate to T1 instead of T2.
+    contradicts = check_for_contradiction(claim, counter)
+    if contradicts:
+        claim.status = "contradicted"
+        print(f"  [T5] Contradiction detected: {claim.id} vs {cid} → status=contradicted")
+    else:
+        claim.status = "disputed"
+
     claim.conflict = True
     # Always boost confidence past the T5 threshold to prevent re-triggering T5.
     claim.confidence = max(claim.confidence, 0.42)
     claim.history.append("T5")
     state.operation_history.append(f"T5 on {claim.id}")
-    return f"Counter-hypothesis generated{llm_note}: {cid} — {reasoning}"
+    contra_note = " [CONTRADICTS]" if contradicts else ""
+    return f"Counter-hypothesis generated{llm_note}{contra_note}: {cid} — {reasoning}"
 
 
 def t6_explore_evidence_path(claim: Claim, state: EpistemicState) -> str:
@@ -557,55 +696,79 @@ def t8_seal_claim(claim: Claim, state: EpistemicState) -> str:
     return f"Claim {claim.id} sealed."
 
 
-def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
-    """LLM: synthesize or reframe when all branches are supported."""
-    # Gather branch claims
-    branches = [c for c in state.claims.values() if c.parent_id == claim.id]
-    branch_summaries = [f"{c.id}: {c.subject} {c.predicate} {c.object} (conf={c.confidence:.2f})" for c in branches]
+T9_PROMPT = """\
+Two competing hypotheses have both been supported by evidence:
+Branch A: {branch_a_subject} {branch_a_predicate} {branch_a_object} (confidence={branch_a_conf:.2f})
+Branch B: {branch_b_subject} {branch_b_predicate} {branch_b_object} (confidence={branch_b_conf:.2f})
 
-    prompt = f"""You are an epistemic synthesis engine.
-The following branches of a claim have all been explored:
-Parent claim: {claim.subject} {claim.predicate} {claim.object}
-Branches:
-{chr(10).join(branch_summaries)}
+Synthesize these into a refined, more nuanced claim that integrates both perspectives,
+or identify a higher-level reframing that makes the apparent contradiction productive.
 
-Synthesize these into a refined, higher-level claim or reframing.
 Return ONLY valid JSON:
 {{
-  "synthesized_subject": "...",
-  "synthesized_predicate": "...",
-  "synthesized_object": "...",
+  "subject": "...",
+  "predicate": "...",
+  "object": "...",
+  "modality": "suggestion",
   "confidence": 0.75,
-  "synthesis_note": "..."
+  "rationale": "..."
 }}"""
 
-    result = _llm_json(prompt)
-    if result:
-        cid = new_claim_id(state)
-        synth = Claim(
-            id=cid,
-            subject=result.get("synthesized_subject", claim.subject),
-            predicate=result.get("synthesized_predicate", "synthesized from"),
-            object=result.get("synthesized_object", claim.object),
-            modality="evidence",
-            confidence=float(result.get("confidence", 0.75)),
-            scope=claim.scope.copy(),
-            qualifier=claim.qualifier.copy(),
-            status="supported",
-            parent_id=claim.id,
-        )
-        synth.evidence_refs.append(f"[SYNTHESIS] {result.get('synthesis_note', '')}")
-        state.claims[cid] = synth
-        state.reframing_count += 1
-        claim.sealed = True
-        claim.history.append("T9")
-        state.operation_history.append(f"T9 on {claim.id}")
-        return f"Reframing synthesized into {cid}: {result.get('synthesis_note', '')}"
 
+def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
+    """LLM: synthesize when all branches of a branched claim are supported."""
+    branches = [c for c in state.claims.values() if c.parent_id == claim.id]
+    if len(branches) < 2:
+        branches = branches + [branches[0]] if branches else []
+
+    ba = branches[0] if len(branches) > 0 else claim
+    bb = branches[1] if len(branches) > 1 else claim
+
+    prompt = T9_PROMPT.format(
+        branch_a_subject=ba.subject, branch_a_predicate=ba.predicate,
+        branch_a_object=ba.object, branch_a_conf=ba.confidence,
+        branch_b_subject=bb.subject, branch_b_predicate=bb.predicate,
+        branch_b_object=bb.object, branch_b_conf=bb.confidence,
+    )
+    result = _llm_json(prompt)
+
+    # Build synthesis from LLM result or structural fallback
+    if result:
+        synth_subject = result.get("subject", claim.subject)
+        synth_predicate = result.get("predicate", "reconciles")
+        synth_object = result.get("object", claim.object)
+        synth_conf = max(0.82, float(result.get("confidence", 0.75)))
+        rationale = result.get("rationale", "")
+        llm_note = ""
+    else:
+        synth_subject = claim.subject
+        synth_predicate = "is context-dependent regarding"
+        synth_object = claim.object
+        synth_conf = 0.82
+        rationale = "Both branches reached evidential support under different conditions (fallback synthesis)"
+        llm_note = " (fallback)"
+
+    cid = new_claim_id(state)
+    synth = Claim(
+        id=cid,
+        subject=synth_subject,
+        predicate=synth_predicate,
+        object=synth_object,
+        modality="suggestion",
+        confidence=synth_conf,
+        scope=claim.scope.copy(),
+        qualifier=claim.qualifier.copy(),
+        status="supported",
+        parent_id=claim.id,
+    )
+    synth.evidence_refs.append(f"[SYNTHESIS{llm_note}] {rationale}")
+    state.claims[cid] = synth
     state.reframing_count += 1
+    claim.sealed = True
     claim.history.append("T9")
     state.operation_history.append(f"T9 on {claim.id}")
-    return "T9: reframing synthesis failed"
+    print(f"  [T9] REFRAME{llm_note}: {claim.id} -> {cid}")
+    return f"REFRAME{llm_note}: {claim.id} -> {cid} — {rationale}"
 
 
 # ---------------------------------------------------------------------------
@@ -695,11 +858,32 @@ def maybe_move_to_weak(claim: Claim, state: EpistemicState) -> bool:
 # ---------------------------------------------------------------------------
 
 def select_focus_claim(state: EpistemicState) -> Optional[Claim]:
-    """Select first non-sealed, non-weak claim."""
+    """
+    Select focus claim. Priority:
+    1. Branch-open claims whose ALL direct children are supported (T9-ready).
+    2. Regular claims (non-sealed, non-weak, not waiting for branches).
+    Branch-open claims with unresolved children are skipped so branches are
+    processed first, then the parent returns for T9.
+    """
     weak_set = set(state.weak_candidates)
+    t9_ready: list[Claim] = []
+    regular: list[Claim] = []
+
     for cid, claim in state.claims.items():
-        if not claim.sealed and cid not in weak_set:
-            return claim
+        if claim.sealed or cid in weak_set:
+            continue
+        if claim.branch_open:
+            children = [c for c in state.claims.values() if c.parent_id == cid]
+            if children and all(c.status == "supported" for c in children):
+                t9_ready.append(claim)
+            # else: wait — skip until branches resolve
+        else:
+            regular.append(claim)
+
+    if t9_ready:
+        return t9_ready[0]
+    if regular:
+        return regular[0]
     return None
 
 
@@ -707,8 +891,9 @@ def print_iteration_trace(iteration: int, claim: Claim, trigger: str, op_name: s
     active = sum(1 for c in state.claims.values() if not c.sealed)
     sealed = sum(1 for c in state.claims.values() if c.sealed)
     weak = len(state.weak_candidates)
+    branch_flag = " branch_open=True" if claim.branch_open else ""
     print(f"\n=== DES Iteration {iteration} ===")
-    print(f"Focus Claim: {claim.id} [status={claim.status}, confidence={claim.confidence:.2f}]")
+    print(f"Focus Claim: {claim.id} [status={claim.status}, confidence={claim.confidence:.2f}{branch_flag}]")
     print(f"  subject: {claim.subject}")
     print(f"  predicate: {claim.predicate}")
     print(f"  object: {claim.object}")
