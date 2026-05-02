@@ -222,14 +222,31 @@ CONTRADICTION_CHECK_PROMPT = """\
 Claim A: {claim_a_subject} {claim_a_predicate} {claim_a_object}
 Claim B: {claim_b_subject} {claim_b_predicate} {claim_b_object}
 
-Do these two claims directly contradict each other — i.e., if A is true, B must be false?
+Do these two claims contradict each other in their direction of effect?
+Two claims are contradictory if they assert OPPOSITE outcomes for the same subject and domain —
+for example: "X increases Y" vs "X decreases Y", or "X is viable" vs "X is not viable".
+Hedging words like "may", "could", or "might" do NOT prevent contradiction if the effects
+point in opposite directions.
+
 Answer ONLY with JSON: {{"contradicts": true}} or {{"contradicts": false}}"""
+
+_OPPOSING_PAIRS = [
+    ("increase", "decrease"), ("increase", "reduce"), ("increase", "suppress"),
+    ("improve", "worsen"), ("improve", "deteriorate"), ("improve", "undermine"),
+    ("expand", "contract"), ("expand", "shrink"), ("expand", "reduce"),
+    ("raise", "lower"), ("raise", "reduce"), ("raise", "decrease"),
+    ("support", "undermine"), ("support", "oppose"), ("support", "hinder"),
+    ("sustainable", "unsustainable"), ("viable", "unviable"),
+    ("positive", "negative"), ("beneficial", "harmful"),
+    ("reduce", "increase"), ("reduce", "expand"), ("reduce", "raise"),
+    ("suppress", "stimulate"), ("suppress", "boost"),
+]
 
 
 def check_for_contradiction(claim_a: Claim, claim_b: Claim) -> bool:
     """
-    Returns True if claim_b directly negates claim_a.
-    Uses LLM for semantic check; falls back to a structural negation heuristic.
+    Returns True if claim_b directly opposes claim_a in direction of effect.
+    Uses LLM for semantic check; falls back to negation markers and opposing-pair heuristics.
     """
     prompt = CONTRADICTION_CHECK_PROMPT.format(
         claim_a_subject=claim_a.subject,
@@ -243,9 +260,21 @@ def check_for_contradiction(claim_a: Claim, claim_b: Claim) -> bool:
     if result is not None:
         return bool(result.get("contradicts", False))
 
+    # Fallback 1: negation markers in counter-predicate
     neg_markers = ("not", "never", "no ", "cannot", "can't", "doesn't", "does not")
     b_pred_lower = claim_b.predicate.lower()
-    return any(m in b_pred_lower for m in neg_markers)
+    if any(m in b_pred_lower for m in neg_markers):
+        return True
+
+    # Fallback 2: opposing directional terms across predicate+object
+    full_a = f"{claim_a.predicate} {claim_a.object}".lower()
+    full_b = f"{claim_b.predicate} {claim_b.object}".lower()
+    for word_a, word_b in _OPPOSING_PAIRS:
+        if word_a in full_a and word_b in full_b:
+            return True
+        if word_b in full_a and word_a in full_b:
+            return True
+    return False
 
 
 # ---------------------------------------------------------------------------
@@ -596,7 +625,10 @@ def t5_generate_counter_hypothesis(claim: Claim, state: EpistemicState) -> str:
 Given this low-confidence claim:
 {_claim_summary(claim)}
 
-Generate a strong counter-hypothesis that challenges this claim.
+Generate a counter-hypothesis that asserts the OPPOSITE directional effect.
+If the claim says X increases Y, the counter must say X decreases (or does not increase) Y.
+If the claim says X reduces Y, the counter must say X increases (or does not reduce) Y.
+The counter-hypothesis must directly contradict the direction of effect, not merely qualify it.
 Return ONLY valid JSON:
 {{
   "counter_subject": "...",
