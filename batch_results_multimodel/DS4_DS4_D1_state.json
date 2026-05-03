@@ -1,0 +1,508 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Short-term weight loss from intermittent fasting is often comparable to continuous calorie restriction, but long-term adherence and metabolic adaptation effects remain contested, with some studies showing weight regain and others showing sustained loss beyond 12 months."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss in individuals with high adherence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss in individuals with high adherence]"
+      ],
+      "scope": {
+        "domain": "adherent populations"
+      },
+      "qualifier": {
+        "tension": "High adherence is rare in real-world settings, limiting generalizability."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "weight regain comparable to continuous calorie restriction after 12 months",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting weight regain comparable to continuous calorie restriction after 12 months]"
+      ],
+      "scope": {
+        "domain": "general population without structured support"
+      },
+      "qualifier": {
+        "tension": "This challenges the notion of sustained advantage, but does not rule out metabolic benefits."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "may cause",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting metabolic adaptation that reduces long-term weight loss efficacy]"
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "tension": "While some studies show adaptation, others show no significant difference in resting metabolic rate."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting with a structured behavioral support program",
+      "predicate": "increases adherence and thereby enhances",
+      "object": "long-term weight loss compared to intermittent fasting alone",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with a structured behavioral support program long-term weight loss compared to intermittent fasting alone]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with behavioral support (e.g., group coaching, mobile app reminders) versus intermittent fasting alone in overweight adults over 12 months, with adherence and weight loss as primary endpoints. \u2014 Direct empirical test of the hypothesis: a well-designed RCT can isolate the effect of added behavioral support on adherence and subsequent long-term weight loss, providing causal evidence.",
+        "[PATH:literature] Systematic review and meta-analysis of existing behavioral interventions combined with dietary regimens for weight loss, focusing on adherence metrics and long-term outcomes. \u2014 Synthesizing published evidence from similar interventions (e.g., behavioral support for calorie restriction) can reveal whether adherence-mediated weight loss effects generalize to intermittent fasting, and identify effect size heterogeneity.",
+        "[PATH:theoretical] Theoretical model of health behavior change (e.g., Self-Determination Theory or Social Cognitive Theory) applied to intermittent fasting adherence, predicting that structured support enhances autonomous motivation and habit formation. \u2014 A theoretical framework can specify mechanisms (e.g., self-efficacy, social support) by which behavioral support improves adherence, offering testable predictions and guiding future empirical designs."
+      ],
+      "scope": {
+        "domain": "overweight and obese adults in community settings"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month period",
+        "geographic": "United States and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "is no more effective than",
+      "object": "daily caloric restriction for long-term weight loss, even in individuals with high adherence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting daily caloric restriction for long-term weight loss, even in individuals with high adherence]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted eating) vs. continuous caloric restriction over \u226512 months with objectively measured adherence (e.g., via continuous glucose monitors or urinary biomarkers) in overweight/obese adults \u2014 Directly tests the hypothesis by comparing long-term weight loss outcomes between the two interventions in a high-adherence population, reducing confounding from self-reported compliance.",
+        "[PATH:literature] Systematic review and meta-analysis of long-term (\u22651 year) studies on intermittent fasting vs. daily caloric restriction, stratified by adherence level (e.g., using subgroup analysis or meta-regression) \u2014 Aggregates existing evidence to assess whether the effect holds across diverse populations and adherence measures, addressing the disputed status with higher statistical power.",
+        "[PATH:theoretical] Theoretical modeling of energy balance and metabolic adaptation under intermittent vs. continuous restriction, incorporating adherence-dependent compliance curves \u2014 Provides mechanistic predictions for why intermittent fasting might or might not differ from daily restriction when adherence is high, helping to interpret empirical findings and guide future study design."
+      ],
+      "scope": {
+        "domain": "adherent populations"
+      },
+      "qualifier": {
+        "temporal": "as of 2024",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting with a structured behavioral maintenance program",
+      "predicate": "reduces",
+      "object": "weight regain at 12 months compared to continuous calorie restriction without such support",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with a structured behavioral maintenance program weight regain at 12 months compared to continuous calorie restriction without such support]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with behavioral maintenance program vs. continuous calorie restriction with standard follow-up in overweight adults with high baseline dietary adherence, measuring weight change at 12 months. \u2014 Directly tests the hypothesis under controlled conditions, addressing the specific comparison and population scope.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral maintenance interventions (e.g., self-monitoring, relapse prevention) combined with dietary regimens, focusing on long-term weight outcomes. \u2014 Synthesizes existing evidence on the additive effect of structured maintenance programs on weight regain, providing broader support or refutation across studies.",
+        "[PATH:empirical] Longitudinal cohort study examining adherence patterns and weight trajectories in overweight adults practicing intermittent fasting vs. continuous calorie restriction with or without behavioral support. \u2014 Provides real-world evidence on sustainability and weight regain, complementing RCT findings with ecological validity."
+      ],
+      "scope": {
+        "domain": "overweight adults with high baseline dietary adherence"
+      },
+      "qualifier": {
+        "temporal": "12-month follow-up",
+        "geographic": "unspecified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "lower weight regain than continuous calorie restriction after 12 months",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting lower weight regain than continuous calorie restriction after 12 months]",
+        "[PATH:literature] Systematic review of randomized controlled trials comparing intermittent fasting vs. continuous calorie restriction with \u226512-month follow-up weight data \u2014 A comprehensive meta-analysis of existing RCTs with long-term follow-up can directly compare weight regain rates between the two dietary approaches, addressing the disputed claim with aggregated empirical evidence.",
+        "[PATH:empirical] Prospective cohort study tracking weight trajectories over 12 months post-intervention in free-living individuals who completed structured intermittent fasting or continuous calorie restriction programs \u2014 This would provide real-world evidence in the specified general population without structured support, capturing adherence, metabolic adaptation, and behavioral factors that influence weight regain.",
+        "[PATH:theoretical] Theoretical modeling of appetite-regulating hormone dynamics (e.g., ghrelin, leptin, GLP-1) comparing intermittent vs. continuous energy restriction patterns \u2014 Understanding the physiological mechanisms\u2014such as differential effects on satiety hormones or metabolic flexibility\u2014could explain or predict differences in weight regain, helping to confirm or refute the hypothesis at a mechanistic level."
+      ],
+      "scope": {
+        "domain": "general population without structured support"
+      },
+      "qualifier": {
+        "temporal": "over the first 12 months post-intervention",
+        "geographic": "global, primarily in high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "weight regain comparable to continuous calorie restriction after 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting leads to weight regain comparable to continuous calorie restriction after 12 months in domain 'general population without structured support']"
+      ],
+      "scope": {
+        "domain": "general population without structured support"
+      },
+      "qualifier": {
+        "temporal": "after 12 months of intervention",
+        "geographic": "global, predominantly Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "reduces",
+      "object": "weight regain relative to continuous calorie restriction after 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting reduces weight regain relative to continuous calorie restriction after 12 months in domain 'general population without structured support']"
+      ],
+      "scope": {
+        "domain": "general population without structured support"
+      },
+      "qualifier": {
+        "temporal": "after 12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting combined with high-protein intake",
+      "predicate": "attenuates",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with high-protein intake metabolic adaptation that reduces long-term weight loss efficacy]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8) with vs. without high-protein supplementation, measuring changes in resting metabolic rate and lean body mass over 12 months via DXA and indirect calorimetry. \u2014 Directly tests whether high-protein intake attenuates the metabolic adaptation (decline in RMR and lean mass) typically observed in prolonged intermittent fasting, providing causal evidence for or against the hypothesis.",
+        "[PATH:literature] Systematic review and meta-analysis of existing RCTs on intermittent fasting combined with protein intake, focusing on outcomes of metabolic adaptation (e.g., RMR, energy expenditure, fat-free mass preservation) in overweight/obese adults. \u2014 Synthesizes available evidence across multiple studies to assess consistency and effect size, addressing the disputed status with higher statistical power and generalizability.",
+        "[PATH:theoretical] Mechanistic study using stable isotope tracers (e.g., 13C-leucine) to quantify whole-body protein turnover and mitochondrial efficiency during intermittent fasting with high-protein intake versus standard protein intake. \u2014 Elucidates the underlying physiological mechanisms (e.g., enhanced protein synthesis, reduced muscle catabolism, thermic effect of protein) that could explain if and how high-protein intake counteracts metabolic adaptation, informing plausibility of the hypothesis."
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "rationale": "High-protein intake may preserve lean mass and resting metabolic rate, counteracting the adaptation seen in standard intermittent fasting protocols."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting",
+      "predicate": "may prevent",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting metabolic adaptation that reduces long-term weight loss efficacy]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., alternate-day fasting or time-restricted eating) versus continuous caloric restriction over 12+ months, measuring resting metabolic rate and weight loss trajectory at multiple time points. \u2014 Directly tests whether intermittent fasting attenuates the decline in metabolic rate typically seen with prolonged caloric restriction, which would confirm or refute the hypothesis about preventing metabolic adaptation.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies on intermittent fasting and energy expenditure, focusing on changes in resting metabolic rate, adaptive thermogenesis, and fat-free mass preservation. \u2014 Synthesizes existing evidence to assess whether intermittent fasting consistently shows a protective effect against metabolic adaptation across different populations and protocols, addressing the disputed status.",
+        "[PATH:theoretical] Mechanistic study in animal models or human tissue examining the impact of intermittent fasting on pathways known to regulate metabolic adaptation, such as leptin signaling, thyroid hormone axis, or mitochondrial efficiency. \u2014 Provides biological plausibility and causal evidence for the proposed effect, helping to clarify whether any observed prevention is due to fasting-specific mechanisms rather than general caloric restriction."
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "temporal": "short-term (up to 12 weeks) and in early phases of weight loss intervention",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting with structured behavioral reinforcement",
+      "predicate": "reduces",
+      "object": "weight regain below that of continuous calorie restriction after 12 months",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "general population with structured support"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "lower weight regain than continuous calorie restriction after 12 months",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "general population without structured support"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 43,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
