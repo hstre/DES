@@ -1,0 +1,264 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "caveat": "depends on task type, team coordination requirements, and management practices"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work for individual-focused tasks (e.g., coding, writing)",
+      "predicate": "is more productive than",
+      "object": "office work for individual-focused tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for individual-focused tasks (e.g., coding, writing) office work for individual-focused tasks]",
+        "[PATH:empirical] A controlled experiment comparing coding output (e.g., lines of code, bug rates, task completion time) between remote and office settings, with clear goals and asynchronous tools, using professional developers as subjects. \u2014 Directly tests the hypothesis under the specified caveat, providing causal evidence for productivity differences.",
+        "[PATH:literature] Meta-analysis of existing studies on individual-focused task productivity in remote vs. office contexts, focusing on moderators like goal clarity and asynchronous tool use. \u2014 Synthesizes existing evidence across multiple studies to assess the generalizability and robustness of the hypothesized effect, identifying gaps or confounds."
+      ],
+      "scope": {
+        "domain": "individual-focused task efficiency"
+      },
+      "qualifier": {
+        "caveat": "when clear goals and asynchronous collaboration tools are used"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work for complex team coordination tasks",
+      "predicate": "is less productive than",
+      "object": "office work for complex team coordination tasks",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for complex team coordination tasks office work for complex team coordination tasks]"
+      ],
+      "scope": {
+        "domain": "team coordination and brainstorming"
+      },
+      "qualifier": {
+        "caveat": "without high-quality synchronous communication infrastructure"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "remote work under poor management practices",
+      "predicate": "is less productive than",
+      "object": "office work under standard management practices",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work under poor management practices office work under standard management practices]",
+        "[PATH:empirical] Bloom, N., Liang, J., Roberts, J., & Ying, Z. J. (2015). 'Does Working from Home Work? Evidence from a Chinese Experiment.' Quarterly Journal of Economics. \u2014 This landmark field experiment compared remote and office productivity under standard management, providing a baseline to evaluate how poor management (e.g., lack of oversight, feedback) degrades remote productivity relative to office norms.",
+        "[PATH:empirical] Choudhury, P., Foroughi, C., & Larson, B. (2021). 'Work-from-Anywhere: The Productivity Effects of Geographic Flexibility.' Strategic Management Journal. \u2014 This study examines productivity under different management conditions, offering data to test whether the negative effect of poor remote management (e.g., absent coordination) outweighs the productivity gains from flexibility seen under competent management.",
+        "[PATH:literature] Meta-analysis of remote work productivity (e.g., Gajendran, R. S., & Harrison, D. A. (2007). 'The Good, the Bad, and the Unknown About Telecommuting.' Journal of Applied Psychology). \u2014 A systematic review can disaggregate effect sizes by management quality, testing whether poor remote management (e.g., lack of goal clarity, trust) systematically reduces productivity below office benchmarks."
+      ],
+      "scope": {
+        "domain": "management-dependent productivity"
+      },
+      "qualifier": {
+        "caveat": "when managers lack experience in distributed team leadership"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work for complex team coordination tasks",
+      "predicate": "is more productive than",
+      "object": "office work for complex team coordination tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for complex team coordination tasks office work for complex team coordination tasks]",
+        "[PATH:empirical] Compare productivity outcomes of distributed agile teams with and without dedicated high-bandwidth video conferencing systems (e.g., always-on video, spatial audio) in controlled field experiments. \u2014 Directly tests the caveat (lack of synchronous infrastructure) as the moderating variable, measuring coordination quality and task completion time.",
+        "[PATH:literature] Meta-analysis of studies on remote vs. in-person collaboration for complex problem-solving tasks (e.g., design sprints, software architecture meetings), focusing on communication medium richness (e.g., Olson & Olson, 2000; recent turnover studies). \u2014 Synthesizes existing evidence to evaluate whether the productivity gap persists across communication quality levels, clarifying the disputed claim.",
+        "[PATH:theoretical] Agent-based simulation modeling of team coordination under varying communication latency, bandwidth, and social presence parameters to predict productivity thresholds. \u2014 Provides a formal framework to identify boundary conditions where remote work might equal or underperform office work, especially when synchronous infrastructure is degraded."
+      ],
+      "scope": {
+        "domain": "team coordination and brainstorming"
+      },
+      "qualifier": {
+        "caveat": "without high-quality synchronous communication infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work for complex team coordination tasks",
+      "predicate": "can be as productive as",
+      "object": "office work for complex team coordination tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work for complex team coordination tasks can be as productive as office work for complex team coordination tasks in domain 'team coordination and brainstorming']"
+      ],
+      "scope": {
+        "domain": "team coordination and brainstorming"
+      },
+      "qualifier": {
+        "temporal": "during the period 2020-2024",
+        "geographic": "global, with emphasis on developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work for complex team coordination tasks",
+      "predicate": "is inherently less productive than",
+      "object": "office work for complex team coordination tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work for complex team coordination tasks is inherently less productive than office work for complex team coordination tasks in domain 'team coordination and brainstorming']"
+      ],
+      "scope": {
+        "domain": "team coordination and brainstorming"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread remote work adoption",
+        "geographic": "globally, primarily in developed economies with high-speed internet"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "remote work for complex team coordination tasks",
+      "predicate": "can achieve productivity comparable to or exceeding office work",
+      "object": "when implemented with high-quality coordination practices and tailored to team context",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] Branch A highlights that remote work can outperform office work under certain conditions, while Branch B emphasizes parity. Both converge on the idea that remote work is at least as productive as office work, with variation depending on factors like team autonomy, communication tools, and task interdependence. Thus, the claim reframes the apparent contradiction by specifying the contextual moderators that determine whether remote work yields superiority or equivalence."
+      ],
+      "scope": {
+        "domain": "team coordination and brainstorming"
+      },
+      "qualifier": {
+        "caveat": "without high-quality synchronous communication infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 22,
+  "focus_claim_id": "C008"
+}
