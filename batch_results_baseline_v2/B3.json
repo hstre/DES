@@ -1,0 +1,53 @@
+{
+  "qid": "B3",
+  "question": "Is social media harmful to democracy?",
+  "des_report": "Research question: Is social media harmful to democracy?\n\nInitial claim: Social media platforms erode democratic deliberation (confidence: 0.50)\n\n\nCompeting hypotheses explored: 2\n  - Social media platforms enhance deliberative civic engagement in local communities [supported, conf: 0.90]\n  - Social media platforms undermine deliberative civic engagement in local communities [supported, conf: 0.90]\n\nSynthesis conclusions: 2\n  - Social media platforms that emphasize ephemeral content reduce deliberative civic engagement in local communities (confidence: 0.50)\n  - Social media platforms undermine deliberative civic engagement in local communities (confidence: 0.50)\n\n\nTotal claims generated: 12\nEpistemic operations applied: 40",
+  "cot_output": "STEP 1 \u2014 INITIAL CLAIM:\nClaim: Social media harms democracy.\nConfidence: 0.7\n\nSTEP 2 \u2014 FALSIFICATION:\nCounter-claim: Social media strengthens democracy.\n(The counter-claim directly asserts the opposite effect on the same object.)\n\nSTEP 3 \u2014 CONTRADICTION CHECK:\nAnswer: YES\nExplanation: The initial claim asserts that social media causes harm to democracy, while the counter-claim asserts it causes strengthening; these are mutually exclusive outcomes for the same causal relationship.\n\nSTEP 4 \u2014 SYNTHESIS:\nSynthesis: Social media both harms and strengthens democracy depending on institutional context, regulatory framework, and user behavior\u2014amplifying disinformation and polarization in low-trust, unregulated environments while enhancing civic engagement and information access in high-trust, well-regulated settings.\nConfidence: 0.85",
+  "cot_parsed": {
+    "raw": "STEP 1 \u2014 INITIAL CLAIM:\nClaim: Social media harms democracy.\nConfidence: 0.7\n\nSTEP 2 \u2014 FALSIFICATION:\nCounter-claim: Social media strengthens democracy.\n(The counter-claim directly asserts the opposite effect on the same object.)\n\nSTEP 3 \u2014 CONTRADICTION CHECK:\nAnswer: YES\nExplanation: The initial claim asserts that social media causes harm to democracy, while the counter-claim asserts it causes strengthening; these are mutually exclusive outcomes for the same causal relationship.\n\nSTEP 4 \u2014 SYNTHESIS:\nSynthesis: Social media both harms and strengthens democracy depending on institutional context, regulatory framework, and user behavior\u2014amplifying disinformation and polarization in low-trust, unregulated environments while enhancing civic engagement and information access in high-trust, well-regulated settings.\nConfidence: 0.85",
+    "has_claim": true,
+    "has_counter": true,
+    "has_contradiction_check": true,
+    "has_synthesis": true,
+    "contradiction_detected": true,
+    "steps_complete": true
+  },
+  "evaluation": {
+    "directional_commitment": {
+      "winner": "B",
+      "reason": "Output B's initial claim and counter-claim are clear, opposing directional assertions, while Output A's claims are hedged with qualifiers like 'in local communities' and 'ephemeral content'.",
+      "actual_winner": "CoT"
+    },
+    "contradiction_depth": {
+      "winner": "A",
+      "reason": "Output A explicitly explores two competing hypotheses with equal high confidence, generating a deeper structural contradiction, whereas Output B only sets up a single binary opposition.",
+      "actual_winner": "DES"
+    },
+    "synthesis_quality": {
+      "winner": "B",
+      "reason": "Output B produces a more precise, scope-bounded synthesis that specifies conditions (institutional context, regulatory framework, user behavior) resolving the contradiction productively, while Output A's syntheses remain vague and low-confidence.",
+      "actual_winner": "CoT"
+    },
+    "epistemic_novelty": {
+      "winner": "A",
+      "reason": "Output A surfaces the non-obvious tension that ephemeral content platforms may specifically reduce local civic engagement, a more nuanced insight than the general 'depends on context' synthesis in Output B.",
+      "actual_winner": "DES"
+    },
+    "overall": {
+      "winner": "B",
+      "justification": "Although Output A shows deeper contradiction exploration and a novel sub-claim, Output B's clearer directional commitment and higher-quality, context-specific synthesis make it more epistemically robust and actionable for the research question."
+    },
+    "assignment": {
+      "A": "DES",
+      "B": "CoT"
+    },
+    "raw_winner": "B",
+    "actual_winner": "CoT"
+  },
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "raw_winner": "B",
+  "actual_winner": "CoT"
+}
