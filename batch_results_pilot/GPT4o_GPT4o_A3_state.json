@@ -1,0 +1,518 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces wages for",
+      "object": "native workers with low educational attainment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Immigration",
+      "predicate": "reduces wages for",
+      "object": "native workers with low educational attainment in regions with high immigrant concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in regions with high immigrant concentration]"
+      ],
+      "scope": {
+        "domain": "labor economics, regional effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States, metropolitan areas with above-median immigrant concentration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Immigration",
+      "predicate": "increases demand for complementary services and goods, offsetting wage effects for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in dynamic local economies]"
+      ],
+      "scope": {
+        "domain": "labor economics, local multiplier effects"
+      },
+      "qualifier": {
+        "temporal": "post-1990, during periods of economic expansion",
+        "geographic": "U.S. metropolitan areas with high immigration influx"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration",
+      "predicate": "has negligible or ambiguous wage effect on",
+      "object": "native workers with low educational attainment when controlling for industry and automation trends",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment when controlling for industry and automation trends]"
+      ],
+      "scope": {
+        "domain": "labor economics, confounding factors"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Immigration",
+      "predicate": "increases demand for",
+      "object": "low-cost services and goods in regions with high immigrant concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration low-cost services and goods in regions with high immigrant concentration]",
+        "[PATH:empirical] Consumer Expenditure Survey (CEX) microdata from the Bureau of Labor Statistics, merged with metropolitan-area immigrant concentration data from the American Community Survey (ACS) \u2014 This allows direct testing of whether households in high-immigrant metro areas spend a larger share on low-cost goods and services (e.g., discount retailers, fast food, personal services) compared to low-immigration areas, controlling for income and demographics.",
+        "[PATH:literature] Peri, G., & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This paper provides a theoretical and empirical framework linking immigration to changes in the production mix and local demand for low-skilled services, offering testable predictions about the composition of consumer demand.",
+        "[PATH:theoretical] Simulated general equilibrium model calibrated to U.S. metro areas (e.g., using data from the Quarterly Census of Employment and Wages and the Consumer Price Index) \u2014 A model that endogenizes household consumption and firm entry/exit can isolate the causal effect of immigrant-driven population growth on the relative price and quantity of low-cost goods and services, addressing endogeneity concerns in observational data."
+      ],
+      "scope": {
+        "domain": "labor economics, consumer behavior"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States, metropolitan areas with above-median immigrant concentration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Immigration",
+      "predicate": "increases economic opportunities for",
+      "object": "native workers with low educational attainment in regions with high immigrant concentration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in regions with high immigrant concentration]",
+        "[PATH:empirical] Card, D. (1990). 'The Impact of the Mariel Boatlift on the Miami Labor Market.' Industrial and Labor Relations Review, 43(2), 245-257. \u2014 This classic natural experiment examines how a large, sudden influx of low-skilled immigrants affected wages and employment of native low-education workers in Miami. It provides direct empirical evidence on the hypothesis within a high-immigrant-concentration metropolitan area.",
+        "[PATH:empirical] Peri, G., & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This study investigates how low-skilled native workers shift to more communication-intensive tasks in response to immigrant labor, which can increase their productivity and wages. It offers a mechanism consistent with increased economic opportunities, relevant to the hypothesis's scope.",
+        "[PATH:theoretical] Ottaviano, G. I. P., & Peri, G. (2012). 'Rethinking the Effect of Immigration on Wages.' Journal of the European Economic Association, 10(1), 152-197. \u2014 This paper develops a general equilibrium model with imperfect substitution between native and immigrant workers. It predicts that immigration can raise wages for native low-education workers in certain regional contexts, providing a theoretical foundation to confirm the hypothesis under specific conditions."
+      ],
+      "scope": {
+        "domain": "labor economics, regional effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States, metropolitan areas with above-median immigrant share"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Immigration",
+      "predicate": "enhances entrepreneurial activity leading to job creation for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in dynamic local economies]",
+        "[PATH:empirical] Panel Study of U.S. Metropolitan Statistical Areas (MSAs) with above-average GDP growth, using linked employer-employee data from the U.S. Census Bureau (e.g., LEHD) to measure immigrant-founded firm births and subsequent hiring of low-education native workers \u2014 Directly tests the causal chain from immigration to entrepreneurship to job creation for the specified subgroup, controlling for local economic dynamism.",
+        "[PATH:empirical] Quasi-experimental study exploiting variation in refugee or H-1B visa allocation across dynamic U.S. cities (e.g., using instrumental variables based on historical settlement patterns or visa lotteries) to isolate the effect on self-employment rates and native low-skill employment \u2014 Provides credible causal identification by addressing selection bias, and focuses on the temporal and geographic scope (post-2000, high-growth metros).",
+        "[PATH:literature] Meta-analysis of existing studies on immigrant entrepreneurship and native labor market outcomes, with subgroup analysis by educational attainment and local economic growth conditions \u2014 Synthesizes conflicting evidence to assess overall direction and effect size, and identifies moderators (e.g., industry composition, labor market tightness) that might explain the disputed status of the hypothesis."
+      ],
+      "scope": {
+        "domain": "labor economics, entrepreneurship"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "U.S. metropolitan areas with above-average GDP growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Immigration",
+      "predicate": "depresses wages and employment opportunities for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in dynamic local economies]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' and subsequent updates using ACS data through 2020 \u2014 This seminal work directly examines the wage and employment effects of immigration on native low-skilled workers, and its methodology can be replicated with more recent data for dynamic metropolitan areas to test the hypothesis.",
+        "[PATH:empirical] Card (2001) 'Immigrant Inflows, Native Outflows, and the Local Labor Market Impacts of Higher Immigration' and Card & Lewis (2007) using spatial correlation approaches \u2014 These studies provide contrasting evidence that immigration has minimal negative wage effects in dynamic local economies, often attributing adjustments to native mobility or industry composition. Re-analysis with post-2000 data for fast-growing metros would directly challenge or support the hypothesis.",
+        "[PATH:literature] Dustmann, Sch\u00f6nberg, & Stuhler (2016) 'The Impact of Immigration: Why Do Studies Reach Such Different Results?' \u2014 This comprehensive review identifies key methodological differences (e.g., spatial vs. national approaches, skill-cell definitions) that explain conflicting findings. Applying their framework to the specific scope (dynamic local economies, 2000\u20132020) would clarify whether the hypothesis holds under rigorous sensitivity checks."
+      ],
+      "scope": {
+        "domain": "labor economics, labor market competition"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States, metropolitan areas with above-average employment growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Immigration",
+      "predicate": "increases demand for complementary services and goods, thereby offsetting negative wage effects for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration increases demand for complementary services and goods, thereby offsetting negative wage effects for native workers with low educational attainment in dynamic local economies in domain 'labor economics, local multiplier effects']"
+      ],
+      "scope": {
+        "domain": "labor economics, local multiplier effects"
+      },
+      "qualifier": {
+        "temporal": "post-1990s",
+        "geographic": "United States, metropolitan areas with growing service sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Immigration",
+      "predicate": "does not sufficiently increase demand for complementary services and goods to offset negative wage effects for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration does not sufficiently increase demand for complementary services and goods to offset negative wage effects for native workers with low educational attainment in dynamic local economies in domain 'labor economics, local multiplier effects']"
+      ],
+      "scope": {
+        "domain": "labor economics, local multiplier effects"
+      },
+      "qualifier": {
+        "temporal": "early 2000s to 2020",
+        "geographic": "United States, metropolitan areas with high population growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Immigration",
+      "predicate": "has a positive wage effect on",
+      "object": "native workers with low educational attainment in industries experiencing labor shortages",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment in industries experiencing labor shortages]",
+        "[PATH:empirical] Quarterly Journal of Economics, 'Immigration and the Wages of Native Workers: A Re-examination of the Spatial Correlation Approach' (e.g., Card, 2001 or similar replication studies using 1990-2020 CPS data) \u2014 This classic spatial correlation approach can be re-estimated focusing on native workers with low educational attainment specifically in industries classified as experiencing labor shortages (e.g., construction, hospitality, agriculture) to test whether the wage effect is positive or negative in that subsample.",
+        "[PATH:empirical] National Bureau of Economic Research (NBER) Working Paper series on 'Immigration, Labor Shortages, and Wage Dynamics: Industry-Level Panel Analysis' (hypothetical meta-analysis or original panel regression using OES or QCEW data) \u2014 An industry-year panel analysis that interacts immigrant share with a measure of labor shortage (e.g., job vacancy rates or hiring difficulty indices) can isolate whether the predicted positive wage effect for low-education natives holds only in shortage sectors, controlling for other factors like offshoring and automation.",
+        "[PATH:theoretical] Journal of Labor Economics, 'Heterogeneous Effects of Immigration on Native Wages: The Role of Industry Skill Demand and Labor Market Tightness' (theoretical model with calibration) \u2014 A search-and-matching model that incorporates industry-specific labor shortages can generate predictions about when immigration raises native wages (e.g., by filling complementary roles in bottleneck positions) versus when it depresses them, providing a formal framework to interpret empirical findings."
+      ],
+      "scope": {
+        "domain": "labor economics, industry-specific effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Immigration",
+      "predicate": "significantly depresses wages for",
+      "object": "native workers with low educational attainment, regardless of industry and automation trends",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers with low educational attainment, regardless of industry and automation trends]",
+        "[PATH:empirical] Card (2009) 'Immigration and Inequality' or Borjas (2003) 'The Labor Demand Curve Is Downward Sloping' - reanalyze with 2000-2020 CPS data, focusing on native workers with less than high school education, controlling for industry and automation proxies (e.g., robot adoption rates). \u2014 Directly tests the wage effect for low-education natives using a canonical quasi-experimental approach (supply-push instrument), while adding controls for automation trends to isolate immigration's impact.",
+        "[PATH:empirical] Autor, Dorn, and Hanson (2013) 'The China Syndrome' - extend their local labor market methodology to immigration shocks, using commuting zone data from 2000-2020, and interact immigration with routine-task intensity measures to test if effects persist regardless of automation. \u2014 Provides a robust spatial econometric framework to separate immigration effects from automation and trade, directly addressing the 'regardless of industry and automation trends' claim.",
+        "[PATH:empirical] Dustmann, Frattini, and Preston (2013) 'The Effect of Immigration along the Distribution of Wages' - replicate their quantile regression approach on 2000-2020 US data, specifically for low-education natives, and include industry fixed effects and automation exposure indices. \u2014 Quantile regression can reveal heterogeneous wage impacts at the bottom of the wage distribution, and controlling for industry and automation metrics tests whether the effect is truly universal or mediated by these factors."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Immigration",
+      "predicate": "boosts entrepreneurial activity leading to job creation for",
+      "object": "native workers with low educational attainment in dynamic local economies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics, entrepreneurship"
+      },
+      "qualifier": {
+        "temporal": "post-1990, during periods of economic expansion",
+        "geographic": "U.S. metropolitan areas with high immigration influx"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Immigration",
+      "predicate": "suppresses wage growth and employment opportunities for",
+      "object": "native workers with low educational attainment in saturated job markets",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics, competitive job markets"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 45,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
