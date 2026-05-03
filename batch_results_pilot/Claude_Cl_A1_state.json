@@ -1,0 +1,545 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "low-wage labor markets with monopsony power",
+        "effect_modifiers": [
+          "elasticity of labor demand",
+          "local economic conditions",
+          "compliance levels"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high labor demand elasticity"
+      },
+      "qualifier": {
+        "context": "markets where employers can easily substitute labor with automation or outsourcing",
+        "effect_modifiers": [
+          "local economic conditions",
+          "compliance levels"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover and training costs]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with monopsony power"
+      },
+      "qualifier": {
+        "context": "markets where employers have wage-setting power and face high recruitment costs",
+        "effect_modifiers": [
+          "worker bargaining power",
+          "local labor market concentration"
+        ]
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "has neutral or negligible effect on",
+      "object": "aggregate unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage aggregate unemployment]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with moderate monopsony power and low demand elasticity"
+      },
+      "qualifier": {
+        "context": "markets where compliance is high and demand for low-wage labor is inelastic",
+        "effect_modifiers": [
+          "local economic conditions",
+          "enforcement strength"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage in service sectors with high customer-contact requirements",
+      "predicate": "decreases",
+      "object": "unemployment among workers aged 25-54",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in service sectors with high customer-contact requirements unemployment among workers aged 25-54]",
+        "[PATH:empirical] Natural experiment studies on minimum wage increases in US states with high tourism or hospitality employment (e.g., Florida, Nevada), comparing unemployment rates for workers aged 25-54 in customer-contact vs. non-contact service roles. \u2014 Directly tests the hypothesis in the specified scope by leveraging policy variation and industry-specific employment data.",
+        "[PATH:literature] Meta-analysis of minimum wage effects on employment in sectors with low automation potential, such as restaurants and personal care, controlling for consumer preference indices and outsourcing feasibility. \u2014 Synthesizes existing evidence to assess whether high customer-contact requirements moderate the unemployment effect, addressing the qualifier's context.",
+        "[PATH:theoretical] Agent-based simulation modeling of labor markets with heterogeneous consumer preferences for human service delivery and firm-level automation barriers, calibrated to demographic wage compression dynamics. \u2014 Explores causal mechanisms and effect modifiers (automation barriers, wage compression) that are difficult to isolate in empirical data, providing counterfactual predictions."
+      ],
+      "scope": {
+        "domain": "restaurants, hospitality, and personal care industries where automation cannot easily replace human interaction"
+      },
+      "qualifier": {
+        "context": "markets with strong consumer preference for human service delivery and limited outsourcing options",
+        "effect_modifiers": [
+          "industry-specific automation barriers",
+          "demographic wage compression effects"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]",
+        "[PATH:empirical] Card and Krueger (1994) study of the 1992 New Jersey minimum wage increase and its effect on fast-food employment in neighboring Pennsylvania \u2014 This classic natural experiment directly tests the relationship between minimum wage increases and employment in a low-wage sector, providing evidence on whether unemployment decreases in markets with limited competition for workers.",
+        "[PATH:theoretical] Simulation of a search-and-matching model with monopsony power and endogenous turnover costs (e.g., based on Manning, 2003) \u2014 A calibrated model can isolate the effects of monopsony concentration, turnover cost magnitude, and local spending multipliers on employment outcomes, helping to confirm the hypothesized moderating conditions.",
+        "[PATH:literature] Meta-analysis of minimum wage studies focusing on labor market concentration (e.g., Dube, Lester, and Reich, 2010, updated with recent data) \u2014 A systematic review of empirical estimates stratified by monopsony indicators can reveal whether the predicted negative effect on unemployment is consistently observed in low-competition markets, confirming or refuting the scope condition."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with monopsony power where employers face limited competition for workers"
+      },
+      "qualifier": {
+        "context": "markets where wage increases stimulate local consumer demand and reduce costly employee turnover",
+        "effect_modifiers": [
+          "monopsony concentration",
+          "turnover cost magnitude",
+          "local spending multipliers"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage above 60% of local median wage",
+      "predicate": "increases",
+      "object": "employee turnover in markets with low labor concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage above 60% of local median wage employee turnover in markets with low labor concentration]",
+        "[PATH:empirical] Quasi-experimental studies of city-level minimum wage increases (e.g., Seattle, San Francisco) with matched employer-employee panel data, focusing on turnover rates in low-concentration industries like retail and hospitality. \u2014 These studies can directly test whether turnover rises when the minimum wage exceeds 60% of the local median wage, controlling for labor market concentration.",
+        "[PATH:theoretical] Theoretical models of wage compression and job mobility (e.g., efficiency wage theory or search-and-matching models) applied to competitive labor markets with low employer concentration. \u2014 Simulations can clarify the predicted effect of compressed wage structures on turnover, isolating the mechanism from confounding factors.",
+        "[PATH:literature] Systematic review of minimum wage effects on turnover from labor economics journals (e.g., Journal of Labor Economics, ILR Review), focusing on studies that measure both wage thresholds and market concentration. \u2014 A meta-analysis of existing evidence can identify whether the hypothesized effect holds across different contexts and data sets, and reveal gaps in the current literature."
+      ],
+      "scope": {
+        "domain": "competitive labor markets where multiple employers vie for workers"
+      },
+      "qualifier": {
+        "threshold": "minimum wage exceeding 60% of area median wage",
+        "mechanism": "wage compression reduces incentive differentials between entry and experienced positions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover and training costs]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in low-wage labor markets (e.g., state-level or city-level minimum wage changes in the U.S.) that measure turnover rates and training costs using administrative payroll data or employer surveys. \u2014 Directly tests the hypothesis by comparing turnover and training costs before and after wage floors rise, controlling for employer margins, automation adoption, and labor demand elasticity.",
+        "[PATH:empirical] Firm-level case studies or panel data analyses from industries with high labor substitutability (e.g., fast food, retail) that examine adjustments in hours, benefits, and hiring practices in response to minimum wage hikes. \u2014 Provides evidence on the effect modifier 'substitutability of labor with automation' and employer behavior near break-even margins, clarifying whether turnover increases or decreases under these conditions.",
+        "[PATH:theoretical] Theoretical models of monopsonistic competition and efficiency wages that predict the relationship between wage floors, worker retention, and training investments. \u2014 Formalizes the mechanisms linking minimum wages to turnover and training costs, allowing predictions that can be tested against empirical data and clarifying when the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with competitive conditions"
+      },
+      "qualifier": {
+        "context": "markets where employers operate near break-even margins and respond to wage floors by reducing hours, benefits, and total headcount",
+        "effect_modifiers": [
+          "employer profit margins",
+          "substitutability of labor with automation",
+          "elasticity of labor demand"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage reduces employee turnover and training costs in domain 'low-wage labor markets with monopsony power']"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with monopsony power"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage increases employee turnover and training costs in domain 'low-wage labor markets with monopsony power']"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with monopsony power"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage in markets with high labor turnover costs",
+      "predicate": "reduces",
+      "object": "aggregate unemployment through decreased job vacancy duration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in markets with high labor turnover costs aggregate unemployment through decreased job vacancy duration]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in high-turnover industries (e.g., fast food, retail) using administrative employment and vacancy data from states with recent policy changes. \u2014 These studies can directly test whether wage hikes reduce vacancy duration and unemployment, controlling for local labor market conditions, and are well-suited to the specified scope and boundary conditions.",
+        "[PATH:empirical] Firm-level surveys or panel data on recruitment and training costs, paired with wage variation, to measure retention rates and vacancy filling times. \u2014 This would confirm the proposed mechanism (higher wages reducing costly turnover) and quantify whether reduced vacancy duration leads to lower aggregate unemployment in the target sectors.",
+        "[PATH:theoretical] Search-and-matching labor market models that incorporate endogenous turnover costs and wage floors, calibrated to low-wage service sectors. \u2014 Such models can simulate the equilibrium effects of minimum wage increases under high turnover costs, testing the hypothesis's internal consistency and identifying boundary conditions like the 10-25% wage increase range."
+      ],
+      "scope": {
+        "domain": "low-wage service sectors where recruitment and training costs exceed 20% of annual wages"
+      },
+      "qualifier": {
+        "mechanism": "higher wages increase worker retention and reduce costly turnover, incentivizing employers to maintain or expand workforce",
+        "boundary_conditions": [
+          "minimum wage increase between 10-25% of baseline",
+          "industries with standardized training protocols"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage",
+      "predicate": "significantly increases",
+      "object": "aggregate unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage aggregate unemployment]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in U.S. states with high teenage employment shares (e.g., Card & Krueger's 1994 New Jersey-Pennsylvania fast-food study, updated with modern data) \u2014 Directly tests the hypothesis in the specified scope (competitive labor markets, low-skill workers) using natural experiments, providing causal estimates of unemployment effects under varying magnitude and speed of implementation.",
+        "[PATH:literature] Meta-analysis of minimum wage employment effects, focusing on studies that control for wage elasticity of demand and automation adoption (e.g., Doucouliagos & Stanley 2009, updated with recent evidence on labor-saving technologies) \u2014 Synthesizes existing empirical findings across multiple contexts, allowing assessment of whether significant unemployment effects emerge specifically in markets with high elasticity and automation availability, as per the hypothesis's effect modifiers.",
+        "[PATH:theoretical] Structural labor market model simulating the impact of minimum wage increases on aggregate unemployment under varying degrees of automation substitutability and price competition (e.g., Acemoglu & Restrepo's automation-labor framework) \u2014 Tests the causal mechanism by modeling how binding minimum wages interact with automation and price competition to affect employment, addressing the scope and qualifiers (e.g., magnitude relative to median wage) that empirical studies may not isolate."
+      ],
+      "scope": {
+        "domain": "competitive labor markets with high wage elasticity of demand and substantial teenage/low-skill employment shares"
+      },
+      "qualifier": {
+        "context": "markets where employers face binding price competition and can readily substitute labor with automation or reduced hours",
+        "effect_modifiers": [
+          "magnitude of minimum wage increase relative to median wage",
+          "speed of implementation",
+          "availability of labor-saving technologies"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "raising the minimum wage above 60% of local median wage",
+      "predicate": "increases",
+      "object": "employee turnover in markets with high labor mobility and low monopsony power",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "competitive urban labor markets with multiple employers in same sector"
+      },
+      "qualifier": {
+        "threshold": "minimum wage exceeding 60% of area median wage",
+        "mechanism": "accelerated automation adoption and reduced hiring volume outweigh retention benefits"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-wage labor markets with competitive wage structures"
+      },
+      "qualifier": {
+        "context": "markets where wage compression eliminates skill-based pay differentials and experienced workers seek better opportunities",
+        "effect_modifiers": [
+          "erosion of wage ladders",
+          "increased turnover among incumbent workers",
+          "higher replacement costs for skilled positions"
+        ]
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
