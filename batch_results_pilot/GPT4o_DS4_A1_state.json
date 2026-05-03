@@ -1,0 +1,513 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "low-wage labor markets with moderate minimum wage increases",
+        "debate": "empirical findings vary by time period, region, and methodology; some studies find no significant effect, others find modest disemployment effects"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "moderate minimum wage increases",
+      "predicate": "lead to",
+      "object": "modest job losses for teenagers and low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: moderate minimum wage increases modest job losses for teenagers and low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with moderate increases"
+      },
+      "qualifier": {
+        "context": "based on studies using traditional difference-in-differences methods from 1990s-2000s"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "minimum wage increases",
+      "predicate": "have",
+      "object": "no significant effect on overall employment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases no significant effect on overall employment]"
+      ],
+      "scope": {
+        "domain": "aggregate employment across all sectors and recent time periods"
+      },
+      "qualifier": {
+        "context": "supported by newer research using modern causal inference techniques and data from 2010s-2020s"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "minimum wage increases",
+      "predicate": "reduce",
+      "object": "employment in high-turnover, low-margin industries",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases employment in high-turnover, low-margin industries]"
+      ],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {
+        "context": "effect is concentrated in firms with thin profit margins and high reliance on tipped or part-time labor"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "moderate minimum wage increases",
+      "predicate": "lead to",
+      "object": "increased investment in worker training programs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: moderate minimum wage increases increased investment in worker training programs]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) or LEHD data linked to state minimum wage changes \u2014 Panel data on firm-level training expenditures and worker tenure can be used in a difference-in-differences design to test whether moderate minimum wage increases correlate with higher investment in training, controlling for industry and local labor market conditions.",
+        "[PATH:empirical] Survey of employer training practices (e.g., National Compensation Survey or employer-reported training costs) \u2014 Direct employer surveys over the 2010\u20132025 period can provide self-reported data on training program spending and participation, allowing comparison between states or time periods with and without moderate minimum wage increases.",
+        "[PATH:theoretical] Acemoglu & Pischke (1999, 2003) on minimum wages and training: theoretical labor economics models \u2014 These models predict that in monopsonistic or frictional labor markets, minimum wage increases can induce firms to invest more in general training to raise worker productivity. Reviewing and extending this framework to moderate increases in the U.S. context can clarify conditions under which the hypothesis holds."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with moderate increases"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132025",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "moderate minimum wage increases",
+      "predicate": "do not lead to",
+      "object": "any net job losses, even for teenagers and low-skilled workers, when analyzed via modern methods that control for regional spillovers and monopsony power",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: moderate minimum wage increases any net job losses, even for teenagers and low-skilled workers, when analyzed via modern methods that control for regional spillovers and monopsony power]",
+        "[PATH:empirical] Reanalysis of Cengiz, Dube, Lindner, and Zipperer (2019) 'The Effect of Minimum Wages on Low-Wage Jobs' using newer data and controlling for regional spillovers via spatial econometrics \u2014 This study is a cornerstone of the no-job-loss claim; replicating with updated data and explicitly modeling spillover effects can confirm or refute the hypothesis under current labor market conditions.",
+        "[PATH:literature] Systematic meta-analysis of quasi-experimental minimum wage studies (2010\u20132024) focusing on teenagers and low-skilled workers, stratified by monopsony power proxies (e.g., concentration ratios, Herfindahl index) \u2014 A meta-analysis that specifically tests for heterogeneity by monopsony power and regional spillover controls can resolve whether the null effect holds across contexts or is conditional on market structure.",
+        "[PATH:theoretical] Structural estimation of a dynamic monopsony model calibrated to US low-wage labor markets, simulating moderate minimum wage increases and measuring employment responses \u2014 A theoretical model can isolate the mechanisms (e.g., labor supply elasticity, firm market power) that would produce zero net job losses, providing a causal framework to interpret empirical findings and test robustness."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with moderate increases, using recent quasi-experimental evidence"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s, using studies from 2010 onward",
+        "geographic": "United States and other developed economies with similar labor market institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "minimum wage increases",
+      "predicate": "lead to",
+      "object": "increased employment in the service sector",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases increased employment in the service sector]",
+        "[PATH:literature] Meta-analysis of minimum wage effects on service sector employment in urban areas (e.g., studies by Dube, Lester, and Reich or subsequent updates) \u2014 A comprehensive meta-analysis can synthesize conflicting findings across urban contexts, controlling for local economic conditions and time periods, to determine if the hypothesized positive employment effect holds consistently.",
+        "[PATH:empirical] Quasi-experimental panel data analysis using city-level minimum wage changes in large urban areas (e.g., U.S. cities 2010-2020, with synthetic control methods) \u2014 This approach leverages variation in minimum wage policies across cities over the specified period, allowing causal identification of employment effects in the service sector while accounting for unobserved confounders.",
+        "[PATH:theoretical] Theoretical model of monopsonistic labor markets with heterogeneous service sector firms \u2014 Developing or extending a model where firms have market power over wages can clarify conditions under which a minimum wage increase might raise employment (e.g., via reduced turnover or increased demand) rather than reduce it, providing testable predictions for urban service sectors."
+      ],
+      "scope": {
+        "domain": "service sector employment in urban areas during the 2010s-2020s"
+      },
+      "qualifier": {
+        "temporal": "2010-2029",
+        "geographic": "urban areas globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "minimum wage increases",
+      "predicate": "have",
+      "object": "significant negative effects on employment for low-skilled and teenage workers in highly affected sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases significant negative effects on employment for low-skilled and teenage workers in highly affected sectors]",
+        "[PATH:empirical] Card and Krueger (1994) 'Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania' \u2014 This classic study provides a natural experiment comparing employment outcomes across state borders, directly testing the hypothesis on low-skilled workers in a highly affected sector (fast food). Its findings (no significant negative effects) challenge the hypothesis, and replication with modern data could confirm or refute it.",
+        "[PATH:empirical] Cengiz et al. (2019) 'The Effect of Minimum Wages on Low-Wage Jobs: Evidence from the United States Using a Bunching Estimator' \u2014 This recent study uses a quasi-experimental bunching method across U.S. states (2000-2016) to estimate employment effects on low-skilled workers. It finds little to no negative effects on overall employment, but may show heterogeneity for teenagers, offering a direct test of the hypothesis.",
+        "[PATH:literature] Neumark and Wascher (2008) 'Minimum Wages and Employment: A Review of Evidence from the New Minimum Wage Research' \u2014 This comprehensive review synthesizes decades of empirical studies, including those focused on low-skilled and teenage workers in retail and food service. It provides a balanced assessment of the evidence, highlighting conditions under which negative employment effects are most likely, and can guide further targeted research."
+      ],
+      "scope": {
+        "domain": "low-skilled and teenage workers in sectors like retail and food service, across recent time periods"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "minimum wage increases",
+      "predicate": "increase",
+      "object": "employee retention in high-turnover, low-margin industries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases employee retention in high-turnover, low-margin industries]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, analyzed for NAICS sectors 72 (accommodation and food services) and 44-45 (retail trade), focusing on job tenure and separation rates before and after state-level minimum wage increases from 2010-2023. \u2014 Provides granular, longitudinal data on employee retention trends in high-turnover, low-margin industries, allowing for difference-in-differences or event-study analyses that can isolate the effect of minimum wage changes on retention.",
+        "[PATH:literature] Meta-analysis of published studies on minimum wage effects in low-wage sectors, including papers by Dube, Lester, and Reich (2010) and subsequent replications, with a focus on turnover and employment stability outcomes. \u2014 Synthesizes existing empirical evidence across multiple contexts and time periods, helping to resolve disputes by identifying average effect sizes, heterogeneity, and methodological sensitivities relevant to the hypothesis.",
+        "[PATH:theoretical] Theoretical models of labor turnover and efficiency wages (e.g., Shapiro-Stiglitz model) applied to low-margin industries, calibrated with industry-specific parameters (e.g., profit margins, training costs, labor intensity). \u2014 Provides a causal framework to predict conditions under which minimum wage increases could reduce turnover (e.g., via reduced shirking or improved morale) versus increase it (e.g., via reduced hours or automation), guiding empirical tests."
+      ],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "minimum wage increases",
+      "predicate": "increase",
+      "object": "employment in high-turnover, low-margin industries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: minimum wage increases employment in high-turnover, low-margin industries]",
+        "[PATH:empirical] Cengiz, D., Dube, A., Lindner, A., & Zipperer, B. (2019). The effect of minimum wages on low-wage jobs. Quarterly Journal of Economics, 134(3), 1405-1454. \u2014 This study uses a state-level border discontinuity design and finds that minimum wage increases do not reduce overall low-wage employment, with some evidence of employment increases in high-turnover sectors like restaurants, providing direct empirical evidence for the hypothesis.",
+        "[PATH:empirical] Katz, L. F., & Krueger, A. B. (1992). The effect of the minimum wage on the fast-food industry. Industrial and Labor Relations Review, 46(1), 6-21. \u2014 A classic study of the fast-food industry (a high-turnover, low-margin sector) that found minimum wage increases led to employment increases in New Jersey relative to Pennsylvania, offering a natural experiment relevant to the hypothesis.",
+        "[PATH:empirical] Card, D., & Krueger, A. B. (1994). Minimum wages and employment: A case study of the fast-food industry in New Jersey and Pennsylvania. American Economic Review, 84(4), 772-793. \u2014 This seminal empirical study directly tests the effect of minimum wage hikes on employment in a high-turnover industry, providing evidence of no negative employment effects and potential positive effects, which can be used to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "minimum wage increases",
+      "predicate": "reduce",
+      "object": "employment in high-turnover, low-margin industries",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms minimum wage increases reduce employment in high-turnover, low-margin industries in domain 'restaurants, retail, and hospitality sectors']"
+      ],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "minimum wage increases",
+      "predicate": "do not reduce",
+      "object": "employment in high-turnover, low-margin industries",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms minimum wage increases do not reduce employment in high-turnover, low-margin industries in domain 'restaurants, retail, and hospitality sectors']"
+      ],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "minimum wage increases",
+      "predicate": "increase",
+      "object": "operational efficiency in high-turnover, low-margin industries",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "minimum wage increases",
+      "predicate": "increase",
+      "object": "employment in high-turnover, low-margin industries",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "restaurants, retail, and hospitality sectors"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T6[hypothesis_builder] on C003 -> C007",
+    "T6[falsifier] on C003 -> C008",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C009",
+    "T5[falsifier] on C004 -> C010",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C013",
+    "T9[falsifier] on C004 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 44,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010",
+      "C014"
+    ]
+  }
+}

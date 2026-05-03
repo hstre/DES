@@ -1,0 +1,390 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers with low education",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers with low education]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "timeframe": "short-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "immigration",
+      "predicate": "increases",
+      "object": "overall economic productivity and demand for native workers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration overall economic productivity and demand for native workers]",
+        "[CONFLICT] The claim that immigration increases overall economic productivity and demand for native workers is disputed due to conflicting empirical evidence and theoretical models, with some studies showing positive long-term effects and others indicating potential negative impacts on native wages or employment."
+      ],
+      "scope": {
+        "domain": "macroeconomic effects"
+      },
+      "qualifier": {
+        "timeframe": "long-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "immigration",
+      "predicate": "has neutral effect on",
+      "object": "wages for native workers with high education",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers with high education]"
+      ],
+      "scope": {
+        "domain": "high-skilled labor markets"
+      },
+      "qualifier": {
+        "condition": "when labor markets are flexible"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "immigration",
+      "predicate": "increases",
+      "object": "entrepreneurial activities",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration entrepreneurial activities]",
+        "[PATH:empirical] Panel data on low-skilled immigrant self-employment rates from the Current Population Survey (CPS) and the American Community Survey (ACS), 2000-2020 \u2014 Directly measures the relationship between low-skilled immigration and entrepreneurial activity at the individual level, allowing for temporal and geographic controls within the specified scope.",
+        "[PATH:empirical] Quasi-experimental studies exploiting exogenous variation in low-skilled immigration flows (e.g., refugee dispersal policies or seasonal labor shocks) to estimate causal effects on business formation rates in local labor markets \u2014 Addresses endogeneity concerns inherent in correlational studies, providing stronger causal evidence on whether immigration increases entrepreneurial activities in low-skilled labor markets.",
+        "[PATH:literature] Meta-analysis of existing empirical literature on immigration and entrepreneurship, focusing on low-skilled workers in the U.S. from 2000-2020 \u2014 Synthesizes findings across multiple studies to assess the overall direction and magnitude of the effect, identifying sources of heterogeneity and potential publication bias that could affect confidence in the hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "immigration",
+      "predicate": "increases",
+      "object": "wages for native workers with low education",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers with low education]",
+        "[PATH:literature] Borjas (2017) 'The Wage Impact of Immigration: A Meta-Analysis' or similar meta-analyses on the labor market effects of immigration on low-skilled native wages \u2014 A comprehensive meta-analysis synthesizes findings from multiple studies across the 2010-2020 period, providing a high-level assessment of whether immigration consistently increases, decreases, or has no effect on wages for low-education native workers in the U.S. This can directly confirm or refute the hypothesis by summarizing empirical evidence.",
+        "[PATH:empirical] Current Population Survey (CPS) data from 2010-2020 merged with immigration statistics from the American Community Survey (ACS) \u2014 Individual-level wage data for native workers with low education can be analyzed using a skill-cell approach (e.g., education-experience groups) to estimate the causal effect of immigration inflows on wages. This direct quantitative analysis can test the hypothesis with temporal and geographic specificity.",
+        "[PATH:theoretical] Card (2009) 'Immigration and Inequality' or similar theoretical frameworks on labor market complementarity and substitution effects \u2014 Theoretical models (e.g., the Borjas model vs. the Card model) predict different wage outcomes depending on whether immigrants are substitutes or complements for native low-skilled workers. Exploring this theoretical grounding can clarify the conditions under which the hypothesis might hold, guiding empirical testing."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "immigration",
+      "predicate": "enhances",
+      "object": "innovation and technological advancement in the host country",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration innovation and technological advancement in the host country]",
+        "[PATH:empirical] National Bureau of Economic Research (NBER) working papers on immigration and patenting rates, e.g., 'Immigration and the Rise of American Ingenuity' (Akcigit, Grigsby, Nicholas, 2017) \u2014 Provides direct econometric evidence on immigrant contributions to patenting and innovation in the U.S., allowing for confirmation or refutation of the causal link within the specified temporal and geographic scope.",
+        "[PATH:literature] Meta-analysis of studies on high-skilled immigration and firm-level innovation in Western Europe, e.g., from the Journal of Economic Geography or Research Policy \u2014 A systematic review and synthesis of existing empirical studies can clarify the overall direction and magnitude of the effect, addressing the disputed status by aggregating heterogeneous findings.",
+        "[PATH:theoretical] Theoretical models of endogenous growth with labor mobility, e.g., Jones (1995) or Romer (1990) extended to include immigration as a shock to human capital diversity \u2014 Testing the hypothesis against formal economic theory helps identify conditions under which immigration enhances or fails to enhance innovation, refining the hypothesis's scope and confidence."
+      ],
+      "scope": {
+        "domain": "macroeconomic effects"
+      },
+      "qualifier": {
+        "temporal": "1990-2020",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "immigration",
+      "predicate": "reduces",
+      "object": "real wages and employment opportunities for low-skilled native workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration real wages and employment opportunities for low-skilled native workers]",
+        "[PATH:empirical] Meta-analysis of labor market impacts of immigration in OECD countries, focusing on low-skilled native workers in rigid labor markets (e.g., Germany, France, Italy) \u2014 A meta-analysis synthesizes findings across multiple studies, providing a robust estimate of the effect size and heterogeneity. Focusing on OECD countries with rigid labor markets directly tests the geographic and institutional scope of the hypothesis.",
+        "[PATH:empirical] Natural experiment studies exploiting exogenous immigration shocks (e.g., the Mariel Boatlift in Miami, or post-2004 EU enlargement flows to the UK) with detailed individual-level wage and employment data \u2014 Natural experiments allow causal identification of short- to medium-term labor supply shocks on native wages and employment, addressing endogeneity concerns. Replicating such designs across different rigid labor markets would confirm or refute the temporal effects specified.",
+        "[PATH:theoretical] Search-and-matching models of the labor market that incorporate institutional rigidities (e.g., minimum wage laws, union bargaining) and simulate the impact of immigration shocks on low-skilled native workers \u2014 Theoretical models can isolate the mechanisms through which rigid labor markets amplify negative wage and employment effects, and predict conditions under which the hypothesis holds or fails. Calibrating such models with country-specific data provides testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "labor market competition"
+      },
+      "qualifier": {
+        "temporal": "in the short to medium term (1\u20135 years after a labor supply shock)",
+        "geographic": "in developed economies with high immigration inflows and relatively rigid labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "immigration",
+      "predicate": "increases",
+      "object": "wages for native workers with high education",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers with high education]",
+        "[PATH:literature] Borjas, G.J. (2017). 'The Wage Impact of Immigration: A Meta-Analysis.' Journal of Labor Economics, 35(S1), S1-S40. \u2014 This meta-analysis synthesizes decades of empirical studies on immigration's wage effects, focusing on native workers by education level. It provides a comprehensive overview of effect sizes and heterogeneity, helping to confirm or refute the hypothesis for high-skilled workers in the U.S. context.",
+        "[PATH:empirical] U.S. Census Bureau, Current Population Survey (CPS) data (2010-2020) merged with Immigration and Customs Enforcement records. \u2014 Analyzing CPS microdata for native workers with college or advanced degrees, controlling for industry, region, and time trends, can directly test whether immigration inflows correlate with wage changes. This allows for causal identification using instrumental variables or difference-in-differences methods.",
+        "[PATH:theoretical] Peri, G. & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This paper develops a task-based model where high-skilled natives benefit from immigration through complementarity in production. It provides theoretical grounding for the hypothesis and suggests testable predictions about occupational specialization and wage dynamics."
+      ],
+      "scope": {
+        "domain": "high-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "immigration",
+      "predicate": "depresses",
+      "object": "wages for native workers with high education",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers with high education]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' and subsequent updates using 2010-2020 ACS data \u2014 Provides a direct empirical test of immigration's effect on native wages across education levels, using a spatial correlations approach that can be applied to high-skilled workers in flexible labor markets.",
+        "[PATH:literature] Peri and Sparber (2009) 'Task Specialization, Immigration, and Wages' and related analyses of high-skill occupational niches \u2014 Offers a theoretical and empirical counterpoint suggesting that high-skilled immigrants complement native workers via task specialization, potentially refuting the wage depression hypothesis for the specified scope.",
+        "[PATH:empirical] Panel study of high-skilled native workers in US tech hubs (e.g., Silicon Valley, Seattle) using matched employer-employee data from LEHD program, 2010-2020 \u2014 Directly tests the causal effect of high-skilled immigration on native wages in flexible hiring markets, controlling for local demand shocks and worker mobility."
+      ],
+      "scope": {
+        "domain": "high-skilled labor markets with flexible hiring"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 36,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}

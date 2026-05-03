@@ -31,7 +31,7 @@ import sys
 from dataclasses import asdict, dataclass, field
 from typing import Optional
 
-import httpx
+from openai import OpenAI
 
 # ---------------------------------------------------------------------------
 # Layer 1: Claim Structure
@@ -54,6 +54,7 @@ class Claim:
     sealed: bool = False
     is_synthesis: bool = False
     is_role_generated: bool = False   # True for claims produced by Anti-Delphi roles
+    generated_by: str = ""            # "{model}[{role}]" for role-generated claims
     history: list[str] = field(default_factory=list)
     parent_id: Optional[str] = None
 
@@ -64,6 +65,7 @@ class Claim:
     def from_dict(cls, d: dict) -> "Claim":
         d.setdefault("is_synthesis", False)
         d.setdefault("is_role_generated", False)
+        d.setdefault("generated_by", "")
         return cls(**d)
 
 
@@ -149,35 +151,46 @@ def new_branch_id(state: EpistemicState) -> str:
 # LLM Integration (Layer 0)
 # ---------------------------------------------------------------------------
 
-_DEEPSEEK_BASE = "https://api.deepseek.com/chat/completions"
-_DEEPSEEK_MODEL = "deepseek-chat"
+_BASE_MODEL = "deepseek-chat"
+_BASE_PROVIDER = "deepseek"
+
+_clients: dict = {}
 
 
-def get_api_key() -> str:
-    """Return the DeepSeek API key from the environment."""
-    key = os.environ.get("DEEPSEEK_API_KEY", "")
-    if not key:
-        raise EnvironmentError("DEEPSEEK_API_KEY is not set")
-    return key
+def get_llm_client(provider: str) -> OpenAI:
+    """Return (cached) OpenAI-compatible client for the given provider."""
+    if provider in _clients:
+        return _clients[provider]
+    if provider == "deepseek":
+        key = os.environ.get("DEEPSEEK_API_KEY", "")
+        if not key:
+            raise EnvironmentError("DEEPSEEK_API_KEY is not set")
+        client = OpenAI(api_key=key, base_url="https://api.deepseek.com/v1")
+    elif provider == "openrouter":
+        key = os.environ.get("OPENROUTER_API_KEY", "")
+        if not key:
+            raise EnvironmentError("OPENROUTER_API_KEY is not set")
+        client = OpenAI(api_key=key, base_url="https://openrouter.ai/api/v1")
+    else:
+        raise ValueError(f"Unknown provider: {provider!r} (valid: deepseek, openrouter)")
+    _clients[provider] = client
+    return client
+
+
+def call_llm(client: OpenAI, model: str, prompt: str, max_tokens: int = 800) -> str:
+    """Single LLM call using an OpenAI-compatible client, returns raw text."""
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        max_tokens=max_tokens,
+        temperature=0.7,
+    )
+    return response.choices[0].message.content
 
 
 def _llm_call(prompt: str) -> str:
-    """Single LLM call via DeepSeek chat completions, returns raw text."""
-    response = httpx.post(
-        _DEEPSEEK_BASE,
-        headers={
-            "Authorization": f"Bearer {get_api_key()}",
-            "Content-Type": "application/json",
-        },
-        json={
-            "model": _DEEPSEEK_MODEL,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 1024,
-        },
-        timeout=60.0,
-    )
-    response.raise_for_status()
-    return response.json()["choices"][0]["message"]["content"]
+    """Default LLM call using the base DeepSeek model."""
+    return call_llm(get_llm_client(_BASE_PROVIDER), _BASE_MODEL, prompt)
 
 
 def _extract_json(text: str) -> dict:
@@ -268,7 +281,15 @@ Return ONLY valid JSON:
 }
 
 
-def execute_role(role: str, claim: Claim, state: EpistemicState) -> Optional[Claim]:
+def execute_role(
+    role: str,
+    claim: Claim,
+    state: EpistemicState,
+    builder_client: Optional[OpenAI] = None,
+    builder_model: str = "",
+    falsifier_client: Optional[OpenAI] = None,
+    falsifier_model: str = "",
+) -> Optional[Claim]:
     """
     Execute a single Anti-Delphi role and return a new Claim, or None on failure.
 
@@ -276,18 +297,32 @@ def execute_role(role: str, claim: Claim, state: EpistemicState) -> Optional[Cla
     hypothesis_builder — extends or refines the claim directionally (conf 0.40–0.55).
     falsifier          — finds the sharpest counter-case         (conf 0.41–0.55).
 
+    When builder_client/falsifier_client are provided, each role uses its own model.
+    Falls back to the base DeepSeek client when not specified.
     Confidences are clamped below the T6 threshold (>0.6) and above the T5
     threshold (<0.4) so role-generated claims do not cascade into Anti-Delphi
-    sub-loops. The DES processes them via T3→T7→T8.
+    sub-loops.
     """
+    if role == "hypothesis_builder":
+        client = builder_client or get_llm_client(_BASE_PROVIDER)
+        model = builder_model or _BASE_MODEL
+    else:
+        client = falsifier_client or get_llm_client(_BASE_PROVIDER)
+        model = falsifier_model or _BASE_MODEL
+
     prompt = _ROLE_PROMPTS[role].format(claim_json=_claim_summary(claim))
-    result = _llm_json(prompt)
-    if result is None:
-        return None
+    try:
+        raw = call_llm(client, model, prompt)
+        result = _extract_json(raw)
+    except Exception:
+        try:
+            raw = call_llm(client, model, prompt + "\n\nIMPORTANT: Return ONLY a valid JSON object.")
+            result = _extract_json(raw)
+        except Exception:
+            return None
 
     cid = new_claim_id(state)
     raw_conf = float(result.get("confidence", 0.5))
-    # Clamp: stay above T5 threshold and below T6 threshold to prevent re-cascades
     confidence = max(0.41, min(0.55, raw_conf))
 
     return Claim(
@@ -302,6 +337,7 @@ def execute_role(role: str, claim: Claim, state: EpistemicState) -> Optional[Cla
         status=result.get("status", "unknown"),
         parent_id=claim.id,
         is_role_generated=True,
+        generated_by=f"{model}[{role}]",
     )
 
 
@@ -1095,13 +1131,27 @@ def run_des(
     research_question: str,
     max_iterations: int = 40,
     anti_delphi: bool = False,
+    builder_model: str = "",
+    builder_provider: str = "",
+    falsifier_model: str = "",
+    falsifier_provider: str = "",
 ) -> None:
     """Run the DES main loop on a research question, persisting S(t) after each iteration."""
     print(f"\nDynamic Epistemic Sequencer v0.1")
     print(f"Research question: {research_question}")
-    mode_label = "Anti-Delphi (T5/T6/T9 dual-role)" if anti_delphi else "Single-agent"
+    if anti_delphi:
+        bm = builder_model or _BASE_MODEL
+        fm = falsifier_model or _BASE_MODEL
+        mode_label = f"Anti-Delphi | builder={bm} | falsifier={fm}"
+    else:
+        mode_label = "Single-agent"
     print(f"Mode: {mode_label}")
     print("-" * 60)
+
+    b_client = get_llm_client(builder_provider or _BASE_PROVIDER) if anti_delphi else None
+    f_client = get_llm_client(falsifier_provider or _BASE_PROVIDER) if anti_delphi else None
+    b_model = builder_model or _BASE_MODEL
+    f_model = falsifier_model or _BASE_MODEL
 
     if os.path.exists(STATE_FILE):
         os.remove(STATE_FILE)
@@ -1147,7 +1197,11 @@ def run_des(
         if anti_delphi and trigger in ("T5", "T6", "T9") and not focus.is_role_generated:
             role_claim_ids: list[str] = []
             for role in ("hypothesis_builder", "falsifier"):
-                role_claim = execute_role(role, focus, state)
+                role_claim = execute_role(
+                    role, focus, state,
+                    builder_client=b_client, builder_model=b_model,
+                    falsifier_client=f_client, falsifier_model=f_model,
+                )
                 if role_claim is not None:
                     state.claims[role_claim.id] = role_claim
                     state.operation_history.append(
@@ -1206,6 +1260,26 @@ if __name__ == "__main__":
         action="store_true",
         help="Use Anti-Delphi mode: two isolated roles (hypothesis_builder, falsifier) on T5/T6/T9",
     )
+    parser.add_argument(
+        "--builder-model",
+        default="",
+        help="Model for hypothesis_builder role (default: deepseek-chat)",
+    )
+    parser.add_argument(
+        "--builder-provider",
+        default="",
+        help="Provider for hypothesis_builder role: deepseek or openrouter (default: deepseek)",
+    )
+    parser.add_argument(
+        "--falsifier-model",
+        default="",
+        help="Model for falsifier role (default: deepseek-chat)",
+    )
+    parser.add_argument(
+        "--falsifier-provider",
+        default="",
+        help="Provider for falsifier role: deepseek or openrouter (default: deepseek)",
+    )
     args = parser.parse_args()
 
     if args.reset:
@@ -1221,4 +1295,12 @@ if __name__ == "__main__":
         parser.print_help()
         sys.exit(1)
 
-    run_des(args.question, max_iterations=args.max_iter, anti_delphi=args.anti_delphi)
+    run_des(
+        args.question,
+        max_iterations=args.max_iter,
+        anti_delphi=args.anti_delphi,
+        builder_model=args.builder_model,
+        builder_provider=args.builder_provider,
+        falsifier_model=args.falsifier_model,
+        falsifier_provider=args.falsifier_provider,
+    )
