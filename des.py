@@ -52,6 +52,7 @@ class Claim:
     conflict: bool = False
     branch_open: bool = False
     sealed: bool = False
+    is_synthesis: bool = False
     history: list[str] = field(default_factory=list)
     parent_id: Optional[str] = None
 
@@ -60,6 +61,7 @@ class Claim:
 
     @classmethod
     def from_dict(cls, d: dict) -> "Claim":
+        d.setdefault("is_synthesis", False)
         return cls(**d)
 
 
@@ -808,9 +810,13 @@ def t9_trigger_reframing(claim: Claim, state: EpistemicState) -> str:
         scope=claim.scope.copy(),
         qualifier=claim.qualifier.copy(),
         status="supported",
+        is_synthesis=True,
         parent_id=claim.id,
     )
-    synth.evidence_refs.append(f"[SYNTHESIS{llm_note}] {rationale}")
+    synth.evidence_refs = [
+        f"[synthesized from branches: {ba.id}, {bb.id}]",
+        f"[SYNTHESIS{llm_note}] {rationale}",
+    ]
     state.claims[cid] = synth
     state.reframing_count += 1
     claim.sealed = True
@@ -827,8 +833,11 @@ def select_operation(claim: Claim, state: EpistemicState) -> tuple[str, callable
     """
     Evaluate the transition table and return (trigger_label, operation_fn).
     Priority: T1/T2 (CRITICAL) > T3/T4 (HIGH) > T5/T6 (MEDIUM) > T7 (LOW) > T8 > T9
+    Synthesis claims (is_synthesis=True) bypass T3–T7 and go straight to T8.
     The LLM never calls this function — routing is always decided here.
     """
+    if claim.is_synthesis:
+        return "T8", t8_seal_claim
     if claim.status == "contradicted":
         return "T1", t1_resolve_conflict
     if claim.conflict:
@@ -962,7 +971,7 @@ def print_final_trace(state: EpistemicState) -> None:
     print("=" * 60)
 
 
-def run_des(research_question: str, max_iterations: int = 10) -> None:
+def run_des(research_question: str, max_iterations: int = 40) -> None:
     """Run the DES main loop on a research question, persisting S(t) after each iteration."""
     print(f"\nDynamic Epistemic Sequencer v0.1")
     print(f"Research question: {research_question}")
@@ -1035,11 +1044,10 @@ if __name__ == "__main__":
         help="Research question to investigate",
     )
     parser.add_argument(
-        "max_iterations",
-        nargs="?",
+        "--max-iter",
         type=int,
-        default=10,
-        help="Maximum number of iterations (default: 10)",
+        default=40,
+        help="Maximum number of iterations (default: 40)",
     )
     parser.add_argument(
         "--reset",
@@ -1061,4 +1069,4 @@ if __name__ == "__main__":
         parser.print_help()
         sys.exit(1)
 
-    run_des(args.question, max_iterations=args.max_iterations)
+    run_des(args.question, max_iterations=args.max_iter)
