@@ -1,0 +1,515 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a good measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "is a good measure of",
+      "object": "material consumption",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material consumption]"
+      ],
+      "scope": {
+        "domain": "developed economies with robust market pricing"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century, before the rise of digital services",
+        "geographic": "OECD countries with strong market pricing"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "is a poor measure of",
+      "object": "subjective life satisfaction",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP subjective life satisfaction]"
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "since the 2010s",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Alternative indices (e.g., GPI, HDI)",
+      "predicate": "may better capture",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Alternative indices (e.g., GPI, HDI) economic wellbeing]"
+      ],
+      "scope": {
+        "domain": "sustainability and inequality contexts"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "global (primarily OECD and developing nations)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "underestimates",
+      "object": "material consumption",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material consumption]",
+        "[PATH:empirical] Comparison of GDP growth rates vs. physical material flow indicators (e.g., Domestic Material Consumption per capita) for OECD countries post-2000, using Eurostat or OECD Material Flow Accounts \u2014 Directly tests whether GDP decouples from material consumption in developed economies, as hypothesized. If GDP grows while material consumption stagnates or declines, the hypothesis is supported; if they move together, it is refuted.",
+        "[PATH:empirical] National accounts satellite accounts for digital services and intangible consumption (e.g., BEA Digital Economy Satellite Account, UK ONS digital sector estimates) to assess whether GDP captures the shift from material to digital consumption \u2014 The hypothesis claims GDP underestimates material consumption specifically because digital services are mis-measured or over-weighted. Analyzing the composition of GDP growth relative to actual material goods consumption can reveal measurement gaps.",
+        "[PATH:theoretical] Theoretical literature on the 'cost disease' of services (Baumol effect) and its implications for GDP vs. material well-being, particularly in post-industrial economies \u2014 Provides a causal mechanism: if service sectors (including digital) have low productivity growth but high price increases, GDP may inflate without corresponding material consumption growth. This supports the hypothesis if empirical patterns match theoretical predictions."
+      ],
+      "scope": {
+        "domain": "developed economies with robust market pricing, post-2000 digital service expansion"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP",
+      "predicate": "is a poor measure of",
+      "object": "material consumption",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material consumption]",
+        "[PATH:empirical] OECD Better Life Index and Material Well-Being Indicators (e.g., household final consumption expenditure per capita, adjusted for purchasing power parity, versus GDP per capita trends for OECD members post-2008) \u2014 Directly compares GDP growth to alternative measures of material consumption (e.g., actual household consumption of goods and services) across the specified domain and time period, allowing detection of divergence and testing of GDP's adequacy as a proxy.",
+        "[PATH:literature] D. Stiglitz, A. Sen, & J.-P. Fitoussi (2009), 'Report by the Commission on the Measurement of Economic Performance and Social Progress' (and subsequent updates, e.g., 2018 'Beyond GDP' initiatives) \u2014 Provides theoretical and empirical arguments that GDP fails to capture material consumption, especially in developed economies post-crisis, due to factors like income inequality, non-market services, and depreciation. This foundational critique can be used to validate or challenge the hypothesis.",
+        "[PATH:empirical] Panel data analysis of OECD member states (2008-2023) comparing GDP per capita growth with direct material consumption metrics (e.g., material footprint, resource use, or consumption of durable goods from national accounts) \u2014 A longitudinal empirical study can quantify the correlation (or lack thereof) between GDP and material consumption, controlling for factors like asset price inflation and government spending, which may inflate GDP without corresponding material consumption increases."
+      ],
+      "scope": {
+        "domain": "developed economies with robust market pricing"
+      },
+      "qualifier": {
+        "temporal": "post-2008 financial crisis",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP per capita",
+      "predicate": "is a poor measure of",
+      "object": "subjective life satisfaction in non-Western, collectivist cultures",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita subjective life satisfaction in non-Western, collectivist cultures]",
+        "[PATH:empirical] World Values Survey (WVS) and Gallup World Poll data on subjective well-being, correlated with GDP per capita for East Asian and Southeast Asian countries (e.g., Japan, South Korea, Thailand, Philippines) from 1990 to 2020 \u2014 These datasets provide cross-national, longitudinal measures of life satisfaction and income, allowing direct statistical tests of the strength and shape of the GDP\u2013well-being relationship in collectivist contexts versus Western ones.",
+        "[PATH:theoretical] Ethnographic and qualitative studies on conceptions of well-being in collectivist cultures (e.g., Markus & Kitayama on interdependent self-construal; Uchida et al. on happiness in Japan) \u2014 Such work clarifies how subjective life satisfaction is constructed differently in collectivist settings\u2014often emphasizing social harmony, role fulfillment, and relational factors over individual material wealth\u2014providing theoretical grounds for why GDP per capita may be a poor proxy.",
+        "[PATH:literature] Meta-analysis of experimental and survey-based research comparing income\u2013happiness correlations across individualist vs. collectivist nations (e.g., studies using the Easterlin Paradox framework with moderation by cultural dimension scores) \u2014 A systematic review and meta-analysis can quantify the heterogeneity in the income\u2013satisfaction link across cultures, testing whether collectivism significantly moderates the effect, thereby confirming or refuting the hypothesis."
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "late 20th to early 21st century",
+        "geographic": "East Asian and Southeast Asian collectivist cultures"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "correlates strongly with",
+      "object": "subjective life satisfaction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP subjective life satisfaction]",
+        "[PATH:empirical] World Happiness Report panel data (OECD countries, 1990-2020) with GDP per capita (PPP) and Cantril ladder life satisfaction scores, controlling for income inequality and social support \u2014 Directly tests the cross-temporal and cross-national correlation within the specified domain and temporal scope, controlling for confounders that might explain spurious correlation.",
+        "[PATH:literature] Easterlin Paradox longitudinal studies: within-country decadal comparisons of GDP growth and subjective well-being trends for OECD members \u2014 Provides theoretical and empirical challenge to the hypothesis by showing that long-term GDP growth often fails to produce proportional increases in life satisfaction, especially in wealthy nations.",
+        "[PATH:empirical] Micro-level survey data linking individual income changes to life satisfaction (e.g., German Socio-Economic Panel or British Household Panel Survey) aggregated to national means \u2014 Tests whether the aggregate correlation holds when decomposed into individual-level income effects, addressing ecological fallacy concerns and clarifying causal direction."
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP",
+      "predicate": "is a poor measure of",
+      "object": "subjective life satisfaction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP is a poor measure of subjective life satisfaction in domain 'cross-cultural comparisons']"
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP",
+      "predicate": "is a good proxy for",
+      "object": "subjective life satisfaction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP is a good proxy for subjective life satisfaction in domain 'cross-cultural comparisons']"
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The Genuine Progress Indicator (GPI)",
+      "predicate": "reveals a statistically significant decoupling from GDP growth in",
+      "object": "post-industrial economies with high income inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Genuine Progress Indicator (GPI) post-industrial economies with high income inequality]",
+        "[PATH:literature] Kubiszewski, I., et al. (2013). 'Beyond GDP: Measuring and comparing national Genuine Progress Indicator performance.' Ecological Economics, 93, 57-68. \u2014 This seminal paper provides cross-national GPI data and analysis over time, allowing direct comparison of GPI and GDP growth trajectories for OECD nations with high Gini coefficients, thus testing the decoupling hypothesis.",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) and GPI time-series data from the World Bank or academic repositories (e.g., GPI 2.0 from the University of Vermont). \u2014 Combining high-quality income inequality data (Gini > 0.35) with GPI estimates for post-industrial economies since 2000 enables statistical regression analysis to assess whether GPI decouples from GDP specifically in high-inequality contexts.",
+        "[PATH:theoretical] Costanza, R., et al. (2014). 'Time to leave GDP behind.' Nature, 505, 283-285. \u2014 This article provides the theoretical framework linking GPI to welfare and inequality, offering predictions about decoupling patterns that can be tested against empirical data, thereby refining or challenging the hypothesis."
+      ],
+      "scope": {
+        "domain": "sustainability and inequality contexts"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "OECD nations with Gini coefficients above 0.35"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Traditional economic indicators (e.g., GDP)",
+      "predicate": "remain superior in capturing",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Traditional economic indicators (e.g., GDP) economic wellbeing]",
+        "[PATH:empirical] OECD Better Life Index and related well-being measurement studies \u2014 Provides cross-national data comparing GDP per capita with multidimensional well-being indicators (e.g., health, education, social connections), allowing direct empirical test of GDP's superiority in capturing economic wellbeing, especially in OECD countries.",
+        "[PATH:theoretical] Daly and Cobb's Index of Sustainable Economic Welfare (ISEW) / Genuine Progress Indicator (GPI) literature \u2014 Offers a theoretical framework and empirical applications that adjust GDP for inequality, environmental degradation, and unpaid work, directly challenging the claim that traditional indicators remain superior in sustainability and inequality contexts.",
+        "[PATH:literature] Systematic reviews on the relationship between GDP growth and subjective well-being (e.g., Easterlin Paradox studies) \u2014 Summarizes decades of research showing decoupling between GDP growth and reported life satisfaction, especially beyond a certain income threshold, providing evidence to refute the hypothesis that GDP is superior in capturing economic wellbeing globally."
+      ],
+      "scope": {
+        "domain": "sustainability and inequality contexts"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "globally, but primarily in OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "GDP growth",
+      "predicate": "negatively correlates with",
+      "object": "subjective life satisfaction in countries with high income inequality",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "GDP",
+      "predicate": "is a strong indicator of",
+      "object": "subjective life satisfaction",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 45,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "combo_id": "Claude_Cl",
+  "qid": "E2",
+  "question": "Is economic growth compatible with ecological sustainability?",
+  "builder_provider": "openrouter",
+  "builder_model": "anthropic/claude-sonnet-4-5",
+  "falsifier_provider": "openrouter",
+  "falsifier_model": "anthropic/claude-sonnet-4-5",
+  "success": true,
+  "elapsed_seconds": 48.2,
+  "iterations": 23,
+  "claims_total": 8,
+  "claims_sealed": 8,
+  "claims_open": 0,
+  "claims_synthesis": 0,
+  "claims_role_generated": 4,
+  "generated_by_counts": {
+    "anthropic/claude-sonnet-4-5[hypothesis_builder]": 2,
+    "anthropic/claude-sonnet-4-5[falsifier]": 2
+  },
+  "transitions_fired": [
+    "T2",
+    "T3",
+    "T4",
+    "T5",
+    "T6",
+    "T8"
+  ],
+  "t1_fired": false,
+  "t2_fired": true,
+  "t9_fired": false,
+  "reframing_count": 0,
+  "anti_delphi_activations": 2,
+  "topology": "T2_path",
+  "contradiction_depth": 0,
+  "synthesis_confidence": 0.0,
+  "builder_t1_trigger": 0,
+  "falsifier_t1_trigger": 0,
+  "error": null,
+  "stdout_tail": "orted, confidence=0.85, modality=hypothesis\n    history=['T3', 'T6', 'T8']\n    evidence: [Simulated evidence for: absolute decoupling of global GDP growth from carbon emissions the feasibil\n    evidence: [PATH:empirical] World Bank World Development Indicators (WDI) and Global Carbon Atlas, cross-refere\n\nEpistemic path: T3 on C001 \u2192 T4 on C001 \u2192 T3 on C002 \u2192 T8 on C002 \u2192 T3 on C003 \u2192 T5[hypothesis_builder] on C003 -> C005 \u2192 T5[falsifier] on C003 -> C006 \u2192 T2 on C003 \u2192 T6[hypothesis_builder] on C003 -> C007 \u2192 T6[falsifier] on C003 -> C008 \u2192 T8 on C003 \u2192 T3 on C004 \u2192 T8 on C004 \u2192 T3 on C005 \u2192 T6 on C005 \u2192 T8 on C005 \u2192 T3 on C006 \u2192 T6 on C006 \u2192 T8 on C006 \u2192 T3 on C007 \u2192 T6 on C007 \u2192 T8 on C007 \u2192 T3 on C008 \u2192 T6 on C008 \u2192 T8 on C008\n============================================================\n"
+}

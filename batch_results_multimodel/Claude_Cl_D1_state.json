@@ -1,0 +1,501 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss beyond caloric restriction alone",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss beyond caloric restriction alone]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "promotes",
+      "object": "greater fat oxidation compared to continuous caloric restriction in the first 6 months",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting greater fat oxidation compared to continuous caloric restriction in the first 6 months]"
+      ],
+      "scope": {
+        "domain": "short-term metabolic response"
+      },
+      "qualifier": {
+        "temporal": "first 6 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "higher dropout rates than continuous caloric restriction over 12 months",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting higher dropout rates than continuous caloric restriction over 12 months]"
+      ],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "yields",
+      "object": "equivalent weight loss to continuous caloric restriction when total energy intake is matched",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting equivalent weight loss to continuous caloric restriction when total energy intake is matched]"
+      ],
+      "scope": {
+        "domain": "energy-balance equivalence"
+      },
+      "qualifier": {
+        "condition": "when total energy intake is matched"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting with 16:8 time-restricted feeding",
+      "predicate": "increases",
+      "object": "adipose tissue lipolysis rates by 25-40% compared to continuous caloric restriction during the first 12 weeks",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with 16:8 time-restricted feeding adipose tissue lipolysis rates by 25-40% compared to continuous caloric restriction during the first 12 weeks]",
+        "[PATH:empirical] Controlled clinical trial comparing 16:8 time-restricted feeding vs. continuous caloric restriction with direct measurement of adipose tissue lipolysis via microdialysis or stable isotope tracers over 12 weeks \u2014 Direct quantification of lipolysis rates in adipose tissue using gold-standard methods (e.g., interstitial glycerol concentration or labeled palmitate turnover) would provide definitive evidence for the claimed 25-40% increase, controlling for total energy intake and macronutrient composition.",
+        "[PATH:empirical] Longitudinal cohort study with frequent adipose tissue biopsies for gene expression and enzyme activity assays (e.g., hormone-sensitive lipase, adipose triglyceride lipase) during the first 12 weeks of 16:8 fasting \u2014 Measuring molecular markers of lipolysis at multiple time points can confirm mechanistic changes underlying the hypothesized rate increase, distinguishing between acute fasting effects and adaptive responses to caloric restriction.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials comparing intermittent fasting (including 16:8) with continuous caloric restriction, focusing on adipose tissue fatty acid flux or indirect calorimetry data \u2014 Synthesizing existing human and animal data can resolve disputes by pooling effect sizes, assessing heterogeneity, and identifying protocol variables (e.g., timing of feeding windows, baseline metabolic health) that moderate lipolysis outcomes."
+      ],
+      "scope": {
+        "domain": "adipose tissue metabolism"
+      },
+      "qualifier": {
+        "temporal": "first 12 weeks",
+        "protocol": "16:8 time-restricted feeding",
+        "measurement": "direct lipolysis rate quantification"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "produces equivalent or inferior",
+      "object": "fat oxidation rates compared to continuous caloric restriction when total energy deficit is matched in the first 6 months",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting fat oxidation rates compared to continuous caloric restriction when total energy deficit is matched in the first 6 months]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted eating) vs. continuous caloric restriction with identical total energy deficit, measuring fat oxidation via indirect calorimetry or doubly labeled water at 3 and 6 months. \u2014 Directly tests the hypothesis under controlled, isocaloric conditions in humans, providing quantitative data on fat oxidation rates over the specified timeframe.",
+        "[PATH:literature] Systematic review and meta-analysis of existing RCTs on intermittent fasting vs. continuous caloric restriction that report fat oxidation or respiratory exchange ratio as outcomes, with subgroup analysis for studies matching energy deficit. \u2014 Synthesizes available evidence to assess consistency across studies, identifies potential confounds (e.g., adherence, macronutrient composition), and provides statistical power to detect equivalence or inferiority.",
+        "[PATH:empirical] Longitudinal metabolic chamber study in rodents or humans with continuous monitoring of substrate oxidation (e.g., via indirect calorimetry) under strictly controlled, energy-matched intermittent fasting vs. continuous restriction protocols over 6 months. \u2014 Provides high-resolution, mechanistic data on metabolic adaptation, including potential compensatory shifts in fuel utilization that may differ between intermittent and continuous restriction, directly addressing the equivalence/inferiority claim."
+      ],
+      "scope": {
+        "domain": "short-term metabolic response under isocaloric conditions"
+      },
+      "qualifier": {
+        "temporal": "first 6 months",
+        "condition": "energy-matched protocols"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting with structured social support systems",
+      "predicate": "reduces dropout rates to",
+      "object": "levels equivalent to continuous caloric restriction over 12 months",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with structured social support systems levels equivalent to continuous caloric restriction over 12 months]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with peer accountability groups vs. continuous caloric restriction with standard dietary counseling, measuring dropout rates at 6 and 12 months. \u2014 Directly tests the hypothesis by isolating the effect of structured social support on adherence to intermittent fasting relative to continuous restriction.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral interventions (e.g., group support, digital coaching) in dietary adherence studies for weight loss. \u2014 Provides baseline evidence on effect sizes of social support on dropout rates, which can be compared to the specific context of intermittent fasting vs. continuous restriction.",
+        "[PATH:empirical] Longitudinal cohort study using ecological momentary assessment to measure daily adherence and social support interactions in intermittent fasting participants over 12 months. \u2014 Captures real-time mediators of dropout (e.g., social accountability, motivation) and their temporal dynamics, offering mechanistic evidence for or against the equivalence claim."
+      ],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "intervention": "with peer accountability groups or digital coaching"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "lower dropout rates than continuous caloric restriction over 12 months",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting lower dropout rates than continuous caloric restriction over 12 months]",
+        "[PATH:empirical] A randomized controlled trial comparing dropout rates between intermittent fasting (e.g., 5:2 diet) and continuous caloric restriction over 12 months, with intention-to-treat analysis and regular adherence monitoring. \u2014 Direct empirical comparison in a controlled setting provides the most reliable evidence for the hypothesis, as it measures actual dropout rates under standardized conditions.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies on dietary adherence, focusing on intermittent fasting versus continuous caloric restriction for weight loss or metabolic health, with subgroup analysis by duration (\u226512 months). \u2014 Synthesizing existing evidence from multiple studies can reveal consistent patterns and address variability in dropout rates, offering higher statistical power and generalizability.",
+        "[PATH:theoretical] Behavioral and psychological models of dietary adherence (e.g., self-determination theory, habit formation) applied to intermittent fasting vs. continuous restriction, predicting dropout based on perceived autonomy, satisfaction, and cognitive load. \u2014 Theoretical frameworks can explain mechanisms behind differential dropout rates, such as reduced decision fatigue or greater flexibility in intermittent fasting, and generate testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "higher dropout rates than continuous caloric restriction over 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting leads to higher dropout rates than continuous caloric restriction over 12 months in domain 'adherence and sustainability']"
+      ],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "does not lead to",
+      "object": "higher dropout rates than continuous caloric restriction over 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting does not lead to higher dropout rates than continuous caloric restriction over 12 months in domain 'adherence and sustainability']"
+      ],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting",
+      "predicate": "produces greater visceral fat loss than",
+      "object": "continuous caloric restriction despite equivalent total weight loss",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous caloric restriction despite equivalent total weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing time-restricted eating (16:8) vs. daily caloric deficit with matched total energy intake, measuring visceral adipose tissue via MRI or DXA at baseline and endpoint. \u2014 Directly tests the hypothesis under controlled conditions, isolating fasting interval effects from caloric balance.",
+        "[PATH:literature] Meta-analysis of human studies on intermittent fasting vs. continuous caloric restriction that report visceral fat changes, with subgroup analysis by energy matching. \u2014 Synthesizes existing evidence to assess consistency and effect size across populations, addressing the disputed status.",
+        "[PATH:theoretical] Mechanistic study measuring 24-hour lipolysis rates (e.g., glycerol turnover) and catecholamine levels during prolonged fasting windows vs. frequent feeding in a crossover design. \u2014 Tests the proposed mechanism of enhanced lipolysis during extended fasting, providing biological plausibility for the observed fat distribution difference."
+      ],
+      "scope": {
+        "domain": "body composition and fat distribution"
+      },
+      "qualifier": {
+        "condition": "when total energy intake is matched",
+        "mechanism": "through enhanced lipolysis during extended fasting periods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting",
+      "predicate": "yields",
+      "object": "superior weight loss to continuous caloric restriction due to enhanced metabolic rate and fat oxidation even when total energy intake is matched",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting superior weight loss to continuous caloric restriction due to enhanced metabolic rate and fat oxidation even when total energy intake is matched]",
+        "[PATH:empirical] Controlled clinical trial comparing isocaloric intermittent fasting (e.g., 16:8 or 5:2) versus daily caloric restriction with matched total energy intake, measuring resting metabolic rate via indirect calorimetry and 24-hour fat oxidation via respiratory quotient over 8-12 weeks. \u2014 Directly tests the core claim of enhanced metabolic rate and fat oxidation under matched energy intake, controlling for the confound of caloric deficit.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials on intermittent fasting vs. continuous caloric restriction, focusing on studies that report energy intake matching and objective metabolic measures (e.g., doubly labeled water, metabolic chamber data). \u2014 Synthesizes existing evidence to assess consistency of the metabolic advantage hypothesis across populations and protocols, identifying potential effect modifiers."
+      ],
+      "scope": {
+        "domain": "metabolic advantage hypothesis"
+      },
+      "qualifier": {
+        "mechanism": "through prolonged fasting periods triggering hormonal and metabolic adaptations beyond simple caloric deficit"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting with personalized meal timing based on chronotype",
+      "predicate": "reduces dropout rates to",
+      "object": "levels below continuous caloric restriction over 12 months",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "intervention": "chronotype-matched fasting windows"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "lower dropout rates than continuous caloric restriction over 12 months",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence and sustainability"
+      },
+      "qualifier": {
+        "temporal": "over 12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

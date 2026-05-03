@@ -1,0 +1,427 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Technology",
+      "predicate": "has net effect on subjective well-being",
+      "object": "negative in high-usage populations",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Technology negative in high-usage populations]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Social media platforms",
+      "predicate": "decrease subjective well-being",
+      "object": "among adolescents using more than 3 hours/day",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Social media platforms among adolescents using more than 3 hours/day]"
+      ],
+      "scope": {
+        "domain": "adolescents"
+      },
+      "qualifier": {
+        "usage_threshold": ">3h/day"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Productivity-enhancing technologies (e.g., AI assistants, automation tools)",
+      "predicate": "increase subjective well-being",
+      "object": "among high-usage working adults",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Productivity-enhancing technologies (e.g., AI assistants, automation tools) among high-usage working adults]"
+      ],
+      "scope": {
+        "domain": "working adults"
+      },
+      "qualifier": {
+        "context": "professional task completion"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Technology (general)",
+      "predicate": "has net effect on subjective well-being",
+      "object": "moderated by individual agency and digital literacy",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Technology (general) moderated by individual agency and digital literacy]"
+      ],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {
+        "moderator": "digital literacy"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Social media platforms",
+      "predicate": "increase anxiety levels",
+      "object": "among adolescents using more than 3 hours/day",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Social media platforms among adolescents using more than 3 hours/day]",
+        "[PATH:empirical] Longitudinal panel study tracking adolescents' social media usage (via app monitoring) and self-reported anxiety (e.g., GAD-7) over 12-24 months, controlling for baseline anxiety and demographics. \u2014 Directly tests causal direction and dose-response relationship, addressing the 3+ hours/day threshold and temporal scope.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials (RCTs) or quasi-experiments that reduce social media use among adolescents to <3 hours/day and measure anxiety changes. \u2014 Synthesizes existing experimental evidence to determine if reducing usage below the threshold reliably decreases anxiety, confirming or refuting the hypothesis.",
+        "[PATH:empirical] Ecological momentary assessment (EMA) study collecting real-time anxiety and social media use data from adolescents multiple times per day over 2 weeks. \u2014 Captures within-day fluctuations and short-term effects, providing high-resolution evidence on the immediate impact of exceeding 3 hours/day."
+      ],
+      "scope": {
+        "domain": "adolescents"
+      },
+      "qualifier": {
+        "temporal": "during the 2020s",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Social media platforms",
+      "predicate": "increase subjective well-being",
+      "object": "among adolescents using more than 3 hours/day",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Social media platforms among adolescents using more than 3 hours/day]",
+        "[PATH:empirical] Longitudinal panel survey (e.g., OECD PISA or national youth risk behavior survey) tracking self-reported well-being and daily social media usage among adolescents aged 12-17 across multiple countries (2020-2025). \u2014 A large-scale, longitudinal dataset with repeated measures can help establish temporal precedence and control for confounding variables (e.g., baseline well-being, offline social support), directly testing the causal direction and dose-response relationship between >3 hours/day usage and subjective well-being.",
+        "[PATH:literature] Meta-analysis of experimental and quasi-experimental studies on social media reduction interventions (e.g., limiting usage to <1 hour/day) with well-being outcomes in adolescent samples. \u2014 Synthesizing existing experimental evidence (e.g., from randomized controlled trials) can reveal whether reducing usage below 3 hours/day consistently improves well-being, thereby refuting or supporting the hypothesis that high usage increases well-being. This approach also assesses effect size heterogeneity across contexts.",
+        "[PATH:empirical] Ecological momentary assessment (EMA) study using smartphone sensing and daily diaries to capture real-time affect, social comparison, and usage patterns in a diverse adolescent cohort. \u2014 EMA can provide high-resolution, within-person data to test whether moments of heavy social media use (>3 hours/day cumulative) are associated with immediate changes in subjective well-being (e.g., mood, life satisfaction), controlling for selection effects and recall bias common in self-report surveys."
+      ],
+      "scope": {
+        "domain": "adolescents"
+      },
+      "qualifier": {
+        "temporal": "2020-2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Technology (general)",
+      "predicate": "enhances subjective well-being",
+      "object": "in individuals with high digital literacy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Technology (general) in individuals with high digital literacy]",
+        "[PATH:empirical] Longitudinal survey studies (e.g., World Happiness Report data) comparing self-reported well-being scores of high-digital-literacy individuals across developed countries post-2010, controlling for confounding variables like income and social support. \u2014 Directly tests the causal or correlational claim by measuring subjective well-being over time in the target population, allowing assessment of whether technology use enhances well-being beyond other factors.",
+        "[PATH:empirical] Randomized controlled trials (RCTs) where high-digital-literacy participants are assigned to either increased technology engagement (e.g., social media, productivity apps) or a control condition, with pre/post measures of well-being (e.g., PANAS, SWLS). \u2014 Provides high internal validity to establish causality, addressing whether technology exposure directly improves well-being in this subgroup, while controlling for placebo effects.",
+        "[PATH:literature] Meta-analysis of existing studies on digital literacy, technology use, and well-being (e.g., from journals like 'Computers in Human Behavior' or 'Journal of Happiness Studies'), focusing on moderators like age, skill level, and usage type. \u2014 Synthesizes available evidence to identify effect size consistency, publication bias, and boundary conditions, helping to confirm or refute the hypothesis across multiple contexts."
+      ],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Technology (general)",
+      "predicate": "has net effect on subjective well-being",
+      "object": "negative regardless of individual agency or digital literacy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Technology (general) negative regardless of individual agency or digital literacy]",
+        "[PATH:empirical] Large-scale longitudinal panel studies (e.g., World Happiness Report, Gallup World Poll) analyzing self-reported life satisfaction and daily technology use across diverse demographics, controlling for digital literacy and autonomy of use. \u2014 Directly tests the claim that effects are negative regardless of individual agency or digital literacy by examining within-person changes over time and across subgroups with varying levels of control and skill.",
+        "[PATH:literature] Meta-analysis of experimental and quasi-experimental studies on social media, smartphone use, and well-being (e.g., from journals like Nature Human Behaviour or Psychological Science), focusing on studies that randomize or instrument for usage to isolate causal effects. \u2014 Synthesizes existing evidence to assess whether negative effects persist after accounting for selection bias and individual differences in agency and digital literacy.",
+        "[PATH:theoretical] Theoretical modeling of technology's impact on well-being using frameworks from behavioral economics and media psychology (e.g., displacement of real-world social interactions, attention fragmentation, social comparison) to predict conditions under which effects might become positive. \u2014 Provides a causal mechanism-based argument to challenge the universality of the negative effect, identifying potential moderators that could refute the 'regardless' clause."
+      ],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Technology (general)",
+      "predicate": "has net positive effect on subjective well-being",
+      "object": "when individual agency and digital literacy are high",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Technology (general) has net positive effect on subjective well-being when individual agency and digital literacy are high in domain 'all populations']"
+      ],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Technology (general)",
+      "predicate": "has net negative effect on subjective well-being",
+      "object": "when individual agency and digital literacy are low",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Technology (general) has net negative effect on subjective well-being when individual agency and digital literacy are low in domain 'all populations']"
+      ],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {
+        "temporal": "2010-2025",
+        "geographic": "global, with emphasis on high- and middle-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Technology (general)",
+      "predicate": "improves subjective well-being",
+      "object": "when digital literacy is high",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "developed countries"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Technology (general)",
+      "predicate": "has net effect on subjective well-being",
+      "object": "negative for all users regardless of agency or digital literacy",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all populations"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

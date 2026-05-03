@@ -1,0 +1,509 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "social media platforms",
+      "predicate": "systematically undermine",
+      "object": "democratic deliberation and institutional trust",
+      "status": "supported",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: social media platforms democratic deliberation and institutional trust]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "algorithmic curation on social media platforms",
+      "predicate": "amplifies",
+      "object": "polarizing content that erodes democratic deliberation",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: algorithmic curation on social media platforms polarizing content that erodes democratic deliberation]"
+      ],
+      "scope": {
+        "domain": "political discourse"
+      },
+      "qualifier": {
+        "temporal": "during election cycles"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "social media platforms",
+      "predicate": "enable",
+      "object": "rapid fact-checking and civic engagement that strengthen democratic deliberation",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: social media platforms rapid fact-checking and civic engagement that strengthen democratic deliberation]"
+      ],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {
+        "condition": "when combined with algorithmic transparency"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "institutional trust",
+      "predicate": "is primarily undermined by",
+      "object": "offline political polarization and media fragmentation, not social media alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: institutional trust offline political polarization and media fragmentation, not social media alone]"
+      ],
+      "scope": {
+        "domain": "institutional sociology"
+      },
+      "qualifier": {
+        "caveat": "social media may amplify pre-existing trends"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "algorithmic curation on social media platforms",
+      "predicate": "increases",
+      "object": "engagement with polarizing content that erodes democratic deliberation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: algorithmic curation on social media platforms engagement with polarizing content that erodes democratic deliberation]",
+        "[PATH:empirical] Longitudinal field experiment comparing engagement metrics (e.g., time spent, click-through rates) on platforms with and without algorithmic curation, using a representative sample of users in Western democracies since 2015. \u2014 Directly tests whether algorithmic curation causally increases engagement with polarizing content, controlling for user preferences and platform design changes over time.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies (e.g., from computational social science, political communication) examining the relationship between algorithmic recommendations and exposure to partisan or divisive content. \u2014 Synthesizes heterogeneous evidence across platforms and contexts to assess the overall effect size and identify moderators (e.g., platform type, user demographics, content moderation policies).",
+        "[PATH:theoretical] Agent-based modeling of democratic deliberation dynamics, incorporating algorithmic curation parameters calibrated to real-world platform data (e.g., from Twitter/X or Facebook) to simulate long-term effects on opinion polarization and discourse quality. \u2014 Provides a mechanistic understanding of how curation algorithms might erode democratic deliberation, and allows counterfactual testing (e.g., what if algorithms prioritized diverse content?)."
+      ],
+      "scope": {
+        "domain": "political discourse"
+      },
+      "qualifier": {
+        "temporal": "since the mid-2010s",
+        "geographic": "primarily in Western democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "algorithmic curation on social media platforms",
+      "predicate": "reduces",
+      "object": "exposure to polarizing content by filtering out extreme viewpoints",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: algorithmic curation on social media platforms exposure to polarizing content by filtering out extreme viewpoints]",
+        "[PATH:empirical] Longitudinal field experiment on Facebook and Twitter users (e.g., using deactivated algorithmic ranking vs. chronological feeds) measuring changes in exposure to extreme political content and subsequent attitude polarization. \u2014 Direct causal evidence through randomization can isolate the effect of algorithmic curation on filtering extreme viewpoints, addressing the disputed status with high internal validity.",
+        "[PATH:empirical] Computational audit study simulating user browsing histories with varying algorithm parameters (e.g., engagement-optimized vs. diversity-optimized ranking) on a platform like YouTube, tracking the prevalence of extreme content in recommended feeds. \u2014 Systematic auditing allows controlled manipulation of curation algorithms to measure their filtering effect on polarizing content across different design choices, providing replicable evidence.",
+        "[PATH:literature] Meta-analysis of existing observational studies and experiments on algorithmic curation and political polarization (e.g., from journals like PNAS, Science, or Journal of Communication), focusing on effect sizes for exposure reduction. \u2014 Synthesizing prior evidence can clarify whether the filtering effect is consistent across platforms and contexts, and help resolve conflicting findings that contribute to the disputed status."
+      ],
+      "scope": {
+        "domain": "political discourse"
+      },
+      "qualifier": {
+        "temporal": "since the introduction of algorithmic curation in the 2010s",
+        "geographic": "global, with emphasis on democratic countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "social media platforms",
+      "predicate": "facilitate",
+      "object": "increased grassroots activism participation and influence on policy-making",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: social media platforms increased grassroots activism participation and influence on policy-making]",
+        "[PATH:empirical] Comparative case studies of grassroots movements (e.g., Arab Spring, Black Lives Matter, Fridays for Future) analyzing social media usage and policy outcomes \u2014 Provides direct empirical evidence on whether social media platforms causally facilitate increased participation and influence on policy-making across different democratic and semi-democratic contexts since the early 2010s.",
+        "[PATH:empirical] Large-scale longitudinal surveys of activists and policymakers (e.g., Pew Research Center, European Social Survey) tracking self-reported participation rates and perceived influence over time \u2014 Offers quantitative data to confirm or refute trends in grassroots activism participation and perceived policy impact, controlling for other factors like traditional media and offline organizing."
+      ],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {
+        "temporal": "since the early 2010s",
+        "geographic": "global, with notable effects in democratic and semi-democratic countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "social media platforms",
+      "predicate": "undermine",
+      "object": "rapid fact-checking and civic engagement that strengthen democratic deliberation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: social media platforms rapid fact-checking and civic engagement that strengthen democratic deliberation]",
+        "[PATH:empirical] Comparative study of fact-checking accuracy and speed on algorithmic vs. chronological social media feeds in polarized democracies (e.g., Brazil, India, US) \u2014 Directly tests whether algorithmic curation (post-mid-2010s) reduces the speed and reach of fact-checks relative to non-algorithmic feeds, addressing the temporal qualifier.",
+        "[PATH:empirical] Panel survey of civic engagement behaviors (e.g., sharing fact-checks, attending local meetings) correlated with users' exposure to algorithmic content on platforms like Facebook and X (formerly Twitter) \u2014 Provides individual-level data on whether heavy algorithmic curation suppresses civic actions that strengthen deliberation, within the specified geographic and temporal scope.",
+        "[PATH:literature] Meta-analysis of experimental and observational studies on social media's effect on democratic deliberation (2000-2025), focusing on the interaction with platform design changes \u2014 Synthesizes existing evidence to assess the overall trend and identify whether the hypothesis holds across multiple contexts, controlling for polarization and penetration."
+      ],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {
+        "temporal": "since the rise of algorithmic content curation in the mid-2010s",
+        "geographic": "in countries with high social media penetration and polarized political environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "social media platforms",
+      "predicate": "enable",
+      "object": "rapid fact-checking and civic engagement that strengthen democratic deliberation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms social media platforms enable rapid fact-checking and civic engagement that strengthen democratic deliberation in domain 'grassroots activism']"
+      ],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {
+        "temporal": "since the 2010s",
+        "geographic": "global, with emphasis on countries with high social media penetration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "social media platforms",
+      "predicate": "undermine",
+      "object": "reliable fact-checking and constructive civic engagement, weakening democratic deliberation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms social media platforms undermine reliable fact-checking and constructive civic engagement, weakening democratic deliberation in domain 'grassroots activism']"
+      ],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {
+        "temporal": "since the 2016 election cycle",
+        "geographic": "global, with emphasis on Western democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "offline political polarization",
+      "predicate": "significantly decreases",
+      "object": "institutional trust independently of media fragmentation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: offline political polarization institutional trust independently of media fragmentation]",
+        "[PATH:empirical] Longitudinal panel surveys measuring interpersonal political disagreement in offline settings (e.g., neighborhoods, workplaces) and institutional trust (e.g., trust in courts, parliament) over the 2010s in Western democracies, controlling for media fragmentation indices. \u2014 Directly tests the causal claim by isolating offline polarization's effect on trust while statistically removing media fragmentation's influence, addressing the disputed independence condition.",
+        "[PATH:empirical] Comparative case studies of Western democracies with high offline polarization (e.g., from community-level conflict data) but low media fragmentation, examining institutional trust trends during the 2010s. \u2014 Provides qualitative and quantitative evidence by contrasting contexts where the hypothesized effect should be visible if the claim holds, and absent if media fragmentation is the true driver.",
+        "[PATH:literature] Meta-analysis of existing studies on political polarization and institutional trust, filtering for studies that explicitly control for media environment variables (e.g., number of news outlets, audience fragmentation). \u2014 Synthesizes available evidence to assess whether the offline polarization-trust link persists net of media effects, identifying gaps and consistency across studies."
+      ],
+      "scope": {
+        "domain": "institutional sociology"
+      },
+      "qualifier": {
+        "temporal": "during the 2010s",
+        "geographic": "in Western democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "institutional trust",
+      "predicate": "is primarily undermined by",
+      "object": "social media algorithms and echo chambers, not offline polarization or traditional media fragmentation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: institutional trust social media algorithms and echo chambers, not offline polarization or traditional media fragmentation]",
+        "[PATH:empirical] Longitudinal panel studies comparing institutional trust trends with social media usage metrics (e.g., Pew Research Center's 'Trust in Government' surveys merged with social media consumption data from platforms like Facebook or Twitter) \u2014 Such studies can isolate the temporal and correlational relationship between social media algorithm exposure and trust decline, controlling for offline polarization and traditional media fragmentation.",
+        "[PATH:empirical] Experimental research on algorithm-driven echo chambers (e.g., controlled exposure to ideologically homogeneous vs. diverse news feeds in lab settings) measuring changes in institutional trust pre- and post-exposure \u2014 This directly tests the causal mechanism hypothesized: whether algorithmic curation alone reduces trust, independent of offline social polarization or traditional media effects.",
+        "[PATH:theoretical] Comparative historical analysis of trust decline in Western democracies pre-2010 (before social media dominance) vs. post-2010, using existing datasets like the World Values Survey and European Social Survey \u2014 This provides a counterfactual test: if trust erosion accelerated after 2010 in ways not explained by offline polarization or traditional media fragmentation, it supports the hypothesis; otherwise, it refutes it."
+      ],
+      "scope": {
+        "domain": "institutional sociology"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "Western democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "social media platforms",
+      "predicate": "facilitate",
+      "object": "increased grassroots activism through enhanced algorithmic transparency",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "civic engagement"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "social media platforms",
+      "predicate": "undermine",
+      "object": "rapid fact-checking and civic engagement that strengthen democratic deliberation",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "grassroots activism"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 44,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

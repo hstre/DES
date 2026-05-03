@@ -1,0 +1,425 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Class size reduction",
+      "predicate": "improves",
+      "object": "educational outcomes",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction educational outcomes]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size_controversy": "Meta-analyses show small positive effects, but large-scale randomized trials (e.g., Project STAR) conflict with later observational studies, and mechanisms (e.g., teacher quality, classroom dynamics) remain unclear."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Class size reduction",
+      "predicate": "improves",
+      "object": "educational outcomes",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction educational outcomes]"
+      ],
+      "scope": {
+        "domain": "elementary grades, small-scale controlled settings"
+      },
+      "qualifier": {
+        "effect_size_controversy": "Meta-analyses show small positive effects, but large-scale randomized trials (e.g., Project STAR) conflict with later observational studies, and mechanisms (e.g., teacher quality, classroom dynamics) remain unclear."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Class size reduction",
+      "predicate": "is less effective than",
+      "object": "teacher quality improvement",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction teacher quality improvement]"
+      ],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {
+        "competing_perspective": "Some studies argue that investing in teacher training yields larger gains per dollar than reducing class sizes, especially in later grades."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Class size reduction",
+      "predicate": "has diminishing returns",
+      "object": "educational outcomes",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "inference",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction educational outcomes]"
+      ],
+      "scope": {
+        "domain": "class sizes below 15 students"
+      },
+      "qualifier": {
+        "qualifying_perspective": "Evidence from observational studies suggests that benefits plateau or become negligible when class sizes drop below a certain threshold, and may even introduce negative effects like reduced peer diversity."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Class size reduction in elementary grades with high proportions of novice teachers",
+      "predicate": "reduces",
+      "object": "the positive effect on educational outcomes",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction in elementary grades with high proportions of novice teachers the positive effect on educational outcomes]",
+        "[PATH:empirical] Randomized controlled trial comparing student achievement in reduced-size vs. standard-size classes, stratified by teacher experience level (novice vs. veteran), in elementary schools with high novice teacher proportions. \u2014 Directly tests whether class size reduction yields differential effects depending on teacher experience, isolating the proposed mechanism.",
+        "[PATH:literature] Meta-analysis of class size reduction studies that includes moderator analysis for teacher experience or proportion of novice teachers. \u2014 Synthesizes existing evidence across multiple contexts to assess whether the pattern holds generally, providing statistical power to detect interaction effects.",
+        "[PATH:empirical] Process evaluation using classroom observation data to measure how novice teachers utilize smaller class sizes (e.g., instructional time, individualized attention, classroom management strategies) compared to veterans. \u2014 Tests the proposed mechanism directly by examining whether novice teachers fail to adapt their practices in reduced-size settings, explaining any null or negative effects."
+      ],
+      "scope": {
+        "domain": "elementary grades, classrooms with >30% novice teachers"
+      },
+      "qualifier": {
+        "mechanism_proposal": "Novice teachers lack the classroom management skills to leverage smaller groups, thus diluting the potential benefit of reduced class size."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Teacher quality",
+      "predicate": "has a greater impact on",
+      "object": "educational outcomes than class size",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Teacher quality educational outcomes than class size]",
+        "[PATH:empirical] Tennessee STAR (Student/Teacher Achievement Ratio) project reanalysis focusing on teacher effect heterogeneity within small vs. large classes \u2014 This large-scale randomized experiment provides data to isolate teacher quality effects from class size effects; reanalysis with modern causal methods could confirm or refute the relative impact in the specified domain and time period.",
+        "[PATH:literature] Meta-analysis of value-added studies linking teacher effectiveness measures to student outcomes, controlling for class size (e.g., studies by Hanushek or Chetty et al.) \u2014 A systematic synthesis of existing evidence from early 2000s\u20132010s U.S. elementary settings can quantify the comparative effect sizes and assess whether teacher quality consistently outweighs class size.",
+        "[PATH:theoretical] Simulation study modeling trade-offs between teacher quality improvement and class size reduction under resource constraints \u2014 A theoretical model can clarify boundary conditions (e.g., diminishing returns to class size reduction) and test the hypothesis across plausible parameter ranges, helping to reconcile conflicting empirical findings."
+      ],
+      "scope": {
+        "domain": "elementary grades, small-scale controlled settings"
+      },
+      "qualifier": {
+        "temporal": "early 2000s to 2010s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Class size reduction",
+      "predicate": "is less effective than",
+      "object": "teacher quality improvement for math achievement in grades 4\u20136, but more effective for reading in grades K\u20132",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction teacher quality improvement for math achievement in grades 4\u20136, but more effective for reading in grades K\u20132]",
+        "[PATH:literature] Meta-analysis of class size reduction and teacher quality interventions on math vs. reading outcomes across grade levels (e.g., Hattie, 2009; Krueger, 2003; and more recent updates) \u2014 A comprehensive meta-analysis can directly compare effect sizes of class size reduction versus teacher quality improvement for math in grades 4\u20136 and reading in K\u20132, testing the hypothesized differential effectiveness.",
+        "[PATH:empirical] Longitudinal randomized controlled trial (RCT) or quasi-experimental study in U.S. districts that implemented both class size reduction (e.g., STAR project follow-ups) and teacher quality initiatives (e.g., intensive PD or hiring reforms), with disaggregated results by subject and grade band \u2014 An empirical study with random assignment or rigorous controls can isolate causal impacts of each intervention on math achievement in upper elementary versus reading in early elementary, directly confirming or refuting the claimed pattern.",
+        "[PATH:theoretical] Theoretical modeling of resource allocation trade-offs in education production functions, integrating diminishing returns to class size reduction and threshold effects for teacher quality \u2014 A formal theoretical model can clarify why class size reduction might be more effective for early reading (e.g., due to individualized instruction needs) and less for later math (e.g., due to content expertise demands), providing a framework to interpret empirical findings and guide future tests."
+      ],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {
+        "temporal": "early 21st century studies",
+        "geographic": "United States and other developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Class size reduction",
+      "predicate": "is more effective than",
+      "object": "teacher quality improvement",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Class size reduction teacher quality improvement]",
+        "[PATH:empirical] Tennessee STAR (Student/Teacher Achievement Ratio) experiment re-analysis with 2020-2025 follow-up data \u2014 This classic randomized controlled trial provides direct causal evidence on class size reduction effects. Re-analyzing its long-term outcomes and comparing them with contemporary studies on teacher quality (e.g., value-added measures) would help adjudicate relative effectiveness in the U.S. context.",
+        "[PATH:literature] Meta-analysis of class size reduction vs. teacher quality interventions (e.g., Hattie's Visible Learning or recent systematic reviews) \u2014 A comprehensive meta-analysis synthesizing effect sizes from multiple studies can quantify the comparative impact of these two resource allocation strategies, controlling for context and methodology, thus providing a robust evidence base for the hypothesis."
+      ],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {
+        "temporal": "during the 2020-2025 period",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "investing in teacher training",
+      "predicate": "yields larger gains per dollar than",
+      "object": "reducing class sizes in later grades",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms investing in teacher training yields larger gains per dollar than reducing class sizes in later grades in domain 'resource allocation decisions in education policy']"
+      ],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "reducing class sizes",
+      "predicate": "is more effective than",
+      "object": "teacher quality improvement in early grades",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms reducing class sizes is more effective than teacher quality improvement in early grades in domain 'resource allocation decisions in education policy']"
+      ],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {
+        "temporal": "early 2000s to present",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Class size reduction",
+      "predicate": "is less effective than",
+      "object": "teacher quality improvement in early elementary grades",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Class size reduction",
+      "predicate": "is more effective than",
+      "object": "teacher quality improvement",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "resource allocation decisions in education policy"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

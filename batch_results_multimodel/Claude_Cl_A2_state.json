@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing poverty",
+      "object": "only when recipient institutions are democratic and accountable",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid only when recipient institutions are democratic and accountable]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Foreign aid to democratic and accountable institutions",
+      "predicate": "reduces",
+      "object": "poverty in recipient countries",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid to democratic and accountable institutions poverty in recipient countries]"
+      ],
+      "scope": {
+        "domain": "development economics"
+      },
+      "qualifier": {
+        "condition": "when institutions are democratic and accountable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Foreign aid to authoritarian or weakly accountable institutions",
+      "predicate": "can still reduce",
+      "object": "poverty through direct humanitarian channels or infrastructure projects",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid to authoritarian or weakly accountable institutions poverty through direct humanitarian channels or infrastructure projects]"
+      ],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "counterpoint": "institutional quality may be less critical for certain types of aid"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The effectiveness of foreign aid in reducing poverty",
+      "predicate": "is mediated more by",
+      "object": "the alignment of donor interests with local needs than by recipient institutional democracy",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The effectiveness of foreign aid in reducing poverty the alignment of donor interests with local needs than by recipient institutional democracy]"
+      ],
+      "scope": {
+        "domain": "political economy of aid"
+      },
+      "qualifier": {
+        "competing_factor": "donor-recipient interest alignment"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Foreign aid to democratic and accountable institutions with strong civil society oversight",
+      "predicate": "reduces",
+      "object": "extreme poverty (below $1.90/day) more effectively than moderate poverty",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid to democratic and accountable institutions with strong civil society oversight extreme poverty (below $1.90/day) more effectively than moderate poverty]",
+        "[PATH:empirical] Comparative analysis of aid effectiveness in countries with high vs. low civil society oversight, using World Bank LSMS and PovcalNet data to disaggregate poverty impacts by poverty depth (extreme vs. moderate). \u2014 Directly tests whether the differential effect on extreme poverty (below $1.90/day) is larger than on moderate poverty, and whether this effect is conditional on civil society monitoring and media freedom.",
+        "[PATH:empirical] Case studies of randomized controlled trials (RCTs) on foreign aid programs with strong local monitoring components (e.g., by IPA or J-PAL) that report poverty outcomes stratified by initial poverty severity. \u2014 Provides causal evidence on the mechanism: whether active civil society oversight amplifies poverty reduction specifically for the poorest, relative to less poor households.",
+        "[PATH:theoretical] Literature review on the 'poverty trap' hypothesis and institutional determinants of aid effectiveness, focusing on thresholds and nonlinearities in poverty reduction. \u2014 Helps clarify why extreme poverty might respond more to well-monitored aid (e.g., due to higher marginal returns or binding constraints), and formalizes conditions under which the hypothesis holds."
+      ],
+      "scope": {
+        "domain": "development economics"
+      },
+      "qualifier": {
+        "condition": "when civil society organizations actively monitor aid distribution and local media freely reports on outcomes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Foreign aid to democratic and accountable institutions",
+      "predicate": "entrenches",
+      "object": "poverty in recipient countries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid to democratic and accountable institutions poverty in recipient countries]",
+        "[PATH:empirical] Cross-country panel studies on aid dependency and fiscal capacity, e.g., from the World Bank or IMF working papers, examining the relationship between foreign aid flows to democratic institutions and domestic tax revenue as a share of GDP over time. \u2014 Directly tests the mechanism of crowding out domestic revenue mobilization, a key causal link in the hypothesis. Panel data with fixed effects can isolate the effect of aid to democratic institutions from other factors.",
+        "[PATH:empirical] Case studies or process-tracing analyses of specific recipient countries with strong democratic institutions (e.g., Ghana, Kenya, or Bangladesh) that have received significant aid to accountable bodies, focusing on patterns of rent-seeking and elite capture in aid-funded projects. \u2014 Provides qualitative evidence on whether aid to democratic institutions inadvertently incentivizes rent-seeking behavior, as hypothesized. Comparative case selection can control for alternative explanations.",
+        "[PATH:literature] Literature review and meta-analysis of aid effectiveness studies that specifically disaggregate aid by sector (e.g., governance vs. health/education) and examine poverty outcomes, with attention to conditional effects on democracy and accountability. \u2014 Synthesizes existing empirical findings to assess whether the hypothesis holds across different contexts and study designs, identifying gaps and potential publication bias."
+      ],
+      "scope": {
+        "domain": "development economics"
+      },
+      "qualifier": {
+        "condition": "by creating aid dependency, crowding out domestic revenue mobilization, and incentivizing rent-seeking behavior even in democratic contexts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Foreign aid delivered through decentralized community-based organizations in authoritarian regimes",
+      "predicate": "achieves greater poverty reduction per dollar than",
+      "object": "centralized government-administered aid programs in the same contexts",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid delivered through decentralized community-based organizations in authoritarian regimes centralized government-administered aid programs in the same contexts]",
+        "[PATH:empirical] Comparative case studies of aid programs in Ethiopia and Rwanda, contrasting community-based NGO delivery with centralized government channels, using household consumption data from LSMS surveys. \u2014 Directly tests the hypothesis by comparing poverty reduction outcomes in authoritarian contexts where both delivery mechanisms operate, controlling for aid amount and local conditions.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials (RCTs) on community-driven development (CDD) programs in authoritarian settings, e.g., the World Bank's CDD portfolio in Vietnam and Cambodia. \u2014 Synthesizes existing evidence on the effectiveness of decentralized vs. centralized aid, isolating the role of bypassing corrupt layers while maintaining accountability.",
+        "[PATH:theoretical] Theoretical modeling of aid allocation under institutional corruption, using game theory to predict optimal delegation to community organizations versus central governments. \u2014 Provides a formal framework to understand conditions under which decentralization outperforms centralization, addressing the proposed mechanism of bypassing corrupt layers."
+      ],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "mechanism": "bypassing corrupt institutional layers while maintaining local accountability"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Foreign aid to authoritarian or weakly accountable institutions",
+      "predicate": "systematically entrenches",
+      "object": "poverty by strengthening exploitative power structures that capture resources and prevent sustainable development",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid to authoritarian or weakly accountable institutions poverty by strengthening exploitative power structures that capture resources and prevent sustainable development]",
+        "[PATH:empirical] Cross-national panel data on aid flows, governance quality, and poverty indices (e.g., World Bank WDI, Polity IV, V-Dem) with instrumental variable analysis to isolate causal effects of aid to authoritarian regimes. \u2014 This allows testing whether aid directed to weakly accountable institutions correlates with persistent or worsening poverty, controlling for reverse causality and selection bias, directly addressing the hypothesis.",
+        "[PATH:empirical] Case studies of aid fungibility in specific authoritarian regimes (e.g., Ethiopia, Uganda, Cambodia) using budget tracking and qualitative process tracing to document how aid frees regime resources for repression or elite capture. \u2014 Provides direct evidence of the proposed mechanism (aid fungibility enabling resource diversion) and its link to poverty entrenchment, complementing quantitative findings.",
+        "[PATH:literature] Meta-analysis of existing literature on foreign aid effectiveness and political conditionality (e.g., Easterly, 2006; Burnside & Dollar, 2000; Deaton, 2013) with focus on studies that disaggregate by recipient regime type. \u2014 Synthesizes prior evidence to assess whether the pattern holds across contexts, identifying gaps and methodological debates that could confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "mechanism": "aid fungibility allows regimes to redirect freed-up resources toward repression while claiming humanitarian success"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Foreign aid to authoritarian or weakly accountable institutions",
+      "predicate": "can reduce",
+      "object": "poverty through direct humanitarian channels or infrastructure projects",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid to authoritarian or weakly accountable institutions can reduce poverty through direct humanitarian channels or infrastructure projects in domain 'humanitarian aid']"
+      ],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Foreign aid to authoritarian or weakly accountable institutions",
+      "predicate": "cannot reliably reduce",
+      "object": "poverty due to diversion, corruption, or misallocation of resources",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid to authoritarian or weakly accountable institutions cannot reliably reduce poverty due to diversion, corruption, or misallocation of resources in domain 'humanitarian aid']"
+      ],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "temporal": "since the end of the Cold War (post-1991)",
+        "geographic": "low-income countries with high corruption indices"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Foreign aid effectiveness in poverty reduction",
+      "predicate": "increases exponentially when",
+      "object": "local community organizations directly control at least 40% of disbursement decisions, independent of national government institutional quality",
+      "status": "supported",
+      "confidence": 0.8200000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid effectiveness in poverty reduction local community organizations directly control at least 40% of disbursement decisions, independent of national government institutional quality]",
+        "[PATH:empirical] Randomized controlled trials comparing poverty outcomes in matched districts where local control of aid disbursement is varied (e.g., 40% vs. 0% or 20%) across multiple low-income countries, controlling for national governance indicators. \u2014 Direct causal evidence on the threshold effect and independence from institutional quality can be obtained by experimentally varying the share of local control while measuring poverty reduction metrics (e.g., consumption, asset accumulation).",
+        "[PATH:literature] Meta-analysis of existing aid effectiveness studies that disaggregate results by degree of local community control (e.g., community-driven development programs) and national governance quality (e.g., World Governance Indicators), testing for interaction effects. \u2014 Synthesizing existing data can reveal whether the 40% threshold consistently emerges across contexts and whether the effect is robust to controlling for institutional quality, thus confirming or refuting the independence claim.",
+        "[PATH:theoretical] Game-theoretic or agent-based models simulating aid disbursement under varying local control shares (0-100%) and national institutional environments, calibrated with empirical parameters from aid-dependent countries. \u2014 Formal modeling can isolate the mechanistic role of local control in bypassing institutional constraints, providing theoretical predictions about the exponential relationship and threshold behavior for subsequent empirical testing."
+      ],
+      "scope": {
+        "domain": "political economy of aid",
+        "context": "decentralized aid governance"
+      },
+      "qualifier": {
+        "threshold": "40% local control",
+        "mechanism": "bypassing national institutional constraints"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The effectiveness of foreign aid in reducing poverty",
+      "predicate": "is mediated more by",
+      "object": "recipient institutional democracy and governance quality than by donor-recipient interest alignment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The effectiveness of foreign aid in reducing poverty recipient institutional democracy and governance quality than by donor-recipient interest alignment]",
+        "[PATH:empirical] Cross-country panel studies comparing aid effectiveness across varying levels of democracy (e.g., using Polity IV or V-Dem indices) and governance quality (e.g., World Governance Indicators), controlling for donor-recipient interest alignment via UN voting affinity or strategic alliances. \u2014 Directly tests whether institutional quality moderates aid impact on poverty reduction more than alignment, using widely available quantitative data.",
+        "[PATH:empirical] Case studies of aid programs in recipient countries with high governance but low interest alignment (e.g., Botswana) versus low governance but high alignment (e.g., Ethiopia), analyzing poverty outcomes over time. \u2014 Provides comparative causal evidence by isolating the institutional mechanism from alignment, addressing endogeneity through within-case process tracing.",
+        "[PATH:literature] Meta-analysis of existing literature on aid effectiveness, disaggregating studies by whether they control for governance quality versus interest alignment, and comparing effect sizes. \u2014 Synthesizes existing evidence to assess the relative weight of the two mediators, identifying gaps and publication bias."
+      ],
+      "scope": {
+        "domain": "political economy of aid"
+      },
+      "qualifier": {
+        "mechanism": "institutional capacity to absorb and allocate resources effectively regardless of donor motivation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Foreign aid delivered through decentralized cash transfer programs that bypass central government institutions",
+      "predicate": "achieves greater poverty reduction per dollar",
+      "object": "than infrastructure projects in authoritarian regimes with corruption indices above 60",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "mechanism": "direct beneficiary access eliminates institutional capture points",
+        "measurable_threshold": "corruption perception index > 60"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Foreign aid to authoritarian or weakly accountable institutions",
+      "predicate": "systematically entrenches",
+      "object": "poverty by strengthening extractive regimes that capture aid resources and suppress local economic development",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "humanitarian aid"
+      },
+      "qualifier": {
+        "mechanism": "aid fungibility enables dictators to redirect freed-up resources toward repression and patronage networks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
