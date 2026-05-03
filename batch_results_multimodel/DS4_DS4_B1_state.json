@@ -1,0 +1,513 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "captures",
+      "object": "market-based production",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP market-based production]"
+      ],
+      "scope": {
+        "domain": "macroeconomic accounting"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global (primarily OECD economies)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "neglects",
+      "object": "non-market contributions to welfare",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market contributions to welfare]"
+      ],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "globally, but particularly in developed economies"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP growth",
+      "predicate": "may correlate with",
+      "object": "increased inequality and environmental degradation",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth increased inequality and environmental degradation]"
+      ],
+      "scope": {
+        "domain": "social and ecological outcomes"
+      },
+      "qualifier": {
+        "temporal": "since 1980",
+        "geographic": "global, with emphasis on developing economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "systematically excludes",
+      "object": "unpaid household and care labor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP unpaid household and care labor]",
+        "[PATH:empirical] National time-use surveys (e.g., from the U.S. Bureau of Labor Statistics, Statistics Canada, or Eurostat) combined with satellite accounts for household production \u2014 Directly quantifies unpaid household and care labor hours and imputes their value, allowing comparison with official GDP figures to demonstrate systematic exclusion.",
+        "[PATH:theoretical] Feminist economics literature (e.g., works by Marilyn Waring, Nancy Folbre, or the UN's 'Beyond GDP' reports) \u2014 Provides conceptual frameworks and historical analysis showing how GDP accounting conventions were deliberately designed to exclude unpaid care work, supporting the hypothesis of systematic exclusion.",
+        "[PATH:empirical] Cross-country panel data on GDP growth and changes in female labor force participation, plus household production estimates (e.g., from the OECD Gender, Institutions and Development Database) \u2014 Tests whether periods of GDP growth correlate with shifts in unpaid care work, revealing substitution effects that confirm exclusion."
+      ],
+      "scope": {
+        "domain": "macroeconomic accounting and feminist economics"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global (primarily OECD economies)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "non-market production (e.g., household labor, subsistence agriculture, volunteer work)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market production (e.g., household labor, subsistence agriculture, volunteer work)]",
+        "[PATH:empirical] Time-use surveys from national statistical offices (e.g., U.S. Bureau of Labor Statistics American Time Use Survey, India's Time Use Survey) \u2014 These surveys quantify household labor and volunteer hours, allowing estimation of non-market production's value via replacement cost or opportunity cost methods. Comparing these estimates to GDP can confirm the magnitude of omission.",
+        "[PATH:theoretical] Satellite accounts for household production (e.g., UN System of National Accounts satellite accounts, OECD guidelines for unpaid household service work) \u2014 These frameworks provide standardized methodologies to impute non-market production, enabling formal testing of whether GDP significantly understates economic activity in developing economies where subsistence agriculture and informal work are prevalent.",
+        "[PATH:literature] Empirical studies comparing GDP growth with alternative welfare metrics (e.g., Genuine Progress Indicator, Inclusive Wealth Index) in developing countries \u2014 Systematic reviews of cross-country evidence can reveal consistent divergence between GDP and broader measures, strengthening or refuting the claim that GDP's exclusion of non-market production leads to systematic bias, especially in rural or informal economies."
+      ],
+      "scope": {
+        "domain": "macroeconomic accounting"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global, especially in developing economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "correlates negatively with",
+      "object": "household-level time spent on unpaid care work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth household-level time spent on unpaid care work]",
+        "[PATH:empirical] OECD Time Use Surveys (2000-2020) merged with national GDP growth rates \u2014 Directly tests the correlation using harmonized household-level time diary data across OECD countries, controlling for confounders like employment status and gender.",
+        "[PATH:empirical] Panel data from the Luxembourg Income Study (LIS) on unpaid care work proxies (e.g., childcare hours) linked to GDP per capita growth \u2014 Provides cross-country longitudinal evidence to assess whether periods of higher GDP growth are associated with reduced unpaid care time, leveraging repeated household surveys.",
+        "[PATH:theoretical] Theoretical literature on 'care economy' and macroeconomic growth (e.g., Folbre, 2006; Elson, 2017) \u2014 Frames the hypothesis within established economic theory that unpaid care work may decline with growth due to market substitution, or increase due to demographic shifts, guiding interpretation of empirical findings."
+      ],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "captures",
+      "object": "the primary drivers of welfare through market production",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP the primary drivers of welfare through market production]",
+        "[PATH:empirical] Comparative analysis of GDP per capita vs. subjective well-being indices (e.g., World Happiness Report, Gallup) across developed economies since 1950 \u2014 Directly tests whether changes in GDP correlate with welfare measures; if correlation weakens over time or across countries, it refutes the hypothesis.",
+        "[PATH:literature] Review of alternative welfare metrics literature (e.g., Human Development Index, Genuine Progress Indicator, OECD Better Life Index) and their divergence from GDP trends \u2014 Synthesizes existing critiques and evidence on GDP's limitations in capturing non-market welfare drivers, such as health, social connections, and environmental quality.",
+        "[PATH:theoretical] Theoretical modeling of welfare production functions incorporating both market and non-market inputs (e.g., household production, leisure, ecosystem services) \u2014 Provides a formal framework to assess whether market production alone can be considered the primary driver, by quantifying the marginal contribution of non-market factors to welfare."
+      ],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {
+        "temporal": "since mid-20th century",
+        "geographic": "primarily developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP",
+      "predicate": "neglects",
+      "object": "non-market contributions to welfare",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP neglects non-market contributions to welfare in domain 'wellbeing measurement']"
+      ],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP",
+      "predicate": "does not neglect",
+      "object": "non-market contributions to welfare",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP does not neglect non-market contributions to welfare in domain 'wellbeing measurement']"
+      ],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP growth in developing economies since 1980",
+      "predicate": "causes",
+      "object": "a faster increase in inequality and environmental degradation than in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in developing economies since 1980 a faster increase in inequality and environmental degradation than in developed economies]",
+        "[PATH:empirical] World Bank World Development Indicators (WDI) panel data on Gini coefficients and CO2 emissions per capita for developing vs. developed economies, 1980\u20132020 \u2014 Provides longitudinal, cross-country data to test whether inequality and environmental degradation increased faster in developing economies during periods of GDP growth, relative to developed economies.",
+        "[PATH:literature] Kuznets curve and environmental Kuznets curve literature (e.g., Grossman & Krueger 1995; Piketty 2014) meta-analysis \u2014 Reviews theoretical and empirical evidence on the inverted-U relationship between income growth and inequality/environmental degradation, allowing assessment of whether developing economies exhibit steeper upward slopes in the early growth phase.",
+        "[PATH:empirical] Comparative case studies of rapid-growth developing economies (e.g., China, India, Brazil) using satellite-based environmental data (e.g., NASA MODIS) and household survey inequality measures \u2014 High-resolution spatial and temporal data can directly measure changes in environmental degradation (e.g., deforestation, air pollution) and inequality alongside GDP growth, enabling causal inference through difference-in-differences or fixed-effects models."
+      ],
+      "scope": {
+        "domain": "comparative social and ecological outcomes"
+      },
+      "qualifier": {
+        "temporal": "since 1980",
+        "geographic": "global, with emphasis on developing versus developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP growth",
+      "predicate": "may reduce",
+      "object": "inequality and environmental degradation",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth inequality and environmental degradation]",
+        "[PATH:empirical] World Bank's World Development Indicators (WDI) combined with the Standardized World Income Inequality Database (SWIID) and the Environmental Performance Index (EPI) \u2014 These datasets allow panel data analysis across developing economies since 1980 to test whether GDP growth is associated with simultaneous reductions in income inequality (Gini coefficients) and environmental degradation (e.g., CO2 emissions, air pollution).",
+        "[PATH:literature] Kuznets curve and environmental Kuznets curve literature (e.g., Grossman & Krueger 1995, Stern 2004, Piketty 2014) \u2014 This body of theory and empirical work directly examines the inverted-U relationship between economic growth and inequality, and between growth and environmental degradation. Reviewing recent meta-analyses and critiques can clarify whether the hypothesized joint reduction is supported or refuted in developing economies since 1980.",
+        "[PATH:empirical] Country-specific longitudinal studies on 'green growth' or 'inclusive growth' policies (e.g., Costa Rica, Rwanda, or Bangladesh) \u2014 Case studies of developing economies that have experienced sustained GDP growth while implementing redistributive and environmental policies can provide controlled evidence on whether growth itself reduces both inequality and degradation, or whether policy interventions are necessary."
+      ],
+      "scope": {
+        "domain": "social and ecological outcomes"
+      },
+      "qualifier": {
+        "temporal": "since 1980",
+        "geographic": "global, with emphasis on developing economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "GDP growth in developed economies",
+      "predicate": "underestimates welfare losses from",
+      "object": "unpaid care work and household production",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "GDP",
+      "predicate": "adequately captures",
+      "object": "non-market contributions to welfare",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "wellbeing measurement"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 44,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
