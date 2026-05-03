@@ -1,0 +1,490 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Low-skilled immigration in local labor markets",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers without a college degree",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration in local labor markets native workers without a college degree]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with high immigration concentration"
+      },
+      "qualifier": {
+        "temporal": "short-run (1-5 years)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "High-skilled immigration",
+      "predicate": "increases wages and productivity for native workers",
+      "object": "native workers with college degrees",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: High-skilled immigration native workers with college degrees]"
+      ],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {
+        "complementarity": "positive spillovers via innovation and specialization"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration overall (all skill levels) in the long run",
+      "predicate": "has a neutral or positive effect on average native wages due to dynamic adjustments",
+      "object": "native workers across all education levels",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration overall (all skill levels) in the long run native workers across all education levels]"
+      ],
+      "scope": {
+        "domain": "macroeconomy, 10+ year time horizon"
+      },
+      "qualifier": {
+        "mechanism": "capital accumulation, technological change, and labor market adaptation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Low-skilled immigration in local labor markets",
+      "predicate": "increases wage polarization among native workers without a college degree",
+      "object": "native workers without a college degree in high-immigration concentration areas",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration in local labor markets native workers without a college degree in high-immigration concentration areas]",
+        "[PATH:empirical] Replication and extension of the 'task specialization' model from Peri and Sparber (2009) using current U.S. Census or ACS data, focusing on native workers without a college degree in high-immigration MSAs over 1-5 year intervals. \u2014 Directly tests the proposed mechanism by measuring changes in occupational task content and wage outcomes for native workers, distinguishing between those shifting to communication-intensive roles and those remaining in manual tasks.",
+        "[PATH:literature] Meta-analysis of recent studies (2015-2025) on low-skilled immigration's wage effects on native high school graduates in local labor markets, with stratification by initial wage percentile within that group. \u2014 Evaluates whether the hypothesized polarization pattern (increased wage dispersion among less-educated natives) is consistently observed across multiple datasets and geographies, addressing the disputed status.",
+        "[PATH:theoretical] Theoretical model incorporating heterogeneous skills and endogenous task assignment within the low-skill native labor market, calibrated to match observed immigration-driven changes in wage distributions. \u2014 Provides a formal counterfactual framework to isolate the wage polarization effect from confounding factors like local demand shocks or out-migration, clarifying the causal logic."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with high immigration concentration"
+      },
+      "qualifier": {
+        "temporal": "short-run (1-5 years)",
+        "mechanism": "via task specialization: native workers shift to communication-intensive roles, slowing wage decline for some while accelerating it for others"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Low-skilled immigration in local labor markets",
+      "predicate": "increases wages for native workers",
+      "object": "native workers without a college degree",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration in local labor markets native workers without a college degree]",
+        "[PATH:empirical] Card (1990) 'The Impact of the Mariel Boatlift on the Miami Labor Market' and subsequent replications \u2014 This classic natural experiment provides a direct test of wage effects of low-skilled immigration on native workers without a college degree. Recent re-analyses using updated data and methods (e.g., Peri & Yasenov, 2019) help confirm or refute the finding of null or positive wage effects in high-concentration local markets.",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping' and related spatial correlation studies \u2014 Borjas' work often finds negative wage effects for native high school dropouts due to immigration. Examining his methodology versus more recent instrumental variable approaches (e.g., using settlement patterns) can clarify whether the disputed positive effect holds under different identification strategies.",
+        "[PATH:literature] Meta-analysis of U.S. low-skilled immigration wage effects (2000\u20132020) \u2014 A systematic review of published studies over the specified temporal and geographic scope would aggregate evidence, assess publication bias, and identify conditions (e.g., local labor market tightness, skill complementarity) under which native wages rise or fall, directly addressing the disputed hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with high immigration concentration"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "high-skilled immigration",
+      "predicate": "decreases wage bargaining power",
+      "object": "native workers with college degrees in non-innovation sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration native workers with college degrees in non-innovation sectors]",
+        "[PATH:empirical] Borjas, G. J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics. Replicate analysis specifically for high-skilled natives in non-innovation sectors. \u2014 Provides a direct empirical framework to estimate wage effects of increased labor supply from immigration, allowing decomposition by sector innovation intensity.",
+        "[PATH:empirical] Peri, G., & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics. Focus on task differentiation versus wage bargaining effects. \u2014 Tests whether high-skilled immigration leads to task specialization (which could weaken wage bargaining by concentrating workers in standardized roles) versus complementarity in innovation sectors.",
+        "[PATH:literature] Dustmann, C., Frattini, T., & Preston, I. P. (2013). 'The Effect of Immigration along the Distribution of Wages.' Review of Economic Studies. Extend analysis to include union density and wage bargaining institutions as moderators. \u2014 Offers evidence on how immigration affects wages differentially across skill percentiles and institutional contexts; crucial to isolate bargaining power effects in non-innovation sectors."
+      ],
+      "scope": {
+        "domain": "non-innovation-driven sectors"
+      },
+      "qualifier": {
+        "mechanism": "increased labor supply concentration in standardized roles"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "High-skilled immigration",
+      "predicate": "depresses wages and reduces job opportunities for",
+      "object": "native workers with college degrees",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: High-skilled immigration native workers with college degrees]",
+        "[PATH:empirical] Analyze wage and employment panel data for native college graduates in U.S. innovation-driven sectors (e.g., tech hubs) before and after H-1B visa cap changes, using data from the Current Population Survey (CPS) or American Community Survey (ACS) from 2000\u20132020. \u2014 Directly tests the causal claim by exploiting exogenous variation in high-skilled immigration flows due to policy changes, allowing isolation of effects on native college graduate wages and employment.",
+        "[PATH:literature] Conduct a meta-analysis of existing econometric studies on high-skilled immigration and labor market outcomes for native college graduates, focusing on studies that differentiate between short-run displacement effects and long-run productivity spillovers. \u2014 Synthesizes conflicting evidence to assess the overall direction and magnitude of the effect, clarifying whether the disputed hypothesis holds under different methodological approaches and controlling for publication bias.",
+        "[PATH:theoretical] Develop a structural economic model of the U.S. innovation sector with heterogeneous labor types (native vs. immigrant, by skill level), calibrate it to 2000\u20132020 data, and simulate counterfactual scenarios of reduced high-skilled immigration. \u2014 Provides a theoretical framework to disentangle substitution from complementarity effects, accounting for general equilibrium adjustments (e.g., firm entry, technology adoption) that panel regressions may miss, thereby testing the robustness of the hypothesized wage-depression mechanism."
+      ],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "High-skilled immigration",
+      "predicate": "increases wages and productivity for",
+      "object": "native workers with college degrees in innovation-driven sectors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms High-skilled immigration increases wages and productivity for native workers with college degrees in innovation-driven sectors in domain 'innovation-driven sectors']"
+      ],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "High-skilled immigration",
+      "predicate": "depresses wages and reduces job opportunities for",
+      "object": "native workers with college degrees in innovation-driven sectors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms High-skilled immigration depresses wages and reduces job opportunities for native workers with college degrees in innovation-driven sectors in domain 'innovation-driven sectors']"
+      ],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132025",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Immigration overall (all skill levels) in the long run",
+      "predicate": "has a net positive effect on average native wages only when the immigrant inflow is predominantly from high-skill sectors",
+      "object": "native workers across all education levels",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration overall (all skill levels) in the long run native workers across all education levels]",
+        "[PATH:empirical] Long-run cross-country panel studies (e.g., using OECD or World Bank data) that isolate the skill composition of immigrant inflows and track native wage growth by education level over multiple decades. \u2014 Such studies can directly test whether only predominantly high-skill immigrant inflows are associated with positive native wage effects across all education levels, controlling for other macroeconomic factors.",
+        "[PATH:theoretical] Structural macroeconomic models incorporating heterogeneous labor markets, endogenous innovation, and capital accumulation (e.g., calibrated DSGE or CGE models with skill-specific immigration shocks). \u2014 These models can simulate the causal mechanisms (innovation, complementarity) and quantify whether alternative skill compositions produce differential long-run wage impacts, helping to confirm or refute the hypothesized mechanism."
+      ],
+      "scope": {
+        "domain": "macroeconomy, 10+ year time horizon, skill composition of immigrant flow"
+      },
+      "qualifier": {
+        "mechanism": "high-skill immigrants boost innovation, capital formation, and complementarity with native low-skill labor"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Immigration overall (all skill levels) in the long run",
+      "predicate": "depresses average native wages because dynamic adjustments are insufficient to offset labor supply increases",
+      "object": "native workers across all education levels",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration overall (all skill levels) in the long run native workers across all education levels]",
+        "[PATH:empirical] Long-run panel studies of US states or regions with varying immigration inflows (e.g., Card, Peri, or Ottaviano & Peri) that separate wage effects by education level over decades \u2014 These studies provide direct econometric evidence on whether immigration-induced labor supply increases lead to persistent wage depression or are offset by capital adjustment, technology adoption, and skill complementarities over 10+ years.",
+        "[PATH:theoretical] Dynamic general equilibrium models of the US economy incorporating immigration, endogenous capital accumulation, and skill heterogeneity (e.g., Ben-Gad, or Storesletten) to simulate long-run wage effects \u2014 Such models test the hypothesis that dynamic adjustments (capital deepening, occupational mobility) are insufficient to offset wage depression, allowing counterfactual analysis that isolates mechanisms not observable in reduced-form empirical work.",
+        "[PATH:literature] Meta-analysis or systematic review of the empirical literature on long-run immigration-wage effects (e.g., Longhi, Nijkamp, & Poot) that synthesizes findings across multiple studies and contexts \u2014 A comprehensive meta-analysis can assess whether the preponderance of evidence supports wage depression across all education levels or reveals heterogeneous effects, while controlling for methodological differences."
+      ],
+      "scope": {
+        "domain": "macroeconomy, 10+ year time horizon"
+      },
+      "qualifier": {
+        "temporal": "over 10+ years",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "High-skilled immigration",
+      "predicate": "increases wages and productivity for native workers",
+      "object": "native workers with college degrees only in U.S. metro areas with above-median patenting rates",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {
+        "mechanism": "localized knowledge spillover density",
+        "boundary_condition": "effect dissipates below threshold of 50 patents per 100,000 residents per year"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "High-skilled immigration",
+      "predicate": "depresses wages and reduces opportunities for",
+      "object": "native workers with college degrees",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "innovation-driven sectors"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 41,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

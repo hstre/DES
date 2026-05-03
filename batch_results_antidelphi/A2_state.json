@@ -1,0 +1,422 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "extreme poverty in stable democracies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid extreme poverty in stable democracies]"
+      ],
+      "scope": {
+        "domain": "stable democracies"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Foreign aid",
+      "predicate": "can increase dependency and distort local economies",
+      "object": "long-term poverty reduction",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid long-term poverty reduction]"
+      ],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {
+        "temporal": "since 1990s",
+        "geographic": "Sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty only when paired with institutional reform",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conditional",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty only when paired with institutional reform]"
+      ],
+      "scope": {
+        "domain": "fragile states"
+      },
+      "qualifier": {
+        "condition": "paired with institutional reform"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Foreign aid",
+      "predicate": "is ineffective at reducing",
+      "object": "extreme poverty in stable democracies when aid is tied to donor-country procurement conditions",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid extreme poverty in stable democracies when aid is tied to donor-country procurement conditions]",
+        "[PATH:empirical] World Bank's AidData: 'Buying Influence? The Political Economy of Tied Aid' (empirical panel study of aid effectiveness in Sub-Saharan Africa and South Asia since 2000, with focus on procurement conditions) \u2014 Directly tests the causal link between tied aid and poverty reduction outcomes in stable democracies, controlling for governance quality and procurement rules.",
+        "[PATH:literature] Systematic review: 'The Impact of Tied vs. Untied Aid on Poverty Alleviation in Democratic Recipient Countries' (meta-analysis of 20+ econometric studies, focusing on Sub-Saharan Africa and South Asia since 2000) \u2014 Aggregates existing empirical evidence to determine whether the relationship is robust across different contexts and methodologies, addressing the disputed status.",
+        "[PATH:theoretical] Theoretical model: 'Procurement Constraints and Local Welfare: A General Equilibrium Approach' (simulates effects of donor procurement rules on market inefficiencies and income distribution in stable democracies) \u2014 Provides causal mechanisms explaining why tied aid might fail to reduce extreme poverty, offering testable predictions and filling gaps where empirical data is scarce."
+      ],
+      "scope": {
+        "domain": "stable democracies"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Foreign aid",
+      "predicate": "is ineffective at reducing",
+      "object": "extreme poverty in stable democracies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid extreme poverty in stable democracies]",
+        "[PATH:empirical] World Bank Development Research Group: Aid Effectiveness and Poverty Reduction Datasets \u2014 Provides cross-country panel data on official development assistance and poverty indices in stable democracies post-1990, enabling regression analysis to test causal links between aid flows and extreme poverty reduction.",
+        "[PATH:literature] Systematic review of aid effectiveness in democratic contexts (e.g., Journal of Development Economics, 2015-2024) \u2014 Synthesizes existing studies that isolate the moderating effect of political stability and democratic institutions on aid-poverty relationships, highlighting methodological disagreements that underpin the disputed status.",
+        "[PATH:empirical] Case-control comparison of aid programs in stable democracies vs. fragile states (e.g., USAID evaluations matched via propensity scores) \u2014 Tests the hypothesis directly by comparing poverty outcomes in stable democracies with similar countries receiving equivalent aid, controlling for governance quality and time trends since the Cold War."
+      ],
+      "scope": {
+        "domain": "stable democracies"
+      },
+      "qualifier": {
+        "temporal": "since the end of the Cold War",
+        "geographic": "in stable democracies globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Foreign aid provided as direct budget support",
+      "predicate": "reduces domestic tax revenue collection and weakens institutional accountability",
+      "object": "fiscal self-sufficiency in recipient countries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid provided as direct budget support fiscal self-sufficiency in recipient countries]",
+        "[PATH:empirical] Cross-country panel data analysis of tax-to-GDP ratios before and after the introduction of budget support in sub-Saharan Africa and South Asia (e.g., using IMF Government Finance Statistics and World Bank data) \u2014 This would directly test whether periods of high budget-support aid correlate with declines in domestic tax revenue, controlling for other factors like economic shocks or governance reforms.",
+        "[PATH:theoretical] Case studies or process-tracing of donor conditionalities attached to budget support in selected countries (e.g., Ghana, Tanzania, Uganda) examining effects on parliamentary oversight and public financial management reforms \u2014 Theoretical work on fiscal sovereignty and accountability suggests budget support may bypass domestic revenue-raising incentives and weaken institutions; these cases would allow testing the causal mechanisms linking aid modality to accountability outcomes.",
+        "[PATH:literature] Systematic review of existing literature on the 'resource curse' and foreign aid, focusing on studies that compare budget support with project aid in terms of fiscal self-sufficiency and institutional quality \u2014 A meta-analysis of published and grey literature would synthesize available evidence, identify gaps, and assess whether the disputed relationship holds across different contexts and methodologies."
+      ],
+      "scope": {
+        "domain": "highly aid-dependent low-income countries"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s",
+        "geographic": "sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Foreign aid",
+      "predicate": "can break cycles of poverty and catalyze self-sustaining growth",
+      "object": "long-term poverty reduction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid long-term poverty reduction]",
+        "[PATH:empirical] Systematic review of randomized controlled trials on cash transfers and infrastructure aid in sub-Saharan Africa (e.g., via 3ie Impact Evaluation Repository) \u2014 Provides causal evidence on whether unconditional or conditional aid directly reduces poverty metrics over 10-15 years, testing the 'break cycles' claim.",
+        "[PATH:empirical] Cross-country panel data analysis using AidData and World Bank indicators (e.g., Burnside & Dollar replication studies) \u2014 Allows econometric testing of long-term associations between aid flows and poverty reduction in South Asia and sub-Saharan Africa, controlling for governance and external shocks.",
+        "[PATH:theoretical] Theoretical models of poverty traps and aid effectiveness (e.g., Sachs vs. Easterly debates; Journal of Development Economics) \u2014 Evaluates mechanisms (e.g., investment vs. dependency) that underpin the hypothesis, clarifying conditions under which aid catalyzes self-sustaining growth."
+      ],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {
+        "temporal": "over a 10- to 15-year period",
+        "geographic": "sub-Saharan Africa and South Asia (aid-dependent regions)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Foreign aid",
+      "predicate": "reduces local initiative and creates market distortions that hinder",
+      "object": "long-term poverty reduction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid reduces local initiative and creates market distortions that hinder long-term poverty reduction in domain 'aid-dependent regions']"
+      ],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {
+        "temporal": "during the period of structural adjustment programs (1980s\u20131990s)",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Foreign aid",
+      "predicate": "can be designed to strengthen local institutions and markets, thereby supporting",
+      "object": "long-term poverty reduction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid can be designed to strengthen local institutions and markets, thereby supporting long-term poverty reduction in domain 'aid-dependent regions']"
+      ],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "Sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Foreign aid delivered as untrammeled budget support",
+      "predicate": "increases the likelihood of entrenching patron-client state structures and dampens domestic tax revenue generation",
+      "object": "long-term poverty reduction",
+      "status": "unknown",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {
+        "temporal": "since 1990s",
+        "geographic": "Sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Foreign aid",
+      "predicate": "can break poverty traps and catalyze self-sustaining growth",
+      "object": "long-term poverty reduction",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "aid-dependent regions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 36,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

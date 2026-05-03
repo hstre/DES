@@ -1,0 +1,416 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a reliable measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.4,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "does not capture",
+      "object": "income inequality or distribution effects",
+      "status": "disputed",
+      "confidence": 0.85,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality or distribution effects]"
+      ],
+      "scope": {
+        "domain": "distributional fairness"
+      },
+      "qualifier": {
+        "severity": "high"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP per capita",
+      "predicate": "is a reliable measure of",
+      "object": "average material consumption in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita average material consumption in developed economies]"
+      ],
+      "scope": {
+        "domain": "developed nations",
+        "temporal": "short-term"
+      },
+      "qualifier": {
+        "condition": "if adjusted for purchasing power parity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "may better reflect",
+      "object": "true economic wellbeing by including natural and human capital",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Comprehensive wealth indicators (e.g., inclusive wealth) true economic wellbeing by including natural and human capital]"
+      ],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {
+        "alternative_to": "GDP"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "household electricity consumption per capita",
+      "predicate": "is a more accurate proxy for",
+      "object": "average material consumption in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: household electricity consumption per capita average material consumption in developed economies]",
+        "[PATH:empirical] OECD Material Resources Productivity and Household Electricity Consumption Panel Data Analysis (2000-2023) \u2014 Panel regression comparing per capita household electricity consumption with direct material consumption (DMC) across OECD countries can test correlation strength and proxy validity, controlling for income, climate, and energy mix.",
+        "[PATH:literature] Meta-analysis of existing studies on energy-material decoupling in developed economies \u2014 Reviewing studies on the relationship between electricity use and material footprint, especially those addressing the rebound effect and service economy shifts, can assess whether electricity remains a reliable proxy amid structural changes.",
+        "[PATH:theoretical] Input-Output Life Cycle Assessment (LCA) linking household electricity use to embodied material flows \u2014 Constructing a theoretical model that maps electricity consumption to material supply chains (e.g., through input-output tables) can formally evaluate the mechanistic plausibility of the proxy, accounting for indirect material use in electronics and appliances."
+      ],
+      "scope": {
+        "domain": "developed nations"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "is a reliable measure of",
+      "object": "average material consumption in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita average material consumption in developed economies]",
+        "[PATH:empirical] OECD Better Life Index microdata on material consumption per capita vs. GDP per capita for OECD countries (2020-2023) \u2014 Directly compares actual household material consumption (e.g., food, housing, durables) with GDP per capita across the domain, enabling quantitative correlation tests to confirm or refute the measure's reliability.",
+        "[PATH:literature] Review of literature on the 'Beyond GDP' agenda, e.g., Stiglitz-Sen-Fitoussi Commission reports (2009) and follow-ups (2020 onwards) \u2014 Provides established theoretical and empirical critiques of GDP per capita as a welfare/consumption proxy, evaluating its validity in developed economies with non-market services, inequality adjustments, and public goods.",
+        "[PATH:empirical] Cross-national panel regression of household final consumption expenditure (HFCE) vs. GDP per capita in OECD nations, controlling for income distribution and non-market production \u2014 Tests whether GDP per capita systematically over- or underestimates average material consumption when accounting for savings, public services, and home production, using World Bank/UN data from 2020 onward."
+      ],
+      "scope": {
+        "domain": "developed nations"
+      },
+      "qualifier": {
+        "temporal": "2020 onwards",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "predict",
+      "object": "long-term consumption sustainability better than GDP in nations with high natural capital depletion",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Comprehensive wealth indicators (e.g., inclusive wealth) long-term consumption sustainability better than GDP in nations with high natural capital depletion]",
+        "[PATH:empirical] World Bank's Changing Wealth of Nations dataset (2005-2020) \u2013 longitudinal inclusive wealth accounts including natural capital, produced capital, and human capital \u2014 Directly tests whether comprehensive wealth changes correlate with future consumption sustainability (e.g., genuine savings or adjusted net savings) in resource-dependent economies, compared to GDP growth trajectories.",
+        "[PATH:theoretical] Arrow et al. (2012) 'Sustainability and the Measurement of Wealth' (Environment and Development Economics) \u2013 theoretical framework linking comprehensive wealth to intergenerational consumption possibility frontier \u2014 Provides the foundational theory that inclusive wealth should predict sustainable consumption when natural capital is depleted, enabling derivation of testable hypotheses against GDP-based measures.",
+        "[PATH:empirical] Comparative case studies of resource-dependent nations (e.g., Botswana vs. Nigeria, 2005-2020) using inclusive wealth and consumption data from UNEP's Inclusive Wealth Report \u2014 Empirical contrast of high natural capital depletion countries with divergent consumption trends; isolates whether wealth metrics outperform GDP in signalling future consumption declines."
+      ],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "2005-2020",
+        "geographic": "nations with high natural capital depletion (e.g., resource-dependent economies)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "cannot reliably capture",
+      "object": "true economic wellbeing because their valuation of natural and human capital is inherently subjective and politically manipulable",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Comprehensive wealth indicators (e.g., inclusive wealth) true economic wellbeing because their valuation of natural and human capital is inherently subjective and politically manipulable]",
+        "[PATH:empirical] Comparative analysis of Inclusive Wealth Index (IWI) and genuine savings (GS) vs. subjective well-being surveys (e.g., Gallup, World Happiness Report) across OECD and emerging economies (2000-2020) \u2014 This would empirically test whether comprehensive wealth indicators correlate with direct measures of perceived wellbeing; weak or inconsistent correlations would support the hypothesis that subjective valuation and political manipulation distort the indicator.",
+        "[PATH:empirical] Political economy case studies of contested natural capital valuation in national wealth accounts (e.g., Norway's oil fund vs. Brazil's rainforest valuation) showing manipulation or revision of shadow prices over time \u2014 These cases can reveal the extent to which the valuation of natural and human capital is politically manipulable, thereby confirming the hypothesis's key claim about inherent subjectivity and political influence.",
+        "[PATH:theoretical] Theoretical literature on commensurability and multidimensional welfare measurement (e.g., Dasgupta, 2009; Stiglitz-Sen-Fitoussi, 2009) critiquing the normative assumptions behind shadow pricing of environmental and human capital \u2014 A review of this literature will clarify whether the subjectivity and manipulability are inherent to the methodology or can be mitigated, thus refuting or supporting the hypothesis on conceptual grounds."
+      ],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s",
+        "geographic": "global, with particular relevance to OECD countries and emerging economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "more accurately capture",
+      "object": "true economic wellbeing than GDP because they integrate natural and human capital depletion",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Comprehensive wealth indicators (e.g., inclusive wealth) more accurately capture true economic wellbeing than GDP because they integrate natural and human capital depletion in domain 'sustainability and intergenerational equity']"
+      ],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "since the 2010s",
+        "geographic": "global (with emphasis on countries adopting sustainability metrics)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "may not reliably reflect",
+      "object": "true economic wellbeing due to valuation challenges and subjective weighting of natural and human capital",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Comprehensive wealth indicators (e.g., inclusive wealth) may not reliably reflect true economic wellbeing due to valuation challenges and subjective weighting of natural and human capital in domain 'sustainability and intergenerational equity']"
+      ],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "contemporary and historical assessments",
+        "geographic": "global, particularly regions with significant non-market natural and human capital"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Inclusive wealth per capita in resource-extracting nations",
+      "predicate": "declines faster than GDP per capita",
+      "object": "when adjusted for natural capital depletion and human capital investment lags",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Comprehensive wealth indicators (e.g., inclusive wealth)",
+      "predicate": "obscure rather than clarify",
+      "object": "true economic wellbeing by aggregating incommensurable capitals into a single metric",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "sustainability and intergenerational equity"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T6[hypothesis_builder] on C003 -> C005",
+    "T6[falsifier] on C003 -> C006",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

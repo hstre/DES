@@ -53,6 +53,7 @@ class Claim:
     branch_open: bool = False
     sealed: bool = False
     is_synthesis: bool = False
+    is_role_generated: bool = False   # True for claims produced by Anti-Delphi roles
     history: list[str] = field(default_factory=list)
     parent_id: Optional[str] = None
 
@@ -62,6 +63,7 @@ class Claim:
     @classmethod
     def from_dict(cls, d: dict) -> "Claim":
         d.setdefault("is_synthesis", False)
+        d.setdefault("is_role_generated", False)
         return cls(**d)
 
 
@@ -78,6 +80,8 @@ class EpistemicState:
     reframing_count: int = 0
     iteration: int = 0
     focus_claim_id: Optional[str] = None
+    anti_delphi_activations: int = 0
+    roles_generated: dict = field(default_factory=dict)
 
     def to_dict(self) -> dict:
         return {
@@ -88,6 +92,8 @@ class EpistemicState:
             "reframing_count": self.reframing_count,
             "iteration": self.iteration,
             "focus_claim_id": self.focus_claim_id,
+            "anti_delphi_activations": self.anti_delphi_activations,
+            "roles_generated": self.roles_generated,
         }
 
     @classmethod
@@ -101,6 +107,8 @@ class EpistemicState:
             reframing_count=d.get("reframing_count", 0),
             iteration=d.get("iteration", 0),
             focus_claim_id=d.get("focus_claim_id"),
+            anti_delphi_activations=d.get("anti_delphi_activations", 0),
+            roles_generated=d.get("roles_generated", {}),
         )
 
 
@@ -214,6 +222,118 @@ def _llm_json(prompt: str, retry_prompt: Optional[str] = None) -> Optional[dict]
             return _extract_json(raw)
         except Exception:
             return None
+
+
+# ---------------------------------------------------------------------------
+# Anti-Delphi Role Execution
+# ---------------------------------------------------------------------------
+
+_ROLE_PROMPTS = {
+    "hypothesis_builder": """\
+You are an epistemic hypothesis generator.
+Given this claim, generate ONE new directional hypothesis that extends or refines it.
+Do not hedge — commit to a specific direction.
+
+Claim: {claim_json}
+
+Return ONLY valid JSON:
+{{
+  "subject": "...",
+  "predicate": "...",
+  "object": "...",
+  "modality": "hypothesis",
+  "confidence": 0.5,
+  "scope": {{"domain": "..."}},
+  "qualifier": {{}}
+}}""",
+
+    "falsifier": """\
+You are an epistemic falsifier.
+Given this claim, generate ONE strong counter-claim that directly challenges its direction.
+Do not hedge — find the sharpest possible objection.
+
+Claim: {claim_json}
+
+Return ONLY valid JSON:
+{{
+  "subject": "...",
+  "predicate": "...",
+  "object": "...",
+  "modality": "hypothesis",
+  "status": "disputed",
+  "confidence": 0.5,
+  "scope": {{"domain": "..."}},
+  "qualifier": {{}}
+}}""",
+}
+
+
+def execute_role(role: str, claim: Claim, state: EpistemicState) -> Optional[Claim]:
+    """
+    Execute a single Anti-Delphi role and return a new Claim, or None on failure.
+
+    Roles are fully isolated: neither role sees the other's output or prompt.
+    hypothesis_builder — extends or refines the claim directionally (conf 0.40–0.55).
+    falsifier          — finds the sharpest counter-case         (conf 0.41–0.55).
+
+    Confidences are clamped below the T6 threshold (>0.6) and above the T5
+    threshold (<0.4) so role-generated claims do not cascade into Anti-Delphi
+    sub-loops. The DES processes them via T3→T7→T8.
+    """
+    prompt = _ROLE_PROMPTS[role].format(claim_json=_claim_summary(claim))
+    result = _llm_json(prompt)
+    if result is None:
+        return None
+
+    cid = new_claim_id(state)
+    raw_conf = float(result.get("confidence", 0.5))
+    # Clamp: stay above T5 threshold and below T6 threshold to prevent re-cascades
+    confidence = max(0.41, min(0.55, raw_conf))
+
+    return Claim(
+        id=cid,
+        subject=result.get("subject", claim.subject),
+        predicate=result.get("predicate", claim.predicate),
+        object=result.get("object", claim.object),
+        modality=result.get("modality", "hypothesis"),
+        confidence=confidence,
+        scope=result.get("scope", claim.scope.copy()),
+        qualifier=result.get("qualifier", {}),
+        status=result.get("status", "unknown"),
+        parent_id=claim.id,
+        is_role_generated=True,
+    )
+
+
+def _apply_antidelphi_state_change(
+    trigger: str,
+    claim: Claim,
+    state: EpistemicState,
+    role_claim_ids: list[str],
+) -> None:
+    """
+    Apply focus-claim state transitions after Anti-Delphi role execution,
+    mirroring what the normal single-agent operation would have done.
+    """
+    if trigger == "T5":
+        if role_claim_ids:
+            falsifier_claim = state.claims[role_claim_ids[-1]]
+            contradicts = check_for_contradiction(claim, falsifier_claim)
+            claim.status = "contradicted" if contradicts else "disputed"
+        else:
+            claim.status = "disputed"
+        claim.conflict = True
+        claim.confidence = max(claim.confidence, 0.42)
+    elif trigger == "T6":
+        claim.status = "supported"
+        claim.confidence = max(0.82, min(1.0, claim.confidence + 0.15))
+    elif trigger == "T9":
+        claim.sealed = True
+        state.reframing_count += 1
+        # Mark both perspectives as synthesis so they bypass T3–T7 and go to T8
+        for cid in role_claim_ids:
+            if cid in state.claims:
+                state.claims[cid].is_synthesis = True
 
 
 # ---------------------------------------------------------------------------
@@ -971,10 +1091,16 @@ def print_final_trace(state: EpistemicState) -> None:
     print("=" * 60)
 
 
-def run_des(research_question: str, max_iterations: int = 40) -> None:
+def run_des(
+    research_question: str,
+    max_iterations: int = 40,
+    anti_delphi: bool = False,
+) -> None:
     """Run the DES main loop on a research question, persisting S(t) after each iteration."""
     print(f"\nDynamic Epistemic Sequencer v0.1")
     print(f"Research question: {research_question}")
+    mode_label = "Anti-Delphi (T5/T6/T9 dual-role)" if anti_delphi else "Single-agent"
+    print(f"Mode: {mode_label}")
     print("-" * 60)
 
     if os.path.exists(STATE_FILE):
@@ -1018,7 +1144,28 @@ def run_des(research_question: str, max_iterations: int = 40) -> None:
         state.focus_claim_id = focus.id
         state.iteration += 1
 
-        result = op_fn(focus, state)
+        if anti_delphi and trigger in ("T5", "T6", "T9") and not focus.is_role_generated:
+            role_claim_ids: list[str] = []
+            for role in ("hypothesis_builder", "falsifier"):
+                role_claim = execute_role(role, focus, state)
+                if role_claim is not None:
+                    state.claims[role_claim.id] = role_claim
+                    state.operation_history.append(
+                        f"{trigger}[{role}] on {focus.id} -> {role_claim.id}"
+                    )
+                    role_claim_ids.append(role_claim.id)
+                    state.roles_generated.setdefault(role, []).append(role_claim.id)
+            state.anti_delphi_activations += 1
+            focus.history.append(f"{trigger}[anti-delphi]")
+            _apply_antidelphi_state_change(trigger, focus, state, role_claim_ids)
+            result = (
+                f"Anti-Delphi {trigger}: {', '.join(role_claim_ids)}"
+                if role_claim_ids else
+                f"Anti-Delphi {trigger}: no claims generated (LLM fallback)"
+            )
+            op_name = f"{op_name}[AD]"
+        else:
+            result = op_fn(focus, state)
 
         for claim in state.claims.values():
             maybe_move_to_weak(claim, state)
@@ -1054,6 +1201,11 @@ if __name__ == "__main__":
         action="store_true",
         help="Delete des_state.json and exit cleanly",
     )
+    parser.add_argument(
+        "--anti-delphi",
+        action="store_true",
+        help="Use Anti-Delphi mode: two isolated roles (hypothesis_builder, falsifier) on T5/T6/T9",
+    )
     args = parser.parse_args()
 
     if args.reset:
@@ -1069,4 +1221,4 @@ if __name__ == "__main__":
         parser.print_help()
         sys.exit(1)
 
-    run_des(args.question, max_iterations=args.max_iter)
+    run_des(args.question, max_iterations=args.max_iter, anti_delphi=args.anti_delphi)

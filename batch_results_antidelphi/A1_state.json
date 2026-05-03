@@ -1,0 +1,416 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "empirical studies show mixed results depending on local labor market conditions and wage floor levels"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Increasing the minimum wage by a small amount",
+      "predicate": "has negligible effect on",
+      "object": "unemployment among low-skilled workers in tight labor markets",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Increasing the minimum wage by a small amount unemployment among low-skilled workers in tight labor markets]"
+      ],
+      "scope": {
+        "domain": "low-wage urban markets with low unemployment"
+      },
+      "qualifier": {
+        "context": "empirical studies in cities with strong labor demand show minimal job loss"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage sharply",
+      "predicate": "reduces",
+      "object": "employment opportunities for low-skilled workers in elastic labor markets",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage sharply employment opportunities for low-skilled workers in elastic labor markets]"
+      ],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {
+        "context": "theory predicts substitution by automation and reduced hiring in price-sensitive sectors"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "informal or underreported employment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage informal or underreported employment among low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "labor markets with weak enforcement of wage laws"
+      },
+      "qualifier": {
+        "context": "competing evidence suggests that workers displaced from formal jobs may shift to informal work"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage sharply in rural or high-unemployment regions",
+      "predicate": "accelerates",
+      "object": "the closure rate of small businesses that rely on low-skill labor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage sharply in rural or high-unemployment regions the closure rate of small businesses that rely on low-skill labor]",
+        "[PATH:empirical] Bureau of Labor Statistics (BLS) Quarterly Census of Employment and Wages (QCEW) matched with state-level minimum wage changes in rural high-unemployment counties \u2014 Provides longitudinal establishment-level data on business closures and employment, allowing difference-in-differences or event-study analysis of sharp minimum wage increases in the specified geographic and temporal scope.",
+        "[PATH:empirical] Survey or administrative data from state Departments of Labor on small business survival rates, combined with local unemployment statistics and industry composition (e.g., NAICS codes for retail, accommodation, food services) \u2014 Enables direct measurement of closure rates among price-sensitive small retailers in rural counties with >8% unemployment, controlling for regional economic trends and pre-existing business density.",
+        "[PATH:literature] Meta-analysis or systematic review of minimum wage effects on small business survival in low-density labor markets (e.g., studies from the Upjohn Institute, NBER working papers on rural labor markets) \u2014 Synthesizes existing empirical evidence on heterogeneous effects by geography and labor market tightness, clarifying whether the hypothesized acceleration is supported or contradicted in similar contexts."
+      ],
+      "scope": {
+        "domain": "rural counties with high unemployment and a high density of small, price-sensitive retailers"
+      },
+      "qualifier": {
+        "temporal": "within 12 to 18 months of implementation",
+        "geographic": "rural counties in the United States with unemployment rates above 8% and a high density of small, price-sensitive retailers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage sharply",
+      "predicate": "increases",
+      "object": "employment opportunities for low-skilled workers in elastic labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage sharply employment opportunities for low-skilled workers in elastic labor markets]",
+        "[PATH:empirical] Panel data on county-level minimum wage changes in rural U.S. counties (e.g., from the Quarterly Workforce Indicators) matched with local employment rates for low-skilled workers \u2014 This allows direct causal estimation of employment effects in elastic labor markets where small businesses dominate, exploiting variation in minimum wage hikes across similar rural regions.",
+        "[PATH:empirical] Firm-level surveys or administrative data on employee turnover and productivity in small businesses before and after a minimum wage increase \u2014 Tests the qualifier's claim that higher wages reduce turnover and boost productivity, which could offset job losses; needed to validate the proposed mechanism.",
+        "[PATH:literature] Meta-analysis of studies on minimum wage effects in low-elasticity labor markets (e.g., Card & Krueger 1994, subsequent replications, and newer quasi-experimental work) \u2014 Provides a synthesized view of whether sharp minimum wage increases consistently lead to employment gains in elastic settings, and under what conditions the hypothesized positive effects hold."
+      ],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {
+        "context": "higher wages boost worker productivity, reduce turnover, and stimulate local demand, offsetting any potential job loss"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Raising the minimum wage sharply",
+      "predicate": "reduces",
+      "object": "employment opportunities for low-skilled workers in elastic labor markets",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage sharply reduces employment opportunities for low-skilled workers in elastic labor markets in domain 'rural or high-unemployment regions with many small businesses']"
+      ],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {
+        "temporal": "during periods of low aggregate demand and high unemployment",
+        "geographic": "in rural or high-unemployment regions with many small businesses"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Raising the minimum wage sharply",
+      "predicate": "does not reduce",
+      "object": "employment opportunities for low-skilled workers in elastic labor markets",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage sharply does not reduce employment opportunities for low-skilled workers in elastic labor markets in domain 'rural or high-unemployment regions with many small businesses']"
+      ],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "formal-sector employment among low-skilled workers, while simultaneously increasing informal-sector participation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage formal-sector employment among low-skilled workers, while simultaneously increasing informal-sector participation]",
+        "[PATH:empirical] Micro-level panel data from household surveys (e.g., ENNIV in Peru or ENEMDU in Ecuador) covering early 2000s, with difference-in-differences or regression discontinuity analysis around minimum wage changes \u2014 Directly tests the predicted labor reallocation from formal to informal sectors within the specified geographic and temporal scope, controlling for individual fixed effects and time-varying shocks.",
+        "[PATH:empirical] Firm-level surveys of low-productivity formal-sector firms in Latin America and Sub-Saharan Africa (e.g., World Bank Enterprise Surveys) coupled with linked employer-employee data \u2014 Examines whether firms respond to wage hikes by reducing formal employment, shifting workers to informal arrangements, or substituting capital, providing micro-foundational evidence for the hypothesis.",
+        "[PATH:theoretical] Search-and-matching models with endogenous informal sector and wage enforcement (e.g., Bosch & Esteban-Pretel, 2012, or similar extensions calibrated to developing economy data) \u2014 Tests whether the hypothesized dual effect is consistent with equilibrium conditions under weak enforcement and low productivity, and identifies conditions under which the effect intensifies or attenuates."
+      ],
+      "scope": {
+        "domain": "labor markets with weak enforcement of wage laws and low productivity firms"
+      },
+      "qualifier": {
+        "temporal": "early to mid-2000s",
+        "geographic": "developing economies in Latin America and Sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "informal or underreported employment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage informal or underreported employment among low-skilled workers]",
+        "[PATH:empirical] Country-level panel studies on minimum wage increases and informal employment, e.g., using ILO or national household survey data for developing countries (e.g., India, Brazil, Indonesia) during the 2010s \u2014 Directly tests the causal link between minimum wage hikes and informal/underreported employment in the specified geographic and temporal scope, controlling for enforcement strength.",
+        "[PATH:empirical] Firm-level administrative data audits or tax records from weak-enforcement labor markets, comparing registered vs. unregistered workers before and after wage policy changes \u2014 Provides micro-level evidence on whether firms shift workers into informal arrangements to evade higher wage costs, addressing the exact outcome (underreported employment).",
+        "[PATH:theoretical] Theoretical models of dual labor markets incorporating wage floors and enforcement gaps, e.g., extensions of the Harris-Todaro framework or search-and-matching models with informality \u2014 Clarifies mechanisms and conditions under which minimum wages reduce formal employment or increase informal work, guiding empirical predictions for weak-enforcement contexts."
+      ],
+      "scope": {
+        "domain": "labor markets with weak enforcement of wage laws"
+      },
+      "qualifier": {
+        "temporal": "during the 2010s",
+        "geographic": "in developing countries with weak labor law enforcement"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Raising the minimum wage sharply in rural or high-unemployment regions with many small businesses",
+      "predicate": "increases",
+      "object": "the rate of small business closures and subsequent job loss for low-skilled workers",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {
+        "context": "due to thin profit margins and inability to absorb higher labor costs without cutting staff or shutting down"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Raising the minimum wage sharply",
+      "predicate": "increases",
+      "object": "employment and aggregate demand in elastic labor markets",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rural or high-unemployment regions with many small businesses"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C010",
+      "C012"
+    ]
+  }
+}
