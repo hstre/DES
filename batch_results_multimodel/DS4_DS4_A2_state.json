@@ -1,0 +1,521 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with strong governance",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with strong governance]"
+      ],
+      "scope": {
+        "domain": "aid effectiveness under good institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Foreign aid",
+      "predicate": "is ineffective at reducing",
+      "object": "poverty in recipient countries with weak governance",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with weak governance]"
+      ],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies",
+        "geographic": "sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Foreign aid",
+      "predicate": "can reduce",
+      "object": "poverty in recipient countries only when paired with trade reforms",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries only when paired with trade reforms]"
+      ],
+      "scope": {
+        "domain": "aid effectiveness conditional on complementary policies"
+      },
+      "qualifier": {
+        "temporal": "post-1980s structural adjustment era",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with strong governance only when aid is channeled through local civil society organizations",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with strong governance only when aid is channeled through local civil society organizations]",
+        "[PATH:empirical] Systematic review of randomized controlled trials (RCTs) on aid delivery mechanisms in Sub-Saharan Africa and South Asia (e.g., from 3ie or Cochrane Collaboration) \u2014 RCTs provide high internal validity to isolate the causal effect of channeling aid through local civil society organizations versus other channels, especially in countries with strong governance indicators.",
+        "[PATH:empirical] Comparative case studies of aid programs in Sub-Saharan Africa and South Asia using the Worldwide Governance Indicators (WGI) to stratify by governance quality, paired with difference-in-differences analysis \u2014 This design can test the interaction between governance strength and civil society channeling, directly addressing the conditional claim in the hypothesis.",
+        "[PATH:theoretical] Theoretical models of aid effectiveness and institutional intermediation (e.g., from journals like World Development or Journal of Development Economics) \u2014 Formal models can clarify mechanisms (e.g., accountability, local knowledge) and generate testable predictions about when and why civil society channels outperform others under strong governance, helping to refine or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "aid delivery mechanisms under good institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with strong governance",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with strong governance]",
+        "[PATH:empirical] Burnside, C. & Dollar, D. (2000). 'Aid, Policies, and Growth.' American Economic Review, 90(4), 847-868. \u2014 This seminal paper provides cross-country regression evidence on the interaction between foreign aid and institutional quality, directly testing whether aid reduces poverty more effectively in countries with strong governance.",
+        "[PATH:empirical] World Bank. 'World Development Indicators' and 'Worldwide Governance Indicators' datasets (post-2000, sub-Saharan Africa and South Asia). \u2014 Panel data combining aid flows, poverty headcount ratios, and governance metrics (e.g., rule of law, control of corruption) would allow for a targeted replication and extension of Burnside-Dollar findings within the specified geographic and temporal scope.",
+        "[PATH:theoretical] Deaton, A. (2013). 'The Great Escape: Health, Wealth, and the Origins of Inequality.' Princeton University Press. \u2014 Deaton critically examines the mechanisms linking aid to poverty reduction, emphasizing the role of institutions and cautioning against simplistic causal inferences, providing theoretical grounding to challenge or qualify the hypothesis."
+      ],
+      "scope": {
+        "domain": "aid effectiveness under good institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with weak governance only when paired with direct cash transfers to households",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with weak governance only when paired with direct cash transfers to households]",
+        "[PATH:empirical] Randomized controlled trials (RCTs) comparing conditional vs. unconditional cash transfers in aid-receiving regions with weak governance (e.g., BRAC's ultra-poor graduation programs in Bangladesh or GiveDirectly studies in Kenya) \u2014 Directly tests whether cash transfers to households enhance the poverty-reducing effect of broader foreign aid under weak institutional conditions, providing causal evidence for or against the hypothesis.",
+        "[PATH:empirical] Cross-country panel data analyses of aid effectiveness (e.g., World Bank or OECD DAC data) interacting aid flows with governance indicators and cash transfer program presence \u2014 Allows statistical testing of the conditional relationship: whether aid reduces poverty more in weak-governance settings where cash transfers are implemented, controlling for confounders like conflict or economic shocks.",
+        "[PATH:theoretical] Theoretical models of aid fungibility and household-level targeting (e.g., from development economics literature on principal-agent problems in aid delivery) \u2014 Provides a framework to understand why cash transfers might mediate aid effectiveness under weak governance (e.g., reducing elite capture or improving accountability), which can be tested against empirical patterns."
+      ],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Foreign aid",
+      "predicate": "can be effective at reducing",
+      "object": "poverty in recipient countries with weak governance when targeted through non-state actors and community-based programs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries with weak governance when targeted through non-state actors and community-based programs]",
+        "[PATH:empirical] Systematic review of randomized controlled trials (RCTs) on community-driven development (CDD) programs in sub-Saharan Africa (e.g., World Bank's CDD evaluations in Liberia, Sierra Leone, and DR Congo) \u2014 RCTs provide high-causal evidence on whether non-state and community-based aid delivery reduces poverty under weak governance, directly testing the hypothesis's core mechanism.",
+        "[PATH:empirical] Comparative case studies of foreign aid programs in South Asia (e.g., BRAC in Bangladesh, NGOs in Afghanistan) with varying degrees of state fragility and governance quality \u2014 These cases allow for controlled comparison of aid effectiveness across different institutional contexts, helping to isolate the role of targeting through non-state actors from other factors.",
+        "[PATH:theoretical] Theoretical literature on principal-agent problems and institutional bypass in aid delivery (e.g., work by Andrews, Pritchett, and Woolcock on 'problem-driven iterative adaptation') \u2014 This literature provides a framework for understanding why non-state channels might succeed where state-led aid fails, offering testable predictions about conditions for effectiveness."
+      ],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s",
+        "geographic": "sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with weak governance when targeted at basic needs and local capacity building",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid is effective at reducing poverty in recipient countries with weak governance when targeted at basic needs and local capacity building in domain 'aid effectiveness under poor institutional conditions']"
+      ],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Foreign aid",
+      "predicate": "is ineffective at reducing",
+      "object": "poverty in recipient countries with weak governance due to corruption, misallocation, and lack of institutional absorption capacity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Foreign aid is ineffective at reducing poverty in recipient countries with weak governance due to corruption, misallocation, and lack of institutional absorption capacity in domain 'aid effectiveness under poor institutional conditions']"
+      ],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Foreign aid",
+      "predicate": "reduces",
+      "object": "poverty in recipient countries only when paired with trade reforms AND when recipient governments have high institutional capacity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries only when paired with trade reforms AND when recipient governments have high institutional capacity]",
+        "[PATH:empirical] World Bank Aid Effectiveness Database combined with country-level trade policy indices (e.g., Sachs-Warner index) and institutional quality measures (e.g., ICRG or Worldwide Governance Indicators) for Sub-Saharan Africa and South Asia, post-1980s \u2014 Provides panel data to test the interaction effect of aid, trade reforms, and institutional capacity on poverty reduction, directly addressing the conditional hypothesis.",
+        "[PATH:literature] Burnside and Dollar (2000) 'Aid, Policies, and Growth' and subsequent replication/extension studies (e.g., Easterly, Levine, and Roodman 2004) that examine aid effectiveness conditional on policy and institutions \u2014 These seminal papers establish the theoretical and empirical foundation for conditional aid effectiveness; reviewing their methods and findings can confirm or refute the specific joint condition of trade reforms and high institutional capacity.",
+        "[PATH:empirical] Case studies of aid programs in countries like Ghana (trade reforms in 1980s-90s with moderate institutional capacity) and Bangladesh (high institutional capacity but limited trade reforms) to isolate the two conditions \u2014 Comparative case analysis can provide causal qualitative evidence on whether both conditions are necessary, complementing large-N quantitative results."
+      ],
+      "scope": {
+        "domain": "aid effectiveness conditional on complementary policies and institutional quality"
+      },
+      "qualifier": {
+        "temporal": "post-1980s structural adjustment era",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Foreign aid",
+      "predicate": "can reduce",
+      "object": "poverty in recipient countries even without trade reforms, because aid directly funds basic needs and infrastructure",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Foreign aid poverty in recipient countries even without trade reforms, because aid directly funds basic needs and infrastructure]",
+        "[PATH:empirical] Systematic review of randomized controlled trials (RCTs) on unconditional cash transfers and infrastructure spending in low-income countries post-2000 \u2014 RCTs provide causal evidence on whether direct transfers or infrastructure investments reduce poverty independently of trade policy, testing the core mechanism of the hypothesis.",
+        "[PATH:empirical] Cross-country panel data analysis comparing aid inflows and poverty headcount ratios in low-income countries with weak institutions, controlling for trade openness \u2014 This would isolate the effect of aid on poverty reduction while holding trade reforms constant, directly addressing the hypothesis's scope condition.",
+        "[PATH:literature] Literature review on fungibility of foreign aid and its impact on public expenditure in weak institutional settings \u2014 If aid is fungible, it may not reach basic needs or infrastructure as intended, which would refute the hypothesis; this review synthesizes evidence on aid diversion in the specified geographic and temporal scope."
+      ],
+      "scope": {
+        "domain": "aid effectiveness independent of trade liberalization"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "low-income countries with weak institutional capacity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with weak governance only when channeled through non-governmental organizations and local civil society",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "aid delivery mechanisms under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies",
+        "geographic": "sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty in recipient countries with weak governance",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "aid effectiveness under poor institutional conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies",
+        "geographic": "sub-Saharan Africa and parts of South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 45,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
