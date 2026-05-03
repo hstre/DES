@@ -1,0 +1,509 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage in low-wage labor markets",
+      "predicate": "increases",
+      "object": "unemployment among teenage workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in low-wage labor markets unemployment among teenage workers]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets"
+      },
+      "qualifier": {
+        "time_frame": "short-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "reduces",
+      "object": "employee turnover costs",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in high-productivity sectors employee turnover costs]"
+      ],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "mechanism": "efficiency wage effects"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage in monopsonistic labor markets",
+      "predicate": "has no significant effect on",
+      "object": "overall employment levels",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in monopsonistic labor markets overall employment levels]"
+      ],
+      "scope": {
+        "domain": "monopsonistic labor markets"
+      },
+      "qualifier": {
+        "condition": "if wage floor is below monopsony wage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage in low-wage labor markets with high concentrations of fast-food franchises",
+      "predicate": "increases",
+      "object": "unemployment among teenage workers more than in other low-wage sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in low-wage labor markets with high concentrations of fast-food franchises unemployment among teenage workers more than in other low-wage sectors]",
+        "[PATH:empirical] Card and Krueger (1994) study on the New Jersey minimum wage increase and its effects on fast-food employment \u2014 This classic natural experiment directly examines the impact of a minimum wage hike on fast-food sector employment, providing a benchmark for comparing teenage unemployment effects in high fast-franchise-density markets versus other low-wage sectors.",
+        "[PATH:literature] Cengiz et al. (2019) meta-analysis of minimum wage effects on low-wage employment, with subgroup analysis by industry and age group \u2014 This comprehensive review synthesizes evidence across many studies and can isolate the differential impact on teenage workers in fast-food-concentrated areas, helping to confirm or refute the hypothesized greater unemployment effect.",
+        "[PATH:theoretical] Simulation model of a low-wage labor market with heterogeneous firms (e.g., monopsony vs. competitive) and teenage labor supply elasticity \u2014 A structural model parameterized to reflect high fast-food franchise density can test whether substitution effects, firm pricing power, or labor demand elasticity produce larger teenage unemployment compared to other low-wage sectors, offering causal predictions to guide empirical work."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high fast-food franchise density"
+      },
+      "qualifier": {
+        "time_frame": "short-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage in low-wage labor markets",
+      "predicate": "decreases",
+      "object": "unemployment among teenage workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in low-wage labor markets unemployment among teenage workers]",
+        "[PATH:empirical] Panel data analysis of U.S. state-level minimum wage increases from 2000-2020, focusing on teenage employment rates in low-wage sectors (e.g., retail, food services) within 1-2 years post-implementation. \u2014 Provides direct, time-bound, and geographically relevant evidence on the short-term effect of minimum wage changes on teenage unemployment, allowing for causal inference through difference-in-differences or event-study designs.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on minimum wage effects on teenage employment, particularly those examining short-run elasticities in low-wage labor markets. \u2014 Synthesizes findings from multiple studies to assess the overall direction and magnitude of the effect, addressing the disputed status by weighing evidence from varying methodologies and time periods.",
+        "[PATH:theoretical] Search-and-matching labor market model calibrated to U.S. low-wage sectors, simulating the impact of a minimum wage increase on teenage labor demand and supply in the short term. \u2014 Tests the causal mechanism underlying the hypothesis (e.g., labor demand elasticity, substitution effects) and allows for counterfactual analysis under controlled assumptions, complementing empirical findings."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets"
+      },
+      "qualifier": {
+        "temporal": "in the short term (1\u20132 years after implementation)",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "increases",
+      "object": "employee training investment per hire",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in high-productivity sectors employee training investment per hire]",
+        "[PATH:empirical] BLS Employer Costs for Employee Compensation microdata, 2020-2024, focusing on high-productivity NAICS sectors (e.g., tech, finance, manufacturing) \u2014 Directly measures training expenditure per hire before and after minimum wage increases in targeted sectors, controlling for firm size and turnover.",
+        "[PATH:literature] Acemoglu & Pischke (1999) 'The Structure of Wages and Investment in General Training' and subsequent replication studies in US post-2020 data \u2014 Provides theoretical foundation for wage floors increasing employer-sponsored training due to reduced labor turnover; updated empirical tests can confirm or refute the hypothesis in high-productivity contexts.",
+        "[PATH:empirical] State-level minimum wage variation analysis (e.g., California vs. Texas) using QCEW and CPS data to isolate training investment per hire in high-productivity firms \u2014 Leverages quasi-experimental variation in minimum wage policies across states to identify causal effect on training investment, controlling for industry, productivity, and time trends."
+      ],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "increases",
+      "object": "employee turnover costs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in high-productivity sectors employee turnover costs]",
+        "[PATH:empirical] Bureau of Labor Statistics (BLS) Job Openings and Labor Turnover Survey (JOLTS) data, segmented by industry (e.g., tech, finance) and wage tiers, 2010\u2013present \u2014 Provides direct longitudinal data on quit rates and hiring costs in high-productivity sectors, allowing comparison before and after minimum wage increases to isolate effects on turnover costs.",
+        "[PATH:literature] Dube, A., Lester, T.W., & Reich, M. (2010). 'Minimum Wage Effects Across State Borders: Estimates Using Contiguous Counties.' Review of Economics and Statistics. \u2014 Classic empirical study using border discontinuity design; replicating with recent data and focusing on high-productivity sectors could test if turnover costs rise disproportionately in those sectors.",
+        "[PATH:theoretical] Theoretical modeling of efficiency wage and labor turnover dynamics (e.g., Shapiro & Stiglitz, 1984) applied to high-productivity firms \u2014 Predicts that higher minimum wages may reduce turnover by increasing worker attachment, contradicting the hypothesis; simulation with sector-specific parameters could clarify mechanisms."
+      ],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "reduces",
+      "object": "employee turnover costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage in high-productivity sectors reduces employee turnover costs in domain 'high-productivity sectors']"
+      ],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "increases",
+      "object": "employee turnover costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage in high-productivity sectors increases employee turnover costs in domain 'high-productivity sectors']"
+      ],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage in monopsonistic labor markets",
+      "predicate": "increases",
+      "object": "firm-level investment in labor-saving technology",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in monopsonistic labor markets firm-level investment in labor-saving technology]",
+        "[PATH:empirical] Panel data on U.S. fast-food franchises (e.g., from Bureau of Labor Statistics or Quarterly Census of Employment and Wages) linked to state-level minimum wage increases, examining subsequent adoption of self-service kiosks or automated ordering systems \u2014 Directly tests whether minimum wage hikes in concentrated local labor markets (proxied by Herfindahl index) lead to increased automation investment, using difference-in-differences or event-study designs.",
+        "[PATH:empirical] European Union firm-level surveys (e.g., EIB Investment Survey or Community Innovation Survey) combined with national minimum wage reforms, focusing on manufacturing and retail sectors with moderate wage floors \u2014 Provides cross-country variation in monopsony power and wage floors, allowing estimation of heterogeneous effects on capital deepening, especially in industries with high labor-cost shares.",
+        "[PATH:theoretical] Structural model of monopsonistic competition with endogenous technology adoption (e.g., Acemoglu & Restrepo 2018 framework, calibrated to U.S. labor market data) \u2014 Simulates counterfactual minimum wage scenarios to isolate the causal mechanism\u2014higher wages reduce labor demand elasticity, incentivizing automation\u2014and generates testable predictions about firm size, market concentration, and investment thresholds."
+      ],
+      "scope": {
+        "domain": "monopsonistic labor markets with moderate wage floors"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "United States and European Union"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage in monopsonistic labor markets",
+      "predicate": "reduces",
+      "object": "overall employment levels",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in monopsonistic labor markets overall employment levels]",
+        "[PATH:empirical] Card and Krueger (1994) study of fast-food employment in New Jersey and Pennsylvania after minimum wage increase \u2014 This classic natural experiment provides direct empirical evidence on employment effects in a context with potential monopsony power, challenging the standard competitive model and supporting the hypothesis that minimum wage may not reduce employment.",
+        "[PATH:theoretical] Bhaskar, Manning, and To (2002) 'Oligopsony and Monopsonistic Competition in Labor Markets' \u2014 This theoretical framework models how monopsonistic labor markets respond to minimum wage increases, predicting possible employment increases or minimal reductions, directly relevant to testing the hypothesis.",
+        "[PATH:literature] Meta-analysis by Doucouliagos and Stanley (2009) on minimum wage employment effects \u2014 A comprehensive meta-analysis of hundreds of studies can reveal the overall empirical consensus and heterogeneity, helping to confirm or refute whether the hypothesis holds under monopsonistic conditions."
+      ],
+      "scope": {
+        "domain": "monopsonistic labor markets"
+      },
+      "qualifier": {
+        "temporal": "contemporary economic conditions",
+        "geographic": "generalized (not region-specific)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "increases",
+      "object": "long-term employee productivity through reduced turnover",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {
+        "mechanism": "efficiency wage effects and firm-specific human capital accumulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "raising the minimum wage in high-productivity sectors",
+      "predicate": "increases",
+      "object": "employee turnover costs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-productivity sectors"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 43,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
