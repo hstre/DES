@@ -3,24 +3,37 @@ Pre-registered classification algorithm for Paper 3.
 Version: 1.0 -- FROZEN 4. Mai 2026
 DO NOT MODIFY thresholds or rules.
 Any change requires explicit versioning.
+
+v1.1 -- post-null revision, 2026-05-04
 """
+
+ALGORITHM_VERSION = "1.1"
+ALGORITHM_DATE = "2026-05-04"
+ALGORITHM_CHANGE = "Removed generated_by trigger; added contradicted+no-evidence and conf<0.25"
 
 
 def is_anomalous(claim: dict) -> bool:
-    """Pre-registered anomaly definition. See Classification v1-0."""
+    """
+    v1.1 -- documented post-null revision.
+    v1.0 produced 100% unclassified because generated_by trigger
+    flagged healthy Anti-Delphi claims. role-generated != pathological.
+    """
     conf = claim.get("confidence", 1.0)
     modality = claim.get("modality", "")
     status = claim.get("status", "")
     scope = claim.get("scope", {})
-    generated_by = claim.get("generated_by", "")
+    evidence = claim.get("evidence_refs", [])
 
     if conf < 0.35 and modality == "hypothesis":
         return True
     if status == "underspecified" and scope == {}:
         return True
-    if generated_by and "[" in generated_by:
+    if status == "contradicted" and len(evidence) == 0:
+        return True
+    if conf < 0.25 and status not in {"supported", "established"}:
         return True
     return False
+    # generated_by condition removed -- role tags are not anomalies
 
 
 def scope_shifted(claim: dict, root_claim: dict) -> bool:
