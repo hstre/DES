@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1031,
+    "completion_tokens": 428,
+    "total_tokens": 1459,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more rhetorically clear and easier to comprehend due to its structured step-by-step approach."
+    },
+    "directional_commitment": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B provides clearer directional claims with higher confidence levels, while Output A presents more hedged statements."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs identify fundamental contradictions between the benefits and harms of free trade in developing economies."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B offers a more precise synthesis by specifying conditions under which free trade is beneficial or harmful."
+    },
+    "epistemic_novelty": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A explores non-obvious tensions such as gender-based wage gaps, which a domain expert might find valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A maintains competing hypotheses in parallel, whereas Output B focuses more on synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a traceable reasoning process, but Output B's step-by-step approach aids recoverability."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B explicitly outlines scope conditions and evidence status more clearly than Output A."
+    },
+    "overall": {
+      "DES": 0.48,
+      "CoT": 0.52,
+      "reason": "Output B slightly edges out due to its structured approach and synthesis quality, despite Output A's novelty and branch preservation."
+    }
+  }
+}
