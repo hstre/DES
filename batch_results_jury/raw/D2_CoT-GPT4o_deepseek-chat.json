@@ -1,0 +1,64 @@
+{
+  "qid": "D2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 942,
+    "completion_tokens": 496,
+    "total_tokens": 1438,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more concise and easier to follow, while Output B's list format is slightly more fragmented."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B makes clearer directional claims with explicit confidence levels, whereas Output A hedges heavily in its synthesis."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B identifies deeper contradictions by maintaining competing hypotheses (e.g., grade-level differences), while Output A only notes a surface-level opposition."
+    },
+    "synthesis_quality": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides more precise scope-bounding (early vs. later grades, novice teachers) in its synthesis, whereas Output A's synthesis is more generic."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B surfaces non-obvious tensions (e.g., teacher quality vs. class size by grade level) that a domain expert would value, while Output A states a common caveat."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains multiple competing hypotheses in parallel, while Output A collapses them into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides a recoverable reasoning state with 12 claims and 37 epistemic operations, whereas Output A only shows a linear 4-step process."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explicitly ties claims to scope conditions (e.g., early grades, novice teachers), while Output A mentions factors but does not bound them."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B demonstrates superior epistemic structure with deeper contradiction handling, branch preservation, and traceability, despite lower readability."
+    }
+  }
+}
