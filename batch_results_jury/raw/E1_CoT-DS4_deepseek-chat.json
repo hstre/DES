@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1053,
+    "completion_tokens": 496,
+    "total_tokens": 1549,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A is more structured with clear sections, but Output B's narrative is slightly more fluid and concise."
+    },
+    "directional_commitment": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B makes a clear directional synthesis with high confidence, while Output A hedges with multiple competing hypotheses and lower confidence."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly identifies and maintains two contradictory hypotheses with high confidence, whereas Output B only notes a surface contradiction before synthesizing."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a more precise and scope-bounded synthesis with specific conditions, while Output A's synthesis is more general and less bounded."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A reveals non-obvious tensions (e.g., gender wage gaps, role of social safety nets) that a domain expert would value, more than Output B's standard conditional synthesis."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with high confidence, while Output B collapses them into a single conditional synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A provides a detailed claim history with confidence levels and epistemic operations count, whereas Output B only shows a linear step sequence."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A includes explicit scope conditions (e.g., weak labor protections, strong social safety nets) and confidence levels, while Output B's scope conditions are less detailed."
+    },
+    "overall": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A excels in epistemic structure, branch preservation, and traceability, while Output B is stronger in directional commitment and synthesis precision."
+    }
+  }
+}
