@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "triggers",
+      "object": "a measurable trophic cascade in the digital ecosystem, including secondary extinctions of dependent services and over-proliferation of niche platforms",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a measurable trophic cascade in the digital ecosystem, including secondary extinctions of dependent services and over-proliferation of niche platforms]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "triggers",
+      "object": "a rapid collapse of dependent services that rely on its API, authentication, or advertising network",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a rapid collapse of dependent services that rely on its API, authentication, or advertising network]"
+      ],
+      "scope": {
+        "domain": "platform dependency and API-based services"
+      },
+      "qualifier": {
+        "timeframe": "short-term (within 6 months)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "over-proliferation of niche platforms, but with minimal long-term structural change due to rapid re-centralization by another dominant player",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) over-proliferation of niche platforms, but with minimal long-term structural change due to rapid re-centralization by another dominant player]"
+      ],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {
+        "condition": "if regulatory barriers to re-entry are low"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "causes",
+      "object": "a temporary vacuum that is filled by existing adjacent platforms, preventing secondary extinctions but also suppressing niche platform growth",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a temporary vacuum that is filled by existing adjacent platforms, preventing secondary extinctions but also suppressing niche platform growth]"
+      ],
+      "scope": {
+        "domain": "competitive substitution and niche suppression"
+      },
+      "qualifier": {
+        "limitation": "only if the removed platform has strong substitutes already in place"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "triggers",
+      "object": "a rapid collapse of dependent services that rely on its API, authentication, or advertising network, but only if those services have not already diversified their identity provider or authentication stack",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a rapid collapse of dependent services that rely on its API, authentication, or advertising network, but only if those services have not already diversified their identity provider or authentication stack]",
+        "[PATH:empirical] Natural experiments from platform API deprecations (e.g., Twitter/X API v1.1 shutdown in 2023, Facebook Graph API changes) \u2014 Analyzing the impact of these deprecations on dependent services (e.g., third-party clients, social media management tools) can reveal whether services that relied solely on the platform's API or authentication collapsed, while those with OAuth-based multi-provider authentication survived.",
+        "[PATH:empirical] Comparative case studies of identity provider diversification (e.g., migration from Facebook Login to Google Sign-In or Auth0) in small-to-medium web services \u2014 Tracking services that diversified their authentication stack before vs. after a hypothetical platform removal (simulated via policy changes or outages) can test the conditional claim: diversification should prevent collapse.",
+        "[PATH:theoretical] Theoretical modeling of platform-dependent ecosystems (e.g., network effects and single-homing vs. multi-homing in platform economics) \u2014 Formal models (e.g., from Rochet & Tirole, or Eisenmann et al.) can simulate the short-term collapse risk given API and authentication dependencies, and identify conditions under which diversification mitigates systemic failure."
+      ],
+      "scope": {
+        "domain": "platform dependency and API-based services, with emphasis on authentication lock-in"
+      },
+      "qualifier": {
+        "timeframe": "short-term (within 6 months)",
+        "condition": "dependent services have not implemented OAuth-based multi-provider authentication"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "innovation and diversification in dependent services as they adapt and find alternatives",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) innovation and diversification in dependent services as they adapt and find alternatives]",
+        "[PATH:empirical] Natural experiments from regulatory removals or bans of dominant platforms (e.g., Russia's blocking of Facebook/Instagram, or TikTok bans in certain markets) and subsequent analysis of startup activity, API usage shifts, and service diversification in affected ecosystems. \u2014 Provides direct causal evidence by observing real-world outcomes after platform removal, controlling for market context and time frame specified in the hypothesis.",
+        "[PATH:empirical] Historical case studies of platform deprecation or API shutdowns (e.g., Twitter API v1.1 restrictions, Google Reader shutdown) and their impact on third-party developer innovation and migration to alternative services. \u2014 Offers detailed qualitative and quantitative evidence on how dependent services adapt, innovate, or fail, directly testing the hypothesis's causal claim.",
+        "[PATH:theoretical] Agent-based or economic simulation models of platform ecosystems where a dominant platform is removed, measuring emergent diversification and innovation metrics over 12\u201336 months. \u2014 Allows controlled experimentation on counterfactual scenarios, isolating the effect of platform removal from confounding variables, and can be calibrated to empirical data for validation."
+      ],
+      "scope": {
+        "domain": "platform dependency and API-based services"
+      },
+      "qualifier": {
+        "temporal": "over a period of 12 to 36 months following platform removal",
+        "geographic": "global, with emphasis on markets where the platform held >50% market share"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "a temporary proliferation of niche platforms, but accelerates re-centralization by a state-backed or vertically integrated entrant rather than a market-driven competitor",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a temporary proliferation of niche platforms, but accelerates re-centralization by a state-backed or vertically integrated entrant rather than a market-driven competitor]",
+        "[PATH:empirical] Historical case studies of antitrust breakups in digital markets (e.g., breakup of AT&T, attempted breakup of Microsoft, or forced divestiture of Google's ad tech in the EU) \u2014 These cases provide direct empirical evidence on whether removal of a dominant platform leads to niche proliferation followed by re-centralization by state-backed or vertically integrated entities, testing the hypothesis against observable market outcomes.",
+        "[PATH:empirical] Comparative analysis of market dynamics in countries with state-backed digital platforms (e.g., China's WeChat/Alibaba vs. post-breakup scenarios in the US or EU) \u2014 Comparing markets where state-backed players exist versus those without can isolate the effect of state involvement on re-centralization after platform removal, directly addressing the qualifier condition.",
+        "[PATH:theoretical] Agent-based simulation models of platform ecosystems under antitrust interventions \u2014 Simulations can model the causal mechanisms of niche proliferation and subsequent re-centralization, allowing controlled variation of state backing and vertical integration to confirm or refute the hypothesized trajectory."
+      ],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {
+        "condition": "if the removal occurs via antitrust breakup or forced divestiture, and the state has a pre-existing digital infrastructure player"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "promotes",
+      "object": "sustained diversity and innovation in the market with lasting structural change and no rapid re-centralization",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) sustained diversity and innovation in the market with lasting structural change and no rapid re-centralization]",
+        "[PATH:empirical] Historical analysis of antitrust interventions: e.g., the breakup of AT&T (1982) and its impact on telecom market diversity and innovation over the subsequent decade \u2014 Provides a real-world case of removing a dominant platform in a Western market, allowing assessment of whether structural change and sustained competition resulted without rapid re-centralization.",
+        "[PATH:empirical] Empirical study of platform de-platforming events: e.g., removal of Facebook from specific markets (e.g., Myanmar 2018-2021) or Google's exit from China, analyzing subsequent market entry, innovation, and diversity \u2014 Directly tests the hypothesis by examining market dynamics after a dominant platform is removed, controlling for geographic and temporal scope.",
+        "[PATH:theoretical] Agent-based modeling or simulation of platform market dynamics under regulatory removal scenarios, calibrated using empirical data from digital markets \u2014 Allows controlled counterfactual analysis of long-term structural outcomes (5-10 years) and tests conditions under which re-centralization occurs, complementing historical evidence."
+      ],
+      "scope": {
+        "domain": "market dynamics and long-term innovation"
+      },
+      "qualifier": {
+        "temporal": "over a 5-10 year period following removal",
+        "geographic": "within a single Western market (e.g., US or EU)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "over-proliferation of niche platforms, but with minimal long-term structural change due to rapid re-centralization by another dominant player",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) leads to over-proliferation of niche platforms, but with minimal long-term structural change due to rapid re-centralization by another dominant player in domain 'market dynamics and re-centralization']"
+      ],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {
+        "temporal": "within 5\u201310 years after removal",
+        "geographic": "global, with emphasis on developed markets (e.g., United States, European Union)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "sustained market fragmentation and genuine structural diversification, preventing rapid re-centralization",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) leads to sustained market fragmentation and genuine structural diversification, preventing rapid re-centralization in domain 'market dynamics and re-centralization']"
+      ],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {
+        "temporal": "within the first 3\u20135 years following removal",
+        "geographic": "in developed economies with existing antitrust infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "causes",
+      "object": "a permanent reduction in niche platform diversity because adjacent platforms absorb the vacuum and then actively acquire or replicate niche innovations, rather than allowing independent growth",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) a permanent reduction in niche platform diversity because adjacent platforms absorb the vacuum and then actively acquire or replicate niche innovations, rather than allowing independent growth]",
+        "[PATH:empirical] Natural experiments in antitrust: e.g., the breakup of AT&T (1984) or the EU's antitrust actions against Google (e.g., Google Shopping case). Analyze post-intervention diversity of niche platforms in search, advertising, and adjacent markets. \u2014 Provides real-world data on whether removing or constraining a dominant platform leads to absorption by adjacent platforms and reduced niche diversity, directly testing the hypothesis under the specified condition of resource-rich adjacent actors.",
+        "[PATH:empirical] Empirical studies of platform ecosystem dynamics: e.g., research on Amazon Marketplace removal or Facebook's acquisition history (e.g., Instagram, WhatsApp) and subsequent effects on niche app or e-commerce platform emergence. Look for longitudinal data on startup entry and exit rates. \u2014 Tests the mechanism of 'acquire or replicate' by adjacent platforms. If removal triggers a wave of acquisitions or feature cloning by adjacent platforms, it supports the hypothesis; if independent niches flourish, it refutes it.",
+        "[PATH:theoretical] Agent-based or game-theoretic models of platform competition with endogenous innovation and acquisition strategies. Simulate removal of a dominant platform and observe niche diversity under varying resource and incentive conditions. \u2014 Allows controlled testing of the causal claim and the stated qualifier (resource and incentive conditions). Can isolate the effect of adjacent platform behavior from confounding factors in empirical data."
+      ],
+      "scope": {
+        "domain": "competitive dynamics and innovation suppression after platform removal"
+      },
+      "qualifier": {
+        "condition": "if the adjacent platforms have sufficient resources and incentive to monitor and absorb niche innovations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "stimulates",
+      "object": "the rapid emergence and growth of niche platforms, leading to increased innovation and diversity in the market",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) the rapid emergence and growth of niche platforms, leading to increased innovation and diversity in the market]",
+        "[PATH:empirical] Natural experiments from antitrust breakups or platform bans (e.g., Google's exit from China, Facebook's ban in specific markets, or the breakup of AT&T) \u2014 Analyzing market structure data before and after such removals can directly test whether niche platforms proliferate and innovation metrics increase within 3-5 years.",
+        "[PATH:theoretical] Agent-based simulation models of platform ecosystems (e.g., models calibrated with real user and developer data from app stores or search engines) \u2014 Simulating the removal of a dominant platform under varying network effects and switching costs can isolate causal mechanisms and predict diversity/innovation outcomes.",
+        "[PATH:literature] Systematic literature review on platform competition and niche entry (e.g., studies on the 'long tail' effect, platform envelopment, and post-deregulation market evolution) \u2014 Synthesizing existing empirical and theoretical findings can identify boundary conditions (e.g., market concentration, user multi-homing) that moderate the hypothesized effect."
+      ],
+      "scope": {
+        "domain": "market innovation and diversity"
+      },
+      "qualifier": {
+        "temporal": "within 3 to 5 years after removal",
+        "geographic": "in developed digital economies with high internet penetration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace) when regulatory barriers to re-entry are low",
+      "predicate": "leads to",
+      "object": "a faster re-centralization by a vertically integrated entrant that uses exclusive data access to outcompete niche platforms",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "removing a dominant tech platform (e.g., Facebook, Google Search, or Amazon Marketplace)",
+      "predicate": "leads to",
+      "object": "a lasting decentralization and diversification of online services, with multiple niche platforms coexisting sustainably",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "market dynamics and re-centralization"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
