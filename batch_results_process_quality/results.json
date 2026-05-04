@@ -1,0 +1,81 @@
+{
+  "M1": {
+    "DES": {
+      "score": 1,
+      "reason": "Injected claim would trigger contradiction check against existing supported claim C001",
+      "target_claim_id": "C001",
+      "injected_id": "INJECT_001"
+    },
+    "CoT": {
+      "score": 0,
+      "reason": "CoT treats contradiction as fresh question without referencing prior state",
+      "response_excerpt": "B) Integrate the new evidence into a more nuanced view. While the meta-analysis suggests that trade liberalization can reduce growth under certain conditions, my original conclusion already emphasized"
+    }
+  },
+  "M2": {
+    "DES": {
+      "total_claims": 14,
+      "pairs_checked": 7,
+      "near_duplicates": 2,
+      "duplicate_rate": 0.286,
+      "score": 0
+    },
+    "CoT": {
+      "total_claims": 0,
+      "near_duplicates": 0,
+      "duplicate_rate": 0.0,
+      "score": 1
+    }
+  },
+  "M3": {
+    "DES": {
+      "supported_claims": 11,
+      "branch_claims": 2,
+      "synthesis_claims": 2,
+      "score": 2,
+      "reason": "2 branch claims persist alongside synthesis"
+    },
+    "CoT": {
+      "supported_claims": 3,
+      "branch_claims": 0,
+      "score": 0,
+      "reason": "CoT has no branch persistence mechanism; synthesis replaces competing claims"
+    }
+  },
+  "M4": {
+    "DES": {
+      "claims_intact": 14,
+      "integrity_failures": [],
+      "has_iteration_counter": true,
+      "has_operation_history": true,
+      "has_focus_claim": true,
+      "score": 1,
+      "reason": "All state fields intact; session can be resumed deterministically"
+    },
+    "CoT": {
+      "completes_from_interruption": true,
+      "references_prior_steps": true,
+      "score": 1,
+      "reason": "CoT can continue from mid-prompt interruption within same context",
+      "response_excerpt": "STEP 3: Synthesize and Evaluate\n\nA balanced analysis reveals that free trade is neither purely beneficial nor purely harmful to developing economies; rather, its impact is conditional and highly conte"
+    }
+  },
+  "M5": {
+    "DES": {
+      "sealed_claims_found": 14,
+      "target_claim": "C001",
+      "can_unseal_and_reprocess": true,
+      "new_evidence_integrated": true,
+      "score": 1,
+      "reason": "DES allows unsealing + evidence injection; claim re-enters active loop for T3/T6 re-evaluation"
+    },
+    "CoT": {
+      "provides_updated_confidence": true,
+      "updated_confidence": 0.65,
+      "structured_update": true,
+      "score": 1,
+      "reason": "CoT updates confidence estimate when new evidence is injected",
+      "response_excerpt": "**1. New confidence: 0.65**\n\n**2. What changes in your synthesis**  \nThe new evidence directly contradicts the condition that \u201cstrong institutions\u201d are sufficient to make free trade beneficial for dev"
+    }
+  }
+}
