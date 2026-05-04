@@ -164,5 +164,10 @@ RETRO_PATTERNS = [
     "batch_results_pilot/*state.json",
 ]
 
+COMBINED_PATTERNS = RETRO_PATTERNS + [
+    "paper3/batch_results_paper3_stress/*state.json",
+]
+COMBINED_DIR = Path("paper3/batch_results_paper3_combined")
+
 if __name__ == "__main__":
-    run(RETRO_PATTERNS, RESULTS_DIR)
+    run(COMBINED_PATTERNS, COMBINED_DIR)
