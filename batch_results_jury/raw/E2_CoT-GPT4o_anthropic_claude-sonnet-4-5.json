@@ -1,0 +1,64 @@
+{
+  "qid": "E2",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1194,
+    "completion_tokens": 561,
+    "total_tokens": 1755,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B follows a clear linear narrative with labeled steps, while Output A's dense technical structure with nested claims requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A makes specific falsifiable claims about decoupling mechanisms and planetary boundaries, while Output B hedges with conditional statements about 'can be compatible if.'"
+    },
+    "contradiction_depth": {
+      "DES": 0.85,
+      "CoT": 0.15,
+      "reason": "Output A identifies the fundamental tension between efficiency gains and rebound effects at the mechanism level, while Output B presents only a surface-level pro/con opposition."
+    },
+    "synthesis_quality": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A's synthesis specifies offshoring mechanisms and distinguishes relative from absolute decoupling with scope conditions, while Output B offers generic solutions without precision."
+    },
+    "epistemic_novelty": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A surfaces the non-obvious offshoring masking effect and the necessary/sufficient distinction for planetary boundaries, while Output B rehearses standard green growth talking points."
+    },
+    "branch_preservation": {
+      "DES": 0.95,
+      "CoT": 0.05,
+      "reason": "Output A explicitly maintains two competing hypotheses at 0.90 confidence each in parallel, while Output B collapses to a single conditional synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.85,
+      "CoT": 0.15,
+      "reason": "Output A tracks 14 claims with confidence scores and 49 operations, enabling state reconstruction, while Output B shows only four linear steps without recoverable intermediate states."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A specifies temporal scope (post-1990), geographic scope (high-income economies), and evidence status (not yet proven at scale), while Output B makes unscoped assertions."
+    },
+    "overall": {
+      "DES": 0.82,
+      "CoT": 0.18,
+      "reason": "Output A demonstrates superior epistemic structure across contradiction handling, branch preservation, and evidence discipline despite lower readability, while Output B prioritizes narrative flow over analytical depth."
+    }
+  }
+}
