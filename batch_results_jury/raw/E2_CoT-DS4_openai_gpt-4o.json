@@ -1,0 +1,64 @@
+{
+  "qid": "E2",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1173,
+    "completion_tokens": 422,
+    "total_tokens": 1595,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is clearer and more straightforward, while Output A is more complex and harder to follow."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B makes strong claims with high confidence, whereas Output A presents more hedged statements."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly identifies and addresses a fundamental contradiction, while Output A maintains parallel hypotheses without deep contradiction analysis."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a synthesis, but neither fully resolves the complexities involved in the research question."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A presents a more nuanced exploration of competing hypotheses, offering insights into decoupling dynamics."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A maintains competing hypotheses in parallel, while Output B focuses on a single contradiction."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides a detailed account of claims and confidence levels, making the reasoning process more traceable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs discuss scope conditions, but neither provides extensive evidence to support their claims."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A offers a more structured exploration of the topic, while Output B provides clearer but less nuanced insights."
+    }
+  }
+}
