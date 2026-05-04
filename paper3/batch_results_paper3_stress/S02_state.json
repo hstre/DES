@@ -2,17 +2,19 @@
   "claims": {
     "C001": {
       "id": "C001",
-      "subject": "academic journals",
-      "predicate": "experience selection pressure analogous to biological evolution",
-      "object": "their long-term survival depends more on prestige signaling than on epistemic quality",
+      "subject": "The survival of academic journals",
+      "predicate": "is driven by",
+      "object": "selection pressures that favor prestige signaling over epistemic quality",
       "status": "supported",
-      "confidence": 0.5,
+      "confidence": 0.55,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: academic journals their long-term survival depends more on prestige signaling than on epistemic quality]"
+        "[Simulated evidence for: The survival of academic journals selection pressures that favor prestige signaling over epistemic quality]"
       ],
       "scope": {},
-      "qualifier": {},
+      "qualifier": {
+        "tension": "While evolutionary logic predicts that journals with higher methodological rigor and reproducibility should outcompete others, empirical evidence suggests that metrics like impact factor and institutional prestige dominate survival, raising the question of whether selection acts on genuine scientific fitness or on symbolic capital."
+      },
       "conflict": false,
       "branch_open": false,
       "sealed": true,
@@ -27,21 +29,20 @@
     },
     "C002": {
       "id": "C002",
-      "subject": "prestigious academic journals",
-      "predicate": "prioritize",
-      "object": "articles from elite institutions over those with high methodological rigor",
+      "subject": "High-impact academic journals",
+      "predicate": "survive better than rigorous ones because",
+      "object": "they accumulate symbolic capital that attracts submissions and citations, regardless of epistemic quality",
       "status": "supported",
       "confidence": 0.82,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: prestigious academic journals articles from elite institutions over those with high methodological rigor]"
+        "[Simulated evidence for: High-impact academic journals they accumulate symbolic capital that attracts submissions and citations, regardless of epistemic quality]"
       ],
       "scope": {
-        "domain": "high-impact journals in social sciences and humanities"
+        "domain": "sociology of science"
       },
       "qualifier": {
-        "temporal": "2020\u20132025",
-        "geographic": "United States and United Kingdom"
+        "tension": "This sub-claim assumes prestige is the dominant selective force, but it may conflate correlation with causation\u2014high-rigor journals might also become prestigious over longer timescales."
       },
       "conflict": false,
       "branch_open": false,
@@ -51,7 +52,6 @@
       "generated_by": "",
       "history": [
         "T3",
-        "T7",
         "T6[anti-delphi]",
         "T8"
       ],
@@ -59,51 +59,21 @@
     },
     "C003": {
       "id": "C003",
-      "subject": "new open-access journals",
-      "predicate": "face",
-      "object": "stronger selection pressure to demonstrate epistemic quality than prestige",
+      "subject": "Academic journal selection",
+      "predicate": "is primarily shaped by",
+      "object": "epistemic quality and methodological reproducibility, but this signal is delayed and obscured by short-term prestige dynamics",
       "status": "disputed",
       "confidence": 0.42,
       "modality": "suggestion",
       "evidence_refs": [
-        "[Simulated evidence for: new open-access journals stronger selection pressure to demonstrate epistemic quality than prestige]"
+        "[Simulated evidence for: Academic journal selection epistemic quality and methodological reproducibility, but this signal is delayed and obscured by short-term prestige dynamics]",
+        "[CONFLICT] The claim suggests that journal selection is ultimately driven by epistemic quality and reproducibility, but that this signal is delayed by short-term prestige dynamics, which directly contradicts the prestige hypothesis that prioritizes reputation over epistemic fitness."
       ],
       "scope": {
-        "domain": "open-access journals founded after 2010"
+        "domain": "evolutionary epistemology"
       },
       "qualifier": {
-        "temporal": "early-stage competition"
-      },
-      "conflict": false,
-      "branch_open": true,
-      "sealed": true,
-      "is_synthesis": false,
-      "is_role_generated": false,
-      "generated_by": "",
-      "history": [
-        "T3",
-        "T5[anti-delphi]",
-        "T1",
-        "T9[anti-delphi]"
-      ],
-      "parent_id": "C001"
-    },
-    "C004": {
-      "id": "C004",
-      "subject": "academic journals",
-      "predicate": "can achieve",
-      "object": "long-term survival by balancing prestige signaling with demonstrable epistemic reliability",
-      "status": "disputed",
-      "confidence": 0.47,
-      "modality": "qualified assertion",
-      "evidence_refs": [
-        "[Simulated evidence for: academic journals long-term survival by balancing prestige signaling with demonstrable epistemic reliability]"
-      ],
-      "scope": {
-        "domain": "mature journals in stable fields"
-      },
-      "qualifier": {
-        "condition": "if they maintain a core of highly cited, reproducible research"
+        "tension": "This competes with the prestige hypothesis by arguing that selection pressures do eventually favor epistemic fitness, only that current metrics fail to capture it."
       },
       "conflict": false,
       "branch_open": false,
@@ -113,30 +83,62 @@
       "generated_by": "",
       "history": [
         "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The dominance of prestige metrics in journal survival",
+      "predicate": "may be an artifact of",
+      "object": "institutional incentive structures that decouple researcher career success from journal epistemic quality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The dominance of prestige metrics in journal survival institutional incentive structures that decouple researcher career success from journal epistemic quality]"
+      ],
+      "scope": {
+        "domain": "science policy and incentives"
+      },
+      "qualifier": {
+        "tension": "This qualifies the original claim by suggesting prestige signaling is not a direct selection pressure on journals per se, but an indirect consequence of how researchers are evaluated."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
         "T8"
       ],
       "parent_id": "C001"
     },
     "C005": {
       "id": "C005",
-      "subject": "prestigious academic journals in social sciences and humanities",
-      "predicate": "favor",
-      "object": "articles from elite institutions even when matched for methodological rigor and effect size",
+      "subject": "High-impact academic journals",
+      "predicate": "survive better than rigorous ones because",
+      "object": "they accumulate symbolic capital that attracts submissions and citations, but this advantage is reversed in subfields where replication crises erode trust in high-impact venues, making rigorous journals more resilient over time",
       "status": "supported",
-      "confidence": 0.82,
+      "confidence": 0.8500000000000001,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: prestigious academic journals in social sciences and humanities articles from elite institutions even when matched for methodological rigor and effect size]",
-        "[PATH:empirical] Replication study using matched samples of articles from elite and non-elite institutions in top social science journals (e.g., American Sociological Review, American Political Science Review), controlling for methodological rigor (e.g., sample size, statistical power) and effect size via propensity score matching or coarsened exact matching. \u2014 Directly tests whether institutional prestige predicts editorial acceptance beyond article quality, addressing the hypothesis with controlled observational data from 2020\u20132025.",
-        "[PATH:empirical] Audit experiment submitting fabricated manuscripts with identical content but varying author institutional affiliations to a sample of high-impact social science and humanities journals, measuring acceptance rates. \u2014 Provides causal evidence of bias by isolating the effect of institutional prestige while holding article quality constant, overcoming confounding in observational studies.",
-        "[PATH:literature] Meta-analysis of existing studies on institutional prestige bias in academic publishing (e.g., Peters & Ceci, 1982; Lee et al., 2013; recent preprints), focusing on social sciences and humanities journals within the 2020\u20132025 window. \u2014 Synthesizes available evidence to assess the overall effect size and consistency of prestige bias, identifying gaps in the current evidence base for the specified domain and period."
+        "[Simulated evidence for: High-impact academic journals they accumulate symbolic capital that attracts submissions and citations, but this advantage is reversed in subfields where replication crises erode trust in high-impact venues, making rigorous journals more resilient over time]",
+        "[PATH:empirical] Longitudinal citation and submission data from Web of Science or Scopus for journals in psychology and economics (e.g., comparing impact factors and submission rates before and after prominent replication studies) \u2014 This would directly test whether high-impact journals in replication-crisis subfields experience declining submission and citation rates relative to rigorous but lower-impact journals over time.",
+        "[PATH:empirical] Survey or interview studies of authors and reviewers in social science disciplines (e.g., psychology, economics) about their trust in high-impact vs. rigorous journals and their submission decisions \u2014 This would provide direct evidence on whether perceived trust erosion affects the symbolic capital of high-impact venues, as hypothesized.",
+        "[PATH:theoretical] Theoretical models of journal prestige dynamics incorporating trust and replication (e.g., agent-based models or game-theoretic analyses of academic publishing markets) \u2014 This would help formalize the proposed mechanism and identify conditions under which the advantage of high-impact journals reverses, offering predictions that can be tested empirically."
       ],
       "scope": {
-        "domain": "high-impact journals in social sciences and humanities"
+        "domain": "sociology of science"
       },
       "qualifier": {
-        "temporal": "2020\u20132025",
-        "geographic": "United States and United Kingdom"
+        "temporal": "since the early 2000s",
+        "geographic": "primarily in Western social science disciplines"
       },
       "conflict": false,
       "branch_open": false,
@@ -146,6 +148,7 @@
       "generated_by": "deepseek-chat[hypothesis_builder]",
       "history": [
         "T3",
+        "T7",
         "T6",
         "T8"
       ],
@@ -153,24 +156,24 @@
     },
     "C006": {
       "id": "C006",
-      "subject": "prestigious academic journals",
-      "predicate": "prioritize",
-      "object": "articles with high methodological rigor over those from elite institutions",
+      "subject": "High-impact academic journals",
+      "predicate": "survive better because",
+      "object": "they maintain rigorous peer-review processes that ensure high epistemic quality, thereby attracting submissions and citations",
       "status": "supported",
       "confidence": 0.8500000000000001,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: prestigious academic journals articles with high methodological rigor over those from elite institutions]",
-        "[PATH:empirical] Replication studies and meta-analyses of journal acceptance rates in social sciences and humanities (e.g., from the Center for Open Science or journals' own editorial data) \u2014 Systematically comparing acceptance rates for methodologically rigorous studies (e.g., registered reports, pre-registered analyses) versus those from elite institutions can directly test whether rigor is prioritized over institutional prestige.",
-        "[PATH:empirical] Survey or interview-based studies with editors and reviewers of high-impact journals (e.g., from the Journal of Scholarly Publishing or Research Integrity and Peer Review) \u2014 Qualitative evidence on editorial decision-making processes can reveal whether methodological rigor is explicitly weighted more heavily than author affiliation, providing insight into the mechanisms behind any observed patterns.",
-        "[PATH:theoretical] Computational analysis of published articles (e.g., using natural language processing to measure methodological transparency indicators like 'pre-registration' or 'power analysis' and correlating with author institutional rank) \u2014 Testing the hypothesis that journals with higher impact factors publish more methodologically rigorous work, independent of author prestige, requires a large-scale text analysis of published articles across journals and over time."
+        "[Simulated evidence for: High-impact academic journals they maintain rigorous peer-review processes that ensure high epistemic quality, thereby attracting submissions and citations]",
+        "[PATH:empirical] Longitudinal citation analysis of journals before and after adopting or abandoning double-blind peer review \u2014 Comparing citation impact and submission rates across journals that change review policies would directly test whether rigorous peer review causally drives high impact.",
+        "[PATH:empirical] Survey and field experiment on author submission preferences: randomize information about review stringency and measure submission likelihood \u2014 This would isolate the effect of perceived rigor on submission decisions, controlling for journal prestige and other confounds.",
+        "[PATH:literature] Meta-analysis of studies linking peer-review quality metrics (e.g., reviewer agreement, rejection rates) to journal impact factors \u2014 Synthesizing existing evidence can reveal whether the correlation is robust or spurious, and identify moderators like field or era."
       ],
       "scope": {
-        "domain": "high-impact journals in social sciences and humanities"
+        "domain": "sociology of science"
       },
       "qualifier": {
-        "temporal": "since the early 2010s",
-        "geographic": "global, with emphasis on North American and Western European journals"
+        "temporal": "since the mid-20th century",
+        "geographic": "global academic publishing system"
       },
       "conflict": false,
       "branch_open": false,
@@ -188,24 +191,24 @@
     },
     "C007": {
       "id": "C007",
-      "subject": "new open-access journals founded after 2010",
-      "predicate": "are more likely to adopt transparent peer review and open data mandates than",
-      "object": "established subscription journals in the same field",
+      "subject": "Academic journal selection",
+      "predicate": "is increasingly driven by",
+      "object": "methodological reproducibility over epistemic quality when preprint servers and open review platforms reduce the signal delay of prestige dynamics",
       "status": "supported",
       "confidence": 0.8500000000000001,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: new open-access journals founded after 2010 established subscription journals in the same field]",
-        "[PATH:empirical] Comparative analysis of journal policies from the Directory of Open Access Journals (DOAJ) and subscription journal databases (e.g., Scopus, Web of Science) for fields like biology and psychology, focusing on peer review transparency and data sharing mandates. \u2014 A systematic comparison of policy statements for a matched sample of open-access journals founded after 2010 and established subscription journals (matched by field, size, and impact) would provide direct evidence on the adoption rates of transparent peer review and open data mandates.",
-        "[PATH:empirical] Survey of editors and publishers from new open-access journals (launched post-2010) and established subscription journals, asking about adoption of and attitudes toward transparent peer review and open data policies. \u2014 First-hand reports from decision-makers can reveal actual implementation practices and motivations, complementing policy analyses and helping to distinguish between stated policies and actual practices.",
-        "[PATH:empirical] Longitudinal bibliometric study tracking the evolution of peer review transparency and data sharing practices in a cohort of new open-access journals versus a control group of subscription journals over the period 2010\u20132025. \u2014 Observing changes over time would control for temporal trends (e.g., growing global emphasis on openness) and clarify whether the difference is due to founding era or inherent journal type."
+        "[Simulated evidence for: Academic journal selection methodological reproducibility over epistemic quality when preprint servers and open review platforms reduce the signal delay of prestige dynamics]",
+        "[PATH:empirical] Longitudinal bibliometric analysis comparing journal selection criteria (e.g., reproducibility indicators vs. citation-based prestige metrics) across pre-2010 and post-2010 periods, using data from preprint servers like arXiv and open review platforms like PubPeer. \u2014 Directly tests whether reproducibility has gained relative weight in journal choice over time, controlling for the rise of preprint and open review systems.",
+        "[PATH:empirical] Survey or behavioral experiment with active researchers in evolutionary epistemology and related fields, asking them to rank factors (e.g., reproducibility, journal prestige, review speed) in hypothetical journal selection scenarios, with manipulated exposure to preprint/open review signals. \u2014 Provides causal evidence on how reduced signal delay from open platforms shifts decision weights toward reproducibility vs. epistemic quality.",
+        "[PATH:theoretical] Formal model of academic journal selection as a signaling game, incorporating preprint servers as a mechanism that reduces information asymmetry about methodological rigor, and deriving predictions about equilibrium shifts in journal choice. \u2014 Offers a rigorous framework to clarify the logical conditions under which reproducibility might dominate prestige, and to generate testable predictions for empirical validation."
       ],
       "scope": {
-        "domain": "open-access journals founded after 2010"
+        "domain": "evolutionary epistemology"
       },
       "qualifier": {
-        "temporal": "after 2010",
-        "geographic": "global"
+        "temporal": "since 2010s",
+        "geographic": "global, with emphasis on Western academic systems"
       },
       "conflict": false,
       "branch_open": false,
@@ -223,24 +226,24 @@
     },
     "C008": {
       "id": "C008",
-      "subject": "new open-access journals",
-      "predicate": "prioritize",
-      "object": "prestige over epistemic quality",
+      "subject": "Academic journal selection",
+      "predicate": "is primarily driven by",
+      "object": "short-term prestige dynamics rather than epistemic quality and methodological reproducibility",
       "status": "supported",
       "confidence": 0.8500000000000001,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated evidence for: new open-access journals prestige over epistemic quality]",
-        "[PATH:empirical] Comparative analysis of editorial board composition, acceptance rates, and citation metrics (e.g., impact factor, Eigenfactor) versus replication rates or retraction rates for a sample of post-2010 open-access journals in fields like biomedicine or social sciences. \u2014 Directly tests whether prestige proxies (e.g., high impact factor, selective editorial boards) correlate with lower epistemic quality indicators (e.g., low replication rates, high retraction rates) in the target population.",
-        "[PATH:empirical] Survey or interview study of editors and authors of new open-access journals, probing their stated priorities (e.g., attracting high-profile submissions, boosting journal metrics) versus their practices regarding peer review rigor and methodological standards. \u2014 Provides qualitative evidence on the decision-making processes and trade-offs that may favor prestige over epistemic quality, helping to confirm or refute the hypothesis through self-reported and observational data.",
-        "[PATH:literature] Systematic review of existing literature on the 'publish or perish' culture, the rise of predatory or low-quality open-access journals, and studies comparing journal prestige metrics with reproducibility or validity of published findings. \u2014 Synthesizes prior evidence on whether prestige-seeking behavior in open-access publishing systematically undermines epistemic standards, offering a theoretical grounding and empirical benchmarks for the hypothesis."
+        "[Simulated evidence for: Academic journal selection short-term prestige dynamics rather than epistemic quality and methodological reproducibility]",
+        "[PATH:empirical] Longitudinal analysis of journal submission patterns and acceptance rates across high-impact vs. methodologically rigorous journals (e.g., comparing PLoS ONE with Nature or Science), using bibliometric data from Scopus or Web of Science \u2014 Directly tests whether researchers preferentially submit to journals with high impact factors regardless of methodological standards, by tracking submission volume, rejection rates, and replication rates over time.",
+        "[PATH:empirical] Survey-based study of academic authors' decision-making criteria for journal selection, focusing on stated vs. revealed preferences for prestige indicators (impact factor, journal ranking) versus epistemic values (open data policies, reproducibility requirements) \u2014 Provides behavioral evidence of the relative weight of prestige versus epistemic quality in actual selection processes, potentially confirming or refuting the hypothesis through self-report and behavioral data.",
+        "[PATH:theoretical] Theoretical modeling of journal selection as a signaling game, incorporating impact factor as a proxy for author quality and its effect on epistemic outcomes, drawing on evolutionary epistemology and game theory \u2014 Offers a formal framework to predict conditions under which prestige dynamics dominate, and can be compared with empirical patterns to assess the hypothesis's explanatory power."
       ],
       "scope": {
-        "domain": "open-access journals founded after 2010"
+        "domain": "evolutionary epistemology"
       },
       "qualifier": {
-        "temporal": "after 2010",
-        "geographic": "global"
+        "temporal": "since the rise of impact factor metrics in the late 20th century",
+        "geographic": "globally, with emphasis on Western academic institutions"
       },
       "conflict": false,
       "branch_open": false,
@@ -256,132 +259,95 @@
       ],
       "parent_id": "C003"
     },
-    "B001": {
-      "id": "B001",
-      "subject": "new open-access journals",
-      "predicate": "face",
-      "object": "stronger selection pressure to demonstrate epistemic quality than prestige",
+    "C009": {
+      "id": "C009",
+      "subject": "The decoupling of researcher career success from journal epistemic quality",
+      "predicate": "directly causes",
+      "object": "a self-reinforcing cycle where high-prestige journals survive even when their epistemic quality declines, because researchers continue submitting to maximize personal career returns",
       "status": "supported",
-      "confidence": 0.9,
+      "confidence": 0.8500000000000001,
       "modality": "hypothesis",
       "evidence_refs": [
-        "[Simulated: peer-reviewed source confirms new open-access journals face stronger selection pressure to demonstrate epistemic quality than prestige in domain 'open-access journals founded after 2010']"
+        "[Simulated evidence for: The decoupling of researcher career success from journal epistemic quality a self-reinforcing cycle where high-prestige journals survive even when their epistemic quality declines, because researchers continue submitting to maximize personal career returns]",
+        "[PATH:empirical] Longitudinal analysis of journal prestige metrics (e.g., impact factor, Eigenfactor) versus epistemic quality indicators (e.g., replication rates, methodological rigor scores) across a sample of high-prestige journals in multiple disciplines over the past 30 years. \u2014 Directly tests whether prestige persists or even increases while epistemic quality declines, by tracking both dimensions over time and correlating with researcher submission patterns.",
+        "[PATH:empirical] Survey and behavioral experiment with early-career researchers (postdocs, assistant professors) measuring their hypothetical or actual submission decisions when presented with journals varying in prestige and epistemic quality, controlling for career incentives. \u2014 Captures the causal mechanism of individual researcher decision-making, isolating the role of career returns from epistemic considerations in perpetuating the cycle.",
+        "[PATH:theoretical] Agent-based simulation model of the academic publishing ecosystem, parameterized with empirical distributions of researcher career utility functions, journal review processes, and epistemic quality dynamics. \u2014 Allows testing of the hypothesized self-reinforcing cycle under controlled assumptions, exploring conditions under which decoupling leads to persistence of low-quality high-prestige journals."
       ],
       "scope": {
-        "domain": "open-access journals founded after 2010"
+        "domain": "science policy and incentives"
       },
       "qualifier": {
-        "temporal": "since 2010",
-        "geographic": "global"
+        "temporal": "contemporary academic publishing era (late 20th century to present)",
+        "geographic": "global, with emphasis on research-intensive universities and institutions in North America and Europe"
       },
       "conflict": false,
       "branch_open": false,
       "sealed": true,
       "is_synthesis": false,
-      "is_role_generated": false,
-      "generated_by": "",
-      "history": [
-        "T3",
-        "T7",
-        "T8"
-      ],
-      "parent_id": "C003"
-    },
-    "B002": {
-      "id": "B002",
-      "subject": "new open-access journals",
-      "predicate": "face",
-      "object": "stronger selection pressure to demonstrate prestige than epistemic quality",
-      "status": "supported",
-      "confidence": 0.9,
-      "modality": "hypothesis",
-      "evidence_refs": [
-        "[Simulated: peer-reviewed source confirms new open-access journals face stronger selection pressure to demonstrate prestige than epistemic quality in domain 'open-access journals founded after 2010']"
-      ],
-      "scope": {
-        "domain": "open-access journals founded after 2010"
-      },
-      "qualifier": {
-        "temporal": "2010\u20132025",
-        "geographic": "global"
-      },
-      "conflict": false,
-      "branch_open": false,
-      "sealed": true,
-      "is_synthesis": false,
-      "is_role_generated": false,
-      "generated_by": "",
-      "history": [
-        "T3",
-        "T7",
-        "T8"
-      ],
-      "parent_id": "C003"
-    },
-    "C011": {
-      "id": "C011",
-      "subject": "new open-access journals founded after 2010",
-      "predicate": "attract",
-      "object": "a higher proportion of methodologically rigorous replication studies than established prestige-oriented journals",
-      "status": "unknown",
-      "confidence": 0.5,
-      "modality": "hypothesis",
-      "evidence_refs": [],
-      "scope": {
-        "domain": "open-access journals founded after 2010"
-      },
-      "qualifier": {},
-      "conflict": false,
-      "branch_open": false,
-      "sealed": true,
-      "is_synthesis": true,
       "is_role_generated": true,
       "generated_by": "deepseek-chat[hypothesis_builder]",
       "history": [
+        "T3",
+        "T7",
+        "T6",
         "T8"
       ],
-      "parent_id": "C003"
+      "parent_id": "C004"
     },
-    "C012": {
-      "id": "C012",
-      "subject": "new open-access journals",
-      "predicate": "prioritize",
-      "object": "prestige over epistemic quality to attract submissions",
-      "status": "disputed",
-      "confidence": 0.5,
+    "C010": {
+      "id": "C010",
+      "subject": "Journal epistemic quality",
+      "predicate": "directly influences",
+      "object": "researcher career success and institutional prestige",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
       "modality": "hypothesis",
-      "evidence_refs": [],
+      "evidence_refs": [
+        "[Simulated evidence for: Journal epistemic quality researcher career success and institutional prestige]",
+        "[PATH:empirical] Longitudinal bibliometric analysis of journal impact factors vs. researcher career progression (e.g., promotions, grants, citations) across disciplines and institutions globally (2000-2025) \u2014 Directly tests whether journal epistemic quality\u2014measured through indicators like citation accuracy, reproducibility rates, or peer review rigor\u2014predicts career outcomes and institutional reputation, controlling for other factors.",
+        "[PATH:literature] Meta-analysis of studies on the relationship between journal prestige metrics (e.g., JIF, SJR) and epistemic quality indicators (e.g., retraction rates, replication success, methodological transparency) \u2014 Synthesizes existing evidence to determine if the assumed link between journal quality and career/institutional prestige is supported by robust data or is confounded by prestige bias.",
+        "[PATH:theoretical] Agent-based simulation modeling of academic reward systems incorporating journal epistemic quality as a variable \u2014 Explores causal mechanisms under controlled assumptions, testing how changes in epistemic quality evaluation norms might propagate to career success and institutional prestige, clarifying directionality and boundary conditions."
+      ],
       "scope": {
-        "domain": "open-access journals founded after 2010"
+        "domain": "academic publishing and career advancement"
       },
-      "qualifier": {},
+      "qualifier": {
+        "temporal": "2000-2025",
+        "geographic": "global"
+      },
       "conflict": false,
       "branch_open": false,
       "sealed": true,
-      "is_synthesis": true,
+      "is_synthesis": false,
       "is_role_generated": true,
       "generated_by": "openai/gpt-4o[falsifier]",
       "history": [
+        "T3",
+        "T7",
+        "T6",
         "T8"
       ],
-      "parent_id": "C003"
+      "parent_id": "C004"
     }
   },
   "operation_history": [
     "T3 on C001",
     "T4 on C001",
     "T3 on C002",
-    "T7 on C002",
     "T6[hypothesis_builder] on C002 -> C005",
     "T6[falsifier] on C002 -> C006",
     "T8 on C002",
     "T3 on C003",
     "T5[hypothesis_builder] on C003 -> C007",
     "T5[falsifier] on C003 -> C008",
-    "T1 on C003",
+    "T2 on C003",
+    "T8 on C003",
     "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
     "T8 on C004",
     "T3 on C005",
+    "T7 on C005",
     "T6 on C005",
     "T8 on C005",
     "T3 on C006",
@@ -396,33 +362,31 @@
     "T7 on C008",
     "T6 on C008",
     "T8 on C008",
-    "T3 on B001",
-    "T7 on B001",
-    "T8 on B001",
-    "T3 on B002",
-    "T9[hypothesis_builder] on C003 -> C011",
-    "T9[falsifier] on C003 -> C012",
-    "T7 on B002",
-    "T8 on B002",
-    "T8 on C011",
-    "T8 on C012"
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
   ],
   "discarded_hypotheses": [],
   "weak_candidates": [],
-  "reframing_count": 1,
-  "iteration": 35,
-  "focus_claim_id": "C012",
+  "reframing_count": 0,
+  "iteration": 36,
+  "focus_claim_id": "C010",
   "anti_delphi_activations": 3,
   "roles_generated": {
     "hypothesis_builder": [
       "C005",
       "C007",
-      "C011"
+      "C009"
     ],
     "falsifier": [
       "C006",
       "C008",
-      "C012"
+      "C010"
     ]
   }
 }
