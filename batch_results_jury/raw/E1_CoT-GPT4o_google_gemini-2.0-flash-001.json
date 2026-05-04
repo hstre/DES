@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "google/gemini-2.0-flash-001",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "google/gemini-2.0-flash-001",
+    "prompt_tokens": 1064,
+    "completion_tokens": 497,
+    "total_tokens": 1561,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A is more straightforward and easier to follow due to its simpler structure and language."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B makes more specific directional claims, even if hedged with confidence scores, while A remains more general."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B identifies more nuanced contradictions, such as the impact of social safety nets and labor protections, going beyond the surface-level contradiction in A."
+    },
+    "synthesis_quality": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B's synthesis is more precise, bounding the scope by considering factors like social safety nets and gender-based wage gaps, whereas A's synthesis is more generic."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B raises more novel tensions, such as the differential impact on various income quintiles and the role of labor protections, which are not addressed in A."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output B explicitly maintains competing hypotheses in parallel, while A quickly converges to a single synthesized conclusion."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B provides a clearer record of claims generated and epistemic operations applied, making the reasoning process more traceable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B is more disciplined in specifying scope conditions (e.g., developing economies with weak labor protections) and implicitly referencing evidence through confidence scores."
+    },
+    "overall": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B demonstrates a more sophisticated and nuanced understanding of the research question, with better contradiction handling, branch preservation, and process traceability, making it epistemically superior overall."
+    }
+  }
+}
