@@ -4,7 +4,13 @@ A control architecture for epistemic state transitions in AI research systems.
 
 ---
 
-The DES is a control layer that determines the next epistemically productive step in a research process, based on the current state of a claim graph — before any LLM routing decision is made. Given a research question, it maintains a structured graph of claims, each with status, confidence, scope, and evidence. At every iteration, a Python transition table (T1–T9) inspects the current claim state and selects the appropriate operation. The LLM then executes that operation as a dumb semantic operator. The DES does not replace LLM orchestration; it precedes it.
+The DES is a control layer that determines the next epistemically productive step in a
+research process, based on the current state of a claim graph — before any LLM routing
+decision is made. Given a research question, it maintains a structured graph of claims,
+each with status, confidence, scope, and evidence. At every iteration, a Python transition
+table (T1–T9) inspects the current claim state and selects the appropriate operation.
+The LLM then executes that operation as a dumb semantic operator. The DES does not replace
+LLM orchestration; it precedes it.
 
 ```
 Standard routing:   Task  -> [difficulty heuristic] -> Model
@@ -32,11 +38,13 @@ DES routing:        Claim -> [epistemic state S(t)]  -> Operation -> Model
 ## Installation
 
 ```bash
-pip install httpx
+pip install openai
 export DEEPSEEK_API_KEY=your_key_here
+# Optional: for multi-model runs
+export OPENROUTER_API_KEY=your_key_here
 ```
 
-Requires Python 3.11+. Uses the [DeepSeek chat completions API](https://api.deepseek.com) (`deepseek-chat` model).
+Requires Python 3.11+.
 
 ---
 
@@ -54,68 +62,98 @@ python des.py --reset
 python des.py "Your research question here"
 ```
 
+### Anti-Delphi Mode (multi-model)
+
+Anti-Delphi assigns two isolated LLM roles to T5, T6, and T9 activations:
+the `hypothesis_builder` generates claims; the `falsifier` challenges them.
+Each role can use a different model or provider.
+
+```bash
+# Symmetric: both roles use DeepSeek
+python des.py "Your question" --anti-delphi \
+  --builder-model deepseek-chat --builder-provider deepseek \
+  --falsifier-model deepseek-chat --falsifier-provider deepseek
+
+# Asymmetric: DeepSeek builder, GPT-4o falsifier
+python des.py "Your question" --anti-delphi \
+  --builder-model deepseek-chat --builder-provider deepseek \
+  --falsifier-model openai/gpt-4o --falsifier-provider openrouter
+
+# Symmetric Claude (via OpenRouter)
+python des.py "Your question" --anti-delphi \
+  --builder-model anthropic/claude-sonnet-4-5 --builder-provider openrouter \
+  --falsifier-model anthropic/claude-sonnet-4-5 --falsifier-provider openrouter
+```
+
 ---
 
-## Example Output
+## Batch Runners
 
-```
-Dynamic Epistemic Sequencer v0.1
-Research question: Is nuclear energy a net positive for climate goals given deployment costs?
-------------------------------------------------------------
-Generating initial claim via LLM...
-Initial claim: [C001] nuclear energy has contested net positive effects on climate goals
+| Script | Description |
+|---|---|
+| `run_batch.py` | Single-agent batch: 13 questions |
+| `run_batch_antidelphi.py` | Anti-Delphi DS4_DS4: 13 questions |
+| `run_batch_multimodel.py` | 4 combos × 13 questions = 52 runs |
+| `run_pilot.py` | 7 combos × 3 questions = 21-run pilot |
+| `compare_multimodel.py` | Three-way comparison: SA / AD-DS4 / MM combos |
+| `run_baseline.py` | DES vs Adversarial CoT (v1, biased — archived) |
+| `run_baseline_v2.py` | DES vs Adversarial CoT (v2, blind evaluation) |
+| `test_process_quality.py` | Algorithmic process quality metrics M1–M5 |
 
-=== DES Iteration 1 ===
-Focus Claim: C001 [status=hypothesis, confidence=0.52]
-  subject: nuclear energy
-  predicate: has contested net positive effects on
-  object: climate goals given deployment costs and lifecycle emissions
-Trigger: T3 (t3_request_evidence)
-Operation: t3_request_evidence
-Result: Evidence added: [Simulated evidence for: nuclear energy climate goals]
-S(t): 1 claims active, 0 sealed, 0 weak candidates
+---
 
-=== DES Iteration 2 ===
-Focus Claim: C001 [status=disputed, confidence=0.52]
-  subject: nuclear energy
-  predicate: has contested net positive effects on
-  object: climate goals given deployment costs and lifecycle emissions
-Trigger: T4 (t4_decompose_claim)
-Operation: t4_decompose_claim
-Result: Decomposed into sub-claims: C002, C003
-S(t): 2 claims active, 1 sealed, 0 weak candidates
+## Experimental Results
 
-=== DES Iteration 3 ===
-Focus Claim: C002 [status=unknown, confidence=0.62]
-  subject: nuclear energy
-  predicate: provides reliable low-carbon baseload power for
-  object: decarbonizing electricity grids in OECD countries
-Trigger: T3 (t3_request_evidence)
-Operation: t3_request_evidence
-Result: Evidence added: [Simulated evidence for: nuclear energy decarbonizing electricity grids]
-S(t): 2 claims active, 1 sealed, 0 weak candidates
+### Full Multi-Model Batch (52 runs)
 
-=== DES Iteration 4 ===
-Focus Claim: C003 [status=unknown, confidence=0.35]
-  subject: nuclear energy
-  predicate: faces cost and timeline barriers that limit
-  object: its scalability as a primary climate solution
-Trigger: T5 (t5_generate_counter_hypothesis)
-Operation: t5_generate_counter_hypothesis
-Result: Counter-hypothesis generated [CONTRADICTS]: C004 — new reactor builds
-        show declining costs in South Korea and China, challenging the cost barrier argument
-S(t): 3 claims active, 1 sealed, 0 weak candidates
+4 combos × 13 questions. Results: `batch_results_multimodel/summary.md`
 
-=== DES Iteration 5 ===
-Focus Claim: C003 [status=contradicted, confidence=0.42]
-  subject: nuclear energy
-  predicate: faces cost and timeline barriers that limit
-  object: its scalability as a primary climate solution
-Trigger: T1 (t1_resolve_conflict)
-Operation: t1_resolve_conflict
-Result: BRANCH created: C003 -> B001, B002
-S(t): 4 claims active, 1 sealed, 0 weak candidates
-```
+| Combo | AvgClaims | AvgIter | T1 rate | T2 rate | Topology |
+|-------|-----------|---------|---------|---------|----------|
+| DS4_DS4 | 12.7 | 39.1 | 92% | 8% | 12 contested / 1 T2_path |
+| DS4_GPT4o | 12.5 | 39.6 | 85% | 15% | 11 contested / 2 T2_path |
+| GPT4o_DS4 | 12.4 | 39.1 | 85% | 15% | 11 contested / 2 T2_path |
+| Claude_Cl | 12.4 | 34.3 | 77% | 23% | 10 contested / 3 T2_path |
+
+100% success rate (52/52). 0 open claims at termination. No iteration budget exceeded.
+
+### Baseline Comparison v2 — DES vs Adversarial CoT (blind evaluation)
+
+13 questions. Blind A/B assignment. DES rendered as prose (no system labels).
+Results: `batch_results_baseline_v2/summary.md`
+
+| Metric | DES wins | CoT wins |
+|---|---|---|
+| Directional Commitment | 0/13 | 13/13 |
+| Contradiction Depth | 4/13 | 9/13 |
+| Synthesis Quality | 0/13 | 13/13 |
+| Epistemic Novelty | 9/13 | 4/13 |
+| **Overall** | **1/13** | **12/13** |
+
+CoT wins overall under blind evaluation. DES retains genuine advantage on Epistemic Novelty
+(9/13) and on multi-tension questions (E1). The v1 result (DES 12/13) reflected format and
+label bias introduced by presenting DES as a raw ClaimGraph dump with a "DES" label.
+
+### Process Quality Metrics (algorithmic, no LLM evaluation)
+
+5 metrics measuring epistemic process properties. Results: `batch_results_process_quality/summary.md`
+
+| Metric | DES | CoT | Max |
+|---|---|---|---|
+| M1 Contradiction Recovery | 1 | 0 | 1 |
+| M2 Duplicate Suppression | 1* | — | 1 |
+| M3 Branch Persistence | 2 | 0 | 2 |
+| M4 Session Recovery | 1 | 1† | 1 |
+| M5 Evidence Injection | 1 | 1† | 1 |
+| **TOTAL** | **6** | **2** | **6** |
+
+*M2: metric initially detected branch pairs (same SPO, different status) as near-duplicates;
+corrected to 1 — zero claims share the same SPO with the same status.  
+†CoT scores 1 on M4/M5 within the same session; cross-session recovery requires full
+context re-injection bounded by context window.
+
+**The v1/v2 LLM evaluation swing reflects measurement instrument choice, not a reversal of
+the architectural claim.** DES was designed for process properties (M1–M5), not prose aesthetics.
 
 ---
 
