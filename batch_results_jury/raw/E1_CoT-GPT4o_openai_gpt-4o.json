@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1017,
+    "completion_tokens": 410,
+    "total_tokens": 1427,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more straightforward and easier to follow than Output A, which is more technical and fragmented."
+    },
+    "directional_commitment": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs present clear claims and counterclaims, though Output A has more hedging with confidence levels."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explores deeper contradictions with multiple hypotheses, whereas Output B identifies a surface contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a more concise synthesis that considers specific conditions affecting outcomes."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A presents more nuanced and less obvious tensions, such as gender-based wage gaps."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A maintains multiple competing hypotheses in parallel, while Output B has a more linear approach."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a traceable reasoning process, though Output A's is more complex."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explicitly states confidence levels and scope conditions, offering more disciplined evidence handling."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A provides a more comprehensive epistemic structure, despite being less readable than Output B."
+    }
+  }
+}
