@@ -1,0 +1,64 @@
+{
+  "qid": "D1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1136,
+    "completion_tokens": 602,
+    "total_tokens": 1738,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A presents a clear linear narrative with labeled steps, while Output B uses fragmented lists with technical notation that requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B makes specific directional claims with confidence scores (0.45 main claim, 0.82 for short-term), while Output A hedges with 'can be effective' and 'comparable to other diets'."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B identifies fundamental tension between weight regain and sustained loss at 12 months with competing hypotheses both at 0.90 confidence, while Output A only notes surface-level effectiveness vs. comparability."
+    },
+    "synthesis_quality": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output B provides scope-bounded syntheses with specific conditions (protein intake, 12-month timeframe, baseline insulin resistance), while Output A offers vague qualifiers like 'individual results may vary'."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B surfaces non-obvious tensions like high baseline insulin resistance as a moderator and protein intake effects, while Output A only mentions the obvious metabolic adaptation concern."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output B explicitly maintains two competing hypotheses about weight regain in parallel with equal confidence, while Output A collapses to a single hedged conclusion."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides claim counts and operation counts (14 claims, 48 operations) enabling state reconstruction, while Output A shows step progression but lacks quantitative traceability."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly bounds claims with timeframes (\u22646 months, 12 months), population conditions (high baseline insulin resistance), and intervention details (protein emphasis), while Output A lacks specific scope conditions."
+    },
+    "overall": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output B demonstrates superior epistemic structure through parallel hypothesis maintenance, explicit scope-bounding, and traceable reasoning state, despite lower readability."
+    }
+  }
+}
