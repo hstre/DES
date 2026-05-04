@@ -1,0 +1,64 @@
+{
+  "qid": "A2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1059,
+    "completion_tokens": 555,
+    "total_tokens": 1614,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more clearly structured with step-by-step reasoning and plain language, while Output A is more fragmented and list-like."
+    },
+    "directional_commitment": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B makes a clear, conditional claim with explicit scope conditions, whereas Output A's main claim has low confidence (0.45) and includes contradictory sub-claims."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explicitly maintains two competing hypotheses with equal high confidence (0.90), revealing a deeper structural contradiction, while Output B only notes a surface-level contradiction between initial and counter-claim."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a precise, scope-bounded synthesis with specific conditions (governance, sector, dependency), whereas Output A's synthesis conclusions are vague and have low confidence (0.50)."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs capture the standard tension in the literature (conditional effectiveness vs. dependency/corruption), but neither introduces a truly non-obvious insight beyond what a domain expert would already know."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly lists and maintains two competing hypotheses in parallel with equal support, while Output B resolves the contradiction into a single conditional synthesis without preserving both branches."
+    },
+    "process_traceability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B provides a clear step-by-step reasoning process (initial claim, falsification, contradiction check, synthesis), whereas Output A's epistemic operations are opaque and not recoverable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly ties its synthesis to scope conditions (governance, sector, conflict status), while Output A's claims lack clear scope boundaries and evidence status."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more epistemically disciplined with clearer reasoning, scope conditions, and directional commitment, though Output A better preserves contradictory branches."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "A1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1054,
+    "completion_tokens": 390,
+    "total_tokens": 1444,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is clearer and more concise, while Output B is more complex and harder to follow."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides more specific directional claims with confidence levels, whereas Output A is more general."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs identify fundamental contradictions but do not deeply explore them."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a more context-dependent synthesis, whereas Output B's synthesis is less precise."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B presents non-obvious tensions like monopsony power, which are valuable for domain experts."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B maintains competing hypotheses more explicitly in parallel."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a traceable reasoning process, but neither is superior in clarity."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A more explicitly discusses scope conditions and evidence status."
+    },
+    "overall": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have strengths and weaknesses across different dimensions, balancing out overall."
+    }
+  }
+}

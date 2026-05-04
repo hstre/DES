@@ -1,0 +1,64 @@
+{
+  "qid": "B2",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1005,
+    "completion_tokens": 606,
+    "total_tokens": 1611,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B provides clear step-by-step progression with labeled sections, while Output A presents fragmented claims with internal inconsistencies that obscure meaning."
+    },
+    "directional_commitment": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output B makes explicit directional claims in each step before synthesis, while Output A shows contradictory confidence levels (0.45 for main claim, 0.82 and 0.85 for opposing sub-claims) without clear resolution."
+    },
+    "contradiction_depth": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A surfaces a fundamental tension between self-perceived and objective productivity metrics, while Output B identifies the more conventional collaboration-vs-focus tradeoff."
+    },
+    "synthesis_quality": {
+      "DES": 0.2,
+      "CoT": 0.8,
+      "reason": "Output B provides precise scope-bounding by task type, interdependence, and context with clear contingencies, while Output A leaves contradictory claims unresolved with low confidence."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A identifies the non-obvious disconnect between worker self-reports and organizational metrics, a subtle epistemic problem; Output B covers well-known remote work tradeoffs."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A maintains multiple competing claims in parallel (though confusingly), while Output B collapses branches into a single synthesized view without preserving the original hypotheses as live alternatives."
+    },
+    "process_traceability": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B explicitly labels reasoning steps and shows claim evolution from initial to counter to synthesis, while Output A lists operations count but doesn't show the transformation path clearly."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B explicitly bounds its synthesis with scope conditions (task type, team structure, management practices), while Output A presents confidence scores without articulating their evidential basis or scope limits."
+    },
+    "overall": {
+      "DES": 0.42,
+      "CoT": 0.58,
+      "reason": "Output B provides superior synthesis quality, scope discipline, and traceability despite lower epistemic novelty; Output A's valuable insight about self-report vs. objective metrics is undermined by poor integration and contradictory structure."
+    }
+  }
+}

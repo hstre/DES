@@ -1,0 +1,64 @@
+{
+  "qid": "A3",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1017,
+    "completion_tokens": 477,
+    "total_tokens": 1494,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more concise and easier to follow, while Output B is dense and technical."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B makes clear directional claims with explicit confidence levels, whereas Output A hedges heavily in the synthesis."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B identifies and maintains multiple fundamental contradictions across competing hypotheses, while Output A only notes a surface-level contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides more precise, scope-bounded synthesis conclusions with confidence, whereas Output A offers a generic context-dependent statement."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B surfaces non-obvious tensions (e.g., local vs. aggregate effects, capital mobility) that a domain expert would value, while Output A stays at a general level."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains and labels multiple competing hypotheses in parallel, while Output A collapses into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides a detailed claim history and epistemic operations count, making reasoning recoverable, unlike Output A's minimal step structure."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B includes explicit scope conditions (e.g., short-term, low-skilled, local markets) and confidence levels, while Output A mentions factors without systematic scope bounding."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B demonstrates superior epistemic structure, contradiction handling, and traceability, outweighing Output A's readability advantage."
+    }
+  }
+}

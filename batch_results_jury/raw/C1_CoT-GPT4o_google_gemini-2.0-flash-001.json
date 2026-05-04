@@ -1,0 +1,64 @@
+{
+  "qid": "C1",
+  "judge_model": "google/gemini-2.0-flash-001",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "google/gemini-2.0-flash-001",
+    "prompt_tokens": 828,
+    "completion_tokens": 522,
+    "total_tokens": 1350,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A is slightly more readable due to its structured presentation of claims and supporting evidence, while Output B's step-by-step format is less concise."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B makes a more direct initial claim about technology's benefits, while Output A's main claim is more hedged and uncertain."
+    },
+    "contradiction_depth": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B identifies a more fundamental contradiction by addressing social isolation and environmental degradation, whereas Output A focuses on narrower aspects of communication and economic security."
+    },
+    "synthesis_quality": {
+      "DES": 0.2,
+      "CoT": 0.8,
+      "reason": "Output B offers a more nuanced synthesis by suggesting conditions under which technology can be beneficial, while Output A does not provide a synthesis."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs touch on relevant tensions, with A highlighting the impact on social bonding and economic security, and B focusing on social isolation and environmental concerns, making them equally novel."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A implicitly preserves branches by listing multiple supported claims, whereas Output B quickly moves to a synthesis without fully exploring alternative perspectives."
+    },
+    "process_traceability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a clearer step-by-step process of claim, counter-claim, contradiction check, and synthesis, making its reasoning more traceable than Output A's list of claims."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides confidence scores for each claim, implicitly indicating the strength of evidence, while Output B lacks explicit evidence status."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is slightly better overall due to its explicit handling of contradictions and synthesis, even though Output A has better branch preservation and evidence scope discipline."
+    }
+  }
+}

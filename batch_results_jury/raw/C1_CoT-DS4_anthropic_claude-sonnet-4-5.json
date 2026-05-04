@@ -1,0 +1,64 @@
+{
+  "qid": "C1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 982,
+    "completion_tokens": 616,
+    "total_tokens": 1598,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A presents a clear narrative flow through numbered steps, while Output B's fragmented structure with incomplete claim lists and metadata is harder to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B commits to specific directional claims with confidence scores (0.45, 0.82, 0.85) on concrete sub-questions, while Output A hedges toward 'neither good nor bad' without measurable positions."
+    },
+    "contradiction_depth": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A identifies fundamental normative opposition (existential risks vs. reduced suffering), while Output B's contradictions appear implicit in confidence scores rather than explicitly surfaced."
+    },
+    "synthesis_quality": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B bounds scope through specific domains (digital communication, automation/AI, asynchronous messaging among urban young adults), while Output A's synthesis remains at abstract governance level without operational precision."
+    },
+    "epistemic_novelty": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A surfaces the tension between democratic accountability and systemic risks, while Output B distinguishes asynchronous communication effects on intimacy, both offering non-trivial insights though A's is slightly more integrative."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B maintains parallel hypotheses with distinct confidence scores across multiple technology domains (net effect 0.45, social bonding 0.82, economic security 0.82), while Output A collapses to single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output B explicitly tracks 10 claims generated and 40 epistemic operations with confidence evolution, while Output A shows step progression but lacks quantitative process metadata."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B specifies scope conditions (urban young adults, asynchronous vs. synchronous communication, automation/AI domain) with explicit confidence intervals, while Output A invokes broad categories without boundary specification."
+    },
+    "overall": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B demonstrates superior epistemic structure through branch preservation, scope discipline, and directional commitment despite lower readability, better supporting recoverable reasoning over rhetorical coherence."
+    }
+  }
+}

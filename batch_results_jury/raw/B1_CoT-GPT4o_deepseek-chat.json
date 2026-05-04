@@ -1,0 +1,64 @@
+{
+  "qid": "B1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 936,
+    "completion_tokens": 449,
+    "total_tokens": 1385,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A is more concise and linearly structured, while Output B is somewhat fragmented but still clear."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A makes a clear directional shift from initial claim to synthesis, whereas Output B maintains multiple hedged claims with lower confidence."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both identify the core contradiction (GDP's omissions vs. its utility), but neither explores deeper structural tensions."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A provides a bounded synthesis with explicit limitations, while Output B offers multiple synthesis conclusions with moderate confidence."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B introduces non-obvious tensions like negative correlation with life satisfaction under inequality, which a domain expert would value."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B explicitly maintains multiple competing hypotheses in parallel, while Output A collapses into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Output A shows step-by-step reasoning, Output B lists claims and operations; both are traceable but in different formats."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A explicitly bounds GDP's usefulness, while Output B includes scope conditions implicitly through confidence levels."
+    },
+    "overall": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have complementary strengths: A is clearer and more synthesized, B is more epistemically rich and branch-preserving."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "D1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1098,
+    "completion_tokens": 570,
+    "total_tokens": 1668,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more rhetorically clear and easier to follow due to its step-by-step narrative, while Output A is more fragmented and list-like."
+    },
+    "directional_commitment": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B makes a clear directional claim (initial claim and counter-claim) and a decisive synthesis, whereas Output A hedges with multiple competing claims of equal confidence."
+    },
+    "contradiction_depth": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A explicitly identifies and maintains two fundamentally contradictory hypotheses (weight regain vs. no regain) with high confidence, while Output B only notes a surface-level contradiction between initial and counter-claim."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a more precise and scope-bounded synthesis (e.g., specifying 'not clearly superior' and 'viable for individuals'), whereas Output A's syntheses are vague and low-confidence."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A surfaces non-obvious tensions like the role of baseline insulin resistance and protein intake, which a domain expert would value, while Output B's points are more standard."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with equal support, whereas Output B discards the initial claim after contradiction and moves to a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.2,
+      "CoT": 0.8,
+      "reason": "Output B provides a fully traceable step-by-step reasoning process (initial claim, falsification, contradiction check, synthesis), while Output A's claim history is opaque and not recoverable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A includes explicit scope conditions (e.g., 'short-term \u22646 months', 'high baseline insulin resistance') and confidence levels, whereas Output B's scope conditions are implicit and less disciplined."
+    },
+    "overall": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have complementary strengths: Output A excels in contradiction depth and branch preservation, while Output B excels in readability, directional commitment, and process traceability."
+    }
+  }
+}

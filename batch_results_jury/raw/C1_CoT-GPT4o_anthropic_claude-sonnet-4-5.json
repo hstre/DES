@@ -1,0 +1,64 @@
+{
+  "qid": "C1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 881,
+    "completion_tokens": 623,
+    "total_tokens": 1504,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B presents a clear step-by-step narrative structure that's easier to follow, while Output A's fragmented list format with incomplete sentences requires more interpretive effort."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A makes specific directional claims about digital communication reducing emotional intimacy and effects on economic security, while Output B hedges with conditional qualifiers like 'when developed with consideration.'"
+    },
+    "contradiction_depth": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A implicitly captures the tension between net effects being uncertain (0.45 confidence) while specific mechanisms show strong effects, whereas Output B identifies a surface-level benefit-vs-harm contradiction without exploring structural tensions."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B explicitly bounds its synthesis with scope conditions (development and use considerations), while Output A leaves the relationship between its specific claims and overall conclusion implicit and unresolved."
+    },
+    "epistemic_novelty": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A identifies the non-obvious tension that asynchronous communication specifically affects emotional intimacy in urban young adults, while Output B's social isolation and environmental concerns are conventional critiques."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A maintains parallel hypotheses with distinct confidence levels across multiple technology domains (communication, automation, AI), while Output B collapses alternatives into a single conditional synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides metadata on epistemic operations (40 applied) and total claims generated (10), offering some insight into reasoning depth, while Output B shows explicit steps but no quantitative trace of exploration breadth."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A explicitly scopes claims to specific populations and contexts (urban young adults, asynchronous communication types) with confidence intervals, while Output B makes broad unscoped assertions about 'society' and 'technology' generally."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A demonstrates superior epistemic rigor through specific scoped claims, parallel hypothesis maintenance, and explicit uncertainty quantification, despite lower rhetorical polish, while Output B prioritizes narrative coherence over epistemic structure."
+    }
+  }
+}

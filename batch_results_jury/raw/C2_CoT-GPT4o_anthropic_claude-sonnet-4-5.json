@@ -1,0 +1,64 @@
+{
+  "qid": "C2",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1013,
+    "completion_tokens": 600,
+    "total_tokens": 1613,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B presents a clear sequential narrative with labeled steps, while Output A's fragmented structure with confidence scores and metadata requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A makes specific directional claims about inequality effects (increases vs. reduces) with quantified confidence, while Output B hedges with 'can be beneficial... but also' formulations."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A identifies a fundamental tension (globalization both reduces AND increases inequality within developed economies, both at 0.90 confidence), while Output B's contradiction is more surface-level (beneficial vs. harmful)."
+    },
+    "synthesis_quality": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A provides scope-bounded syntheses distinguishing financial globalization from general globalization and specifying 'within countries,' while Output B's synthesis remains broad and conditional."
+    },
+    "epistemic_novelty": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A surfaces the non-obvious tension that identical confidence levels (0.90) support opposite conclusions about inequality in developed economies, while Output B presents conventional wisdom about trade-offs."
+    },
+    "branch_preservation": {
+      "DES": 0.85,
+      "CoT": 0.15,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with equal confidence scores, while Output B collapses contradictions into a single hedged synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A provides quantified metadata (12 claims, 40 operations, confidence scores per claim) enabling state reconstruction, while Output B shows only a linear four-step process without recoverable intermediate states."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly scopes claims to 'within countries,' 'developed economies,' and 'financial globalization' with evidence status markers, while Output B uses vague conditionals like 'if not managed' without clear scope boundaries."
+    },
+    "overall": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A demonstrates superior epistemic structure through parallel branch maintenance, quantified uncertainty, and traceable reasoning state, despite lower rhetorical polish."
+    }
+  }
+}

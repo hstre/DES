@@ -1,0 +1,64 @@
+{
+  "qid": "A2",
+  "judge_model": "google/gemini-2.0-flash-001",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "google/gemini-2.0-flash-001",
+    "prompt_tokens": 1092,
+    "completion_tokens": 491,
+    "total_tokens": 1583,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more readable due to its structured step-by-step approach and clear language."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A makes more specific directional claims, even if the confidence is lower, while Output B's claims are more hedged."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly identifies and addresses the contradiction between the initial claim and counter-claim, leading to a more nuanced synthesis."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B's synthesis is more precise and scope-bounded, specifying conditions under which aid is effective or ineffective."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs touch on relevant tensions, such as the conditions under which aid is effective, so they are roughly equal in epistemic novelty."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A explicitly maintains competing hypotheses in parallel, whereas Output B quickly moves to a synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides a count of epistemic operations, but Output B's step-by-step approach offers clearer traceability of the reasoning process."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B is more explicit about scope conditions (e.g., governance, sector targeting) and implicitly references evidence, while Output A lacks this level of detail."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a more structured and nuanced analysis of the research question, addressing contradictions and specifying scope conditions, leading to a more comprehensive synthesis, even though A better preserves branches."
+    }
+  }
+}
