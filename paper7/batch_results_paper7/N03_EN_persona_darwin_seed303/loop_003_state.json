@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "exhibit overhead that scales quadratically with sequence length, negating efficiency gains only beyond a threshold of 8K tokens",
+      "object": "the existence and location of a quadratic scaling breakpoint",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules the existence and location of a quadratic scaling breakpoint]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Empirical results show that linear attention variants can outperform causal transformers at very long lengths, but for sequences under 8K tokens, the quadratic overhead may be offset by better parallelism or hardware utilization\u2014yet published benchmarks often use synthetic tasks, leaving real-world NLP/VL tasks ambiguous."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "exhibit overhead that scales quadratically with sequence length",
+      "object": "a breakpoint at 8K tokens where efficiency gains are negated",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules a breakpoint at 8K tokens where efficiency gains are negated]"
+      ],
+      "scope": {
+        "domain": "general sequence modeling benchmarks"
+      },
+      "qualifier": {
+        "temporal": "as of current model architectures and hardware (2025)",
+        "geographic": "evaluated on standard academic benchmarks in English-language NLP settings"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Linear attention variants",
+      "predicate": "outperform causal transformers in throughput and memory efficiency",
+      "object": "sequences longer than 8K tokens",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear attention variants sequences longer than 8K tokens]"
+      ],
+      "scope": {
+        "domain": "synthetic long-range tasks"
+      },
+      "qualifier": {
+        "tension": "empirical gains on synthetic tasks may not transfer to real-world NLP/VL tasks due to differences in attention sparsity and token dependencies"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "maintain competitive speed and hardware utilization",
+      "object": "sequences under 8K tokens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules sequences under 8K tokens]"
+      ],
+      "scope": {
+        "domain": "real-world NLP/VL tasks with moderate sequence lengths"
+      },
+      "qualifier": {
+        "tension": "parallelism and kernel optimizations may offset quadratic overhead, contradicting the existence of a sharp 8K breakpoint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "CausalFormer-style causal reasoning modules with adaptive sparse attention masks",
+      "predicate": "exhibit overhead that scales linearly with sequence length up to 16K tokens, then shifts to subquadratic scaling",
+      "object": "a breakpoint at 16K tokens where efficiency gains are restored relative to standard CausalFormer",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules with adaptive sparse attention masks a breakpoint at 16K tokens where efficiency gains are restored relative to standard CausalFormer]",
+        "[PATH:empirical] Controlled ablation experiments comparing CausalFormer variants with and without adaptive sparse attention masks on sequences of lengths 8K, 16K, 24K, and 32K tokens, measuring wall-clock time and FLOPs per step \u2014 Directly tests the hypothesized breakpoint by observing whether overhead scales linearly up to 16K and then becomes subquadratic, providing concrete evidence for the efficiency shift.",
+        "[PATH:theoretical] Theoretical analysis of the computational complexity of adaptive sparse attention masks as a function of sequence length, deriving the crossover point where sparsity patterns reduce effective attention computation below O(n^2) \u2014 Provides a formal proof or bound that predicts the 16K breakpoint, which can be compared with empirical results to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "general sequence modeling benchmarks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 model architectures",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "maintain efficiency gains beyond 8K tokens",
+      "object": "overhead does not scale quadratically with sequence length",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules overhead does not scale quadratically with sequence length]",
+        "[PATH:empirical] Run controlled scaling experiments with CausalFormer modules on sequence lengths from 2K to 64K tokens, measuring FLOPs and wall-clock time against quadratic baseline (e.g., standard attention). \u2014 Direct empirical measurement of computational overhead across increasing sequence lengths can confirm whether scaling remains sub-quadratic beyond 8K tokens, providing a clear refutation or confirmation of the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the attention mechanism in CausalFormer: derive the asymptotic complexity of its causal masking and reasoning operations, comparing to O(n^2) standard attention. \u2014 A formal complexity proof would establish whether the module's design inherently avoids quadratic scaling, independent of implementation details, and can be validated against empirical results.",
+        "[PATH:literature] Survey and benchmark of recent sparse attention and state-space model literature (e.g., Mamba, LongNet, Hyena) that report sub-quadratic scaling for long sequences; compare CausalFormer's reported efficiency claims to these baselines. \u2014 Contextualizing CausalFormer within the broader landscape of efficient sequence models can reveal whether its overhead is truly novel or if similar scaling properties are already established, helping to assess the plausibility of the hypothesis."
+      ],
+      "scope": {
+        "domain": "general sequence modeling benchmarks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Linear attention variants",
+      "predicate": "fail to outperform causal transformers in throughput and memory efficiency",
+      "object": "real-world NLP/VL sequences longer than 8K tokens with high token dependency density",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear attention variants real-world NLP/VL sequences longer than 8K tokens with high token dependency density]",
+        "[PATH:empirical] Benchmark evaluation of linear attention models (e.g., Mamba, Linear Transformer, Performer) on long-context NLP/VL tasks such as LongBench, Scrolls, or Video-MME with sequences >8K tokens and high dependency density (e.g., multi-hop reasoning, long-range coreference, temporally coherent video frames). \u2014 Directly tests the hypothesis by measuring throughput and memory efficiency against causal transformers (e.g., Llama 2/3, GPT-4) under realistic long-context conditions, controlling for token dependency density via task selection.",
+        "[PATH:theoretical] Theoretical complexity analysis comparing linear attention kernel approximations (e.g., FAVOR+, cosFormer) vs. standard softmax attention in terms of memory footprint and FLOPs for sequences >8K tokens, incorporating real-world sparsity patterns and causal masking overhead. \u2014 Provides formal bounds on when linear attention's theoretical O(n) advantage is eroded by practical factors (e.g., kernel rank, normalization costs, causal mask inefficiency) in high-dependency-density regimes, clarifying if the hypothesis holds in principle.",
+        "[PATH:literature] Systematic literature review of recent (2024-2025) empirical studies on long-context linear attention, focusing on throughput and memory benchmarks from papers such as 'LongNet', 'Transformer-VQ', or 'RWKV' that include comparisons with causal transformers on real-world tasks with >8K tokens. \u2014 Aggregates existing evidence to assess consensus, identify contradictory findings, and reveal dependencies on implementation details (e.g., chunking, kernel design) that may explain why linear attention variants fail to outperform in practice."
+      ],
+      "scope": {
+        "domain": "real-world NLP/VL tasks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Causal transformers",
+      "predicate": "offer superior performance and robustness",
+      "object": "real-world NLP/VL tasks with sequences longer than 8K tokens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Causal transformers real-world NLP/VL tasks with sequences longer than 8K tokens]",
+        "[PATH:empirical] Comparative benchmarks on long-document NLP tasks (e.g., SCROLLS, Long Range Arena) using causal vs. bidirectional transformer variants, controlling for model size and training data. \u2014 Directly tests the hypothesis by measuring performance and robustness (e.g., perplexity, accuracy, sensitivity to noise) on sequences >8K tokens, providing evidence for or against the claim.",
+        "[PATH:theoretical] Theoretical analysis of attention complexity and positional encoding in causal transformers for long sequences, focusing on memory constraints and error propagation. \u2014 Examines whether causal masking inherently limits information flow or enables better locality, which would predict superior or inferior performance on extended contexts.",
+        "[PATH:literature] Meta-analysis of existing literature on transformer variants (e.g., GPT, Llama, Longformer) applied to real-world long-form tasks (e.g., legal document summarization, video captioning) with sequence lengths >8K. \u2014 Aggregates published results to identify patterns in performance and robustness, helping to confirm or refute the hypothesis across diverse domains and models."
+      ],
+      "scope": {
+        "domain": "real-world NLP/VL tasks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Linear attention variants",
+      "predicate": "outperform causal transformers in throughput and memory efficiency",
+      "object": "sequences longer than 8K tokens on synthetic long-range tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Linear attention variants outperform causal transformers in throughput and memory efficiency sequences longer than 8K tokens on synthetic long-range tasks in domain 'synthetic long-range tasks']"
+      ],
+      "scope": {
+        "domain": "synthetic long-range tasks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Linear attention variants",
+      "predicate": "fail to outperform causal transformers in throughput and memory efficiency",
+      "object": "real-world NLP/VL tasks with sequences longer than 8K tokens",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Linear attention variants fail to outperform causal transformers in throughput and memory efficiency real-world NLP/VL tasks with sequences longer than 8K tokens in domain 'synthetic long-range tasks']"
+      ],
+      "scope": {
+        "domain": "synthetic long-range tasks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "exhibit a measurable throughput cliff above 6K tokens due to memory-bound attention patterns",
+      "object": "sequences between 6K and 8K tokens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules sequences between 6K and 8K tokens]",
+        "[PATH:empirical] Conduct controlled profiling experiments on a CausalFormer-style model (e.g., a causal transformer with local/global attention) using sequences of lengths 4K, 6K, 7K, and 8K on real-world NLP/VL tasks, measuring throughput (tokens/sec) and memory bandwidth utilization (e.g., via NVIDIA Nsight or PyTorch Profiler). \u2014 Directly tests the hypothesized throughput cliff at 6K tokens and isolates memory bandwidth saturation as the cause by correlating throughput drops with memory-bound kernel execution times.",
+        "[PATH:theoretical] Perform a theoretical roofline analysis of the attention mechanism in CausalFormer-style modules, computing operational intensity (FLOPs/byte) for each sequence length and identifying the point where memory bandwidth becomes the bottleneck rather than compute. \u2014 Confirms whether the 6K-8K range is consistent with the predicted transition from compute-bound to memory-bound behavior, providing a principled basis for the observed degradation.",
+        "[PATH:literature] Review existing literature on attention efficiency at scale (e.g., FlashAttention, Ring Attention, or LongNet), focusing on empirical throughput curves and memory bandwidth saturation thresholds reported for causal attention variants. \u2014 Places the hypothesis in context of prior findings; if prior work shows cliffs near 6K-8K tokens under similar hardware, it strengthens the claim; if not, it suggests the effect may be model- or implementation-specific."
+      ],
+      "scope": {
+        "domain": "real-world NLP/VL tasks with moderate sequence lengths"
+      },
+      "qualifier": {
+        "tension": "refines the 8K breakpoint downward, attributing the degradation to memory bandwidth saturation rather than pure quadratic compute"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "CausalFormer-style causal reasoning modules",
+      "predicate": "do not maintain competitive speed and hardware utilization",
+      "object": "sequences under 8K tokens",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer-style causal reasoning modules sequences under 8K tokens]"
+      ],
+      "scope": {
+        "domain": "real-world NLP/VL tasks with moderate sequence lengths"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "globally, based on available benchmarks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Linear attention variants",
+      "predicate": "fail to outperform causal transformers in throughput and memory efficiency",
+      "object": "real-world NLP/VL sequences longer than 8K tokens with structured token dependencies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "real-world NLP and vision-language tasks"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Causal transformers",
+      "predicate": "outperform linear attention variants in handling complex token dependencies",
+      "object": "real-world NLP/VL tasks with sequences longer than 8K tokens",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "real-world applications"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
