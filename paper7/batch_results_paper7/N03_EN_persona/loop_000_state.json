@@ -1,0 +1,399 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Artificial general intelligence",
+      "predicate": "is achievable within",
+      "object": "20 years",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 20 years]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Artificial general intelligence",
+      "predicate": "is achievable within",
+      "object": "10 years",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 10 years]"
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "from 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Artificial general intelligence",
+      "predicate": "may be achievable only after",
+      "object": "50 years",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 50 years]"
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "condition": "if fundamental breakthroughs in reasoning and common sense are required"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Artificial general intelligence",
+      "predicate": "is achievable within",
+      "object": "10 years, but only if a major breakthrough in energy-efficient neuromorphic hardware occurs by 2027",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 10 years, but only if a major breakthrough in energy-efficient neuromorphic hardware occurs by 2027]",
+        "[PATH:empirical] Annual progress reports from major neuromorphic computing initiatives (e.g., Intel Loihi, IBM TrueNorth, SpiNNaker) tracking energy efficiency (FLOPS/watt) and scaling to brain-scale networks \u2014 Directly measures whether the hypothesized hardware breakthrough (energy-efficient neuromorphic chips) is occurring by 2027, which is the necessary condition for the AGI timeline.",
+        "[PATH:literature] Meta-analysis of historical AI hardware roadmaps and AGI timelines (e.g., from AI Impacts, Epoch AI) comparing predicted vs. actual compute growth and architectural shifts \u2014 Tests the conditional claim by examining past correlations between hardware breakthroughs and AGI progress, and assesses whether a 2027 neuromorphic breakthrough is plausible given current trends.",
+        "[PATH:theoretical] Theoretical modeling of energy constraints on AGI training/inference (e.g., using Landauer's principle, neuromorphic vs. digital compute efficiency limits) \u2014 Evaluates whether the claimed energy-efficiency threshold is physically and mathematically necessary for AGI within 10 years, and whether any alternative pathway could bypass the hardware condition."
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "by 2034, conditional on breakthrough by 2027",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Artificial general intelligence",
+      "predicate": "is not achievable within",
+      "object": "10 years",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 10 years]",
+        "[PATH:empirical] Tracking of historical AI capability benchmarks (e.g., ARC-AGI, GPQA, and other general intelligence tests) against a timeline of compute growth and algorithmic efficiency gains \u2014 If benchmark progress continues to accelerate at a rate that predicts human-level generality within 10 years, the hypothesis is refuted; if progress plateaus or slows, the hypothesis is supported.",
+        "[PATH:literature] Survey of expert forecasts and Delphi studies on AGI timelines (e.g., AI Impacts, M\u00fcller & Bostock 2022, recent surveys of ML researchers) \u2014 Systematic aggregation of expert opinions provides a probabilistic basis for evaluating whether the 10-year threshold is widely considered plausible, and can be updated as new evidence emerges.",
+        "[PATH:theoretical] Theoretical analysis of fundamental limitations in current deep learning architectures (e.g., scaling laws, in-context learning bounds, and the need for causal or symbolic reasoning) \u2014 If formal results show that current paradigms cannot achieve general intelligence without a major breakthrough, the hypothesis is supported; if no such principled barriers exist, refutation becomes more likely."
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Artificial general intelligence",
+      "predicate": "will be achievable within",
+      "object": "20 years",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 20 years]",
+        "[PATH:empirical] Longitudinal tracking of AI benchmark performance (e.g., ARC-AGI, MMLU, and other general intelligence proxies) against human baselines, with trend extrapolation using historical rate of improvement \u2014 Provides quantitative data on whether AI systems are closing the gap to human-level generality at a pace consistent with a 20-year horizon, allowing direct empirical test of the hypothesis.",
+        "[PATH:literature] Meta-analysis of expert surveys on AGI timelines (e.g., M\u00fcller & Bostock, 2014; Grace et al., 2018; recent AI Impacts surveys) combined with Delphi method updates \u2014 Aggregates and evaluates expert opinion trends over time, helping to assess whether the 55% confidence is supported by consensus or shifting due to recent breakthroughs.",
+        "[PATH:theoretical] Theoretical analysis of scaling laws and architectural constraints (e.g., compute requirements, algorithmic efficiency gains, and the 'bitter lesson' of historical AI progress) to model feasibility of AGI within 20 years \u2014 Identifies fundamental resource and algorithmic bottlenecks (e.g., energy, data, or reasoning limitations) that could either confirm or refute the plausibility of achieving AGI by 2045."
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "from 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Artificial general intelligence",
+      "predicate": "may be achievable within",
+      "object": "10 years",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence 10 years]",
+        "[PATH:empirical] Tracking progress on AI benchmarks that measure general reasoning, transfer learning, and cross-domain problem-solving (e.g., ARC, MMLU, BIG-bench) over the next 5 years \u2014 Empirical performance trends on these benchmarks can indicate whether current AI systems are approaching human-level generality at an accelerating pace, providing direct evidence for or against a 10-year timeline.",
+        "[PATH:literature] Meta-analysis of expert surveys and prediction markets on AGI timelines (e.g., from AI Impacts, Metaculus, or annual surveys at NeurIPS/ICML) \u2014 Aggregating expert opinions and market-based forecasts can quantify the distribution of expected timelines, helping to assess whether the 10-year claim aligns with the broader research community's consensus or is an outlier.",
+        "[PATH:theoretical] Theoretical analysis of scaling laws and the limits of deep learning (e.g., work by scaling-law researchers like Kaplan, Hoffmann, or Sutton's bitter lesson argument) \u2014 Examining whether current scaling trends in compute, data, and model size can plausibly yield AGI within 10 years, or whether fundamental algorithmic breakthroughs are required, helps refute or support the hypothesis on theoretical grounds."
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Artificial general intelligence",
+      "predicate": "may be achievable in",
+      "object": "less than 50 years even without fundamental breakthroughs in reasoning and common sense",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Artificial general intelligence may be achievable in less than 50 years even without fundamental breakthroughs in reasoning and common sense in domain 'technology forecasting']"
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Artificial general intelligence",
+      "predicate": "may not be achievable even after",
+      "object": "50 years if fundamental breakthroughs in reasoning and common sense are required",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Artificial general intelligence may not be achievable even after 50 years if fundamental breakthroughs in reasoning and common sense are required in domain 'technology forecasting']"
+      ],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {
+        "temporal": "from 2025 to 2075",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Artificial general intelligence",
+      "predicate": "will be achievable within",
+      "object": "20 years",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Artificial general intelligence",
+      "predicate": "could be achieved within",
+      "object": "20 years",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "technology forecasting"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
