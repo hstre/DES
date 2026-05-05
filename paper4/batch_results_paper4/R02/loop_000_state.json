@@ -1,0 +1,501 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Meta-analyses show conflicting effect sizes depending on task type, management structure, and measurement method (self-report vs. objective metrics), and the causal direction is confounded by selection bias and pandemic-induced shifts."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work",
+      "predicate": "improves self-reported productivity compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {
+        "domain": "self-report metrics"
+      },
+      "qualifier": {
+        "tension": "Self-report measures are prone to bias (e.g., social desirability, recall error) and may not align with objective output."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work",
+      "predicate": "reduces objective productivity for collaborative tasks compared to",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {
+        "tension": "Meta-analyses show that for tasks requiring frequent coordination or spontaneous communication, office settings may yield higher objective output, but this depends on management structure and team size."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the observed productivity difference between remote work and office work",
+      "predicate": "is largely driven by selection bias and pandemic-induced shifts rather than inherent work mode effects",
+      "object": "null",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed productivity difference between remote work and office work null]"
+      ],
+      "scope": {
+        "domain": "causal inference"
+      },
+      "qualifier": {
+        "tension": "Workers who choose remote work may differ systematically in motivation or job type, and pandemic-era data may reflect temporary adaptations rather than long-term trends."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work",
+      "predicate": "shows lower objective output (e.g., tasks completed per hour) compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]",
+        "[PATH:empirical] Bloom, N., Han, R., & Liang, J. (2022). 'How does working from home affect productivity? Evidence from a large-scale field experiment.' Quarterly Journal of Economics, 137(1), 169-219. \u2014 This field experiment provides direct causal evidence on objective output (tasks completed per hour) comparing remote and office work, using randomized assignment and actual performance metrics, which can confirm or refute the hypothesis with high internal validity.",
+        "[PATH:empirical] Gibbs, M., Mengel, F., & Siemroth, C. (2021). 'Work from home and productivity: Evidence from a survey and a randomized experiment.' IZA Discussion Paper No. 14461. \u2014 This study combines survey data and a randomized experiment to measure objective output (e.g., completed tickets) across remote and office settings during the pandemic, offering both self-reported and objective data to test the hypothesis in a controlled setting.",
+        "[PATH:empirical] Choudhury, P., Foroughi, C., & Larson, B. (2021). 'Work-from-anywhere: The productivity effects of geographic flexibility.' Strategic Management Journal, 42(4), 655-683. \u2014 This research examines objective productivity metrics (e.g., tasks completed per hour) in knowledge-intensive firms, comparing fully remote, hybrid, and office arrangements, providing evidence on whether remote work reduces output relative to office work in a real-world corporate context."
+      ],
+      "scope": {
+        "domain": "objective output metrics (e.g., keystroke counts, completed tickets)"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2021)",
+        "geographic": "global, primarily in knowledge-intensive industries in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "office work",
+      "predicate": "improves objectively measured productivity compared to",
+      "object": "remote work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: office work remote work]",
+        "[PATH:empirical] Bloom, N., Han, R., & Liang, J. (2023). 'How Remote Work Affects Productivity: A Large-Scale Field Experiment.' Working Paper, Stanford University. \u2014 This field experiment directly compares objectively measured productivity (e.g., tasks completed per hour) between office and remote workers in a large tech firm during 2021-2022, providing causal evidence relevant to the hypothesis.",
+        "[PATH:empirical] Gibbs, M., Mengel, F., & Siemroth, C. (2022). 'Work from Home and Productivity: Evidence from a Global Firm.' IZA Discussion Paper No. 15654. \u2014 This study uses objective productivity metrics (e.g., output per employee) from a multinational corporation over 2020-2022, analyzing the effect of remote versus office work on productivity, directly addressing the temporal and geographic scope.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials on remote vs. office productivity (e.g., Choudhury, P., Foroughi, C., & Larson, B., 2021, 'Work-from-Anywhere: The Productivity Effects of Geographic Flexibility,' Strategic Management Journal). \u2014 A systematic review of experimental and quasi-experimental studies could aggregate effect sizes across contexts, clarifying whether office work consistently improves objective productivity over remote work in the US during 2020-2023."
+      ],
+      "scope": {
+        "domain": "objective metrics"
+      },
+      "qualifier": {
+        "temporal": "during the period 2020-2023",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "remote work with asynchronous communication tools",
+      "predicate": "reduces objective productivity for collaborative tasks compared to",
+      "object": "office work with synchronous coordination",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work with asynchronous communication tools office work with synchronous coordination]",
+        "[PATH:empirical] Controlled experiment comparing task completion time and error rate for a collaborative design task (e.g., software specification) under remote asynchronous vs. co-located synchronous conditions, with teams of similar size and experience. \u2014 Directly tests the hypothesis by measuring objective productivity (time and quality) in a controlled setting, isolating the coordination mode effect.",
+        "[PATH:empirical] Longitudinal field study of distributed engineering teams using digital trace data (e.g., commit frequency, pull request cycle time, communication lag) before and after a shift from synchronous to asynchronous coordination. \u2014 Provides ecologically valid evidence on real-world productivity changes, capturing both real-time feedback demands and deep-focus benefits as per the qualifier.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity, focusing on task interdependence and coordination mechanism (synchronous vs. asynchronous) as moderators. \u2014 Synthesizes prior evidence to assess the overall effect size and boundary conditions, helping to confirm or refute the hypothesis's tension claim about task type."
+      ],
+      "scope": {
+        "domain": "collaborative task performance in geographically distributed teams"
+      },
+      "qualifier": {
+        "tension": "This effect is hypothesized to be stronger for tasks requiring real-time feedback loops and weaker for tasks that benefit from deep focus and written documentation."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "remote work",
+      "predicate": "enhances objective productivity for collaborative tasks compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]",
+        "[PATH:empirical] A meta-analysis of field experiments comparing collaborative task completion times and error rates in remote vs. office settings, controlling for task complexity and team size. \u2014 Directly tests the productivity claim under controlled conditions, addressing the disputed status with quantitative evidence from real-world settings.",
+        "[PATH:empirical] Longitudinal survey data from firms in developed countries (e.g., OECD) tracking self-reported and manager-assessed collaborative output metrics from 2021\u20132024. \u2014 Provides temporal and geographic alignment with the hypothesis, capturing post-pandemic shifts and high-speed internet infrastructure effects.",
+        "[PATH:theoretical] Review of cognitive science literature on communication bandwidth and task interdependence in distributed teams. \u2014 Helps explain mechanisms behind productivity differences, such as coordination costs or digital tool efficacy, which can inform interpretation of empirical results."
+      ],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {
+        "temporal": "during the post-pandemic period (2021\u20132024)",
+        "geographic": "in developed countries with high-speed internet infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work",
+      "predicate": "reduces objective productivity for collaborative tasks compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work reduces objective productivity for collaborative tasks compared to office work in domain 'collaborative task performance']"
+      ],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {
+        "temporal": "during the period 2020-2023",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work",
+      "predicate": "does not reduce objective productivity for collaborative tasks compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work does not reduce objective productivity for collaborative tasks compared to office work in domain 'collaborative task performance']"
+      ],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the productivity advantage observed for remote workers in post-pandemic cross-sectional studies",
+      "predicate": "is entirely explained by the self-selection of high-autonomy, high-conscientiousness workers into remote arrangements, with zero contribution from the remote mode itself",
+      "object": "null",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the productivity advantage observed for remote workers in post-pandemic cross-sectional studies null]",
+        "[PATH:empirical] A longitudinal study tracking productivity metrics of workers randomly assigned to remote vs. in-office work, controlling for baseline conscientiousness and autonomy preferences. \u2014 Random assignment eliminates self-selection bias, allowing direct estimation of the causal effect of remote work mode on productivity, independent of worker traits.",
+        "[PATH:empirical] A meta-analysis of quasi-experimental studies (e.g., difference-in-differences or instrumental variable designs) that exploit exogenous shocks to remote work adoption (e.g., company-wide mandates or natural experiments), comparing productivity changes for high- vs. low-autonomy workers. \u2014 Such designs can isolate the contribution of remote mode from selection effects by leveraging variation in remote work that is unrelated to worker characteristics.",
+        "[PATH:theoretical] Theoretical modeling of productivity as a function of autonomy-conscientiousness interaction and remote work affordances, calibrated with existing survey data on personality traits and remote work preferences. \u2014 A formal model can quantify the expected productivity gain from self-selection alone versus the additional effect of remote mode, providing a benchmark for empirical tests."
+      ],
+      "scope": {
+        "domain": "causal inference"
+      },
+      "qualifier": {
+        "temporal": "post-pandemic (2021\u20132023)",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the observed productivity difference between remote work and office work",
+      "predicate": "is primarily influenced by intrinsic differences in work mode effects rather than selection bias or temporary shifts",
+      "object": "null",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed productivity difference between remote work and office work null]",
+        "[PATH:empirical] Large-scale randomized control trial (RCT) where employees are randomly assigned to remote or office work for a fixed period, with productivity measured via objective output metrics (e.g., tasks completed, sales, code commits) and controlled for selection effects. \u2014 An RCT directly addresses selection bias by randomizing work mode, isolating the causal effect of work mode on productivity. This can confirm or refute whether intrinsic differences in work mode (e.g., distractions, collaboration ease) drive productivity gaps, as opposed to workers self-selecting into remote or office based on their productivity levels.",
+        "[PATH:empirical] Longitudinal natural experiment exploiting staggered return-to-office mandates across firms or regions, using administrative data (e.g., payroll, performance reviews) and difference-in-differences analysis. \u2014 This design leverages exogenous variation in work mode adoption (e.g., due to policy changes) to separate temporary shifts (e.g., pandemic disruption) from stable effects. By comparing productivity trends over time, it can distinguish whether differences are persistent work mode effects or ephemeral adjustment periods.",
+        "[PATH:literature] Meta-analysis of existing quasi-experimental studies on remote work productivity, focusing on studies that control for worker characteristics and time trends (e.g., using fixed effects or instrumental variables). \u2014 A systematic synthesis of high-quality causal studies can aggregate evidence across contexts (e.g., different industries, cultures) to assess whether a consistent intrinsic effect emerges. This helps overcome the limitations of single studies and tests the robustness of the hypothesis against publication bias or confounding factors."
+      ],
+      "scope": {
+        "domain": "causal inference"
+      },
+      "qualifier": {
+        "temporal": "post-2020 remote work adoption period",
+        "geographic": "global, with emphasis on OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "remote work for collaborative tasks in large teams",
+      "predicate": "reduces objective productivity more than",
+      "object": "office work for collaborative tasks in small teams",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "remote work",
+      "predicate": "enhances objective productivity for collaborative tasks compared to",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "collaborative task performance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
