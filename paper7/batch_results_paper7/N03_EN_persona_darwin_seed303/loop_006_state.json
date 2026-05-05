@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "become evolutionarily disadvantaged compared to linear-complexity alternatives",
+      "object": "at sequence lengths beyond 8K tokens under memory-constrained selection pressures",
+      "status": "supported",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention at sequence lengths beyond 8K tokens under memory-constrained selection pressures]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "caveat": "The precise threshold may depend on hardware memory bandwidth, sparsity patterns, and whether causal masking further degrades efficiency relative to bidirectional models."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "incur a memory bottleneck that degrades throughput by at least 40%",
+      "object": "at sequence lengths beyond 8K tokens on current GPU hardware",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention at sequence lengths beyond 8K tokens on current GPU hardware]"
+      ],
+      "scope": {
+        "domain": "GPU-based inference with 80GB HBM"
+      },
+      "qualifier": {
+        "caveat": "Assumes no use of FlashAttention or kernel fusion optimizations."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "can match linear-complexity alternatives in wall-clock latency",
+      "object": "when combined with sparse causal masking and hardware-aware tiling",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention when combined with sparse causal masking and hardware-aware tiling]"
+      ],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory"
+      },
+      "qualifier": {
+        "caveat": "Requires careful kernel-level optimization; may not generalize to all sequence lengths."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Linear-complexity alternatives (e.g., Mamba, linear attention)",
+      "predicate": "suffer from hidden memory overheads due to state expansion or recomputation",
+      "object": "that become comparable to quadratic attention at sequence lengths beyond 16K tokens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear-complexity alternatives (e.g., Mamba, linear attention) that become comparable to quadratic attention at sequence lengths beyond 16K tokens]"
+      ],
+      "scope": {
+        "domain": "long-context training with gradient checkpointing"
+      },
+      "qualifier": {
+        "caveat": "Overhead depends on implementation details; not yet empirically verified for all linear variants."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "can achieve less than 10% throughput degradation at sequence lengths beyond 8K tokens",
+      "object": "when combined with FlashAttention-2 and custom kernel fusion on the same GPU hardware",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention when combined with FlashAttention-2 and custom kernel fusion on the same GPU hardware]",
+        "[PATH:empirical] Benchmarking CausalFormer with FlashAttention-2 on NVIDIA H100 GPUs at sequence lengths 8K, 16K, and 32K, measuring end-to-end throughput vs. standard attention baseline \u2014 Direct empirical measurement under the specified hardware and software stack can confirm or refute the throughput degradation claim, controlling for kernel fusion optimizations.",
+        "[PATH:theoretical] Theoretical analysis of FLOPs and memory bandwidth utilization for quadratic self-attention with FlashAttention-2 and custom kernel fusion at long sequences \u2014 A theoretical model can predict the upper bound on throughput degradation by analyzing arithmetic intensity and memory-bound bottlenecks, providing a complementary check to empirical results.",
+        "[PATH:literature] Literature review of prior work on FlashAttention-2 performance at long sequences (e.g., Dao et al., 2023) and custom kernel fusion techniques for causal attention on H100 GPUs \u2014 Existing published benchmarks and ablation studies can provide evidence for whether sub-10% degradation is plausible given known hardware limits and optimization techniques."
+      ],
+      "scope": {
+        "domain": "GPU-based inference with 80GB HBM"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 GPU architectures and software stacks",
+        "geographic": "data centers with NVIDIA H100 or equivalent 80GB HBM GPUs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "do not incur a significant memory bottleneck at sequence lengths beyond 8K tokens",
+      "object": "on current GPU hardware with 80GB HBM when utilizing FlashAttention or kernel fusion optimizations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention on current GPU hardware with 80GB HBM when utilizing FlashAttention or kernel fusion optimizations]",
+        "[PATH:empirical] Run controlled benchmarks on an A100 (80GB HBM) GPU measuring peak memory usage and throughput of CausalFormer (e.g., GPT-like) models with sequence lengths 8K, 16K, and 32K, using FlashAttention-2 and kernel fusion, while varying hidden dimension and number of layers. \u2014 Directly tests the memory bottleneck claim under the specified hardware and optimization conditions; provides quantitative evidence on whether quadratic self-attention causes memory overflow or severe slowdown beyond 8K tokens.",
+        "[PATH:theoretical] Analyze theoretical memory complexity of CausalFormer with FlashAttention, deriving closed-form expressions for peak HBM usage as a function of sequence length, head dimension, and number of heads, considering tiling and kernel fusion overhead. \u2014 Provides a mathematical upper bound on memory consumption, allowing prediction of bottleneck onset without exhaustive empirical testing; can confirm or refute the hypothesis across different architectural configurations.",
+        "[PATH:literature] Survey recent literature (e.g., from NeurIPS 2024, ICML 2025) on efficient attention mechanisms for long sequences, specifically focusing on empirical comparisons of FlashAttention-enabled quadratic attention vs. linear/sparse attention at 8K+ token lengths on 80GB GPUs. \u2014 Aggregates existing experimental results and expert analyses to assess consensus; may reveal undocumented memory bottlenecks or confirm that current optimizations suffice for the stated scope."
+      ],
+      "scope": {
+        "domain": "GPU-based inference with 80GB HBM"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global GPU hardware market"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "outperform linear-complexity alternatives in wall-clock latency",
+      "object": "when combined with sparse causal masking, hardware-aware tiling, and fused kernel execution on TPU v4",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: CausalFormer architectures with quadratic self-attention when combined with sparse causal masking, hardware-aware tiling, and fused kernel execution on TPU v4]",
+        "[PATH:empirical] Benchmark experiments on TPU v4 comparing latency of CausalFormer with quadratic self-attention (using sparse causal masking, tiling, and fused kernels) against linear-complexity alternatives (e.g., Mamba, S4, Linformer) at sequence lengths up to 8K tokens. \u2014 Direct wall-clock latency measurements under identical hardware conditions would confirm or refute the hypothesized performance advantage, controlling for implementation optimizations.",
+        "[PATH:theoretical] Roofline model analysis of arithmetic intensity and memory bandwidth utilization for the described fused kernel implementation on TPU v4. \u2014 A roofline analysis can determine whether the quadratic self-attention approach can achieve sufficient operational intensity to saturate TPU v4's high-bandwidth memory, thereby potentially outperforming linear-complexity methods that may be memory-bound."
+      ],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory, sequence lengths up to 8K tokens"
+      },
+      "qualifier": {
+        "temporal": "as of 2024",
+        "geographic": "data centers equipped with TPU v4"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Linear-complexity attention mechanisms",
+      "predicate": "consistently outperform quadratic self-attention architectures",
+      "object": "in wall-clock latency across diverse hardware configurations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear-complexity attention mechanisms in wall-clock latency across diverse hardware configurations]",
+        "[PATH:empirical] Standardized benchmark suite (e.g., MLPerf Inference) comparing linear-attention models (e.g., Mamba, Linear Transformer) vs. quadratic self-attention (e.g., vanilla Transformer) on CPU, GPU, and TPU with controlled sequence lengths and batch sizes \u2014 Directly measures wall-clock latency across diverse hardware, providing empirical evidence to confirm or refute the hypothesis under realistic deployment conditions.",
+        "[PATH:theoretical] Theoretical analysis of computational complexity and memory bandwidth utilization for linear vs. quadratic attention mechanisms on modern hardware architectures (e.g., analyzing FLOPs vs. memory-bound operations) \u2014 Clarifies under what conditions (e.g., sequence length, hardware memory hierarchy) linear mechanisms can achieve lower latency, addressing the 'consistently' claim and potential counterexamples.",
+        "[PATH:literature] Comprehensive literature review of recent 2023-2025 papers comparing linear-attention variants (e.g., Performer, Linformer, FlashAttention) on latency benchmarks across CPUs, GPUs, and edge devices \u2014 Synthesizes existing empirical results to assess consistency of performance advantage, identifying gaps or conflicting findings that could refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "general-purpose processors and accelerators"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global hardware benchmarks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "can match linear-complexity alternatives in wall-clock latency",
+      "object": "when combined with sparse causal masking and hardware-aware tiling on TPU v4",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms CausalFormer architectures with quadratic self-attention can match linear-complexity alternatives in wall-clock latency when combined with sparse causal masking and hardware-aware tiling on TPU v4 in domain 'custom accelerator (e.g., TPU v4) with high-bandwidth memory']"
+      ],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory"
+      },
+      "qualifier": {
+        "temporal": "as of 2024",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "cannot match linear-complexity alternatives in wall-clock latency",
+      "object": "even with sparse causal masking and hardware-aware tiling on TPU v4",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms CausalFormer architectures with quadratic self-attention cannot match linear-complexity alternatives in wall-clock latency even with sparse causal masking and hardware-aware tiling on TPU v4 in domain 'custom accelerator (e.g., TPU v4) with high-bandwidth memory']"
+      ],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global (tested on TPU v4 clusters in US and EU data centers)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Linear-complexity alternatives (e.g., Mamba, linear attention)",
+      "predicate": "exhibit a memory overhead inflection point at 16K tokens that is caused specifically by the recomputation of expanded hidden states during gradient checkpointing",
+      "object": "making them strictly less memory-efficient than quadratic attention for training sequences longer than 32K tokens",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear-complexity alternatives (e.g., Mamba, linear attention) making them strictly less memory-efficient than quadratic attention for training sequences longer than 32K tokens]",
+        "[PATH:empirical] Controlled memory profiling experiments comparing Mamba (or linear attention) vs. softmax attention under gradient checkpointing across varying sequence lengths (e.g., 8K, 16K, 32K, 64K) using identical model sizes and batch sizes. \u2014 Direct measurement of peak memory usage at each sequence length will reveal whether an inflection point exists at 16K tokens and whether memory efficiency reverses beyond 32K tokens, as hypothesized.",
+        "[PATH:theoretical] Theoretical analysis of the memory complexity of recomputation strategies for state-space models (SSMs) vs. quadratic attention, specifically quantifying the hidden state expansion factor and its interaction with gradient checkpointing. \u2014 Deriving the exact memory footprint as a function of sequence length for both architectures under checkpointing can confirm whether the recomputation overhead scales to dominate quadratic attention's O(L^2) memory at long sequences.",
+        "[PATH:literature] Survey of published benchmarks and ablation studies from leading long-context training recipes (e.g., Mamba-2, RWKV, linear attention implementations) that report memory usage and throughput at lengths >= 32K tokens. \u2014 Existing empirical results may already show or contradict the claimed inflection point, providing evidence without requiring new experiments."
+      ],
+      "scope": {
+        "domain": "long-context training with gradient checkpointing"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 model training practices",
+        "geographic": "global ML research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Linear-complexity alternatives (e.g., Mamba, linear attention)",
+      "predicate": "maintain a significant memory advantage over quadratic attention",
+      "object": "even at sequence lengths beyond 16K tokens due to optimized state management techniques",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Linear-complexity alternatives (e.g., Mamba, linear attention) even at sequence lengths beyond 16K tokens due to optimized state management techniques]"
+      ],
+      "scope": {
+        "domain": "long-context training with gradient checkpointing"
+      },
+      "qualifier": {
+        "temporal": "as of 2024 research benchmarks",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "exceed linear-complexity alternatives in throughput",
+      "object": "when sparse causal masking is combined with hardware-aware tiling and sequence lengths exceed 8K tokens on TPU v4",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "CausalFormer architectures with quadratic self-attention",
+      "predicate": "cannot match linear-complexity alternatives in wall-clock latency",
+      "object": "even when combined with sparse causal masking and hardware-aware tiling",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "custom accelerator (e.g., TPU v4) with high-bandwidth memory"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
