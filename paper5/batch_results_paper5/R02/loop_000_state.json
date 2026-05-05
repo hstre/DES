@@ -1,0 +1,394 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "Overall productivity effects remain contested due to divergent findings across self-reported surveys, firm-level output data, and controlled experiments, with confounds from task type, management practices, and selection bias."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "individual task efficiency for highly autonomous knowledge workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work individual task efficiency for highly autonomous knowledge workers]"
+      ],
+      "scope": {
+        "domain": "knowledge work, high autonomy"
+      },
+      "qualifier": {
+        "context": "Based on self-reported surveys and controlled experiments focusing on individual output in distraction-free environments."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "collaborative innovation and team cohesion",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work collaborative innovation and team cohesion]"
+      ],
+      "scope": {
+        "domain": "collaborative tasks, team-based projects"
+      },
+      "qualifier": {
+        "context": "Evidence from firm-level output data and management case studies indicates that spontaneous interaction and informal learning suffer in remote settings."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Remote work",
+      "predicate": "decreases",
+      "object": "individual task efficiency for highly autonomous knowledge workers when asynchronous collaboration load exceeds 4 hours per day",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work individual task efficiency for highly autonomous knowledge workers when asynchronous collaboration load exceeds 4 hours per day]",
+        "[PATH:empirical] Diary study of knowledge workers measuring hourly task completion rates vs. asynchronous communication volume (e.g., Slack messages, email threads) over 2 weeks, controlling for autonomy level and task complexity. \u2014 Directly captures the causal link between daily asynchronous load and individual efficiency in highly autonomous roles, providing granular temporal data to test the 4-hour threshold.",
+        "[PATH:literature] Meta-analysis of existing remote work productivity studies (e.g., Bloom et al. 2015, Choudhury et al. 2021) re-analyzing subgroup data for high-autonomy workers with heavy async collaboration. \u2014 Synthesizes available evidence to assess whether the 4-hour threshold effect is replicable across contexts, controlling for confounding factors like team size and time zone dispersion.",
+        "[PATH:theoretical] Agent-based simulation modeling asynchronous collaboration load dynamics and task switching costs in knowledge work teams. \u2014 Tests the mechanistic plausibility of the hypothesis by simulating cognitive load thresholds, providing a theoretical foundation for the 4-hour cutoff without requiring large-scale empirical data."
+      ],
+      "scope": {
+        "domain": "knowledge work, high autonomy, asynchronous-heavy teams"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread remote work adoption",
+        "geographic": "global, primarily in developed economies with high digital infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work",
+      "predicate": "decreases",
+      "object": "collaborative task efficiency for highly autonomous knowledge workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work collaborative task efficiency for highly autonomous knowledge workers]",
+        "[PATH:empirical] Longitudinal field experiment comparing collaborative task completion times and quality between co-located and remote conditions for autonomous knowledge workers (e.g., software engineers, R&D teams). \u2014 Directly tests the causal claim by manipulating work location while controlling for autonomy level, providing high internal validity for the hypothesis.",
+        "[PATH:literature] Meta-analysis of studies on remote work productivity and collaboration (e.g., from journals like Journal of Management or Organization Science), focusing on moderating role of worker autonomy. \u2014 Synthesizes existing evidence across multiple contexts and time periods, allowing assessment of whether the disputed effect is robust or context-dependent."
+      ],
+      "scope": {
+        "domain": "knowledge work, high autonomy"
+      },
+      "qualifier": {
+        "temporal": "during the period of mandatory remote work policies (2020\u20132022)",
+        "geographic": "global, with emphasis on North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "collaborative innovation and team cohesion, but only in tasks requiring high tacit knowledge transfer",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work collaborative innovation and team cohesion, but only in tasks requiring high tacit knowledge transfer]",
+        "[PATH:empirical] A controlled field experiment comparing R&D teams working remotely vs. co-located on tasks with high vs. low tacit knowledge requirements, measuring patent filings, prototype iterations, and team cohesion surveys. \u2014 Directly tests the causal claim by manipulating task type and work mode, providing strong evidence for the hypothesized interaction.",
+        "[PATH:empirical] Longitudinal case studies of knowledge-intensive teams (e.g., software startups, pharmaceutical R&D) that transitioned to remote work, analyzing communication logs and innovation outcomes to identify breakdowns in informal knowledge exchange. \u2014 Captures real-world dynamics of tacit knowledge transfer over time, offering ecological validity to confirm or refute the conditional effect.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work and team performance, coded by task tacitness (e.g., using Nonaka's framework), to quantify the moderating role of knowledge type. \u2014 Synthesizes available evidence to assess the generalizability and statistical robustness of the hypothesis across multiple contexts."
+      ],
+      "scope": {
+        "domain": "knowledge-intensive collaborative tasks, R&D teams"
+      },
+      "qualifier": {
+        "context": "When tasks rely on explicit, codifiable information, remote work may not impair innovation or cohesion; the negative effect is specific to contexts where informal, unplanned knowledge exchange is critical."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "collaborative innovation and team cohesion",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work collaborative innovation and team cohesion]",
+        "[PATH:empirical] Longitudinal field study comparing team innovation outputs (e.g., patent filings, product prototypes) and cohesion metrics (e.g., survey-based team trust scores) for fully remote vs. hybrid vs. co-located teams in tech firms in North America and Europe, 2021-2024. \u2014 Directly tests the causal claim in the specified temporal and geographic scope, providing quantitative evidence on whether remote work enhances or hinders collaborative innovation and cohesion.",
+        "[PATH:literature] Meta-analysis of published studies on remote work and team dynamics (e.g., from journals such as Organization Science, Journal of Applied Psychology, or Harvard Business Review) focusing on collaborative tasks and team-based projects. \u2014 Synthesizes existing evidence to assess the overall effect size and moderating factors (e.g., task interdependence, communication tools), helping to resolve the disputed status of the hypothesis.",
+        "[PATH:theoretical] Agent-based simulation model of knowledge-intensive teams under different remote work configurations (e.g., synchronous vs. asynchronous communication, digital tool use) to explore mechanisms linking remote work to innovation and cohesion. \u2014 Provides a controlled environment to test causal mechanisms (e.g., information sharing, social bonding) that are difficult to isolate in field studies, offering theoretical support or refutation for the hypothesis."
+      ],
+      "scope": {
+        "domain": "collaborative tasks, team-based projects"
+      },
+      "qualifier": {
+        "temporal": "during the post-pandemic period (2021-2024)",
+        "geographic": "in technology and knowledge-intensive industries in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "collaborative innovation and team cohesion",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work reduces collaborative innovation and team cohesion in domain 'collaborative tasks, team-based projects']"
+      ],
+      "scope": {
+        "domain": "collaborative tasks, team-based projects"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work in 2020",
+        "geographic": "global, primarily in knowledge-intensive industries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "collaborative innovation and team cohesion",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work enhances collaborative innovation and team cohesion in domain 'collaborative tasks, team-based projects']"
+      ],
+      "scope": {
+        "domain": "collaborative tasks, team-based projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of digital collaboration tools",
+        "geographic": "global, primarily in knowledge-economy sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Remote work",
+      "predicate": "impairs",
+      "object": "serendipitous knowledge transfer and cross-functional idea generation",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "knowledge-intensive teams, R&D departments"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "collaborative innovation and team cohesion",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "collaborative tasks, team-based projects"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
