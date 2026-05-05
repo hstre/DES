@@ -1,0 +1,400 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage",
+      "predicate": "substantially reduces",
+      "object": "employee turnover for small businesses",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover for small businesses]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While some quasi-experimental studies find reduced turnover after minimum wage increases, others show no significant effect or even increased turnover due to reduced hours or profitability constraints in small firms; the magnitude and generalizability to small businesses remain contested."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover in small businesses with strong profit margins",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover in small businesses with strong profit margins]"
+      ],
+      "scope": {
+        "domain": "small businesses with high financial slack"
+      },
+      "qualifier": {
+        "tension": "Effect likely depends on firm profitability; well-capitalized firms may retain workers better after wage increases."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover in small businesses due to reduced hours or profitability constraints",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover in small businesses due to reduced hours or profitability constraints]"
+      ],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "tension": "Some studies indicate that cost pressures from wage hikes force cutbacks, leading to voluntary or involuntary turnover."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage in small businesses with strong profit margins",
+      "predicate": "reduces",
+      "object": "employee turnover more when paired with targeted training programs than when implemented alone",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in small businesses with strong profit margins employee turnover more when paired with targeted training programs than when implemented alone]",
+        "[PATH:empirical] Longitudinal field experiment comparing turnover rates in high-margin urban small businesses randomly assigned to minimum wage increase alone vs. minimum wage increase plus targeted training program \u2014 Directly tests the causal interaction effect of training and wage policy on employee retention, controlling for confounding variables like local labor market tightness.",
+        "[PATH:literature] Meta-analysis of studies on minimum wage effects on turnover in small firms, stratified by profit margin and training investment \u2014 Synthesizes existing evidence to assess whether the hypothesized moderating role of training is supported across multiple contexts, providing statistical power beyond single studies.",
+        "[PATH:theoretical] Theoretical model of employee retention incorporating wage satisfaction and skill investment, calibrated to post-2020 urban US labor markets \u2014 Formalizes the mechanism by which training complements wage increases to reduce turnover, allowing derivation of testable predictions and identification of boundary conditions (e.g., when training costs offset profit slack)."
+      ],
+      "scope": {
+        "domain": "small businesses with high financial slack"
+      },
+      "qualifier": {
+        "temporal": "post-2020 economic recovery period",
+        "geographic": "urban areas in the United States with tight labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover in small businesses with strong profit margins",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover in small businesses with strong profit margins]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, linked to minimum wage changes by state and industry codes for small businesses with high profit margins (e.g., NAICS sectors with high average profitability). \u2014 Provides longitudinal, granular data on employee turnover at the establishment level, allowing direct comparison of turnover rates before and after minimum wage increases in the target subgroup, controlling for other economic factors.",
+        "[PATH:literature] A meta-analysis of existing studies on minimum wage effects on small business turnover, focusing on studies that separately analyze firms by profit margin or financial slack (e.g., Dube, Lester, & Reich 2010; Meer & West 2016). \u2014 Synthesizes prior empirical findings to assess whether the hypothesized positive effect is consistently observed in high-slack firms, and to identify potential moderators like industry or local labor market conditions.",
+        "[PATH:theoretical] A theoretical model of labor demand and quits in small firms with high slack, incorporating efficiency wage theory and firm-specific human capital, calibrated to U.S. small business data since 2010. \u2014 Tests the logical coherence of the hypothesis: if slack allows firms to absorb wage costs without reducing employment, turnover might decrease (via higher wages reducing quits) rather than increase, offering a falsifiable prediction to guide empirical work."
+      ],
+      "scope": {
+        "domain": "small businesses with high financial slack"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover in small businesses that invest the extra labor cost into employee training and engagement programs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover in small businesses that invest the extra labor cost into employee training and engagement programs]",
+        "[PATH:empirical] Quasi-experimental studies comparing turnover rates in small businesses that received minimum wage increases and adopted training programs vs. those that did not, using data from state-level wage changes post-2020 (e.g., Bureau of Labor Statistics JOLTS, matched employer-employee datasets). \u2014 Directly tests the causal effect of the combined policy and investment strategy on turnover, controlling for selection bias via difference-in-differences or instrumental variable methods.",
+        "[PATH:empirical] Longitudinal case studies or surveys of small businesses in thin-margin sectors (e.g., retail, hospitality) that document how they allocate wage cost increases to training and engagement, and track employee tenure over 1-3 years. \u2014 Provides real-world contextual data on the feasibility and impact of the specified investment, especially for businesses with limited slack, which is critical for the hypothesis's scope.",
+        "[PATH:literature] Meta-analysis of existing literature on minimum wage effects on turnover, with subgroup analysis by business size and presence of human capital investments (e.g., training programs). \u2014 Synthesizes available evidence to assess whether the proposed mechanism (training/engagement) moderates the turnover effect, leveraging prior studies on wage elasticity and employee retention."
+      ],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "temporal": "post-2020 economic conditions",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses by improving job satisfaction and reducing the need for multiple jobs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover in small businesses by improving job satisfaction and reducing the need for multiple jobs]",
+        "[PATH:empirical] Longitudinal study of small businesses in high-cost urban areas (e.g., Seattle, San Francisco) comparing turnover rates before and after minimum wage increases, controlling for industry and margin levels. \u2014 Directly tests the causal claim in the specified geographic and temporal scope, using real-world turnover data to measure effect size and direction.",
+        "[PATH:empirical] Survey-based research on job satisfaction and multiple job holding among low-wage workers in small businesses, with wage variation as a predictor. \u2014 Examines the hypothesized mechanisms (job satisfaction, reduced need for multiple jobs) linking wage increases to turnover, providing evidence for or against the causal chain.",
+        "[PATH:literature] Meta-analysis of existing studies on minimum wage effects on employee turnover in small versus large firms, focusing on thin-margin operations. \u2014 Synthesizes available evidence to assess overall trend and identify moderators (e.g., margin thinness, cost of living) that affect the relationship, helping to resolve the disputed status."
+      ],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "temporal": "post-2020 economic recovery period",
+        "geographic": "United States (urban and suburban areas with high cost of living)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover in small businesses by forcing reduced hours or triggering layoffs due to profitability constraints",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage increases employee turnover in small businesses by forcing reduced hours or triggering layoffs due to profitability constraints in domain 'small businesses operating on thin margins']"
+      ],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses by improving worker satisfaction, retention, and reducing hiring costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage decreases employee turnover in small businesses by improving worker satisfaction, retention, and reducing hiring costs in domain 'small businesses operating on thin margins']"
+      ],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "temporal": "post-2020 economic conditions",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses when combined with targeted wage subsidies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {
+        "rationale": "Wage subsidies offset profitability constraints, allowing small businesses to maintain hours and improve retention, counteracting the turnover pressure from wage hikes alone."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses by improving job satisfaction and reducing the need for multiple jobs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "small businesses operating on thin margins"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
