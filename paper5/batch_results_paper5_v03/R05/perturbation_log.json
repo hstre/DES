@@ -1,0 +1,51 @@
+[
+  {
+    "loop": 0,
+    "trigger": "content_redundancy>0.40",
+    "trigger_layer": "content",
+    "type": "measurement_shift",
+    "generated_question": "How do variations in the duration and frequency of fasting periods affect the accuracy and consistency of measuring long-term weight loss outcomes in intermittent fasting studies?",
+    "inferred_method_type": "temporal_validity",
+    "admitted": true,
+    "rejection_reason": null,
+    "novelty_produced_next_loop": 12
+  },
+  {
+    "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+    "failed_loop": 3,
+    "failure_reason": "SEMANTIC_DUPLICATION",
+    "rollback_target_loop": 1,
+    "saturated_path_questions": [
+      "What evidence supports or refutes the claim that: Longer fasting durations (e.g., 24-hour alternate-day fasting) in intermittent fasting studies increase the coefficient of variation in resting metabolic rate adaptation, thereby amplifying prediction error in energy balance models more than shorter daily time-restricted feeding?",
+      "What evidence supports or refutes the claim that: Shorter daily time-restricted feeding (e.g., 16:8) with higher protein intake during the eating window eliminate the residual metabolic adaptation observed in longer fasting protocols during energy deficit?"
+    ],
+    "saturated_path_methods": [
+      "model_assumption",
+      "empirical_evidence"
+    ],
+    "saturated_path_status": "SATURATED",
+    "reseed_method_type": "model_assumption_shift",
+    "generated_question": "How does individual variability in metabolic rate and compensatory eating behavior during non-fasting periods affect the consistency of weight loss outcomes in studies with longer fasting durations?",
+    "admitted": true,
+    "rejection_reason": null
+  },
+  {
+    "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+    "failed_loop": 4,
+    "failure_reason": "SEMANTIC_DUPLICATION",
+    "rollback_target_loop": 1,
+    "saturated_path_questions": [
+      "How does individual variability in metabolic rate and compensatory eating behavior during non-fasting periods affect the consistency of weight loss outcomes in studies with longer fasting durations?",
+      "What is the evidence that Higher protein intake in a 16:8 time-restricted feeding protocol exacerbates rather than mitigates residual metabolic adaptation when overall energy deficit exceeds 25% and protein exceeds 2.4 g/kg body weight?"
+    ],
+    "saturated_path_methods": [
+      "causal_mechanism",
+      "scope_condition"
+    ],
+    "saturated_path_status": "SATURATED",
+    "reseed_method_type": "unit_of_analysis_shift",
+    "generated_question": "How do variations in the duration and frequency of fasting periods affect the accuracy and consistency of measuring long-term weight loss outcomes in intermittent fasting studies when aggregated at the population level?",
+    "admitted": false,
+    "rejection_reason": "circular"
+  }
+]
