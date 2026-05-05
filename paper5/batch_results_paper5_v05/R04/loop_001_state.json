@@ -1,0 +1,502 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Temporal changes in GDP",
+      "predicate": "have a non-linear and context-dependent relationship with",
+      "object": "long-term human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Temporal changes in GDP long-term human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Rapid short-term GDP growth in low-income countries",
+      "predicate": "is positively correlated with",
+      "object": "improvements in basic health and education metrics",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Rapid short-term GDP growth in low-income countries improvements in basic health and education metrics]"
+      ],
+      "scope": {
+        "domain": "low-income countries, short-term (1\u20135 years)"
+      },
+      "qualifier": {
+        "temporal": "1\u20135 years",
+        "geographic": "low-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "shows a diminishing or nil association with",
+      "object": "subjective life satisfaction beyond a threshold",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Sustained GDP growth in high-income countries subjective life satisfaction beyond a threshold]"
+      ],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "threshold_effect": "Easterlin-type plateau"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP volatility and inequality",
+      "predicate": "can negatively moderate the relationship between",
+      "object": "aggregate GDP growth and long-term human wellbeing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP volatility and inequality aggregate GDP growth and long-term human wellbeing]"
+      ],
+      "scope": {
+        "domain": "all countries, medium-term (5\u201315 years)"
+      },
+      "qualifier": {
+        "moderator": "income inequality and economic volatility"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Rapid short-term GDP growth in low-income countries",
+      "predicate": "is negatively correlated with",
+      "object": "improvements in basic health and education metrics when growth is driven primarily by natural resource extraction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Rapid short-term GDP growth in low-income countries improvements in basic health and education metrics when growth is driven primarily by natural resource extraction]",
+        "[PATH:empirical] Country-level panel data analysis comparing health/education outcomes (e.g., infant mortality, primary school enrollment) across low-income countries with natural resource booms (e.g., oil, minerals) versus those with non-resource growth, controlling for initial conditions and governance. \u2014 Direct test of the hypothesis using longitudinal data; can isolate the effect of resource-driven growth on human capital metrics over short-term horizons.",
+        "[PATH:empirical] Case studies of specific low-income countries that experienced rapid resource-driven growth (e.g., Angola, Papua New Guinea) with before-and-after comparisons of health and education indicators, including qualitative analysis of policy responses and resource allocation. \u2014 Provides contextual depth and causal mechanisms; can reveal whether negative correlations are due to neglect of social sectors, institutional failures, or other factors.",
+        "[PATH:theoretical] Theoretical models of the 'resource curse' applied to human capital investment, such as extensions of the Dutch disease model or political economy frameworks linking resource revenues to reduced government accountability for public services. \u2014 Explains potential causal pathways from resource-driven growth to underinvestment in health/education, helping to interpret empirical findings and identify confounders."
+      ],
+      "scope": {
+        "domain": "low-income countries, short-term (1\u20135 years), resource-driven growth"
+      },
+      "qualifier": {
+        "temporal": "1\u20135 years",
+        "geographic": "low-income countries",
+        "mechanism": "resource extraction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Rapid short-term GDP growth in low-income countries",
+      "predicate": "is not necessarily correlated with",
+      "object": "improvements in basic health and education metrics",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Rapid short-term GDP growth in low-income countries improvements in basic health and education metrics]",
+        "[PATH:empirical] World Bank Demographic and Health Surveys (DHS) paired with national accounts data from the IMF World Economic Outlook \u2014 Analyzing short-term (1\u20135 year) changes in GDP per capita against contemporaneous changes in child mortality, immunization rates, and primary school enrollment across low-income countries can directly test whether rapid growth coincides with health/education improvements.",
+        "[PATH:literature] Journal of Development Economics: systematic review or meta-analysis of studies on growth-poverty-health linkages in low-income settings \u2014 A meta-analysis can aggregate findings from multiple country-case studies and panel regressions to determine the empirical consensus on whether short-term GDP spurts lead to measurable gains in basic human capital metrics.",
+        "[PATH:theoretical] Theoretical model: health-led growth vs. growth-led health frameworks (e.g., Bloom, Canning, and Sevilla 2004) \u2014 Examining theoretical models that posit bidirectional causality can clarify mechanisms\u2014if health improvements drive growth rather than vice versa, short-term GDP spikes may not reliably produce health/education gains without pre-existing institutional or public health capacity."
+      ],
+      "scope": {
+        "domain": "low-income countries, short-term (1\u20135 years)"
+      },
+      "qualifier": {
+        "temporal": "1\u20135 years",
+        "geographic": "low-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "negatively moderates the effect of",
+      "object": "increases in social trust on subjective life satisfaction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Sustained GDP growth in high-income countries increases in social trust on subjective life satisfaction]",
+        "[PATH:empirical] Longitudinal panel data from the World Values Survey and European Social Survey, comparing within-country changes in GDP per capita, social trust, and life satisfaction over 10+ years in high-income nations. \u2014 Directly tests the moderation hypothesis by examining whether the slope of social trust on life satisfaction declines as GDP grows, controlling for individual and country-level confounders.",
+        "[PATH:empirical] Experimental or quasi-experimental studies on the effect of economic growth on value priorities (e.g., Inglehart's post-materialism thesis), using repeated cross-sectional data to assess whether materialist values crowd out relational well-being sources. \u2014 Provides evidence for the proposed mechanism that GDP growth shifts priorities away from non-material factors like trust, thereby weakening their impact on life satisfaction.",
+        "[PATH:literature] Meta-analysis of existing studies on the relationship between social trust and subjective well-being, stratified by national income level and growth rate, to identify systematic differences in effect sizes. \u2014 Synthesizes available evidence to determine if the negative moderation pattern is robust across high-income contexts and sustained growth periods, addressing the disputed status."
+      ],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "mechanism": "GDP growth crowds out non-material sources of well-being, weakening their contribution to life satisfaction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "is positively correlated with",
+      "object": "improvements in subjective life satisfaction across all income levels",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Sustained GDP growth in high-income countries improvements in subjective life satisfaction across all income levels]",
+        "[PATH:empirical] Longitudinal panel data from the World Values Survey (WVS) and Gallup World Poll, focusing on OECD countries from 1990-2020, stratified by income quintile. \u2014 Directly tests the correlation between per capita GDP growth and self-reported life satisfaction across income levels, controlling for country and year fixed effects.",
+        "[PATH:literature] Meta-analysis of published studies on the Easterlin Paradox, specifically examining high-income countries with sustained growth periods >10 years. \u2014 Synthesizes existing findings to determine whether the hypothesized positive correlation holds consistently or is refuted by the well-documented satiation effects in wealthy nations.",
+        "[PATH:theoretical] Theoretical model incorporating relative income and adaptation effects (e.g., Kahneman & Krueger's set-point theory) applied to OECD data. \u2014 Provides a causal framework to explain why GDP growth may not translate to improved life satisfaction for all income levels, offering a testable counter-hypothesis."
+      ],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "continues to show a positive association with",
+      "object": "subjective life satisfaction even beyond a threshold",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Sustained GDP growth in high-income countries continues to show a positive association with subjective life satisfaction even beyond a threshold in domain 'high-income countries, long-term (10+ years)']"
+      ],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "shows a diminishing or nil association with",
+      "object": "subjective life satisfaction beyond a threshold",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Sustained GDP growth in high-income countries shows a diminishing or nil association with subjective life satisfaction beyond a threshold in domain 'high-income countries, long-term (10+ years)']"
+      ],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "temporal": "post-2000, 10+ year intervals",
+        "geographic": "high-income countries (World Bank classification)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "high-frequency GDP volatility combined with top-decile income concentration",
+      "predicate": "fully suppresses the positive effect of",
+      "object": "aggregate GDP growth on long-term human wellbeing in non-OECD countries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-frequency GDP volatility combined with top-decile income concentration aggregate GDP growth on long-term human wellbeing in non-OECD countries]",
+        "[PATH:empirical] World Bank World Development Indicators (WDI) combined with UNU-WIDER World Income Inequality Database (WIID) for non-OECD countries, 2000-2010 \u2014 Panel data analysis across non-OECD countries can test whether high-frequency GDP volatility and top-decile income concentration jointly moderate the relationship between aggregate GDP growth and long-term human wellbeing indicators (e.g., life expectancy, infant mortality, education indices).",
+        "[PATH:theoretical] Lane, P. R., & Tornell, A. (1996). Power, growth, and the voracity effect. Journal of Economic Growth, 1(2), 213-241. \u2014 This paper provides a theoretical model of how concentrated income and volatile growth interact through a 'voracity effect' to reduce welfare gains from growth, directly relevant to the hypothesis's mechanism in non-OECD contexts."
+      ],
+      "scope": {
+        "domain": "non-OECD countries, 10-year time horizon"
+      },
+      "qualifier": {
+        "temporal": "2000-2010",
+        "geographic": "non-OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP growth",
+      "predicate": "can directly enhance",
+      "object": "long-term human wellbeing irrespective of GDP volatility and inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth long-term human wellbeing irrespective of GDP volatility and inequality]",
+        "[PATH:empirical] Comparative panel data analysis of GDP growth, volatility, and inequality indices (e.g., World Bank WDI, UNU-WIDER) against subjective wellbeing metrics (e.g., Gallup World Poll, OECD Better Life Index) over 5-15 year horizons across all countries. \u2014 Directly tests the hypothesis by controlling for volatility and inequality, assessing whether growth consistently correlates with wellbeing improvements in the medium term.",
+        "[PATH:empirical] Longitudinal case studies of countries with high GDP volatility or high inequality (e.g., commodity-dependent economies, rapidly industrializing nations) tracking changes in health, education, and life satisfaction over 5-15 years. \u2014 Provides granular evidence on whether growth benefits persist under adverse conditions, refuting or supporting the 'irrespective' claim.",
+        "[PATH:theoretical] Theoretical models of welfare economics (e.g., Sen's capabilities approach, Easterlin paradox literature) that formalize the relationship between aggregate growth and individual wellbeing under risk and distributional constraints. \u2014 Clarifies mechanisms and boundary conditions, helping to interpret empirical findings and assess the plausibility of direct enhancement without moderating factors."
+      ],
+      "scope": {
+        "domain": "all countries, medium-term (5\u201315 years)"
+      },
+      "qualifier": {
+        "temporal": "medium-term (5\u201315 years)",
+        "geographic": "all countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "is negatively associated with",
+      "object": "subjective life satisfaction when income inequality simultaneously increases",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {
+        "mechanism": "relative deprivation effect outweighs absolute income gains"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Sustained GDP growth in high-income countries",
+      "predicate": "has a significant positive association with",
+      "object": "subjective life satisfaction across all income groups",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-income countries, long-term (10+ years)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
