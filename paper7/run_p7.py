@@ -834,6 +834,7 @@ def write_summary(all_results: dict):
 # ---------------------------------------------------------------------------
 
 PERSONA_KEYS = ["popper", "shannon", "darwin"]
+CREATIVE_PERSONA_KEYS = ["mozart", "picasso"]
 ISOLATION_SEEDS = [101, 202, 303]
 
 
@@ -985,6 +986,184 @@ def _write_persona_isolation_report(domain_id: str, rows: list):
 
 
 # ---------------------------------------------------------------------------
+# Creative persona probe (exploratory curiosity)
+# ---------------------------------------------------------------------------
+
+def run_creative_probe(domain_id: str = "N03"):
+    """
+    EXPLORATORY CURIOSITY PROBE — not pre-registered, not confirmatory.
+    Runs domain_id × [mozart, picasso] × [101, 202, 303].
+    6 runs total. Results written to paper7/creative_persona_probe_{domain_id}.{md,json}.
+    """
+    info = DOMAINS[domain_id]
+    condition = EXPERIMENTAL_CONDITIONS["EN_persona"]
+    all_rows = []
+
+    for persona in CREATIVE_PERSONA_KEYS:
+        for seed in ISOLATION_SEEDS:
+            result = run_domain_p7(
+                domain_id=domain_id,
+                seed_question=info["seed"],
+                condition_name="EN_persona",
+                condition=condition,
+                p4_depth=info.get("p4_depth"),
+                sh_loop0=info.get("sh_loop0"),
+                rng_seed=seed,
+                persona_filter=persona,
+            )
+
+            en_log_path = (RESULTS_DIR / f"{domain_id}_EN_persona_{persona}_seed{seed}"
+                           / "en_log.json")
+            en_events_detail = []
+            if en_log_path.exists():
+                with open(en_log_path) as f:
+                    raw_en = json.load(f)
+                for ev in raw_en:
+                    sel = ev.get("selected") or {}
+                    en_events_detail.append({
+                        "loop":                       ev.get("loop"),
+                        "eni_novelty":                sel.get("eni_novelty"),
+                        "eni_admissibility":          sel.get("eni_admissibility"),
+                        "eni_non_drift":              sel.get("eni_non_drift"),
+                        "eni_composite":              sel.get("eni_composite"),
+                        "drift":                      round(1.0 - (sel.get("eni_non_drift") or 0), 4),
+                        "admitted":                   sel.get("admitted"),
+                        "novelty_produced_next_loop": ev.get("novelty_produced_next_loop"),
+                    })
+
+            metrics_path = (RESULTS_DIR / f"{domain_id}_EN_persona_{persona}_seed{seed}"
+                            / "metrics.json")
+            loop0_dup = None
+            if metrics_path.exists():
+                with open(metrics_path) as f:
+                    mlist = json.load(f)
+                if mlist:
+                    loop0_dup = round(mlist[0].get("semantic_duplication_rate", 0), 4)
+
+            row = {
+                "domain":           domain_id,
+                "persona":          persona,
+                "seed":             seed,
+                "loop0_dup":        loop0_dup,
+                "loop0_claim_hash": result.get("loop0_claim_hash"),
+                "en_fired":         result.get("en_events", 0),
+                "loops":            result.get("loops_completed"),
+                "depth_lift":       result.get("depth_lift"),
+                "failure_mode":     result.get("outcome"),
+                "en_events":        en_events_detail,
+                "exploratory":      True,
+                "probe":            "creative_nonlocal",
+            }
+            all_rows.append(row)
+            print(f"  [{persona}/seed{seed}] loops={row['loops']} "
+                  f"depth_lift={row['depth_lift']} EN={row['en_fired']} "
+                  f"outcome={row['failure_mode']}")
+
+    _write_creative_probe_report(domain_id, all_rows)
+    return all_rows
+
+
+def _write_creative_probe_report(domain_id: str, rows: list):
+    out_dir = Path("paper7")
+    out_dir.mkdir(exist_ok=True)
+
+    report = {
+        "label":   ("EXPLORATORY CURIOSITY PROBE — not pre-registered, not confirmatory. "
+                    "Do not fold into Paper 7 main result."),
+        "domain":  domain_id,
+        "personas": CREATIVE_PERSONA_KEYS,
+        "seeds":   ISOLATION_SEEDS,
+        "n_runs":  len(rows),
+        "goal":    ("Check whether creative non-local operators (mozart, picasso) produce "
+                    "stronger novelty regeneration than rational operators (popper, shannon, darwin)."),
+        "rows":    rows,
+    }
+    json_path = out_dir / f"creative_persona_probe_{domain_id}.json"
+    with open(json_path, "w") as f:
+        json.dump(report, f, indent=2)
+
+    # Markdown report
+    lines = [
+        f"# Creative Persona Probe — {domain_id}",
+        "",
+        "**EXPLORATORY CURIOSITY PROBE — not pre-registered, not confirmatory.**  ",
+        "**Do not fold into Paper 7 main result.**",
+        "",
+        "**Goal:** Check whether creative non-local operators (mozart, picasso) produce",
+        "stronger novelty regeneration than rational operators (popper, shannon, darwin).",
+        "",
+        f"Domain: `{domain_id}` — {DOMAINS[domain_id]['seed']}  ",
+        f"Condition: EN\\_persona | Personas: {CREATIVE_PERSONA_KEYS} | Seeds: {ISOLATION_SEEDS}  ",
+        f"P4 baseline depth: {DOMAINS[domain_id].get('p4_depth')} loops (depth_lift=0 reference)",
+        "",
+        "---",
+        "",
+        "## Results",
+        "",
+        "| Persona | Seed | Loop-0 dup | EN fired | Loops | depth_lift | Outcome | claim_hash |",
+        "|---------|------|------------|----------|-------|------------|---------|------------|",
+    ]
+    for r in rows:
+        lines.append(
+            f"| {r['persona']} | {r['seed']} | {r['loop0_dup']} | {r['en_fired']} "
+            f"| {r['loops']} | {r['depth_lift']} | {r['failure_mode']} "
+            f"| `{r['loop0_claim_hash'] or '?'}` |"
+        )
+
+    lines += ["", "## EN Event Detail", ""]
+    for r in rows:
+        if r["en_events"]:
+            lines.append(f"### {r['persona']} / seed {r['seed']}")
+            lines.append("")
+            lines.append("| Loop | ENI novelty | ENI non_drift | drift | ENI composite | admitted | novelty_next |")
+            lines.append("|------|-------------|---------------|-------|---------------|----------|--------------|")
+            for ev in r["en_events"]:
+                lines.append(
+                    f"| {ev['loop']} | {ev['eni_novelty']} | {ev['eni_non_drift']} "
+                    f"| {ev['drift']} | {ev['eni_composite']} | {ev['admitted']} "
+                    f"| {ev['novelty_produced_next_loop']} |"
+                )
+            lines.append("")
+
+    lines += [
+        "## Comparison with Rational Personas (from persona_structural_fit.md)",
+        "",
+        "| Persona | mean_depth_lift | median_depth_lift | type |",
+        "|---------|----------------|-------------------|------|",
+        "| popper  | +0.67 (⚠️ resume-inflated) | 0 | rational |",
+        "| shannon | −0.33          | −1                | rational |",
+        "| darwin  | +3.00          | +3                | rational |",
+    ]
+    # Add creative persona rows
+    for persona in CREATIVE_PERSONA_KEYS:
+        pr = [r for r in rows if r["persona"] == persona]
+        if pr:
+            dls = [r["depth_lift"] for r in pr if r["depth_lift"] is not None]
+            mean_dl = round(sum(dls) / len(dls), 2) if dls else "?"
+            med_dl  = sorted(dls)[len(dls) // 2] if dls else "?"
+            lines.append(f"| {persona}  | {mean_dl} | {med_dl} | creative_nonlocal |")
+
+    lines += [
+        "",
+        "## Notes",
+        "",
+        "- n=3 per persona. Purely exploratory — no statistical inference warranted.",
+        "- Creative personas use structurally non-local reframing: Mozart (thematic variation,",
+        "  modulation, transformed return) and Picasso (cubist multi-view decomposition).",
+        "- Admissibility gate (Alexandria-lite) unchanged; no threshold modifications.",
+        "- Python RNG seed ≠ LLM determinism. Claim hashes will differ across seeds.",
+        "- Results are NOT pre-registered and should NOT be cited as confirmatory.",
+    ]
+
+    md_path = out_dir / f"creative_persona_probe_{domain_id}.md"
+    with open(md_path, "w") as f:
+        f.write("\n".join(lines))
+
+    print(f"\nCreative probe report: {json_path}")
+    print(f"Markdown:              {md_path}")
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -999,11 +1178,12 @@ def main():
     parser.add_argument("--seed", type=int, default=None,
                         help="RNG seed for reproducibility audit (e.g. 101, 202, 303)")
     parser.add_argument("--persona", type=str, default=None,
-                        choices=PERSONA_KEYS,
-                        help="Single-persona filter for EN_persona condition "
-                             "(popper/shannon/darwin). Isolation use only.")
+                        choices=PERSONA_KEYS + CREATIVE_PERSONA_KEYS,
+                        help="Single-persona filter for EN_persona condition. Isolation use only.")
     parser.add_argument("--persona-isolation", action="store_true",
                         help="Run full persona isolation: N03 × 3 personas × 3 seeds")
+    parser.add_argument("--creative-probe", action="store_true",
+                        help="EXPLORATORY: run creative persona probe (mozart, picasso) × 3 seeds")
     args = parser.parse_args()
 
     _init_clients()
@@ -1011,6 +1191,11 @@ def main():
     if args.persona_isolation:
         domain = args.domain or "N03"
         run_persona_isolation(domain_id=domain)
+        return
+
+    if args.creative_probe:
+        domain = args.domain or "N03"
+        run_creative_probe(domain_id=domain)
         return
 
     if args.all:

@@ -116,6 +116,30 @@ PERSONA_PROMPTS = [
         "Apply evolutionary dynamics: what selection pressures, variation sources, and fitness "
         "landscapes are implied?\nDomain: {question}\nReturn ONE research question only.",
     ),
+    (
+        "mozart",
+        "W.A. Mozart",
+        "Apply Mozart's compositional logic — thematic variation, modulation, and transformed return:\n"
+        "1. Identify the dominant motif (the central taken-for-granted assumption).\n"
+        "2. Invert, augment, or modulate it: transpose the same structure into a completely different "
+        "conceptual register or domain.\n"
+        "3. Return to the original domain with this transformed theme as a new question.\n"
+        "Domain: {question}\nReturn ONE research question that represents a structural recombination "
+        "of the domain's central motif in a new key.",
+    ),
+    (
+        "picasso",
+        "Pablo Picasso",
+        "Apply Picasso's cubist method — fracture perspective, superimpose incompatible views:\n"
+        "Simultaneously decompose this domain from four viewpoints at once:\n"
+        "- Micro (mechanism, substrate, implementation detail)\n"
+        "- Macro (systemic, emergent, civilizational arc)\n"
+        "- Temporal (100-year historical trajectory and long-run attractor)\n"
+        "- Adversarial (who benefits structurally if the conventional answer is wrong?)\n"
+        "Hold all four at once. What research question only becomes visible when these "
+        "incompatible perspectives are fractured and superimposed?\n"
+        "Domain: {question}\nReturn ONE research question that cannot be asked from any single viewpoint.",
+    ),
 ]
 
 ADJACENT_PROMPTS = [
