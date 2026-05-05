@@ -1,0 +1,390 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_direction": "ambiguous",
+        "heterogeneity": "depends on skill complementarity and local labor market conditions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "immigration of high-skill workers",
+      "predicate": "increases wages for native workers",
+      "object": "native workers with complementary skills",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skill workers native workers with complementary skills]"
+      ],
+      "scope": {
+        "domain": "high-skill labor markets"
+      },
+      "qualifier": {
+        "effect_direction": "positive",
+        "heterogeneity": "depends on skill complementarity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "immigration of low-skill workers",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers with substitutable skills",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skill workers native workers with substitutable skills]",
+        "[CONFLICT] The claim that low-skill immigration reduces wages for native workers is disputed because empirical evidence shows heterogeneous effects depending on local market conditions, with some studies finding minimal or no negative impact."
+      ],
+      "scope": {
+        "domain": "low-skill labor markets"
+      },
+      "qualifier": {
+        "effect_direction": "negative",
+        "heterogeneity": "depends on local market conditions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "immigration",
+      "predicate": "has no net effect on average wages of native workers",
+      "object": "native workers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers]"
+      ],
+      "scope": {
+        "domain": "aggregate national labor market"
+      },
+      "qualifier": {
+        "effect_direction": "neutral",
+        "heterogeneity": "offsetting effects across skill levels and regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "immigration of high-skill workers",
+      "predicate": "decreases wages for native workers",
+      "object": "native workers with overlapping skills",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skill workers native workers with overlapping skills]",
+        "[PATH:empirical] Quasi-experimental studies of H-1B visa cap changes (e.g., using variation in visa lotteries or policy shocks) to estimate wage effects on native workers in computer science and engineering occupations. \u2014 Such studies exploit exogenous variation in high-skill immigration flows, allowing causal identification of wage effects for natives with closely overlapping skills, directly testing the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing empirical estimates on the wage impact of high-skill immigration, focusing on studies that measure skill overlap (e.g., using occupation or education-level data). \u2014 A systematic synthesis of the literature can reveal the central tendency and heterogeneity of effects, clarifying whether the negative direction holds across contexts and how it depends on the degree of skill substitutability.",
+        "[PATH:theoretical] Dynamic equilibrium models of the labor market with heterogeneous skills and endogenous technology adoption (e.g., models incorporating task specialization or innovation responses). \u2014 These models can predict conditions under which high-skill immigration reduces native wages (e.g., strong substitutability) versus when complementarities or innovation spillovers offset negative effects, helping to resolve the disputed status."
+      ],
+      "scope": {
+        "domain": "high-skill labor markets"
+      },
+      "qualifier": {
+        "effect_direction": "negative",
+        "heterogeneity": "depends on skill overlap"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "immigration of high-skill workers",
+      "predicate": "decreases wages for native workers",
+      "object": "native workers with similar skills",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skill workers native workers with similar skills]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' and subsequent replication studies using U.S. Census data \u2014 This foundational work provides a direct empirical test of wage effects of high-skill immigration on native workers with similar skills, using cross-metropolitan area variation. Replications with updated data can confirm or refute the hypothesized short- to medium-term wage decrease.",
+        "[PATH:empirical] Peri, G. (2012) 'The Effect of Immigration on Productivity: Evidence from U.S. States' and related analyses using matched employer-employee datasets from developed countries (e.g., Germany, Canada) \u2014 These studies often find complementarity effects rather than wage depression for high-skill natives. Examining them in the context of competitive high-skill labor markets can reveal whether the hypothesized wage decrease is offset by productivity gains or innovation.",
+        "[PATH:theoretical] A theoretical model of skill-specific labor markets with endogenous technology adoption (e.g., Acemoglu, 1998) calibrated to high-skill immigration in OECD countries \u2014 This direction allows testing the conditions under which high-skill immigration reduces native wages (e.g., fixed capital, short-run substitution) versus when it raises them (e.g., technology spillovers, increased R&D). Simulation results can clarify the disputed status."
+      ],
+      "scope": {
+        "domain": "high-skill labor markets"
+      },
+      "qualifier": {
+        "temporal": "short-term to medium-term",
+        "geographic": "developed countries with competitive high-skill labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "immigration of low-skill workers",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers with substitutable skills in markets with weak labor protections",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skill workers native workers with substitutable skills in markets with weak labor protections]",
+        "[PATH:empirical] Card, D. (1990). The impact of the Mariel boatlift on the Miami labor market. Industrial and Labor Relations Review, 43(2), 245-257. \u2014 This classic natural experiment study provides a direct test of the wage effects of low-skill immigration in a specific labor market. Re-analyzing the data with a focus on regions with weak labor protections (e.g., low union density) could confirm or refute the hypothesized negative effect.",
+        "[PATH:empirical] Borjas, G. J. (2003). The labor demand curve is downward sloping: Reexamining the impact of immigration on the labor market. Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 Borjas's spatial correlations approach offers a broader empirical framework to estimate wage effects across different local labor markets. Examining heterogeneity by union density or minimum wage enforcement would directly test the qualifier in the hypothesis.",
+        "[PATH:literature] Systematic meta-analysis of immigration wage effects (e.g., Longhi, S., Nijkamp, P., & Poot, J. (2005). A meta-analytic assessment of the effect of immigration on wages. Journal of Economic Surveys, 19(3), 451-477). \u2014 A meta-analysis synthesizes findings from multiple studies, allowing assessment of whether the negative wage effect is consistently larger in contexts with weak labor protections, thereby providing a higher-level test of the hypothesis's scope condition."
+      ],
+      "scope": {
+        "domain": "low-skill labor markets"
+      },
+      "qualifier": {
+        "effect_direction": "negative",
+        "heterogeneity": "the negative wage effect is concentrated in regions with low union density or weak minimum wage enforcement"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "immigration of low-skill workers",
+      "predicate": "increases wages for native workers",
+      "object": "native workers with complementary skills",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skill workers native workers with complementary skills]",
+        "[PATH:empirical] Card (2009) 'Immigration and Inequality' (American Economic Review) or updated replication studies using 2000-2020 CPS data \u2014 This seminal paper uses variation in immigrant inflows across U.S. cities to estimate wage effects on native workers with complementary skills. Replicating with post-2000 data can directly test whether low-skill immigration raises wages for complementary native workers in the specified temporal and geographic scope.",
+        "[PATH:empirical] Ottaviano & Peri (2012) 'Rethinking the Effect of Immigration on Wages' (Journal of the European Economic Association) \u2014 This study employs a structural approach distinguishing between perfect and imperfect substitutability of native and immigrant labor. It provides evidence on wage complementarities for native workers with different skill levels, directly relevant to the hypothesis about complementary skills.",
+        "[PATH:empirical] Dustmann, Frattini & Preston (2013) 'The Effect of Immigration along the Distribution of Wages' (Review of Economic Studies) \u2014 This paper uses a spatial panel approach to examine wage effects across the entire distribution, which can isolate effects on native workers with complementary skills (e.g., high-skill natives in low-skill labor markets). Its methodology is well-suited to confirm or refute the hypothesized positive wage effect."
+      ],
+      "scope": {
+        "domain": "low-skill labor markets"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "immigration of low-skill workers",
+      "predicate": "reduces wages",
+      "object": "native workers with substitutable skills in markets with high labor union density",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skill workers native workers with substitutable skills in markets with high labor union density]",
+        "[PATH:empirical] Longitudinal wage data from high-union-density sectors (e.g., manufacturing, construction) combined with local immigration inflow rates, controlling for labor demand shocks. \u2014 Directly tests the wage effect of low-skill immigration in unionized markets, allowing estimation of the moderating role of union density via interaction terms.",
+        "[PATH:empirical] Quasi-experimental studies exploiting natural experiments (e.g., sudden immigration policy changes or refugee waves) in regions with varying union density, using difference-in-differences or instrumental variable methods. \u2014 Provides causal identification of the wage effect while accounting for selection bias and confounding factors, crucial for confirming or refuting the hypothesized negative effect.",
+        "[PATH:theoretical] Theoretical models of wage bargaining under union power, incorporating immigration-induced labor supply shifts and union wage floor effects. \u2014 Clarifies mechanisms: unions may protect wages via collective bargaining or seniority rules, potentially dampening or reversing competitive wage reductions from immigration, thus refining the hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skill labor markets with strong union presence"
+      },
+      "qualifier": {
+        "effect_direction": "negative",
+        "heterogeneity": "union density moderates the wage effect"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "immigration of low-skill workers",
+      "predicate": "increases productivity and economic growth",
+      "object": "local economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skill workers local economies]",
+        "[PATH:empirical] Card, D. (1990). 'The Impact of the Mariel Boatlift on the Miami Labor Market'. Industrial and Labor Relations Review, 43(2), 245-257. \u2014 This seminal natural experiment study provides direct empirical evidence on how a sudden influx of low-skill immigrants affected local wages and employment, offering a key test for productivity and growth effects in a U.S. urban economy.",
+        "[PATH:empirical] Peri, G. (2012). 'The Effect of Immigration on Productivity: Evidence from U.S. States'. Review of Economics and Statistics, 94(1), 348-358. \u2014 This study uses state-level panel data to estimate the impact of low-skill immigration on total factor productivity and output per worker, directly addressing the hypothesis with rigorous econometric methods over a similar time period.",
+        "[PATH:literature] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market'. Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This influential paper presents a competing theoretical and empirical perspective suggesting that low-skill immigration may reduce wages for native workers, challenging the claim of positive productivity and growth effects and motivating further investigation."
+      ],
+      "scope": {
+        "domain": "low-skill labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T6[hypothesis_builder] on C003 -> C009",
+    "T6[falsifier] on C003 -> C010",
+    "T8 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 33,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}
