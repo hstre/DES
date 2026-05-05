@@ -1,0 +1,398 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "outperform",
+      "object": "both pure deep reinforcement learning and pre-specified symbolic hybrid systems in tasks requiring compositional generalization and causal reasoning",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data both pure deep reinforcement learning and pre-specified symbolic hybrid systems in tasks requiring compositional generalization and causal reasoning]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "outperform",
+      "object": "pure deep reinforcement learning in tasks requiring compositional generalization",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data pure deep reinforcement learning in tasks requiring compositional generalization]"
+      ],
+      "scope": {
+        "domain": "compositional generalization"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "simulated environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "may not outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy]"
+      ],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "condition": "training data is limited or noisy"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "fail to outperform",
+      "object": "pure deep reinforcement learning in tasks requiring compositional generalization when training data includes high perceptual variability",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data pure deep reinforcement learning in tasks requiring compositional generalization when training data includes high perceptual variability]",
+        "[PATH:empirical] Controlled benchmark experiments comparing Neurally-Guided Symbolic Reasoning (e.g., NS-DR, DNC) vs. PPO/IMPALA on tasks like CLEVR-With-Variations or MiniGrid-Memory where perceptual variability (e.g., random textures, lighting) is systematically manipulated \u2014 Directly tests the hypothesis by measuring compositional generalization performance under high perceptual variability, isolating the effect of symbolic causal layers versus pure deep RL.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and compositional generalization bounds for hybrid symbolic-neural architectures vs. end-to-end deep RL (e.g., based on the work of Goyal et al. 2021 on inductive biases or d'Ascoli et al. 2022 on disentangled representations) \u2014 Provides formal justification for whether symbolic layers should fail to outperform deep RL under high perceptual noise, potentially confirming the predicted limitation.",
+        "[PATH:literature] Literature review of existing results on compositional generalization in embodied agents (e.g., from ICLR, NeurIPS, CoRL 2020-2025), focusing on studies that explicitly vary perceptual noise and compare symbolic causal reasoning to end-to-end reinforcement learning \u2014 Aggregates existing empirical evidence to assess whether the hypothesis holds across different environments and experimental setups, revealing consistent patterns or contradictions."
+      ],
+      "scope": {
+        "domain": "compositional generalization under perceptual noise"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "simulated embodied environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Pure deep reinforcement learning",
+      "predicate": "outperforms",
+      "object": "end-to-end trained symbolic causal inference layers from embodied data in tasks requiring compositional generalization",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Pure deep reinforcement learning end-to-end trained symbolic causal inference layers from embodied data in tasks requiring compositional generalization]",
+        "[PATH:empirical] Systematic benchmarking on the CLEVRER or CATER datasets comparing pure deep RL agents (e.g., DQN, PPO) against hybrid models with differentiable causal layers (e.g., NPS, SCL) under identical embodied interaction settings. \u2014 Directly tests the hypothesis by measuring compositional generalization performance (e.g., held-out object combinations) in controlled simulated environments.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and generalization bounds for deep RL versus causal structure learning in embodied settings, building on work by Dasgupta et al. (2019) and Goyal et al. (2021). \u2014 Provides mathematical grounding for whether pure RL can match the inductive bias of symbolic causal layers for compositional tasks, clarifying the regime where one may outperform the other.",
+        "[PATH:literature] Meta-analysis of published results from the NeurIPS 2022-2023 'Compositional Generalization in Embodied Agents' workshops and related literature (e.g., Hill et al., 2020; Kansky et al., 2017). \u2014 Aggregates existing empirical evidence across multiple studies to assess whether pure deep RL consistently beats or falls short of symbolic-causal hybrids in compositional generalization benchmarks."
+      ],
+      "scope": {
+        "domain": "compositional generalization"
+      },
+      "qualifier": {
+        "temporal": "as of 2023",
+        "geographic": "simulated environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "will outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy, provided the system is pre-trained on a diverse corpus of causal structures via meta-learning",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy, provided the system is pre-trained on a diverse corpus of causal structures via meta-learning]",
+        "[PATH:empirical] Controlled benchmark experiments comparing meta-learned neural-symbolic models (e.g., Deep Symbolic Optimization or Neural Logic Machines) against pre-specified hybrid systems (e.g., Bayesian program learning or probabilistic causal models) on causal reasoning tasks from embodied datasets (e.g., CLEVRER, Physion) with limited/noisy training data. \u2014 Directly tests the hypothesis in a controlled setting by varying data quantity and noise levels, measuring causal inference accuracy and sample efficiency.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity bounds for meta-learned neural-symbolic architectures versus fixed symbolic causal models under distribution shift, using PAC-Bayes or information-theoretic frameworks. \u2014 Provides formal guarantees or refutations for the claimed advantage in low-data or noisy regimes, clarifying the role of pre-training on diverse causal structures.",
+        "[PATH:literature] Systematic literature review of prior work on meta-learning for causal discovery (e.g., 'Causal Meta-Learning' by Bengio et al., 2020) and comparisons with hand-crafted causal models in embodied AI (e.g., 'Causal World Models' by Scholkopf et al., 2021). \u2014 Synthesizes existing empirical and theoretical findings to assess whether current evidence supports or contradicts the hypothesis, identifying gaps and methodological confounds."
+      ],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "condition": "system is pre-trained on a diverse corpus of causal structures via meta-learning"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "can outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic causal inference layers from embodied data pre-specified symbolic hybrid systems in tasks requiring causal reasoning]",
+        "[PATH:empirical] Benchmarking on the CausalWorld or REASONER suite with limited-data regimes (e.g., <1000 episodes), comparing end-to-end differentiable causal graph learners (e.g., DAG-GNN, NOTEARS-embodied) against hand-crafted symbolic planners (e.g., STRIPS, PDDL-based) on causal chain and intervention tasks. \u2014 Directly tests the performance gap under data scarcity, which is the core scope of the hypothesis. Controlled experiments can reveal whether learned symbolic layers generalize better than pre-specified rules.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity for end-to-end causal structure learning vs. pre-specified symbolic systems in embodied domains (e.g., PAC bounds for differentiable causal discovery with embodied feedback loops). \u2014 Provides formal guarantees or refutations on whether learned symbolic layers can overcome the inductive bias advantage of hand-crafted systems when data is limited. Key for interpreting empirical results and establishing domain conditions.",
+        "[PATH:literature] Literature review of recent works on neural-symbolic integration for causal reasoning (e.g., 'Causal Discovery with Reinforcement Learning' by Zhu et al., 2020; 'Differentiable Causal Inference' by Brouillard et al., 2020) versus classic hybrid systems (e.g., 'Causal Bayesian Networks' by Pearl, 2000) in embodied contexts. \u2014 Synthesizes existing evidence on the comparative strengths and weaknesses, identifies confounding factors (e.g., task complexity, data dimensionality), and highlights gaps in the current evidence base for the disputed claim."
+      ],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms End-to-end trained symbolic causal inference layers from embodied data outperform pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy in domain 'causal reasoning with limited data']"
+      ],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "do not outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms End-to-end trained symbolic causal inference layers from embodied data do not outperform pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy in domain 'causal reasoning with limited data']"
+      ],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "will outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning when training data is limited or noisy, provided that the training data includes diverse counterfactual examples",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {
+        "condition": "training data includes diverse counterfactual examples"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "can outperform",
+      "object": "pre-specified symbolic hybrid systems in tasks requiring causal reasoning through adaptive learning even when training data is limited or noisy",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "causal reasoning with limited data"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}

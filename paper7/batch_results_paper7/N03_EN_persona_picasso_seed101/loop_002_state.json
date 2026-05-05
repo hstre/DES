@@ -1,0 +1,423 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Hybrid architectures with a symbolic causal inference layer trained end-to-end via embodied interaction",
+      "predicate": "are necessary for achieving AGI",
+      "object": "purely non-symbolic, embodied approaches",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Hybrid architectures with a symbolic causal inference layer trained end-to-end via embodied interaction purely non-symbolic, embodied approaches]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Embodied interaction data alone may yield robust sensorimotor skills but lacks compositional generalization and causal abstraction, while symbolic systems require hand-coded priors; end-to-end training of a symbolic layer from embodied data has not been empirically shown to outperform either pure deep reinforcement learning or hybrid systems with pre-specified symbolic modules."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Purely non-symbolic, embodied approaches",
+      "predicate": "can achieve compositional generalization and causal abstraction",
+      "object": "through sufficient scale of embodied interaction data and architectural innovations",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Purely non-symbolic, embodied approaches through sufficient scale of embodied interaction data and architectural innovations]"
+      ],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "tension": "This challenges the necessity of symbolic layers by suggesting that non-symbolic systems may develop implicit causal models from data alone, but current evidence is limited to narrow benchmarks."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "End-to-end trained symbolic causal inference layers from embodied data",
+      "predicate": "outperform both pure deep reinforcement learning and pre-specified symbolic hybrid systems",
+      "object": "in tasks requiring compositional generalization and causal reasoning",
+      "status": "unknown",
+      "confidence": 0.29,
+      "modality": "suggestion",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "hybrid AGI architectures"
+      },
+      "qualifier": {
+        "tension": "This is the strongest form of the original claim but lacks empirical support; it creates friction with the first sub-claim by asserting the necessity of explicit symbolic structure."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Hybrid architectures with pre-specified symbolic modules",
+      "predicate": "offer a more pragmatic path to AGI than end-to-end trained symbolic layers",
+      "object": "by leveraging human priors and avoiding the instability of joint training",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Hybrid architectures with pre-specified symbolic modules by leveraging human priors and avoiding the instability of joint training]"
+      ],
+      "scope": {
+        "domain": "AGI engineering feasibility"
+      },
+      "qualifier": {
+        "tension": "This competing perspective undermines the necessity of end-to-end training of the symbolic layer, suggesting that hand-coded priors remain more reliable despite their inflexibility."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Purely non-symbolic, embodied approaches",
+      "predicate": "will fail to achieve systematic compositional generalization",
+      "object": "when tested on out-of-distribution causal tasks requiring explicit variable binding",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Purely non-symbolic, embodied approaches when tested on out-of-distribution causal tasks requiring explicit variable binding]",
+        "[PATH:empirical] Systematic benchmark comparing non-symbolic embodied models (e.g., vision-language RL agents) against symbolic-hybrid models on out-of-distribution causal reasoning tasks like CLEVR-Hans or the Abstraction and Reasoning Corpus (ARC) with explicit variable binding requirements. \u2014 Directly tests the hypothesis by measuring compositional generalization failure rates in controlled OOD settings, isolating the effect of lacking symbolic mechanisms.",
+        "[PATH:theoretical] Theoretical analysis using the 'binding problem' framework from cognitive science (e.g., Fodor & Pylyshyn, 1988; recent work on dynamic binding in neural networks) to prove that purely distributed representations cannot support systematic variable binding without additional structural inductive biases. \u2014 Provides a formal argument for why non-symbolic approaches must fail under the specified conditions, clarifying the necessary conditions for successful generalization.",
+        "[PATH:literature] Literature review of large-scale embodied models (e.g., PaLM-E, SayCan, RT-2) evaluated on compositional causal tasks, focusing on their performance on novel variable bindings versus in-distribution performance. \u2014 Aggregates existing empirical evidence to see if scale alone overcomes the hypothesized failure mode, testing the qualifier's claim that the limitation is independent of scale."
+      ],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "tension": "Refines the original claim by specifying a critical failure mode: without symbolic or quasi-symbolic mechanisms, embodied models cannot maintain consistent causal abstractions across novel compositions, regardless of scale."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Symbolic layers",
+      "predicate": "are essential for achieving compositional generalization and causal abstraction",
+      "object": "in AGI architectures",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Symbolic layers in AGI architectures]",
+        "[PATH:empirical] Controlled experiments comparing transformer-only architectures (e.g., GPT-4, PaLM) vs. hybrid neurosymbolic models (e.g., DeepMind's ALIGN, IBM's Neuro-Symbolic Concept Learner) on compositional generalization benchmarks (e.g., SCAN, COGS, CFQ) \u2014 Directly tests whether symbolic layers improve compositional generalization by measuring accuracy on unseen combinations of known concepts, providing quantitative evidence for or against the hypothesis.",
+        "[PATH:literature] Systematic literature review of causal abstraction in neural networks (e.g., Geiger et al. 2021, 'Causal Abstraction for Interpretable Neural Networks') and neurosymbolic systems (e.g., Garcez & Lamb 2023, 'Neurosymbolic AI: The 3rd Wave') \u2014 Synthesizes existing theoretical and empirical findings on whether symbolic layers enable causal abstraction (e.g., learning causal models from data) compared to purely neural approaches, clarifying the current consensus and gaps.",
+        "[PATH:theoretical] Theoretical analysis of the computational expressiveness of symbolic vs. continuous representations in achieving systematic compositionality (e.g., using insights from Fodor & Pylyshyn 1988, or modern work on 'compositional learning in neural networks' by Hupkes et al. 2020) \u2014 Provides formal arguments about whether symbolic layers are necessary (or merely sufficient) for compositional generalization and causal abstraction, helping to reframe the hypothesis in terms of computational limits."
+      ],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 research discussions",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Purely non-symbolic, embodied approaches",
+      "predicate": "can achieve compositional generalization and causal abstraction",
+      "object": "through sufficient scale of embodied interaction data and architectural innovations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Purely non-symbolic, embodied approaches can achieve compositional generalization and causal abstraction through sufficient scale of embodied interaction data and architectural innovations in domain 'AGI architecture comparison']"
+      ],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "temporal": "current research (as of 2025)",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Purely non-symbolic, embodied approaches",
+      "predicate": "cannot achieve compositional generalization and causal abstraction",
+      "object": "without explicit symbolic layers or inductive biases",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Purely non-symbolic, embodied approaches cannot achieve compositional generalization and causal abstraction without explicit symbolic layers or inductive biases in domain 'AGI architecture comparison']"
+      ],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global research context"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Hybrid architectures with pre-specified symbolic modules",
+      "predicate": "will converge to AGI-level reasoning faster than end-to-end trained neural-only systems",
+      "object": "because their explicit causal structure enables sample-efficient learning and compositional generalization that neural-only models lack",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Hybrid architectures with pre-specified symbolic modules because their explicit causal structure enables sample-efficient learning and compositional generalization that neural-only models lack]",
+        "[PATH:empirical] Controlled benchmark comparison between hybrid neuro-symbolic systems (e.g., Neural Programmer-Interpreters, Differentiable Neural Computers with explicit memory) and pure transformer-based models on compositional generalization tasks (e.g., SCAN, COGS, or MATH datasets) at varying training data sizes. \u2014 Directly tests the claim that explicit causal/symbolic structure yields sample efficiency and compositional generalization. If hybrid models outperform neural-only ones with fewer examples, the hypothesis gains support; if not, it is refuted.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity bounds for hybrid architectures vs. end-to-end neural networks, using tools from statistical learning theory (e.g., VC dimension, Rademacher complexity) and causal representation learning (e.g., Sparse Mechanism Shift, Independent Causal Mechanisms). \u2014 Provides formal justification for why pre-specified symbolic modules might reduce sample complexity. If theory shows no fundamental advantage under realistic assumptions (e.g., unknown causal structure), the hypothesis is weakened.",
+        "[PATH:literature] Systematic literature review of existing hybrid AGI projects (e.g., OpenCog, NARS, IBM\u2019s neuro-symbolic systems) and their performance trajectories compared to neural-only scaling laws (e.g., Kaplan et al., 2020; Hoffmann et al., 2022) up to 2025, with projections to 2035. \u2014 Aggregates historical evidence on convergence speed and reasoning benchmarks. If hybrid systems have consistently lagged behind neural-only scaling in practice, the hypothesis is challenged; if they show emerging advantages, it is supported."
+      ],
+      "scope": {
+        "domain": "AGI engineering feasibility"
+      },
+      "qualifier": {
+        "temporal": "by 2035",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "End-to-end trained symbolic layers",
+      "predicate": "offer a more pragmatic path to AGI than hybrid architectures with pre-specified symbolic modules",
+      "object": "by enabling seamless integration and adaptability through joint optimization",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: End-to-end trained symbolic layers by enabling seamless integration and adaptability through joint optimization]",
+        "[PATH:empirical] Empirical comparison of end-to-end trained neural-symbolic systems (e.g., DeepProbLog, NeuroLog) vs. hybrid architectures with fixed symbolic modules (e.g., Neural Theorem Provers) on a suite of compositional generalization benchmarks (e.g., SCAN, COGS, or CLEVR). \u2014 Directly tests whether joint optimization yields superior adaptability and seamless integration compared to pre-specified symbolic modules, providing concrete performance metrics for or against the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of gradient flow and optimization landscapes in end-to-end trained symbolic layers (e.g., using straight-through estimators or Gumbel-Softmax) versus hybrid systems with discrete symbolic constraints. \u2014 Examines whether end-to-end training offers provable convergence advantages or avoids local minima that plague hybrid systems, addressing the 'pragmatic path' claim from first principles.",
+        "[PATH:literature] Literature survey of recent AGI roadmaps and position papers from leading labs (e.g., DeepMind, OpenAI, Anthropic) comparing the scalability and engineering feasibility of end-to-end neural-symbolic approaches vs. hybrid architectures. \u2014 Captures expert consensus and documented practical challenges (e.g., brittleness, sample efficiency, integration complexity) that reflect the current state of AGI research as of 2025."
+      ],
+      "scope": {
+        "domain": "AGI engineering feasibility"
+      },
+      "qualifier": {
+        "temporal": "current state of AGI research (as of 2025)",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Purely non-symbolic, embodied approaches with recurrent predictive coding architectures",
+      "predicate": "will fail to achieve compositional generalization",
+      "object": "when the embodied interaction data lacks structured variation in object-relation combinations",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {
+        "tension": "This refines the original claim by proposing a necessary condition: without data that systematically varies compositional relations, non-symbolic systems cannot infer abstract causal structures, even at scale."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Symbolic and hybrid approaches",
+      "predicate": "are essential for achieving compositional generalization and causal abstraction",
+      "object": "because they provide explicit structural representations that are inherently more efficient in capturing and manipulating abstract relationships",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "AGI architecture comparison"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C002"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T5[hypothesis_builder] on C002 -> C005",
+    "T5[falsifier] on C002 -> C006",
+    "T1 on C002",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C002 -> C011",
+    "T9[falsifier] on C002 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [
+    "C003"
+  ],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C010",
+      "C012"
+    ]
+  }
+}
