@@ -1,0 +1,429 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "economic inequality",
+      "predicate": "harms",
+      "object": "social cohesion",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality social cohesion]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Cross-national studies show mixed results: some find strong negative correlations between inequality and trust or civic participation, while others find no significant effect after controlling for ethnic diversity or institutional factors, and a few even report positive associations in certain contexts."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "economic inequality",
+      "predicate": "reduces",
+      "object": "interpersonal trust",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality interpersonal trust]"
+      ],
+      "scope": {
+        "domain": "high-inequality democracies"
+      },
+      "qualifier": {
+        "caveat": "effect weakens when controlling for ethnic fractionalization"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "economic inequality",
+      "predicate": "has no significant effect on",
+      "object": "social cohesion",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality social cohesion]"
+      ],
+      "scope": {
+        "domain": "societies with strong institutional buffers"
+      },
+      "qualifier": {
+        "caveat": "after accounting for welfare state and political polarization"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "economic inequality",
+      "predicate": "can enhance",
+      "object": "civic participation in certain contexts",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality civic participation in certain contexts]"
+      ],
+      "scope": {
+        "domain": "rapidly developing economies"
+      },
+      "qualifier": {
+        "caveat": "where inequality signals opportunity for upward mobility"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "perceived economic inequality",
+      "predicate": "reduces",
+      "object": "interpersonal trust more strongly than objective inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: perceived economic inequality interpersonal trust more strongly than objective inequality]",
+        "[PATH:empirical] Comparative panel studies using multi-country survey data (e.g., World Values Survey, European Social Survey) that include both perceived inequality measures (e.g., subjective social position, perceived income gap) and objective inequality measures (e.g., Gini coefficient, top 10% income share), with interpersonal trust as the outcome. \u2014 Directly tests the relative strength of perceived vs. objective inequality on trust across high-inequality democracies post-2000, allowing for within- and between-country comparisons.",
+        "[PATH:empirical] Experimental or quasi-experimental studies that manipulate perceived inequality (e.g., via vignettes or information treatments about income distribution) and measure subsequent trust in lab or online settings, while controlling for actual inequality exposure. \u2014 Establishes causal direction and isolates the effect of perception, addressing potential confounds in observational data and clarifying whether perception drives trust more than objective conditions.",
+        "[PATH:literature] Meta-analysis of existing literature on inequality and trust, coding studies that include both perceived and objective inequality measures, and estimating effect sizes for each predictor. \u2014 Synthesizes available evidence to quantify the comparative effect, identifies moderators (e.g., measurement of perception, cultural context), and assesses publication bias to resolve the disputed status."
+      ],
+      "scope": {
+        "domain": "high-inequality democracies"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "high-inequality democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "economic inequality",
+      "predicate": "increases",
+      "object": "interpersonal trust",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality interpersonal trust]",
+        "[PATH:empirical] Longitudinal panel studies on trust and inequality (e.g., World Values Survey, European Social Survey) with multilevel modeling to isolate within-country effects of Gini coefficient changes on generalized trust since 2000 in high-inequality democracies. \u2014 Directly tests the temporal and geographic scope of the hypothesis using repeated measures and controls for confounds like income mobility or social welfare policy.",
+        "[PATH:empirical] Behavioral experiments (e.g., trust games) comparing trust behavior across samples from high- vs. low-inequality democratic regions, with matched demographic controls. \u2014 Provides causal evidence by manipulating perceived inequality or comparing natural variation, addressing the disputed status of the positive relationship.",
+        "[PATH:literature] Meta-analysis of existing literature on inequality and trust, focusing on studies published since 2000 in high-inequality democracies, with moderator analysis for measurement type (e.g., survey vs. behavioral) and inequality metric. \u2014 Synthesizes conflicting findings to assess overall effect direction and magnitude, resolving the dispute by identifying conditions under which inequality increases trust."
+      ],
+      "scope": {
+        "domain": "high-inequality democracies"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "high-inequality democracies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "economic inequality",
+      "predicate": "reduces",
+      "object": "civic participation in rapidly developing economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality civic participation in rapidly developing economies]",
+        "[PATH:empirical] Comparative panel analysis of voter turnout and protest participation in Brazilian municipalities (2000-2020) using Gini coefficients and electoral data from TSE and IBGE \u2014 Brazil's rapid development and high inequality provide a within-country test: if inequality reduces civic participation, municipalities with Gini > 0.45 should show lower turnout and fewer protests over time, controlling for income and education.",
+        "[PATH:empirical] Longitudinal survey data from the China Family Panel Studies (CFPS) on political interest, community engagement, and local election participation across Chinese provinces with varying Gini indices (2000-2020) \u2014 China's rapid growth and rising inequality offer a crucial case. CFPS data can test whether inequality correlates with declining civic activity, while accounting for state controls that may suppress participation independently.",
+        "[PATH:literature] Meta-analysis of studies on inequality and political participation in developing economies, focusing on threshold effects around 0.45 Gini (e.g., World Bank, UNU-WIDER working papers) \u2014 Existing evidence is mixed; a systematic review can identify whether the 0.45 Gini threshold is robust across contexts, and whether the effect is linear or nonlinear, helping to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "rapidly developing economies where inequality exceeds a threshold of 0.45 Gini"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "rapidly developing economies such as Brazil, India, China, and South Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "economic inequality",
+      "predicate": "undermines",
+      "object": "civic participation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic inequality civic participation]",
+        "[PATH:empirical] Comparative analysis of Gini coefficients and voter turnout rates across rapidly developing economies (e.g., Brazil, India, China) from 2010 to 2025, using World Bank and International IDEA datasets. \u2014 Directly tests the causal link between rising inequality and declining civic participation (e.g., voting, community engagement) in the specified temporal and geographic scope.",
+        "[PATH:empirical] Longitudinal survey data from the Asian Barometer or Latinobarometer on perceived political efficacy and trust in institutions, correlated with household income inequality metrics. \u2014 Captures subjective mechanisms (e.g., disenfranchisement, reduced civic duty) that may mediate how inequality undermines participation, providing micro-level evidence.",
+        "[PATH:theoretical] Review of political economy theories on inequality and participation (e.g., Solt's 'unequal participation' hypothesis) applied to rapidly developing contexts, contrasted with recent empirical findings. \u2014 Helps refine the causal logic and identify boundary conditions (e.g., role of social mobility, media access) that could confirm or refute the hypothesis beyond simple correlation."
+      ],
+      "scope": {
+        "domain": "rapidly developing economies"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132025",
+        "geographic": "rapidly developing economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "economic inequality",
+      "predicate": "can enhance",
+      "object": "civic participation in rapidly developing economies where inequality signals opportunity for upward mobility",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms economic inequality can enhance civic participation in rapidly developing economies where inequality signals opportunity for upward mobility in domain 'rapidly developing economies']"
+      ],
+      "scope": {
+        "domain": "rapidly developing economies"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "rapidly developing economies in Asia and Latin America"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "economic inequality",
+      "predicate": "diminishes",
+      "object": "civic participation in rapidly developing economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms economic inequality diminishes civic participation in rapidly developing economies in domain 'rapidly developing economies']"
+      ],
+      "scope": {
+        "domain": "rapidly developing economies"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "rapidly developing economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "economic inequality",
+      "predicate": "reduces",
+      "object": "civic participation in rapidly developing economies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rapidly developing economies with low intergenerational mobility"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "economic inequality",
+      "predicate": "undermines",
+      "object": "civic participation",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rapidly developing economies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

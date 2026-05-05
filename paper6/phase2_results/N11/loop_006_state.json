@@ -1,0 +1,503 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the spatial configuration of forest edges, with deforestation extent playing a secondary role",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold the spatial configuration of forest edges, with deforestation extent playing a secondary role]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the total area of deforestation, with edge effects playing a secondary role",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold the total area of deforestation, with edge effects playing a secondary role]"
+      ],
+      "scope": {
+        "domain": "landscape ecology"
+      },
+      "qualifier": {
+        "temporal": "current climate conditions and deforestation rates",
+        "geographic": "Amazon rainforest"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the spatial configuration of forest edges, but only when deforestation extent exceeds 30% of the basin",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold the spatial configuration of forest edges, but only when deforestation extent exceeds 30% of the basin]"
+      ],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "condition": "deforestation extent > 30% basin area"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "fire feedback loops near forest edges, not by edge configuration alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold fire feedback loops near forest edges, not by edge configuration alone]"
+      ],
+      "scope": {
+        "domain": "fire ecology and land-use change"
+      },
+      "qualifier": {
+        "temporal": "early 21st century (2000\u20132020)",
+        "geographic": "southern and eastern Amazon rainforest (Brazil, Peru, Bolivia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the spatial configuration of deforestation, specifically the fragmentation index, rather than total area alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold the spatial configuration of deforestation, specifically the fragmentation index, rather than total area alone]",
+        "[PATH:empirical] Large-scale remote sensing analysis of Amazon deforestation patterns and subsequent vegetation recovery/tipping points using MODIS or Landsat time series, comparing fragmentation metrics (e.g., edge density, patch size distribution) against total deforested area as predictors of dieback onset. \u2014 Directly tests whether fragmentation index outperforms total area in predicting forest resilience or dieback events across different regions of the Amazon under current climate conditions.",
+        "[PATH:theoretical] High-resolution dynamic global vegetation model (DGVM) simulations, such as INLAND or LPJmL, parameterized with varying deforestation scenarios that hold total area constant while manipulating spatial configuration (e.g., aggregated vs. fragmented clearings), to assess threshold responses in carbon balance and tree mortality. \u2014 Provides controlled computational experiments to isolate the effect of fragmentation from total area, enabling causal inference about the primary determinant of dieback thresholds.",
+        "[PATH:literature] Meta-analysis of published field studies and remote sensing data on Amazon forest edges, including edge-effect depth and degradation (e.g., increased tree mortality, biomass loss) as a function of fragment shape and connectivity, synthesized from databases like the Amazon Forest Inventory Network. \u2014 Synthesizes existing empirical evidence on how fragmentation impacts forest health at local scales, which can be scaled up to evaluate whether fragmentation index is a more robust predictor of regional dieback than total deforested area."
+      ],
+      "scope": {
+        "domain": "landscape ecology"
+      },
+      "qualifier": {
+        "temporal": "current climate conditions and deforestation rates",
+        "geographic": "Amazon rainforest"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "edge effects, with the total area of deforestation playing a secondary role",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold edge effects, with the total area of deforestation playing a secondary role]",
+        "[PATH:empirical] High-resolution remote sensing analysis of forest fragmentation and edge-induced biomass collapse across the southern and eastern Brazilian Amazon deforestation arc, using data from PRODES and DETER combined with LiDAR or optical vegetation indices (e.g., from Landsat or Sentinel-2) to quantify edge effect penetration distances and correlate with local dieback events. \u2014 Directly tests whether dieback thresholds align with proximity to forest edges rather than with total deforested area, by comparing spatial patterns of forest degradation along edges versus interior patches of varying sizes.",
+        "[PATH:theoretical] Landscape-scale simulation modeling using a process-based vegetation model (e.g., LPJ-GUESS or ED2) parameterized for Amazonian forests, with explicit representation of edge microclimate changes (e.g., increased light, temperature, wind) and deforestation scenarios that vary edge-to-area ratios while keeping total deforested area constant. \u2014 Provides mechanistic insight into whether edge effects alone can trigger dieback thresholds independent of total deforestation extent, and helps isolate causal pathways under present-day climate conditions.",
+        "[PATH:literature] Meta-analysis of published field studies and experimental forest fragmentation projects (e.g., Biological Dynamics of Forest Fragments Project in the Amazon) that report tree mortality, biomass loss, or species turnover as a function of distance to edge and fragment size, focusing on the southern and eastern Amazon. \u2014 Synthesizes existing empirical evidence to assess whether edge effect magnitude consistently predicts dieback onset better than total deforestation area, and identifies gaps in current data for the specific geographic scope."
+      ],
+      "scope": {
+        "domain": "landscape ecology"
+      },
+      "qualifier": {
+        "temporal": "present-day climate conditions",
+        "geographic": "Brazilian Amazon, specifically the southern and eastern deforestation arc"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by the spatial configuration of forest edges, but only when deforestation extent exceeds 30% of the basin, and",
+      "object": "this threshold is further modulated by the orientation of forest edges relative to prevailing wind direction, such that edges facing upwind of the moisture inflow are significantly more vulnerable to dieback",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold this threshold is further modulated by the orientation of forest edges relative to prevailing wind direction, such that edges facing upwind of the moisture inflow are significantly more vulnerable to dieback]",
+        "[PATH:empirical] High-resolution satellite remote sensing of Amazon forest edge dynamics (e.g., Landsat, MODIS, or Planet imagery) combined with wind field reanalysis data (e.g., ERA5) to quantify edge orientation and dieback rates in regions with >30% deforestation. \u2014 Directly tests the hypothesis by correlating observed forest dieback (e.g., from vegetation indices or tree mortality maps) with edge orientation relative to prevailing winds in high-deforestation areas.",
+        "[PATH:theoretical] Regional climate-vegetation model simulations (e.g., LPJmL, INLAND, or ED2) with explicit representation of forest edge geometry and wind direction, comparing dieback thresholds under varying edge configurations and deforestation extents. \u2014 Allows controlled experiments to isolate the effect of edge orientation on dieback vulnerability, confirming or refuting the proposed modulation of the 30% deforestation threshold.",
+        "[PATH:literature] Meta-analysis of published field studies on Amazon forest fragmentation and edge effects (e.g., from the Large-Scale Biosphere-Atmosphere Experiment in Amazonia, LBA), focusing on sites with known deforestation extent and wind exposure. \u2014 Synthesizes existing empirical evidence on edge-related mortality and moisture stress, assessing whether upwind edges show systematically higher dieback in high-deforestation landscapes."
+      ],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "condition": "deforestation extent > 30% basin area and edge orientation relative to prevailing wind direction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "global climate patterns and regional atmospheric conditions irrespective of deforestation extent",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold global climate patterns and regional atmospheric conditions irrespective of deforestation extent]",
+        "[PATH:empirical] Paleoclimate proxy records of Amazon forest response to past climate shifts (e.g., pollen records, speleothem isotopes) \u2014 These records provide empirical evidence of how Amazon vegetation responded to changes in global climate patterns and regional atmospheric conditions prior to significant human deforestation, allowing assessment of dieback thresholds independent of deforestation extent.",
+        "[PATH:theoretical] Earth system model experiments isolating the effect of global climate patterns (e.g., HadGEM2-ES, MPI-ESM) with fixed deforestation scenarios versus variable deforestation \u2014 Controlled simulations that vary deforestation extent while holding climate forcings constant can directly test whether the dieback threshold is primarily determined by global/regional climate versus local deforestation, providing mechanistic evidence.",
+        "[PATH:empirical] Long-term satellite observations of Amazon vegetation indices (e.g., NDVI, EVI) coupled with atmospheric reanalysis data (e.g., ERA5) and deforestation maps \u2014 Empirical analysis of recent decades can reveal whether observed vegetation declines correlate more strongly with climate variability (e.g., drought frequency, sea surface temperature anomalies) than with deforestation extent, testing the hypothesis under current conditions."
+      ],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "temporal": "during the 21st century under projected climate scenarios",
+        "geographic": "in the Amazon basin"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the spatial configuration of forest edges",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Amazon rainforest dieback threshold is primarily determined by the spatial configuration of forest edges in domain 'regional climate-vegetation interactions']"
+      ],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "temporal": "during the 21st century under current deforestation trends",
+        "geographic": "Amazon basin, specifically the southern and eastern regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is not primarily determined by",
+      "object": "the spatial configuration of forest edges when deforestation extent exceeds 30% of the basin",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Amazon rainforest dieback threshold is not primarily determined by the spatial configuration of forest edges when deforestation extent exceeds 30% of the basin in domain 'regional climate-vegetation interactions']"
+      ],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "temporal": "early 21st century simulations",
+        "geographic": "Amazon basin"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is amplified by",
+      "object": "recurrent extreme drought events that synchronize fire feedback loops across multiple forest edges",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold recurrent extreme drought events that synchronize fire feedback loops across multiple forest edges]",
+        "[PATH:empirical] Analysis of satellite-derived fire occurrence and drought severity indices (e.g., from MODIS, TRMM, and GRACE) across the southern and eastern Amazon for 2000\u20132020, focusing on forest edges and fragmented landscapes. \u2014 Directly tests whether synchronized fire feedback loops along multiple forest edges during extreme droughts amplify dieback thresholds, by correlating spatiotemporal patterns of fire activity, drought intensity, and forest cover loss.",
+        "[PATH:theoretical] Process-based dynamic global vegetation model (e.g., LPJmL, INLAND) simulations that couple fire, drought, and edge effects, parameterized with observed land-use change and fire suppression data for the Amazon. \u2014 Allows controlled experiments to isolate the amplifying effect of recurrent extreme droughts and edge-synchronized fires on dieback thresholds, and to test sensitivity to different drought recurrence intervals and edge densities.",
+        "[PATH:literature] Meta-analysis of field studies and remote sensing publications on Amazon forest resilience, fire-induced mortality, and edge effects (e.g., work by Brando, Nepstad, and Barlow) that quantify post-drought recovery rates and fire feedback strengths. \u2014 Synthesizes existing empirical evidence to assess whether the hypothesized synchronization of fire feedbacks across multiple edges is a documented phenomenon and whether it consistently lowers the dieback threshold under extreme drought conditions."
+      ],
+      "scope": {
+        "domain": "fire ecology and land-use change"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "southern and eastern Amazon rainforest (Brazil, Peru, Bolivia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "edge configuration alone, not by fire feedback loops near forest edges",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold edge configuration alone, not by fire feedback loops near forest edges]",
+        "[PATH:empirical] High-resolution satellite imagery analysis of forest edge degradation in the southeastern Amazon (e.g., Landsat or Sentinel-2 time series from 2010\u20132020) combined with fire scar mapping to isolate edge effects from fire feedbacks \u2014 Directly tests whether edge configuration alone explains dieback patterns by comparing forest loss at edges with and without fire occurrence, controlling for fire feedback loops.",
+        "[PATH:theoretical] Process-based simulation experiments using a coupled fire-vegetation model (e.g., LPJ-LMfire or ED2) that systematically varies edge configuration while holding fire feedback parameters constant \u2014 Isolates the causal contribution of edge configuration versus fire feedbacks under controlled conditions, allowing quantitative assessment of the threshold hypothesis.",
+        "[PATH:literature] Meta-analysis of existing field studies on Amazon forest edge dynamics and fire interactions (e.g., from the Large-Scale Biosphere-Atmosphere Experiment in Amazonia, LBA) \u2014 Synthesizes empirical evidence from multiple studies to evaluate whether fire feedbacks are necessary or merely correlated with edge-driven dieback, addressing the disputed claim."
+      ],
+      "scope": {
+        "domain": "fire ecology and land-use change"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020 simulation period",
+        "geographic": "southeastern Amazon rainforest, specifically the arc of deforestation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the mean distance between forest fragments, rather than total edge length, when deforestation extent exceeds 30% of the basin",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {
+        "condition": "deforestation extent > 30% basin area"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "changes in regional precipitation patterns driven by global climate change",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "regional climate-vegetation interactions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

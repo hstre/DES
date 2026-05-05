@@ -1,0 +1,423 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is set by",
+      "object": "a cumulative deforestation extent of 25% of the basin, beyond which fire feedback becomes self-sustaining regardless of drought frequency",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold a cumulative deforestation extent of 25% of the basin, beyond which fire feedback becomes self-sustaining regardless of drought frequency]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Amazon rainforest fire feedback",
+      "predicate": "becomes self-sustaining when",
+      "object": "cumulative deforestation reaches 20% of the basin, but only under severe drought conditions",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest fire feedback cumulative deforestation reaches 20% of the basin, but only under severe drought conditions]"
+      ],
+      "scope": {
+        "domain": "fire ecology under drought stress"
+      },
+      "qualifier": {
+        "condition": "severe drought"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is not solely determined by",
+      "object": "deforestation extent, because fire feedback also depends on fragmentation patterns and edge effects",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold deforestation extent, because fire feedback also depends on fragmentation patterns and edge effects]"
+      ],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {
+        "alternative_factor": "fragmentation and edge effects"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Amazon rainforest resilience",
+      "predicate": "may persist beyond",
+      "object": "25% deforestation if fire suppression and reduced ignition sources are actively maintained",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "qualifying hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest resilience 25% deforestation if fire suppression and reduced ignition sources are actively maintained]"
+      ],
+      "scope": {
+        "domain": "managed conservation and fire intervention"
+      },
+      "qualifier": {
+        "intervention": "active fire suppression and ignition control"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Amazon rainforest fire feedback",
+      "predicate": "becomes self-sustaining when",
+      "object": "cumulative deforestation reaches 15% of the basin, even under moderate drought conditions, due to edge-effect desiccation",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest fire feedback cumulative deforestation reaches 15% of the basin, even under moderate drought conditions, due to edge-effect desiccation]",
+        "[PATH:empirical] Satellite-based analysis of fire frequency and deforestation edges across the Amazon basin, correlating cumulative deforestation percentages with fire occurrence during moderate drought years (e.g., using MODIS and Landsat data) \u2014 Directly tests the 15% threshold by observing whether fire activity increases nonlinearly near that deforestation level under moderate drought, providing real-world validation of the edge-effect desiccation mechanism.",
+        "[PATH:theoretical] Process-based fire-vegetation model simulations (e.g., LPJ-GUESS or CLM-Fire) parameterized for Amazonian conditions, with systematic deforestation scenarios from 5% to 30% and moderate drought forcing \u2014 Allows controlled testing of the hypothesized threshold and causal pathway (edge desiccation \u2192 fuel drying \u2192 fire spread) while isolating drought and deforestation interactions, clarifying whether 15% is a critical tipping point.",
+        "[PATH:literature] Meta-analysis of published field studies on microclimate changes at forest edges (e.g., humidity, temperature, wind speed) and their relationship to fire ignition and spread in fragmented Amazon landscapes \u2014 Synthesizes existing empirical evidence on edge-effect desiccation to assess whether cumulative edge length at 15% deforestation could produce a self-sustaining fire feedback, identifying gaps in current knowledge."
+      ],
+      "scope": {
+        "domain": "fire ecology under drought stress"
+      },
+      "qualifier": {
+        "condition": "moderate drought"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Amazon rainforest resilience",
+      "predicate": "prevents self-sustaining fire feedback",
+      "object": "despite cumulative deforestation reaching 20% of the basin",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest resilience despite cumulative deforestation reaching 20% of the basin]",
+        "[PATH:empirical] Remote sensing analysis of fire frequency and intensity across Brazilian Amazon deforestation gradients (2010\u20132020) using MODIS and Landsat data, coupled with drought indices (e.g., SPEI). \u2014 Directly tests whether fire feedbacks intensify with cumulative deforestation under drought stress, providing observational evidence for or against self-sustaining fire dynamics.",
+        "[PATH:theoretical] Process-based fire-vegetation model simulations (e.g., LPJ-GUESS-SPITFIRE or CLM-FATES) that parameterize deforestation levels up to 20% and assess fire spread, fuel loads, and feedback loops under historical drought scenarios. \u2014 Allows controlled experiments to isolate the effect of cumulative deforestation on fire feedback strength, testing if a tipping point exists below 20% deforestation."
+      ],
+      "scope": {
+        "domain": "fire ecology under drought stress"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "Brazilian Amazon"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is more strongly controlled by",
+      "object": "the density of forest edges within a 5-km buffer of agricultural clearings than by total deforestation extent alone",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold the density of forest edges within a 5-km buffer of agricultural clearings than by total deforestation extent alone]",
+        "[PATH:empirical] High-resolution satellite imagery (e.g., Landsat, Sentinel-2) combined with edge-effect metrics (e.g., distance-to-edge maps) and forest biomass recovery data from the southern and eastern Amazon for 2000\u20132020 \u2014 Directly tests whether forest edge density within 5 km buffers of clearings correlates more strongly with dieback indicators (e.g., increased tree mortality, reduced biomass) than total deforestation extent, using spatially explicit observations.",
+        "[PATH:theoretical] Dynamic global vegetation model (e.g., LPJmL, ED2) simulations that vary landscape configuration (edge density vs. uniform deforestation) while holding total cleared area constant, parameterized for Amazon conditions \u2014 Isolates the causal effect of edge density on dieback thresholds under controlled scenarios, allowing comparison of simulated dieback responses to edge-driven versus area-driven deforestation.",
+        "[PATH:literature] Meta-analysis of existing field studies on Amazon forest fragmentation (e.g., Biological Dynamics of Forest Fragments Project, LBA experiments) that quantify edge effects on tree mortality, microclimate, and fire susceptibility \u2014 Synthesizes empirical evidence on whether edge density metrics predict dieback more accurately than total deforestation extent, leveraging published data from the target region and time period."
+      ],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {
+        "temporal": "present-day deforestation patterns (2000\u20132020)",
+        "geographic": "southern and eastern Amazon (Brazilian states of Par\u00e1, Mato Grosso, Rond\u00f4nia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "deforestation extent, with fire feedback being a secondary factor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Amazon rainforest dieback threshold deforestation extent, with fire feedback being a secondary factor]",
+        "[PATH:empirical] Satellite-based remote sensing time series (e.g., MODIS, Landsat) analyzing fire frequency and deforestation extent across the Brazilian Amazon from 2000 to present, coupled with vegetation indices (e.g., EVI) to detect dieback thresholds. \u2014 Directly tests the hypothesis by correlating spatial deforestation patterns and subsequent fire activity with observed vegetation decline, isolating primary vs. secondary contributions.",
+        "[PATH:theoretical] Dynamic global vegetation model (DGVM) experiments, such as those using LPJmL or INLAND, that systematically vary deforestation extent and fire feedback strength to simulate tipping points under current-century deforestation trends. \u2014 Provides controlled counterfactual simulations to quantify the relative influence of deforestation vs. fire feedback on dieback thresholds, enabling causal inference.",
+        "[PATH:literature] Meta-analysis of existing paleoecological and modern field studies (e.g., from Science, Nature, Global Change Biology) on Amazon forest resilience, focusing on studies that report critical deforestation percentages and fire recurrence intervals. \u2014 Synthesizes prior evidence to assess consistency of deforestation as primary driver, identifying gaps or conflicting results regarding fire feedback's secondary role."
+      ],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {
+        "temporal": "current century under ongoing deforestation trends",
+        "geographic": "Brazilian Amazon and adjacent regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "deforestation extent, with fire feedback playing a secondary role",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Amazon rainforest dieback threshold is primarily determined by deforestation extent, with fire feedback playing a secondary role in domain 'landscape configuration and feedback dynamics']"
+      ],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {
+        "temporal": "current climate regime (pre-2050 projections)",
+        "geographic": "Brazilian Amazon, with applicability to southern and eastern regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is significantly influenced by",
+      "object": "fragmentation patterns and edge effects, not solely by deforestation extent",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Amazon rainforest dieback threshold is significantly influenced by fragmentation patterns and edge effects, not solely by deforestation extent in domain 'landscape configuration and feedback dynamics']"
+      ],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {
+        "temporal": "during the early 21st century (2000\u20132020)",
+        "geographic": "Brazilian Legal Amazon and adjacent regions in Peru and Bolivia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is primarily determined by",
+      "object": "the spatial configuration of forest edges, with deforestation extent playing a secondary role",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Amazon rainforest dieback threshold",
+      "predicate": "is solely determined by",
+      "object": "deforestation extent",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "landscape configuration and feedback dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "gut microbiome diversity",
+      "predicate": "affects",
+      "object": "depression outcomes",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: gut microbiome diversity depression outcomes]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "high gut microbiome diversity",
+      "predicate": "is associated with",
+      "object": "reduced depression symptom severity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high gut microbiome diversity reduced depression symptom severity]"
+      ],
+      "scope": {
+        "domain": "cross-sectional observational studies"
+      },
+      "qualifier": {
+        "temporal": "current evidence from cross-sectional designs",
+        "geographic": "primarily Western populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "specific probiotic interventions that increase gut microbiome diversity",
+      "predicate": "do not consistently improve",
+      "object": "depression outcomes in clinical trials",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "tentative finding",
+      "evidence_refs": [
+        "[Simulated evidence for: specific probiotic interventions that increase gut microbiome diversity depression outcomes in clinical trials]"
+      ],
+      "scope": {
+        "domain": "randomized controlled trials with short follow-up"
+      },
+      "qualifier": {
+        "caveat": "effect may depend on baseline microbiome composition"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "gut microbiome diversity",
+      "predicate": "affects",
+      "object": "depression outcomes indirectly via immune system modulation",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: gut microbiome diversity depression outcomes indirectly via immune system modulation]",
+        "[CONFLICT] The claim that gut microbiome diversity affects depression outcomes indirectly via immune system modulation is disputed because the direction of effect is unclear and may be bidirectional, and the confidence is low (0.42), with evidence limited to mechanistic animal model studies, which may not translate to humans."
+      ],
+      "scope": {
+        "domain": "mechanistic animal model studies"
+      },
+      "qualifier": {
+        "direction": "unclear, may be bidirectional"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "high gut microbiome diversity",
+      "predicate": "is causally linked to",
+      "object": "lower depression symptom severity via increased short-chain fatty acid production",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high gut microbiome diversity lower depression symptom severity via increased short-chain fatty acid production]",
+        "[PATH:empirical] Randomized controlled trial comparing fecal microbiota transplantation from high-diversity donors vs. placebo in patients with major depressive disorder, measuring depression severity (e.g., HAM-D) and fecal SCFA levels at baseline and 8 weeks post-intervention. \u2014 Directly tests causal chain: high diversity \u2192 SCFA production \u2192 symptom reduction, within the specified scope of longitudinal intervention studies.",
+        "[PATH:literature] Systematic review and meta-analysis of human studies (post-2010) linking gut microbiome diversity indices (Shannon, richness) to depression outcomes and SCFA concentrations (acetate, propionate, butyrate). \u2014 Aggregates existing evidence to assess consistency of the hypothesized pathway across populations, controlling for confounders like diet and medication.",
+        "[PATH:empirical] Germ-free mouse model colonized with high-diversity human microbiota vs. low-diversity microbiota, then subjected to chronic stress paradigm; measure depression-like behavior (e.g., forced swim test) and hippocampal SCFA receptor expression. \u2014 Provides mechanistic evidence for SCFA-mediated effects on neuroinflammation and neurotransmission, ruling out reverse causation or confounding by host factors."
+      ],
+      "scope": {
+        "domain": "longitudinal intervention studies with fecal microbiota transplantation"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "high gut microbiome diversity",
+      "predicate": "is not associated with",
+      "object": "reduced depression symptom severity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high gut microbiome diversity reduced depression symptom severity]",
+        "[PATH:empirical] Large-scale longitudinal cohort study (e.g., HELIUS or UK Biobank) with repeated measures of both gut microbiome diversity (via 16S rRNA or metagenomic sequencing) and depression symptom severity (e.g., PHQ-9) over 2-5 years, controlling for confounders like diet, medication, and lifestyle. \u2014 Cross-sectional studies are prone to reverse causation and confounding. A longitudinal design can clarify temporal direction and reduce bias, directly testing whether high diversity precedes or accompanies changes in depression severity.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials (RCTs) testing probiotic or prebiotic interventions that increase gut microbiome diversity, with depression symptoms as a primary or secondary outcome. \u2014 If high diversity causally reduces depression severity, then interventions that boost diversity should show consistent antidepressant effects. A meta-analysis of existing RCTs can provide pooled effect estimates and assess heterogeneity across populations and study designs.",
+        "[PATH:theoretical] Mendelian randomization study using genetic instruments for gut microbiome diversity (e.g., variants in genes related to gut barrier function or microbial metabolism) and depression outcomes from large GWAS consortia (e.g., PGC, UK Biobank). \u2014 Mendelian randomization can help infer causality by leveraging genetic variants as unconfounded proxies for microbiome diversity, addressing residual confounding common in observational studies. This approach tests whether genetically predicted diversity is associated with depression severity."
+      ],
+      "scope": {
+        "domain": "cross-sectional observational studies"
+      },
+      "qualifier": {
+        "temporal": "2015-2023",
+        "geographic": "primarily Western countries (USA, UK, Netherlands)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "targeted increase in gut microbiome alpha diversity",
+      "predicate": "improves",
+      "object": "depression outcomes by reducing systemic IL-6 levels in a murine chronic stress model",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: targeted increase in gut microbiome alpha diversity depression outcomes by reducing systemic IL-6 levels in a murine chronic stress model]",
+        "[PATH:empirical] Longitudinal intervention study in C57BL/6 mice: measure fecal alpha diversity (Shannon index) via 16S rRNA sequencing, and systemic IL-6 via ELISA, before and after 14-day chronic restraint stress with fecal microbiota transplantation from high-diversity donors vs. controls. \u2014 Directly tests causal chain: increasing alpha diversity \u2192 IL-6 reduction \u2192 depression-like behavior (e.g., tail suspension test, sucrose preference). Controls for confounding by stress alone.",
+        "[PATH:literature] Systematic review and meta-analysis of rodent studies linking microbiome diversity, IL-6, and depression-like outcomes, focusing on studies using chronic stress paradigms and alpha diversity interventions (e.g., prebiotics, probiotics, FMT). \u2014 Aggregates existing evidence to assess consistency of the hypothesized pathway across labs and models, identifying effect sizes and potential moderators (e.g., mouse strain, stress protocol).",
+        "[PATH:empirical] Mechanistic experiment using IL-6 knockout mice: compare depression-like behavior and alpha diversity effects between wild-type and IL-6\u2212/\u2212 mice under chronic stress with high-diversity microbiome intervention. \u2014 Confirms whether IL-6 is a necessary mediator; if knockout mice show no improvement despite increased diversity, the hypothesis is refuted; if improvement persists, alternative pathways are implicated."
+      ],
+      "scope": {
+        "domain": "mechanistic animal model studies"
+      },
+      "qualifier": {
+        "temporal": "during 14-day chronic stress paradigm",
+        "geographic": "laboratory setting, specific pathogen-free facility"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "immune system modulation",
+      "predicate": "affects",
+      "object": "gut microbiome diversity and depression outcomes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immune system modulation gut microbiome diversity and depression outcomes]",
+        "[PATH:empirical] Longitudinal fecal microbiota transplantation (FMT) studies in murine models of depression, measuring immune markers (e.g., IL-6, TNF-\u03b1) and behavioral outcomes pre- and post-transplant, with controlled manipulation of immune signaling (e.g., via anti-inflammatory agents). \u2014 Directly tests causal direction by transferring microbiomes between depressed and healthy animals under immune modulation, isolating the effect on diversity and depression endpoints.",
+        "[PATH:literature] Systematic review and meta-analysis of post-2015 animal studies correlating immune-modulating interventions (e.g., probiotics, antibiotics, or immunomodulatory drugs) with changes in gut microbiome diversity (Shannon index, richness) and depression-like behaviors (e.g., forced swim test, sucrose preference). \u2014 Synthesizes existing mechanistic evidence to assess consistency and effect size across laboratory settings, addressing the disputed status with quantitative aggregation.",
+        "[PATH:empirical] Germ-free mouse colonization experiments using defined bacterial consortia from depressed vs. non-depressed human donors, combined with immune activation assays (e.g., LPS challenge) and depression-related transcriptomic profiling (e.g., hippocampal BDNF, HPA axis genes). \u2014 Provides high-resolution causal evidence by controlling for host genetic and environmental confounds, directly linking immune-gut-brain axis mechanisms to diversity and depression outcomes."
+      ],
+      "scope": {
+        "domain": "mechanistic animal model studies"
+      },
+      "qualifier": {
+        "temporal": "post-2015",
+        "geographic": "laboratory settings in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T2 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 28,
+  "focus_claim_id": "C008",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007"
+    ],
+    "falsifier": [
+      "C006",
+      "C008"
+    ]
+  }
+}
