@@ -1,0 +1,497 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {
+        "domain": "tasks requiring deep focus and minimal interruption"
+      },
+      "qualifier": {
+        "condition": "when employees have dedicated home office spaces"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "is less productive than",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {
+        "domain": "collaborative tasks and team innovation"
+      },
+      "qualifier": {
+        "condition": "when teams lack structured virtual coordination tools"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Productivity gains from remote work",
+      "predicate": "are offset by",
+      "object": "increased burnout and communication delays",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Productivity gains from remote work increased burnout and communication delays]"
+      ],
+      "scope": {
+        "domain": "long-term organizational performance"
+      },
+      "qualifier": {
+        "condition": "over periods exceeding 12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]",
+        "[PATH:empirical] Controlled experiment comparing deep-focus task completion times between remote workers with dedicated home offices (using screen monitoring) and in-office workers in a quiet environment. \u2014 Directly tests the core condition (dedicated space + monitoring) and scope (deep focus) against office baseline, providing causal evidence.",
+        "[PATH:literature] Meta-analysis of existing studies on productivity effects of remote vs. office work, specifically filtering for studies that control for home office quality and use of monitoring software. \u2014 Synthesizes available evidence to assess whether the conditional claim is supported across multiple contexts, addressing the disputed status.",
+        "[PATH:theoretical] Theoretical model of attention and interruption costs in remote vs. office environments, incorporating monitoring as a deterrent to non-work activities. \u2014 Provides a mechanistic explanation for why the condition might increase productivity, allowing prediction of boundary conditions (e.g., task complexity, monitoring intrusiveness)."
+      ],
+      "scope": {
+        "domain": "tasks requiring deep focus and minimal interruption"
+      },
+      "qualifier": {
+        "condition": "when employees have dedicated home office spaces and are required to use real-time screen monitoring software"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Office work",
+      "predicate": "is more productive than",
+      "object": "remote work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Office work remote work]",
+        "[PATH:empirical] Controlled field experiment comparing productivity on deep-focus tasks (e.g., coding, writing, data analysis) in urban office vs. home settings during weekday business hours, with objective output metrics (e.g., lines of code, word count, error rates). \u2014 Directly tests the hypothesis under the specified scope (deep focus, minimal interruption) and qualifiers (urban office with high-speed internet, weekday hours), providing causal evidence on productivity differences.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies on office vs. remote work productivity, focusing on tasks requiring sustained attention and low interruption. \u2014 Synthesizes available evidence to assess the overall effect size and consistency across studies, addressing the disputed status and moderate confidence level.",
+        "[PATH:theoretical] Theoretical model of distraction and cognitive load in office vs. remote environments, incorporating factors like ambient noise, social interruptions, and self-regulation. \u2014 Provides a framework to predict conditions under which office work might outperform remote work for deep-focus tasks, guiding further empirical tests and explaining potential moderators."
+      ],
+      "scope": {
+        "domain": "tasks requiring deep focus and minimal interruption"
+      },
+      "qualifier": {
+        "temporal": "during standard business hours on weekdays",
+        "geographic": "in urban office environments with high-speed internet access"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work with asynchronous communication tools",
+      "predicate": "is less productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work with asynchronous communication tools office work]",
+        "[PATH:empirical] Controlled experiment comparing software development teams using synchronous vs. asynchronous communication for bug-fixing and feature iteration tasks \u2014 Directly measures productivity differences in the specified domain of rapid iterative feedback, controlling for confounding variables like team size and task complexity.",
+        "[PATH:literature] Meta-analysis of post-2020 studies on remote work productivity in knowledge-economy sectors, focusing on tasks requiring spontaneous brainstorming \u2014 Synthesizes existing empirical evidence across multiple contexts to assess generalizability and identify moderators (e.g., team maturity, tooling) that affect the disputed hypothesis."
+      ],
+      "scope": {
+        "domain": "tasks requiring rapid iterative feedback and spontaneous brainstorming"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during and after the COVID-19 pandemic",
+        "geographic": "global, primarily in knowledge-economy sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]",
+        "[PATH:empirical] Longitudinal field study comparing innovation output (e.g., patents, new product ideas) of remote vs. co-located R&D teams in global tech companies since 2020 \u2014 Directly tests the disputed claim within the specified domain (collaborative tasks and team innovation) and temporal scope (since 2020), providing causal or correlational evidence on productivity differences.",
+        "[PATH:literature] Meta-analysis of peer-reviewed studies on remote collaboration and team creativity (e.g., from journals like Organization Science or Journal of Applied Psychology) \u2014 Synthesizes existing evidence across multiple contexts to assess overall effect size and moderators (e.g., task interdependence, communication tools), helping resolve conflicting findings in the disputed status.",
+        "[PATH:theoretical] Agent-based simulation modeling the impact of communication frequency and serendipity on innovation in remote vs. office settings \u2014 Explores causal mechanisms (e.g., loss of informal interactions, digital collaboration affordances) that could explain or refute the productivity difference, generating testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "collaborative tasks and team innovation"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "is less productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work is less productive than office work in domain 'collaborative tasks and team innovation']"
+      ],
+      "scope": {
+        "domain": "collaborative tasks and team innovation"
+      },
+      "qualifier": {
+        "temporal": "post-2020, based on studies conducted during and after the COVID-19 pandemic",
+        "geographic": "primarily in high-income, urbanized countries with advanced digital infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "is not less productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work is not less productive than office work in domain 'collaborative tasks and team innovation']"
+      ],
+      "scope": {
+        "domain": "collaborative tasks and team innovation"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of digital collaboration tools",
+        "geographic": "global, primarily in knowledge-economy sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Productivity gains from remote work",
+      "predicate": "are fully negated by",
+      "object": "increased burnout and communication delays",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Productivity gains from remote work increased burnout and communication delays]",
+        "[PATH:empirical] Longitudinal field study comparing productivity metrics (e.g., output per hour, project completion rates) and burnout indicators (e.g., Maslach Burnout Inventory scores) in fully remote vs. hybrid teams over 18+ months. \u2014 Directly tests the hypothesis that initial productivity gains are offset by burnout and delays beyond 12 months, using objective and subjective measures in a real-world setting.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity, burnout, and communication delays, focusing on studies with observation periods >12 months. \u2014 Synthesizes available evidence to determine whether the net effect of remote work on long-term organizational performance is positive, neutral, or negative, accounting for variations in context and methodology.",
+        "[PATH:theoretical] Agent-based simulation modeling the dynamics of remote work: productivity, communication network efficiency, and cumulative burnout over time, parameterized with empirical data from prior studies. \u2014 Allows testing of causal mechanisms and long-term trajectories under controlled assumptions, revealing conditions under which productivity gains are negated or sustained beyond 12 months."
+      ],
+      "scope": {
+        "domain": "long-term organizational performance"
+      },
+      "qualifier": {
+        "condition": "over periods exceeding 12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "long-term productivity and employee well-being",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work long-term productivity and employee well-being]",
+        "[PATH:empirical] Longitudinal employer-employee panel data from multinational knowledge firms (e.g., Microsoft, GitLab) tracking productivity metrics (e.g., output per hour, project completion rates) and well-being indicators (e.g., burnout scales, retention) over 2+ years, pre- and post-mandate changes. \u2014 Directly tests the causal link between remote work and sustained productivity/well-being using real-world, time-series data, controlling for confounding factors like industry shocks.",
+        "[PATH:literature] Meta-analysis of peer-reviewed studies (2020\u20132025) on remote work, focusing on long-term outcomes (\u22652 years) in knowledge-economy sectors, including effect sizes for productivity and well-being. \u2014 Synthesizes existing evidence to assess overall direction and strength of the relationship, identifying moderators (e.g., autonomy, team cohesion) that explain conflicting findings.",
+        "[PATH:empirical] Natural experiment comparing firms that switched to permanent remote vs. hybrid vs. in-office policies post-2020, using administrative data (e.g., HR records, performance reviews) and employee surveys over 3+ years. \u2014 Leverages exogenous policy variation to isolate causal effects, addressing selection bias and capturing long-term adaptation effects often missed in short-term studies."
+      ],
+      "scope": {
+        "domain": "long-term organizational performance"
+      },
+      "qualifier": {
+        "temporal": "post-2020, longitudinal studies spanning at least two years",
+        "geographic": "global, primarily in knowledge-economy sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Remote work with structured virtual coordination tools",
+      "predicate": "outperforms",
+      "object": "office work",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "collaborative tasks and team innovation"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "individual tasks and personal efficiency"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
