@@ -1,0 +1,390 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP per capita",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "correlates with",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]"
+      ],
+      "scope": {
+        "domain": "developed economies, 20th century"
+      },
+      "qualifier": {
+        "caveat": "correlation does not imply causation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP per capita",
+      "predicate": "fails to capture",
+      "object": "subjective wellbeing, social cohesion, and environmental health",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita subjective wellbeing, social cohesion, and environmental health]",
+        "[CONFLICT] The claim that GDP per capita fails to capture subjective wellbeing, social cohesion, and environmental health is disputed because GDP is a narrow economic measure that omits non-market factors and inequality, which are critical for holistic welfare assessment in post-industrial societies."
+      ],
+      "scope": {
+        "domain": "global, post-industrial societies"
+      },
+      "qualifier": {
+        "emphasis": "omits non-market factors and inequality"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Alternative indices (e.g., HDI, GPI)",
+      "predicate": "provide",
+      "object": "a more comprehensive proxy for human wellbeing than GDP per capita",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Alternative indices (e.g., HDI, GPI) a more comprehensive proxy for human wellbeing than GDP per capita]"
+      ],
+      "scope": {
+        "domain": "cross-national comparisons, 21st century"
+      },
+      "qualifier": {
+        "tension": "creates epistemic friction by challenging the primacy of GDP"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita",
+      "predicate": "diverges from",
+      "object": "material living standards in developed economies after 2000",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies after 2000]",
+        "[PATH:empirical] OECD Better Life Index and national accounts data (e.g., real household disposable income per capita vs. GDP per capita) \u2014 Directly compares GDP per capita growth with alternative measures of material living standards (e.g., median income, consumption, housing quality) for developed economies post-2000 to quantify divergence.",
+        "[PATH:literature] Studies on inequality-adjusted human development index (IHDI) and inclusive wealth index for OECD countries \u2014 Reviews existing empirical research that tests whether GDP per capita overstates improvements in material well-being due to rising inequality, depreciation of natural capital, or changes in household composition.",
+        "[PATH:empirical] Micro-level panel data from surveys like the Luxembourg Income Study (LIS) or EU-SILC tracking household consumption and wealth \u2014 Provides micro-level evidence on whether aggregate GDP growth translates into improved material conditions for typical households, directly testing the divergence hypothesis at the individual level."
+      ],
+      "scope": {
+        "domain": "developed economies, post-2000"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "does not correlate with",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]",
+        "[PATH:empirical] Maddison Project Database (historical GDP per capita and real income data for developed economies, 1900-1999) \u2014 Provides longitudinal GDP per capita data that can be directly compared with alternative welfare indicators (e.g., life expectancy, education, leisure time) to test correlation with material living standards.",
+        "[PATH:empirical] Human Development Index (HDI) time series for OECD countries (1900-1999) \u2014 Offers a composite measure of material living standards beyond GDP; comparing HDI trends with GDP per capita over the century can reveal decoupling or correlation patterns.",
+        "[PATH:literature] Literature review on the Easterlin Paradox and beyond: e.g., Easterlin (1974) and subsequent critiques (e.g., Stevenson & Wolfers, 2008) \u2014 Directly addresses the disputed relationship between income growth and subjective well-being or living standards in developed economies, providing theoretical and empirical context for the hypothesis."
+      ],
+      "scope": {
+        "domain": "developed economies, 20th century"
+      },
+      "qualifier": {
+        "temporal": "1900-1999",
+        "geographic": "developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP per capita",
+      "predicate": "is inversely correlated with",
+      "object": "social cohesion in post-industrial societies when inequality exceeds a threshold of 0.4 Gini",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita social cohesion in post-industrial societies when inequality exceeds a threshold of 0.4 Gini]",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) merged with World Values Survey (WVS) data on social trust and civic engagement for post-2000 OECD countries \u2014 Provides cross-national, time-series data on Gini coefficients and social cohesion indicators (e.g., generalized trust, group membership) to test the threshold effect at Gini > 0.4.",
+        "[PATH:literature] Wilkinson & Pickett (2009) 'The Spirit Level' and subsequent replication studies using updated post-2000 data \u2014 Key theoretical and empirical foundation for the inequality-cohesion link; reviewing later critiques and re-analyses can clarify whether the GDP per capita inverse correlation holds specifically above a 0.4 Gini threshold in post-industrial societies.",
+        "[PATH:empirical] Longitudinal analysis of regional GDP per capita and social cohesion indices (e.g., Social Cohesion Radar) for OECD countries, controlling for welfare state regimes \u2014 Allows testing of the conditional hypothesis by comparing regions with Gini above and below 0.4, while accounting for institutional factors that may moderate the relationship."
+      ],
+      "scope": {
+        "domain": "post-industrial societies"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP per capita",
+      "predicate": "correlates with",
+      "object": "improvements in subjective wellbeing, social cohesion, and environmental health",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita improvements in subjective wellbeing, social cohesion, and environmental health]",
+        "[PATH:empirical] World Values Survey (WVS) and European Social Survey (ESS) longitudinal data on subjective wellbeing and social trust, merged with World Bank GDP per capita data for 1990\u20132020 \u2014 Allows direct cross-national and temporal correlation analysis between GDP per capita and individual-level measures of happiness, life satisfaction, and social cohesion, controlling for confounds like inequality and institutional quality.",
+        "[PATH:empirical] Environmental Performance Index (EPI) and Ecological Footprint data combined with GDP per capita trends in post-industrial societies \u2014 Tests the environmental health component by examining whether GDP growth correlates with improvements in air/water quality, biodiversity, and resource efficiency, or whether decoupling is observed only in certain policy contexts.",
+        "[PATH:literature] Systematic review and meta-analysis of the Easterlin Paradox literature (e.g., Easterlin et al., 2010; Sacks, Stevenson & Wolfers, 2012) \u2014 Synthesizes conflicting evidence on whether GDP per capita gains produce lasting improvements in subjective wellbeing, especially beyond a threshold, and clarifies conditions under which social cohesion and environmental health co-vary with growth."
+      ],
+      "scope": {
+        "domain": "global, post-industrial societies"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "global, post-industrial societies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Genuine Progress Indicator (GPI)",
+      "predicate": "is a stronger predictor of",
+      "object": "long-term national life satisfaction trends than GDP per capita in post-industrial economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Genuine Progress Indicator (GPI) long-term national life satisfaction trends than GDP per capita in post-industrial economies]",
+        "[PATH:empirical] Longitudinal GPI and life satisfaction datasets for OECD countries (e.g., from the Genuine Progress Indicator project at the University of Vermont or the OECD Better Life Index) \u2014 Directly comparing time-series correlations between GPI per capita and national life satisfaction (e.g., World Happiness Report) versus GDP per capita over 2000-2025 would test predictive strength in post-industrial economies.",
+        "[PATH:literature] Meta-analysis of studies on alternative welfare metrics and subjective well-being (e.g., Easterlin paradox literature, Kahneman & Krueger 2006, or recent reviews in Social Indicators Research) \u2014 Synthesizing existing empirical findings on GPI, GDP, and life satisfaction would reveal whether GPI consistently outperforms GDP in explaining long-term trends, especially in countries with high income but stagnant well-being.",
+        "[PATH:theoretical] Theoretical framework linking GPI components (e.g., income inequality, environmental costs, unpaid work) to mechanisms of life satisfaction (e.g., adaptation, social comparison, hedonic treadmill) \u2014 Developing or reviewing a causal model that explains why GPI should better capture non-material determinants of well-being would provide a priori justification for empirical tests and help interpret results."
+      ],
+      "scope": {
+        "domain": "cross-national comparisons, 21st century, post-industrial economies"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132025",
+        "geographic": "post-industrial economies (e.g., OECD countries)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "GDP per capita",
+      "predicate": "remains",
+      "object": "the most reliable and universally applicable measure of economic success and indirectly, human wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita the most reliable and universally applicable measure of economic success and indirectly, human wellbeing]",
+        "[PATH:empirical] Comparative analysis of GDP per capita vs. Multidimensional Poverty Index (MPI) and Human Development Index (HDI) across 100+ countries over 2000-2023 \u2014 Directly tests whether GDP per capita correlates consistently with broader wellbeing measures; high divergence would refute its universal applicability.",
+        "[PATH:literature] Systematic review of literature on alternative economic indicators (e.g., Genuine Progress Indicator, Gross National Happiness, Inclusive Wealth Index) and their cross-national predictive validity for health, education, and life satisfaction \u2014 Synthesizes existing evidence on whether GDP per capita outperforms or underperforms alternatives in predicting human wellbeing across diverse national contexts.",
+        "[PATH:theoretical] Theoretical analysis of GDP measurement biases in non-market economies, informal sectors, and subsistence agriculture (e.g., sub-Saharan Africa, rural Asia) \u2014 Evaluates structural limitations of GDP per capita as a universal metric; if systematic biases are severe, it cannot be universally reliable."
+      ],
+      "scope": {
+        "domain": "cross-national comparisons, 21st century"
+      },
+      "qualifier": {
+        "temporal": "21st century",
+        "geographic": "cross-national"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 36,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}
