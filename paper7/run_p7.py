@@ -10,8 +10,10 @@ WP2 (Rentschler 2026).
 """
 
 import argparse
+import hashlib
 import json
 import os
+import random
 import re
 import shutil
 import sys
@@ -356,6 +358,9 @@ def save_result(
     p4_depth: int | None,
     sh_loop0: float | None,
     condition: dict,
+    rng_seed: int | None = None,
+    loop0_prompt_hash: str | None = None,
+    loop0_claim_hash: str | None = None,
 ) -> dict:
     loops_completed = len(loop_metrics)
     depth_lift = (loops_completed - p4_depth) if p4_depth is not None else None
@@ -364,20 +369,23 @@ def save_result(
     en_admitted  = sum(1 for e in en_log if e.get("selected") and e["selected"].get("admitted"))
 
     outcome_data = {
-        "domain_id":        domain_id,
-        "condition":        condition_name,
-        "seed_question":    seed_question,
-        "outcome":          outcome,
-        "loops_completed":  loops_completed,
-        "p4_depth":         p4_depth,
-        "sh_loop0":         sh_loop0,
-        "depth_lift":       depth_lift,
-        "en_type":          condition.get("en"),
-        "ehl_factor":       condition.get("ehl"),
-        "en_events":        en_events,
-        "en_admitted":      en_admitted,
-        "stress_test":      condition.get("ehl") == 0.50,
-        "exploratory_arm":  condition_name == "SH_scheduled",
+        "domain_id":          domain_id,
+        "condition":          condition_name,
+        "seed_question":      seed_question,
+        "outcome":            outcome,
+        "loops_completed":    loops_completed,
+        "p4_depth":           p4_depth,
+        "sh_loop0":           sh_loop0,
+        "depth_lift":         depth_lift,
+        "en_type":            condition.get("en"),
+        "ehl_factor":         condition.get("ehl"),
+        "en_events":          en_events,
+        "en_admitted":        en_admitted,
+        "stress_test":        condition.get("ehl") == 0.50,
+        "exploratory_arm":    condition_name == "SH_scheduled",
+        "rng_seed":           rng_seed,
+        "loop0_prompt_hash":  loop0_prompt_hash,
+        "loop0_claim_hash":   loop0_claim_hash,
     }
 
     # Best ENI composite across all admitted EN selections
@@ -410,6 +418,7 @@ def run_domain_p7(
     condition: dict,
     p4_depth: int | None = None,
     sh_loop0: float | None = None,
+    rng_seed: int | None = None,
 ) -> dict:
     # Resolve SH_scheduled condition dynamically
     resolved_condition = condition.copy()
@@ -429,8 +438,14 @@ def run_domain_p7(
 
     ehl = EpistemicHalfLife(decay_factor=ehl_factor) if ehl_factor < 1.00 else None
 
-    domain_dir = RESULTS_DIR / f"{domain_id}_{condition_name}"
+    seed_suffix = f"_seed{rng_seed}" if rng_seed is not None else ""
+    domain_dir = RESULTS_DIR / f"{domain_id}_{condition_name}{seed_suffix}"
     domain_dir.mkdir(parents=True, exist_ok=True)
+
+    # Seed Python RNG at run start; log for reproducibility audit
+    if rng_seed is not None:
+        random.seed(rng_seed)
+    rng_seed_actual = rng_seed if rng_seed is not None else None
 
     question         = seed_question
     question_history = [seed_question]
@@ -440,9 +455,13 @@ def run_domain_p7(
     en_log           = []
     ehl_log          = []
     failure_code     = None
+    loop0_prompt_hash: str | None = None
+    loop0_claim_hash:  str | None = None
 
     print(f"\n{'='*65}")
-    print(f"  {domain_id} [{condition_name}] | en={en_type} ehl={ehl_factor}")
+    print(f"  {domain_id} [{condition_name}{seed_suffix}] | en={en_type} ehl={ehl_factor}")
+    if rng_seed_actual is not None:
+        print(f"  RNG seed: {rng_seed_actual}")
     print(f"  Seed: {seed_question[:60]}")
     if condition_name == "EHL_0.50":
         print(f"  NOTE: stress test — EHL_0.50 labeled accordingly")
@@ -499,6 +518,16 @@ def run_domain_p7(
             state = json.load(f)
         shutil.copy(STATE_SRC, loop_file)
         state["seed_question"] = seed_question
+
+        # Reproducibility audit: hash loop-0 prompt and claims
+        if loop == 0:
+            loop0_prompt_hash = hashlib.sha256(question.encode()).hexdigest()[:16]
+            claim_texts = sorted(_claim_text(c) for c in state.get("claims", {}).values())
+            loop0_claim_hash = hashlib.sha256(
+                "\n".join(claim_texts).encode()
+            ).hexdigest()[:16]
+            print(f"  [audit] loop0_prompt_hash={loop0_prompt_hash} "
+                  f"loop0_claim_hash={loop0_claim_hash}")
 
         metrics = compute_metrics(state, loop, all_prior_texts, question)
         method_trace.append(metrics["method_type"])
@@ -607,6 +636,9 @@ def run_domain_p7(
         p4_depth=p4_depth,
         sh_loop0=sh_loop0,
         condition=resolved_condition,
+        rng_seed=rng_seed_actual,
+        loop0_prompt_hash=loop0_prompt_hash,
+        loop0_claim_hash=loop0_claim_hash,
     )
 
 
@@ -614,7 +646,7 @@ def run_domain_p7(
 # Batch runner + summary
 # ---------------------------------------------------------------------------
 
-def run_batch(domain_ids: list, condition_names: list):
+def run_batch(domain_ids: list, condition_names: list, rng_seed: int | None = None):
     all_results = {}
 
     for domain_id in domain_ids:
@@ -636,6 +668,7 @@ def run_batch(domain_ids: list, condition_names: list):
                 condition=condition,
                 p4_depth=info.get("p4_depth"),
                 sh_loop0=info.get("sh_loop0"),
+                rng_seed=rng_seed,
             )
             all_results[domain_id][cname] = result
             time.sleep(2)
@@ -788,6 +821,8 @@ def main():
                         help="Run all domains × all conditions")
     parser.add_argument("--domains", nargs="+", help="Multiple domain IDs")
     parser.add_argument("--conditions", nargs="+", help="Multiple condition names")
+    parser.add_argument("--seed", type=int, default=None,
+                        help="RNG seed for reproducibility audit (e.g. 101, 202, 303)")
     args = parser.parse_args()
 
     _init_clients()
@@ -800,7 +835,7 @@ def main():
         condition_names = args.conditions or ([args.condition] if args.condition
                                               else ["P4_baseline"])
 
-    run_batch(domain_ids, condition_names)
+    run_batch(domain_ids, condition_names, rng_seed=args.seed)
 
 
 if __name__ == "__main__":
