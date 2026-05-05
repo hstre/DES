@@ -1,0 +1,169 @@
+{
+  "domain_id": "R02",
+  "seed_question": "Is remote work more productive than office work?",
+  "outcome": "LOOP_COMPLETE",
+  "loops_completed": 5,
+  "failure_code": null,
+  "final_entropy": 0.5,
+  "novel_at_loop_20": null,
+  "method_trace": [
+    "empirical_evidence",
+    "unit_of_analysis",
+    "causal_mechanism",
+    "empirical_evidence",
+    "empirical_evidence"
+  ],
+  "method_diversity_score": 0.6,
+  "preventive_trigger_rate": 0.0,
+  "question_history": [
+    "Is remote work more productive than office work?",
+    "What evidence supports or refutes the claim that: Remote work reduces team-level innovation and spontaneous collaboration more sharply for teams with high cognitive diversity (e.g., varied expertise, backgrounds)?",
+    "How does the definition and measurement of remote work environments account for variations in communication tools and practices that may influence team-level innovation and collaboration, particularly among cognitively diverse teams?",
+    "How do standardized metrics for remote work environments account for the diverse communication preferences and practices within cognitively diverse teams that may impact their ability to innovate and collaborate effectively?",
+    "What is the evidence that Standardized metrics for remote work environments underreport the innovation contributions of team members who primarily use asynchronous text-based tools?"
+  ],
+  "loop_metrics": [
+    {
+      "loop": 0,
+      "method_type": "empirical_evidence",
+      "total_claims": 11,
+      "open_claims": 0,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 3,
+      "semantic_duplication_rate": 0.2727272727272727,
+      "entropy": 0.45454545454545453,
+      "novel_claims": 11,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 22.0
+    },
+    {
+      "loop": 1,
+      "method_type": "unit_of_analysis",
+      "total_claims": 11,
+      "open_claims": 0,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 6,
+      "semantic_duplication_rate": 0.5454545454545454,
+      "entropy": 0.7272727272727273,
+      "novel_claims": 0,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 22.0
+    },
+    {
+      "loop": 2,
+      "method_type": "causal_mechanism",
+      "total_claims": 12,
+      "open_claims": 0,
+      "sealed_claims": 12,
+      "disputed_claims": 3,
+      "redundant_claims": 3,
+      "semantic_duplication_rate": 0.25,
+      "entropy": 0.5,
+      "novel_claims": 9,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 23.0
+    },
+    {
+      "loop": 3,
+      "method_type": "empirical_evidence",
+      "total_claims": 14,
+      "open_claims": 3,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 9,
+      "semantic_duplication_rate": 0.6428571428571429,
+      "entropy": 1.0,
+      "novel_claims": 0,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 28.0
+    },
+    {
+      "loop": 4,
+      "method_type": "empirical_evidence",
+      "total_claims": 10,
+      "open_claims": 0,
+      "sealed_claims": 10,
+      "disputed_claims": 1,
+      "redundant_claims": 4,
+      "semantic_duplication_rate": 0.4,
+      "entropy": 0.5,
+      "novel_claims": 0,
+      "branch_growth": 0,
+      "contradictions_resolved": 0,
+      "total_contradictions": 1,
+      "question_utility": 23.0,
+      "outcome": "LOOP_COMPLETE"
+    }
+  ],
+  "perturbation_log": [
+    {
+      "loop": 1,
+      "trigger": "content_redundancy>0.40",
+      "trigger_layer": "content",
+      "type": "measurement_shift",
+      "generated_question": "How does the definition and measurement of remote work environments account for variations in communication tools and practices that may influence team-level innovation and collaboration, particularly among cognitively diverse teams?",
+      "inferred_method_type": "causal_mechanism",
+      "admitted": true,
+      "rejection_reason": null,
+      "novelty_produced_next_loop": 9
+    },
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 3,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 2,
+      "saturated_path_questions": [
+        "What evidence supports or refutes the claim that: Standardized metrics for remote work environments systematically undercount the innovation contributions of cognitively diverse team members who use heterogeneous communication tools?"
+      ],
+      "saturated_path_methods": [
+        "empirical_evidence"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "model_assumption_shift",
+      "generated_question": "How do standardized metrics for remote work environments account for the diverse communication preferences and practices within cognitively diverse teams that may impact their ability to innovate and collaborate effectively?",
+      "admitted": true,
+      "rejection_reason": null
+    }
+  ],
+  "t10_count": 1,
+  "t10_activations": [
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 3,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 2,
+      "saturated_path_questions": [
+        "What evidence supports or refutes the claim that: Standardized metrics for remote work environments systematically undercount the innovation contributions of cognitively diverse team members who use heterogeneous communication tools?"
+      ],
+      "saturated_path_methods": [
+        "empirical_evidence"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "model_assumption_shift",
+      "generated_question": "How do standardized metrics for remote work environments account for the diverse communication preferences and practices within cognitively diverse teams that may impact their ability to innovate and collaborate effectively?",
+      "admitted": true,
+      "rejection_reason": null
+    }
+  ],
+  "saturated_paths": [
+    {
+      "questions": [
+        "What evidence supports or refutes the claim that: Standardized metrics for remote work environments systematically undercount the innovation contributions of cognitively diverse team members who use heterogeneous communication tools?"
+      ],
+      "methods": [
+        "empirical_evidence"
+      ],
+      "reason": "SEMANTIC_DUPLICATION"
+    }
+  ]
+}
