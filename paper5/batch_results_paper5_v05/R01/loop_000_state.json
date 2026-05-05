@@ -1,0 +1,510 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "modest and context-dependent",
+        "debate": "empirical studies show conflicting results depending on labor market conditions and wage levels"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high employer concentration"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "mechanism": "labor demand elasticity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "effect_size": "small",
+        "mechanism": "increased consumer spending and reduced turnover"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "has negligible effect on",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {
+        "domain": "economies with strong wage floors and automatic indexation"
+      },
+      "qualifier": {
+        "effect_size": "near-zero",
+        "debate": "institutional factors like collective bargaining dampen disemployment effects"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment among prime-age workers in high-concentration labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among prime-age workers in high-concentration labor markets]",
+        "[PATH:empirical] Quasi-experimental studies comparing minimum wage increases across U.S. commuting zones with varying levels of employer concentration (e.g., using Herfindahl-Hirschman Index from Census or BLS data) and measuring prime-age (25-54) employment outcomes \u2014 Directly tests the hypothesis by exploiting variation in both minimum wage changes and market concentration, isolating monopsony effects from general labor demand elasticity.",
+        "[PATH:theoretical] Structural estimation of labor supply elasticity to the firm using matched employer-employee panel data (e.g., from LEHD or administrative records) in low-wage industries, simulating counterfactual minimum wage policies under different concentration regimes \u2014 Provides a model-based test of the monopsony mechanism: if labor supply is less elastic in concentrated markets, a minimum wage can raise employment, confirming the hypothesized offsetting effect.",
+        "[PATH:literature] Meta-analysis of existing minimum wage studies that stratify results by market concentration measures, focusing on prime-age workers in low-wage sectors \u2014 Synthesizes available evidence to assess whether the predicted positive employment effect in concentrated markets holds across different contexts, increasing external validity and identifying boundary conditions."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high employer concentration where monopsony power is strong"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "mechanism": "monopsony power offsetting labor demand elasticity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]",
+        "[PATH:empirical] Card and Krueger (1994) minimum wage study, extended with recent panel data on low-wage labor markets with high employer concentration (e.g., Bureau of Labor Statistics, Quarterly Census of Employment and Wages, 2000\u20132023) \u2014 This classic natural experiment on fast-food workers can be replicated and extended to the specified temporal and geographic scope. Comparing employment changes in concentrated vs. competitive low-wage markets before and after minimum wage hikes directly tests the hypothesis in the disputed domain.",
+        "[PATH:theoretical] Manning (2003) 'Monopsony in Motion' theoretical framework, combined with modern structural estimation of labor supply elasticities in concentrated local labor markets (e.g., using data from the U.S. Census Longitudinal Employer-Household Dynamics) \u2014 The hypothesis relies on monopsony power, where employers with market power may respond to wage floors by increasing employment. This source provides the theoretical foundation and allows for empirical calibration using recent U.S. data to confirm or refute the predicted employment effect in concentrated markets.",
+        "[PATH:literature] Meta-analysis of minimum wage and employment studies from 2000\u20132023, focusing on heterogeneous effects by employer concentration (e.g., Doucouliagos and Stanley, 2009, updated with studies on U.S. low-wage industries) \u2014 A comprehensive review of the existing empirical literature, specifically filtered for studies that examine employer concentration as a moderator, can synthesize evidence across multiple contexts and time periods. This would clarify whether the predicted decrease in unemployment is consistently observed or an artifact of specific settings."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high employer concentration"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage in tight labor markets with strong aggregate demand",
+      "predicate": "decreases",
+      "object": "unemployment among prime-age workers more than among teenagers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in tight labor markets with strong aggregate demand unemployment among prime-age workers more than among teenagers]",
+        "[PATH:empirical] Panel study of U.S. metropolitan areas during the 2017-2019 tight labor market, comparing employment changes for prime-age workers (25-54) versus teenagers (16-19) following state-level minimum wage increases. \u2014 Directly tests the hypothesis in the specified domain (tight labor markets with strong aggregate demand) by exploiting variation in minimum wage policies across metro areas with similar labor market tightness. Disaggregates employment effects by age group to measure differential impact.",
+        "[PATH:theoretical] Dynamic stochastic general equilibrium (DSGE) model calibrated to a tight labor market with strong aggregate demand, incorporating minimum wage increases, consumer spending multipliers, and firm turnover costs. \u2014 Formalizes the proposed mechanism (increased consumer spending and reduced turnover disproportionately benefiting prime-age workers) and allows counterfactual simulation of the differential employment effects by age group under controlled conditions.",
+        "[PATH:literature] Systematic review and meta-analysis of minimum wage studies in tight labor markets, focusing on age-disaggregated unemployment outcomes (e.g., from the Journal of Economic Literature or IZA World of Labor). \u2014 Synthesizes existing empirical evidence to assess whether the hypothesized age-differential effect holds across multiple studies and contexts, identifying effect size estimates and potential moderators like labor market tightness."
+      ],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "mechanism": "increased consumer spending and reduced turnover disproportionately benefit experienced, prime-age workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]",
+        "[PATH:literature] Meta-analysis of minimum wage studies focusing on low-inflation periods and weak labor demand (e.g., Cengiz et al. 2019, Doucouliagos & Stanley 2009) \u2014 A systematic review of existing empirical studies that explicitly condition on inflation and aggregate demand conditions can reveal whether the hypothesized effect holds specifically in the stipulated scope conditions.",
+        "[PATH:empirical] Difference-in-differences analysis of recent minimum wage increases in advanced economies (e.g., Germany, UK, US states) during low-inflation, weak-demand periods (e.g., 2012-2015 Eurozone or post-2008 US) \u2014 Directly testing the hypothesis within the exact temporal and geographic scope using quasi-experimental methods can confirm or refute the predicted unemployment effect under tight labor markets with strong aggregate demand.",
+        "[PATH:theoretical] Search-and-matching model simulations parameterized for advanced economies with high minimum wage coverage and low inflation \u2014 Calibrating a labor market model to the specified conditions (tight labor market, weak labor demand, high coverage) allows testing of causal mechanisms and provides counterfactual predictions to compare against empirical data."
+      ],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "temporal": "during periods of low inflation and weak labor demand",
+        "geographic": "in advanced economies with high minimum wage coverage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage in tight labor markets with strong aggregate demand",
+      "predicate": "decreases",
+      "object": "unemployment via increased consumer spending and reduced turnover",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage in tight labor markets with strong aggregate demand decreases unemployment via increased consumer spending and reduced turnover in domain 'tight labor markets with strong aggregate demand']"
+      ],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "temporal": "post-2008 economic recovery periods",
+        "geographic": "high-income countries with strong labor protections"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment by raising labor costs and reducing hiring",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage increases unemployment by raising labor costs and reducing hiring in domain 'tight labor markets with strong aggregate demand']"
+      ],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "temporal": "short to medium term (1\u20133 years after implementation)",
+        "geographic": "regions with tight labor markets and strong aggregate demand"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage in economies with strong wage floors and automatic indexation",
+      "predicate": "reduces",
+      "object": "employment in the formal sector",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in economies with strong wage floors and automatic indexation employment in the formal sector]",
+        "[PATH:empirical] Panel data analysis of formal-sector employment in EU countries with automatic wage indexation (e.g., Belgium, Luxembourg) before and after minimum wage hikes, controlling for GDP growth and inflation. \u2014 Directly tests the hypothesis in the specified domain, measuring net formal employment changes and isolating the substitution effect toward informal labor and automation.",
+        "[PATH:empirical] Firm-level survey data from economies with strong wage floors (e.g., France, Portugal) on investment in automation and informal hiring following minimum wage increases. \u2014 Validates the proposed mechanism by quantifying shifts in capital-labor substitution and informal sector transitions, providing micro-level evidence to confirm or refute the causal pathway.",
+        "[PATH:theoretical] Search and matching models with endogenous informal sector and automation adoption, calibrated to economies with indexation (e.g., using data from OECD countries). \u2014 Explores the general equilibrium effects of minimum wage rises under strong wage floors, testing whether substitution effects dominate and whether formal employment declines are moderate or larger under indexation."
+      ],
+      "scope": {
+        "domain": "economies with strong wage floors and automatic indexation"
+      },
+      "qualifier": {
+        "mechanism": "accelerates substitution toward informal labor and capital automation",
+        "effect_size": "moderate negative"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage",
+      "predicate": "significantly increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]",
+        "[PATH:empirical] Meta-analysis of minimum wage studies in the US, Canada, and Western Europe post-2000, focusing on difference-in-differences and regression discontinuity designs \u2014 A systematic review of quasi-experimental studies in the specified geographic scope and time period can directly test the disputed causal claim, controlling for heterogeneity in local labor market conditions.",
+        "[PATH:empirical] Cross-country panel data analysis comparing employment outcomes in economies with strong wage floors vs. those without automatic indexation, using data from OECD or Eurostat \u2014 This approach leverages variation in institutional settings to isolate the effect of minimum wage increases on unemployment, addressing the scope condition of economies without strong wage floors or automatic indexation.",
+        "[PATH:theoretical] Search and matching labor market models incorporating monopsony power and heterogeneous firms, calibrated to US and European data \u2014 Theoretical models can clarify the conditions under which minimum wage increases lead to unemployment, especially in imperfect labor markets, and help reconcile conflicting empirical findings."
+      ],
+      "scope": {
+        "domain": "economies without strong wage floors or automatic indexation"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States, Canada, and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "raising the minimum wage in tight labor markets with strong aggregate demand",
+      "predicate": "decreases",
+      "object": "unemployment among prime-age workers (ages 25\u201354) more than among teenagers",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "mechanism": "reduced turnover and increased consumer spending disproportionately benefit experienced, higher-tenure workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "tight labor markets with strong aggregate demand"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
