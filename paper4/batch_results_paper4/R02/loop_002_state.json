@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work for collaborative tasks in small teams with low task interdependence",
+      "predicate": "reduces objective productivity less than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with low task interdependence office work for collaborative tasks in small teams with high task interdependence]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "conflicting evidence from field studies vs. controlled experiments on whether task interdependence moderates the productivity gap between remote and collocated work"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work for collaborative tasks in small teams with low task interdependence",
+      "predicate": "reduces objective productivity less than",
+      "object": "office work for collaborative tasks in small teams with low task interdependence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with low task interdependence office work for collaborative tasks in small teams with low task interdependence]"
+      ],
+      "scope": {
+        "domain": "field studies of small, loosely coupled teams"
+      },
+      "qualifier": {
+        "tension": "field studies show minimal productivity loss, but controlled experiments suggest context-dependent effects"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "reduces objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with high task interdependence office work for collaborative tasks in small teams with high task interdependence]"
+      ],
+      "scope": {
+        "domain": "controlled experiments with tightly coupled tasks"
+      },
+      "qualifier": {
+        "tension": "controlled experiments show a larger gap, but field studies report smaller differences due to team adaptation"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "task interdependence",
+      "predicate": "moderates the productivity gap between remote and collocated work less strongly than",
+      "object": "team size and communication tool quality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: task interdependence team size and communication tool quality]"
+      ],
+      "scope": {
+        "domain": "meta-analytic comparison across studies"
+      },
+      "qualifier": {
+        "tension": "some evidence suggests interdependence is a weaker moderator than previously assumed, creating friction with the original claim's focus"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work for collaborative tasks in small teams with low task interdependence",
+      "predicate": "reduces objective productivity less than",
+      "object": "office work for collaborative tasks in small teams with low task interdependence, only when team members have prior shared work history",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with low task interdependence office work for collaborative tasks in small teams with low task interdependence, only when team members have prior shared work history]",
+        "[PATH:empirical] Longitudinal field experiment comparing matched small teams with low task interdependence (e.g., software bug triage or collaborative editing) under remote vs. office conditions, stratifying by prior shared work history (e.g., >6 months vs. <1 month). Measure objective productivity via task completion time and error rates. \u2014 Directly tests the core causal claim with controlled manipulation and the specified moderator (prior shared history). Addresses the disputed status by providing quantitative evidence from the relevant domain and temporal context.",
+        "[PATH:literature] Meta-analysis of post-pandemic hybrid work studies (2020\u20132024) focusing on team coordination costs, relational capital, and productivity in knowledge-work teams with low task interdependence. \u2014 Synthesizes existing field evidence to assess whether the hypothesized interaction between work mode and prior shared history holds across studies. Can reveal effect size consistency, boundary conditions, and publication bias to confirm or refute the hypothesis at scale.",
+        "[PATH:theoretical] Agent-based simulation modeling team dynamics under remote vs. office conditions, varying prior shared history and task interdependence parameters, calibrated to observed communication and productivity data from small North American/Western European teams. \u2014 Provides a formal theoretical test of the causal mechanism (e.g., reduced coordination overhead from prior shared history compensating for remote communication deficits). Allows exploration of counterfactual scenarios and sensitivity analysis to identify conditions under which the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "field studies of small, loosely coupled teams with established relational capital"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132024 post-pandemic hybrid work period",
+        "geographic": "global but predominantly North American and Western European knowledge-work contexts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "office work for collaborative tasks in small teams with low task interdependence",
+      "predicate": "increases objective productivity more than",
+      "object": "remote work for collaborative tasks in small teams with low task interdependence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: office work for collaborative tasks in small teams with low task interdependence remote work for collaborative tasks in small teams with low task interdependence]",
+        "[PATH:literature] Meta-analysis of field experiments comparing co-located vs. remote collaboration in small teams with low task interdependence (e.g., Bloom et al., 2015; Choudhury et al., 2021; recent preprints from NBER) \u2014 A systematic review of existing quasi-experimental and experimental studies in the specified domain would directly test whether office work yields higher objective productivity than remote work for loosely coupled teams, controlling for confounds like team size and task structure.",
+        "[PATH:empirical] Controlled field experiment with small teams (3\u20136 members) performing low-interdependence tasks (e.g., document editing, data entry) in office vs. remote settings, measuring objective output (e.g., tasks completed per hour, error rates) \u2014 A randomized or matched-pair field experiment within the 2020\u20132023 US context would provide causal evidence on productivity differences, addressing the disputed status by isolating the effect of work location while minimizing selection bias.",
+        "[PATH:theoretical] Theoretical model of communication costs and coordination overhead in low-interdependence teams (e.g., based on organizational economics or team science frameworks, such as Malone's coordination theory) \u2014 Developing or applying a formal model that predicts when office work outperforms remote work for low-interdependence tasks could clarify underlying mechanisms (e.g., serendipitous interactions vs. reduced distractions) and guide empirical testing."
+      ],
+      "scope": {
+        "domain": "field studies of small, loosely coupled teams"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence, when teams have not undergone a structured adaptation protocol",
+      "predicate": "reduces objective productivity more than",
+      "object": "remote work for collaborative tasks in small teams with high task interdependence, when teams have undergone a structured adaptation protocol",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with high task interdependence, when teams have not undergone a structured adaptation protocol remote work for collaborative tasks in small teams with high task interdependence, when teams have undergone a structured adaptation protocol]",
+        "[PATH:empirical] A controlled experiment comparing small teams (3-5 members) performing tightly coupled collaborative tasks (e.g., software debugging, design synthesis) in remote vs. co-located settings, with and without a structured adaptation protocol (e.g., team charters, communication norms, task coordination training), measuring objective productivity (e.g., task completion time, error rate) over the first 6 weeks. \u2014 Directly tests the hypothesis by manipulating the adaptation protocol and measuring productivity differences. The controlled design isolates the effect of adaptation from confounding variables like team composition or task type.",
+        "[PATH:empirical] Longitudinal field study using existing small teams in organizations transitioning to remote work, where some teams voluntarily adopt a structured adaptation protocol (e.g., from organizational change management literature) and others do not; collect objective performance metrics (e.g., project milestones, output quality) over 6 weeks. \u2014 Provides external validity beyond the lab, capturing real-world constraints and team dynamics. Comparing matched teams (e.g., by industry, task interdependence) can reveal whether adaptation protocols mitigate productivity loss.",
+        "[PATH:literature] Meta-analysis of existing literature on remote work, team adaptation, and task interdependence, focusing on studies that measure objective productivity in small teams with high interdependence and report adaptation interventions or lack thereof. \u2014 Synthesizes available evidence to estimate the effect size and consistency of the productivity difference, identifying moderators like task type, team size, or adaptation duration. This can confirm whether the hypothesis holds across contexts or is domain-specific."
+      ],
+      "scope": {
+        "domain": "controlled experiments with tightly coupled tasks and pre/post adaptation measurement"
+      },
+      "qualifier": {
+        "temporal": "during the first 6 weeks of remote transition, before adaptation effects stabilize",
+        "geographic": "laboratory or controlled office environments in high-income countries with reliable broadband infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "enhances objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for collaborative tasks in small teams with high task interdependence office work for collaborative tasks in small teams with high task interdependence]",
+        "[PATH:empirical] Controlled field experiment comparing task completion time and error rates in matched small teams with high interdependence, working remotely vs. in-office, using a within-subjects crossover design over 8 weeks. \u2014 Directly tests the causal claim under realistic conditions, controlling for team composition and task type, addressing the post-pandemic context and adaptive dynamics.",
+        "[PATH:literature] Meta-analysis of existing studies (2020-2023) on remote collaboration in knowledge sectors, focusing on objective productivity metrics (e.g., throughput, cycle time) and moderating effects of task interdependence and team size. \u2014 Synthesizes available evidence to assess generalizability, identifies effect sizes, and evaluates potential publication bias or confounding variables in the disputed domain.",
+        "[PATH:theoretical] Theoretical model of coordination costs and communication bandwidth in remote vs. co-located settings, calibrated with data from small high-interdependence teams, using agent-based simulation. \u2014 Provides mechanistic explanation for productivity differences, generates testable predictions about boundary conditions (e.g., tool use, synchronicity), and can be refined with empirical data."
+      ],
+      "scope": {
+        "domain": "field studies with adaptive team dynamics"
+      },
+      "qualifier": {
+        "temporal": "2020-2023 post-pandemic adaptation period",
+        "geographic": "technology and knowledge sectors in North America and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "reduces objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work for collaborative tasks in small teams with high task interdependence reduces objective productivity more than office work for collaborative tasks in small teams with high task interdependence in domain 'controlled experiments with tightly coupled tasks']"
+      ],
+      "scope": {
+        "domain": "controlled experiments with tightly coupled tasks"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132023",
+        "geographic": "global (primarily US and Western Europe)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "does not reduce objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work for collaborative tasks in small teams with high task interdependence does not reduce objective productivity more than office work for collaborative tasks in small teams with high task interdependence in domain 'controlled experiments with tightly coupled tasks']"
+      ],
+      "scope": {
+        "domain": "controlled experiments with tightly coupled tasks"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132023",
+        "geographic": "global (primarily North America and Europe)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "task interdependence",
+      "predicate": "moderates the productivity gap between remote and collocated work more strongly than",
+      "object": "team size and communication tool quality, but only when measured via objective output metrics rather than self-reported satisfaction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: task interdependence team size and communication tool quality, but only when measured via objective output metrics rather than self-reported satisfaction]",
+        "[PATH:empirical] Re-analysis of existing lab experiments on remote vs. collocated work (e.g., from organizational behavior journals) that manipulate task interdependence and measure objective output (e.g., units completed, error rates) rather than satisfaction. \u2014 Directly tests the core claim by comparing effect sizes of interdependence versus team size and tool quality on productivity gaps, using objective metrics as specified.",
+        "[PATH:literature] Meta-analysis of studies on virtual team performance (2020-2024) that includes moderator variables such as task interdependence, team size, and communication tool quality, with separate analyses for objective performance vs. self-reported satisfaction. \u2014 Synthesizes existing evidence to determine whether interdependence consistently shows stronger moderation than other factors, and whether measurement method (objective vs. subjective) changes the pattern.",
+        "[PATH:empirical] New controlled experiment with a 2x2x2 design (task interdependence: high/low; team size: small/large; tool quality: high/low) measuring both objective output and self-reported satisfaction, analyzed via moderated regression. \u2014 Provides definitive causal evidence on the hypothesized interaction, directly comparing the relative strength of interdependence against the other moderators under controlled conditions."
+      ],
+      "scope": {
+        "domain": "experimental manipulation of task type and measurement method"
+      },
+      "qualifier": {
+        "temporal": "during controlled laboratory experiments conducted between 2020 and 2024",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "task interdependence",
+      "predicate": "moderates the productivity gap between remote and collocated work more strongly than",
+      "object": "team size and communication tool quality",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: task interdependence team size and communication tool quality]"
+      ],
+      "scope": {
+        "domain": "meta-analytic comparison across studies"
+      },
+      "qualifier": {
+        "temporal": "based on studies published from 2000 to 2023",
+        "geographic": "primarily North American and European organizational contexts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "reduces objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence, but only when team members have not previously worked together in person",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "controlled experiments with tightly coupled tasks and newly formed teams"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "remote work for collaborative tasks in small teams with high task interdependence",
+      "predicate": "enhances objective productivity more than",
+      "object": "office work for collaborative tasks in small teams with high task interdependence",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "field studies with adaptive team dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
