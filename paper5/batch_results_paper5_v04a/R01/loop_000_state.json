@@ -1,0 +1,503 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "small or null in many recent studies, but remains contested due to heterogeneous local labor market conditions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers in regions with high labor market concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled workers in regions with high labor market concentration]"
+      ],
+      "scope": {
+        "domain": "economics, local labor markets"
+      },
+      "qualifier": {
+        "effect_size": "moderate, based on monopsony models"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "earnings for low-skilled workers, offsetting any potential unemployment losses",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage earnings for low-skilled workers, offsetting any potential unemployment losses]"
+      ],
+      "scope": {
+        "domain": "economics, household income dynamics"
+      },
+      "qualifier": {
+        "effect_size": "positive net welfare effect if demand elasticity is low"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "has no significant effect on",
+      "object": "unemployment among low-skilled workers in tight labor markets with strong wage floors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled workers in tight labor markets with strong wage floors]"
+      ],
+      "scope": {
+        "domain": "economics, local labor market conditions"
+      },
+      "qualifier": {
+        "effect_size": "null or negligible, conditional on low unemployment rate and high local wages"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employment turnover among low-skilled workers in regions with high labor market concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment turnover among low-skilled workers in regions with high labor market concentration]",
+        "[PATH:empirical] Quasi-experimental studies using variation in state-level minimum wage increases (e.g., border county designs) with linked employer-employee data to measure turnover rates in high-concentration labor markets. \u2014 Such designs can isolate causal effects of minimum wage changes on job separations, specifically testing whether higher wages reduce turnover in monopsonistic markets where workers have few alternative employers.",
+        "[PATH:literature] Meta-analysis of existing minimum wage and turnover studies, stratified by labor market concentration metrics (e.g., Herfindahl-Hirschman Index), to assess whether effect sizes are systematically larger in concentrated markets. \u2014 A systematic review can aggregate evidence across contexts, addressing the disputed status and moderate confidence by quantifying average effects and heterogeneity across market structures.",
+        "[PATH:theoretical] Dynamic monopsony models incorporating efficiency wage mechanisms, calibrated to local labor market data with varying concentration levels. \u2014 These models can simulate how minimum wage increases affect quit rates and hiring costs under different degrees of employer market power, providing testable predictions to compare with empirical findings."
+      ],
+      "scope": {
+        "domain": "economics, local labor markets"
+      },
+      "qualifier": {
+        "effect_size": "small to moderate, based on efficiency wage theory"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment among low-skilled workers in regions with high labor market concentration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled workers in regions with high labor market concentration]",
+        "[PATH:empirical] Azar, J., Marinescu, I., & Steinbaum, M. (2020). Labor market concentration and the effects of minimum wages. Journal of Human Resources, 55(3), 1007-1044. \u2014 This paper directly examines the interaction between labor market concentration and minimum wage effects on employment, using U.S. data. It provides a natural test of the hypothesis that minimum wage increases reduce unemployment in concentrated markets, and its quasi-experimental design can confirm or refute the causal claim.",
+        "[PATH:theoretical] Berger, D., Herkenhoff, K., & Mongey, S. (2022). Minimum wages, market power, and labor market dynamics. NBER Working Paper No. 29662. \u2014 This theoretical model explores how monopsony power in labor markets alters the employment effects of minimum wages. It offers a rigorous framework to predict whether minimum wage hikes decrease unemployment under high concentration, and its predictions can be tested against empirical patterns.",
+        "[PATH:empirical] Dube, A., Lester, T. W., & Reich, M. (2010). Minimum wage effects across state borders: Estimates using contiguous counties. Review of Economics and Statistics, 92(4), 945-964. \u2014 This classic study uses border discontinuity methods to isolate minimum wage effects on low-skilled employment. Re-analyzing its data with a focus on high-concentration regions (e.g., rural or small-city labor markets) can provide direct evidence on whether unemployment decreases under the specified conditions."
+      ],
+      "scope": {
+        "domain": "economics, local labor markets"
+      },
+      "qualifier": {
+        "temporal": "post-2000, during periods of low overall unemployment",
+        "geographic": "regions with high labor market concentration, primarily in developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage in regions with high housing cost burdens",
+      "predicate": "increases",
+      "object": "real disposable income for low-skilled workers less than nominal earnings gains due to rent passthrough",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in regions with high housing cost burdens real disposable income for low-skilled workers less than nominal earnings gains due to rent passthrough]",
+        "[PATH:empirical] Longitudinal microdata (e.g., American Community Survey matched to CPI rent indexes) tracking low-skilled workers' wages and rents in high-cost urban areas before and after minimum wage increases \u2014 Directly tests the passthrough effect by comparing changes in real disposable income (wage gains minus rent increases) for low-skilled workers in treated vs. control regions, controlling for local housing supply elasticity.",
+        "[PATH:theoretical] Simulation studies using a spatial equilibrium model with heterogeneous agents and housing markets (e.g., calibrated to high-cost U.S. cities) \u2014 Isolates the mechanism of rent passthrough under different labor demand and housing supply conditions, allowing counterfactual analysis of whether nominal wage gains are offset by rent increases for low-skilled workers.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on minimum wage effects on rents and disposable income, focusing on post-2000 U.S. urban data \u2014 Synthesizes findings from multiple studies to assess the consistency and magnitude of rent passthrough, identifying moderators like housing cost burden and labor market tightness."
+      ],
+      "scope": {
+        "domain": "economics, housing and labor market interactions"
+      },
+      "qualifier": {
+        "temporal": "post-2000, during periods of rising housing costs",
+        "geographic": "urban areas in the United States with high housing cost burdens"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "leads to",
+      "object": "higher unemployment rates among low-skilled workers, outweighing potential earnings increases",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage higher unemployment rates among low-skilled workers, outweighing potential earnings increases]",
+        "[PATH:empirical] Cengiz, D., Dube, A., Lindner, A., & Zipperer, B. (2019). 'The Effect of Minimum Wages on Low-Wage Jobs.' Quarterly Journal of Economics. \u2014 This study uses a border-discontinuity design across U.S. counties to estimate the employment effects of minimum wage increases, providing rigorous causal evidence on low-skilled workers.",
+        "[PATH:literature] Neumark, D., & Shirley, P. (2022). 'Myth or Measurement: What Does the New Minimum Wage Research Say About Minimum Wages and Job Loss in the United States?' NBER Working Paper. \u2014 This comprehensive meta-analysis reviews recent empirical studies, highlighting conditions under which minimum wage increases lead to job losses for low-skilled workers, directly addressing the hypothesis.",
+        "[PATH:theoretical] Autor, D. H., Dorn, D., & Hanson, G. H. (2013). 'The China Syndrome: Local Labor Market Effects of Import Competition.' American Economic Review. \u2014 While not directly about minimum wages, this work develops a theoretical framework for labor market adjustments to shocks, which can be adapted to model how minimum wage increases interact with low-skilled employment dynamics."
+      ],
+      "scope": {
+        "domain": "economics, labor market dynamics"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "net earnings for low-skilled workers, because demand elasticity is low and income gains offset job losses",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage increases net earnings for low-skilled workers, because demand elasticity is low and income gains offset job losses in domain 'economics, household income dynamics']"
+      ],
+      "scope": {
+        "domain": "economics, household income dynamics"
+      },
+      "qualifier": {
+        "temporal": "post-2000, short-run (1\u20133 years after implementation)",
+        "geographic": "United States, low-unemployment states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "net earnings for low-skilled workers, because employment losses outweigh wage gains when demand elasticity is high",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage reduces net earnings for low-skilled workers, because employment losses outweigh wage gains when demand elasticity is high in domain 'economics, household income dynamics']"
+      ],
+      "scope": {
+        "domain": "economics, household income dynamics"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "job churn and temporary displacement among low-skilled workers in tight labor markets with strong wage floors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage job churn and temporary displacement among low-skilled workers in tight labor markets with strong wage floors]",
+        "[PATH:empirical] Longitudinal employer-employee matched data from states with recent minimum wage increases (e.g., Seattle, Washington D.C.) to track individual worker job spells and turnover rates among low-skilled workers in tight labor markets. \u2014 Directly measures job churn and temporary displacement by comparing pre- and post-policy changes in worker separation and rehiring rates, controlling for market tightness and wage floor strength.",
+        "[PATH:empirical] Survey-based studies of firm adjustment strategies (e.g., National Federation of Independent Business surveys or targeted interviews with low-wage employers) to document whether firms increase worker rotation or shift to part-time scheduling in response to higher minimum wages. \u2014 Tests the proposed mechanism by gathering self-reported firm behavior, providing qualitative and quantitative evidence on whether rotation is a common cost-management tactic.",
+        "[PATH:theoretical] Search-and-matching labor market models calibrated to local data (e.g., Diamond-Mortensen-Pissarides framework) that simulate the effect of a minimum wage increase on job separation and hiring rates under varying degrees of labor market tightness. \u2014 Allows isolation of the hypothesized short-term turnover effect from persistent unemployment, and tests sensitivity to assumptions about wage floors and firm adjustment costs."
+      ],
+      "scope": {
+        "domain": "economics, local labor market dynamics"
+      },
+      "qualifier": {
+        "effect_type": "short-term turnover rather than persistent unemployment",
+        "mechanism": "firms adjust by rotating workers more frequently to manage labor costs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage",
+      "predicate": "leads to increased employment among low-skilled workers",
+      "object": "in tight labor markets with strong wage floors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage in tight labor markets with strong wage floors]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in U.S. urban counties with tight labor markets (e.g., Seattle, San Francisco) post-2008, using synthetic control methods or difference-in-differences to isolate employment effects on low-skilled workers. \u2014 Directly tests the causal claim under the specified geographic and temporal scope, leveraging natural experiments in high-wage-floor settings.",
+        "[PATH:literature] Meta-analysis of minimum wage research focusing on low-skilled employment in tight labor markets, including studies from the post-2008 recovery period, to assess overall effect size and heterogeneity. \u2014 Synthesizes existing evidence to evaluate whether the hypothesized positive employment effect is robust across multiple contexts and methodologies.",
+        "[PATH:theoretical] Theoretical models of monopsonistic labor markets with wage floors, extended to incorporate tight labor market dynamics and heterogeneous worker skill levels. \u2014 Provides a formal framework to understand mechanisms (e.g., reduced turnover, increased labor force participation) that could support the hypothesis under specific conditions, guiding empirical tests."
+      ],
+      "scope": {
+        "domain": "economics, local labor market conditions"
+      },
+      "qualifier": {
+        "temporal": "post-2008 economic recovery period",
+        "geographic": "urban counties in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "raising the minimum wage in labor markets with high employer concentration",
+      "predicate": "increases",
+      "object": "net earnings for low-skilled workers more than predicted by competitive models, because monopsony power suppresses pre-wage increases",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics, industrial organization"
+      },
+      "qualifier": {
+        "effect_size": "positive net welfare effect amplified when local Herfindahl-Hirschman Index exceeds 2500"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "raising the minimum wage",
+      "predicate": "causes",
+      "object": "unemployment among low-skilled workers, outweighing any potential earnings gains",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "economics, labor market analysis"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
