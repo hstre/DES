@@ -359,6 +359,7 @@ def save_result(
     sh_loop0: float | None,
     condition: dict,
     rng_seed: int | None = None,
+    persona_filter: str | None = None,
     loop0_prompt_hash: str | None = None,
     loop0_claim_hash: str | None = None,
 ) -> dict:
@@ -653,6 +654,7 @@ def run_domain_p7(
         sh_loop0=sh_loop0,
         condition=resolved_condition,
         rng_seed=rng_seed_actual,
+        persona_filter=persona_filter,
         loop0_prompt_hash=loop0_prompt_hash,
         loop0_claim_hash=loop0_claim_hash,
     )
