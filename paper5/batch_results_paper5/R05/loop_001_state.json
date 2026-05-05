@@ -1,0 +1,396 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting",
+      "predicate": "enhances long-term weight loss by improving metabolic flexibility",
+      "object": "metabolic flexibility",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting metabolic flexibility]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While intermittent fasting is hypothesized to improve metabolic flexibility via enhanced fat oxidation and mitochondrial adaptation, some studies show that caloric restriction alone, not fasting timing, drives weight loss, and that metabolic flexibility improvements may be transient or confounded by weight loss itself rather than the fasting protocol."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting",
+      "predicate": "improves metabolic flexibility through enhanced fat oxidation and mitochondrial adaptation",
+      "object": "metabolic flexibility",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting metabolic flexibility]"
+      ],
+      "scope": {
+        "domain": "mechanistic physiology"
+      },
+      "qualifier": {
+        "tension": "This mechanism is supported by animal studies and short-term human trials, but long-term evidence in free-living populations is limited."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "caloric restriction alone",
+      "predicate": "drives long-term weight loss independently of fasting timing",
+      "object": "long-term weight loss",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: caloric restriction alone long-term weight loss]"
+      ],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "tension": "This view challenges the necessity of intermittent fasting protocols, as total energy deficit appears to be the primary determinant."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting",
+      "predicate": "reduces metabolic flexibility in women of reproductive age due to hormonal disruption of circadian fuel partitioning",
+      "object": "metabolic flexibility",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting metabolic flexibility]",
+        "[PATH:empirical] Controlled crossover trial comparing 8-12 weeks of time-restricted feeding (e.g., 16:8) vs. standard eating patterns in eumenorrheic women, measuring 24-hour respiratory quotient via indirect calorimetry and menstrual phase-specific glucose tolerance \u2014 Directly tests the hypothesis that intermittent fasting reduces metabolic flexibility (ability to switch between glucose and fat oxidation) in women of reproductive age, while controlling for hormonal cycle phase. Confirmation of lower respiratory quotient variability or impaired glucose disposal during luteal phase would support the claim; absence of effect would refute it.",
+        "[PATH:empirical] Longitudinal study of circadian fuel partitioning markers (e.g., clock gene expression in adipose tissue, 24-hour profiles of free fatty acids and insulin) in women undergoing intermittent fasting, with daily monitoring of menstrual cycle hormones (estradiol, progesterone) \u2014 Investigates the proposed mechanism: hormonal disruption of circadian fuel partitioning. Evidence of altered clock gene phase or blunted nocturnal lipid mobilization during the follicular phase would confirm the mechanistic pathway; normal partitioning would refute the core causal chain.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies on intermittent fasting and metabolic flexibility, stratified by sex and reproductive age, with specific focus on outcomes such as RQ during exercise, postprandial substrate switching, and menstrual cycle phase effects \u2014 Synthesizes available evidence to assess whether the hypothesized effect is consistently observed across populations. Given the disputed status, a meta-analysis can quantify effect sizes and identify gaps (e.g., lack of studies controlling for menstrual phase) that either support the hypothesis or reveal insufficient evidence."
+      ],
+      "scope": {
+        "domain": "mechanistic physiology"
+      },
+      "qualifier": {
+        "temporal": "acute intervention period (e.g., 8\u201312 weeks)",
+        "geographic": "global (primarily studies in Western populations)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "intermittent fasting",
+      "predicate": "decreases metabolic flexibility by causing adaptive glucose sparing and impairing carb utilization",
+      "object": "metabolic rigidity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting metabolic rigidity]",
+        "[PATH:empirical] Controlled metabolic chamber study measuring RER (respiratory exchange ratio) during a 48-hour fast and after a standardized glucose challenge, comparing changes in substrate oxidation pre- and post-fast. \u2014 Directly tests whether short-term fasting reduces the ability to switch from fat to carbohydrate oxidation, i.e., metabolic flexibility, by quantifying RER suppression and delayed glucose oxidation.",
+        "[PATH:empirical] Glycogen depletion and glucose tracer infusion study in humans or rodents during a 36-48 hour fast, measuring hepatic and muscle glycogen sparing and glucose disposal rate. \u2014 Assesses the hypothesized adaptive glucose sparing mechanism by tracking glycogen stores and exogenous glucose uptake, confirming or refuting impaired carbohydrate utilization.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials comparing intermittent fasting (e.g., alternate-day fasting, time-restricted feeding) vs. continuous calorie restriction on insulin sensitivity, glucose tolerance, and fat oxidation during oral glucose tolerance tests. \u2014 Synthesizes existing human data to determine if intermittent fasting consistently impairs carbohydrate utilization relative to steady-state energy restriction, providing statistical power to detect metabolic rigidity."
+      ],
+      "scope": {
+        "domain": "mechanistic physiology"
+      },
+      "qualifier": {
+        "temporal": "during short-term fasting protocols (< 48 hours)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "caloric restriction alone",
+      "predicate": "induces greater long-term weight loss than intermittent fasting combined with ad libitum feeding",
+      "object": "greater long-term weight loss",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: caloric restriction alone greater long-term weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing daily caloric restriction (e.g., 25% energy deficit) vs. intermittent fasting (e.g., 5:2 or time-restricted eating) with ad libitum feeding on non-fast days, with \u226512-month follow-up and objective adherence measures (e.g., doubly labeled water, continuous glucose monitors). \u2014 Directly tests the hypothesis in free-living conditions, controlling for total energy deficit and measuring long-term weight loss, addressing the tension between structured vs. variable energy deficits.",
+        "[PATH:literature] Meta-analysis of individual participant data from trials comparing caloric restriction and intermittent fasting, focusing on weight loss maintenance beyond 12 months and examining adherence trajectories. \u2014 Synthesizes existing evidence to assess whether the structured deficit from continuous restriction consistently yields greater long-term results, accounting for heterogeneous protocols and dropout rates.",
+        "[PATH:theoretical] Mathematical modeling of energy balance and adherence under continuous vs. intermittent restriction schedules, incorporating behavioral compensation and physiological adaptation. \u2014 Provides mechanistic predictions about why one approach might outperform the other, informing trial design and interpreting empirical findings by simulating long-term outcomes under different adherence scenarios."
+      ],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "tension": "This hypothesis directly tests whether the structured energy deficit from continuous restriction outperforms the less predictable deficit from intermittent fasting protocols in free-living conditions."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "fasting timing",
+      "predicate": "plays a crucial role",
+      "object": "in long-term weight loss",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: fasting timing in long-term weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing early time-restricted feeding (eTRF) vs. late time-restricted feeding (lTRF) on weight loss maintenance over 12 months, with controlled caloric intake. \u2014 Directly tests whether the timing of the fasting window (early vs. late) affects long-term weight loss outcomes, controlling for total energy intake, which is the key confound.",
+        "[PATH:literature] Systematic review and meta-analysis of prospective cohort studies examining the association between meal timing patterns (e.g., skipping breakfast, eating late) and weight regain after initial weight loss. \u2014 Synthesizes existing observational evidence to identify consistent temporal patterns linked to weight maintenance, helping to confirm or refute the role of timing beyond calorie restriction.",
+        "[PATH:theoretical] Mechanistic study investigating circadian clock gene expression and metabolic flexibility in adipose tissue under different fasting schedules in humans. \u2014 Provides biological plausibility for the hypothesis by testing whether fasting timing influences energy expenditure, insulin sensitivity, or fat oxidation independently of caloric intake."
+      ],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "temporal": "contemporary clinical studies (2010\u20132025)",
+        "geographic": "Western countries with structured weight management programs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "caloric restriction alone",
+      "predicate": "drives long-term weight loss independently of fasting timing",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms caloric restriction alone drives long-term weight loss independently of fasting timing long-term weight loss in domain 'clinical weight management']"
+      ],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting timing",
+      "predicate": "enhances long-term weight loss beyond caloric restriction alone",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting timing enhances long-term weight loss beyond caloric restriction alone long-term weight loss in domain 'clinical weight management']"
+      ],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "temporal": "over 12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "caloric restriction with protein-matched meal timing",
+      "predicate": "produces superior long-term weight loss and fat-free mass preservation compared to caloric restriction alone",
+      "object": "superior long-term weight loss and fat-free mass preservation",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {
+        "tension": "This hypothesis targets a specific confounding variable\u2014protein distribution across meals\u2014that may independently amplify the weight-loss effect of caloric restriction, challenging the claim that total energy deficit alone is sufficient."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "fasting timing",
+      "predicate": "is critical for optimal long-term weight loss",
+      "object": "long-term weight loss",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "clinical weight management"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
