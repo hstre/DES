@@ -1,13 +1,15 @@
 """
 Paper 4 — Autonomous Epistemic Loop.
 
-One complete DES run (subprocess) per loop iteration.
-DES is treated as a black-box; state is the communication channel.
+One complete DES run per loop iteration (module import, file-based handoff).
+Each call to des_module.run_des() is a full independent DES lifecycle.
+State is persisted to des_state.json and copied to loop_NNN_state.json.
 Pre-registered failure conditions and outcome classification — do not modify.
 """
 
-import json, math, os, re, shutil, subprocess, sys, time
+import json, math, os, re, shutil, sys, time
 from pathlib import Path
+from openai import OpenAI
 
 BUILDER_MODEL    = "deepseek-chat"
 BUILDER_PROVIDER = "deepseek"
@@ -26,6 +28,28 @@ RESEARCH_DOMAINS = {
 
 RESULTS_DIR = Path("paper4/batch_results_paper4")
 STATE_SRC   = Path("des_state.json")
+
+des_module = None  # set in run_all() after client injection
+
+
+def _make_clients():
+    dk = os.environ.get("DEEPSEEK_API_KEY", "")
+    ok = os.environ.get("OPENROUTER_API_KEY", "")
+    if not dk or not ok:
+        raise EnvironmentError(
+            "DEEPSEEK_API_KEY and OPENROUTER_API_KEY must be set in the environment.\n"
+            "Export them before running:\n"
+            "  export DEEPSEEK_API_KEY=sk-...\n"
+            "  export OPENROUTER_API_KEY=sk-or-..."
+        )
+    ds4 = OpenAI(api_key=dk, base_url="https://api.deepseek.com/v1")
+    orr = OpenAI(
+        api_key=ok,
+        base_url="https://openrouter.ai/api/v1",
+        default_headers={"HTTP-Referer": "https://github.com/hstre/DES",
+                         "X-Title": "DES Paper4 Autonomous Loop"},
+    )
+    return ds4, orr
 
 
 # ---------------------------------------------------------------------------
@@ -344,32 +368,27 @@ def run_domain(domain_id: str, seed_question: str,
 
         print(f"\n  Loop {loop:03d} | Q: {question[:70]}")
 
-        # Step 1-2: run DES as black-box subprocess
-        subprocess.run(
-            ["python", "des.py", "--reset"],
-            capture_output=True, cwd=Path(".").resolve()
-        )
-        proc = subprocess.run(
-            [
-                "python", "des.py", question,
-                "--anti-delphi",
-                "--max-iter", str(MAX_ITER_PER_RUN),
-                "--builder-model",    BUILDER_MODEL,
-                "--builder-provider", BUILDER_PROVIDER,
-                "--falsifier-model",    FALSIFIER_MODEL,
-                "--falsifier-provider", FALSIFIER_PROVIDER,
-            ],
-            capture_output=True, text=True,
-            timeout=480,
-            cwd=Path(".").resolve(),
-        )
+        # Steps 1-2: one complete DES run (module import, full lifecycle)
+        # des_module.run_des() deletes des_state.json at the start — clean slate
+        try:
+            des_module.run_des(
+                research_question=question,
+                max_iterations=MAX_ITER_PER_RUN,
+                anti_delphi=True,
+                builder_model=BUILDER_MODEL,
+                builder_provider=BUILDER_PROVIDER,
+                falsifier_model=FALSIFIER_MODEL,
+                falsifier_provider=FALSIFIER_PROVIDER,
+            )
+        except Exception as e:
+            print(f"  ERROR in run_des: {e}")
+            failure_code = "DES_RUN_ERROR"
+            break
 
-        # Step 3-4: load and save state
+        # Steps 3-4: load and save state
         if not STATE_SRC.exists():
             print(f"  ERROR: des_state.json missing after loop {loop}")
-            print(f"  stdout: {proc.stdout[-500:]}")
-            print(f"  stderr: {proc.stderr[-200:]}")
-            failure_code = "DES_SUBPROCESS_ERROR"
+            failure_code = "DES_RUN_ERROR"
             break
 
         with open(STATE_SRC) as f:
@@ -432,8 +451,8 @@ def run_domain(domain_id: str, seed_question: str,
     with open(domain_dir / "outcome.json", "w") as f:
         json.dump(outcome_data, f, indent=2)
 
-    print(f"\n  {domain_id} outcome: {outcome} | loops={loops_completed} | "
-          f"entropy={final_entropy:.2f if final_entropy is not None else 'N/A'}")
+    fe_str = f"{final_entropy:.2f}" if final_entropy is not None else "N/A"
+    print(f"\n  {domain_id} outcome: {outcome} | loops={loops_completed} | entropy={fe_str}")
     return outcome_data
 
 
@@ -512,6 +531,18 @@ def write_summary(all_outcomes: list):
 
 def run_all():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    import des as des_module_local
+
+    ds4_client, or_client = _make_clients()
+    des_module_local._clients["deepseek"]   = ds4_client
+    des_module_local._clients["openrouter"] = or_client
+    des_module_local._BASE_MODEL    = BUILDER_MODEL
+    des_module_local._BASE_PROVIDER = BUILDER_PROVIDER
+
+    # Pass module ref into domain runner via module-level name
+    global des_module
+    des_module = des_module_local
 
     all_outcomes = []
     for domain_id, seed_question in RESEARCH_DOMAINS.items():
