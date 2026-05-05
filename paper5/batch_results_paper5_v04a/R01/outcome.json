@@ -1,0 +1,257 @@
+{
+  "domain_id": "R01",
+  "seed_question": "Does raising the minimum wage increase unemployment?",
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 3,
+  "failure_code": "SEMANTIC_DUPLICATION",
+  "final_entropy": 1.0714285714285714,
+  "novel_at_loop_20": null,
+  "method_trace": [
+    "empirical_evidence",
+    "empirical_evidence",
+    "causal_mechanism"
+  ],
+  "frame_trace": [
+    "effectiveness",
+    "effectiveness",
+    "effectiveness"
+  ],
+  "shape_trace": [
+    "does_x_cause_y",
+    "is_x_effective",
+    "is_x_effective"
+  ],
+  "metric_trace": [
+    "low-skilled",
+    "industry-level",
+    "industry-level"
+  ],
+  "method_diversity_score": 0.6666666666666666,
+  "frame_diversity_score": 0.3333333333333333,
+  "preventive_trigger_rate": 0.3333333333333333,
+  "ptr_breakdown": {
+    "frame_repeat": 0,
+    "metric_repeat": 0,
+    "shape_repeat": 1,
+    "method_repeat": 0,
+    "fallback": 2,
+    "total": 3
+  },
+  "question_history": [
+    "Does raising the minimum wage increase unemployment?",
+    "What natural experiments or longitudinal studies can provide more robust causal evidence on the relationship between raising the minimum wage and unemployment rates?",
+    "What is the evidence that Firm-level pass-through of minimum wage costs to prices fully mediates the divergence between industry-level and individual-level estimates of employer concentration's effect on net earnings gains from minimum wage increases?"
+  ],
+  "loop_metrics": [
+    {
+      "loop": 0,
+      "method_type": "empirical_evidence",
+      "frame_type": "effectiveness",
+      "question_shape": "does_x_cause_y",
+      "outcome_metric": "low-skilled",
+      "total_claims": 14,
+      "open_claims": 2,
+      "sealed_claims": 12,
+      "disputed_claims": 2,
+      "redundant_claims": 4,
+      "semantic_duplication_rate": 0.2857142857142857,
+      "entropy": 0.5714285714285714,
+      "novel_claims": 14,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 28.0
+    },
+    {
+      "loop": 5,
+      "method_type": "empirical_evidence",
+      "frame_type": "effectiveness",
+      "question_shape": "is_x_effective",
+      "outcome_metric": "industry-level",
+      "total_claims": 14,
+      "open_claims": 3,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 13,
+      "semantic_duplication_rate": 0.9285714285714286,
+      "entropy": 1.2857142857142858,
+      "novel_claims": 0,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 28.0
+    },
+    {
+      "loop": 6,
+      "method_type": "causal_mechanism",
+      "frame_type": "effectiveness",
+      "question_shape": "is_x_effective",
+      "outcome_metric": "industry-level",
+      "total_claims": 14,
+      "open_claims": 3,
+      "sealed_claims": 11,
+      "disputed_claims": 3,
+      "redundant_claims": 9,
+      "semantic_duplication_rate": 0.6428571428571429,
+      "entropy": 1.0714285714285714,
+      "novel_claims": 0,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 27.0
+    }
+  ],
+  "perturbation_log": [
+    {
+      "loop": 1,
+      "trigger": "content_redundancy>0.40",
+      "trigger_layer": "fallback",
+      "type": "measurement_shift",
+      "generated_question": "How do researchers accurately measure and account for the degree of employer concentration in labor markets when evaluating the impact of raising the minimum wage on net earnings for low-skilled workers?",
+      "inferred_frame_type": "measurement",
+      "inferred_method_type": "measurement_validity",
+      "admitted": true,
+      "rejection_reason": null,
+      "novelty_produced_next_loop": 0
+    },
+    {
+      "loop": 2,
+      "trigger": "content_redundancy>0.40",
+      "trigger_layer": "fallback",
+      "type": "model_assumption_shift",
+      "generated_question": "How do researchers account for variations in labor mobility and worker bargaining power when measuring the impact of employer concentration on net earnings gains from a minimum wage increase?",
+      "inferred_frame_type": "scope",
+      "inferred_method_type": "stakeholder_perspective",
+      "admitted": true,
+      "rejection_reason": null,
+      "novelty_produced_next_loop": 0
+    },
+    {
+      "loop": 3,
+      "trigger": "shape_repeat:how_does_x_work",
+      "trigger_layer": "preventive",
+      "type": "unit_of_analysis_shift",
+      "generated_question": "How do variations in labor mobility and worker bargaining power at the industry level affect the measurement of employer concentration's impact on net earnings gains from a minimum wage increase compared to individual-level analyses?",
+      "inferred_frame_type": "measurement",
+      "inferred_method_type": "measurement_validity",
+      "admitted": true,
+      "rejection_reason": null,
+      "novelty_produced_next_loop": 0
+    },
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 4,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 0,
+      "saturated_path_questions": [
+        "What is the evidence that raising the minimum wage in labor markets with high employer concentration increases net earnings for low-skilled workers more than predicted by competitive models, because monopsony power suppresses pre-wage increases?",
+        "How do researchers accurately measure and account for the degree of employer concentration in labor markets when evaluating the impact of raising the minimum wage on net earnings for low-skilled workers?",
+        "How do researchers account for variations in labor mobility and worker bargaining power when measuring the impact of employer concentration on net earnings gains from a minimum wage increase?",
+        "How do variations in labor mobility and worker bargaining power at the industry level affect the measurement of employer concentration's impact on net earnings gains from a minimum wage increase compared to individual-level analyses?"
+      ],
+      "saturated_path_methods": [
+        "model_assumption",
+        "measurement_validity",
+        "stakeholder_perspective",
+        "measurement_validity"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "failure_mode_shift",
+      "generated_question": "Under what conditions does raising the minimum wage lead to significant job losses for low-skilled workers, particularly in sectors with high labor cost sensitivity and limited ability to pass on costs to consumers?",
+      "admitted": true,
+      "rejection_reason": null
+    },
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 5,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 0,
+      "saturated_path_questions": [
+        "Under what conditions does raising the minimum wage lead to significant job losses for low-skilled workers, particularly in sectors with high labor cost sensitivity and limited ability to pass on costs to consumers?",
+        "What is the evidence that Worker bargaining power at the firm level reduces the divergence between industry-level and individual-level estimates of employer concentration's effect on net earnings gains from minimum wage increases?"
+      ],
+      "saturated_path_methods": [
+        "failure_mode",
+        "unit_of_analysis"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "evidence_standard_shift",
+      "generated_question": "What natural experiments or longitudinal studies can provide more robust causal evidence on the relationship between raising the minimum wage and unemployment rates?",
+      "admitted": true,
+      "rejection_reason": null
+    }
+  ],
+  "t10_count": 2,
+  "t10_activations": [
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 4,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 0,
+      "saturated_path_questions": [
+        "What is the evidence that raising the minimum wage in labor markets with high employer concentration increases net earnings for low-skilled workers more than predicted by competitive models, because monopsony power suppresses pre-wage increases?",
+        "How do researchers accurately measure and account for the degree of employer concentration in labor markets when evaluating the impact of raising the minimum wage on net earnings for low-skilled workers?",
+        "How do researchers account for variations in labor mobility and worker bargaining power when measuring the impact of employer concentration on net earnings gains from a minimum wage increase?",
+        "How do variations in labor mobility and worker bargaining power at the industry level affect the measurement of employer concentration's impact on net earnings gains from a minimum wage increase compared to individual-level analyses?"
+      ],
+      "saturated_path_methods": [
+        "model_assumption",
+        "measurement_validity",
+        "stakeholder_perspective",
+        "measurement_validity"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "failure_mode_shift",
+      "generated_question": "Under what conditions does raising the minimum wage lead to significant job losses for low-skilled workers, particularly in sectors with high labor cost sensitivity and limited ability to pass on costs to consumers?",
+      "admitted": true,
+      "rejection_reason": null
+    },
+    {
+      "operator": "T10_EPISTEMIC_ROLLBACK_AND_RESEED",
+      "failed_loop": 5,
+      "failure_reason": "SEMANTIC_DUPLICATION",
+      "rollback_target_loop": 0,
+      "saturated_path_questions": [
+        "Under what conditions does raising the minimum wage lead to significant job losses for low-skilled workers, particularly in sectors with high labor cost sensitivity and limited ability to pass on costs to consumers?",
+        "What is the evidence that Worker bargaining power at the firm level reduces the divergence between industry-level and individual-level estimates of employer concentration's effect on net earnings gains from minimum wage increases?"
+      ],
+      "saturated_path_methods": [
+        "failure_mode",
+        "unit_of_analysis"
+      ],
+      "saturated_path_status": "SATURATED",
+      "reseed_method_type": "evidence_standard_shift",
+      "generated_question": "What natural experiments or longitudinal studies can provide more robust causal evidence on the relationship between raising the minimum wage and unemployment rates?",
+      "admitted": true,
+      "rejection_reason": null
+    }
+  ],
+  "saturated_paths": [
+    {
+      "questions": [
+        "What is the evidence that raising the minimum wage in labor markets with high employer concentration increases net earnings for low-skilled workers more than predicted by competitive models, because monopsony power suppresses pre-wage increases?",
+        "How do researchers accurately measure and account for the degree of employer concentration in labor markets when evaluating the impact of raising the minimum wage on net earnings for low-skilled workers?",
+        "How do researchers account for variations in labor mobility and worker bargaining power when measuring the impact of employer concentration on net earnings gains from a minimum wage increase?",
+        "How do variations in labor mobility and worker bargaining power at the industry level affect the measurement of employer concentration's impact on net earnings gains from a minimum wage increase compared to individual-level analyses?"
+      ],
+      "methods": [
+        "model_assumption",
+        "measurement_validity",
+        "stakeholder_perspective",
+        "measurement_validity"
+      ],
+      "reason": "SEMANTIC_DUPLICATION"
+    },
+    {
+      "questions": [
+        "Under what conditions does raising the minimum wage lead to significant job losses for low-skilled workers, particularly in sectors with high labor cost sensitivity and limited ability to pass on costs to consumers?",
+        "What is the evidence that Worker bargaining power at the firm level reduces the divergence between industry-level and individual-level estimates of employer concentration's effect on net earnings gains from minimum wage increases?"
+      ],
+      "methods": [
+        "failure_mode",
+        "unit_of_analysis"
+      ],
+      "reason": "SEMANTIC_DUPLICATION"
+    }
+  ]
+}
