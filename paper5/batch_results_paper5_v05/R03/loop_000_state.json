@@ -1,0 +1,270 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "in local labor markets with high immigrant concentration",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "in local labor markets with high immigrant concentration and low skill overlap",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration and low skill overlap]"
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "condition": "low skill overlap between immigrants and natives"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Immigration",
+      "predicate": "may increase wages for native workers",
+      "object": "in local labor markets with high immigrant concentration and complementary skill sets",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration and complementary skill sets]",
+        "[CONFLICT] The claim suggests that immigration may increase wages for native workers under specific conditions, but the low confidence (0.42) and disputed status indicate conflicting empirical findings in labor economics, where some studies find wage suppression effects in similar contexts."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "condition": "complementary skills lead to productivity gains"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration",
+      "predicate": "increases wage polarization among native workers",
+      "object": "in local labor markets with high immigrant concentration and low skill overlap",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration and low skill overlap]",
+        "[PATH:literature] Card, D. (2009). 'Immigration and Inequality.' American Economic Review, 99(2), 1-21. \u2014 This seminal paper examines the impact of immigration on wage inequality, providing a theoretical and empirical framework that can be directly applied to test whether high immigrant concentration with low skill overlap increases wage polarization among native workers.",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 Borjas's work offers empirical evidence on how immigration affects native wages by skill group, which is essential for evaluating the condition of low skill overlap and its role in wage polarization.",
+        "[PATH:theoretical] Peri, G. & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This paper develops a task-based model of labor markets where immigrants and natives have different skill sets, providing a theoretical basis to predict and test wage polarization under low skill overlap conditions."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "condition": "low skill overlap between immigrants and natives"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Immigration",
+      "predicate": "increases wages for native workers",
+      "object": "in local labor markets with high immigrant concentration and low skill overlap",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration and low skill overlap]",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics. \u2014 This classic study provides a framework and empirical evidence on how immigration affects native wages, including substitution and complementarity effects that are central to the hypothesis about skill overlap.",
+        "[PATH:empirical] Card, D. (2009). 'Immigration and Inequality.' American Economic Review, 99(2), 1-21. \u2014 Card's work directly examines local labor market outcomes of immigration, focusing on skill groups and wage effects, which can help test the condition of low skill overlap in high-immigration areas.",
+        "[PATH:theoretical] Peri, G. & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages.' American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This paper develops a theoretical model of task specialization between native and immigrant workers, providing predictions about wage increases for natives when skill overlap is low, which can be tested against the hypothesis."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "2000-2019",
+        "geographic": "United States metropolitan areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Immigration",
+      "predicate": "increases wages for native workers",
+      "object": "only in local labor markets where immigrants and natives have highly complementary skill sets and where local firms invest in technology upgrades",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration only in local labor markets where immigrants and natives have highly complementary skill sets and where local firms invest in technology upgrades]",
+        "[PATH:empirical] Quasi-experimental studies using variation in local immigration shocks (e.g., refugee resettlement or H-1B visa caps) interacted with industry-level measures of skill complementarity and firm-level R&D investment data. \u2014 Such studies can isolate the causal effect of immigration on native wages by exploiting exogenous variation in immigrant inflows, and test whether wage increases occur only in labor markets with high complementarity and technology investment, directly confirming or refuting the conditional claim.",
+        "[PATH:empirical] Firm-level panel data analysis (e.g., from Longitudinal Employer-Household Dynamics or administrative matched employer-employee datasets) that tracks wage changes for native workers after firms adopt new technologies and hire immigrants with complementary skills. \u2014 This allows testing the joint condition by examining within-firm wage outcomes over time, controlling for firm fixed effects, to see if the predicted wage gains materialize only when both complementarity and technology upgrades are present.",
+        "[PATH:theoretical] Structural labor market models incorporating task-based production functions with heterogeneous worker types and endogenous technology adoption (e.g., Acemoglu & Restrepo or Peri & Sparber frameworks). \u2014 Such models can simulate the necessary conditions for wage increases, providing a theoretical benchmark to compare against empirical findings and to identify the parameter ranges under which the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "condition": "complementary skills and firm-level technology investment jointly amplify productivity gains"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Immigration",
+      "predicate": "may decrease wages for native workers",
+      "object": "in local labor markets with high immigrant concentration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration in local labor markets with high immigrant concentration]",
+        "[PATH:empirical] Card (1990) 'The Impact of the Mariel Boatlift on the Miami Labor Market' \u2014 This seminal natural experiment study directly examines the effect of a sudden large influx of low-skilled immigrants on native wages in a concentrated local labor market (Miami), providing a key empirical test of the hypothesis.",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' \u2014 This paper uses a spatial correlations approach across U.S. metropolitan areas to estimate the wage effects of immigrant concentration, offering contrasting findings that may confirm or refute the hypothesis depending on the specification and time period.",
+        "[PATH:literature] Meta-analysis or systematic review of immigration wage effects (e.g., Longhi, Nijkamp & Poot, 2005) \u2014 A comprehensive meta-analysis synthesizes multiple empirical studies to estimate the average effect of immigration on native wages, helping to resolve the disputed status by quantifying overall evidence and identifying moderating factors like skill group or local concentration."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 23,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006"
+    ],
+    "falsifier": [
+      "C005",
+      "C007"
+    ]
+  }
+}
