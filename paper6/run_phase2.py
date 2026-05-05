@@ -28,8 +28,11 @@ FALSIFIER_PROVIDER = "openrouter"
 MAX_LOOPS          = 20
 MAX_ITER_PER_RUN   = 40
 
-# Pre-registered SH* from Phase 1
-SH_STAR = 0.0876
+# SH* locked from Phase 1 — must not be recalibrated after Phase 2 results are known.
+# Phase 1 accuracy (5/5) is training accuracy on n=5.
+# Phase 2 accuracy is true prediction accuracy. Report separately, never conflate.
+SH_STAR_LOCKED = 0.0876
+SH_STAR = SH_STAR_LOCKED  # alias for internal use
 
 # Pre-registered domain classifications (before any runs)
 DOMAINS = {
@@ -650,7 +653,8 @@ def write_phase2_summary(results: dict):
     summary = {
         "phase": 2,
         "n_domains": len(results),
-        "sh_star": SH_STAR,
+        "sh_star_locked": SH_STAR_LOCKED,
+        "sh_star_source": "Phase 1 retrograde n=5 — locked, not recalibrated",
         "correlations": {
             "sh_prerun_vs_sh_loop0_spearman": round(h3_rho, 4) if h3_rho else None,
             "sh_loop0_vs_depth_spearman": round(rho_depth, 4) if rho_depth else None,
@@ -661,9 +665,12 @@ def write_phase2_summary(results: dict):
             "WEAK" if h3_rho and h3_rho > 0.50 else
             "NOT_CONFIRMED" if h3_rho else "INSUFFICIENT_DATA"
         ),
-        "prediction_accuracy": round(pred_accuracy, 3) if pred_accuracy else None,
-        "prediction_hits": prediction_hits,
-        "total_predictions": total_predictions,
+        # Phase 2 accuracy = true prediction accuracy (SH* locked before these runs)
+        # Phase 1 accuracy (5/5 = 100%) is training accuracy on n=5 — not reported here
+        "phase2_prediction_accuracy": round(pred_accuracy, 3) if pred_accuracy else None,
+        "phase2_prediction_hits": prediction_hits,
+        "phase2_total_predictions": total_predictions,
+        "phase1_training_accuracy_note": "5/5=100% on n=5 — training accuracy only, see phase1_retrograde.json",
         "rows": rows,
     }
 

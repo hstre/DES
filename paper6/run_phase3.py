@@ -12,7 +12,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 RESULTS_DIR_P3 = Path("paper6/phase3_results")
-SH_STAR = 0.0876  # from Phase 1
+SH_STAR_LOCKED = 0.0876  # locked from Phase 1, not recalibrated after Phase 2
+SH_STAR = SH_STAR_LOCKED
 
 # Phase 2 summary path — populated after Phase 2 completes
 PHASE2_SUMMARY = Path("paper6/phase2_results/phase2_summary.json")

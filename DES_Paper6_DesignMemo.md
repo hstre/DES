@@ -4,7 +4,7 @@
 
 # Epistemic Trajectory Control in Autonomous Research Loops
 
-# Version: 0.3 — Final pre-registration: H3 ρ consistent, 13 domains, SH_norm exploratory, scheduler implication
+# Version: 0.4 — SH* lock added (SH_STAR_LOCKED = 0.0876, Phase 1 result, no recalibration after Phase 2)
 
 # Date: 5. Mai 2026
 
@@ -86,6 +86,22 @@ Correlate with loop depth. Estimate SH*.
 Select 13 new domains: 10 core domains plus 3 counterexamples. Predict high/low SH before running.
 Run P4 config (no perturbation). Measure actual SH and loop depth.
 Compare prediction vs outcome.
+
+### SH* Lock (pre-registered before Phase 2 results)
+
+SH* was estimated from Phase 1 data (n=5).
+It must not be adjusted after Phase 2 results are known.
+
+```python
+SH_STAR_LOCKED = 0.0876  # estimated from Phase 1, locked before Phase 2
+# Do not recalibrate after Phase 2. Any recalibration would convert
+# Phase 2 prediction accuracy into training accuracy.
+# Report Phase 1 SH* alongside Phase 2 classification accuracy as-is.
+```
+
+Phase 1 accuracy (5/5) is training accuracy on n=5.
+Phase 2 accuracy is true prediction accuracy.
+These must be reported separately and never conflated.
 
 ### Phase 3: Controlled Comparison (high-SH domains only)
 
@@ -305,6 +321,24 @@ For each of 13 new domains (10 core + 3 counterexamples):
 1. Compare pre-run estimate vs post-loop-0 SH (H3)
 
 No perturbation in Phase 2. Clean measurement of SH → depth relationship.
+
+-----
+
+## SH* Lock (pre-registered before Phase 2 results)
+
+SH* was estimated from Phase 1 data (n=5).
+It must not be adjusted after Phase 2 results are known.
+
+```python
+SH_STAR_LOCKED = 0.0876  # estimated from Phase 1, locked before Phase 2
+# Do not recalibrate after Phase 2. Any recalibration would convert
+# Phase 2 prediction accuracy into training accuracy.
+# Report Phase 1 SH* alongside Phase 2 classification accuracy as-is.
+```
+
+Phase 1 accuracy (5/5) is training accuracy on n=5.
+Phase 2 accuracy is true prediction accuracy.
+These must be reported separately and never conflated.
 
 -----
 
