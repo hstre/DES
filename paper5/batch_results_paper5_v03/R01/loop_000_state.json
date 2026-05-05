@@ -1,0 +1,279 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "uncertain",
+        "heterogeneity": "depends on local labor market conditions and magnitude of wage increase"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers in tight labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers in tight labor markets]"
+      ],
+      "scope": {
+        "domain": "labor economics, tight labor markets"
+      },
+      "qualifier": {
+        "effect_size": "small positive",
+        "heterogeneity": "limited to low-skilled sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and increases consumer spending",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover and increases consumer spending]",
+        "[CONFLICT] Empirical studies show mixed results: some find moderate reductions in turnover and increased consumer spending, while others find minimal effects or negative impacts on employment, leading to disagreement among economists."
+      ],
+      "scope": {
+        "domain": "business operations and macroeconomics"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "heterogeneity": "depends on local demand elasticity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage in tight labor markets",
+      "predicate": "reduces",
+      "object": "job turnover among low-skilled workers, offsetting any employment losses",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in tight labor markets job turnover among low-skilled workers, offsetting any employment losses]",
+        "[PATH:empirical] Quasi-experimental studies of recent minimum wage increases in U.S. states with tight labor markets (e.g., Washington, California) using administrative payroll data to estimate turnover rates and employment changes for low-skilled workers. \u2014 Provides direct, causal evidence on whether higher minimum wages reduce job turnover in tight labor markets, and whether any employment losses are offset, addressing the hypothesis's core claim.",
+        "[PATH:empirical] Industry-specific panel data analyses in high-turnover sectors (e.g., retail, hospitality) comparing turnover rates before and after minimum wage changes, controlling for local labor market tightness. \u2014 Tests the qualifier that the effect is strongest in sectors with high baseline turnover, offering heterogeneous evidence to confirm or refute the hypothesized offset mechanism.",
+        "[PATH:theoretical] Search-and-matching models of labor markets that incorporate minimum wage effects on job separation and hiring rates, calibrated to tight labor market conditions. \u2014 Provides a formal framework to explore the conditions under which turnover reductions offset employment losses, helping to interpret empirical findings and identify necessary assumptions."
+      ],
+      "scope": {
+        "domain": "labor economics, tight labor markets"
+      },
+      "qualifier": {
+        "effect_size": "moderate negative",
+        "heterogeneity": "strongest in sectors with high baseline turnover"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment by boosting consumer spending and demand for goods and services",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment by boosting consumer spending and demand for goods and services]",
+        "[PATH:empirical] Cengiz et al. (2019) 'The Effect of Minimum Wages on Low-Wage Jobs' in the Quarterly Journal of Economics, analyzing U.S. county-level employment data from 1979-2016 \u2014 This study uses a rigorous border-discontinuity design to estimate the effect of minimum wage increases on low-wage employment, directly testing whether consumer-demand-driven employment gains offset potential job losses.",
+        "[PATH:empirical] Allegretto et al. (2017) 'Credible Research Designs for Minimum Wage Studies' in Industrial and Labor Relations Review, a meta-analysis of U.S. state-level panel data studies \u2014 This meta-analysis synthesizes evidence from multiple credible identification strategies, providing a comprehensive empirical test of the hypothesis that minimum wage increases reduce unemployment via demand-side effects.",
+        "[PATH:theoretical] Dube & Lindner (2021) 'City Limits: What Do Local-Area Minimum Wages Do?' in the Journal of Economic Perspectives, reviewing city-level minimum wage policies and their macroeconomic spillovers \u2014 This review examines the theoretical mechanisms linking minimum wage hikes to consumer spending and aggregate demand, while also assessing empirical evidence on local labor market outcomes, helping to clarify the conditions under which the hypothesized effect may hold."
+      ],
+      "scope": {
+        "domain": "labor economics, general market conditions"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132024",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover only when paired with a concurrent increase in local demand elasticity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover only when paired with a concurrent increase in local demand elasticity]",
+        "[PATH:empirical] Panel data analysis of U.S. urban labor markets (e.g., Current Population Survey matched to local industry employment data) testing interaction effects between minimum wage changes and local demand elasticity estimates (e.g., from Bureau of Labor Statistics) on employee turnover rates during post-2000 expansions. \u2014 Directly tests the conditional hypothesis by estimating whether the turnover-reducing effect of minimum wage increases depends on local demand elasticity, using variation across cities and time.",
+        "[PATH:literature] Search in economics journals for studies on minimum wage and turnover (e.g., Dube, Lester, Reich 2010; Allegretto et al. 2011) re-analyzed with interaction terms for demand elasticity proxies (e.g., industry mix, import competition, or local labor market tightness). \u2014 Existing empirical literature on minimum wage and turnover can be re-examined to see if the effect is moderated by demand elasticity, providing a meta-analytic test of the hypothesis.",
+        "[PATH:theoretical] Theoretical model: Monopsony labor market model with heterogeneous product demand elasticity, simulating how minimum wage affects turnover under varying demand conditions (e.g., using calibration with U.S. urban data). \u2014 A formal model can clarify the causal mechanism: higher demand elasticity may amplify firms' incentive to reduce turnover when labor costs rise, offering a testable prediction and identifying conditions for the effect."
+      ],
+      "scope": {
+        "domain": "business operations and macroeconomics"
+      },
+      "qualifier": {
+        "temporal": "during periods of economic expansion, post-2000",
+        "geographic": "urban labor markets in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment and reduces business profitability",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment and reduces business profitability]",
+        "[PATH:empirical] Card and Krueger (1994) study on New Jersey fast-food industry minimum wage increase and employment effects \u2014 This classic natural experiment compared employment in New Jersey and Pennsylvania after a minimum wage hike, providing direct evidence on the relationship between minimum wage increases and unemployment, challenging the traditional assumption of job losses.",
+        "[PATH:literature] Meta-analysis by Doucouliagos and Stanley (2009) on minimum wage employment effects \u2014 A comprehensive meta-analysis of over 60 studies can help resolve conflicting findings by synthesizing effect sizes and publication bias, offering a higher-level assessment of whether minimum wage increases consistently raise unemployment.",
+        "[PATH:theoretical] Theoretical modeling using monopsony labor market frameworks (e.g., Manning, 2003) \u2014 Monopsony models predict that minimum wage increases can actually raise employment in imperfectly competitive labor markets, providing a theoretical counterpoint to the standard competitive model and explaining why empirical results may vary."
+      ],
+      "scope": {
+        "domain": "business operations and macroeconomics"
+      },
+      "qualifier": {
+        "temporal": "during the 2010s",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 24,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006"
+    ],
+    "falsifier": [
+      "C005",
+      "C007"
+    ]
+  }
+}
