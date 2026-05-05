@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "condition": "when controlling for task type and management practices",
+        "uncertainty": "meta-analyses show mixed results, with self-reported gains contradicted by objective output declines in some studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "improves",
+      "object": "self-reported productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work self-reported productivity]"
+      ],
+      "scope": {
+        "domain": "subjective perception"
+      },
+      "qualifier": {
+        "condition": "for tasks requiring deep focus and minimal interruptions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective output per hour",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work objective output per hour]"
+      ],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "condition": "in collaborative or management-intensive roles"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Remote work",
+      "predicate": "decreases",
+      "object": "self-reported productivity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work self-reported productivity]",
+        "[PATH:empirical] Longitudinal field experiment comparing self-reported productivity of remote vs. in-office teams on collaborative tasks with real-time feedback loops \u2014 Directly tests the causal claim under the specified condition, controlling for task type and feedback frequency.",
+        "[PATH:literature] Meta-analysis of survey studies on remote work and subjective productivity, specifically filtering for tasks requiring frequent collaboration \u2014 Synthesizes existing self-report data to assess consistency and effect size across populations, clarifying whether the condition moderates the relationship.",
+        "[PATH:theoretical] Cognitive load theory and attention residue models applied to remote collaboration contexts \u2014 Provides mechanistic explanation for why real-time feedback might be less effective remotely, generating testable predictions about self-reported productivity."
+      ],
+      "scope": {
+        "domain": "subjective perception"
+      },
+      "qualifier": {
+        "condition": "for tasks requiring frequent collaboration and real-time feedback"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work",
+      "predicate": "decreases",
+      "object": "self-reported productivity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work self-reported productivity]",
+        "[PATH:empirical] Longitudinal surveys of self-reported productivity among remote workers in high-income countries during 2020-2021 (e.g., from Stanford's WFH Research project or OECD datasets) \u2014 Directly measures the claimed effect in the specified temporal and geographic scope, allowing comparison of self-reported productivity changes over time and across demographics.",
+        "[PATH:literature] Meta-analysis of published studies on remote work and self-reported productivity during the pandemic (e.g., from journals like Journal of Organizational Behavior or PLoS ONE) \u2014 Synthesizes multiple empirical findings to assess consistency and effect size, addressing the disputed status and moderate confidence level.",
+        "[PATH:empirical] Experimental or quasi-experimental study comparing self-reported productivity in remote vs. on-site work with objective productivity metrics (e.g., using time-tracking or output data from a technology firm) \u2014 Helps disentangle subjective perception from actual performance, testing whether the decrease is a perceptual bias or reflects genuine productivity loss."
+      ],
+      "scope": {
+        "domain": "subjective perception"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2021)",
+        "geographic": "global, primarily in high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective output per hour only when task interdependence is high",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work objective output per hour only when task interdependence is high]",
+        "[PATH:empirical] Meta-analysis of field experiments comparing remote vs. on-site productivity across teams with varying task interdependence (e.g., Bloom et al., 2015; Choudhury et al., 2021) \u2014 Directly tests the interaction between remote work and task interdependence on objective output per hour, using controlled variation in interdependence.",
+        "[PATH:empirical] Laboratory or quasi-experimental study manipulating task interdependence (low vs. high) and work mode (remote vs. co-located) while measuring individual throughput on standardized tasks \u2014 Isolates the causal effect of interdependence on remote productivity, ruling out confounding factors like team composition or task type.",
+        "[PATH:theoretical] Theoretical model of coordination costs and communication delays in remote settings, predicting that high interdependence amplifies productivity losses (e.g., based on organizational economics or team cognition literature) \u2014 Provides mechanistic grounding for the hypothesis, identifying testable predictions about communication frequency, task switching, and output quality."
+      ],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "condition": "in roles requiring frequent synchronous collaboration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "objective output per hour",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work objective output per hour]",
+        "[PATH:empirical] Bloom, N., et al. (2021). 'Does Working from Home Work? Evidence from a Chinese Experiment.' Quarterly Journal of Economics. \u2014 This randomized controlled trial provides direct causal evidence on remote work productivity, including objective output per hour, which can be compared to the pandemic context.",
+        "[PATH:empirical] Gibbs, M., Mengel, F., & Siemroth, C. (2021). 'Work from Home & Productivity: Evidence from a Software Firm.' IZA Discussion Paper. \u2014 This study uses high-frequency productivity data from a global software firm during COVID-19, allowing direct measurement of output per hour changes under remote work.",
+        "[PATH:literature] Meta-analysis of remote work productivity studies (e.g., Gajendran & Harrison, 2007, updated with pandemic-era data). \u2014 A systematic review and meta-analysis can aggregate effect sizes across multiple contexts, clarifying whether the increase holds generally or depends on specific conditions."
+      ],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020\u20132021)",
+        "geographic": "global, with emphasis on developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective output per hour in collaborative or management-intensive roles",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work reduces objective output per hour in collaborative or management-intensive roles in domain 'quantitative performance metrics']"
+      ],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "temporal": "post-2020 remote work studies",
+        "geographic": "global, predominantly United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "does not reduce",
+      "object": "objective output per hour in collaborative or management-intensive roles",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work does not reduce objective output per hour in collaborative or management-intensive roles in domain 'quantitative performance metrics']"
+      ],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective output per hour",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {
+        "condition": "when tasks require synchronous collaborative problem-solving with high interdependency"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "objective output per hour",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "quantitative performance metrics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 31,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
