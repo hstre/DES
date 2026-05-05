@@ -1,0 +1,503 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "conditions": "in low-wage labor markets with high monopsony power",
+        "effect_size": "uncertain and varies by context"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled teenagers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled teenagers]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "when minimum wage is set above 60% of median wage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover and training costs]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "in firms with high labor demand elasticity"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "has",
+      "object": "negligible net effect on aggregate unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage negligible net effect on aggregate unemployment]"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "when the wage increase is moderate (e.g., 10-15%) and phased in gradually"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage to 80% of median wage",
+      "predicate": "decreases",
+      "object": "unemployment among low-skilled teenagers in high-monopsony labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage to 80% of median wage unemployment among low-skilled teenagers in high-monopsony labor markets]",
+        "[PATH:empirical] Comparison of minimum wage changes across U.S. metropolitan areas with varying degrees of monopsony power (e.g., using Herfindahl-Hirschman Index for low-wage labor markets) and their effects on teenage unemployment rates from 2010-2020 \u2014 Directly tests the hypothesis by leveraging geographic and temporal variation in minimum wage levels and monopsony concentration, using quasi-experimental methods (e.g., difference-in-differences) to isolate causal effects on low-skilled teenagers.",
+        "[PATH:theoretical] Theoretical models of monopsonistic labor markets with heterogeneous workers, such as those by Manning (2003) or Bhaskar, Manning, and To (2002), extended to include a binding minimum wage at 80% of the median \u2014 Provides a formal framework to predict when a minimum wage increase reduces unemployment in high-monopsony settings, clarifying the conditions (e.g., labor supply elasticity, wage dispersion) under which the hypothesis holds or fails.",
+        "[PATH:literature] Meta-analysis of empirical studies on minimum wage effects in monopsonistic markets, focusing on subgroups like teenagers (e.g., Card and Krueger (1995), Neumark and Wascher (2000), and recent replication studies) \u2014 Synthesizes existing evidence to assess the robustness of the hypothesized effect, identifying effect sizes, heterogeneity across contexts, and potential publication bias that could influence confidence in the claim."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States metropolitan areas with high monopsony power"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment among low-skilled teenagers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled teenagers]",
+        "[PATH:empirical] Card and Krueger (1994) minimum wage study, reanalyzed with teen-specific unemployment data from 2000-2020 \u2014 This classic natural experiment provides a quasi-experimental design to test the effect of minimum wage increases on low-skilled teenage unemployment; reanalysis with modern data can confirm or refute the hypothesis within the specified temporal and geographic scope.",
+        "[PATH:theoretical] Monopsony power measurement and minimum wage simulation models (e.g., Manning, 2003; Azar et al., 2020) \u2014 The hypothesis is explicitly scoped to markets with high monopsony power; theoretical models predict that minimum wage increases can reduce unemployment under monopsony. Simulating these models with U.S. labor market parameters from 2000-2020 would test the conditional prediction.",
+        "[PATH:literature] Meta-analysis of U.S. minimum wage studies focusing on teenage employment elasticities (e.g., Belman & Wolfson, 2014; updated to 2020) \u2014 A systematic review of empirical literature can aggregate evidence across multiple studies, identifying whether the net effect on low-skilled teenage unemployment is negative, positive, or null, and whether results vary by market concentration."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee tenure and firm-specific human capital investment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee tenure and firm-specific human capital investment]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in local labor markets (e.g., US city or state-level increases) using administrative wage records and matched employer-employee data to measure tenure and training expenditures. \u2014 Directly tests the causal effect of minimum wage changes on employee tenure and firm-specific human capital investment, especially in low-wage sectors with high monopsony power.",
+        "[PATH:theoretical] Structural labor market models incorporating monopsony and firm-specific human capital, calibrated to low-wage labor markets with high labor demand elasticity. \u2014 Provides a framework to predict how minimum wage increases interact with firm incentives to invest in training and retain workers, clarifying conditions under which the hypothesis holds.",
+        "[PATH:literature] Meta-analysis of existing empirical literature on minimum wage effects on turnover and training in low-wage industries. \u2014 Synthesizes findings across multiple studies to assess the overall direction and magnitude of effects, identifying whether heterogeneity (e.g., by market power or elasticity) explains the disputed status."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "in firms with high labor demand elasticity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover and training costs]",
+        "[PATH:empirical] Panel data analysis of U.S. state-level minimum wage increases (e.g., using Quarterly Workforce Indicators) on job tenure and employer-reported training expenditures in low-wage industries (e.g., retail, food services) during 2015-2023, controlling for inflation and labor market tightness. \u2014 Directly tests the hypothesis by leveraging variation in minimum wage policies across states and over time, focusing on the specified temporal and geographic scope, allowing identification of causal effects on turnover and training costs.",
+        "[PATH:empirical] Firm-level surveys or administrative data from advanced economies (e.g., Germany, UK) on hiring and training costs following minimum wage reforms, combined with measures of local monopsony power (e.g., Herfindahl-Hirschman Index for labor markets). \u2014 Extends the scope beyond the U.S. to similar labor market structures, and directly addresses the moderating role of monopsony power, which theory suggests could reduce turnover effects if firms absorb costs through reduced profits rather than passing them to workers.",
+        "[PATH:literature] Meta-analysis of existing studies on minimum wage and labor turnover, focusing on effect heterogeneity by inflation regime, labor market tightness, and monopsony power. \u2014 Synthesizes existing evidence to assess overall direction and magnitude, and identifies whether the disputed hypothesis holds under the specified qualifiers, providing a robust check against individual study biases."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "during periods of moderate inflation and tight labor markets",
+        "geographic": "in the United States and other advanced economies with similar labor market structures"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage reduces employee turnover and training costs in domain 'low-wage labor markets with high monopsony power']"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage increases employee turnover and training costs in domain 'low-wage labor markets with high monopsony power']"
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "aggregate unemployment in low-wage labor markets with high monopsony power",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage aggregate unemployment in low-wage labor markets with high monopsony power]",
+        "[PATH:empirical] A difference-in-differences analysis of U.S. state-level minimum wage increases (e.g., 2010-2020) focusing on counties with high concentration in retail and food services (proxies for monopsony power), measuring employment changes in low-wage sectors after moderate phased increases. \u2014 This quasi-experimental design directly tests the hypothesis by comparing low-wage labor markets with varying degrees of monopsony power, isolating the effect of moderate wage hikes on aggregate unemployment under the specified conditions.",
+        "[PATH:theoretical] A structural labor market model incorporating firm heterogeneity and monopsonistic competition, calibrated to U.S. low-wage markets, simulating the effects of a 10-15% minimum wage increase with gradual phase-in and enforcement of labor standards. \u2014 Such a model can formally derive conditions under which wage increases reduce unemployment in monopsonistic settings, providing a rigorous theoretical foundation to explain the hypothesized mechanism and identify boundary conditions.",
+        "[PATH:literature] Systematic review of recent empirical studies (2015-2025) on minimum wage and employment in low-wage sectors, specifically those that account for monopsony power and gradual implementation, drawing on meta-analyses by Card & Krueger, Cengiz et al., and Dube. \u2014 A comprehensive synthesis of existing evidence can reveal whether the hypothesized effect is consistently observed across multiple contexts and methodologies, helping to confirm or refute the conditional claim with higher confidence."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "when the wage increase is moderate (e.g., 10-15%) and phased in gradually, and when the increase is accompanied by targeted enforcement of labor standards"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage",
+      "predicate": "significantly reduces",
+      "object": "aggregate unemployment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage aggregate unemployment]",
+        "[PATH:empirical] Re-analysis of Card & Krueger (1994) and subsequent natural experiments using synthetic control methods for urban low-wage markets (e.g., Seattle, San Francisco) during 2000-2020 \u2014 Directly tests the hypothesis in the specified geographic and temporal scope, leveraging quasi-experimental variation to isolate the effect of minimum wage hikes on aggregate unemployment in high-monopsony settings.",
+        "[PATH:literature] Meta-analysis of monopsony power estimates in low-wage labor markets (e.g., Manning, 2003; recent estimates using employer concentration indices) \u2014 Establishes the scope condition of high monopsony power; if such markets are rare or weakly measured, the hypothesis may lack empirical grounding. Confirming monopsony prevalence is essential for interpreting null or positive results.",
+        "[PATH:theoretical] Search-and-matching models incorporating minimum wage and monopsony (e.g., Burdett-Mortensen framework) calibrated to US urban data 2000-2020 \u2014 Provides a causal mechanism explaining how a minimum wage increase could reduce unemployment under monopsony, generating testable predictions about wage dispersion and vacancy rates that can be compared with observed data."
+      ],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "temporal": "during periods of moderate economic growth (2000-2020)",
+        "geographic": "United States, specifically urban low-wage labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {
+        "conditions": "in firms where wage compression reduces perceived wage fairness among higher-tenured workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-wage labor markets with high monopsony power"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
