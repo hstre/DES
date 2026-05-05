@@ -384,6 +384,7 @@ def save_result(
         "stress_test":        condition.get("ehl") == 0.50,
         "exploratory_arm":    condition_name == "SH_scheduled",
         "rng_seed":           rng_seed,
+        "persona_filter":     persona_filter,
         "loop0_prompt_hash":  loop0_prompt_hash,
         "loop0_claim_hash":   loop0_claim_hash,
     }
@@ -419,6 +420,7 @@ def run_domain_p7(
     p4_depth: int | None = None,
     sh_loop0: float | None = None,
     rng_seed: int | None = None,
+    persona_filter: str | None = None,
 ) -> dict:
     # Resolve SH_scheduled condition dynamically
     resolved_condition = condition.copy()
@@ -438,8 +440,9 @@ def run_domain_p7(
 
     ehl = EpistemicHalfLife(decay_factor=ehl_factor) if ehl_factor < 1.00 else None
 
+    persona_suffix = f"_{persona_filter}" if persona_filter else ""
     seed_suffix = f"_seed{rng_seed}" if rng_seed is not None else ""
-    domain_dir = RESULTS_DIR / f"{domain_id}_{condition_name}{seed_suffix}"
+    domain_dir = RESULTS_DIR / f"{domain_id}_{condition_name}{persona_suffix}{seed_suffix}"
     domain_dir.mkdir(parents=True, exist_ok=True)
 
     # Seed Python RNG at run start; log for reproducibility audit
@@ -457,11 +460,14 @@ def run_domain_p7(
     failure_code     = None
     loop0_prompt_hash: str | None = None
     loop0_claim_hash:  str | None = None
+    _pending_novel_idx: int | None = None   # en_log index awaiting novelty_produced_next_loop
 
     print(f"\n{'='*65}")
-    print(f"  {domain_id} [{condition_name}{seed_suffix}] | en={en_type} ehl={ehl_factor}")
+    print(f"  {domain_id} [{condition_name}{persona_suffix}{seed_suffix}] | en={en_type} ehl={ehl_factor}")
     if rng_seed_actual is not None:
         print(f"  RNG seed: {rng_seed_actual}")
+    if persona_filter:
+        print(f"  Persona filter: {persona_filter} (single-persona isolation)")
     print(f"  Seed: {seed_question[:60]}")
     if condition_name == "EHL_0.50":
         print(f"  NOTE: stress test — EHL_0.50 labeled accordingly")
@@ -532,6 +538,11 @@ def run_domain_p7(
         metrics = compute_metrics(state, loop, all_prior_texts, question)
         method_trace.append(metrics["method_type"])
 
+        # Backfill novelty_produced_next_loop for the previous EN event
+        if _pending_novel_idx is not None:
+            en_log[_pending_novel_idx]["novelty_produced_next_loop"] = metrics["novel_claims"]
+            _pending_novel_idx = None
+
         dup_str  = f"{metrics['semantic_duplication_rate']:.0%}"
         novel_str = metrics['novel_claims']
         print(f"  -> dup={dup_str} novel={novel_str} entropy={metrics['entropy']:.2f} "
@@ -566,20 +577,25 @@ def run_domain_p7(
         if en_type:
             en_triggered = early_saturation_detected(loop_metrics[:-1], metrics)
             if en_triggered:
-                print(f"  [EN] early saturation detected at loop {loop} — generating {en_type} candidates")
+                print(f"  [EN] early saturation detected at loop {loop} — generating {en_type} candidates"
+                      + (f" (persona={persona_filter})" if persona_filter else ""))
                 candidates = generate_en_candidates(
-                    question, state, en_type, call_llm, k=3
+                    question, state, en_type, call_llm, k=3,
+                    persona_filter=persona_filter,
                 )
                 best = select_best_en(candidates)
                 en_event = {
-                    "loop":       loop,
-                    "trigger":    "early_saturation",
-                    "en_type":    en_type,
-                    "candidates": candidates,   # all candidates (admitted + rejected)
-                    "selected":   best,
-                    "ehl_seed":   ehl._last_seed if ehl else None,
+                    "loop":                       loop,
+                    "trigger":                    "early_saturation",
+                    "en_type":                    en_type,
+                    "persona_filter":             persona_filter,
+                    "candidates":                 candidates,
+                    "selected":                   best,
+                    "ehl_seed":                   ehl._last_seed if ehl else None,
+                    "novelty_produced_next_loop": None,  # backfilled after next loop
                 }
                 en_log.append(en_event)
+                _pending_novel_idx = len(en_log) - 1
                 if best and best.get("admitted"):
                     print(f"  [EN] admitted: {best['question'][:70]} | eni={best['eni_composite']:.3f}")
                     question = best["question"]
@@ -646,7 +662,8 @@ def run_domain_p7(
 # Batch runner + summary
 # ---------------------------------------------------------------------------
 
-def run_batch(domain_ids: list, condition_names: list, rng_seed: int | None = None):
+def run_batch(domain_ids: list, condition_names: list, rng_seed: int | None = None,
+              persona_filter: str | None = None):
     all_results = {}
 
     for domain_id in domain_ids:
@@ -669,6 +686,7 @@ def run_batch(domain_ids: list, condition_names: list, rng_seed: int | None = No
                 p4_depth=info.get("p4_depth"),
                 sh_loop0=info.get("sh_loop0"),
                 rng_seed=rng_seed,
+                persona_filter=persona_filter,
             )
             all_results[domain_id][cname] = result
             time.sleep(2)
@@ -810,6 +828,161 @@ def write_summary(all_results: dict):
 
 
 # ---------------------------------------------------------------------------
+# Persona isolation runner (exploratory)
+# ---------------------------------------------------------------------------
+
+PERSONA_KEYS = ["popper", "shannon", "darwin"]
+ISOLATION_SEEDS = [101, 202, 303]
+
+
+def run_persona_isolation(domain_id: str = "N03"):
+    """
+    Exploratory persona isolation: run domain_id × each single persona × each seed.
+    9 runs total. Results written to paper7/persona_isolation_{domain_id}.{md,json}.
+    No hypothesis confirmed — labeled exploratory throughout.
+    """
+    info = DOMAINS[domain_id]
+    condition = EXPERIMENTAL_CONDITIONS["EN_persona"]
+    all_rows = []
+
+    for persona in PERSONA_KEYS:
+        for seed in ISOLATION_SEEDS:
+            result = run_domain_p7(
+                domain_id=domain_id,
+                seed_question=info["seed"],
+                condition_name="EN_persona",
+                condition=condition,
+                p4_depth=info.get("p4_depth"),
+                sh_loop0=info.get("sh_loop0"),
+                rng_seed=seed,
+                persona_filter=persona,
+            )
+
+            # Collect EN event details
+            en_log_path = (RESULTS_DIR / f"{domain_id}_EN_persona_{persona}_seed{seed}"
+                           / "en_log.json")
+            en_events_detail = []
+            if en_log_path.exists():
+                with open(en_log_path) as f:
+                    raw_en = json.load(f)
+                for ev in raw_en:
+                    sel = ev.get("selected") or {}
+                    en_events_detail.append({
+                        "loop":                     ev.get("loop"),
+                        "eni_novelty":              sel.get("eni_novelty"),
+                        "eni_admissibility":        sel.get("eni_admissibility"),
+                        "eni_non_drift":            sel.get("eni_non_drift"),
+                        "eni_composite":            sel.get("eni_composite"),
+                        "drift":                    round(1.0 - (sel.get("eni_non_drift") or 0), 4),
+                        "admitted":                 sel.get("admitted"),
+                        "novelty_produced_next_loop": ev.get("novelty_produced_next_loop"),
+                    })
+
+            # Collect loop-0 dup from metrics
+            metrics_path = (RESULTS_DIR / f"{domain_id}_EN_persona_{persona}_seed{seed}"
+                            / "metrics.json")
+            loop0_dup = None
+            if metrics_path.exists():
+                with open(metrics_path) as f:
+                    mlist = json.load(f)
+                if mlist:
+                    loop0_dup = round(mlist[0].get("semantic_duplication_rate", 0), 4)
+
+            row = {
+                "domain":           domain_id,
+                "persona":          persona,
+                "seed":             seed,
+                "loop0_dup":        loop0_dup,
+                "loop0_claim_hash": result.get("loop0_claim_hash"),
+                "en_fired":         result.get("en_events", 0),
+                "loops":            result.get("loops_completed"),
+                "depth_lift":       result.get("depth_lift"),
+                "failure_mode":     result.get("outcome"),
+                "en_events":        en_events_detail,
+                "exploratory":      True,
+            }
+            all_rows.append(row)
+            print(f"  [{persona}/seed{seed}] loops={row['loops']} "
+                  f"depth_lift={row['depth_lift']} EN={row['en_fired']} "
+                  f"outcome={row['failure_mode']}")
+
+    _write_persona_isolation_report(domain_id, all_rows)
+    return all_rows
+
+
+def _write_persona_isolation_report(domain_id: str, rows: list):
+    out_dir = Path("paper7")
+    out_dir.mkdir(exist_ok=True)
+
+    # JSON
+    report = {
+        "label":       "EXPLORATORY — persona isolation, not a confirmed hypothesis",
+        "domain":      domain_id,
+        "personas":    PERSONA_KEYS,
+        "seeds":       ISOLATION_SEEDS,
+        "n_runs":      len(rows),
+        "rows":        rows,
+    }
+    json_path = out_dir / f"persona_isolation_{domain_id}.json"
+    with open(json_path, "w") as f:
+        json.dump(report, f, indent=2)
+
+    # Markdown
+    lines = [
+        f"# Paper 7 — Persona Isolation: {domain_id}",
+        "",
+        "**EXPLORATORY — not a confirmed hypothesis.**",
+        "Goal: determine whether Shannon's recovery in seed 101 was persona-specific or seed noise.",
+        "",
+        f"Domain: `{domain_id}` | Condition: EN_persona | Seeds: {ISOLATION_SEEDS}",
+        "",
+        "## Results Table",
+        "",
+        "| Persona | Seed | Loop-0 dup | EN fired | Loops | depth_lift | Failure mode | claim_hash |",
+        "|---------|------|------------|----------|-------|------------|--------------|------------|",
+    ]
+    for r in rows:
+        lines.append(
+            f"| {r['persona']} | {r['seed']} | {r['loop0_dup']} | {r['en_fired']} "
+            f"| {r['loops']} | {r['depth_lift']} | {r['failure_mode']} "
+            f"| `{r['loop0_claim_hash'] or '?'}` |"
+        )
+
+    lines += ["", "## EN Event Detail", ""]
+    for r in rows:
+        if r["en_events"]:
+            lines.append(f"### {r['persona']} / seed {r['seed']}")
+            lines.append("")
+            lines.append("| Loop | ENI novelty | ENI non_drift | drift | ENI composite | admitted | novelty_next |")
+            lines.append("|------|-------------|---------------|-------|---------------|----------|--------------|")
+            for ev in r["en_events"]:
+                lines.append(
+                    f"| {ev['loop']} | {ev['eni_novelty']} | {ev['eni_non_drift']} "
+                    f"| {ev['drift']} | {ev['eni_composite']} | {ev['admitted']} "
+                    f"| {ev['novelty_produced_next_loop']} |"
+                )
+            lines.append("")
+
+    lines += [
+        "## Interpretation Notes",
+        "",
+        "- Shannon (information-theoretic) reframing introduced in seed 101 achieved dup 58%→14%.",
+        "- Popper (falsificationism) introduced in seed 202 did not recover (55%→64%).",
+        "- These observations are from n=3 seeds × 3 personas = 9 runs.",
+        "  Insufficient to confirm persona ranking. Further replication required.",
+        "- `novelty_produced_next_loop` measures novel claims in the loop immediately",
+        "  following EN injection — not total depth improvement.",
+    ]
+
+    md_path = out_dir / f"persona_isolation_{domain_id}.md"
+    with open(md_path, "w") as f:
+        f.write("\n".join(lines))
+
+    print(f"\nPersona isolation report: {json_path}")
+    print(f"Markdown:                 {md_path}")
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -823,9 +996,20 @@ def main():
     parser.add_argument("--conditions", nargs="+", help="Multiple condition names")
     parser.add_argument("--seed", type=int, default=None,
                         help="RNG seed for reproducibility audit (e.g. 101, 202, 303)")
+    parser.add_argument("--persona", type=str, default=None,
+                        choices=PERSONA_KEYS,
+                        help="Single-persona filter for EN_persona condition "
+                             "(popper/shannon/darwin). Isolation use only.")
+    parser.add_argument("--persona-isolation", action="store_true",
+                        help="Run full persona isolation: N03 × 3 personas × 3 seeds")
     args = parser.parse_args()
 
     _init_clients()
+
+    if args.persona_isolation:
+        domain = args.domain or "N03"
+        run_persona_isolation(domain_id=domain)
+        return
 
     if args.all:
         domain_ids    = list(DOMAINS.keys())
@@ -835,7 +1019,8 @@ def main():
         condition_names = args.conditions or ([args.condition] if args.condition
                                               else ["P4_baseline"])
 
-    run_batch(domain_ids, condition_names, rng_seed=args.seed)
+    run_batch(domain_ids, condition_names, rng_seed=args.seed,
+              persona_filter=args.persona)
 
 
 if __name__ == "__main__":

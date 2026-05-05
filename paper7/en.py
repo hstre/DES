@@ -152,18 +152,24 @@ def generate_en_candidates(
     en_type: str,
     call_llm_fn,
     k: int = 3,
+    persona_filter: str | None = None,
 ) -> list[dict]:
     """
     Generate k EN candidates of the specified type.
     call_llm_fn(prompt, temperature=0.7) -> str
     Returns list of dicts with question, en_type, ENI scores, and all metadata.
     All candidates logged (admitted AND rejected).
+    persona_filter: if set, restricts persona en_type to a single persona key
+                    ("popper", "shannon", "darwin"). Ignored for other en_types.
     """
     seed_q = state.get("seed_question", question)
     results = []
 
     if en_type == "persona":
-        for name, label, tmpl in PERSONA_PROMPTS[:k]:
+        prompts = PERSONA_PROMPTS[:k]
+        if persona_filter:
+            prompts = [(n, l, t) for n, l, t in PERSONA_PROMPTS if n == persona_filter]
+        for name, label, tmpl in prompts:
             prompt = tmpl.format(question=question)
             q = call_llm_fn(prompt)
             eni = compute_eni(q, state, seed_q)
