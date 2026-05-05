@@ -1,0 +1,501 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "decreases short-term wage growth for native workers in non-tradable service sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "decreases short-term wage growth for native workers in non-tradable service sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]"
+      ],
+      "scope": {
+        "domain": "labor economics, regional wage dynamics"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1-3 years of immigration shock)",
+        "geographic": "regions with low R&D intensity (e.g., non-innovation hubs)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "increases demand for non-tradable services, thereby raising short-term wage growth for native workers in those sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]"
+      ],
+      "scope": {
+        "domain": "consumer demand, local service spillovers"
+      },
+      "qualifier": {
+        "temporal": "short-term, within 1\u20133 years of immigration inflow",
+        "geographic": "regions with low R&D intensity, typically non-metropolitan or peripheral areas"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "has negligible short-term effect on wage growth for native workers in non-tradable service sectors when local labor markets are already tight",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]"
+      ],
+      "scope": {
+        "domain": "labor market tightness, immigration timing"
+      },
+      "qualifier": {
+        "condition": "local unemployment rate below 3%"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "increases employment churn and reduces average tenure for native workers in non-tradable service sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]",
+        "[PATH:empirical] Administrative matched employer-employee panel data (e.g., LEHD in the U.S. or IAB in Germany) linked to regional R&D intensity measures \u2014 Such data allow direct estimation of job tenure, churn rates, and employment transitions for native workers in non-tradable service sectors, before and after high-skilled immigration shocks, with regional variation in R&D intensity to test the hypothesized conditional effect.",
+        "[PATH:literature] Survey of regional labor market adjustment mechanisms (e.g., job displacement, occupational mobility) from the economics literature on immigration and local labor markets \u2014 Existing studies (e.g., Peri & Sparber, Dustmann et al.) suggest high-skilled immigration may reallocate native workers toward communication-intensive or service roles, but rarely examine churn and tenure in non-tradable sectors specifically in low-R&D regions. A systematic review could identify whether the hypothesized mechanism is supported or contradicted by prior evidence.",
+        "[PATH:theoretical] Computable general equilibrium (CGE) or search-and-matching model calibrated to a low-R&D regional economy \u2014 A formal model can isolate the causal channels: if high-skilled immigrants increase local demand for non-tradable services, native workers may experience higher turnover due to job competition or skill mismatch. Simulating the model under different R&D intensities can provide theoretical confirmation or refutation of the hypothesized effect."
+      ],
+      "scope": {
+        "domain": "labor economics, regional wage dynamics, job stability"
+      },
+      "qualifier": {
+        "temporal": "medium-term (within 2-4 years of immigration shock)",
+        "geographic": "regions with low R&D intensity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "increases short-term wage growth for native workers in non-tradable service sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]",
+        "[PATH:empirical] Administrative wage and employment panel data (e.g., LEHD or SIPP) for U.S. regions with low R&D intensity, combined with H-1B visa allocation data by MSA, to estimate short-term wage effects on native workers in non-tradable services (e.g., retail, hospitality) using a shift-share instrumental variables approach. \u2014 Directly tests the causal claim by exploiting exogenous variation in high-skilled immigration across low-R&D regions, focusing on the non-tradable sector where local labor demand effects are most pronounced in the short run.",
+        "[PATH:literature] Literature review of studies on immigration spillovers to non-tradable sectors (e.g., Peri & Sparber, 2009; Dustmann et al., 2013) with a meta-analysis focusing on regional R&D intensity as a moderating factor. \u2014 Synthesizes existing evidence to assess whether the predicted positive wage effect is robustly observed in low-R&D contexts, and identifies gaps in temporal and geographic scope.",
+        "[PATH:theoretical] Theoretical model of local labor demand complementarities between high-skilled immigrants and native workers in non-tradable services, calibrated to low-R&D regions using input-output tables and regional skill distributions. \u2014 Provides a causal mechanism (e.g., increased local demand for services due to higher immigrant incomes) and generates testable predictions about wage dynamics within 1\u20133 years, clarifying the conditions under which the hypothesis holds."
+      ],
+      "scope": {
+        "domain": "labor economics, regional wage dynamics"
+      },
+      "qualifier": {
+        "temporal": "short-term (1\u20133 years)",
+        "geographic": "regions with low R&D intensity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "suppresses long-term wage growth for native workers in non-tradable service sectors by crowding out local investment in productivity-enhancing capital",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]",
+        "[PATH:empirical] Panel data analysis of U.S. metropolitan areas (e.g., from the American Community Survey and Bureau of Economic Analysis) linking high-skilled immigration flows to changes in non-tradable service sector wages and local capital investment in low R&D intensity regions \u2014 Directly tests the causal chain from immigration to wage suppression via investment crowding out, using variation across regions and time to isolate the effect in the specified geographic and temporal scope.",
+        "[PATH:theoretical] Theoretical modeling of regional capital allocation with heterogeneous firms and skill-biased immigration, extending frameworks like Acemoglu (2002) or Peri (2012) to incorporate endogenous productivity-enhancing capital in non-tradable sectors \u2014 Provides a formal mechanism to assess whether high-skilled immigration diverts investment away from capital that complements low-skilled native workers, especially under low R&D intensity and limited capital mobility.",
+        "[PATH:literature] Literature review of studies on immigration, local labor markets, and capital deepening (e.g., work by Borjas, Card, or Dustmann) with a focus on regional R&D intensity and non-tradable sectors \u2014 Synthesizes existing empirical and theoretical findings to identify whether the hypothesized suppression effect has been observed or contradicted in similar contexts, and to highlight gaps in current evidence."
+      ],
+      "scope": {
+        "domain": "capital allocation, regional investment dynamics"
+      },
+      "qualifier": {
+        "temporal": "during periods of low private R&D investment and limited capital mobility",
+        "geographic": "in regions with below-median R&D intensity relative to national averages"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "depresses wages due to increased competition in non-tradable service sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]",
+        "[PATH:empirical] Panel data analysis of local labor markets in low-R&D U.S. metropolitan areas (e.g., using Quarterly Workforce Indicators or LEHD) comparing wage changes in non-tradable service sectors before and after high-skilled H-1B inflows. \u2014 Directly tests the causal effect of high-skilled immigration on wages in non-tradable service sectors within regions characterized by low R&D intensity, controlling for local demand shifts.",
+        "[PATH:empirical] Cross-country study of OECD regions with low business R&D expenditure (e.g., Eurostat regional R&D data) examining wage dynamics in service occupations (e.g., retail, hospitality) relative to high-skilled immigrant shares. \u2014 Provides geographic variation across developed economies to isolate the effect in low-R&D contexts, addressing the qualifier's scope and temporal condition of limited absorption capacity.",
+        "[PATH:theoretical] Theoretical model of segmented labor markets with skill-biased immigration and non-tradable sector constraints (e.g., extension of Borjas (2003) or Peri & Sparber (2009) frameworks) calibrated to low-R&D regions. \u2014 Clarifies the mechanism by which competition in non-tradable services depresses wages when R&D intensity is low, and identifies conditions under which the effect may be mitigated or amplified."
+      ],
+      "scope": {
+        "domain": "labor market dynamics, wage competition"
+      },
+      "qualifier": {
+        "temporal": "during periods of low R&D investment and limited labor market absorption capacity",
+        "geographic": "regions with low R&D intensity, typically in developed economies with segmented service sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "increases demand for non-tradable services, thereby raising short-term wage growth for native workers in those sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms high-skilled immigration into regions with low R&D intensity increases demand for non-tradable services, thereby raising short-term wage growth for native workers in those sectors native workers in non-tradable service sectors in domain 'consumer demand, local service spillovers']"
+      ],
+      "scope": {
+        "domain": "consumer demand, local service spillovers"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1-3 years post-immigration)",
+        "geographic": "regions with low R&D intensity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "does not increase demand for non-tradable services sufficiently to raise short-term wage growth for native workers in those sectors, due to labor market substitution or limited local spending multipliers",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms high-skilled immigration into regions with low R&D intensity does not increase demand for non-tradable services sufficiently to raise short-term wage growth for native workers in those sectors, due to labor market substitution or limited local spending multipliers native workers in non-tradable service sectors in domain 'consumer demand, local service spillovers']"
+      ],
+      "scope": {
+        "domain": "consumer demand, local service spillovers"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1\u20133 years of immigration shock)",
+        "geographic": "regions with low R&D intensity (e.g., less than 1% of GDP on R&D)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "increases wage dispersion among native workers in non-tradable service sectors within two years if local labor markets are tight and the region has a high share of low-wage service employers",
+      "object": "native workers in non-tradable service sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]",
+        "[PATH:empirical] Longitudinal wage records from matched employer-employee datasets (e.g., LEHD or SIPP) for U.S. metropolitan areas with low R&D intensity, focusing on non-tradable service sectors (e.g., retail, hospitality) during periods of local unemployment below 3% and service employment share above 40%. \u2014 Directly tests the causal claim by comparing wage dispersion changes within two years of high-skilled immigration inflows, controlling for local labor market tightness and sector composition.",
+        "[PATH:theoretical] Theoretical models of labor market competition with heterogeneous firms and skill complementarity (e.g., search-and-matching models incorporating high-skilled immigration's effect on local demand for low-wage services). \u2014 Provides a formal mechanism to understand whether high-skilled immigrants increase wage dispersion by boosting demand for non-tradable services while also competing with native workers in specific sub-sectors, especially under tight labor markets.",
+        "[PATH:literature] Literature review of empirical studies on immigration and wage dispersion, particularly those examining sectoral spillovers (e.g., Card (2009), Peri & Sparber (2009), and recent work on local labor demand shocks). \u2014 Synthesizes existing evidence on the conditional effects of immigration on native wages, highlighting whether tight labor markets and low-R&D contexts amplify dispersion in non-tradable services."
+      ],
+      "scope": {
+        "domain": "wage dispersion, sectoral composition, immigration timing"
+      },
+      "qualifier": {
+        "condition": "local unemployment rate below 3% and service sector share of employment above 40%"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "leads to significant short-term wage growth for native workers in non-tradable service sectors by increasing overall economic activity and demand in local markets",
+      "object": "native workers in non-tradable service sectors",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration into regions with low R&D intensity native workers in non-tradable service sectors]"
+      ],
+      "scope": {
+        "domain": "economic impact of high-skilled immigration"
+      },
+      "qualifier": {
+        "temporal": "short-term (1-3 years after immigration influx)",
+        "geographic": "regions with low R&D intensity (e.g., non-metropolitan or service-oriented local economies)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "depresses short-term wage growth for native workers in non-tradable service sectors due to increased competition for housing and local infrastructure congestion",
+      "object": "native workers in non-tradable service sectors",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "housing market, local infrastructure, cost-of-living effects"
+      },
+      "qualifier": {
+        "temporal": "short-term, within 1\u20133 years of immigration inflow",
+        "geographic": "regions with low R&D intensity, typically non-metropolitan or peripheral areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "high-skilled immigration into regions with low R&D intensity",
+      "predicate": "decreases demand for non-tradable services, thereby lowering short-term wage growth for native workers in those sectors",
+      "object": "native workers in non-tradable service sectors",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "consumer demand, local service spillovers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
