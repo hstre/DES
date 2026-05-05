@@ -25,4 +25,4 @@ SH* = 0.0876 (locked from Paper 6)
 
 | Domain | Condition | P4 depth | P7 depth | Lift | EN admitted | EHL | Note |
 |--------|-----------|----------|----------|------|-------------|-----|------|
-| N03 | EN_persona | ? | 3 | -1 | 1/1 | 1.0 |  |
+| N03 | EN_persona | ? | 1 | -3 | 0/0 | 1.0 |  |
