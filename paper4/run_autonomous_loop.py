@@ -532,6 +532,7 @@ def write_summary(all_outcomes: list):
 def run_all():
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
+    sys.path.insert(0, str(Path(__file__).parent.parent))
     import des as des_module_local
 
     ds4_client, or_client = _make_clients()
