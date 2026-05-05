@@ -1,0 +1,500 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss in adults with obesity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss in adults with obesity]"
+      ],
+      "scope": {
+        "domain": "clinical nutrition"
+      },
+      "qualifier": {
+        "population": "obese adults"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "intermittent fasting",
+      "predicate": "may hinder",
+      "object": "long-term weight loss due to metabolic adaptation",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss due to metabolic adaptation]"
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "mechanism": "compensatory energy conservation"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "short-term weight loss but not sustained adherence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting short-term weight loss but not sustained adherence]"
+      ],
+      "scope": {
+        "domain": "behavioral psychology"
+      },
+      "qualifier": {
+        "timeframe": ">12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "intermittent fasting combined with resistance training",
+      "predicate": "is more effective for",
+      "object": "long-term weight loss and fat-free mass preservation in adults with obesity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting combined with resistance training long-term weight loss and fat-free mass preservation in adults with obesity]",
+        "[PATH:empirical] A randomized controlled trial comparing intermittent fasting (e.g., 16:8 or alternate-day fasting) plus resistance training versus continuous calorie restriction plus resistance training over 12+ months in obese adults, with primary outcomes of weight loss and fat-free mass via DXA or MRI. \u2014 Directly tests the hypothesis with the target population and intervention, controlling for exercise type and duration; long-term follow-up addresses sustainability of weight loss and preservation of lean mass.",
+        "[PATH:literature] Systematic review and meta-analysis of existing RCTs on intermittent fasting combined with resistance training for body composition changes in overweight/obese adults, focusing on studies with \u22656-month follow-up and dual-energy X-ray absorptiometry (DXA) or bioelectrical impedance analysis (BIA) measurements. \u2014 Synthesizes available evidence to assess consistency across studies and identify effect size modifiers (e.g., fasting protocol, training volume, protein intake), helping to confirm or refute the hypothesis with higher statistical power.",
+        "[PATH:theoretical] Mechanistic study examining the interaction of time-restricted feeding and resistance exercise on muscle protein synthesis, anabolic signaling (mTOR pathway), and metabolic adaptations (e.g., insulin sensitivity, fat oxidation) in obese adults over a 6-month period. \u2014 Provides biological plausibility by elucidating whether intermittent fasting impairs or enhances the anabolic response to resistance training, which is critical for fat-free mass preservation during weight loss."
+      ],
+      "scope": {
+        "domain": "clinical nutrition"
+      },
+      "qualifier": {
+        "population": "obese adults"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "intermittent fasting",
+      "predicate": "is ineffective for",
+      "object": "long-term weight loss in adults with obesity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss in adults with obesity]",
+        "[PATH:empirical] Long-term randomized controlled trials (RCTs) comparing intermittent fasting (e.g., 5:2 or time-restricted eating) with continuous calorie restriction over \u226512 months in adults with obesity, with outcomes including weight maintenance and metabolic markers. \u2014 Direct empirical evidence from well-designed RCTs with extended follow-up is needed to assess whether intermittent fasting leads to sustained weight loss beyond the initial intervention period, addressing the hypothesis's temporal scope.",
+        "[PATH:literature] Systematic review and meta-analysis of prospective cohort studies tracking adherence and weight trajectories in adults with obesity practicing intermittent fasting for \u22652 years. \u2014 A comprehensive synthesis of observational data can reveal patterns of long-term adherence, weight regain, and potential compensatory behaviors, which are critical for evaluating effectiveness in real-world settings across North America and Europe.",
+        "[PATH:theoretical] Mechanistic studies investigating physiological adaptations to intermittent fasting (e.g., changes in resting metabolic rate, hormonal regulation of appetite, and gut microbiome composition) in adults with obesity over periods >6 months. \u2014 Understanding the biological mechanisms underlying potential long-term weight loss or lack thereof can help explain why intermittent fasting may be ineffective, providing a theoretical basis to confirm or refute the hypothesis beyond empirical associations."
+      ],
+      "scope": {
+        "domain": "clinical nutrition"
+      },
+      "qualifier": {
+        "temporal": "studies up to 2023",
+        "geographic": "North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "intermittent fasting",
+      "predicate": "selectively impairs",
+      "object": "adaptive thermogenesis in metabolically flexible individuals",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting adaptive thermogenesis in metabolically flexible individuals]",
+        "[PATH:empirical] Controlled clinical trial measuring 24h energy expenditure via whole-room calorimetry in metabolically flexible individuals undergoing time-restricted feeding vs. control diet, with simultaneous monitoring of circadian markers (e.g., melatonin, core body temperature) and brown adipose tissue activity via 18F-FDG PET/CT after cold exposure. \u2014 Directly tests the core claim by quantifying adaptive thermogenesis and BAT activation under controlled circadian alignment, providing causal evidence for the proposed mechanism.",
+        "[PATH:literature] Meta-analysis of existing randomized controlled trials on intermittent fasting that report changes in resting metabolic rate, diet-induced thermogenesis, and cold-induced thermogenesis, stratified by baseline metabolic flexibility (e.g., insulin sensitivity, respiratory quotient variability). \u2014 Aggregates existing data to assess whether the predicted selective impairment is consistently observed across studies, and whether metabolic flexibility modifies the effect.",
+        "[PATH:empirical] Animal model study using metabolically flexible mice (e.g., high-capacity runner rats or mice with high mitochondrial efficiency) fed on a time-restricted schedule, measuring BAT thermogenic gene expression (UCP1, PGC-1\u03b1), mitochondrial respiration, and whole-body energy expenditure under thermoneutral and cold conditions. \u2014 Allows controlled manipulation of circadian feeding patterns and direct measurement of BAT function and adaptive thermogenesis, isolating the mechanism from human confounders."
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "mechanism": "circadian misalignment of energy intake reducing brown adipose tissue activation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "intermittent fasting",
+      "predicate": "can enhance",
+      "object": "long-term weight loss through improved metabolic flexibility",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss through improved metabolic flexibility]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8 or 5:2) with continuous caloric restriction over 12 months, measuring weight change and metabolic flexibility via respiratory quotient or substrate oxidation during exercise \u2014 Directly tests the hypothesis by comparing long-term weight loss outcomes and metabolic flexibility markers between intermittent fasting and standard caloric restriction, controlling for energy intake.",
+        "[PATH:empirical] Mechanistic study assessing changes in mitochondrial efficiency, insulin sensitivity, and fuel switching (e.g., via stable isotope tracers) in human subjects undergoing intermittent fasting for 6 months \u2014 Provides causal evidence for the proposed mechanism\u2014improved metabolic flexibility\u2014by measuring cellular and systemic adaptations that mediate weight loss, clarifying whether the effect is independent of caloric restriction.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies on intermittent fasting and weight maintenance beyond 12 months, including subgroup analyses by dietary adherence and baseline metabolic health \u2014 Synthesizes existing evidence to assess the durability of weight loss and the role of metabolic flexibility across populations, addressing the disputed status and temporal scope of the hypothesis."
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "temporal": "over periods of 6 to 12 months",
+        "geographic": "global applicability, primarily studied in Western populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "intermittent fasting",
+      "predicate": "leads to metabolic adaptation that reduces resting energy expenditure",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting leads to metabolic adaptation that reduces resting energy expenditure long-term weight loss in domain 'metabolic physiology']"
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "temporal": "after 8 weeks of consistent intermittent fasting",
+        "geographic": "global (primarily studied in Western populations)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting",
+      "predicate": "does not cause clinically significant metabolic adaptation",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting does not cause clinically significant metabolic adaptation long-term weight loss in domain 'metabolic physiology']"
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "temporal": "studies up to 2023",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "intermittent fasting with daily eating window >8 hours",
+      "predicate": "predicts",
+      "object": "greater sustained adherence at 12 months compared to shorter eating windows",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with daily eating window >8 hours greater sustained adherence at 12 months compared to shorter eating windows]",
+        "[PATH:empirical] Long-term randomized controlled trial (RCT) comparing adherence rates at 12 months between >8-hour eating window intermittent fasting and shorter window (e.g., 4-6 hour) protocols \u2014 Direct empirical comparison of sustained adherence over the specified timeframe can confirm or refute the hypothesis by measuring dropout rates and self-reported compliance.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral adherence in time-restricted feeding studies, focusing on eating window duration as a moderator \u2014 Synthesizing existing evidence across multiple studies can reveal whether longer windows consistently predict better long-term adherence, controlling for confounds like diet composition and participant characteristics.",
+        "[PATH:theoretical] Theoretical modeling of habit formation and behavioral economics (e.g., effort-reward trade-offs, cognitive load) applied to intermittent fasting schedules \u2014 A theoretical framework can explain why >8-hour windows might reduce psychological burden and enhance adherence, providing testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "behavioral psychology"
+      },
+      "qualifier": {
+        "timeframe": "12 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "both short-term and long-term weight loss",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting both short-term and long-term weight loss]",
+        "[PATH:empirical] Long-term randomized controlled trials comparing intermittent fasting (e.g., 5:2 or time-restricted eating) to continuous calorie restriction over \u226512 months, with weight maintenance follow-up. \u2014 Directly tests both short-term (\u22646 months) and long-term (\u226512 months) efficacy, addressing the disputed temporal scope of the hypothesis.",
+        "[PATH:literature] Meta-analysis of observational studies and RCTs examining adherence rates, dropout rates, and metabolic adaptations (e.g., resting metabolic rate changes) in intermittent fasting vs. continuous dieting. \u2014 Synthesizes existing evidence to assess whether weight loss is sustained or offset by compensatory mechanisms, clarifying long-term effectiveness.",
+        "[PATH:theoretical] Theoretical models of behavioral psychology (e.g., self-regulation theory, habit formation) applied to intermittent fasting vs. daily restriction, predicting adherence patterns and weight regain. \u2014 Provides mechanistic accounts for why intermittent fasting might differ in long-term weight loss outcomes, guiding empirical tests and interpretation of conflicting results."
+      ],
+      "scope": {
+        "domain": "behavioral psychology"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "intermittent fasting",
+      "predicate": "impairs",
+      "object": "adaptive thermogenesis in skeletal muscle, accelerating metabolic slowdown beyond caloric restriction alone",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "mechanism": "downregulation of mitochondrial uncoupling proteins via prolonged fasting windows"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "intermittent fasting",
+      "predicate": "may enhance",
+      "object": "long-term weight loss by improving metabolic flexibility",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
