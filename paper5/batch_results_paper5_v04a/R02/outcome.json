@@ -1,0 +1,97 @@
+{
+  "domain_id": "R02",
+  "seed_question": "Is remote work more productive than office work?",
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 2,
+  "failure_code": "SEMANTIC_DUPLICATION",
+  "final_entropy": 0.9090909090909091,
+  "novel_at_loop_20": null,
+  "method_trace": [
+    "empirical_evidence",
+    "empirical_evidence"
+  ],
+  "frame_trace": [
+    "effectiveness",
+    "comparison"
+  ],
+  "shape_trace": [
+    "is_x_effective",
+    "how_does_x_work"
+  ],
+  "metric_trace": [
+    "objective",
+    "actual"
+  ],
+  "method_diversity_score": 0.5,
+  "frame_diversity_score": 1.0,
+  "preventive_trigger_rate": 0.0,
+  "ptr_breakdown": {
+    "frame_repeat": 0,
+    "metric_repeat": 0,
+    "shape_repeat": 0,
+    "method_repeat": 0,
+    "fallback": 1,
+    "total": 1
+  },
+  "question_history": [
+    "Is remote work more productive than office work?",
+    "How do different metrics for measuring productivity in remote work environments compare to those used in traditional office settings, and what impact might these differences have on the perceived productivity of remote work?"
+  ],
+  "loop_metrics": [
+    {
+      "loop": 0,
+      "method_type": "empirical_evidence",
+      "frame_type": "effectiveness",
+      "question_shape": "is_x_effective",
+      "outcome_metric": "objective",
+      "total_claims": 11,
+      "open_claims": 0,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 6,
+      "semantic_duplication_rate": 0.5454545454545454,
+      "entropy": 0.7272727272727273,
+      "novel_claims": 11,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 22.0
+    },
+    {
+      "loop": 1,
+      "method_type": "empirical_evidence",
+      "frame_type": "comparison",
+      "question_shape": "how_does_x_work",
+      "outcome_metric": "actual",
+      "total_claims": 11,
+      "open_claims": 0,
+      "sealed_claims": 11,
+      "disputed_claims": 2,
+      "redundant_claims": 8,
+      "semantic_duplication_rate": 0.7272727272727273,
+      "entropy": 0.9090909090909091,
+      "novel_claims": 10,
+      "branch_growth": 2,
+      "contradictions_resolved": 2,
+      "total_contradictions": 1,
+      "question_utility": 22.0
+    }
+  ],
+  "perturbation_log": [
+    {
+      "loop": 0,
+      "trigger": "content_redundancy>0.40",
+      "trigger_layer": "fallback",
+      "type": "measurement_shift",
+      "generated_question": "How do different metrics for measuring productivity in remote work environments compare to those used in traditional office settings, and what impact might these differences have on the perceived productivity of remote work?",
+      "inferred_frame_type": "comparison",
+      "inferred_method_type": "empirical_evidence",
+      "admitted": true,
+      "rejection_reason": null,
+      "novelty_produced_next_loop": 10
+    }
+  ],
+  "t10_count": 0,
+  "t10_activations": [],
+  "saturated_paths": []
+}
