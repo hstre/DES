@@ -1,0 +1,500 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "non-economic indicators of wellbeing",
+      "predicate": "exhibit asymmetric sensitivity to",
+      "object": "GDP fluctuations across different demographic groups",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: non-economic indicators of wellbeing GDP fluctuations across different demographic groups]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "self-reported life satisfaction",
+      "predicate": "declines more sharply during GDP contractions than it improves during expansions among",
+      "object": "lower-income demographic groups",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: self-reported life satisfaction lower-income demographic groups]"
+      ],
+      "scope": {
+        "domain": "subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "short-term fluctuations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "mental health indicators",
+      "predicate": "show symmetrical responses to",
+      "object": "GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: mental health indicators GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status]"
+      ],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {
+        "condition": "when controlling for baseline socioeconomic status"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "community trust and social cohesion metrics",
+      "predicate": "exhibit asymmetric sensitivity to",
+      "object": "GDP fluctuations, but only in regions with high income inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: community trust and social cohesion metrics GDP fluctuations, but only in regions with high income inequality]"
+      ],
+      "scope": {
+        "domain": "social capital"
+      },
+      "qualifier": {
+        "geographic": "regions with high income inequality"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "self-reported life satisfaction among lower-income demographic groups",
+      "predicate": "declines more sharply during GDP contractions than it improves during expansions, and this asymmetry is amplified when household debt-to-income ratios exceed 40%",
+      "object": "lower-income demographic groups with high household debt",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: self-reported life satisfaction among lower-income demographic groups lower-income demographic groups with high household debt]",
+        "[PATH:empirical] Panel data from the German Socio-Economic Panel (SOEP) or the UK Household Longitudinal Study (UKHLS), stratified by income quintiles and household debt-to-income ratios \u2014 These longitudinal surveys track self-reported life satisfaction alongside detailed financial data across business cycles. Analyzing within-person changes during GDP contractions and expansions, and comparing subgroups with debt-to-income ratios above and below 40%, can directly test the asymmetric effect and the proposed amplification threshold.",
+        "[PATH:empirical] Cross-country analysis using the World Values Survey or Gallup World Poll merged with macroeconomic data (GDP growth, household debt aggregates) from the IMF or OECD \u2014 A multi-country panel can examine whether the asymmetry in life satisfaction responses to GDP fluctuations is more pronounced in nations or time periods where lower-income households carry higher debt burdens. This would test the generalizability of the hypothesis beyond single-country contexts.",
+        "[PATH:theoretical] Behavioral economics literature on loss aversion and debt-induced stress (e.g., Kahneman & Tversky's prospect theory, or recent work by De Neve et al. on wellbeing and economic shocks) \u2014 Reviewing and extending theoretical frameworks that predict asymmetric emotional responses to gains versus losses, especially under financial constraint, can provide mechanistic grounding. This would help assess whether the 40% debt-to-income threshold is a plausible inflection point for heightened loss sensitivity, and suggest additional moderators to test empirically."
+      ],
+      "scope": {
+        "domain": "subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "short-term fluctuations",
+        "condition": "household debt-to-income ratio > 0.4"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "self-reported life satisfaction",
+      "predicate": "improves more sharply during GDP expansions than it declines during contractions among",
+      "object": "lower-income demographic groups",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: self-reported life satisfaction lower-income demographic groups]",
+        "[PATH:empirical] Panel data from the Gallup World Poll or European Social Survey (ESS) covering post-2000 economic cycles, analyzing self-reported life satisfaction by income quintile against GDP growth rates. \u2014 Directly tests the asymmetry hypothesis by comparing within-group changes in life satisfaction during expansions and contractions, controlling for individual fixed effects and macroeconomic shocks.",
+        "[PATH:literature] Re-analysis of Kahneman and Deaton's (2010) or similar studies on emotional well-being and income, stratified by lower-income groups and linked to national GDP fluctuations. \u2014 Existing literature often finds that life satisfaction is more sensitive to income losses than gains (loss aversion), but this may differ by income level. A focused meta-analysis or replication using post-2000 data can confirm or refute the hypothesis.",
+        "[PATH:theoretical] Theoretical models of reference-dependent preferences (e.g., prospect theory) applied to subjective well-being, with calibration using microdata from developed economies. \u2014 Provides a framework to predict asymmetric responses and test whether lower-income groups exhibit steeper gains during expansions due to greater marginal utility of consumption, or sharper declines due to heightened loss aversion."
+      ],
+      "scope": {
+        "domain": "subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "during economic cycles in the post-2000 period",
+        "geographic": "in developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "mental health indicators",
+      "predicate": "show asymmetric responses to",
+      "object": "GDP fluctuations across different age cohorts even when controlling for baseline socioeconomic status",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: mental health indicators GDP fluctuations across different age cohorts even when controlling for baseline socioeconomic status]",
+        "[PATH:empirical] Longitudinal microdata from the Panel Study of Income Dynamics (PSID) linked to mental health modules (2000-2020), stratified by age cohort and controlling for baseline SES \u2014 Provides individual-level repeated measures to directly test whether mental health indicators (e.g., distress, well-being) respond asymmetrically to GDP changes across age groups while holding socioeconomic status constant.",
+        "[PATH:literature] Meta-analysis of existing studies on the macroeconomic determinants of mental health, with subgroup analyses by age cohort and adjustment for SES \u2014 Synthesizes published evidence to identify consistent patterns of age-related asymmetry in the mental health\u2013GDP relationship, and assesses whether controlling for SES reduces or eliminates cohort differences.",
+        "[PATH:theoretical] Theoretical model of age-differentiated psychological resilience to economic shocks, calibrated with US data (2000-2020) \u2014 Formalizes mechanisms (e.g., labor market attachment, social support, wealth effects) that predict asymmetric responses by age; simulation results can be compared to empirical patterns to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "mental health indicators",
+      "predicate": "show asymmetrical responses to",
+      "object": "GDP fluctuations across different demographic groups regardless of baseline socioeconomic status",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: mental health indicators GDP fluctuations across different demographic groups regardless of baseline socioeconomic status]",
+        "[PATH:empirical] Panel data from the National Survey on Drug Use and Health (NSDUH) linked to county-level GDP growth rates, stratified by race/ethnicity, age, and gender, controlling for baseline income and education. \u2014 This allows direct testing of whether mental health indicators (e.g., distress, substance use) respond asymmetrically to GDP fluctuations across demographics, while holding socioeconomic status constant, thereby isolating the hypothesized effect.",
+        "[PATH:empirical] Re-analysis of the Behavioral Risk Factor Surveillance System (BRFSS) mental health module merged with quarterly state GDP data, using interaction models for demographic subgroups. \u2014 Provides a large, representative sample over the 2000-2023 period to detect differential sensitivity (e.g., stronger negative effects during recessions for marginalized groups) and assess robustness across geographic units.",
+        "[PATH:literature] Systematic review of economic epidemiology literature on 'health shocks' and 'procyclical mental health' with a focus on subgroup analyses. \u2014 Synthesizes existing evidence on whether prior studies have found asymmetric responses by demographics when controlling for baseline SES, identifying gaps and methodological issues (e.g., endogeneity of GDP) that could explain the disputed status."
+      ],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "mental health indicators",
+      "predicate": "show symmetrical responses to",
+      "object": "GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms mental health indicators show symmetrical responses to GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status in domain 'public health epidemiology']"
+      ],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "mental health indicators",
+      "predicate": "do not show symmetrical responses to",
+      "object": "GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms mental health indicators do not show symmetrical responses to GDP fluctuations across all demographic groups when controlling for baseline socioeconomic status in domain 'public health epidemiology']"
+      ],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "community trust and social cohesion metrics",
+      "predicate": "exhibit a negative asymmetric sensitivity to",
+      "object": "GDP downturns, but not to upturns, in regions with high income inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: community trust and social cohesion metrics GDP downturns, but not to upturns, in regions with high income inequality]",
+        "[PATH:empirical] Longitudinal panel data from OECD countries (2000\u20132020) on trust indices (e.g., World Values Survey, European Social Survey) linked to GDP growth rates and Gini coefficients \u2014 This would allow direct testing of the asymmetric sensitivity hypothesis by comparing changes in trust during GDP downturns vs. upturns, stratified by high-inequality regions, controlling for fixed effects.",
+        "[PATH:empirical] Experimental or quasi-experimental studies on local economic shocks (e.g., plant closures, natural experiments) measuring subsequent changes in social cohesion metrics in high-inequality vs. low-inequality areas \u2014 Such designs can isolate causal effects of negative economic shocks on trust and cohesion, testing if the response is asymmetric and moderated by inequality levels.",
+        "[PATH:theoretical] Theoretical models of loss aversion and social capital (e.g., behavioral economics frameworks incorporating prospect theory into community trust dynamics) \u2014 This would provide a mechanism explaining why trust might be more sensitive to losses (downturns) than gains (upturns) under inequality, and generate testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "social capital"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020 post-financial crisis period",
+        "geographic": "OECD countries with Gini coefficient > 0.4"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "community trust and social cohesion metrics",
+      "predicate": "are largely unaffected by",
+      "object": "GDP fluctuations, even in regions with high income inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: community trust and social cohesion metrics GDP fluctuations, even in regions with high income inequality]",
+        "[PATH:empirical] Longitudinal analysis of the European Social Survey (ESS) trust indicators merged with OECD GDP and Gini coefficient data (2000-2020) \u2014 Directly tests whether within-country changes in GDP correlate with changes in generalized trust and social cohesion indices, stratified by income inequality levels, to isolate the hypothesized null effect.",
+        "[PATH:empirical] Comparative case studies of high-inequality OECD regions (e.g., US states, UK regions, Italian provinces) using synthetic control methods on trust and civic participation metrics during recession and growth periods \u2014 Provides quasi-experimental evidence on whether GDP shocks produce measurable divergence in social capital outcomes in contexts where inequality is already high, addressing the qualifier's geographic and temporal scope.",
+        "[PATH:literature] Meta-analysis of published studies on economic performance and social capital (e.g., from the World Bank Social Capital Assessment Tool, Putnam's work, and recent replication studies) \u2014 Synthesizes existing empirical findings across OECD countries to assess the consistency of the null relationship, identifying potential confounders (e.g., welfare state strength, ethnic fractionalization) that might explain the disputed status."
+      ],
+      "scope": {
+        "domain": "social capital"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "mental health indicators",
+      "predicate": "show asymmetrical responses to",
+      "object": "GDP fluctuations, with stronger negative effects during economic contractions than positive effects during expansions, specifically among lower-income demographic groups even after controlling for baseline socioeconomic status",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "mental health indicators",
+      "predicate": "do not show symmetrical responses to",
+      "object": "GDP fluctuations across all demographic groups regardless of baseline socioeconomic status",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "public health epidemiology"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
