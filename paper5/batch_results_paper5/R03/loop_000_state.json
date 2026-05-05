@@ -1,0 +1,437 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "reduces wages for native workers without high school diplomas",
+      "object": "native workers without high school diplomas",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers native workers without high school diplomas]"
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers with complementary skills",
+      "object": "native workers with complementary skills",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers with complementary skills]"
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "post-1980",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "immigration (overall)",
+      "predicate": "may increase local demand and offset wage reductions",
+      "object": "native workers",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration (overall) native workers]"
+      ],
+      "scope": {
+        "domain": "macroeconomic effects"
+      },
+      "qualifier": {
+        "temporal": "short to medium term (1\u20135 years)",
+        "geographic": "developed economies with flexible labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "reduces wages for native workers without high school diplomas only in local labor markets with rigid housing supply",
+      "object": "native workers without high school diplomas",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers native workers without high school diplomas]",
+        "[PATH:empirical] Card, D. (2001). 'Immigrant Inflows, Native Outflows, and the Local Labor Market Impacts of Higher Immigration.' Journal of Labor Economics, 19(1), 22-64. \u2014 This seminal paper provides a framework for analyzing local labor market effects of immigration, including wage impacts by skill group. Replicating its methodology with a focus on housing supply elasticity could directly test whether wage reductions for low-skilled natives are conditional on housing market rigidity.",
+        "[PATH:empirical] Saiz, A. (2007). 'Immigration and Housing Rents in American Cities.' Journal of Urban Economics, 61(2), 345-371. \u2014 This study establishes the link between immigration and housing market outcomes. Combining its housing supply elasticity measures (e.g., Wharton Residential Land Use Regulatory Index) with wage data for native workers without high school diplomas would allow a direct test of the conditional wage effect hypothesized.",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 Borjas's national-level approach to estimating wage effects of immigration by skill group can be extended to incorporate local housing supply constraints as an interaction term. This would provide a rigorous econometric test of whether the predicted wage reduction is confined to areas with rigid housing supply."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "increases economic demand and creates more job opportunities for native workers without high school diplomas",
+      "object": "native workers without high school diplomas",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers native workers without high school diplomas]",
+        "[PATH:empirical] Card, D. (1990). 'The Impact of the Mariel Boatlift on the Miami Labor Market.' Industrial and Labor Relations Review, 44(2), 245-257. \u2014 This natural experiment study examines the effect of a sudden influx of low-skilled immigrants on wages and employment of native workers with low education, providing a direct empirical test of the hypothesis in a U.S. context.",
+        "[PATH:empirical] Peri, G. (2012). 'The Effect of Immigration on Productivity: Evidence from U.S. States.' Review of Economics and Statistics, 94(1), 348-358. \u2014 This study uses state-level panel data to analyze how immigration of low-skilled workers affects local demand, job creation, and productivity, offering evidence on whether such immigration expands opportunities for less-educated native workers.",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This influential paper provides a competing perspective by estimating the negative wage effects of low-skilled immigration on native workers without high school diplomas, which can refute the hypothesis if substitution effects dominate demand effects."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "during the 2010s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers with complementary skills only when those native workers are employed in non-tradable sectors",
+      "object": "native workers with complementary skills in non-tradable sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers with complementary skills in non-tradable sectors]",
+        "[PATH:empirical] Current Population Survey (CPS) merged with O*NET occupation skill requirements and BLS industry classifications for tradable vs. non-tradable sectors, 2000\u20132020 \u2014 Allows constructing a panel of native workers with skills complementary to high-skilled immigrants (e.g., managers, technicians) and estimating wage effects separately for tradable (e.g., manufacturing) and non-tradable (e.g., healthcare, construction) sectors, directly testing the conditional hypothesis.",
+        "[PATH:literature] Peri, G., & Sparber, C. (2009). Task specialization, immigration, and wages. American Economic Journal: Applied Economics, 1(3), 135\u2013163. \u2014 Provides a theoretical framework and empirical evidence on how high-skilled immigration affects native wages through task specialization and complementarity; can be extended to test sectoral tradability as a moderating factor.",
+        "[PATH:theoretical] Autor, D. H., Dorn, D., & Hanson, G. H. (2013). The China syndrome: Local labor market effects of import competition. American Economic Review, 103(6), 2121\u20132168. \u2014 Develops a model of local labor markets with tradable vs. non-tradable sectors; applying similar logic to immigration shocks can clarify the mechanism by which sector tradability influences wage pass-through to complementary native workers."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases wages for native workers with complementary skills",
+      "object": "native workers with complementary skills",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers with complementary skills]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' in Quarterly Journal of Economics \u2014 Provides foundational empirical evidence on how immigration affects native wages, including by skill complementarity, using U.S. Census data post-1990.",
+        "[PATH:empirical] Peri & Sparber (2009) 'Task Specialization, Immigration, and Wages' in American Economic Journal: Applied Economics \u2014 Examines how high-skilled immigration affects native workers with complementary skills through task specialization, offering direct evidence for the hypothesized wage effect.",
+        "[PATH:theoretical] A theoretical model of skill complementarity in production (e.g., Ottaviano & Peri, 2012, 'Rethinking the Effect of Immigration on Wages' in Journal of the European Economic Association) \u2014 Provides a theoretical framework to predict wage effects of high-skilled immigration on complementary native workers, which can be tested against empirical data."
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "post-1990",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers with complementary skills",
+      "object": "native workers with complementary skills",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers increases wages for native workers with complementary skills native workers with complementary skills in domain 'labor economics']"
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "does not increase wages for native workers with complementary skills",
+      "object": "native workers with complementary skills",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers does not increase wages for native workers with complementary skills native workers with complementary skills in domain 'labor economics']"
+      ],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers with complementary skills only in metropolitan areas with high patenting activity",
+      "object": "native workers with complementary skills",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {
+        "temporal": "post-1980",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases wages for native workers with complementary skills",
+      "object": "native workers with complementary skills",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 37,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
