@@ -1,0 +1,430 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP growth",
+      "predicate": "actively misaligns with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with high ecological debt]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP growth",
+      "predicate": "correlates positively with",
+      "object": "national subjective well-being in countries with low ecological debt",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with low ecological debt]"
+      ],
+      "scope": {
+        "domain": "low ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "low ecological debt countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP growth",
+      "predicate": "actively misaligns with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with high ecological debt]"
+      ],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "short-term"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP growth",
+      "predicate": "may indirectly support",
+      "object": "national subjective well-being through environmental remediation funding",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being through environmental remediation funding]"
+      ],
+      "scope": {
+        "domain": "countries with high ecological debt and strong governance"
+      },
+      "qualifier": {
+        "temporal": "following the implementation of environmental remediation programs (lagged 2\u20135 years)",
+        "geographic": "countries with high ecological debt and strong governance"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP growth",
+      "predicate": "has a stronger positive correlation with",
+      "object": "national subjective well-being in countries with low ecological debt than in countries with high ecological debt",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with low ecological debt than in countries with high ecological debt]",
+        "[PATH:empirical] World Happiness Report longitudinal data (2000-2020) merged with national ecological footprint accounts from the Global Footprint Network \u2014 This allows direct testing of the hypothesis by comparing correlations between GDP growth and subjective well-being across country-year panels stratified by ecological debt levels.",
+        "[PATH:empirical] Panel regression analysis of OECD and developing countries using the Genuine Progress Indicator (GPI) as an alternative to GDP growth, paired with Gallup World Poll well-being measures \u2014 GPI accounts for environmental degradation and resource depletion, making it possible to assess whether the hypothesized moderation effect is robust to alternative measures of economic performance.",
+        "[PATH:literature] Theoretical literature on the 'Easterlin Paradox' and the 'Threshold Hypothesis' in ecological economics (e.g., work by Easterlin, Kahneman, and Daly) \u2014 This literature suggests that beyond a certain point, further GDP growth yields diminishing returns to well-being, especially when ecological costs are high, providing a theoretical framework to interpret the hypothesized pattern."
+      ],
+      "scope": {
+        "domain": "low vs. high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "National subjective well-being",
+      "predicate": "is negatively affected by",
+      "object": "GDP growth in countries with low ecological debt",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: National subjective well-being GDP growth in countries with low ecological debt]",
+        "[PATH:empirical] Longitudinal panel data from the World Values Survey and World Bank (2000-2020) comparing subjective well-being trends with GDP growth rates in countries with low ecological debt (e.g., using the Ecological Footprint Network's national debt classifications). \u2014 Directly tests the hypothesized negative relationship by analyzing well-being changes alongside economic growth in the specified country group over the stated time period.",
+        "[PATH:empirical] Comparative case studies of low ecological debt countries (e.g., Costa Rica, Bhutan) that have experienced rapid GDP growth, examining qualitative and quantitative evidence of well-being shifts (e.g., through Gallup surveys or national happiness indices). \u2014 Provides context-specific depth to identify whether growth correlates with well-being declines, controlling for cultural or policy factors that might confound aggregate data.",
+        "[PATH:theoretical] Review of theoretical literature on the Easterlin Paradox and the 'threshold hypothesis' in environmental economics, focusing on studies that model well-being as a function of growth under ecological constraints. \u2014 Establishes whether existing theoretical frameworks predict or explain a negative effect in low-debt contexts, helping to interpret empirical findings and refine the hypothesis."
+      ],
+      "scope": {
+        "domain": "low ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "low ecological debt countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "negatively predicts",
+      "object": "national subjective well-being in countries with high ecological debt, when mediated by perceived environmental degradation",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with high ecological debt, when mediated by perceived environmental degradation]",
+        "[PATH:empirical] Longitudinal panel data from the World Values Survey and Ecological Footprint Network, focusing on high ecological debt countries (e.g., Brazil, India) over 5-10 years, measuring GDP growth, perceived environmental degradation (e.g., self-reported air/water quality), and life satisfaction. \u2014 Directly tests the mediated pathway: GDP growth \u2192 perceived environmental degradation \u2192 subjective well-being. Panel data can establish temporal precedence and control for confounds.",
+        "[PATH:empirical] Experimental or quasi-experimental studies using vignettes or natural experiments (e.g., sudden industrial booms or recessions in high ecological debt regions) to manipulate perceived environmental degradation and measure well-being. \u2014 Provides causal evidence for the mediation mechanism by isolating the effect of perceived degradation on well-being independent of other GDP-related changes.",
+        "[PATH:literature] Theoretical review of the 'Easterlin Paradox' and 'environmental Kuznets curve' literature, specifically examining cases where economic growth in ecologically stressed nations fails to improve or reduces happiness. \u2014 Synthesizes existing findings on the conditional relationship between growth and well-being, identifying gaps in mediation by environmental perceptions and informing model specification."
+      ],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "short-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP growth",
+      "predicate": "can enhance",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth national subjective well-being in countries with high ecological debt]",
+        "[PATH:empirical] World Happiness Report panel data (2000-2020) merged with World Bank ecological footprint and GDP per capita data for high ecological debt countries \u2014 Directly tests the hypothesis by correlating GDP growth with subjective well-being measures (e.g., Cantril ladder) in countries with ecological debt above a threshold, controlling for confounds like inequality and governance.",
+        "[PATH:empirical] Comparative case studies of high ecological debt countries (e.g., Costa Rica vs. resource-extractive economies) using qualitative interviews and longitudinal well-being surveys \u2014 Provides context-specific mechanisms (e.g., trade-offs between material gains and environmental degradation) that can confirm or refute the causal direction and boundary conditions of the hypothesis.",
+        "[PATH:theoretical] Theoretical models from ecological economics (e.g., Daly's steady-state economy theory, Easterlin paradox critiques) applied to high-debt contexts \u2014 Offers a conceptual framework to predict when GDP growth might fail to enhance well-being due to ecological constraints, informing empirical design and interpretation of results."
+      ],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "countries with high ecological debt"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP growth",
+      "predicate": "actively misaligns with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth actively misaligns with national subjective well-being in countries with high ecological debt in domain 'high ecological debt countries']"
+      ],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "countries with external debt exceeding 60% of GNI"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP growth",
+      "predicate": "does not actively misalign with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth does not actively misalign with national subjective well-being in countries with high ecological debt in domain 'high ecological debt countries']"
+      ],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "countries classified as high ecological debt by the Global Footprint Network"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP growth",
+      "predicate": "causes a decline in",
+      "object": "national subjective well-being in countries with high ecological debt when natural capital depletion exceeds a critical threshold",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high ecological debt countries with natural capital depletion above critical threshold"
+      },
+      "qualifier": {
+        "temporal": "medium-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP growth",
+      "predicate": "positively correlates with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high ecological debt countries"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
