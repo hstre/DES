@@ -1,0 +1,273 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage combined with targeted wage subsidies",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage combined with targeted wage subsidies employee turnover in small businesses]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage alone",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage alone employee turnover in small businesses]"
+      ],
+      "scope": {
+        "domain": "low-wage retail and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Targeted wage subsidies without minimum wage increase",
+      "predicate": "increases",
+      "object": "employee retention in small businesses",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Targeted wage subsidies without minimum wage increase employee retention in small businesses]",
+        "[CONFLICT] The claim suggests that targeted wage subsidies, without a minimum wage increase, increase employee retention in small businesses for seasonal or part-time workers when tied to training commitments. However, the low confidence score (0.42) and disputed status indicate insufficient or contradictory evidence, likely due to potential substitution effects (subsidies may not improve retention if workers leave for higher wages elsewhere) or limited effectiveness of training commitments in temporary roles."
+      ],
+      "scope": {
+        "domain": "seasonal or part-time workers"
+      },
+      "qualifier": {
+        "condition": "when subsidies are tied to training commitments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage alone",
+      "predicate": "decreases",
+      "object": "employee turnover in small businesses only when paired with a federally funded wage subsidy for firms with fewer than 20 employees",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage alone employee turnover in small businesses only when paired with a federally funded wage subsidy for firms with fewer than 20 employees]",
+        "[PATH:empirical] Longitudinal payroll data from U.S. small businesses (fewer than 20 employees) in low-wage retail and hospitality sectors, comparing turnover rates before and after minimum wage increases, with and without concurrent wage subsidies (e.g., via state-level pilot programs or the federal Work Opportunity Tax Credit). \u2014 Directly tests the conditional claim by isolating the effect of minimum wage alone versus minimum wage combined with a subsidy, using real-world turnover metrics.",
+        "[PATH:literature] Meta-analysis of existing studies on minimum wage effects on labor turnover, with subgroup analysis by firm size and presence of wage subsidies, drawing from databases like NBER, IZA, and JEL. \u2014 Aggregates existing evidence to assess whether the hypothesized interaction effect is consistently observed across contexts, strengthening or weakening the claim."
+      ],
+      "scope": {
+        "domain": "low-wage retail and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage alone",
+      "predicate": "increases",
+      "object": "operating costs for small businesses",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage alone operating costs for small businesses]",
+        "[PATH:empirical] National Bureau of Economic Research (NBER) working papers on minimum wage effects in low-wage retail and hospitality, e.g., 'The Impact of Minimum Wages on Small Business Costs and Employment' (2015-2023) \u2014 Provides direct econometric evidence on how minimum wage increases affect operating costs specifically for small businesses in the retail and hospitality sectors, using U.S. data from 2010-2024.",
+        "[PATH:empirical] Survey data from the Federal Reserve Banks' Small Business Credit Survey (2016-2024), analyzing reported cost changes following state-level minimum wage hikes \u2014 Captures small business owners' self-reported operational cost changes, offering real-world granularity to test whether cost increases are significant and persistent, especially in low-wage sectors.",
+        "[PATH:literature] A meta-analysis of minimum wage studies focusing on firm-level cost pass-through and profit margins (e.g., Dube, 2019; Cengiz et al., 2019), published in journals like the Journal of Economic Literature \u2014 Synthesizes existing empirical findings to determine whether the hypothesis holds consistently across different methodologies and time periods, helping resolve the disputed status."
+      ],
+      "scope": {
+        "domain": "low-wage retail and hospitality sectors"
+      },
+      "qualifier": {
+        "temporal": "2010-2024",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Targeted wage subsidies without minimum wage increase tied to training commitments",
+      "predicate": "reduces",
+      "object": "voluntary turnover among seasonal workers in small businesses",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Targeted wage subsidies without minimum wage increase tied to training commitments voluntary turnover among seasonal workers in small businesses]",
+        "[PATH:empirical] Quasi-experimental study on wage subsidy programs (e.g., Work Opportunity Tax Credit in the US) with administrative data on seasonal worker tenure and training completion, stratified by industry-recognized credential attainment. \u2014 Directly tests the causal effect of the subsidy-training-credential link on turnover, using variation in program uptake and credential requirements to isolate the mechanism.",
+        "[PATH:empirical] Longitudinal survey of small business employers and seasonal workers in low-wage sectors (e.g., hospitality, agriculture) capturing detailed data on wage subsidies, training programs, credential status, and worker retention over multiple seasons. \u2014 Provides granular, within-firm and within-worker data to assess whether the credential condition moderates the subsidy-turnover relationship, controlling for unobserved heterogeneity.",
+        "[PATH:theoretical] Review of behavioral labor economics literature on job commitment and signaling (e.g., Spence\u2019s signaling model applied to credentials) combined with empirical meta-analysis of training subsidy effects on turnover. \u2014 Establishes theoretical plausibility for why industry-recognized credentials might increase worker attachment, and synthesizes existing evidence to identify gaps and boundary conditions."
+      ],
+      "scope": {
+        "domain": "seasonal or part-time workers"
+      },
+      "qualifier": {
+        "condition": "when the training is directly linked to industry-recognized credentials"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Targeted wage subsidies without minimum wage increase",
+      "predicate": "decreases",
+      "object": "employee motivation and productivity in small businesses",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Targeted wage subsidies without minimum wage increase employee motivation and productivity in small businesses]",
+        "[PATH:empirical] Field experiment in seasonal agricultural or retail sectors comparing worker motivation and productivity under targeted wage subsidies vs. control groups, with measures such as output per hour and self-reported engagement. \u2014 Directly tests causal effect in the specified domain (seasonal/part-time workers) during peak periods, addressing the hypothesis with high ecological validity.",
+        "[PATH:literature] Meta-analysis of studies on wage subsidies and employee motivation, focusing on small businesses and temporary workers, including moderators like subsidy design and labor market tightness. \u2014 Synthesizes existing evidence to assess whether subsidies generally decrease motivation or if effects are context-dependent, providing broader support or refutation.",
+        "[PATH:theoretical] Theoretical modeling using efficiency wage theory and reciprocity frameworks to predict how targeted subsidies (without minimum wage increases) affect effort in seasonal jobs, factoring in worker perceptions of fairness and substitution effects. \u2014 Clarifies mechanisms underlying the hypothesis, identifying conditions under which motivation might decrease (e.g., perceived wage inadequacy) or remain stable."
+      ],
+      "scope": {
+        "domain": "seasonal or part-time workers"
+      },
+      "qualifier": {
+        "temporal": "during peak seasonal employment periods",
+        "geographic": "in regions with high seasonal labor demand"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 24,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006"
+    ],
+    "falsifier": [
+      "C005",
+      "C007"
+    ]
+  }
+}

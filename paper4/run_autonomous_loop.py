@@ -421,6 +421,7 @@ def run_domain(domain_id: str, seed_question: str,
 
         if next_question == "LOOP_COMPLETE":
             print(f"  ClaimGraph exhausted — LOOP_COMPLETE")
+            loop_metrics[-1]["outcome"] = "LOOP_COMPLETE"
             break
 
         question_history.append(next_question)
