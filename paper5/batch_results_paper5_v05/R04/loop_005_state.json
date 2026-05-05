@@ -1,0 +1,497 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Non-economic factors (social support and environmental quality)",
+      "predicate": "may explain a comparable share of variance in subjective wellbeing as GDP per capita",
+      "object": "only within specific cultural contexts",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Non-economic factors (social support and environmental quality) only within specific cultural contexts]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Social support",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "at a level comparable to GDP per capita in collectivist cultural contexts",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Social support at a level comparable to GDP per capita in collectivist cultural contexts]"
+      ],
+      "scope": {
+        "domain": "collectivist societies"
+      },
+      "qualifier": {
+        "temporal": "contemporary (post-2000)",
+        "geographic": "East Asian and Latin American collectivist societies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "at a level comparable to GDP per capita only in societies with high baseline income",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Environmental quality at a level comparable to GDP per capita only in societies with high baseline income]"
+      ],
+      "scope": {
+        "domain": "high-income societies"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "high-income OECD countries"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Non-economic factors (social support and environmental quality)",
+      "predicate": "explain less variance in subjective wellbeing than GDP per capita",
+      "object": "when controlling for cultural individualism-collectivism",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Non-economic factors (social support and environmental quality) when controlling for cultural individualism-collectivism]"
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "early 21st century (2000\u20132020)",
+        "geographic": "global (primarily OECD and high-income countries)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Perceived social support",
+      "predicate": "explains more variance in subjective wellbeing than GDP per capita",
+      "object": "only in collectivist cultural contexts with high income inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Perceived social support only in collectivist cultural contexts with high income inequality]",
+        "[PATH:empirical] World Values Survey (WVS) data merged with national Gini coefficients and GDP per capita, analyzing interaction effects of collectivism (e.g., from Hofstede's dimensions) on the relationship between perceived social support and subjective well-being. \u2014 This allows direct testing of whether the moderation effect of collectivism and income inequality on the social support\u2013wellbeing link is significant beyond the effect of GDP per capita, using multilevel modeling to account for country-level variation.",
+        "[PATH:empirical] Longitudinal panel studies from East Asian (e.g., Japan, South Korea) and Latin American (e.g., Brazil, Mexico) collectivist societies with high income inequality, measuring perceived social support, subjective wellbeing (e.g., life satisfaction, positive affect), and objective economic indicators. \u2014 Such panel data can establish temporal precedence and within-person effects, reducing confounding from cross-sectional comparisons, and directly test if social support explains more variance in wellbeing changes than GDP per capita changes in these specific contexts.",
+        "[PATH:literature] Meta-analysis of existing studies on social support and subjective wellbeing in collectivist vs. individualist cultures, stratified by income inequality levels, with a focus on controlling for GDP per capita. \u2014 A systematic synthesis of prior evidence can reveal whether the hypothesized conditional effect is consistently observed across studies, and identify gaps or contradictions in the current literature, thereby confirming or refuting the scope condition."
+      ],
+      "scope": {
+        "domain": "collectivist societies with high income inequality"
+      },
+      "qualifier": {
+        "temporal": "contemporary (post-2000)",
+        "geographic": "East Asian and Latin American collectivist societies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "more significantly than social support in collectivist cultural contexts",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita more significantly than social support in collectivist cultural contexts]",
+        "[PATH:empirical] World Values Survey (WVS) wave 7 data for East Asian and Latin American collectivist societies, analyzed via multilevel regression with GDP per capita and social support as predictors of subjective wellbeing \u2014 Directly tests the relative explanatory power of GDP per capita versus social support in the specified cultural contexts, using large-scale cross-national survey data that includes measures of subjective wellbeing, perceived social support, and national economic indicators.",
+        "[PATH:literature] Meta-analysis of existing studies on subjective wellbeing determinants in collectivist cultures (e.g., studies from China, Japan, South Korea, Mexico, Brazil) comparing effect sizes of income and social support \u2014 Synthesizes available evidence to assess whether the pattern holds across multiple independent samples, accounting for cultural heterogeneity within collectivist societies and providing a more robust estimate than any single study.",
+        "[PATH:empirical] Longitudinal panel data from the China Family Panel Studies (CFPS) or Mexican Family Life Survey (MxFLS) examining within-person changes in GDP per capita and social support over time to predict changes in subjective wellbeing \u2014 Allows causal inference by controlling for unobserved individual-level confounds; if GDP per capita changes predict wellbeing changes more strongly than changes in social support, this would confirm the hypothesis; if social support changes are stronger, it would refute it."
+      ],
+      "scope": {
+        "domain": "collectivist societies"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "East Asian and Latin American collectivist societies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "more strongly than GDP per capita in high-income societies with high social trust",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Environmental quality more strongly than GDP per capita in high-income societies with high social trust]",
+        "[PATH:empirical] Cross-national panel data from the World Values Survey and European Social Survey, matched with objective environmental quality indices (e.g., air pollution, green space) and GDP per capita, analyzing within-country variation over time. \u2014 This would allow direct comparison of the relative explanatory power of environmental quality vs. GDP per capita on subjective wellbeing, specifically in high-income societies with high social trust, using multilevel models to control for confounders.",
+        "[PATH:empirical] Experimental or quasi-experimental studies on the impact of local environmental improvements (e.g., urban greening, pollution reduction) on self-reported life satisfaction in high-trust, high-income communities, compared to equivalent income changes. \u2014 Causal evidence from natural experiments or randomized interventions can isolate the effect of environmental quality from GDP, testing whether the effect is indeed stronger in the specified context.",
+        "[PATH:theoretical] Theoretical and review literature on the 'Easterlin Paradox' and the diminishing marginal utility of income at high GDP levels, combined with social capital theory on trust moderating environmental valuation. \u2014 This provides a conceptual framework for why environmental quality might matter more than income in high-trust, wealthy societies, and can guide empirical tests by identifying key mechanisms and boundary conditions."
+      ],
+      "scope": {
+        "domain": "high-income societies with high social trust"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "high-income societies with high social trust"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "at a level comparable to GDP per capita across all income levels",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Environmental quality at a level comparable to GDP per capita across all income levels]",
+        "[PATH:empirical] World Values Survey (WVS) and Gallup World Poll data for OECD countries (2000-2020) combined with city-level air quality indices and GDP per capita \u2014 These datasets allow multi-level modeling to isolate the variance in subjective wellbeing explained by environmental quality (e.g., PM2.5, green space access) relative to GDP per capita, controlling for income levels. This directly tests the comparative explanatory power across all income brackets.",
+        "[PATH:literature] OECD Better Life Index and Environmental Performance Index (EPI) longitudinal studies \u2014 Existing meta-analyses and panel studies using these indices often report effect sizes for environmental factors on life satisfaction. A systematic review or replication analysis can quantify whether environmental quality consistently accounts for as much variance as GDP per capita across income groups, addressing the disputed claim.",
+        "[PATH:empirical] Natural experiments of environmental policy changes (e.g., London Congestion Charge, German autobahn speed limits) with pre/post wellbeing surveys \u2014 Such quasi-experimental designs provide causal evidence of environmental quality improvements on subjective wellbeing. Comparing these effects to income shocks (e.g., tax rebates) across income strata can reveal if environmental quality rivals GDP per capita in explanatory power, especially for lower-income groups."
+      ],
+      "scope": {
+        "domain": "all societies"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "at a level comparable to GDP per capita only in societies with high baseline income",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Environmental quality explains variance in subjective wellbeing at a level comparable to GDP per capita only in societies with high baseline income in domain 'high-income societies']"
+      ],
+      "scope": {
+        "domain": "high-income societies"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "OECD high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "to a degree that is independent of baseline income level",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Environmental quality explains variance in subjective wellbeing to a degree that is independent of baseline income level in domain 'high-income societies']"
+      ],
+      "scope": {
+        "domain": "high-income societies"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "OECD high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Non-economic factors (social support and environmental quality)",
+      "predicate": "explain more variance in subjective wellbeing than GDP per capita",
+      "object": "when controlling for cultural individualism-collectivism and restricting the sample to low- and middle-income countries",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Non-economic factors (social support and environmental quality) when controlling for cultural individualism-collectivism and restricting the sample to low- and middle-income countries]",
+        "[PATH:empirical] World Values Survey (WVS) and Gallup World Poll data (2000-2020) on social support, environmental quality, and subjective wellbeing, analyzed with multilevel modeling controlling for individualism-collectivism (e.g., Hofstede's scores) and GDP per capita \u2014 Directly tests the hypothesis by comparing variance explained by non-economic factors vs. GDP per capita across low- and middle-income countries, with the specified control and sample restriction.",
+        "[PATH:literature] Systematic review or meta-analysis of studies on subjective wellbeing determinants in low- and middle-income countries, focusing on social capital, environmental stressors, and cultural dimensions \u2014 Synthesizes existing evidence to assess whether non-economic factors consistently outperform GDP per capita in such contexts, and identifies gaps in controlling for individualism-collectivism.",
+        "[PATH:theoretical] Theoretical framework from cross-cultural psychology (e.g., Oishi & Diener, 2001) on the moderating role of individualism-collectivism in the relationship between social/environmental factors and wellbeing \u2014 Provides rationale for why non-economic factors may have differential explanatory power across cultures, guiding empirical design and interpretation of results."
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {
+        "temporal": "early 21st century (2000\u20132020)",
+        "geographic": "low- and middle-income countries globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Non-economic factors (social support and environmental quality)",
+      "predicate": "explain more variance in subjective wellbeing than GDP per capita",
+      "object": "even when controlling for cultural individualism-collectivism",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Non-economic factors (social support and environmental quality) even when controlling for cultural individualism-collectivism]"
+      ],
+      "scope": {
+        "domain": "cross-cultural comparisons"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Environmental quality (specifically air pollution reduction)",
+      "predicate": "explains variance in subjective wellbeing more strongly than GDP per capita",
+      "object": "in high-income OECD countries where baseline income exceeds $40,000 PPP",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-income OECD countries with per capita income > $40,000 PPP"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Environmental quality",
+      "predicate": "explains variance in subjective wellbeing",
+      "object": "at a level comparable to GDP per capita in societies regardless of income level",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global societies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
