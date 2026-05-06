@@ -1,0 +1,398 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "are insufficient to determine long-term dynamics and typical-case statistics",
+      "object": "the need for an asymptotic i.i.d. assumption on prime factors of iterated outputs",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) the need for an asymptotic i.i.d. assumption on prime factors of iterated outputs]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "are insufficient to determine long-term dynamics for a broad class of initial conditions",
+      "object": "the need for an asymptotic i.i.d. assumption on prime factors of iterated outputs",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) the need for an asymptotic i.i.d. assumption on prime factors of iterated outputs]"
+      ],
+      "scope": {
+        "domain": "long-term dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n and for all time steps beyond a finite threshold",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "can partially constrain typical-case statistics when combined with structural invariants",
+      "object": "the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors]"
+      ],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {
+        "condition": "if structural invariants are preserved"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "can be refined to determine long-term dynamics if augmented with a measure-theoretic classification of prime factor recurrence patterns",
+      "object": "the asymptotic i.i.d. assumption on prime factors of iterated outputs is unnecessary for a dense subset of initial conditions in the space of trajectories",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) the asymptotic i.i.d. assumption on prime factors of iterated outputs is unnecessary for a dense subset of initial conditions in the space of trajectories]",
+        "[PATH:empirical] Systematic numerical exploration of trajectories in T(n) for fixed n, with rigorous sampling of dense subsets of initial conditions and statistical testing of prime factor recurrence patterns against i.i.d. assumptions \u2014 Directly tests whether the asymptotic i.i.d. assumption is unnecessary by measuring deviations from i.i.d. behavior across a dense set of initial conditions, providing empirical confirmation or refutation of the hypothesis.",
+        "[PATH:theoretical] Ergodic theory and measure-theoretic analysis of the dynamics of prime factor maps on T(n), focusing on invariant measures and recurrence properties \u2014 Provides a formal framework to classify prime factor recurrence patterns and determine if the i.i.d. assumption can be relaxed for a dense subset, thereby refining the a priori conceptual categories for long-term dynamics.",
+        "[PATH:literature] Review of existing literature on prime factor dynamics in number-theoretic dynamical systems, particularly studies of the Collatz-type maps and their statistical properties \u2014 Contextualizes the hypothesis within known results, identifying whether similar relaxations of i.i.d. assumptions have been observed or proven, and highlighting gaps that the current hypothesis might fill."
+      ],
+      "scope": {
+        "domain": "long-term dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all time steps beyond a finite transient phase",
+        "geographic": "within the space of trajectories over T(n) for n fixed"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "are sufficient to determine long-term dynamics for a broad class of initial conditions",
+      "object": "no need for an asymptotic i.i.d. assumption on prime factors of iterated outputs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) no need for an asymptotic i.i.d. assumption on prime factors of iterated outputs]",
+        "[PATH:empirical] Construct explicit counterexample trajectories in T(n) for small n (e.g., n=2,3) that violate long-term determinism from a priori categories alone, using exhaustive computational search \u2014 If a priori categories are insufficient even for small n, the hypothesis is refuted; if they consistently predict dynamics, confidence increases.",
+        "[PATH:theoretical] Develop a theoretical proof that the set of trajectories in T(n) with non-i.i.d. prime factor sequences is either empty or has measure zero under deterministic iteration \u2014 A rigorous proof would confirm the hypothesis by showing that no asymptotic i.i.d. assumption is needed; failure to prove would leave the dispute open.",
+        "[PATH:literature] Survey existing literature on iterated arithmetic functions (e.g., Collatz-like maps, shift maps on prime factorizations) to identify known cases where a priori categories fail or succeed in determining long-term dynamics \u2014 Contextualizing T(n) within known results can provide indirect support or counterevidence, clarifying whether the hypothesis aligns with established theory."
+      ],
+      "scope": {
+        "domain": "long-term dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n, under deterministic iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "are exactly equivalent to",
+      "object": "a deterministic condition on the parity of the sum of exponents in the prime factorization along the trajectory",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a priori conceptual categories for trajectories in T(n) a deterministic condition on the parity of the sum of exponents in the prime factorization along the trajectory]",
+        "[PATH:empirical] Large-scale computational survey of trajectories in T(n) for n up to 10^9, recording parity of sum of exponents in prime factorization at each step and comparing to a priori conceptual categories (e.g., monotonic, oscillatory, divergent). \u2014 Directly tests whether the parity condition deterministically predicts category membership across a broad integer domain, providing statistical confirmation or refutation under typical-case statistics.",
+        "[PATH:theoretical] Analytic number theory proof: derive the parity evolution of the sum of exponents under the map T(n) (e.g., using properties of the Collatz-like function), and show that it constrains trajectory behavior to exactly the claimed categories. \u2014 A rigorous mathematical derivation would confirm the equivalence; failure to derive such a condition would refute the hypothesis.",
+        "[PATH:literature] Review of existing literature on parity-based invariants in Collatz-type dynamics and related dynamical systems (e.g., work by Lagarias, Terras, or Sinai). \u2014 Identifies whether similar equivalences have been proven or disproven for related maps, contextualizing the hypothesis and potentially providing counterexamples or supporting frameworks."
+      ],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {
+        "temporal": "for all times t in the asymptotic regime",
+        "geographic": "over all integer domains in Z^+"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "structural invariants",
+      "predicate": "are insufficient to constrain",
+      "object": "typical-case statistics under a weaker, non-i.i.d. mixing condition on prime factors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: structural invariants typical-case statistics under a weaker, non-i.i.d. mixing condition on prime factors]",
+        "[PATH:empirical] Numerical experiments on the distribution of prime factors in shifted primes (e.g., p-1 or p+1) under a non-i.i.d. mixing condition, comparing observed statistics to predictions from structural invariants like the Chowla conjecture or Sarnak's conjecture \u2014 Directly tests whether structural invariants (e.g., multiplicative function correlations) fail to constrain typical-case statistics when prime factors are not independent, which is the core of the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the Erd\u0151s\u2013Kac theorem and its extensions to weakly dependent sequences, examining whether the Gaussian limit for the number of prime factors depends on mixing conditions beyond i.i.d. assumptions \u2014 Provides a rigorous framework to determine if structural invariants (like moments or characteristic functions) are sufficient to recover typical-case behavior under non-i.i.d. mixing, potentially refuting the hypothesis if such invariants do constrain the statistics."
+      ],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "can partially constrain typical-case statistics when combined with structural invariants",
+      "object": "the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms a priori conceptual categories for trajectories in T(n) can partially constrain typical-case statistics when combined with structural invariants the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors in domain 'typical-case statistics']"
+      ],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "cannot partially constrain typical-case statistics even when combined with structural invariants",
+      "object": "the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms a priori conceptual categories for trajectories in T(n) cannot partially constrain typical-case statistics even when combined with structural invariants the sufficiency of a weaker, non-i.i.d. mixing condition on prime factors in domain 'typical-case statistics']"
+      ],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "determine the exact threshold for typical-case statistics under a non-i.i.d. mixing condition on prime factors",
+      "object": "the sufficiency of a weakly dependent but stationary ergodic process on prime factor exponents",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "a priori conceptual categories for trajectories in T(n)",
+      "predicate": "cannot constrain typical-case statistics",
+      "object": "the sufficiency of any mixing condition on prime factors",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "typical-case statistics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
