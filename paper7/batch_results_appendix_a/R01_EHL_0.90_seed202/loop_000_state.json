@@ -1,0 +1,497 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1-2 years of implementation)",
+        "geographic": "United States, particularly states with low minimum wage relative to median wage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover and training costs]"
+      ],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage",
+      "predicate": "has",
+      "object": "negligible net effect on aggregate unemployment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage negligible net effect on aggregate unemployment]"
+      ],
+      "scope": {
+        "domain": "national economy over 2-year horizon"
+      },
+      "qualifier": {
+        "temporal": "over a 2-year horizon",
+        "geographic": "national"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers only in counties with high employer concentration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers only in counties with high employer concentration]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) merged with Herfindahl-Hirschman Index (HHI) data at the county-industry level \u2014 Allows direct testing of the interaction between minimum wage increases and employer concentration on county-level unemployment for low-skilled workers, using a difference-in-differences or event-study design.",
+        "[PATH:empirical] Survey of Employer Monopsony Power and Wage-Setting Behavior (e.g., from the Federal Reserve or Bureau of Labor Statistics special supplements) \u2014 Provides micro-level data on employer concentration and wage-setting practices, enabling analysis of whether high-concentration counties exhibit different employment responses to minimum wage changes.",
+        "[PATH:theoretical] Manning (2003) 'Monopsony in Motion' and subsequent theoretical models of labor market concentration \u2014 Offers a theoretical framework predicting that minimum wage increases can reduce employment only when employers have significant monopsony power, directly relevant to the hypothesis's scope and qualifiers."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with monopsony power"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1-2 years of implementation)",
+        "geographic": "United States, particularly rural counties with fewer than 5 employers per industry"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers]",
+        "[PATH:empirical] Cengiz, D., Dube, A., Lindner, A., & Zipperer, B. (2019). The Effect of Minimum Wages on Low-Wage Jobs: Evidence from the United States Using a Bunching Estimator. Quarterly Journal of Economics. \u2014 This study uses a bunching estimator to analyze the impact of minimum wage increases on low-wage employment across U.S. states, providing direct empirical evidence on unemployment effects among low-skilled workers during periods of moderate inflation.",
+        "[PATH:literature] Neumark, D., & Shirley, P. (2021). Myth or Measurement: What Does the New Minimum Wage Research Say About Minimum Wages and Job Loss in the United States? NBER Working Paper 28388. \u2014 This comprehensive review synthesizes recent empirical studies on minimum wage and employment, offering a balanced assessment of the disputed hypothesis and highlighting conditions (e.g., inflation regimes) under which effects vary.",
+        "[PATH:theoretical] A theoretical model incorporating monopsonistic competition and inflation expectations, e.g., based on Manning, A. (2003). Monopsony in Motion. \u2014 Developing or applying a dynamic model of low-skilled labor markets with moderate inflation can clarify the mechanisms through which minimum wage changes affect unemployment, accounting for nominal rigidities and firm pricing power."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "during periods of moderate inflation",
+        "geographic": "in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Raising the minimum wage in the service industry",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs only when accompanied by increased automation investment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in the service industry employee turnover and training costs only when accompanied by increased automation investment]",
+        "[PATH:empirical] Panel data from the Bureau of Labor Statistics (BLS) on turnover rates in U.S. urban service industries (e.g., fast food, retail) from 2020-2025, combined with state-level minimum wage increases and firm-level automation investment data (e.g., from tax filings or industry surveys). \u2014 A difference-in-differences or event-study analysis comparing turnover and training costs across firms with varying levels of automation investment before and after minimum wage hikes can directly test whether the hypothesized interaction effect holds.",
+        "[PATH:empirical] Case studies or industry reports from major quick-service restaurant chains (e.g., McDonald's, Panera) that have publicly disclosed automation adoption (e.g., self-order kiosks, automated fryers) alongside wage policy changes, supplemented by interviews or financial filings. \u2014 Firm-level qualitative and quantitative evidence can reveal whether automation investment actually moderates the relationship between minimum wage increases and turnover/training costs, providing granular insight into causal mechanisms.",
+        "[PATH:theoretical] Theoretical or simulation models of labor demand and turnover under minimum wage increases, incorporating firm-level automation decisions (e.g., Acemoglu & Restrepo's framework on automation and labor markets). \u2014 A formal model can clarify the conditions under which automation complementarity reduces turnover\u2014e.g., by substituting for low-skill tasks or increasing job complexity\u2014and generate testable predictions for the 2020-2025 urban U.S. context."
+      ],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "between 2020 and 2025",
+        "geographic": "United States urban metropolitan areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage employee turnover and training costs]",
+        "[PATH:empirical] Bureau of Labor Statistics (BLS) Quarterly Turnover Rates for Service Industry Sectors, compared with state-level minimum wage changes \u2014 Provides direct quantitative data on employee turnover before and after minimum wage increases, allowing causal inference via difference-in-differences analysis within the geographic and temporal scope.",
+        "[PATH:empirical] Survey or field experiment with service industry employers tracking training costs and retention rates post-wage hike \u2014 Captures firm-level training expenditure data and turnover metrics, addressing the specific object (training costs) and subject (employers) with high internal validity.",
+        "[PATH:literature] Meta-analysis of minimum wage studies focusing on labor turnover and training (e.g., from journals like Industrial Relations or Journal of Labor Economics) \u2014 Synthesizes existing empirical findings across multiple U.S. service industry contexts, helping to resolve the disputed status by identifying effect size heterogeneity and moderators."
+      ],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "during the first year after implementation",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage reduces employee turnover and training costs in domain 'service industry employers']"
+      ],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "post-2020 studies",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Raising the minimum wage",
+      "predicate": "does not reduce",
+      "object": "employee turnover and training costs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage does not reduce employee turnover and training costs in domain 'service industry employers']"
+      ],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Raising the minimum wage",
+      "predicate": "has",
+      "object": "a small net positive effect on employment in high-productivity service sectors, offset by a small net negative effect in low-productivity retail sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage a small net positive effect on employment in high-productivity service sectors, offset by a small net negative effect in low-productivity retail sectors]",
+        "[PATH:empirical] Sector-level panel data from national statistical agencies (e.g., BLS QCEW) on employment and wages in high-productivity service sectors (e.g., finance, tech) and low-productivity retail sectors, combined with state-level minimum wage changes over 2-year windows \u2014 Directly tests the hypothesis by comparing employment changes in the two sector types following minimum wage increases, controlling for other economic factors.",
+        "[PATH:literature] Difference-in-differences meta-analysis of recent minimum wage studies that report sector-specific employment effects (e.g., Cengiz et al. 2019, Dube 2019) \u2014 Synthesizes existing empirical evidence to assess whether the hypothesized differential sector effects (positive in high-productivity, negative in low-productivity) are consistently observed across multiple studies.",
+        "[PATH:theoretical] Theoretical model of firm-level labor demand under heterogeneous productivity and wage floors (e.g., search-and-matching or monopsony model with sectoral productivity differences) \u2014 Provides causal mechanism: high-productivity firms may expand employment due to increased demand or reduced turnover, while low-productivity firms contract due to cost pressures; model predictions can be calibrated to match sector-level data."
+      ],
+      "scope": {
+        "domain": "national economy over 2-year horizon, sector-level analysis"
+      },
+      "qualifier": {
+        "temporal": "over a 2-year horizon",
+        "geographic": "national economy"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Raising the minimum wage",
+      "predicate": "leads to",
+      "object": "significant increase in aggregate unemployment",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "national economy over 2-year horizon"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Raising the minimum wage to a living wage threshold",
+      "predicate": "reduces",
+      "object": "employee turnover and training costs more strongly in franchise-owned service industry firms than in independently owned ones",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "employee turnover and training costs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "service industry employers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
