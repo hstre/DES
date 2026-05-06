@@ -1,0 +1,494 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a finite set of at most 3 distinct attractor cycles for all integer inputs",
+      "object": "with the specific attractor determined by the residue class of n modulo some power of 3",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with the specific attractor determined by the residue class of n modulo some power of 3]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to exactly three distinct attractor cycles for all integer inputs",
+      "object": "with each attractor cycle uniquely determined by the residue class of n modulo 3",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with each attractor cycle uniquely determined by the residue class of n modulo 3]"
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all integers at all times",
+        "geographic": "universal"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "does not converge to a finite set of attractor cycles for all integer inputs, but instead diverges or enters unbounded orbits for a positive density of starting values",
+      "object": "with the behavior depending on the residue class modulo higher powers of 3 beyond the first power",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with the behavior depending on the residue class modulo higher powers of 3 beyond the first power]"
+      ],
+      "scope": {
+        "domain": "a non-negligible subset of integers"
+      },
+      "qualifier": {
+        "temporal": "under iterative application for all sufficiently large starting integers",
+        "geographic": "within the standard integer lattice of the natural numbers"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a finite set of at most 3 attractor cycles, but only for inputs that are powers of 3 or multiples thereof",
+      "object": "with the attractor determined by the residue class modulo 3^k for some fixed small k",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with the attractor determined by the residue class modulo 3^k for some fixed small k]"
+      ],
+      "scope": {
+        "domain": "inputs that are multiples of a power of 3"
+      },
+      "qualifier": {
+        "temporal": "for all time steps as n iterates under T, assuming no termination condition",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to exactly one attractor cycle for all integer inputs",
+      "object": "with the single attractor cycle being {2, 1, 6} and the map\u2019s behavior collapsing all orbits regardless of initial residue class modulo 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with the single attractor cycle being {2, 1, 6} and the map\u2019s behavior collapsing all orbits regardless of initial residue class modulo 3]",
+        "[PATH:empirical] Exhaustive computational verification across a wide range of integer inputs (e.g., |n| \u2264 10^6) with random sampling far beyond, checking for divergence or additional cycles \u2014 Direct simulation can test whether all orbits converge to {2,1,6} or if counterexamples exist, especially for negative integers and large magnitudes, given the map's piecewise linear nature.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using modular arithmetic and invariant sets, possibly constructing a Lyapunov function or proving eventual entry into a bounded region \u2014 A proof that the map is eventually contracting or that all trajectories enter a finite set would confirm the hypothesis; failure to find such a proof could indicate hidden cycles or divergence.",
+        "[PATH:literature] Literature search for similar piecewise linear maps (e.g., Collatz-like maps) with modular conditions, focusing on known results about unique attractors or multiple cycles \u2014 Existing studies on related maps may provide techniques or counterexamples that apply directly to this specific T(n), helping to confirm or refute the uniqueness of the attractor cycle."
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all initial integer values at time step 0"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "exhibits chaotic behavior rather than converging to distinct attractor cycles",
+      "object": "demonstrating sensitive dependence on initial conditions",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 demonstrating sensitive dependence on initial conditions]",
+        "[PATH:empirical] Numerical simulation over a broad range of integer seeds (e.g., -10^6 to 10^6) with high iteration counts, measuring Lyapunov exponents and divergence rates for nearby initial values. \u2014 Sensitive dependence on initial conditions is a hallmark of chaos; computing Lyapunov exponents from simulation can quantitatively confirm or refute chaotic behavior across the integer domain.",
+        "[PATH:theoretical] Theoretical analysis of the map's functional graph structure, focusing on whether it forms a single connected component with unbounded trajectories or decomposes into finite cycles. \u2014 If the map has only finitely many attractor cycles and all integers eventually fall into them, it would refute the hypothesis; a proof of divergence or unbounded growth for some seeds would support chaotic behavior.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., the 3x+1 problem, generalized Collatz-like maps) to identify known criteria for chaos in such arithmetic dynamical systems. \u2014 Existing results on ergodicity, mixing, and cycle structure in related maps can provide theoretical benchmarks and methodological guidance for this specific map."
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "under iterated application for all n \u2208 \u2124"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "has a positive proportion of starting integers that enter strictly increasing unbounded orbits, and this proportion is exactly characterized by the condition that the base-3 representation of n contains a forbidden pattern of digits",
+      "object": "specifically, any n whose base-3 expansion contains the substring '11' infinitely often (or after a finite prefix) will diverge, while those that eventually avoid '11' converge to a finite set of cycles",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 specifically, any n whose base-3 expansion contains the substring '11' infinitely often (or after a finite prefix) will diverge, while those that eventually avoid '11' converge to a finite set of cycles]",
+        "[PATH:empirical] Exhaustive computational enumeration of base-3 representations for n up to 10^9, tracking orbits for a large sample and checking for the substring '11' in the base-3 expansion, comparing divergence rates and proportion estimates \u2014 Given the hypothesis that the '11' pattern characterizes divergence, a large-scale empirical test can confirm or refute the predicted proportion of diverging integers and detect any counterexamples where '11' appears but the orbit converges, or vice versa.",
+        "[PATH:theoretical] Formal analysis of the map's dynamics in base-3 using automata theory or symbolic dynamics, modeling the transformation on base-3 digits and proving that the presence of '11' leads to unbounded growth while its eventual absence forces eventual periodicity \u2014 A rigorous proof or disproof of the hypothesized digit-pattern condition would require a theoretical framework linking the map's iteration to a finite-state machine on base-3 expansions, potentially establishing the exact proportion of diverging integers via ergodic theory or combinatorial number theory.",
+        "[PATH:literature] Literature search for similar piecewise linear maps with digit-based divergence criteria (e.g., the 3x+1 problem, the 'bizarre' map studied by Lagarias and others), focusing on known results about forbidden substrings in base expansions and their connection to orbit behavior \u2014 Reviewing existing work on related recursive maps may reveal analogous proven results or known obstacles, providing insight into whether the '11' pattern is plausible or contradicts established theorems about such maps' dynamics."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge, with no proven theorem or counterexample established",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a finite set of attractor cycles for almost all integer inputs",
+      "object": "demonstrating stable periodic behavior that is largely independent of higher powers of 3 in residue classes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 demonstrating stable periodic behavior that is largely independent of higher powers of 3 in residue classes]",
+        "[PATH:empirical] Exhaustive computational search over a large range of integers (e.g., up to 10^9) to enumerate all cycles and measure the proportion of inputs that converge to each cycle, with special attention to inputs with high powers of 3 in their residue classes. \u2014 Direct simulation can test the claim of convergence to a finite set of attractor cycles for almost all integers. By sampling numbers with varying 3-adic valuations, we can assess whether higher powers of 3 in residue classes affect the limiting behavior, as the hypothesis suggests invariance.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using modular arithmetic and 3-adic analysis, particularly examining whether the map is eventually periodic for all integers and whether the set of attractors is finite and independent of the 3-adic valuation. \u2014 A rigorous proof or disproof of the hypothesis would require understanding the map's behavior under iteration, possibly by constructing a Lyapunov function or using 3-adic convergence. This direction could confirm the existence of a finite attractor set or reveal counterexamples where the map diverges or enters new cycles.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., Collatz-like functions) that have been studied for convergence properties, especially those involving division by 3 and linear transformations. \u2014 Existing work on generalized Collatz problems and 3x+1 variants may provide analogous results or methodologies (e.g., use of stopping times, probabilistic models) that can be adapted to this specific map. This could help determine whether the claimed behavior is plausible or likely false."
+      ],
+      "scope": {
+        "domain": "the set of all integers"
+      },
+      "qualifier": {
+        "temporal": "for all integer inputs at any time step",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "does converge to a finite set of attractor cycles for all integer inputs, with no divergence or unbounded orbits for any starting value",
+      "object": "and the behavior is fully determined by the residue class modulo 3 alone, independent of higher powers of 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 does converge to a finite set of attractor cycles for all integer inputs, with no divergence or unbounded orbits for any starting value and the behavior is fully determined by the residue class modulo 3 alone, independent of higher powers of 3 in domain 'a non-negligible subset of integers']"
+      ],
+      "scope": {
+        "domain": "a non-negligible subset of integers"
+      },
+      "qualifier": {
+        "temporal": "as of the most recent computational verification up to 10^9",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "does not converge to a finite set of attractor cycles for all integer inputs, but instead diverges or enters unbounded orbits for a positive density of starting values",
+      "object": "with the behavior depending on the residue class modulo higher powers of 3 beyond the first power",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 does not converge to a finite set of attractor cycles for all integer inputs, but instead diverges or enters unbounded orbits for a positive density of starting values with the behavior depending on the residue class modulo higher powers of 3 beyond the first power in domain 'a non-negligible subset of integers']"
+      ],
+      "scope": {
+        "domain": "a non-negligible subset of integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a single fixed point (n=1) for all inputs that are powers of 3, and to a unique 2-cycle (2 \u2192 7 \u2192 2) for all inputs that are multiples of 3 but not powers of 3",
+      "object": "with no other attractors possible in this restricted domain",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 with no other attractors possible in this restricted domain]",
+        "[PATH:empirical] Detailed computational simulation over all multiples of powers of 3 up to a large bound (e.g., 3^20) to verify convergence to either fixed point 1 or 2-cycle (2\u21947) and check for any other attractors. \u2014 Direct simulation can confirm or falsify the claimed attractors for a finite but representative subset of the infinite domain, providing empirical evidence for or against the hypothesis.",
+        "[PATH:theoretical] Formal analysis of the dynamics using modular arithmetic and invariant theory, focusing on the transformation of numbers in the form 3^k * m (where m not divisible by 3) under T, to prove that all such inputs eventually enter the claimed attractors. \u2014 A rigorous mathematical proof would establish the hypothesis beyond doubt, while a counterexample derived from such analysis could refute it. This approach addresses the infinite domain directly.",
+        "[PATH:literature] Literature search for known results on similar piecewise linear maps (e.g., generalized Collatz-type functions) that exhibit restricted attractor sets for numbers with specific prime factorizations. \u2014 Existing work on related maps may provide analogous theorems, techniques, or counterexamples that inform the plausibility and proof strategy for this hypothesis, saving effort and contextualizing findings."
+      ],
+      "scope": {
+        "domain": "inputs that are multiples of a power of 3"
+      },
+      "qualifier": {
+        "temporal": "for all time steps of iteration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "exhibits chaotic behavior with infinitely many attractor cycles for inputs that are not powers of 3 or multiples thereof",
+      "object": "with no fixed attractor determined by the residue class modulo any power of 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "inputs that are not multiples of a power of 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a single fixed attractor cycle for all starting integers whose base-3 representation contains no digit '2'",
+      "object": "with the set of such integers having natural density zero, while all other starting values diverge to infinity",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "the subset of integers with base-3 digits restricted to {0,1}"
+      },
+      "qualifier": {
+        "temporal": "under iterative application for all sufficiently large starting integers",
+        "geographic": "within the standard integer lattice of the natural numbers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to a finite set of attractor cycles for almost all integer inputs, exhibiting bounded behavior across residue classes",
+      "object": "with the behavior being invariant under residue classes modulo higher powers of 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "the majority of integer inputs"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

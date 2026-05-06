@@ -1,0 +1,426 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "has",
+      "object": "all multiples of 3 that are not powers of 3 converging to a unique 2-cycle (2 \u2192 7 \u2192 2) with no other attractors in this restricted domain",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 all multiples of 3 that are not powers of 3 converging to a unique 2-cycle (2 \u2192 7 \u2192 2) with no other attractors in this restricted domain]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "The claim that no other attractors exist for multiples of 3 that are not powers of 3 is contested because numerical evidence only covers a finite range, and the map's piecewise linear structure may permit hidden cycles or divergence for larger numbers, analogous to the open status of the Collatz conjecture."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "has",
+      "object": "all multiples of 3 that are not powers of 3 converge to the 2-cycle (2 \u2192 7 \u2192 2) for n up to 10^6",
+      "status": "disputed",
+      "confidence": 0.7,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 all multiples of 3 that are not powers of 3 converge to the 2-cycle (2 \u2192 7 \u2192 2) for n up to 10^6]"
+      ],
+      "scope": {
+        "domain": "n \u2264 10^6, n multiple of 3, not a power of 3"
+      },
+      "qualifier": {
+        "method": "numerical simulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "may contain",
+      "object": "a hidden divergent trajectory or another cycle for some large multiple of 3 that is not a power of 3",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 a hidden divergent trajectory or another cycle for some large multiple of 3 that is not a power of 3]"
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3"
+      },
+      "qualifier": {
+        "tension": "Numerical evidence is necessarily finite; piecewise linear maps can exhibit unexpected long-term behavior, analogous to Collatz-type undecidability."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "has",
+      "object": "all multiples of 3 that are not powers of 3 converge to the unique 2-cycle (2 \u2192 7 \u2192 2) if the map is eventually bounded for all such inputs",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 all multiples of 3 that are not powers of 3 converge to the unique 2-cycle (2 \u2192 7 \u2192 2) if the map is eventually bounded for all such inputs]"
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3, under the assumption of eventual boundedness"
+      },
+      "qualifier": {
+        "conditional": "If the map does not diverge for any such input, structural constraints (e.g., modulo invariants) force convergence to that cycle."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "has",
+      "object": "a divergent trajectory starting from every multiple of 3 that is not a power of 3 and whose base-3 representation contains the digit 2",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 a divergent trajectory starting from every multiple of 3 that is not a power of 3 and whose base-3 representation contains the digit 2]",
+        "[PATH:empirical] High-precision computational search for divergent trajectories in the map T(n) for n up to, say, 10^9, focusing on multiples of 3 not powers of 3 with base-3 digit 2, and checking for cycles or unbounded growth via periodicity detection and bounding techniques. \u2014 Systematic simulation can directly test the hypothesis by searching for counterexamples (convergent or cyclic trajectories) or confirming divergence patterns. Given the moderate confidence, a large-scale empirical check is a straightforward first step.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using base-3 representation: derive conditions under which the transformation on base-3 digits leads to eventual division by 3 (i.e., digit shifts) vs. growth, and prove that the presence of digit 2 in a non-power-of-3 multiple forces unbounded expansion. \u2014 A rigorous mathematical proof or disproof would settle the hypothesis. Analyzing the map as a digit-level automaton could reveal whether the digit 2 triggers a cascade of operations that prevent the trajectory from ever reaching a power of 3, which is the only known route to convergence.",
+        "[PATH:literature] Literature on similar piecewise linear maps, such as the Collatz conjecture variants and the 3x+1 problem, especially studies of maps with base-dependent behavior and divergent trajectories (e.g., works by Lagarias, Chamberland, or Tao on almost all orbits of Collatz). \u2014 The map T(n) resembles a modified Collatz-type function. Existing results on divergence criteria, ergodic theory, and probabilistic models for such maps may provide insights or analogous proofs that can be adapted to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3 and have at least one digit 2 in base 3"
+      },
+      "qualifier": {
+        "temporal": "not specified",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "is structurally incapable of",
+      "object": "producing a divergent trajectory or another cycle for any multiple of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 producing a divergent trajectory or another cycle for any multiple of 3]",
+        "[PATH:empirical] Exhaustive computational simulation of T(n) for all multiples of 3 up to a very large bound (e.g., 10^12) with cycle detection and divergence checks \u2014 Systematic simulation can directly test whether any multiple of 3 enters a non-trivial cycle or shows unbounded growth. If no counterexample is found within the search range, it increases confidence; finding one would refute the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using modular arithmetic and invariant theory, potentially constructing a Lyapunov function or proving eventual descent to a known cycle for all 3-adic inputs \u2014 A rigorous proof that the map is contracting in some metric for all multiples of 3 would confirm the hypothesis. Conversely, identifying a conserved quantity or periodic structure that allows alternative cycles could refute it.",
+        "[PATH:literature] Literature search for related piecewise linear maps (e.g., generalized Collatz problems) with similar congruence conditions, focusing on known cycles and divergence results \u2014 Existing studies on analogous maps may reveal patterns or theorems (e.g., ergodic theory of 3x+1 variants) that either support the impossibility of new cycles/divergence for multiples of 3 or provide counterexamples that challenge the hypothesis."
+      ],
+      "scope": {
+        "domain": "all multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "contains",
+      "object": "a hidden divergent trajectory or another cycle for some large multiple of 3 that is not a power of 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 contains a hidden divergent trajectory or another cycle for some large multiple of 3 that is not a power of 3 in domain 'all multiples of 3 that are not powers of 3']"
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "does not contain",
+      "object": "any hidden divergent trajectory or additional cycle for any multiple of 3 that is not a power of 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 does not contain any hidden divergent trajectory or additional cycle for any multiple of 3 that is not a power of 3 in domain 'all multiples of 3 that are not powers of 3']"
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3"
+      },
+      "qualifier": {
+        "temporal": "since the formal definition of T(n) was established in 2023",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "converges to",
+      "object": "the 2-cycle (2 \u2192 7 \u2192 2) for all positive integers that are not multiples of 3, under the assumption of eventual boundedness",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 the 2-cycle (2 \u2192 7 \u2192 2) for all positive integers that are not multiples of 3, under the assumption of eventual boundedness]",
+        "[PATH:empirical] Exhaustive computational verification for all positive integers not divisible by 3 up to a large bound (e.g., 10^9) tracking trajectories to check if they eventually hit the 2-cycle (2 \u2192 7) or diverge \u2014 Direct empirical testing can confirm the hypothesis for a finite but substantial domain, and identify any counterexamples that diverge or converge to a different cycle, thereby refuting or supporting the claim under the boundedness assumption.",
+        "[PATH:theoretical] Theoretical analysis of modular invariants and potential invariants (e.g., examining the map modulo powers of 2 and 3) to characterize the dynamics and prove that any bounded orbit must converge to the specified 2-cycle \u2014 A rigorous number-theoretic proof using modular constraints and invariant functions can either confirm the hypothesis by showing forced convergence for all non-multiples of 3, or reveal structural conditions that lead to other cycles or divergence.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., Collatz-type variants with mod 3 branching) to identify known results on convergence, cycles, and boundedness criteria \u2014 Existing studies on related maps may provide analogous proofs, counterexamples, or methodological insights (e.g., use of Lyapunov-like functions or ergodic theory) that can be adapted to this specific map to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "all positive integers not divisible by 3, assuming eventual boundedness"
+      },
+      "qualifier": {
+        "conditional": "If the map does not diverge for any such input, modular constraints force convergence to that same 2-cycle, extending the basin of attraction beyond multiples of 3."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "does not have",
+      "object": "all multiples of 3 that are not powers of 3 converge to the unique 2-cycle (2 \u2192 7 \u2192 2) even if the map is eventually bounded for all such inputs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3 all multiples of 3 that are not powers of 3 converge to the unique 2-cycle (2 \u2192 7 \u2192 2) even if the map is eventually bounded for all such inputs]",
+        "[PATH:empirical] Computational exploration of the map T(n) for all multiples of 3 up to a large bound (e.g., 10^9), tracking convergence patterns and identifying any cycles other than (2,7) or divergent trajectories. \u2014 Systematic simulation can test the hypothesis directly: if any non-power-of-3 multiple of 3 fails to converge to the 2-cycle (2\u21927\u21922), the hypothesis is refuted. If all such numbers converge, it strengthens the claim, especially if the bound is high enough to suggest a pattern.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using modular arithmetic and invariant properties, focusing on the behavior of numbers modulo powers of 3 and the transformation of residues under iteration. \u2014 A proof that the map eventually enters a bounded cycle for all multiples of 3 not powers of 3, or a characterization of the attractor, would confirm or refute the hypothesis. This could involve studying the map as a piecewise linear function and applying techniques from Collatz-like problems.",
+        "[PATH:literature] Literature review of similar piecewise linear maps, particularly those with a single 2-cycle and known convergence properties, such as the Collatz conjecture variants or the '3x+1' problem generalisations. \u2014 Existing work on maps with modular definitions may provide analogous results or methods (e.g., using Lyapunov functions, ergodic theory, or known cycles in such systems). This could reveal whether the claimed behavior is plausible or contradictory to established theorems."
+      ],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3, under the assumption of eventual boundedness"
+      },
+      "qualifier": {
+        "temporal": "under the assumption of eventual boundedness, which is currently unproven",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "contains",
+      "object": "a divergent trajectory starting from every multiple of 3 that is not a power of 3 and is congruent to 3 mod 9",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3 and are \u2261 3 (mod 9)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 for n \u2261 0 mod 3, T(n) = 4n+2 for n \u2261 1 mod 3, T(n) = 2n-1 for n \u2261 2 mod 3",
+      "predicate": "is guaranteed",
+      "object": "to converge to a cycle or fixed point for all multiples of 3 that are not powers of 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all multiples of 3 that are not powers of 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C010",
+      "C012"
+    ]
+  }
+}
