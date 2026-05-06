@@ -1,0 +1,342 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Some randomized trials show comparable weight loss to continuous calorie restriction at 12 months, but adherence declines and long-term metabolic adaptations (e.g., compensatory eating, hormonal changes) may undermine sustained effects beyond one year."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "produces comparable weight loss to",
+      "object": "continuous calorie restriction at 12 months",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction at 12 months]"
+      ],
+      "scope": {
+        "domain": "short-term (\u226412 months) weight loss outcomes"
+      },
+      "qualifier": {
+        "tension": "Based on several randomized trials, initial weight loss is similar, but this does not account for adherence or metabolic shifts beyond one year."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to declining adherence and compensatory eating that",
+      "object": "reduces its effectiveness for sustained weight loss beyond one year",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting reduces its effectiveness for sustained weight loss beyond one year]"
+      ],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {
+        "tension": "Adherence often drops after 6\u201312 months, and hormonal adaptations may increase hunger, undermining the initial calorie deficit."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "may trigger metabolic adaptations (e.g., reduced resting metabolic rate, increased ghrelin) that",
+      "object": "counteract long-term weight loss efforts",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting counteract long-term weight loss efforts]"
+      ],
+      "scope": {
+        "domain": "physiological mechanisms of weight regain"
+      },
+      "qualifier": {
+        "tension": "These adaptations are not unique to intermittent fasting but could be more pronounced due to prolonged fasting windows, creating friction with the assumption that the diet remains effective."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "prevents the decline in adherence and compensatory eating that",
+      "object": "sustains weight loss effectiveness beyond one year compared to intermittent fasting alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program sustains weight loss effectiveness beyond one year compared to intermittent fasting alone]",
+        "[PATH:empirical] Randomized controlled trial (RCT) comparing intermittent fasting plus behavioral reinforcement (e.g., habit-based coaching, self-monitoring, contingency management) versus intermittent fasting alone over 12-18 months, with adherence tracking and weight outcomes as primary endpoints. \u2014 Directly tests the hypothesis by isolating the effect of added behavioral reinforcement on long-term adherence, compensatory eating, and weight maintenance, addressing the tension that standalone fasting may fail due to motivational and hormonal factors.",
+        "[PATH:empirical] Longitudinal observational study or secondary analysis of existing weight loss trials examining the relationship between adherence to intermittent fasting, measures of compensatory eating (e.g., binge eating scales, dietary recall), and weight regain beyond 12 months, with behavioral support as a moderating variable. \u2014 Provides real-world evidence on whether behavioral reinforcement attenuates the natural decline in adherence and the rise in compensatory eating over time, helping to confirm or refute the causal mechanism proposed in the hypothesis."
+      ],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance with behavioral support"
+      },
+      "qualifier": {
+        "tension": "Behavioral reinforcement may counteract the adherence drop and hormonal hunger adaptations that undermine the initial calorie deficit in standalone intermittent fasting."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "enhances metabolic flexibility and improves insulin sensitivity, which",
+      "object": "supports sustained weight loss beyond one year",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting supports sustained weight loss beyond one year]",
+        "[PATH:empirical] Randomized controlled trial (RCT) comparing intermittent fasting (e.g., 5:2 or time-restricted feeding) with continuous calorie restriction over 12\u201324 months, measuring changes in insulin sensitivity (HOMA-IR) and body weight maintenance. \u2014 Direct, long-term RCT evidence is needed to confirm whether intermittent fasting specifically enhances metabolic flexibility and insulin sensitivity in a way that produces sustained weight loss beyond one year, compared to standard dietary approaches.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies on intermittent fasting and metabolic biomarkers (e.g., insulin sensitivity, glucose tolerance, fatty acid oxidation) in adults with overweight or obesity. \u2014 A comprehensive synthesis of existing observational and interventional data can clarify the consistency and magnitude of the hypothesized metabolic benefits, and whether they translate to durable weight loss maintenance across diverse populations.",
+        "[PATH:empirical] Mechanistic study using continuous glucose monitors and metabolic chamber assessments to track daily patterns of glucose, insulin, and fat oxidation in participants practicing intermittent fasting versus ad libitum eating over a 12-month period. \u2014 This approach would provide direct evidence for the claimed enhancement of metabolic flexibility (e.g., improved fat oxidation during fasting states) and its temporal relationship with long-term weight stability, addressing the mechanistic underpinning of the hypothesis."
+      ],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {
+        "temporal": "over a period of 12 to 24 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to declining adherence and compensatory eating that",
+      "object": "reduces its effectiveness for sustained weight loss beyond one year",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting leads to declining adherence and compensatory eating that reduces its effectiveness for sustained weight loss beyond one year in domain 'long-term (>12 months) weight maintenance']"
+      ],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {
+        "temporal": "over periods exceeding 12 months",
+        "geographic": "global (based on available evidence)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "can maintain adherence and avoid significant compensatory eating that",
+      "object": "preserves its effectiveness for sustained weight loss beyond one year",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting can maintain adherence and avoid significant compensatory eating that preserves its effectiveness for sustained weight loss beyond one year in domain 'long-term (>12 months) weight maintenance']"
+      ],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {
+        "temporal": "studies up to 2023",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "prevents compensatory eating and maintains adherence such that it",
+      "object": "sustains weight loss effectiveness beyond one year",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Intermittent fasting",
+      "predicate": "enhances metabolic flexibility and improves insulin sensitivity that",
+      "object": "increases its effectiveness for sustained weight loss beyond one year",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term (>12 months) weight maintenance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C009",
+    "T9[falsifier] on C003 -> C010",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C009",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 25,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C010"
+    ]
+  }
+}
