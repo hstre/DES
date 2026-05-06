@@ -1,0 +1,492 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intrinsic number properties such as parity and residue classes",
+      "predicate": "determine",
+      "object": "the basin size of each cycle of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intrinsic number properties such as parity and residue classes the basin size of each cycle of period length \u2264 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "parity (odd/even) of n",
+      "predicate": "determines",
+      "object": "the basin size of cycles of period 2 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: parity (odd/even) of n the basin size of cycles of period 2 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "cycles of period 2"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration of T(n)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "residue classes modulo 6",
+      "predicate": "are sufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: residue classes modulo 6 the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {
+        "condition": "for a specific parameter family of T(n)"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is necessary but not sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "cycles of period 5"
+      },
+      "qualifier": {
+        "tension": "contradicts sufficiency claims for lower periods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the residue class of n modulo 4",
+      "predicate": "determines",
+      "object": "the exact basin size of cycles of period 2 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the residue class of n modulo 4 the exact basin size of cycles of period 2 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all n modulo 4 (i.e., n \u2261 0,1,2,3 mod 4) for a large range of n, tracking basin sizes for period-2 cycles under T(n) and testing for consistent dependence on residue class. \u2014 Direct simulation can confirm or refute whether the residue class modulo 4 uniquely determines the exact basin size, by checking for counterexamples or patterns across multiple n.",
+        "[PATH:theoretical] Analytical derivation of the functional equation for T(n) restricted to n \u2261 0,1,2,3 mod 4, linking the dynamics to the structure of preimages of period-2 points. \u2014 A rigorous proof or disproof of the hypothesis would require showing that the basin size depends only on the parity of n/2 or similar invariant, which can be derived from the map's algebraic form.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps (e.g., the 3x+1 problem and its generalizations) focusing on period-2 cycles and their basin structures, particularly any known dependence on modular classes. \u2014 Existing research may already contain theorems or counterexamples that either support or undermine the claimed dependence on n mod 4, saving computational or theoretical effort."
+      ],
+      "scope": {
+        "domain": "cycles of period 2"
+      },
+      "qualifier": {
+        "temporal": "for all integers n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the basin size of cycles of period 2 in the Collatz-like map T(n)",
+      "predicate": "is independent of",
+      "object": "the parity (odd/even) of n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the basin size of cycles of period 2 in the Collatz-like map T(n) the parity (odd/even) of n]",
+        "[PATH:empirical] Systematic computational enumeration of basin sizes for all n up to a large bound (e.g., 10^9) for cycles of period 2 in T(n), stratified by parity \u2014 Direct simulation can reveal whether basin size distributions differ for odd vs. even n, providing statistical evidence to confirm or refute the independence claim.",
+        "[PATH:theoretical] Analytic derivation of basin size formulas for period-2 cycles using the structure of the Collatz-like map T(n), examining symmetry or dependence on parity \u2014 A rigorous mathematical proof or counterexample based on the map's algebraic properties would settle the hypothesis definitively, beyond empirical sampling.",
+        "[PATH:literature] Survey of existing literature on Collatz-like maps and their cycle basins, particularly studies on parity-dependent dynamics (e.g., Lagarias, 1985; Terras, 1976) \u2014 Reviewing prior results may reveal known theorems or conjectures about parity effects on basin sizes, potentially confirming or refuting the hypothesis without new computation."
+      ],
+      "scope": {
+        "domain": "cycles of period 2"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain of positive integers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "residue classes modulo 30",
+      "predicate": "are necessary and sufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 7 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: residue classes modulo 30 the basin size of all cycles of period length \u2264 7 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Exhaustive computational enumeration of all residue classes modulo 30 for the parameter family of T(n) defined in C003, checking basin sizes for all cycles of period \u2264 7 \u2014 Directly tests whether the 30 residue classes indeed determine basin sizes; any counterexample would refute, and full coverage would support the hypothesis.",
+        "[PATH:theoretical] Analytic derivation of the basin structure for cycles of period \u2264 7 using modular arithmetic and the dynamics of T(n) on the 2-adic integers or related number fields \u2014 Provides a rigorous proof or disproof of the necessity and sufficiency of mod-30 classes, independent of computational limitations.",
+        "[PATH:literature] Comparison with known results on residue classes and basin sizes in the standard Collatz map (mod 2, mod 6, etc.) and extensions to period-constrained cycles in generalized Collatz problems \u2014 Contextualizes the claim within established literature, potentially identifying analogous patterns or contradictions that confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "all cycles of period \u2264 7"
+      },
+      "qualifier": {
+        "condition": "for the same parameter family of T(n) as in C003"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "residue classes modulo 6",
+      "predicate": "are insufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: residue classes modulo 6 the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Exhaustive computational enumeration of all cycles of period \u2264 5 in T(n) over a large range of starting values (e.g., up to 10^9), cross-classified by residue class modulo 6, to compute basin sizes per residue class. \u2014 Directly tests whether residue classes modulo 6 can distinguish basin sizes; if the empirical distribution of basin sizes is uniform across residue classes, it would refute sufficiency; if systematic variation is found, it would support the hypothesis that they are insufficient (since variation implies other factors matter).",
+        "[PATH:theoretical] Analytic derivation of constraints on basin size as a function of the parity vector and the modular arithmetic of T(n) for cycles of length \u2264 5, focusing on the role of mod 6 residues in the linear equations for cycle elements. \u2014 Provides a theoretical proof that mod 6 residues cannot fully determine basin size because the basin size depends on the full preimage tree structure, which is not captured by a single modulus; a successful derivation would confirm the hypothesis."
+      ],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {
+        "temporal": "as of current computational verification"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "residue classes modulo 6",
+      "predicate": "are sufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms residue classes modulo 6 are sufficient to determine the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n) in domain 'all cycles of period \u2264 5']"
+      ],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "residue classes modulo 6",
+      "predicate": "are not sufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms residue classes modulo 6 are not sufficient to determine the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n) in domain 'all cycles of period \u2264 5']"
+      ],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "universal"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the combined effect of parity and residue classes modulo 2^k for k \u2265 4",
+      "predicate": "is sufficient to determine",
+      "object": "the exact basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the combined effect of parity and residue classes modulo 2^k for k \u2265 4 the exact basin size of cycles of period 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all n up to 2^40, classifying basin sizes by parity and residue classes modulo 2^k (k\u22654) for period-5 cycles \u2014 Directly tests whether the claimed combined effect uniquely determines basin sizes; a counterexample would refute the hypothesis, while full agreement up to the bound would increase confidence.",
+        "[PATH:theoretical] Theoretical analysis using linear algebra over the 2-adic integers to derive closed-form expressions for basin sizes of period-5 cycles as functions of parity and higher residue classes \u2014 A rigorous proof that the combined effect is sufficient would confirm the hypothesis; showing dependence on additional invariants would refute it.",
+        "[PATH:literature] Literature review of existing results on Collatz-like maps (e.g., Lagarias, Monks, Tao) focusing on periodic orbit structure and modular constraints for small periods \u2014 Establishes known necessary and sufficient conditions for basin sizes, potentially revealing that parity and modulo 2^k residues are insufficient, or providing analogous proven cases to guide the analysis."
+      ],
+      "scope": {
+        "domain": "cycles of period 5"
+      },
+      "qualifier": {
+        "temporal": "for all integer n in the domain of T(n) under current computational verification up to 2^40",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is neither necessary nor sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "cycles of period 5"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "residue classes modulo 12",
+      "predicate": "are necessary and sufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n) for the specific parameter family",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "residue classes modulo 6",
+      "predicate": "are insufficient to determine",
+      "object": "the basin size of all cycles of period length \u2264 5 in the Collatz-like map T(n)",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all cycles of period \u2264 5"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
