@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "material living standards in industrialized economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material living standards in industrialized economies]"
+      ],
+      "scope": {
+        "domain": "industrialized economies"
+      },
+      "qualifier": {
+        "temporal": "post-WWII period",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "is a poor proxy for",
+      "object": "human wellbeing",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {
+        "domain": "subjective well-being and environmental sustainability"
+      },
+      "qualifier": {
+        "temporal": "since the late 20th century",
+        "geographic": "globally, especially in developed nations"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing only when supplemented by inequality and health metrics",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing only when supplemented by inequality and health metrics]"
+      ],
+      "scope": {
+        "domain": "composite well-being indices"
+      },
+      "qualifier": {
+        "condition": "supplemented by inequality and health metrics"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita",
+      "predicate": "is a weaker proxy for",
+      "object": "material living standards in industrialized economies than median household income",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in industrialized economies than median household income]",
+        "[PATH:empirical] Luxembourg Income Study (LIS) Database: Cross-national panel data on median household income and GDP per capita for OECD countries, post-WWII \u2014 Directly tests the comparative predictive power of GDP per capita vs. median household income on material living standard indicators (e.g., consumption, housing quality, health outcomes) via longitudinal regression analysis.",
+        "[PATH:empirical] OECD Better Life Index and related reports: Composite well-being metrics (e.g., housing, income, jobs, health) for member countries \u2014 Provides multi-dimensional measures of material living standards against which the two proxies can be correlated, allowing for variance decomposition to determine which proxy better captures non-income aspects of material well-being.",
+        "[PATH:literature] Review of income distribution and welfare economics literature (e.g., Stiglitz-Sen-Fitoussi Commission report, Piketty's work on inequality) \u2014 Synthesizes theoretical arguments and prior empirical findings on why median income may better reflect typical household consumption capacity and economic security, while GDP per capita is skewed by top-end growth and non-household income."
+      ],
+      "scope": {
+        "domain": "industrialized economies"
+      },
+      "qualifier": {
+        "temporal": "post-WWII period",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "inequality and non-market goods",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP inequality and non-market goods]",
+        "[PATH:empirical] Panel data on income inequality (e.g., World Inequality Database) and GDP per capita growth for OECD countries from 1980 onward \u2014 Directly tests whether GDP growth correlates with measures of inequality (e.g., Gini coefficient) over time in industrialized economies, providing evidence for or against GDP's failure to capture distributional changes.",
+        "[PATH:empirical] National accounts and satellite accounts for non-market goods (e.g., household production, environmental services) in industrialized economies since 1980 \u2014 Quantifies the divergence between GDP and broader welfare measures that include non-market goods, allowing assessment of how much GDP underestimates or misrepresents economic well-being in the specified domain.",
+        "[PATH:literature] Literature review of critiques and defenses of GDP as a welfare metric (e.g., Stiglitz-Sen-Fitoussi Commission report, 2009) \u2014 Synthesizes theoretical arguments and empirical findings on GDP's limitations regarding inequality and non-market goods, providing a scholarly basis to evaluate the hypothesis's plausibility and identify gaps for further research."
+      ],
+      "scope": {
+        "domain": "industrialized economies"
+      },
+      "qualifier": {
+        "temporal": "since the 1980s",
+        "geographic": "industrialized economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP",
+      "predicate": "is a poorer proxy for",
+      "object": "human wellbeing than the Genuine Progress Indicator (GPI)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing than the Genuine Progress Indicator (GPI)]",
+        "[PATH:empirical] Comparative longitudinal studies of GPI vs. GDP per capita and subjective well-being indicators (e.g., life satisfaction surveys) in OECD countries from 1970 onward. \u2014 Directly tests whether GPI correlates more strongly with reported well-being than GDP, controlling for environmental degradation and inequality, which is central to the hypothesis.",
+        "[PATH:literature] Theoretical and empirical analyses of the 'Easterlin Paradox' and the threshold effect of GDP on well-being, contrasted with GPI's inclusion of non-market costs (e.g., resource depletion, income inequality). \u2014 Provides a conceptual framework and existing data to assess whether GPI captures well-being dimensions that GDP misses, especially in post-1970s developed economies."
+      ],
+      "scope": {
+        "domain": "subjective well-being and environmental sustainability"
+      },
+      "qualifier": {
+        "temporal": "post-1970s",
+        "geographic": "developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "is a strong indicator of",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]",
+        "[PATH:empirical] OECD Better Life Index dataset \u2014 Provides cross-country comparisons of GDP per capita against multidimensional well-being metrics (health, education, life satisfaction), enabling direct test of GDP's explanatory power.",
+        "[PATH:literature] Easterlin Paradox literature review (e.g., Easterlin, 1974; updated studies) \u2014 Seminal and ongoing research showing that beyond a threshold, GDP growth does not correlate with increased subjective well-being, challenging the hypothesis.",
+        "[PATH:empirical] Human Development Index (HDI) time-series analysis \u2014 HDI combines GDP with education and life expectancy; analyzing divergence between GDP and HDI trends over time can reveal cases where GDP is a weak indicator of well-being."
+      ],
+      "scope": {
+        "domain": "economic prosperity and quality of life"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global, with notable exceptions in developed nations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP",
+      "predicate": "is a poor proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP is a poor proxy for human wellbeing in domain 'subjective well-being and environmental sustainability']"
+      ],
+      "scope": {
+        "domain": "subjective well-being and environmental sustainability"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "global, with emphasis on OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP",
+      "predicate": "is an adequate proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP is an adequate proxy for human wellbeing in domain 'subjective well-being and environmental sustainability']"
+      ],
+      "scope": {
+        "domain": "subjective well-being and environmental sustainability"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global, with emphasis on developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP supplemented by inequality and health metrics",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing only in nations with high institutional trust",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP supplemented by inequality and health metrics human wellbeing only in nations with high institutional trust]",
+        "[PATH:empirical] Comparative analysis of OECD well-being indices (e.g., OECD Better Life Index) against GDP+inequality+health composites, stratified by institutional trust levels (e.g., World Values Survey trust measures) \u2014 Directly tests whether the composite's correlation with subjective well-being or other validated well-being measures is significantly higher in high-trust nations (Nordics, Germany, Netherlands) than in lower-trust OECD countries, post-2000.",
+        "[PATH:empirical] Longitudinal study of well-being outcomes (e.g., life satisfaction, mental health) in Nordic countries during economic shocks or policy changes, using GDP+inequality+health as predictor \u2014 If institutional trust is the key moderator, the composite should track well-being changes closely in these high-trust contexts, but fail in comparable low-trust OECD nations (e.g., Southern or Eastern Europe) during similar shocks.",
+        "[PATH:literature] Theoretical review of institutional trust as a moderator in well-being measurement frameworks (e.g., Sen's capabilities approach, Easterlin paradox literature) \u2014 Establishes the theoretical basis for why high trust might enable GDP+inequality+health to capture well-being (e.g., trust ensures public goods translate to individual welfare), and identifies conditions under which the proxy would fail, guiding empirical tests."
+      ],
+      "scope": {
+        "domain": "composite well-being indices"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD nations with high institutional trust (e.g., Nordic countries, Germany, Netherlands)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP",
+      "predicate": "is an invalid proxy for",
+      "object": "human wellbeing",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {
+        "domain": "composite well-being indices"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "GDP growth in developed nations",
+      "predicate": "negatively correlates with",
+      "object": "subjective life satisfaction scores among individuals in the top income quintile",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "subjective well-being and income inequality"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "GDP",
+      "predicate": "is a reliable indicator of",
+      "object": "economic development and quality of life",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "economic growth and living standards"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
