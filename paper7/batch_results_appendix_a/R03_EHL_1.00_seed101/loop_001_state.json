@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "high-skilled immigration",
+      "predicate": "increases productivity and demand more than",
+      "object": "low-skilled immigration",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration low-skilled immigration]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "high-skilled immigration",
+      "predicate": "increases productivity and demand more than",
+      "object": "low-skilled immigration",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration low-skilled immigration]"
+      ],
+      "scope": {
+        "domain": "macroeconomic effects in innovation-driven sectors"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "low-skilled immigration",
+      "predicate": "may increase demand in labor-intensive service sectors more than",
+      "object": "high-skilled immigration",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration high-skilled immigration]",
+        "[CONFLICT] The claim suggests that low-skilled immigration may increase demand in labor-intensive service sectors more than high-skilled immigration, but this is disputed because empirical evidence is mixed and context-dependent, with some studies showing high-skilled immigration can also boost service demand through income effects."
+      ],
+      "scope": {
+        "domain": "local labor markets with high service demand"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "urban areas in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "net productivity effects of both immigration types",
+      "predicate": "are comparable when accounting for fiscal costs and capital dilution",
+      "object": "each other",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: net productivity effects of both immigration types each other]"
+      ],
+      "scope": {
+        "domain": "long-run general equilibrium with endogenous capital"
+      },
+      "qualifier": {
+        "temporal": "long-run",
+        "geographic": "unspecified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "high-skilled immigration in AI and software engineering",
+      "predicate": "generates positive spillover patenting activity and wage growth that exceeds",
+      "object": "high-skilled immigration in business services and management",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration in AI and software engineering high-skilled immigration in business services and management]",
+        "[PATH:empirical] USPTO patent data linked to H-1B visa records and occupational classifications (e.g., SOC codes for AI/software vs. business/management) \u2014 Allows direct comparison of patenting spillover rates and wage trajectories between the two immigration categories, controlling for firm and sector effects.",
+        "[PATH:empirical] Longitudinal Employer-Household Dynamics (LEHD) data from the U.S. Census Bureau, combined with immigration records \u2014 Provides wage growth and job mobility metrics for high-skilled immigrants in AI/software versus business services, enabling difference-in-differences or event-study designs.",
+        "[PATH:theoretical] Theoretical models of endogenous growth and knowledge spillovers (e.g., Jones, 1995; Romer, 1990) applied to immigration composition \u2014 Offers a framework to predict why AI/software immigration might generate larger spillovers than management immigration due to differences in codifiability and complementarity of knowledge."
+      ],
+      "scope": {
+        "domain": "innovation-driven sectors within the United States"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "low-skilled immigration",
+      "predicate": "increases productivity and demand more than",
+      "object": "high-skilled immigration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration high-skilled immigration]",
+        "[PATH:empirical] National Bureau of Economic Research (NBER) working papers on immigration and productivity, e.g., Peri (2012) 'The Effect of Immigration on Productivity: Evidence from US States' \u2014 This paper provides direct empirical evidence on how low-skilled immigration affects total factor productivity and demand in labor-intensive sectors, allowing comparison with high-skilled immigration effects during periods of labor shortage.",
+        "[PATH:empirical] European Commission's Labour Force Survey (EU-LFS) microdata matched with sectoral productivity statistics (2000-2020) \u2014 Analyzing panel data from flexible labor markets in Western Europe during the specified temporal scope can isolate the relative impacts of low- vs. high-skilled immigration on output, wages, and employment demand in labor-intensive sectors.",
+        "[PATH:theoretical] Theoretical models of skill complementarity and labor demand (e.g., Ottaviano & Peri, 2012, 'Rethinking the Effect of Immigration on Wages') \u2014 This literature provides a framework to test whether low-skilled immigrants complement native workers and capital in ways that boost productivity and demand more than high-skilled immigrants, especially under labor shortage conditions."
+      ],
+      "scope": {
+        "domain": "macroeconomic effects in labor-intensive sectors"
+      },
+      "qualifier": {
+        "temporal": "during periods of labor shortage and economic expansion (2000\u20132020)",
+        "geographic": "in developed economies with flexible labor markets, such as the United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "low-skilled immigration",
+      "predicate": "increases local demand for manual services more than",
+      "object": "high-skilled immigration, due to higher marginal propensity to consume labor-intensive services",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration high-skilled immigration, due to higher marginal propensity to consume labor-intensive services]",
+        "[PATH:empirical] Household expenditure surveys (e.g., U.S. Consumer Expenditure Survey, UK Living Costs and Food Survey) comparing consumption of manual services (e.g., cleaning, landscaping, food preparation) across income quintiles and by immigrant status \u2014 Directly tests the marginal propensity to consume labor-intensive services among low- vs. high-skilled immigrants, providing micro-level evidence on demand channel.",
+        "[PATH:empirical] Quasi-experimental studies of immigration shocks (e.g., Mariel Boatlift, refugee resettlement waves) that estimate changes in local service sector employment and wages, disaggregated by skill level \u2014 Allows causal identification of differential effects of low- vs. high-skilled immigration on local demand for manual services, controlling for supply-side confounds.",
+        "[PATH:theoretical] General equilibrium models of local labor markets with heterogeneous consumer preferences (e.g., work by Moretti, Ottaviano, or Peri) that simulate consumption spillovers from immigration by skill \u2014 Provides a framework to test whether the hypothesized demand differential is quantitatively significant and robust to endogenous price and wage adjustments."
+      ],
+      "scope": {
+        "domain": "local labor markets with high service demand"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "urban areas in high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "high-skilled immigration",
+      "predicate": "may stimulate economic growth and create more jobs across various sectors than",
+      "object": "low-skilled immigration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high-skilled immigration low-skilled immigration]",
+        "[PATH:empirical] National Bureau of Economic Research (NBER) working papers on immigration and local labor market outcomes, e.g., studies by Peri or Kerr \u2014 These studies use quasi-experimental methods (e.g., shift-share instruments) to compare the effects of high- versus low-skilled immigration on wages, employment, and firm productivity in urbanized developed regions over the past two decades.",
+        "[PATH:literature] Meta-analysis or systematic review in journals like Journal of Economic Literature or Journal of Economic Geography on immigration skill composition and economic growth \u2014 A comprehensive synthesis of existing empirical findings across multiple contexts can clarify whether the hypothesized differential effect holds consistently, given the disputed status and moderate confidence level.",
+        "[PATH:theoretical] Dynamic stochastic general equilibrium (DSGE) model calibrated to a diverse urban economy (e.g., a multi-sector model with skill complementarities) \u2014 A theoretical model can isolate mechanisms (e.g., innovation spillovers from high-skilled workers vs. labor substitution from low-skilled workers) and generate testable predictions about job creation across sectors, helping to confirm or refute the causal logic underlying the hypothesis."
+      ],
+      "scope": {
+        "domain": "local labor markets with diverse economic activities"
+      },
+      "qualifier": {
+        "temporal": "over the past two decades",
+        "geographic": "in urbanized regions of developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "net productivity effects of both immigration types",
+      "predicate": "diverge significantly when the host economy operates below full employment, with high-skilled immigration yielding higher net productivity than low-skilled immigration",
+      "object": "each other",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: net productivity effects of both immigration types each other]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' and subsequent updates using state-level panel data during periods of high unemployment \u2014 Provides quasi-experimental estimates of immigration's wage and productivity effects by skill group, allowing comparison of high- vs. low-skilled impacts under slack labor markets.",
+        "[PATH:theoretical] Dynamic stochastic general equilibrium (DSGE) models with search-and-matching frictions and endogenous capital, calibrated to a representative OECD economy with Keynesian unemployment \u2014 Can simulate short- to medium-run net productivity divergences between skill types under demand-deficient conditions, isolating the mechanism of capital adjustment and multiplier effects.",
+        "[PATH:literature] Peri (2012) 'The Effect of Immigration on Productivity: Evidence from U.S. States' and related meta-analyses differentiating periods of slack vs. tight labor markets \u2014 Offers a comprehensive review of empirical estimates across business cycles, directly testing whether productivity effects diverge by skill level when unemployment is above the natural rate."
+      ],
+      "scope": {
+        "domain": "short-run to medium-run Keynesian unemployment with endogenous capital adjustment"
+      },
+      "qualifier": {
+        "temporal": "short- to medium-run",
+        "geographic": "unspecified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "net productivity effects of skilled immigration",
+      "predicate": "exceed those of unskilled immigration when accounting for fiscal costs and capital dilution",
+      "object": "significantly",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: net productivity effects of skilled immigration significantly]",
+        "[PATH:empirical] Borjas (2014) 'Immigration Economics' and subsequent quasi-experimental studies (e.g., using variation in H-1B caps or refugee quotas) that separately estimate wage and productivity effects of skilled vs. unskilled immigrants, while controlling for capital adjustment and fiscal transfers. \u2014 Directly tests the net productivity differential by comparing long-run labor market outcomes and fiscal contributions across skill groups in flexible labor markets, addressing capital dilution through time-series or cross-regional variation.",
+        "[PATH:theoretical] Computable general equilibrium (CGE) models with endogenous capital accumulation and skill-specific immigration, such as those in Storesletten (2000) or recent OECD fiscal impact simulations, calibrated to advanced economies. \u2014 Simulates the steady-state net effects of skilled vs. unskilled immigration on productivity, accounting for capital dilution and fiscal costs, providing a controlled environment to test the hypothesis under varying assumptions about substitutability and capital adjustment.",
+        "[PATH:literature] Meta-analysis of studies on the fiscal and productivity impacts of immigration by skill level (e.g., National Academies of Sciences, 2017; Dustmann & Frattini, 2014). \u2014 Synthesizes existing empirical and theoretical evidence to assess whether the consensus supports a significant advantage for skilled immigration, while identifying gaps in accounting for long-run capital dynamics and heterogeneous labor markets."
+      ],
+      "scope": {
+        "domain": "long-run general equilibrium with endogenous capital"
+      },
+      "qualifier": {
+        "temporal": "long-run (steady-state)",
+        "geographic": "advanced economies with flexible labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T7 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 37,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}
