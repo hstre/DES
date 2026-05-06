@@ -1,0 +1,422 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "enhance resting energy expenditure by triggering hormonal and metabolic adaptations",
+      "object": "sustained energy expenditure",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols sustained energy expenditure]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "increase resting energy expenditure through elevated norepinephrine and mitochondrial uncoupling",
+      "object": "resting metabolic rate",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols resting metabolic rate]"
+      ],
+      "scope": {
+        "domain": "human metabolism"
+      },
+      "qualifier": {
+        "timeframe": "short-term (first 2 weeks)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "may reduce resting energy expenditure over time due to adaptive thermogenesis and loss of fat-free mass",
+      "object": "sustained energy expenditure",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols sustained energy expenditure]"
+      ],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {
+        "duration": "beyond 8 weeks"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "do not reliably enhance resting energy expenditure beyond caloric restriction alone when total energy intake is matched",
+      "object": "energy expenditure",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols energy expenditure]"
+      ],
+      "scope": {
+        "domain": "controlled feeding studies"
+      },
+      "qualifier": {
+        "condition": "isocaloric comparison"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "suppress resting energy expenditure through reduced norepinephrine and decreased mitochondrial uncoupling",
+      "object": "resting metabolic rate",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols resting metabolic rate]",
+        "[PATH:empirical] Controlled trial measuring 24-hour urinary norepinephrine excretion and RMR via indirect calorimetry in participants following alternate-day fasting vs. daily caloric restriction for \u22658 weeks \u2014 Directly tests the proposed mechanism by quantifying norepinephrine levels (a key sympathetic driver of RMR) alongside RMR changes over a timeframe exceeding 4 weeks, allowing comparison with a standard caloric restriction control to isolate intermittent fasting effects.",
+        "[PATH:empirical] Muscle biopsy analysis of mitochondrial uncoupling protein (UCP2/3) expression and mitochondrial respiration efficiency in human skeletal muscle before and after 4\u20138 weeks of time-restricted feeding \u2014 Evaluates the hypothesized decrease in mitochondrial uncoupling by measuring UCP levels and proton leak in vitro, providing direct cellular evidence for the metabolic suppression pathway proposed in the hypothesis.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies on intermittent fasting and adaptive thermogenesis, including RMR, norepinephrine, and UCP biomarkers \u2014 Aggregates existing evidence from multiple studies to assess the overall trend and effect size of RMR suppression under intermittent fasting, clarifying whether the disputed hypothesis is supported across diverse protocols and populations."
+      ],
+      "scope": {
+        "domain": "human metabolism"
+      },
+      "qualifier": {
+        "timeframe": "long-term (after 4 weeks)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "decrease resting energy expenditure through reduced caloric intake and adaptive thermogenesis",
+      "object": "resting metabolic rate",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols resting metabolic rate]",
+        "[PATH:empirical] Controlled clinical trial comparing resting metabolic rate (RMR) via indirect calorimetry in matched groups following time-restricted feeding (e.g., 16:8) vs. daily caloric restriction for 8 weeks, with standardized energy intake and activity levels. \u2014 Directly tests whether intermittent fasting protocols reduce RMR beyond the effect of caloric restriction alone, isolating adaptive thermogenesis from energy balance.",
+        "[PATH:literature] Systematic review and meta-analysis of longitudinal studies measuring energy expenditure (RMR, total daily energy expenditure) during intermittent fasting interventions \u22654 weeks, with adjustment for fat-free mass changes. \u2014 Synthesizes existing evidence to determine consistency of RMR reduction across studies, addressing sample size limitations and methodological variability.",
+        "[PATH:theoretical] Mechanistic study in humans or animal models examining changes in thyroid hormone levels (T3, T4), sympathetic nervous system activity, and mitochondrial uncoupling proteins during intermittent fasting vs. continuous caloric restriction. \u2014 Tests the underlying biological pathways of adaptive thermogenesis, providing causal evidence for or against the hypothesis that intermittent fasting uniquely suppresses RMR."
+      ],
+      "scope": {
+        "domain": "human metabolism"
+      },
+      "qualifier": {
+        "temporal": "short-term (\u22648 weeks)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "induce a greater reduction in resting energy expenditure per unit of fat-free mass lost compared to continuous caloric restriction",
+      "object": "metabolic efficiency per kilogram of fat-free mass",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols metabolic efficiency per kilogram of fat-free mass]",
+        "[PATH:empirical] Controlled trial comparing REE and DXA-measured FFM changes in IF (e.g., 16:8 or 5:2) vs. continuous caloric restriction over \u226512 weeks, with strict dietary adherence monitoring \u2014 Directly tests the hypothesis by measuring resting energy expenditure per unit of fat-free mass lost, controlling for the known confound of energy deficit magnitude.",
+        "[PATH:literature] Meta-analysis of existing RCTs on intermittent fasting that report REE adjusted for FFM, using individual participant data or subgroup analysis for interventions lasting >8 weeks \u2014 Synthesizes available evidence to determine if the effect is consistently observed across studies, addressing the disputed status with higher statistical power.",
+        "[PATH:theoretical] Mechanistic study examining changes in mitochondrial efficiency or thyroid hormone levels (e.g., T3, rT3) in adipose and muscle tissue under IF vs. continuous restriction, using animal models or human biopsies \u2014 Explores the biological plausibility of differential metabolic adaptation, providing mechanistic support or refutation for the observed REE-FFM relationship."
+      ],
+      "scope": {
+        "domain": "metabolic adaptation mechanisms"
+      },
+      "qualifier": {
+        "duration": "beyond 8 weeks",
+        "comparator": "continuous caloric restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "may actually enhance resting energy expenditure over time due to increased metabolic efficiency and improved fat oxidation",
+      "object": "enhanced energy expenditure",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting protocols enhanced energy expenditure]",
+        "[PATH:empirical] Randomized controlled trial comparing 16:8 intermittent fasting vs. daily calorie restriction over 12 weeks, with doubly labeled water measurement of total energy expenditure and indirect calorimetry for resting energy expenditure \u2014 Directly measures changes in resting energy expenditure over the specified temporal scope, using gold-standard metabolic assessment to confirm or refute the hypothesized increase.",
+        "[PATH:empirical] Longitudinal cohort study of intermittent fasting practitioners (\u22651 year) with repeated measures of resting metabolic rate via metabolic chamber and body composition via DXA \u2014 Captures long-term adaptation beyond 8 weeks in a real-world setting, addressing whether metabolic efficiency and fat oxidation improvements persist and translate to elevated resting energy expenditure.",
+        "[PATH:literature] Systematic review and meta-analysis of existing trials on intermittent fasting and energy expenditure, specifically extracting data on resting energy expenditure and fat oxidation markers (e.g., respiratory exchange ratio) \u2014 Synthesizes available evidence to assess overall effect size and consistency across studies, helping to resolve the disputed status by identifying potential moderators such as protocol type, duration, and population."
+      ],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {
+        "temporal": "over periods exceeding 8 weeks",
+        "geographic": "general population in controlled clinical settings"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "lead to adaptive thermogenesis and loss of fat-free mass that",
+      "object": "reduces resting energy expenditure beyond 8 weeks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting protocols lead to adaptive thermogenesis and loss of fat-free mass that reduces resting energy expenditure beyond 8 weeks in domain 'long-term energy balance']"
+      ],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {
+        "temporal": "beyond 8 weeks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "preserve resting energy expenditure despite adaptive thermogenesis and loss of fat-free mass",
+      "object": "sustained energy expenditure beyond 8 weeks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting protocols preserve resting energy expenditure despite adaptive thermogenesis and loss of fat-free mass sustained energy expenditure beyond 8 weeks in domain 'long-term energy balance']"
+      ],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {
+        "temporal": "beyond 8 weeks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting protocols with high protein intake",
+      "predicate": "attenuate the reduction in resting energy expenditure by preserving fat-free mass",
+      "object": "sustained energy expenditure",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {
+        "duration": "beyond 8 weeks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting protocols",
+      "predicate": "do not significantly impact resting energy expenditure over time",
+      "object": "sustained energy expenditure",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term energy balance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "prevents compensatory eating and maintains adherence such that it sustains weight loss effectiveness beyond one year",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program long-term weight loss maintenance]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "prevents compensatory eating in the first six months",
+      "object": "short-term dietary adherence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program short-term dietary adherence]"
+      ],
+      "scope": {
+        "domain": "short-term adherence mechanisms"
+      },
+      "qualifier": {
+        "temporal": "first six months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "induces metabolic adaptation that undermines long-term weight loss maintenance despite sustained adherence",
+      "object": "long-term weight loss maintenance",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program long-term weight loss maintenance]"
+      ],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {
+        "mechanism": "metabolic compensation"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "A structured behavioral reinforcement program alone",
+      "predicate": "is sufficient to maintain adherence and prevent compensatory eating for weight loss maintenance beyond one year",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: A structured behavioral reinforcement program alone long-term weight loss maintenance]"
+      ],
+      "scope": {
+        "domain": "behavioral intervention without dietary timing component"
+      },
+      "qualifier": {
+        "comparison": "versus combined protocol"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "prevents compensatory eating in the first six months only when reinforcement is delivered immediately after fasting windows",
+      "object": "short-term dietary adherence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program short-term dietary adherence]",
+        "[PATH:empirical] Randomized controlled trial comparing immediate vs. delayed reinforcement after intermittent fasting windows, with daily self-report and objective adherence measures (e.g., continuous glucose monitoring) over six months. \u2014 Directly tests the temporal contingency claim: immediate reinforcement after fasting windows vs. delayed reinforcement, measuring compensatory eating and adherence rates. This would confirm or refute the six-month boundary and the necessity of immediate delivery.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral reinforcement timing in dietary interventions, focusing on studies that include intermittent fasting protocols and report compensatory eating outcomes. \u2014 Synthesizes existing evidence on reinforcement immediacy effects across similar interventions, providing a broader empirical base to assess the hypothesis's plausibility and identify effect moderators (e.g., reinforcement type, fasting duration)."
+      ],
+      "scope": {
+        "domain": "temporal reinforcement effects on adherence"
+      },
+      "qualifier": {
+        "temporal": "first six months of intervention",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "leads to compensatory eating behaviors",
+      "object": "short-term dietary disruption",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program short-term dietary disruption]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with behavioral reinforcement to a control group, measuring daily caloric intake and self-reported compensatory behaviors via ecological momentary assessment during the first 4 weeks. \u2014 Directly tests the hypothesis by capturing real-time compensatory eating patterns and dietary disruption in the specified temporal and geographic scope.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral reinforcement programs combined with dietary restrictions, focusing on adherence and compensatory mechanisms in early intervention phases. \u2014 Synthesizes existing evidence to assess whether compensatory eating is a consistent finding across studies, providing a broader empirical basis to confirm or refute the hypothesis.",
+        "[PATH:theoretical] Theoretical model based on reinforcement sensitivity theory and habituation, predicting that structured reinforcement may paradoxically increase craving-driven compensatory behaviors under short-term dietary disruption. \u2014 Offers a mechanistic explanation for the hypothesized effect, guiding empirical predictions and identifying moderators (e.g., reward sensitivity) that could be tested in future studies."
+      ],
+      "scope": {
+        "domain": "short-term adherence mechanisms"
+      },
+      "qualifier": {
+        "temporal": "during the first 4 weeks of intervention",
+        "geographic": "urban clinical settings in North America"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "produces a greater reduction in resting metabolic rate relative to caloric restriction alone, which fully accounts for the diminished long-term weight loss maintenance",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program long-term weight loss maintenance]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with behavioral reinforcement vs. continuous caloric restriction, measuring resting metabolic rate via indirect calorimetry at multiple time points over 12+ months \u2014 Directly tests the hypothesis by isolating the effect of the combined intervention on metabolic adaptation, with longitudinal RMR measurements to assess whether any greater reduction fully accounts for weight loss maintenance differences.",
+        "[PATH:literature] Systematic review and meta-analysis of studies on intermittent fasting and metabolic compensation, focusing on RMR changes and weight regain trajectories \u2014 Synthesizes existing evidence to determine whether the proposed mechanism (metabolic compensation) is consistently observed across populations and protocols, and whether the effect size is sufficient to explain diminished long-term maintenance.",
+        "[PATH:empirical] Mechanistic study using doubly labeled water and 24-hour whole-room calorimetry to compare energy expenditure components (basal, adaptive thermogenesis, activity) between intermittent fasting with behavioral reinforcement and caloric restriction alone \u2014 Provides precise, comprehensive measurement of metabolic adaptation beyond resting metabolic rate, clarifying whether the hypothesized mechanism is the primary driver or if other factors (e.g., energy intake compensation) contribute."
+      ],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {
+        "mechanism": "metabolic compensation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "enhances metabolic flexibility that supports long-term weight loss maintenance through sustained adherence",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting combined with a structured behavioral reinforcement program long-term weight loss maintenance]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting + behavioral reinforcement vs. continuous caloric restriction on metabolic flexibility (measured via respiratory quotient and glucose tolerance) over 12 months with 6-month follow-up in Western urban populations \u2014 Directly tests the hypothesis by measuring the proposed mechanism (metabolic flexibility) and the primary outcome (long-term weight loss maintenance) under controlled conditions, addressing the temporal and geographic scope.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral reinforcement programs (e.g., self-monitoring, goal-setting, contingency management) in dietary interventions for weight loss maintenance, with subgroup analysis for intermittent fasting protocols \u2014 Synthesizes existing evidence on the isolated and combined effects of behavioral reinforcement and intermittent fasting, helping to confirm or refute the claimed synergistic enhancement of adherence and metabolic flexibility.",
+        "[PATH:empirical] Longitudinal cohort study tracking markers of metabolic flexibility (e.g., fat oxidation rates, insulin sensitivity) and adherence metrics (e.g., dietary logs, app-based tracking) in participants self-selecting intermittent fasting with structured behavioral support \u2014 Provides real-world evidence on sustained adherence and metabolic adaptation outside controlled trial settings, complementing RCT findings and addressing ecological validity for the Western urban population scope."
+      ],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month intervention period with 6-month follow-up",
+        "geographic": "clinical trials in Western urban populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "does not induce significant metabolic adaptation that undermines long-term weight loss maintenance",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting combined with a structured behavioral reinforcement program does not induce significant metabolic adaptation that undermines long-term weight loss maintenance long-term weight loss maintenance in domain 'metabolic adaptation in extended intervention']"
+      ],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month follow-up period",
+        "geographic": "urban clinical trial settings in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "induces metabolic adaptation that undermines long-term weight loss maintenance despite sustained adherence",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting combined with a structured behavioral reinforcement program induces metabolic adaptation that undermines long-term weight loss maintenance despite sustained adherence long-term weight loss maintenance in domain 'metabolic adaptation in extended intervention']"
+      ],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {
+        "temporal": "over 12 to 24 months of continuous intervention",
+        "geographic": "predominantly observed in clinical studies conducted in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "A structured behavioral reinforcement program alone, when paired with explicit temporal self-monitoring of eating windows",
+      "predicate": "is sufficient to maintain adherence and prevent compensatory eating for weight loss maintenance beyond one year",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: A structured behavioral reinforcement program alone, when paired with explicit temporal self-monitoring of eating windows long-term weight loss maintenance]",
+        "[PATH:empirical] Randomized controlled trial comparing a structured behavioral reinforcement program with added temporal self-monitoring (e.g., using a mobile app to log eating windows) versus the same program without temporal self-monitoring, with weight and dietary adherence measured at 12 and 18 months. \u2014 Directly tests the causal effect of temporal self-monitoring on long-term adherence and compensatory eating, providing high-quality evidence for or against the hypothesis.",
+        "[PATH:literature] Systematic review and meta-analysis of time-restricted eating interventions that include behavioral reinforcement components, focusing on adherence rates and weight loss maintenance beyond 12 months. \u2014 Aggregates existing data from multiple studies to assess whether temporal self-monitoring consistently improves long-term outcomes, identifying effect sizes and potential moderators.",
+        "[PATH:theoretical] Theoretical model from behavioral economics: Temporal discounting and habit formation frameworks predict that explicit temporal cues reduce impulsive eating and strengthen routine adherence. \u2014 Provides mechanistic rationale for why temporal self-monitoring might prevent compensatory eating, generating testable predictions and informing study design."
+      ],
+      "scope": {
+        "domain": "behavioral intervention with added self-monitoring of meal timing"
+      },
+      "qualifier": {
+        "comparison": "versus structured behavioral reinforcement alone without temporal self-monitoring"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "A structured behavioral reinforcement program alone",
+      "predicate": "is insufficient to maintain adherence and prevent compensatory eating for weight loss maintenance beyond one year",
+      "object": "long-term weight loss maintenance",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: A structured behavioral reinforcement program alone long-term weight loss maintenance]",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials comparing behavioral weight loss maintenance programs (e.g., lifestyle interventions, reinforcement strategies) with control conditions, specifically analyzing outcomes at 12, 18, and 24 months, with sub-group analysis of compensatory eating behaviors (e.g., dietary disinhibition, binge eating). \u2014 Directly tests whether structured reinforcement alone sustains weight loss beyond one year and whether compensatory eating is a consistent failure mechanism, providing quantitative synthesis across studies.",
+        "[PATH:empirical] Longitudinal cohort study (e.g., using ecological momentary assessment) tracking daily adherence to behavioral reinforcement (e.g., self-monitoring, rewards) and real-time compensatory eating episodes (e.g., high-calorie snacking, meal skipping) in participants who completed a 6-month weight loss program, with follow-up over 18 months. \u2014 Captures temporal dynamics of adherence and compensatory eating in naturalistic settings, allowing causal inference about whether reinforcement alone prevents or fails to prevent compensatory behaviors after one year.",
+        "[PATH:theoretical] Theoretical modeling of behavioral reinforcement and energy homeostasis (e.g., using computational models of reward learning and metabolic adaptation) to simulate long-term weight loss maintenance under varying reinforcement schedules, predicting thresholds where compensatory eating emerges. \u2014 Provides mechanistic understanding of why reinforcement alone may be insufficient, identifying conditions (e.g., habituation, metabolic slowing) that lead to compensatory eating, which can be tested empirically."
+      ],
+      "scope": {
+        "domain": "behavioral intervention without dietary timing component"
+      },
+      "qualifier": {
+        "temporal": "beyond one year",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "induces a greater reduction in resting metabolic rate than caloric restriction alone, but this effect is fully reversed by a concurrent high-protein diet",
+      "object": "long-term weight loss maintenance",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "metabolic adaptation mitigation in extended intervention"
+      },
+      "qualifier": {
+        "mechanism": "dietary protein-induced thermogenesis and muscle preservation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting combined with a structured behavioral reinforcement program",
+      "predicate": "enhances metabolic flexibility and supports long-term weight loss maintenance through adaptive mechanisms",
+      "object": "long-term weight loss maintenance",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "metabolic adaptation in extended intervention"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
