@@ -1,0 +1,427 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Community decision-making dynamics under mod-3 state-transition rules",
+      "predicate": "exhibits a power-law distribution of trajectory lengths before absorption into any attractor, with the exponent scaling inversely with the heterogeneity of initial opinion clusters",
+      "object": "the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Community decision-making dynamics under mod-3 state-transition rules the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While some agent-based models of binary opinion dynamics show power-law decay in consensus times under certain noise regimes, the extension to mod-3 state-transition rules and the specific inverse scaling with cluster heterogeneity remains untested\u2014previous work on multi-state models often yields exponential or stretched-exponential distributions, not pure power laws, and the role of absorbing states in mod-3 systems is poorly characterized."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Community decision-making dynamics under mod-3 state-transition rules",
+      "predicate": "exhibits a power-law distribution of trajectory lengths before absorption into any attractor, with the exponent scaling inversely with the heterogeneity of initial opinion clusters",
+      "object": "the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Community decision-making dynamics under mod-3 state-transition rules the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity]"
+      ],
+      "scope": {
+        "domain": "multi-state opinion dynamics with absorbing states"
+      },
+      "qualifier": {
+        "tension": "This sub-claim retains the core proposition but lowers confidence relative to the original, acknowledging that while plausible, the evidence is currently insufficient."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Trajectory length distributions in mod-3 state-transition systems",
+      "predicate": "follow an exponential or stretched-exponential form, not a pure power law, due to the finite number of absorbing states and the discrete nature of the state space",
+      "object": "the distribution shape of trajectory lengths prior to absorption",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "competing hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Trajectory length distributions in mod-3 state-transition systems the distribution shape of trajectory lengths prior to absorption]"
+      ],
+      "scope": {
+        "domain": "multi-state discrete dynamical systems with few absorbing configurations"
+      },
+      "qualifier": {
+        "tension": "This directly competes with the power-law claim by invoking established results from multi-state models, where exponential cutoffs are typical unless special noise or heterogeneity conditions hold."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is likely non-monotonic or threshold-dependent, rather than strictly inverse, because mod-3 rules can produce intermediate regimes where heterogeneity both accelerates and delays absorption",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "qualifying suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The scaling of trajectory length distribution exponent with initial cluster heterogeneity the functional relationship between exponent and heterogeneity]"
+      ],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {
+        "tension": "This sub-claim does not deny the existence of a scaling relationship but introduces friction by questioning its monotonicity, suggesting the original claim may oversimplify the dependency."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Community decision-making dynamics under mod-3 state-transition rules",
+      "predicate": "exhibits a power-law distribution of trajectory lengths before absorption into any attractor, with the exponent scaling inversely with the heterogeneity of initial opinion clusters",
+      "object": "the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity, but only when the initial cluster heterogeneity exceeds a critical threshold of 0.4 (measured by entropy of cluster sizes)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Community decision-making dynamics under mod-3 state-transition rules the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity, but only when the initial cluster heterogeneity exceeds a critical threshold of 0.4 (measured by entropy of cluster sizes)]",
+        "[PATH:empirical] Systematic Monte Carlo study varying initial cluster entropy from 0.2 to 0.8 in increments of 0.05, with 10,000 runs per entropy level, to precisely locate the threshold and measure the power-law exponent scaling \u2014 Directly tests the claimed critical threshold at 0.4 and the inverse scaling of the exponent with heterogeneity, providing high-resolution data to confirm or refute both the threshold and the scaling relationship.",
+        "[PATH:theoretical] Analytical derivation of the trajectory length distribution for mod-3 state-transition rules using mean-field or Markov chain approaches, focusing on the role of initial cluster entropy \u2014 A theoretical model can establish whether a power-law distribution and a critical threshold are mathematically necessary consequences of the dynamics, or whether the observed pattern is an artifact of finite simulation runs."
+      ],
+      "scope": {
+        "domain": "multi-state opinion dynamics with absorbing states"
+      },
+      "qualifier": {
+        "temporal": "simulated over 10,000 Monte Carlo runs with random initial conditions",
+        "geographic": "abstract computational model, not tied to any specific geographic region"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Community decision-making dynamics under mod-3 state-transition rules",
+      "predicate": "does not exhibit a power-law distribution of trajectory lengths before absorption into any attractor",
+      "object": "the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Community decision-making dynamics under mod-3 state-transition rules the claimed statistical relationship between trajectory length distribution and initial cluster heterogeneity]",
+        "[PATH:empirical] Conduct agent-based simulations varying initial cluster heterogeneity (e.g., entropy of initial state distribution) under mod-3 state-transition rules, and compute the trajectory length distribution before absorption. Fit power-law, exponential, and log-normal models to test which best describes the distribution. \u2014 Directly tests the claimed relationship by generating synthetic data under controlled conditions, allowing statistical comparison of distribution shapes as a function of heterogeneity.",
+        "[PATH:literature] Survey existing literature on transient dynamics in multi-state opinion models (e.g., voter model, majority rule, or Potts-like models) for evidence of power-law or non-power-law behavior in absorption times, especially with mod-3 or cyclic transition rules. \u2014 Provides theoretical context and prior results that may support or contradict the hypothesis, helping to identify whether power-law distributions are typical in such systems or if heterogeneity effects are spurious."
+      ],
+      "scope": {
+        "domain": "multi-state opinion dynamics with absorbing states"
+      },
+      "qualifier": {
+        "temporal": "during the transient phase prior to attractor absorption",
+        "geographic": "within simulated multi-agent communities under mod-3 state-transition rules"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is governed by a sharp threshold at a critical heterogeneity value, below which the exponent increases monotonically and above which it decreases monotonically, due to competing mechanisms of local synchronization and global metastability",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The scaling of trajectory length distribution exponent with initial cluster heterogeneity the functional relationship between exponent and heterogeneity]",
+        "[PATH:empirical] Systematic simulation sweep of initial cluster heterogeneity (e.g., via controlled variation of cluster size variance or connectivity patterns) in mod-3 state-transition dynamics, measuring trajectory length distribution exponent up to 10^5 time steps \u2014 Directly tests the hypothesized threshold and monotonicity by generating fine-grained data across heterogeneity values, allowing detection of a sharp transition and the sign of exponent change.",
+        "[PATH:theoretical] Analytical mean-field or renormalization group model of competing synchronization and metastability mechanisms in clustered mod-3 systems, deriving predicted functional form of exponent vs. heterogeneity \u2014 Provides a formal framework to predict whether the threshold and monotonicity arise from first principles, enabling comparison with simulation results and establishing causal mechanisms.",
+        "[PATH:literature] Existing literature on trajectory length distributions in non-equilibrium systems with clustered initial conditions (e.g., studies on spin models, coupled map lattices, or cellular automata with mod-3 rules) \u2014 Contextualizes the hypothesis by identifying similar scaling behaviors and thresholds in related systems, supporting or refuting the generality of the proposed relationship."
+      ],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {
+        "temporal": "for simulation time steps up to 10^5",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is strictly inverse and monotonic, as mod-3 rules consistently demonstrate that increased heterogeneity always accelerates absorption without intermediate regimes",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The scaling of trajectory length distribution exponent with initial cluster heterogeneity the functional relationship between exponent and heterogeneity]",
+        "[PATH:empirical] Systematic simulation study varying initial cluster heterogeneity in mod-3 cellular automata across multiple random seeds and lattice sizes, measuring trajectory length distribution exponents via maximum likelihood estimation \u2014 Directly tests the claimed strict inverse monotonic relationship by generating controlled data under the exact domain conditions, allowing detection of any intermediate regimes or non-monotonic behavior.",
+        "[PATH:theoretical] Analytical derivation of the relationship between initial cluster heterogeneity and absorption time distributions in mod-3 dynamics using mean-field approximations or renormalization group methods \u2014 Provides a formal proof or refutation of the monotonic inverse scaling, clarifying whether the exponent must strictly decrease with heterogeneity or if counterexamples exist.",
+        "[PATH:literature] Review of prior literature on phase transitions in mod-3 rule systems, particularly studies on absorbing states and cluster size distributions (e.g., Wolfram's Class III/IV dynamics, directed percolation analogies) \u2014 Contextualizes the hypothesis within existing knowledge, potentially revealing documented cases where heterogeneity effects are non-monotonic or where exponents saturate, challenging the claimed strict inverse relationship."
+      ],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {
+        "temporal": "during the observation period of simulated mod-3 dynamics",
+        "geographic": "in computational environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is strictly inverse, such that greater heterogeneity always reduces the exponent in mod-3 dynamics",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The scaling of trajectory length distribution exponent with initial cluster heterogeneity is strictly inverse, such that greater heterogeneity always reduces the exponent in mod-3 dynamics the functional relationship between exponent and heterogeneity in domain 'mod-3 state-transition dynamics with clustered initial conditions']"
+      ],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {
+        "temporal": "for simulations conducted between 2020 and 2024",
+        "geographic": "observed in computational models without geographic variation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is non-monotonic or threshold-dependent, with intermediate regimes where heterogeneity both accelerates and delays absorption in mod-3 dynamics",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The scaling of trajectory length distribution exponent with initial cluster heterogeneity is non-monotonic or threshold-dependent, with intermediate regimes where heterogeneity both accelerates and delays absorption in mod-3 dynamics the functional relationship between exponent and heterogeneity in domain 'mod-3 state-transition dynamics with clustered initial conditions']"
+      ],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {
+        "temporal": "during simulation runs with fixed initial cluster configurations and finite observation horizons",
+        "geographic": "in computational models with no spatial embedding"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is actually U-shaped, with the exponent minimized at intermediate heterogeneity due to competing effects of local synchronization and global frustration",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The scaling of trajectory length distribution exponent with initial cluster heterogeneity",
+      "predicate": "is strictly inverse, as increasing heterogeneity consistently leads to a decrease in the trajectory length distribution exponent",
+      "object": "the functional relationship between exponent and heterogeneity",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "mod-3 state-transition dynamics with clustered initial conditions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
