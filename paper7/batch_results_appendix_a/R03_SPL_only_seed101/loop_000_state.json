@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "immigration",
+      "predicate": "reduces wages for native workers",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "varies by skill level and local labor market conditions",
+        "temporal_scope": "short-term vs. long-term effects remain contested"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "reduces wages for low-skilled native workers",
+      "object": "low-skilled native workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers low-skilled native workers]"
+      ],
+      "scope": {
+        "domain": "short-term, local labor markets with high substitutability"
+      },
+      "qualifier": {
+        "effect_size": "small to moderate, typically found in panel studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers overall via complementarity and demand effects",
+      "object": "native workers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers]"
+      ],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies"
+      },
+      "qualifier": {
+        "mechanism": "skill complementarity, innovation, and increased consumer demand"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "reduces wages for low-skilled native workers only in labor markets with weak minimum wage enforcement",
+      "object": "low-skilled native workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers low-skilled native workers]",
+        "[PATH:empirical] Meta-analysis of minimum wage enforcement effects on local labor markets (e.g., studies using variation in state-level enforcement intensity in the U.S.) \u2014 Provides direct evidence on how weak vs. strong enforcement moderates the wage impact of low-skilled immigration, testing the conditional effect stated in the hypothesis.",
+        "[PATH:empirical] Quasi-experimental studies using spatial variation in immigration shocks (e.g., the Mariel Boatlift or refugee resettlement) interacted with local minimum wage enforcement indices \u2014 Allows causal identification of the conditional wage effect by comparing labor markets with differing enforcement levels before and after immigration inflows.",
+        "[PATH:theoretical] Theoretical labor market models with monopsony power and minimum wage non-compliance (e.g., search-and-matching models with heterogeneous enforcement) \u2014 Formalizes the mechanism linking enforcement weakness to wage reductions, clarifying scope conditions and providing testable predictions for empirical work."
+      ],
+      "scope": {
+        "domain": "short-term, local labor markets with high substitutability and weak minimum wage enforcement"
+      },
+      "qualifier": {
+        "effect_size": "moderate, conditional on enforcement level"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "creates additional demand for goods and services",
+      "object": "local economy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers local economy]",
+        "[PATH:empirical] Local business revenue and employment data from high-immigration urban areas (e.g., U.S. Census Bureau, Quarterly Workforce Indicators) matched with immigration inflow rates over 1-2 year periods \u2014 Directly tests whether increases in low-skilled immigration correlate with rises in local goods and services demand, as measured by business revenues and non-tradable sector employment, within the specified short-term temporal and geographic scope.",
+        "[PATH:literature] Meta-analysis of natural experiments on low-skilled immigration shocks (e.g., the Mariel Boatlift study or refugee resettlement programs) focusing on local consumption multipliers \u2014 Synthesizes existing causal evidence to assess whether demand creation is robust across contexts, addressing the disputed status and moderate confidence of the hypothesis through aggregated effect sizes and heterogeneity analysis.",
+        "[PATH:theoretical] Input-output model simulation of a local economy with low-skilled immigration, incorporating household consumption patterns and labor market dynamics \u2014 Provides a formal framework to isolate the demand-side effect from supply-side wage or displacement effects, clarifying mechanisms under controlled assumptions specific to short-term local labor markets."
+      ],
+      "scope": {
+        "domain": "short-term, local labor markets"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1-2 years)",
+        "geographic": "local labor markets in high-immigration urban areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases wages for native workers overall via complementarity and demand effects, but only when the destination metropolitan area has a pre-existing high level of innovation output",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers]",
+        "[PATH:empirical] Quasi-experimental analysis of H-1B visa lottery outcomes across U.S. metropolitan areas, stratified by pre-existing patenting rates per capita \u2014 Provides causal identification of high-skilled immigration effects on native wages, allowing direct comparison of treatment effects in high- vs. low-innovation metros, testing the hypothesized interaction.",
+        "[PATH:theoretical] Structural estimation of a dynamic spatial equilibrium model with heterogeneous firms and worker skill types, calibrated to U.S. patent data and local labor markets \u2014 Enables simulation of counterfactual immigration shocks under different regional innovation levels, isolating complementarity and demand mechanisms vs. congestion effects, and testing robustness of the conditional prediction.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on high-skilled immigration and native wages, coding studies by metropolitan innovation intensity (e.g., patent counts, R&D employment share) \u2014 Synthesizes disparate findings to assess whether the conditional effect is consistently observed across contexts, identifying potential publication bias or moderating variables."
+      ],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies with high patenting rates"
+      },
+      "qualifier": {
+        "mechanism": "innovation complementarity and consumer demand are amplified in already innovative regions, whereas in low-innovation regions, high-skilled immigration may suppress wages due to labor market congestion"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases wages for native workers overall due to increased competition for jobs",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers native workers]",
+        "[PATH:empirical] Borjas (2003) 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market' \u2014 This seminal paper provides a framework for estimating the wage effects of immigration on native workers, including high-skilled immigrants, using cross-metropolitan area data over time. It can help test whether increased competition from high-skilled immigrants reduces native wages in major U.S. metropolitan areas over a 10-year period.",
+        "[PATH:empirical] Peri, G. (2012) 'The Effect of Immigration on Productivity: Evidence from U.S. States' \u2014 This study examines how high-skilled immigration affects productivity and wages in dynamic metropolitan economies, finding potential complementarities rather than pure competition. It offers a counterpoint to the displacement hypothesis and can help assess whether wage decreases occur in the long term.",
+        "[PATH:literature] Kerr, S. P., & Kerr, W. R. (2011) 'Economic Impacts of Immigration: A Survey' \u2014 This comprehensive survey synthesizes evidence on high-skilled immigration's effects on native wages, including both displacement and positive spillover channels. It can clarify the disputed status by highlighting conditions under which wage decreases or increases are observed in metropolitan labor markets."
+      ],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies"
+      },
+      "qualifier": {
+        "temporal": "over a 10-year period",
+        "geographic": "major U.S. metropolitan areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "raises wages for native workers overall through complementarity and demand effects",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers raises wages for native workers overall through complementarity and demand effects native workers in domain 'long-term, dynamic metropolitan economies']"
+      ],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies"
+      },
+      "qualifier": {
+        "temporal": "over the long term (multiple decades)",
+        "geographic": "within dynamic metropolitan economies in high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "depresses wages for competing native workers due to increased labor supply",
+      "object": "native workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers depresses wages for competing native workers due to increased labor supply native workers in domain 'long-term, dynamic metropolitan economies']"
+      ],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States metropolitan statistical areas with population > 1 million"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "immigration of high-skilled workers into metropolitan areas with initially low levels of innovation activity",
+      "predicate": "depresses wages for native low-skilled workers due to increased housing costs and labor market crowding in non-tradable services",
+      "object": "native low-skilled workers",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "short- to medium-term, low-innovation metropolitan economies"
+      },
+      "qualifier": {
+        "mechanism": "housing cost inflation, displacement of low-skilled labor into service sectors, and reduced relative bargaining power"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases wages for native workers by increasing competition for high-paying jobs",
+      "object": "native workers",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term, dynamic metropolitan economies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 31,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
