@@ -1,0 +1,393 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines",
+      "object": "the eventual invariant subspace of T(n) if and only if the transient mixing between residue classes is bounded by a fixed number of steps that depends only on the initial class",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the eventual invariant subspace of T(n) if and only if the transient mixing between residue classes is bounded by a fixed number of steps that depends only on the initial class]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines",
+      "object": "the eventual invariant subspace of T(n) after a bounded number of steps that is uniform across all residue classes",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the eventual invariant subspace of T(n) after a bounded number of steps that is uniform across all residue classes]"
+      ],
+      "scope": {
+        "domain": "modular dynamics of T(n)"
+      },
+      "qualifier": {
+        "uniformity": "global bound independent of class"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "affects",
+      "object": "the length of transient mixing before reaching an invariant subspace, but this length grows without bound for at least one residue class",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the length of transient mixing before reaching an invariant subspace, but this length grows without bound for at least one residue class]"
+      ],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {
+        "bound_type": "class-dependent and possibly unbounded"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines",
+      "object": "a distinct finite set of transient states before entering the invariant subspace, with the set size varying by residue class",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 a distinct finite set of transient states before entering the invariant subspace, with the set size varying by residue class]",
+        "[PATH:empirical] Systematic computational enumeration of trajectories for T(n) over a wide range of initial n (e.g., n up to 10^6), recording transient lengths and set sizes for each residue class modulo 3. \u2014 Direct simulation can reveal whether the transient set sizes are indeed distinct and finite per residue class, and whether any exceptions occur, thereby confirming or refuting the hypothesized deterministic dependence.",
+        "[PATH:theoretical] Analytical derivation of the dynamics of T(n) using modular arithmetic and symbolic dynamics, focusing on the mapping of residues modulo 3 under iteration. \u2014 A rigorous proof that transient sets are finite and their sizes depend only on n mod 3 would confirm the hypothesis; conversely, showing that the transient structure is independent of the residue class or that infinite transients exist would refute it.",
+        "[PATH:literature] Review of existing literature on Collatz-like functions and modular dynamics, particularly studies that characterize transient behavior or invariant subspaces in such systems. \u2014 Prior work may have already established or disproven similar claims, providing a basis for comparison or suggesting specific counterexamples that could test the hypothesis without requiring new computation."
+      ],
+      "scope": {
+        "domain": "modular dynamics of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all natural numbers n",
+        "geographic": "within the standard arithmetic domain of the Collatz-like function T(n)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "does not determine",
+      "object": "the eventual invariant subspace of T(n) after a bounded number of steps",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the eventual invariant subspace of T(n) after a bounded number of steps]",
+        "[PATH:empirical] Exhaustive computational enumeration of T(n) trajectories for n up to a large bound (e.g., 10^6) across all residue classes modulo 3, recording the number of steps to reach a fixed point or cycle and the invariant subspace (e.g., the set of values visited after the transient). \u2014 If the invariant subspace after a bounded number of steps (e.g., within some fixed k) varies systematically with the residue class modulo 3, that would refute the hypothesis; if it is invariant across classes, that would support the hypothesis. The boundedness condition requires checking whether the number of steps to converge is independent of the residue class.",
+        "[PATH:theoretical] Theoretical analysis of the algebraic structure of T(n) as a function of n mod 3, using techniques from modular arithmetic and dynamical systems (e.g., constructing a conjugacy or reduction mapping that shows the eventual dynamics are independent of the initial residue class). \u2014 A proof that the eventual invariant subspace (e.g., the attractor) is determined solely by properties invariant under the map T, and that the residue class modulo 3 is not such a property, would confirm the hypothesis. Conversely, a counterexample proof showing that different residues lead to different attractors would refute it.",
+        "[PATH:literature] Literature review of known results on the dynamics of piecewise linear maps similar to T(n) (e.g., the 3x+1 problem, Collatz-like functions) focusing on the role of initial residue classes modulo small primes in determining eventual behavior. \u2014 Existing studies may have already addressed whether modulo 3 class predicts the eventual cycle or fixed point under such maps. If prior work shows a dependence, it would refute the hypothesis; if independence is established, it would confirm. This provides a quicker path than new computation or theory."
+      ],
+      "scope": {
+        "domain": "modular dynamics of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all initial n at any step count"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines",
+      "object": "whether the transient length grows linearly, polynomially, or super-exponentially in n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 whether the transient length grows linearly, polynomially, or super-exponentially in n]",
+        "[PATH:theoretical] Rigorous asymptotic analysis of the recursion T(n) = T(\u230an/3\u230b) + T(\u230a2n/3\u230b) + O(1) (or similar divide-and-conquer recurrence) with case analysis on n mod 3 to derive closed-form growth rates for transient lengths. \u2014 Provides a formal derivation of whether the transient length scales linearly, polynomially, or super-exponentially depending on the residue class, directly testing the hypothesis.",
+        "[PATH:empirical] Large-scale computational experiments with n sampled uniformly from each residue class modulo 3 (e.g., n up to 10^6 or more), recording transient lengths and fitting growth models to distinguish linear, polynomial, and super-exponential regimes. \u2014 Empirical data can reveal clear patterns or disprove the hypothesis if no consistent relationship between residue class and growth rate is observed.",
+        "[PATH:literature] Review of known results on the transient behavior of the 3x+1-like function T(n) (e.g., Collatz-type maps) and similar piecewise linear maps, focusing on modular constraints and asymptotic growth rates. \u2014 Existing literature may already contain theorems or counterexamples that confirm or refute the claim, saving effort and providing theoretical grounding."
+      ],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for n sufficiently large"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "does not affect",
+      "object": "the length of transient mixing before reaching an invariant subspace, and this length remains bounded for all residue classes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the length of transient mixing before reaching an invariant subspace, and this length remains bounded for all residue classes]",
+        "[PATH:empirical] Systematic computational experiments on the Collatz-like map T(n) for n in each residue class modulo 3, tracking transient lengths up to large n (e.g., n up to 10^9) to detect any systematic dependence or unbounded growth. \u2014 Direct simulation can reveal whether transient lengths differ systematically by residue class or remain bounded, providing empirical confirmation or counterexample.",
+        "[PATH:theoretical] Theoretical analysis of the dynamics of T(n) using linear algebra on the space of 3-adic integers or via Markov chain models on congruence classes, aiming to prove that transient length is uniformly bounded regardless of starting residue. \u2014 A rigorous proof or disproof of boundedness would resolve the hypothesis; such analysis can exploit invariant measures or contraction properties of the map.",
+        "[PATH:literature] Literature review of known results on transient behavior in generalized Collatz problems, particularly those analyzing dependence on initial residue classes (e.g., work by Lagarias, Terras, or Applegate). \u2014 Existing theorems or counterexamples from related maps may provide direct evidence or methodological insights applicable to this hypothesis."
+      ],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "affects",
+      "object": "the length of transient mixing before reaching an invariant subspace, and this length grows without bound for at least one residue class",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the congruence class of an initial natural number n modulo 3 affects the length of transient mixing before reaching an invariant subspace, and this length grows without bound for at least one residue class in domain 'asymptotic transient behavior of T(n)']"
+      ],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "does not affect",
+      "object": "the length of transient mixing before reaching an invariant subspace, or if it does, the length remains bounded for all residue classes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the congruence class of an initial natural number n modulo 3 does not affect the length of transient mixing before reaching an invariant subspace, or if it does, the length remains bounded for all residue classes in domain 'asymptotic transient behavior of T(n)']"
+      ],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines",
+      "object": "whether the transient length is bounded or unbounded, with n \u2261 1 mod 3 yielding unbounded transient length",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "does not affect",
+      "object": "the length of transient mixing before reaching an invariant subspace, and this length does not grow without bound for any residue class",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "asymptotic transient behavior of T(n)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}

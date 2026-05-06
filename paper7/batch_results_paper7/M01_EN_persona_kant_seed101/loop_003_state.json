@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines the invariant subspaces of the recursive map T(n) such that",
+      "object": "the long-term trajectories of numbers in each residue class are confined to distinct, non-overlapping subsets of the natural numbers",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the long-term trajectories of numbers in each residue class are confined to distinct, non-overlapping subsets of the natural numbers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines the invariant subspaces of the recursive map T(n) such that",
+      "object": "the long-term trajectories of numbers in each residue class are confined to distinct, non-overlapping subsets of the natural numbers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the long-term trajectories of numbers in each residue class are confined to distinct, non-overlapping subsets of the natural numbers]"
+      ],
+      "scope": {
+        "domain": "all natural numbers under iteration of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all n in \u2115 under iteration of T(n) as t \u2192 \u221e",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "only partially constrains the invariant subspaces of T(n) because",
+      "object": "transient mixing between residue classes can occur before trajectories settle into distinct subsets, blurring strict confinement",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 transient mixing between residue classes can occur before trajectories settle into distinct subsets, blurring strict confinement]"
+      ],
+      "scope": {
+        "domain": "natural numbers with small initial values or under specific T(n) definitions"
+      },
+      "qualifier": {
+        "condition": "if T(n) includes operations that temporarily break modulo-3 invariance"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "may not determine invariant subspaces at all because",
+      "object": "the recursive map T(n) could exhibit ergodic behavior across residue classes for certain parameterizations",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the recursive map T(n) could exhibit ergodic behavior across residue classes for certain parameterizations]"
+      ],
+      "scope": {
+        "domain": "alternative formulations of T(n) not yet fully analyzed"
+      },
+      "qualifier": {
+        "condition": "if T(n) is nonlinear and includes feedback from previous iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the congruence class of an initial natural number n modulo 9",
+      "predicate": "refines the invariant subspaces such that",
+      "object": "the long-term trajectories of numbers in each residue class modulo 3 split into three further disjoint subsets corresponding to their residue modulo 9",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 9 the long-term trajectories of numbers in each residue class modulo 3 split into three further disjoint subsets corresponding to their residue modulo 9]",
+        "[PATH:empirical] Computational verification for all n up to a large bound (e.g., 10^9) under iteration of T(n), recording long-term residue modulo 9 for each starting residue modulo 3, and testing whether each mod-3 class splits into three disjoint mod-9 classes. \u2014 Direct simulation can confirm or refute the splitting property statistically; large-scale computation provides empirical evidence for or against the hypothesis.",
+        "[PATH:theoretical] Analytical study of the dynamics of T(n) in terms of base-9 representation, possibly using modular arithmetic to derive invariant conditions linking the initial mod-9 residue to the eventual mod-9 cycle or fixed point. \u2014 A theoretical proof that the mod-9 residue determines the long-term mod-3 trajectory splitting would confirm the hypothesis; conversely, a counterexample or proof of no such splitting would refute it.",
+        "[PATH:literature] Survey of literature on the Collatz-like function T(n) and its modular invariants, particularly studies on mod 3 and mod 9 behavior, such as work by Terras, Lagarias, or others on 3x+1 variants. \u2014 Existing results may already address or imply the splitting property, providing a foundation or contradiction to the hypothesis without requiring new computation."
+      ],
+      "scope": {
+        "domain": "all natural numbers under iteration of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all n in \u2115 under iteration of T(n) as t \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "does not determine any invariant subspaces of the recursive map T(n) such that",
+      "object": "the long-term trajectories of numbers in each residue class overlap significantly across subsets of the natural numbers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 the long-term trajectories of numbers in each residue class overlap significantly across subsets of the natural numbers]",
+        "[PATH:empirical] Large-scale computational simulation of T(n) across multiple residue classes modulo 3, tracking long-term trajectory overlap via statistical measures (e.g., Jaccard similarity of visited sets). \u2014 Direct empirical test: if trajectories from different residue classes converge to overlapping sets, the hypothesis is supported; if they remain segregated, it is refuted.",
+        "[PATH:theoretical] Analytical derivation of invariant subspaces under T(n) based on modular arithmetic and dynamical systems theory, focusing on the action of T on congruence classes. \u2014 A formal proof that certain residue classes map to disjoint invariant sets would refute the hypothesis; a proof of mixing or overlap would confirm it.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps and modular invariants (e.g., work by Lagarias, Terras, or Allouche) to see if analogous maps exhibit residue-class-dependent invariant subspaces. \u2014 Existing theoretical frameworks may already classify when congruence classes determine invariant subspaces, providing indirect evidence for or against the hypothesis."
+      ],
+      "scope": {
+        "domain": "all natural numbers under iteration of T(n)"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain under arbitrary finite iteration steps"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "entirely determines the eventual invariant subspace of T(n) when",
+      "object": "T(n) is restricted to operations that preserve modulo-3 congruence at every step, eliminating transient mixing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 T(n) is restricted to operations that preserve modulo-3 congruence at every step, eliminating transient mixing]",
+        "[PATH:empirical] Computational exploration of all n up to a large bound (e.g., 10^6) under the modified T(n) that enforces strict modulo-3 invariance, tracking the eventual invariant subspace dimension or structure per initial congruence class \u2014 Systematic simulation can directly test whether initial n mod 3 uniquely determines the invariant subspace, revealing any counterexamples or confirming the pattern across a broad range.",
+        "[PATH:theoretical] Algebraic analysis of the transformation T(n) as a linear operator on a vector space over GF(3), with the constraint that each step preserves congruence class, deriving the invariant subspace decomposition from the initial state's congruence \u2014 A formal proof or disproof using modular arithmetic and linear algebra would establish the hypothesis's validity independent of computational limits, clarifying the structural dependency."
+      ],
+      "scope": {
+        "domain": "natural numbers under a modified T(n) definition that enforces strict modulo-3 invariance"
+      },
+      "qualifier": {
+        "temporal": "for all n at the initial step of the process",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "fully determines the invariant subspaces of T(n) because",
+      "object": "strict confinement is maintained, ensuring no mixing between residue classes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the congruence class of an initial natural number n modulo 3 strict confinement is maintained, ensuring no mixing between residue classes]",
+        "[PATH:empirical] Exhaustive computational experiment tracking invariant subspaces for all n \u2264 1000 under the standard Collatz-like T(n) definition, with rigorous statistical testing for mixing between residue classes modulo 3. \u2014 Directly tests the hypothesis within the stated scope; any violation (e.g., a trajectory crossing from one residue class to another) would refute strict confinement, while consistent confinement would support it.",
+        "[PATH:theoretical] Theoretical analysis of the dynamical system defined by T(n) = n/3 if n \u2261 0 mod 3, else T(n) = (2n \u00b1 1)/3 (or similar), proving or disproving that the map preserves the mod-3 residue class for all n. \u2014 A rigorous proof or counterexample would settle the claim beyond the limited empirical scope, clarifying whether the observed pattern is a general property or an artifact of small n.",
+        "[PATH:literature] Literature review of known results on invariant subspaces in Collatz-like functions, particularly studies on modular constraints (e.g., work by Lagarias, Terras, or others on mod-3 dynamics). \u2014 Existing research may already address or refute this hypothesis, providing a foundation for confirming or challenging the claim without starting from scratch."
+      ],
+      "scope": {
+        "domain": "natural numbers with small initial values or under specific T(n) definitions"
+      },
+      "qualifier": {
+        "temporal": "for initial n \u2264 1000 in the standard Collatz-like T(n) definition",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "fully determines the invariant subspaces of T(n) and prohibits any transient mixing between residue classes because",
+      "object": "the dynamics of T(n) preserve modulo-3 congruence at every step, ensuring strict confinement to a single residue class",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the congruence class of an initial natural number n modulo 3 fully determines the invariant subspaces of T(n) and prohibits any transient mixing between residue classes because the dynamics of T(n) preserve modulo-3 congruence at every step, ensuring strict confinement to a single residue class in domain 'natural numbers with small initial values or under specific T(n) definitions']"
+      ],
+      "scope": {
+        "domain": "natural numbers with small initial values or under specific T(n) definitions"
+      },
+      "qualifier": {
+        "temporal": "for all time steps t \u2265 0",
+        "geographic": "applicable to all geographic regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "only partially constrains the invariant subspaces of T(n) because",
+      "object": "transient mixing between residue classes can occur before trajectories settle into distinct subsets, blurring strict confinement",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the congruence class of an initial natural number n modulo 3 only partially constrains the invariant subspaces of T(n) because transient mixing between residue classes can occur before trajectories settle into distinct subsets, blurring strict confinement in domain 'natural numbers with small initial values or under specific T(n) definitions']"
+      ],
+      "scope": {
+        "domain": "natural numbers with small initial values or under specific T(n) definitions"
+      },
+      "qualifier": {
+        "temporal": "during transient dynamics prior to trajectory stabilization"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "determines the eventual invariant subspace of T(n) if and only if",
+      "object": "the transient mixing between residue classes is bounded by a fixed number of steps that depends only on the initial class",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "natural numbers under a T(n) definition that includes a reset operation after a bounded number of steps"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the congruence class of an initial natural number n modulo 3",
+      "predicate": "completely determines the invariant subspaces of T(n) because",
+      "object": "any operations in T(n) that temporarily break modulo-3 invariance ultimately converge back to predictable sets defined by residue classes, maintaining strict confinement",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all natural numbers and any T(n) definitions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
