@@ -1,0 +1,510 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "is a valid proxy for",
+      "object": "material living standards in industrialized economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in industrialized economies]"
+      ],
+      "scope": {
+        "domain": "economics",
+        "temporal": "short-term (1-5 years)",
+        "geographic": "OECD countries"
+      },
+      "qualifier": {
+        "condition": "when measured in purchasing power parity (PPP) terms"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP growth",
+      "predicate": "often correlates negatively with",
+      "object": "subjective wellbeing in post-scarcity societies",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing in post-scarcity societies]"
+      ],
+      "scope": {
+        "domain": "behavioral economics",
+        "temporal": "long-term (decades)",
+        "geographic": "high-income nations"
+      },
+      "qualifier": {
+        "caveat": "particularly beyond a threshold of ~$75,000 annual income per capita"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "non-market contributions to wellbeing (e.g., unpaid care work, ecosystem services)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market contributions to wellbeing (e.g., unpaid care work, ecosystem services)]"
+      ],
+      "scope": {
+        "domain": "social welfare measurement",
+        "temporal": "all timeframes"
+      },
+      "qualifier": {
+        "perspective": "feminist economics and ecological economics"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita (PPP) in OECD countries",
+      "predicate": "systematically overestimates",
+      "object": "material living standards for the bottom 40% of income earners",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita (PPP) in OECD countries material living standards for the bottom 40% of income earners]",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) and National Accounts: Compare household disposable income shares for bottom 40% with GDP per capita trends across OECD countries (2000-2023). \u2014 Directly tests whether GDP per capita growth diverges from income growth for the bottom 40%, providing cross-country panel data to confirm or refute systematic overestimation.",
+        "[PATH:empirical] World Bank's Global Consumption and Income Project (GCIP) microdata: Analyze consumption-based living standards for bottom 40% relative to GDP per capita. \u2014 Consumption data better captures material living standards than income, and GCIP offers long-run harmonized microdata to assess the gap with GDP per capita.",
+        "[PATH:theoretical] Literature on 'GDP and well-being' (e.g., Stiglitz-Sen-Fitoussi Commission, OECD Better Life Index): Review theoretical critiques and empirical studies on GDP per capita as a proxy for median or lower-tail welfare. \u2014 Establishes the conceptual framework and prior empirical findings on why GDP per capita may overstate living standards for the bottom 40%, guiding hypothesis refinement."
+      ],
+      "scope": {
+        "domain": "economics"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "fails to capture",
+      "object": "material living standards in industrialized economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in industrialized economies]",
+        "[PATH:empirical] OECD Better Life Index and national accounts microdata (e.g., household disposable income, consumption, wealth decomposition) \u2014 Directly tests whether GDP per capita diverges from multidimensional measures of material living standards (e.g., median income, consumption bundles, housing quality) in OECD countries post-2000.",
+        "[PATH:empirical] Comparative studies of subjective well-being and GDP per capita (e.g., Easterlin Paradox updates, World Happiness Report panel data) \u2014 Provides evidence on whether GDP per capita fails to capture perceived material living standards, as subjective well-being often decouples from GDP growth in wealthy economies.",
+        "[PATH:theoretical] Theoretical work on 'beyond GDP' indicators (e.g., Stiglitz-Sen-Fitoussi Commission, Dasgupta Review on inclusive wealth) \u2014 Establishes conceptual frameworks for why GDP per capita omits depreciation of capital, distributional effects, and non-market services, which are critical for material living standards in industrialized contexts."
+      ],
+      "scope": {
+        "domain": "economics"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "increases the prevalence of social comparison anxiety",
+      "object": "which mediates the negative correlation with subjective wellbeing in post-scarcity societies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth which mediates the negative correlation with subjective wellbeing in post-scarcity societies]",
+        "[PATH:empirical] Longitudinal panel studies tracking subjective wellbeing and social comparison anxiety across GDP growth phases in post-scarcity economies (e.g., Nordic countries, Switzerland) \u2014 Directly tests whether rising GDP correlates with increased social comparison anxiety and reduced wellbeing, using within-country time-series data to isolate the mechanism beyond the $75,000 threshold.",
+        "[PATH:empirical] Experimental studies manipulating relative income salience in virtual economies or laboratory settings with post-scarcity framing \u2014 Provides causal evidence for the hypothesized mechanism by inducing social comparison anxiety and measuring its impact on subjective wellbeing, controlling for absolute income levels.",
+        "[PATH:literature] Meta-analysis of existing literature on the Easterlin Paradox and relative income effects in high-income countries \u2014 Synthesizes prior findings to assess the consistency of the negative correlation between GDP growth and wellbeing, and the mediating role of social comparison anxiety, identifying gaps and moderators."
+      ],
+      "scope": {
+        "domain": "behavioral economics"
+      },
+      "qualifier": {
+        "mechanism": "rising relative income concerns beyond the $75,000 threshold"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP growth",
+      "predicate": "often correlates positively with",
+      "object": "subjective wellbeing in post-scarcity societies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing in post-scarcity societies]",
+        "[PATH:empirical] World Happiness Report longitudinal data (2000-2020) for OECD countries, correlating GDP per capita growth with national average life satisfaction scores \u2014 Directly tests the hypothesis by providing time-series data on both GDP growth and subjective wellbeing within the specified temporal and geographic scope, allowing for statistical analysis of correlation strength and direction.",
+        "[PATH:literature] Easterlin Paradox literature review and meta-analysis (e.g., Easterlin et al., 2010; Stevenson & Wolfers, 2008) \u2014 Examines the long-standing debate on whether income growth leads to increased wellbeing, particularly in wealthy nations, providing theoretical and empirical context for post-scarcity conditions.",
+        "[PATH:empirical] Experimental or quasi-experimental studies on income shocks and wellbeing in high-income OECD countries (e.g., lottery wins, policy-driven income changes) \u2014 Offers causal evidence on the effect of GDP growth (via individual income changes) on subjective wellbeing, helping to address endogeneity concerns in correlational studies."
+      ],
+      "scope": {
+        "domain": "behavioral economics"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP growth",
+      "predicate": "is associated with declining",
+      "object": "subjective wellbeing in post-scarcity societies beyond ~$75,000 income per capita",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth is associated with declining subjective wellbeing in post-scarcity societies beyond ~$75,000 income per capita in domain 'behavioral economics']"
+      ],
+      "scope": {
+        "domain": "behavioral economics",
+        "temporal": "long-term (decades)",
+        "geographic": "high-income nations"
+      },
+      "qualifier": {
+        "temporal": "since the late 20th century",
+        "geographic": "in high-income nations such as the United States, Western Europe, and Japan"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP growth",
+      "predicate": "is not associated with declining",
+      "object": "subjective wellbeing in post-scarcity societies, even beyond ~$75,000 income per capita",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth is not associated with declining subjective wellbeing in post-scarcity societies, even beyond ~$75,000 income per capita in domain 'behavioral economics']"
+      ],
+      "scope": {
+        "domain": "behavioral economics",
+        "temporal": "long-term (decades)",
+        "geographic": "high-income nations"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States, Western Europe, Japan, Australia, Canada"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP",
+      "predicate": "systematically undervalues",
+      "object": "the economic contribution of unpaid care work by at least 30% in high-income countries",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP the economic contribution of unpaid care work by at least 30% in high-income countries]",
+        "[PATH:empirical] National time-use surveys (e.g., from the U.S. Bureau of Labor Statistics, Statistics Canada, or Eurostat) combined with replacement cost or opportunity cost valuation methods \u2014 These surveys provide direct data on hours spent in unpaid care work. Applying standardized valuation methods (e.g., market replacement cost) allows estimation of the monetary value of unpaid care work as a share of GDP, enabling a direct test of the 30% undercount claim across multiple high-income countries.",
+        "[PATH:empirical] Satellite accounts for household production (e.g., those published by the UK Office for National Statistics or the Australian Bureau of Statistics) \u2014 These official satellite accounts extend the national accounts framework to include unpaid household services. Comparing the value of unpaid care work captured in these accounts to standard GDP figures provides a rigorous empirical benchmark for assessing the magnitude of the undervaluation claimed in the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing studies on the value of unpaid care work relative to GDP (e.g., OECD reports, academic reviews by the Levy Economics Institute or UN Women) \u2014 A systematic review and meta-analysis of published estimates from high-income countries can aggregate evidence across different methodologies and time periods. This would help determine whether the 30% lower bound is consistently supported or refuted, and identify sources of variation (e.g., by country, valuation method, or decade)."
+      ],
+      "scope": {
+        "domain": "social welfare measurement"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP",
+      "predicate": "captures",
+      "object": "essential indicators of economic health and development",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP essential indicators of economic health and development]",
+        "[PATH:literature] Stiglitz, J. E., Sen, A., & Fitoussi, J.-P. (2009). Report by the Commission on the Measurement of Economic Performance and Social Progress. OECD. \u2014 This foundational report critically assesses GDP as a measure of economic health and well-being, proposing alternative indicators. It directly challenges the hypothesis by highlighting GDP's limitations in capturing distributional, environmental, and social factors.",
+        "[PATH:empirical] World Bank World Development Indicators database: time-series data on GDP per capita, Gini coefficient, life expectancy, and environmental degradation for multiple countries (1990\u20132023). \u2014 Cross-national empirical analysis can test whether GDP growth correlates with improvements in other well-established welfare indicators (e.g., health, inequality, sustainability). Low or negative correlations would refute the hypothesis that GDP captures essential health and development indicators.",
+        "[PATH:theoretical] Jones, C. I., & Klenow, P. J. (2016). 'Beyond GDP? Welfare across Countries and Time.' American Economic Review, 106(9), 2426-2457. \u2014 This paper develops a welfare-relevant metric that extends GDP by incorporating consumption, leisure, mortality, and inequality. It provides a theoretical framework to evaluate whether GDP alone is sufficient to capture economic well-being, supporting or refuting the hypothesis through formal modeling."
+      ],
+      "scope": {
+        "domain": "economic measurement"
+      },
+      "qualifier": {
+        "temporal": "since 1930s",
+        "geographic": "global, especially in market economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "GDP growth",
+      "predicate": "negatively predicts",
+      "object": "social trust levels in post-scarcity societies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "behavioral economics"
+      },
+      "qualifier": {
+        "caveat": "controlling for income inequality and median income above $75,000"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "GDP growth",
+      "predicate": "often correlates positively with",
+      "object": "subjective wellbeing in post-scarcity societies",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "behavioral economics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
