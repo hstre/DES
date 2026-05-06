@@ -1,0 +1,394 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "is a valid proxy for",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]"
+      ],
+      "scope": {
+        "domain": "economics, developed nations"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "social and psychological dimensions of wellbeing",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP social and psychological dimensions of wellbeing]",
+        "[CONFLICT] The claim suggests GDP fails to capture social and psychological wellbeing, but this is disputed in wellbeing research, where some argue GDP correlates with or indirectly supports these dimensions."
+      ],
+      "scope": {
+        "domain": "wellbeing research, subjective indicators"
+      },
+      "qualifier": {
+        "temporal": "since the 1970s",
+        "geographic": "predominantly in OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "may be inversely correlated with",
+      "object": "long-term human wellbeing in contexts of high inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP long-term human wellbeing in contexts of high inequality]"
+      ],
+      "scope": {
+        "domain": "inequality studies, ecological economics"
+      },
+      "qualifier": {
+        "temporal": "post-1980, during periods of rising inequality",
+        "geographic": "high-income OECD countries with Gini coefficients above 0.35"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita",
+      "predicate": "underestimates the impact of household wealth on",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]",
+        "[PATH:empirical] OECD Wealth Distribution Database and national household balance sheet surveys (e.g., Survey of Consumer Finances for the US, HFCS for Europe) \u2014 These datasets provide direct measures of household wealth (net worth, housing, financial assets) and consumption patterns. Comparing trends in median wealth and non-housing consumption with GDP per capita growth post-2000 can reveal whether GDP per capita systematically understates material living standards when wealth is rising or falling.",
+        "[PATH:theoretical] Studies on imputed rent and owner-occupied housing in national accounts (e.g., work by the OECD or Eurostat on non-market services) \u2014 GDP per capita excludes or poorly imputes the consumption value of housing wealth. A theoretical analysis of how imputed rent adjustments affect measured living standards, especially in economies with high homeownership rates, can clarify the magnitude of the underestimation.",
+        "[PATH:empirical] Cross-country panel regression of subjective well-being (e.g., Gallup World Poll, European Social Survey) on GDP per capita and household wealth indicators \u2014 If wealth explains a significant portion of variation in self-reported life satisfaction or material deprivation beyond GDP per capita, this would support the hypothesis that GDP per capita understates material living standards. Controlling for income, age, and other factors isolates the wealth effect."
+      ],
+      "scope": {
+        "domain": "economics, developed nations"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "fails to capture",
+      "object": "income inequality and non-economic factors affecting quality of life",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita income inequality and non-economic factors affecting quality of life]",
+        "[PATH:empirical] OECD Better Life Index (BLI) data, comparing GDP per capita rankings with composite well-being indicators (e.g., health, social connections, work-life balance) for developed nations post-2000 \u2014 Directly tests whether GDP per capita diverges from multi-dimensional quality-of-life measures, revealing gaps in capturing non-economic factors.",
+        "[PATH:empirical] Gini coefficient and Palma ratio time-series for OECD countries, correlated with GDP per capita growth rates \u2014 Quantifies the disconnect between average income and income distribution, addressing the 'fails to capture income inequality' claim.",
+        "[PATH:theoretical] Review of Sen's capability approach and Stiglitz-Sen-Fitoussi Commission report on alternative progress metrics \u2014 Provides foundational critique and alternative frameworks, confirming the theoretical basis for GDP's limitations in developed contexts."
+      ],
+      "scope": {
+        "domain": "economics, developed nations"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "developed nations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "systematically underestimates",
+      "object": "social trust and life satisfaction in post-industrial economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth social trust and life satisfaction in post-industrial economies]",
+        "[PATH:empirical] Longitudinal analysis of OECD Well-Being Index and World Values Survey data (1990-2020) comparing GDP growth rates with self-reported social trust and life satisfaction scores in post-industrial economies. \u2014 Directly tests the hypothesis by examining whether GDP growth systematically underestimates changes in subjective well-being indicators over the specified temporal and geographic scope.",
+        "[PATH:literature] Meta-analysis of studies on the Easterlin Paradox and subjective well-being in high-income countries, focusing on the decoupling of economic growth from life satisfaction since the 1990s. \u2014 Synthesizes existing evidence to confirm or refute the systematic underestimation claim, leveraging established theoretical debates in well-being research.",
+        "[PATH:theoretical] Theoretical modeling of social capital and trust dynamics in post-industrial economies, incorporating factors such as income inequality, social cohesion, and institutional trust. \u2014 Provides a causal framework to explain why GDP growth might underestimate social trust and life satisfaction, enabling hypothesis refinement and empirical testing."
+      ],
+      "scope": {
+        "domain": "wellbeing research, subjective indicators"
+      },
+      "qualifier": {
+        "temporal": "since the late 20th century (c. 1990\u2013present)",
+        "geographic": "post-industrial economies (e.g., Western Europe, North America, Japan, Australia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "adequately reflects",
+      "object": "economic dimensions of wellbeing, which are integral to social and psychological aspects",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic dimensions of wellbeing, which are integral to social and psychological aspects]",
+        "[PATH:literature] Stiglitz, J.E., Sen, A., & Fitoussi, J.P. (2009). Report by the Commission on the Measurement of Economic Performance and Social Progress. \u2014 This seminal report critically assesses GDP as a measure of wellbeing, arguing that it fails to capture social and psychological dimensions. It provides both theoretical and empirical grounds for the hypothesis that GDP inadequately reflects these broader aspects.",
+        "[PATH:empirical] Kahneman, D., & Krueger, A.B. (2006). Developments in the measurement of subjective well-being. Journal of Economic Perspectives, 20(1), 3-24. \u2014 This paper presents empirical evidence linking economic indicators like GDP to subjective well-being measures (e.g., life satisfaction, emotional states). It can help confirm or refute whether GDP adequately reflects psychological dimensions of wellbeing."
+      ],
+      "scope": {
+        "domain": "economic research, comprehensive wellbeing indicators"
+      },
+      "qualifier": {
+        "temporal": "since the 20th century",
+        "geographic": "global, but primarily in market economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "GDP growth above 2% annually",
+      "predicate": "negatively predicts",
+      "object": "self-reported life satisfaction in the bottom income quintile",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth above 2% annually self-reported life satisfaction in the bottom income quintile]",
+        "[PATH:empirical] Longitudinal microdata from the OECD's Better Life Index and national household panel surveys (e.g., SOEP, BHPS, PSID) to track bottom-quintile life satisfaction against GDP growth rates and Gini coefficients in high-income OECD countries post-1980. \u2014 Directly tests the temporal and geographic scope: comparing within-country changes in GDP growth and inequality with self-reported life satisfaction for the bottom quintile, controlling for confounders like unemployment and social transfers.",
+        "[PATH:literature] Meta-analysis of subjective wellbeing and income inequality literature (e.g., studies by Easterlin, Clark, or the World Happiness Report) focusing on interaction effects between GDP growth and baseline inequality levels. \u2014 Synthesizes existing evidence to see if the negative prediction is consistently observed when Gini > 0.35, and whether it is moderated by welfare state policies or cultural factors.",
+        "[PATH:theoretical] Theoretical modeling of relative deprivation and hedonic adaptation (e.g., using the 'income-rank' or 'tunnel effect' frameworks) to predict conditions under which GDP growth fails to improve\u2014or worsens\u2014bottom-quintile life satisfaction. \u2014 Provides causal mechanisms (e.g., rising inequality erodes the trickle-down effect, leading to relative deprivation) that can be empirically tested against the proposed scope."
+      ],
+      "scope": {
+        "domain": "inequality studies, subjective wellbeing research"
+      },
+      "qualifier": {
+        "temporal": "post-1980, during periods of rising inequality",
+        "geographic": "high-income OECD countries with Gini coefficients above 0.35"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "GDP",
+      "predicate": "is positively correlated with",
+      "object": "long-term human wellbeing even in contexts of high inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP long-term human wellbeing even in contexts of high inequality]",
+        "[PATH:empirical] Longitudinal panel data from the World Bank and OECD on GDP per capita, Gini coefficients, and composite wellbeing indices (e.g., HDI, subjective life satisfaction) for 1950-2020 \u2014 Directly tests the correlation between GDP growth and wellbeing under varying inequality levels, controlling for confounders like institutional quality and health expenditure.",
+        "[PATH:literature] Meta-analysis of within-country studies comparing high-inequality (e.g., Brazil, South Africa) and low-inequality (e.g., Nordic countries) contexts for GDP-wellbeing links \u2014 Synthesizes existing evidence to assess whether the positive correlation holds across different inequality regimes, addressing the 'contexts of high inequality' qualifier.",
+        "[PATH:theoretical] Theoretical models of diminishing marginal utility of income and inequality-mediated social trust (e.g., Wilkinson & Pickett's 'Spirit Level' framework) \u2014 Provides causal mechanisms that could explain why GDP might not translate to wellbeing under high inequality, offering testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "inequality studies, economic development"
+      },
+      "qualifier": {
+        "temporal": "post-1950",
+        "geographic": "global, with emphasis on OECD countries and emerging economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T7 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 37,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}
