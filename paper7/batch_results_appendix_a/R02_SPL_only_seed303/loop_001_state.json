@@ -1,0 +1,388 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "team dynamics",
+      "predicate": "moderate the relationship between",
+      "object": "autonomy and productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: team dynamics autonomy and productivity outcomes for remote workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Some studies suggest high autonomy boosts productivity in remote settings, while others find that without cohesive team dynamics, autonomy leads to isolation and reduced output. The direction and strength of this moderation remain contested."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "cohesive team dynamics",
+      "predicate": "enhance",
+      "object": "the positive effect of autonomy on productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: cohesive team dynamics the positive effect of autonomy on productivity outcomes for remote workers]"
+      ],
+      "scope": {
+        "domain": "remote work with high interdependence"
+      },
+      "qualifier": {
+        "mechanism": "Shared norms and mutual accountability reduce coordination costs and prevent isolation."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "high autonomy in remote settings",
+      "predicate": "directly increases",
+      "object": "productivity outcomes, independent of team dynamics",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: high autonomy in remote settings productivity outcomes, independent of team dynamics]",
+        "[CONFLICT] The claim asserts that high autonomy directly increases productivity independent of team dynamics, but this is disputed because team dynamics may moderate or mediate the effect, challenging the independence claim."
+      ],
+      "scope": {
+        "domain": "remote work with low interdependence (e.g., solo knowledge tasks)"
+      },
+      "qualifier": {
+        "tension": "This perspective challenges the moderation role of team dynamics, arguing that autonomy's benefits are primarily individual and self-directed."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "weak or conflicting team dynamics",
+      "predicate": "amplify",
+      "object": "the negative effects of autonomy on productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: weak or conflicting team dynamics the negative effects of autonomy on productivity outcomes for remote workers]"
+      ],
+      "scope": {
+        "domain": "remote teams with high task interdependence but low social cohesion"
+      },
+      "qualifier": {
+        "competing_perspective": "Unlike the first sub-claim, this emphasizes that team dynamics can worsen outcomes when autonomy is high, rather than merely failing to enhance them."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "cohesive team dynamics with explicit shared goal clarity",
+      "predicate": "diminish",
+      "object": "the positive effect of autonomy on productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: cohesive team dynamics with explicit shared goal clarity the positive effect of autonomy on productivity outcomes for remote workers]",
+        "[PATH:empirical] Field experiment comparing productivity of remote teams with high vs. low shared goal clarity under varying autonomy levels in interdependent, ambiguous tasks. \u2014 Directly tests the hypothesized interaction by manipulating goal clarity and autonomy, measuring productivity outcomes to confirm or refute the diminishing effect.",
+        "[PATH:literature] Meta-analysis of studies on autonomy, goal clarity, and coordination in remote work settings (e.g., from Journal of Applied Psychology or Organization Science). \u2014 Synthesizes existing evidence on the moderating role of goal clarity on autonomy-productivity links, providing statistical power to assess the hypothesized mechanism across contexts.",
+        "[PATH:theoretical] Agent-based simulation modeling of remote team coordination dynamics, parameterized with task interdependence and goal alignment levels. \u2014 Explores the proposed mechanism of redundant effort and decision friction under tight goal alignment, generating predictions that can be validated against empirical patterns."
+      ],
+      "scope": {
+        "domain": "remote work with high interdependence and task ambiguity"
+      },
+      "qualifier": {
+        "mechanism": "When goals are already tightly aligned, excessive autonomy introduces redundant effort and decision friction, offsetting coordination benefits."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "cohesive team dynamics",
+      "predicate": "diminish",
+      "object": "the positive effect of autonomy on productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: cohesive team dynamics the positive effect of autonomy on productivity outcomes for remote workers]",
+        "[PATH:empirical] Longitudinal field experiment comparing productivity of remote workers with high vs. low team cohesion under varying levels of autonomy, controlling for task interdependence \u2014 Directly tests the moderating effect of cohesive team dynamics on the autonomy-productivity relationship in the specified scope (remote work with high interdependence), providing causal evidence to confirm or refute the hypothesis.",
+        "[PATH:literature] Meta-analysis of studies on autonomy, team cohesion, and remote work productivity (2020-2024), focusing on interdependence as a moderator \u2014 Synthesizes existing evidence across multiple contexts to assess whether cohesive team dynamics consistently diminish autonomy's positive effect, addressing the disputed status and improving confidence beyond single studies.",
+        "[PATH:theoretical] Theoretical model integrating self-determination theory and team process frameworks to predict when cohesion undermines versus amplifies autonomy benefits in interdependent remote work \u2014 Provides a mechanistic explanation for the hypothesized effect, identifying boundary conditions (e.g., task complexity, communication norms) that can guide empirical tests and resolve the disputed claim."
+      ],
+      "scope": {
+        "domain": "remote work with high interdependence"
+      },
+      "qualifier": {
+        "temporal": "2020-2024",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "high autonomy in remote settings with low interdependence",
+      "predicate": "increases",
+      "object": "productivity outcomes only when individual conscientiousness is above median",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high autonomy in remote settings with low interdependence productivity outcomes only when individual conscientiousness is above median]",
+        "[PATH:empirical] Longitudinal field study of knowledge workers in low-interdependence remote roles, measuring autonomy, conscientiousness (via Big Five inventory), and objective productivity metrics (e.g., task completion rate, output quality) over 6\u201312 months. \u2014 Directly tests the interaction effect between autonomy and conscientiousness on productivity in the specified context, providing causal or correlational evidence to confirm or refute the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing studies on autonomy\u2013performance relationships in remote work, with moderator analyses for conscientiousness and task interdependence. \u2014 Synthesizes prior findings to assess whether the conditional effect (conscientiousness above median) is consistently observed, addressing the disputed status and clarifying effect size and generalizability.",
+        "[PATH:empirical] Experimental vignette or simulation study manipulating autonomy levels and measuring productivity in low-interdependence tasks, with pre-measured conscientiousness as a blocking variable. \u2014 Provides controlled evidence for the causal claim, isolating the interaction from confounds common in field settings (e.g., organizational culture, task difficulty)."
+      ],
+      "scope": {
+        "domain": "remote work with low interdependence (e.g., solo knowledge tasks)"
+      },
+      "qualifier": {
+        "temporal": "post-2020 remote work era",
+        "geographic": "global, with emphasis on Western knowledge economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "high autonomy in remote settings",
+      "predicate": "does not increase",
+      "object": "productivity outcomes, when team dynamics are ignored",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: high autonomy in remote settings productivity outcomes, when team dynamics are ignored]",
+        "[PATH:empirical] Longitudinal field study comparing productivity metrics (e.g., task completion rates, quality scores) of remote teams in knowledge-intensive industries, with varying levels of autonomy and team dynamics controls, during 2020-2022. \u2014 Directly tests the causal claim by isolating autonomy's effect while measuring team dynamics (e.g., communication frequency, trust, coordination), addressing the disputed status and scope.",
+        "[PATH:literature] Meta-analysis of existing remote work studies (2020-2022) that report both autonomy levels and team process variables, focusing on complex problem-solving tasks in North America and Europe. \u2014 Synthesizes available evidence to determine whether the null effect of autonomy on productivity holds when team dynamics are ignored, providing broader statistical power and generalizability."
+      ],
+      "scope": {
+        "domain": "remote work involving complex problem-solving tasks"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2022)",
+        "geographic": "global, primarily in knowledge-intensive industries in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "weak or conflicting team dynamics",
+      "predicate": "mediate",
+      "object": "the negative effects of autonomy on productivity outcomes for remote workers, such that the effect is fully accounted for by increased coordination costs and reduced shared mental models",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: weak or conflicting team dynamics the negative effects of autonomy on productivity outcomes for remote workers, such that the effect is fully accounted for by increased coordination costs and reduced shared mental models]",
+        "[PATH:empirical] Longitudinal field study of remote software development teams measuring autonomy, coordination costs, shared mental models, and productivity via objective metrics (e.g., task completion time, sprint velocity) and team surveys over 6 months \u2014 Directly tests the mediation chain: autonomy \u2192 coordination costs & shared mental models \u2192 productivity. Longitudinal design establishes temporal precedence and reduces reverse-causality concerns, addressing the hypothesis's claim of full mediation.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work autonomy, team interdependence, and productivity, with subgroup analysis by social cohesion level \u2014 Synthesizes prior evidence to assess whether the hypothesized mediation pattern holds across contexts, particularly in teams with low social cohesion (scope condition). Can reveal if coordination costs and shared mental models consistently account for autonomy's effects.",
+        "[PATH:empirical] Experimental vignette study with remote teams (e.g., via online platform) manipulating autonomy (high vs. low) and measuring coordination costs and shared mental models as mediators, using a randomized design \u2014 Provides causal evidence by isolating autonomy's effect and testing the proposed mediators. Vignettes can simulate high task interdependence and low social cohesion, matching the scope, while controlling for confounds like team composition."
+      ],
+      "scope": {
+        "domain": "remote teams with high task interdependence but low social cohesion"
+      },
+      "qualifier": {
+        "temporal": "post-2020 remote work context",
+        "geographic": "global, with emphasis on North American and European tech firms"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "strong and cohesive team dynamics",
+      "predicate": "mitigate",
+      "object": "the negative effects of autonomy on productivity outcomes for remote workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: strong and cohesive team dynamics the negative effects of autonomy on productivity outcomes for remote workers]",
+        "[PATH:empirical] Longitudinal field experiment on remote software development teams manipulating autonomy levels and measuring productivity with team cohesion as a moderator \u2014 Directly tests the causal claim that team dynamics mitigate autonomy's negative effects in the specified scope (high task interdependence, high social cohesion) over time.",
+        "[PATH:literature] Meta-analysis of studies on psychological empowerment, team cohesion, and remote work productivity (2020\u20132025) \u2014 Synthesizes existing evidence to quantify the interaction effect between autonomy and team cohesion on productivity, providing statistical support or refutation for the hypothesis.",
+        "[PATH:theoretical] Agent-based simulation modeling the interplay of autonomy, task interdependence, and social cohesion in remote teams \u2014 Explores boundary conditions and mechanisms (e.g., coordination costs, trust) that could explain when and how strong team dynamics mitigate negative autonomy effects, generating testable predictions."
+      ],
+      "scope": {
+        "domain": "remote teams with high task interdependence and high social cohesion"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 35,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}

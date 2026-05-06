@@ -1,0 +1,397 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Meta-analyses show small average productivity gains for remote work, but these are driven by self-selection and task type; controlled experiments find null or negative effects for collaborative tasks, and the effect reverses over time due to reduced informal learning and mentorship."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work",
+      "predicate": "increases individual task efficiency for",
+      "object": "solitary, well-defined tasks",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work solitary, well-defined tasks]"
+      ],
+      "scope": {
+        "domain": "individual productivity for independent work"
+      },
+      "qualifier": {
+        "tension": "Meta-analyses show a small average gain, but this is driven by self-selection and task type."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work",
+      "predicate": "reduces effectiveness of",
+      "object": "collaborative and creative tasks",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work collaborative and creative tasks]"
+      ],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "tension": "Controlled experiments find null or negative effects for collaborative tasks, and the effect reverses over time due to reduced informal learning and mentorship."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "remote work for solitary, well-defined tasks",
+      "predicate": "reduces error rate compared to office work",
+      "object": "when workers have high intrinsic motivation",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work for solitary, well-defined tasks when workers have high intrinsic motivation]",
+        "[PATH:empirical] Controlled experiment comparing error rates of intrinsically motivated workers on solitary, well-defined tasks in remote vs. office settings, using objective performance metrics (e.g., coding accuracy, data entry error rates). \u2014 Directly tests the causal claim under controlled conditions, isolating intrinsic motivation and task type, and provides quantitative evidence to confirm or refute the error rate reduction.",
+        "[PATH:literature] Meta-analysis of post-2020 studies on remote work productivity, focusing on task type (solitary/well-defined) and worker motivation (self-reported intrinsic motivation), e.g., from journals like Journal of Applied Psychology or Organizational Behavior and Human Decision Processes. \u2014 Synthesizes existing evidence across multiple studies to assess the generalizability and strength of the relationship, addressing the disputed status with higher statistical power.",
+        "[PATH:empirical] Longitudinal field study using wearable sensors and digital trace data (e.g., keystroke logs, error correction rates) from knowledge workers with high intrinsic motivation (measured via validated scales) in remote and office conditions. \u2014 Provides ecological validity and captures real-world error patterns over time, controlling for confounding variables like distraction or ergonomics, to test the hypothesis in naturalistic settings."
+      ],
+      "scope": {
+        "domain": "individual productivity for independent work"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread remote work adoption",
+        "geographic": "global, primarily in knowledge-economy sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work",
+      "predicate": "decreases individual task efficiency for",
+      "object": "solitary, well-defined tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work solitary, well-defined tasks]",
+        "[PATH:empirical] Controlled lab experiment comparing task completion time and error rates for solitary, well-defined tasks (e.g., data entry, coding) in remote vs. co-located settings during 2020-2021, with participants in high-speed internet countries. \u2014 Direct empirical test of the hypothesis by isolating the effect of remote work on efficiency for the specified task type, controlling for confounding variables like distractions or home environment.",
+        "[PATH:literature] Meta-analysis of existing studies (e.g., from organizational psychology or human-computer interaction journals) that examine productivity changes for routine, independent work during the pandemic period in countries with high-speed internet. \u2014 Synthesizes available evidence across multiple contexts to assess the robustness and generalizability of the claimed decrease, leveraging existing data without new collection.",
+        "[PATH:theoretical] Theoretical model based on attention resource theory and task-switching costs, predicting that remote work reduces efficiency for solitary well-defined tasks due to increased self-regulation demands and lack of ambient oversight. \u2014 Provides a mechanistic explanation for the hypothesis, which can be tested against alternative theories (e.g., autonomy-enhancement theory that predicts efficiency gains), helping to refine the causal logic."
+      ],
+      "scope": {
+        "domain": "individual productivity for independent work"
+      },
+      "qualifier": {
+        "temporal": "during the 2020-2021 pandemic period",
+        "geographic": "in countries with high-speed internet infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "remote work",
+      "predicate": "disproportionately impairs",
+      "object": "divergent creative tasks (e.g., brainstorming, ideation) more than convergent collaborative tasks (e.g., decision-making, planning)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work divergent creative tasks (e.g., brainstorming, ideation) more than convergent collaborative tasks (e.g., decision-making, planning)]",
+        "[PATH:empirical] Controlled experiment comparing remote vs. co-located teams on divergent (e.g., brainstorming novel ideas) and convergent (e.g., consensus decision-making) tasks, measuring quantity and quality of outputs. \u2014 Directly tests the hypothesis by isolating task type and communication medium, providing causal evidence on differential impairment.",
+        "[PATH:literature] Meta-analysis of existing studies on virtual collaboration and creativity, focusing on moderators such as task type (divergent vs. convergent) and communication richness. \u2014 Synthesizes available evidence to assess whether the pattern holds across multiple contexts and identifies boundary conditions.",
+        "[PATH:empirical] Naturalistic field study using digital trace data (e.g., communication logs, ideation platform usage) from remote teams to correlate communication patterns with creative outcomes in divergent vs. convergent tasks. \u2014 Provides ecological validity by observing real-world remote work, capturing spontaneous interactions and their impact on task performance."
+      ],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "rationale": "Remote work reduces spontaneous idea cross-pollination and real-time nonverbal feedback, which are critical for divergent thinking but less essential for convergent processes that rely on structured deliberation."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "remote work",
+      "predicate": "enhances effectiveness of",
+      "object": "collaborative and creative tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work collaborative and creative tasks]",
+        "[PATH:empirical] A controlled experiment comparing team performance on creative problem-solving tasks (e.g., design thinking sprints) in co-located vs. fully remote settings, measuring output quality and collaboration efficiency. \u2014 Directly tests the causal claim by isolating the remote work variable in a realistic task environment, reducing confounding factors like team composition or tool familiarity.",
+        "[PATH:literature] Longitudinal meta-analysis of field studies from 2020\u20132024 on remote collaboration in knowledge-economy sectors, focusing on innovation metrics (e.g., patent filings, new product ideas) and self-reported creativity. \u2014 Aggregates existing evidence across contexts to assess generalizability and temporal trends, addressing the disputed status by identifying consistent patterns or moderators (e.g., task type, team size).",
+        "[PATH:empirical] Qualitative case studies of distributed teams in creative industries (e.g., software development, marketing) using digital collaboration tools, analyzing communication logs and artifact evolution to trace how remote work affects idea generation and refinement. \u2014 Provides mechanistic understanding of how remote work might enhance or hinder collaborative creativity, revealing mediating factors like asynchronous brainstorming or reduced social pressure."
+      ],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of digital collaboration tools",
+        "geographic": "global, primarily in knowledge-economy sectors with high internet access"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work",
+      "predicate": "reduces effectiveness of",
+      "object": "collaborative and creative tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work reduces effectiveness of collaborative and creative tasks in domain 'team collaboration and innovation']"
+      ],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "temporal": "during the period of mandatory remote work (2020\u20132022)",
+        "geographic": "global, with emphasis on North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work",
+      "predicate": "does not reduce effectiveness of",
+      "object": "collaborative and creative tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work does not reduce effectiveness of collaborative and creative tasks in domain 'team collaboration and innovation']"
+      ],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "temporal": "post-2020 (widespread remote work adoption)",
+        "geographic": "global (primarily OECD countries)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "remote work",
+      "predicate": "increases effectiveness of",
+      "object": "explicitly structured collaborative tasks with high task interdependence",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {
+        "tension": "Remote work may impair informal learning, but when collaboration is deliberately orchestrated with clear protocols and shared digital artifacts, the reduction in distraction and increased focus can enhance task outcomes, reversing the null or negative effects observed in unstructured settings."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "remote work",
+      "predicate": "enhances effectiveness of",
+      "object": "collaborative and creative tasks",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team collaboration and innovation"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
