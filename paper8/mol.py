@@ -21,17 +21,68 @@ except ImportError:
 
 @dataclass
 class MethodOperator:
+    """
+    Epistemic Object Class 2 — same grammar as Alexandria Claim Node.
+    Fields mirror the Alexandria Claim Node schema (Paper 0, Appendix C):
+      operator_id     ↔  node_id
+      core_move       ↔  a (semantic content)
+      status          ↔  sigma_stability status
+      confidence      ↔  confidence (evidence-grounded)
+      history         ↔  history (lifecycle trace)
+      evidence_refs   ↔  evidence_refs (provenance)
+      sigma_stability ↔  sigma_stability (deployment status)
+      target_failure_modes  ↔  contradiction_links
+      best_domains    ↔  c_category / best_for
+      algorithmic_components  ↔  inference_sources
+    """
+    # Identity
     operator_id: str
     origin_handle: str        # discovery handle (persona name), not causal entity
-    core_move: str
-    target_failure_modes: list
-    best_domains: list
-    risky_domains: list
-    algorithmic_components: list   # what runs without LLM
-    llm_prompt_template: str
-    metrics: list
-    known_successes: list = field(default_factory=list)
+    core_move: str            # semantic content of this operator
+
+    # Epistemic state (Alexandria-compatible)
+    status: str = "candidate"           # candidate → validated → deprecated
+    confidence: float = 0.0            # updated from empirical track record
+    sigma_stability: str = "experimental"  # experimental → active → deprecated
+
+    # Lifecycle trace (parallel to claim history)
+    history: list = field(default_factory=list)    # [(domain, seed, lift), ...]
+    evidence_refs: list = field(default_factory=list)  # paper citations, run IDs
+
+    # Domain applicability
+    target_failure_modes: list = field(default_factory=list)
+    best_domains: list = field(default_factory=list)
+    risky_domains: list = field(default_factory=list)
+
+    # Implementation
+    algorithmic_components: list = field(default_factory=list)
+    llm_prompt_template: str = ""
+    metrics: list = field(default_factory=list)
+
+    # Track record (populates confidence and history)
+    known_successes: list = field(default_factory=list)  # [(domain, n, median_lift)]
     known_failures: list = field(default_factory=list)
+
+    def update_confidence(self) -> None:
+        """
+        Recompute confidence from known_successes and known_failures.
+        Mirrors Alexandria sigma_stability update logic.
+        """
+        total = len(self.known_successes) + len(self.known_failures)
+        if total == 0:
+            self.confidence = 0.0
+            return
+        # Weighted by median lift
+        pos_weight = sum(abs(s[2]) for s in self.known_successes if s[2] > 0)
+        neg_weight = sum(abs(f[2]) for f in self.known_failures if f[2] < 0)
+        if pos_weight + neg_weight > 0:
+            self.confidence = round(pos_weight / (pos_weight + neg_weight), 3)
+        if self.confidence >= 0.70:
+            self.sigma_stability = "active"
+        elif self.confidence >= 0.40:
+            self.sigma_stability = "experimental"
+        else:
+            self.sigma_stability = "deprecated"
 
 
 # ── Algorithmic Components ────────────────────────────────────────────────────
@@ -243,6 +294,13 @@ OPERATOR_LIBRARY = {
         core_move="Identify dominant thematic motif in ClaimGraph, transpose to "
                   "adjacent conceptual register, return transformed under coherence "
                   "constraint.",
+        status="validated",
+        confidence=0.72,
+        sigma_stability="active",
+        history=[("N03_AGI","seed101",5),("N03_AGI","seed202",5),("N03_AGI","seed303",5),
+                 ("N05_inequality","seed101",6),("N05_inequality","seed202",4),
+                 ("M01_T(n)","seed101",-1),("M01_T(n)","seed202",0)],
+        evidence_refs=["paper7_persona_isolation", "paper7_creative_probe"],
         target_failure_modes=["SEMANTIC_DUPLICATION", "novelty_starvation"],
         best_domains=["argumentative", "empirical", "social_science", "policy"],
         risky_domains=["formal_mathematics", "logical_derivation"],
@@ -272,6 +330,11 @@ Return ONLY: one research question as a single sentence.""",
         origin_handle="kant",
         core_move="Extract necessary preconditions for the dominant claim. Ask what "
                   "structural conditions are required, not what content follows.",
+        status="validated",
+        confidence=0.67,
+        sigma_stability="active",
+        history=[("M01_T(n)","seed101",2),("M01_T(n)","seed202",2),("M01_T(n)","seed303",3)],
+        evidence_refs=["paper7_math_probe_M01"],
         target_failure_modes=["METHOD_COLLAPSE", "scope_fixation"],
         best_domains=["formal_mathematics", "structural_analysis", "logic"],
         risky_domains=["creative", "open_narrative"],

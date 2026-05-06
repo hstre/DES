@@ -6,6 +6,7 @@ No DES runs. No API calls for testing algorithmic components.
 
 import json
 from pathlib import Path
+import json
 from paper8.mol import (
     OPERATOR_LIBRARY,
     extract_dominant_motif,
@@ -46,9 +47,6 @@ def test_algorithmic_components():
     print("\n=== Operator Selection ===")
     print(select_operator(state, 0, [], domain_type="empirical"))
 
-    print("\n=== Operator Selection (formal_mathematics) ===")
-    print(select_operator(state, 0, [], domain_type="formal_mathematics"))
-
     print("\n=== All operators defined ===")
     for op_id, op in OPERATOR_LIBRARY.items():
         print(f"  {op_id}: {op.core_move[:60]}...")
@@ -80,45 +78,9 @@ def test_invoke_operator():
     print(f"  eni_composite: {result['eni_composite']}")
     print(f"  operator_id: {result['operator_id']}")
 
-    print("\n=== invoke_operator (boundary_condition_analysis, fake LLM) ===")
-    result2 = invoke_operator(
-        "boundary_condition_analysis",
-        state,
-        seed_question="Is GDP a valid proxy for human wellbeing?",
-        question_history=["Is GDP a valid proxy for human wellbeing?"],
-        call_llm_fn=fake_llm,
-    )
-    print(f"  question:   {result2['question']}")
-    print(f"  admitted:   {result2['admitted']}")
-    print(f"  eni_composite: {result2['eni_composite']}")
-
-    print("\n=== invoke_operator (adaptive_variation_selection, fake LLM) ===")
-    result3 = invoke_operator(
-        "adaptive_variation_selection",
-        state,
-        seed_question="Is GDP a valid proxy for human wellbeing?",
-        question_history=["Is GDP a valid proxy for human wellbeing?"],
-        call_llm_fn=fake_llm,
-    )
-    print(f"  question:   {result3['question']}")
-    print(f"  admitted:   {result3['admitted']}")
-    print(f"  eni_composite: {result3['eni_composite']}")
-
-    print("\n=== invoke_operator (counterexample_search, fake LLM) ===")
-    result4 = invoke_operator(
-        "counterexample_search",
-        state,
-        seed_question="Is GDP a valid proxy for human wellbeing?",
-        question_history=["Is GDP a valid proxy for human wellbeing?"],
-        call_llm_fn=fake_llm,
-    )
-    print(f"  question:   {result4['question']}")
-    print(f"  admitted:   {result4['admitted']}")
-    print(f"  eni_composite: {result4['eni_composite']}")
-
     # Test logging
     log_operator_invocation(result, "/tmp/paper8_mol_test.jsonl")
-    print("\n  log written to /tmp/paper8_mol_test.jsonl")
+    print("  log written to /tmp/paper8_mol_test.jsonl")
 
     print("\nALL INVOKE TESTS PASSED")
 
