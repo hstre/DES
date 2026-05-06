@@ -1,0 +1,513 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "compared_to": "continuous calorie restriction",
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether adherence or metabolic advantages sustain weight loss beyond initial reduction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "improves long-term weight loss through",
+      "object": "superior metabolic adaptations (e.g., insulin sensitivity, fat oxidation)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting superior metabolic adaptations (e.g., insulin sensitivity, fat oxidation)]"
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "compared_to": "continuous calorie restriction",
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether metabolic advantages persist after initial weight loss"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to lower long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]"
+      ],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether adherence decline offsets any metabolic benefit"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "produces equivalent long-term weight loss to",
+      "object": "continuous calorie restriction, but with higher drop-out rates",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction, but with higher drop-out rates]"
+      ],
+      "scope": {
+        "domain": "clinical outcomes"
+      },
+      "qualifier": {
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether intention-to-treat analysis would show net benefit"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting",
+      "predicate": "improves long-term weight loss through",
+      "object": "enhanced circadian alignment of feeding windows, independent of caloric intake",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting enhanced circadian alignment of feeding windows, independent of caloric intake]",
+        "[PATH:empirical] Randomized controlled trial comparing time-restricted feeding (e.g., 8-hour window aligned with early circadian phase) vs. isocaloric time-unrestricted feeding over 12+ months, with continuous glucose monitoring and actigraphy to track feeding timing and sleep/wake cycles. \u2014 Directly tests whether circadian alignment of feeding, independent of caloric intake, sustains long-term weight loss by comparing matched caloric restriction groups, addressing the key uncertainty of circadian phase as primary driver.",
+        "[PATH:empirical] Long-term cohort study using real-world data (e.g., from dietary tracking apps and wearable devices) to analyze the relationship between habitual feeding window timing relative to individual chronotype and weight trajectory over >12 months, controlling for total energy intake. \u2014 Provides ecological validity and statistical power to detect whether circadian alignment (e.g., early vs. late feeding relative to melatonin onset) predicts metabolic persistence, independent of caloric restriction.",
+        "[PATH:literature] Systematic review and meta-analysis of animal and human studies on the mechanistic role of circadian clock genes (e.g., Per, Cry, Bmal1) in mediating metabolic benefits of time-restricted feeding, specifically focusing on studies that controlled for caloric intake. \u2014 Synthesizes existing mechanistic evidence to confirm or refute whether circadian alignment is causally necessary for long-term weight loss effects, helping to resolve the disputed status by evaluating consistency across model systems."
+      ],
+      "scope": {
+        "domain": "chronobiology and metabolic physiology"
+      },
+      "qualifier": {
+        "compared_to": "time-unrestricted intermittent fasting with equivalent caloric restriction",
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether circadian phase of feeding is the primary driver of metabolic persistence"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "does not improve long-term weight loss better than",
+      "object": "continuous calorie restriction due to similar metabolic adaptations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction due to similar metabolic adaptations]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8 or 5:2) vs. continuous calorie restriction over \u226512 months with measured weight change and metabolic rate (e.g., RMR via indirect calorimetry) at multiple timepoints. \u2014 Directly tests whether long-term weight loss outcomes and metabolic adaptations (e.g., adaptive thermogenesis) differ between the two interventions, addressing the core claim of similar efficacy.",
+        "[PATH:literature] Meta-analysis of human studies (2015-2025) examining changes in resting energy expenditure, fat-free mass, and hormonal adaptations (e.g., leptin, ghrelin, insulin) under intermittent fasting vs. continuous restriction. \u2014 Synthesizes existing evidence to quantify whether metabolic adaptations are indeed similar, providing statistical power to detect differences that individual studies may miss.",
+        "[PATH:empirical] Controlled feeding study in a metabolic ward comparing intermittent fasting and continuous calorie restriction with identical caloric deficits, measuring 24-hour energy expenditure, substrate oxidation, and nitrogen balance over 4-8 weeks. \u2014 Isolates the effect of fasting pattern from diet adherence and energy intake, allowing precise assessment of metabolic adaptation mechanisms (e.g., mitochondrial efficiency, hormonal milieu) that could underlie weight loss outcomes."
+      ],
+      "scope": {
+        "domain": "metabolic physiology"
+      },
+      "qualifier": {
+        "temporal": "studies conducted between 2015 and 2025",
+        "geographic": "primarily Western countries (USA, UK, Australia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting with a flexible eating window",
+      "predicate": "leads to higher long-term adherence than",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with a flexible eating window fixed-schedule intermittent fasting]",
+        "[PATH:empirical] Randomized controlled trial comparing flexible vs. fixed eating window intermittent fasting over 12 months, measuring dropout rates and adherence via self-report and digital tracking \u2014 Directly tests the hypothesis by comparing long-term adherence between the two protocols, addressing the key uncertainty of whether flexibility reduces dropout.",
+        "[PATH:literature] Meta-analysis of behavioral adherence in dietary interventions incorporating flexibility (e.g., flexible scheduling, choice of fasting days) vs. rigid protocols \u2014 Synthesizes existing evidence from multiple studies to assess generalizability and effect size, providing a broader empirical basis for the hypothesized advantage of flexibility.",
+        "[PATH:theoretical] Theoretical framework from self-determination theory and habit formation literature on autonomy and adherence in health behaviors \u2014 Explains the psychological mechanisms (e.g., intrinsic motivation, reduced psychological reactance) by which flexibility could improve long-term adherence, guiding hypothesis refinement and study design."
+      ],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether flexibility reduces dropout rate compared to rigid protocols"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to higher long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8 or 5:2) vs. continuous calorie restriction with 12-month adherence tracking (e.g., Trepanowski et al., 2017, JAMA Internal Medicine) \u2014 Directly tests the hypothesis with a gold-standard design, measuring dropout rates and self-reported adherence over the specified temporal scope.",
+        "[PATH:literature] Meta-analysis of adherence outcomes in dietary interventions (e.g., Ge et al., 2021, BMJ) \u2014 Synthesizes multiple studies to compare pooled adherence rates between intermittent and continuous calorie restriction, providing statistical power to confirm or refute the hypothesis across populations.",
+        "[PATH:theoretical] Behavioral theoretical model of habit formation and dietary flexibility (e.g., Rothman et al., 2009, Health Psychology Review) \u2014 Explains why intermittent fasting might enhance adherence through reduced daily decision fatigue and greater dietary variety, offering mechanistic support that can be tested empirically."
+      ],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month period",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "has lower long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting has lower long-term adherence than continuous calorie restriction in domain 'behavioral adherence']"
+      ],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "temporal": "over a period of 12 months or longer",
+        "geographic": "generalizable to Western adult populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "has comparable or higher long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting has comparable or higher long-term adherence than continuous calorie restriction in domain 'behavioral adherence']"
+      ],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "temporal": "over periods of 12 months or longer",
+        "geographic": "primarily studied in Western adult populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting with real-time behavioral coaching",
+      "predicate": "produces superior long-term weight loss compared to",
+      "object": "continuous calorie restriction without coaching, while reducing drop-out rates to parity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with real-time behavioral coaching continuous calorie restriction without coaching, while reducing drop-out rates to parity]",
+        "[PATH:empirical] Randomized controlled trial (RCT) comparing intermittent fasting with real-time coaching vs. continuous calorie restriction without coaching over 12+ months, with adherence tracking via digital logs \u2014 Directly tests the hypothesis by measuring long-term weight loss and drop-out rates, with coaching adherence as a mediator to resolve the key uncertainty.",
+        "[PATH:literature] Meta-analysis of behavioral coaching interventions in dietary adherence and weight loss maintenance \u2014 Synthesizes existing evidence on whether real-time coaching improves adherence and retention across dietary regimens, helping to isolate the coaching effect from the fasting effect.",
+        "[PATH:theoretical] Theoretical model of habit formation and self-regulation in weight loss, incorporating feedback loops from real-time coaching \u2014 Provides a mechanistic framework to predict whether coaching adherence mediates net benefit, informing study design and interpretation of empirical results."
+      ],
+      "scope": {
+        "domain": "clinical outcomes"
+      },
+      "qualifier": {
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether coaching adherence mediates retention and net benefit"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting",
+      "predicate": "produces superior long-term weight loss compared to",
+      "object": "continuous calorie restriction, with comparable adherence rates",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction, with comparable adherence rates]",
+        "[PATH:empirical] A randomized controlled trial (RCT) comparing time-restricted eating (e.g., 16:8) with daily calorie restriction over 12 months, with adherence measured via continuous glucose monitoring or dietary apps. \u2014 Directly tests the hypothesis in the specified temporal scope and provides objective adherence data, addressing the disputed claim about comparable adherence.",
+        "[PATH:literature] Systematic review and meta-analysis of RCTs on intermittent fasting vs. continuous calorie restriction, focusing on weight loss at 12-month endpoints and dropout rates. \u2014 Synthesizes existing evidence to assess statistical significance and heterogeneity, clarifying whether the observed effect is robust across developed-country populations.",
+        "[PATH:theoretical] Mechanistic study on metabolic adaptations (e.g., insulin sensitivity, ghrelin dynamics) during intermittent vs. continuous restriction, using controlled feeding protocols. \u2014 Explores physiological pathways that could explain differential long-term weight loss, helping to interpret empirical findings and predict adherence effects."
+      ],
+      "scope": {
+        "domain": "clinical outcomes"
+      },
+      "qualifier": {
+        "temporal": "over intervention periods of 12 months or less",
+        "geographic": "in clinical trial populations in developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting with a flexible eating window",
+      "predicate": "leads to higher long-term adherence than",
+      "object": "intermittent fasting with a fixed, rigid eating window",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {
+        "duration": "greater than 12 months",
+        "key_uncertainty": "whether flexibility mitigates the adherence decline observed in intermittent fasting protocols"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting",
+      "predicate": "results in higher long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "behavioral adherence"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

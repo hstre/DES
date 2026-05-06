@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "results in higher long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "population": "adults with overweight or obesity",
+        "timeframe": "12 months or longer"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "shows higher long-term adherence than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]"
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who prefer flexible eating windows"
+      },
+      "qualifier": {
+        "timeframe": "12 months or longer"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to greater dropout rates due to social disruption than",
+      "object": "continuous calorie restriction",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]"
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules"
+      },
+      "qualifier": {
+        "timeframe": "6 months or longer"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting with a daily 8-hour eating window",
+      "predicate": "leads to greater preservation of lean body mass than",
+      "object": "continuous calorie restriction with equivalent caloric deficit",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with a daily 8-hour eating window continuous calorie restriction with equivalent caloric deficit]",
+        "[PATH:empirical] Randomized controlled trial comparing 16:8 intermittent fasting (8-hour eating window) vs. continuous calorie restriction with matched energy deficit over 12 months, measuring lean body mass via DXA or MRI \u2014 A well-powered RCT with long-term follow-up directly tests the hypothesis under controlled conditions, addressing the disputed status and the specified timeframe.",
+        "[PATH:literature] Meta-analysis of studies comparing intermittent fasting and continuous calorie restriction on body composition changes, focusing on lean mass preservation in adults with overweight/obesity \u2014 Synthesizing existing evidence can clarify whether the observed effect is consistent across populations and protocols, and identify potential moderators like protein intake or exercise.",
+        "[PATH:theoretical] Mechanistic study examining effects of intermittent fasting on muscle protein synthesis, autophagy, and hormonal responses (e.g., growth hormone, insulin) compared to continuous energy restriction \u2014 Understanding biological pathways could explain why intermittent fasting might differentially preserve lean mass, providing a theoretical basis to support or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who prefer flexible eating windows"
+      },
+      "qualifier": {
+        "timeframe": "12 months or longer"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Continuous calorie restriction",
+      "predicate": "shows higher long-term adherence than",
+      "object": "intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Continuous calorie restriction intermittent fasting]",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials comparing continuous calorie restriction vs. intermittent fasting for adherence and weight loss outcomes over \u226512 months in adults with overweight/obesity in high-income Western countries. \u2014 A comprehensive synthesis of existing RCTs would directly compare adherence rates and identify moderators (e.g., structured eating preferences) that resolve the dispute.",
+        "[PATH:empirical] Long-term prospective cohort study tracking daily self-reported dietary adherence via mobile app in a sample of adults with overweight/obesity who prefer structured eating patterns, randomized to continuous restriction or intermittent fasting, over 12 months. \u2014 This would provide high-resolution, ecologically valid adherence data in the specific scope domain, controlling for preference and allowing causal inference.",
+        "[PATH:theoretical] Theoretical modeling of adherence as a function of cognitive load and dietary flexibility, using behavioral economics principles (e.g., temporal discounting, habit formation) to predict differential dropout rates between continuous and intermittent regimens. \u2014 Such a model could clarify mechanisms underlying adherence differences, offering explanatory power beyond mere empirical comparison and guiding future intervention design."
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who prefer structured eating patterns"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month intervention period",
+        "geographic": "primarily in high-income Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to greater dropout rates due to social disruption than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]",
+        "[PATH:empirical] A randomized controlled trial comparing intermittent fasting vs. continuous calorie restriction in adults with irregular work schedules (e.g., shift workers) living in communal households, measuring dropout rates and social disruption via validated questionnaires at 6 and 12 months. \u2014 Directly tests the hypothesis in the specified scope and timeframe, controlling for confounders like household dynamics and schedule irregularity.",
+        "[PATH:literature] A systematic review and meta-analysis of adherence and dropout rates in dietary interventions, with subgroup analysis by meal timing flexibility and household living arrangements. \u2014 Synthesizes existing evidence to assess whether social disruption (e.g., shared meal times, family routines) consistently predicts higher dropout in intermittent fasting vs. continuous restriction, especially in communal settings.",
+        "[PATH:theoretical] Qualitative ethnographic study of meal-sharing norms and social obligations in communal households (e.g., multigenerational or shared housing) during intermittent fasting protocols. \u2014 Provides mechanistic understanding of how intermittent fasting may conflict with social eating patterns, generating testable predictions about dropout mechanisms in the target population."
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules and live in communal households"
+      },
+      "qualifier": {
+        "timeframe": "6 months or longer"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting",
+      "predicate": "results in better adherence and lower dropout rates due to increased flexibility compared to",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous calorie restriction]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8 or 5:2) vs. continuous calorie restriction in adults with irregular work schedules (e.g., shift workers), measuring adherence rates, dropout rates, and weight loss at 6 and 12 months. \u2014 Direct empirical comparison in the specified population would provide the most relevant evidence to confirm or refute the hypothesis about better adherence and lower dropout due to flexibility.",
+        "[PATH:literature] Systematic review and meta-analysis of adherence and dropout in intermittent fasting vs. continuous calorie restriction studies, with subgroup analysis by work schedule regularity or flexibility of protocol. \u2014 Synthesizing existing data across studies can reveal whether the flexibility advantage holds generally and specifically for those with irregular schedules, and quantify effect sizes.",
+        "[PATH:theoretical] Behavioral economics or psychological theory of flexible vs. rigid dietary regimens, examining constructs like perceived autonomy, self-efficacy, and decision fatigue in relation to adherence. \u2014 Testing theoretical mechanisms (e.g., self-determination theory) can explain why flexibility might improve adherence in this population, and suggest boundary conditions where it might not."
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to greater dropout rates due to social disruption than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting leads to greater dropout rates due to social disruption than continuous calorie restriction in domain 'adults with overweight or obesity who have irregular work schedules']"
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules"
+      },
+      "qualifier": {
+        "temporal": "over a 12-month intervention period",
+        "geographic": "urban and suburban settings in high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "does not lead to greater dropout rates due to social disruption than",
+      "object": "continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting does not lead to greater dropout rates due to social disruption than continuous calorie restriction in domain 'adults with overweight or obesity who have irregular work schedules']"
+      ],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules"
+      },
+      "qualifier": {
+        "temporal": "during the 12-week intervention period",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to higher dropout rates due to increased social isolation and missed communal meals than",
+      "object": "continuous calorie restriction",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules and live alone"
+      },
+      "qualifier": {
+        "timeframe": "6 months or longer"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting",
+      "predicate": "results in lower dropout rates due to enhanced flexibility compared to",
+      "object": "continuous calorie restriction",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adults with overweight or obesity who have irregular work schedules"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 31,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}

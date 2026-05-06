@@ -1,0 +1,500 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates due to disruption of workplace lunch culture",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]"
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "temporal": "during the first 3 months"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]"
+      ],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {
+        "causal": "due to reduced social disruption"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Continuous calorie restriction regimens",
+      "predicate": "lead to higher dropout rates",
+      "object": "intermittent fasting regimens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Continuous calorie restriction regimens intermittent fasting regimens]"
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "causal": "due to constant food temptation and monitoring fatigue"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting regimens in workplace lunch culture",
+      "predicate": "lead to higher dropout rates than",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens in workplace lunch culture continuous calorie restriction regimens]",
+        "[PATH:empirical] Conduct a randomized controlled trial (RCT) in a corporate office setting comparing dropout rates between employees assigned to intermittent fasting (e.g., 16:8) and those on continuous calorie restriction, both with free snack access, measured at 1, 2, and 3 months. \u2014 Directly tests the hypothesis under the specified condition (free office snacks) and temporal scope (first 3 months), providing causal evidence on adherence differences.",
+        "[PATH:literature] Systematic review of adherence and dropout rates in workplace-based dietary intervention studies, focusing on studies that include free snack availability or similar environmental food cues. \u2014 Synthesizes existing evidence to assess whether intermittent fasting consistently shows higher dropout rates than continuous restriction in real-world office contexts, controlling for food access."
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "temporal": "during the first 3 months",
+        "condition": "when employees have access to free office snacks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to lower dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]",
+        "[PATH:empirical] Conduct a randomized controlled trial (RCT) comparing dropout rates between intermittent fasting and continuous calorie restriction among office workers in the United States during the 2020s, controlling for workplace lunch culture variables such as scheduled breaks, cafeteria options, and social eating norms. \u2014 Direct empirical evidence from a controlled setting would address the causal claim and account for the specific domain and temporal scope.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies on dietary adherence in workplace wellness programs (2010\u20132023), focusing on studies that report dropout rates for intermittent fasting vs. continuous calorie restriction in office environments. \u2014 Synthesizing prior research can reveal consistent patterns or heterogeneity across studies, helping confirm or refute the hypothesis without new data collection.",
+        "[PATH:theoretical] Theoretical analysis of behavioral economics and habit formation models (e.g., temporal discounting, social conformity) applied to workplace lunch culture, predicting how intermittent fasting might reduce decision fatigue and social pressure compared to continuous restriction. \u2014 A theoretical framework can explain underlying mechanisms and generate testable predictions, strengthening or challenging the empirical findings."
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "temporal": "during the 2020s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates than",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]",
+        "[PATH:empirical] Randomized controlled trial comparing adherence and cognitive performance in remote workers assigned to intermittent fasting vs. continuous calorie restriction over 12 weeks \u2014 Directly tests dropout rates and cognitive fatigue in the specified domain, providing causal evidence for the hypothesis.",
+        "[PATH:literature] Systematic review and meta-analysis of dietary intervention adherence in cognitively demanding occupations \u2014 Synthesizes existing data on dropout rates across fasting and non-fasting regimens, highlighting effect sizes and moderators like work environment.",
+        "[PATH:theoretical] Computational model of cognitive resource depletion under caloric restriction schedules \u2014 Models the proposed mechanism of increased cognitive fatigue during fasting windows, predicting higher dropout when cognitive load is high."
+      ],
+      "scope": {
+        "domain": "remote or flexible work environments with high cognitive demands"
+      },
+      "qualifier": {
+        "causal": "due to increased cognitive fatigue during fasting windows, offsetting the benefit of reduced social disruption"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "result in lower dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials comparing adherence and dropout rates between intermittent fasting and continuous calorie restriction in adults with overweight or obesity (2020-2025) \u2014 A comprehensive synthesis of existing RCTs would directly compare dropout rates across regimens, providing quantitative evidence to confirm or refute the hypothesis within the specified temporal and geographic scope.",
+        "[PATH:empirical] Longitudinal cohort study tracking adherence and dropout among participants in remote or flexible work environments assigned to either intermittent fasting or continuous calorie restriction over 12 months \u2014 This study would directly test the hypothesis in the specified domain (remote/flexible work), controlling for confounding factors like schedule flexibility and self-monitoring, which may influence regimen sustainability.",
+        "[PATH:theoretical] Theoretical model of behavioral economics: analysis of decision fatigue and reward structure in intermittent vs. continuous restriction regimens \u2014 A theoretical framework predicting lower dropout for intermittent fasting due to reduced daily cognitive load and clearer reward signals could be tested against empirical data, helping to explain mechanisms and refine the hypothesis."
+      ],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {
+        "temporal": "2020-2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates than",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting regimens lead to higher dropout rates than continuous calorie restriction regimens in domain 'remote or flexible work environments']"
+      ],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global, with emphasis on regions with high prevalence of remote work (e.g., North America, Europe, East Asia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "do not lead to higher dropout rates than",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting regimens do not lead to higher dropout rates than continuous calorie restriction regimens in domain 'remote or flexible work environments']"
+      ],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Continuous calorie restriction regimens in workplace lunch culture",
+      "predicate": "lead to higher dropout rates than",
+      "object": "intermittent fasting regimens among employees with high social eating frequency",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Continuous calorie restriction regimens in workplace lunch culture intermittent fasting regimens among employees with high social eating frequency]",
+        "[PATH:empirical] Randomized controlled trial comparing continuous calorie restriction vs. intermittent fasting adherence rates in office workers with high social eating frequency, measuring dropout and self-reported social pressure during group lunches. \u2014 Directly tests the causal claim by comparing dropout rates under controlled conditions, capturing the hypothesized mechanism of social pressure and monitoring fatigue.",
+        "[PATH:empirical] Longitudinal observational study using workplace cafeteria transaction data and employee surveys to track dietary adherence, social eating frequency, and dropout over 6-12 months. \u2014 Provides real-world evidence on adherence patterns in naturalistic settings, allowing correlation between social eating frequency and regimen type with dropout.",
+        "[PATH:literature] Meta-analysis of existing studies on dietary adherence in social eating contexts, focusing on continuous vs. intermittent regimens and the role of social facilitation and self-regulation fatigue. \u2014 Synthesizes available evidence to assess whether the proposed differential dropout effect is supported across multiple studies, controlling for confounders like workplace culture."
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "causal": "due to increased social pressure and temptation during group meals, which exacerbates monitoring fatigue"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "lead to higher dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting regimens continuous calorie restriction regimens]",
+        "[PATH:empirical] Longitudinal workplace wellness program data from corporate health providers (e.g., Virgin Pulse, Wellable) comparing retention rates between intermittent fasting and continuous calorie restriction groups in urban U.S. office settings (2020-2024) \u2014 Directly tests the hypothesis in the specified domain and timeframe, using real-world adherence metrics rather than controlled clinical trials.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials on dietary adherence in intermittent fasting vs. continuous calorie restriction, with subgroup analysis by employment context and setting (e.g., office vs. non-office) \u2014 Synthesizes existing evidence to assess generalizability and identify moderators like workplace culture, which may affect dropout rates differently than in clinical settings.",
+        "[PATH:empirical] Qualitative interview study with employees and managers in urban U.S. offices to explore barriers to adherence for intermittent fasting (e.g., social eating norms, meeting schedules) compared to continuous calorie restriction \u2014 Provides mechanistic understanding of why dropout rates may differ, addressing the workplace lunch culture domain that quantitative data alone may not capture."
+      ],
+      "scope": {
+        "domain": "workplace lunch culture in office settings"
+      },
+      "qualifier": {
+        "temporal": "2020-2024",
+        "geographic": "urban office settings in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting regimens in remote or flexible work environments",
+      "predicate": "produce higher dropout rates than continuous calorie restriction regimens",
+      "object": "only when the fasting window coincides with peak collaborative work hours",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {
+        "causal": "due to increased scheduling conflict and social isolation during fasting periods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting regimens",
+      "predicate": "result in lower dropout rates",
+      "object": "continuous calorie restriction regimens",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "remote or flexible work environments"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
