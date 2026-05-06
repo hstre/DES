@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may decrease",
+      "object": "overall labor income for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall labor income for low-skilled workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may increase",
+      "object": "overall labor income for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall labor income for low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "labor markets where employers have significant wage-setting power"
+      },
+      "qualifier": {
+        "condition": "if the wage floor is set below the competitive equilibrium level"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may decrease",
+      "object": "employment levels for low-skilled workers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power employment levels for low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {
+        "condition": "if the wage increase exceeds the marginal revenue product of labor"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may have no significant effect on",
+      "object": "overall labor income for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall labor income for low-skilled workers]"
+      ],
+      "scope": {
+        "domain": "markets where employer monopsony power is moderate or offset by informal sector competition"
+      },
+      "qualifier": {
+        "condition": "if workers are partially compensated through non-wage benefits or reduced hours"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "reduces",
+      "object": "employment levels for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power employment levels for low-skilled workers]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in concentrated labor markets (e.g., using county-level Herfindahl-Hirschman Index to measure monopsony power) \u2014 Directly tests the hypothesis by comparing employment changes in high-monopsony vs. low-monopsony areas after a wage floor is raised above the competitive equilibrium.",
+        "[PATH:theoretical] Structural estimation of labor supply elasticities to firms (e.g., Manning's dynamic monopsony model using firm-level panel data) \u2014 Provides a formal framework to predict whether a minimum wage reduces employment under monopsony, depending on the elasticity of labor supply to each firm. Empirical estimates can confirm or refute the predicted null or positive employment effect.",
+        "[PATH:literature] Meta-analysis of minimum wage employment effects with moderator variables for market concentration \u2014 Synthesizes existing empirical evidence to assess whether the employment effect of minimum wages varies systematically with measures of employer monopsony power, thus testing the conditional hypothesis."
+      ],
+      "scope": {
+        "domain": "labor markets where employers have significant wage-setting power"
+      },
+      "qualifier": {
+        "condition": "if the wage floor is set above the competitive equilibrium level"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may decrease",
+      "object": "overall employment for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall employment for low-skilled workers]",
+        "[PATH:empirical] Quasi-experimental studies comparing employment outcomes in U.S. states with minimum wage increases versus neighboring states without, focusing on low-skilled workers in retail and hospitality sectors during economic downturns. \u2014 Directly tests the hypothesis by exploiting spatial and temporal variation in minimum wage policy under low labor demand conditions, providing causal estimates of employment effects in monopsonistic local labor markets.",
+        "[PATH:theoretical] Structural labor market models incorporating employer monopsony power, calibrated to developed economy data (e.g., from Germany or the UK) with localized labor markets. \u2014 Simulates counterfactual scenarios of minimum wage changes under varying degrees of monopsony power, allowing assessment of employment effects when labor demand is low, and isolating the role of wage-setting power from other confounding factors.",
+        "[PATH:literature] Systematic review and meta-analysis of minimum wage studies in developed economies, specifically those that measure employer concentration or labor market tightness as moderators. \u2014 Synthesizes existing evidence to assess whether employment effects are consistently negative in low-demand periods within monopsonistic markets, identifying gaps and inconsistencies that could confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "labor markets where employers have significant wage-setting power"
+      },
+      "qualifier": {
+        "temporal": "during periods of low labor demand",
+        "geographic": "in developed economies with localized labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "increases",
+      "object": "the labor force participation rate of low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power the labor force participation rate of low-skilled workers]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in highly concentrated local labor markets (e.g., using county-level or commuting-zone data with Herfindahl-Hirschman Index > 2500) \u2014 Directly tests the hypothesis by comparing labor force participation changes for low-skilled workers in monopsonistic markets versus competitive markets, controlling for wage levels and economic conditions.",
+        "[PATH:empirical] Structural estimation of labor supply elasticity and monopsony power using firm-level wage and employment data (e.g., from the Longitudinal Employer-Household Dynamics dataset) \u2014 Estimates the degree of monopsony power and simulates the effect of moderate minimum wage increases on participation, allowing direct validation of the theoretical prediction that wages below competitive equilibrium raise participation.",
+        "[PATH:theoretical] Theoretical model of monopsonistic competition with heterogeneous worker preferences and search frictions (e.g., Manning's 'Monopsony in Motion' framework) \u2014 Provides a formal mechanism linking moderate minimum wage increases to higher participation by reducing the gap between reservation wages and offered wages, and can be calibrated to existing empirical findings to confirm or refute the hypothesis under the specified conditions."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {
+        "condition": "when the wage increase is moderate and below the competitive equilibrium wage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may increase",
+      "object": "employment levels for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power employment levels for low-skilled workers]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in highly concentrated local labor markets (e.g., using county-level or MSA-level Herfindahl-Hirschman Index data and difference-in-differences methods) \u2014 Directly tests the monopsony hypothesis by comparing employment changes in concentrated vs. competitive markets following minimum wage hikes, with causal identification from policy variation.",
+        "[PATH:empirical] Firm-level data on labor market concentration and wage-setting behavior (e.g., using administrative matched employer-employee datasets to estimate labor supply elasticities to individual firms) \u2014 Provides direct evidence on monopsony power by measuring how much employment responds to firm-specific wage changes, which is the key mechanism underlying the hypothesis.",
+        "[PATH:theoretical] Theoretical models of monopsonistic competition with heterogeneous workers and firms (e.g., search-and-matching models or oligopsony models calibrated to U.S. labor market data) \u2014 Clarifies conditions under which minimum wages can increase employment (e.g., low labor supply elasticity, high concentration) and generates testable predictions for empirical work."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "United States and other advanced economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may increase",
+      "object": "employment levels for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage in markets with strong employer monopsony power may increase employment levels for low-skilled workers in domain 'low-skilled labor markets with highly concentrated employers']"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {
+        "temporal": "during periods of stable or rising labor demand",
+        "geographic": "in OECD countries with limited labor mobility"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may decrease",
+      "object": "employment levels for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage in markets with strong employer monopsony power may decrease employment levels for low-skilled workers in domain 'low-skilled labor markets with highly concentrated employers']"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {
+        "temporal": "during periods of stable or rising demand for low-skilled labor",
+        "geographic": "in developed economies with limited labor mobility between regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "decreases",
+      "object": "overall labor income for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall labor income for low-skilled workers]",
+        "[PATH:empirical] Quasi-experimental study of minimum wage increases in U.S. counties with high monopsony power (e.g., using the Herfindahl-Hirschman Index for local labor markets) and detailed data on hours worked and non-wage benefits from the Current Population Survey \u2014 Directly tests the condition that employers substitute non-wage benefits with wage cuts and reduce hours more than proportionally, and measures the net effect on overall labor income for low-skilled workers in markets with moderate monopsony power and informal sector competition.",
+        "[PATH:theoretical] Theoretical model extending the canonical monopsony model (e.g., Manning, 2003) to include informal sector competition and endogenous non-wage benefits, calibrated to developing-country labor market data \u2014 Provides a formal framework to predict conditions under which minimum wage increases lead to a net decrease in total labor income, specifically when employers adjust along both wage and non-wage margins and hours, and when informal sector competition limits the monopsony effect.",
+        "[PATH:literature] Meta-analysis of minimum wage studies focusing on heterogeneous effects by employer concentration and informal sector size, drawing on data from Latin American and Asian labor markets \u2014 Synthesizes existing empirical evidence to assess whether the predicted negative income effect is observed in contexts with moderate monopsony power and informal competition, and identifies gaps in the literature regarding non-wage benefit adjustments."
+      ],
+      "scope": {
+        "domain": "markets where employer monopsony power is moderate or offset by informal sector competition"
+      },
+      "qualifier": {
+        "condition": "if employers respond by substituting non-wage benefits with wage cuts and reducing hours more than proportionally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "can significantly increase",
+      "object": "overall labor income for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage in markets with strong employer monopsony power overall labor income for low-skilled workers]",
+        "[PATH:empirical] Meta-analysis of minimum wage studies focusing on labor markets with high concentration (e.g., using Herfindahl-Hirschman Index) and low worker mobility, such as those by Azar et al. or the ILO's Global Wage Report. \u2014 Directly tests the hypothesis by comparing wage and employment outcomes in monopsonistic versus competitive labor markets, controlling for regional and temporal variations.",
+        "[PATH:empirical] Longitudinal panel data from U.S. states or local labor markets with significant minimum wage changes since the 1990s, linked to employer concentration measures from the Census Bureau's Longitudinal Employer-Household Dynamics (LEHD) data. \u2014 Provides causal evidence through difference-in-differences or event-study designs, isolating the effect of minimum wage increases on low-skilled workers' total labor income in monopsonistic settings.",
+        "[PATH:theoretical] Theoretical models of monopsonistic competition with search frictions (e.g., Manning's 'Monopsony in Motion' framework) calibrated to U.S. labor market data. \u2014 Offers a formal mechanism to predict when minimum wage hikes raise total labor income, and identifies boundary conditions (e.g., elasticity of labor supply) that could refute the hypothesis if empirical parameters fall outside the predicted range."
+      ],
+      "scope": {
+        "domain": "markets where employer monopsony power is significant and not offset by alternative employment options"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "primarily in the United States and other advanced economies with localized labor market studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "increases",
+      "object": "the rate of automation adoption by low-skilled employers",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Raising the minimum wage in markets with strong employer monopsony power",
+      "predicate": "may increase",
+      "object": "employment levels for low-skilled workers",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-skilled labor markets with highly concentrated employers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
