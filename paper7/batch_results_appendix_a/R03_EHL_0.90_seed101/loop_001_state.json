@@ -1,0 +1,502 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration of high-skilled workers",
+      "predicate": "reduces",
+      "object": "wage premiums for native workers with a college degree in STEM fields",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers wage premiums for native workers with a college degree in STEM fields]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Immigration of high-skilled workers in computer science",
+      "predicate": "reduces",
+      "object": "wage premiums for native workers with a college degree in computer science",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in computer science wage premiums for native workers with a college degree in computer science]"
+      ],
+      "scope": {
+        "domain": "computer science"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "increases",
+      "object": "wage premiums for native workers with a college degree in engineering due to complementarity and innovation spillovers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in engineering wage premiums for native workers with a college degree in engineering due to complementarity and innovation spillovers]"
+      ],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "mechanism": "complementarity and innovation spillovers"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration of high-skilled workers",
+      "predicate": "has a neutral effect on",
+      "object": "wage premiums for native workers with a college degree in STEM fields in the short term, but a positive effect in the long term",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers wage premiums for native workers with a college degree in STEM fields in the short term, but a positive effect in the long term]"
+      ],
+      "scope": {
+        "domain": "STEM fields",
+        "temporal": "long-term"
+      },
+      "qualifier": {
+        "temporal_condition": "short-term neutral, long-term positive"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Immigration of high-skilled workers in computer science",
+      "predicate": "increases",
+      "object": "the rate at which native computer science graduates transition into management roles",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in computer science the rate at which native computer science graduates transition into management roles]",
+        "[PATH:empirical] Longitudinal employer-employee matched data from the U.S. Census Bureau (e.g., LEHD) tracking IT firms' promotion patterns before and after H-1B visa expansions \u2014 Allows direct measurement of native CS graduates' transition rates into management as a function of high-skilled immigration flows, controlling for firm and cohort effects.",
+        "[PATH:empirical] Survey or interview-based study of career trajectories of native CS graduates in tech hubs (e.g., Silicon Valley) that queries perceived competition and management pipeline dynamics \u2014 Captures qualitative and quantitative data on whether native graduates are pushed into management earlier due to specialization gaps or delayed due to increased competition.",
+        "[PATH:literature] Labor economics literature on substitution vs. complementarity effects of high-skilled immigrants on native career advancement (e.g., Peri & Sparber, 2009; Kerr & Lincoln, 2010) \u2014 Provides theoretical and empirical frameworks to distinguish whether immigration raises management transition rates (via complementarity) or lowers them (via substitution) in the CS context."
+      ],
+      "scope": {
+        "domain": "computer science"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Immigration of high-skilled workers in computer science",
+      "predicate": "increases",
+      "object": "innovation and overall productivity in the tech industry, leading to higher demand and potential wage increases for all workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in computer science innovation and overall productivity in the tech industry, leading to higher demand and potential wage increases for all workers]",
+        "[PATH:empirical] Analysis of H-1B visa data and patent filings in U.S. tech firms (2010-2023), e.g., using USCIS records and USPTO patent data \u2014 Directly tests whether high-skilled immigration correlates with increased innovation (patents) and productivity (e.g., R&D output) in the tech sector, controlling for firm size and R&D spending.",
+        "[PATH:empirical] Quasi-experimental studies on the impact of high-skilled immigration on native wages and labor demand, e.g., using variation from visa lottery outcomes or policy changes (e.g., H-1B cap adjustments) \u2014 Provides causal evidence on whether immigration increases overall demand and wages for all workers, addressing the disputed wage effect.",
+        "[PATH:literature] Meta-analysis of existing literature on high-skilled immigration and innovation/productivity in computer science (e.g., reviews by Peri, Kerr, or Hunt) \u2014 Synthesizes conflicting findings across studies to assess the overall direction and magnitude of the effect, clarifying the disputed status."
+      ],
+      "scope": {
+        "domain": "computer science"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "decreases",
+      "object": "wage premiums for native workers with a college degree in engineering due to increased labor market competition in overlapping specializations",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in engineering wage premiums for native workers with a college degree in engineering due to increased labor market competition in overlapping specializations]",
+        "[PATH:empirical] Quasi-experimental studies using variation in H-1B visa caps or lottery outcomes to estimate wage effects on native engineers with college degrees, e.g., Kerr & Lincoln (2010) or Peri, Shih & Sparber (2015). \u2014 These studies directly test whether exogenous increases in high-skilled immigration reduce wages for native workers in overlapping specializations, providing causal evidence on the hypothesized competition mechanism.",
+        "[PATH:empirical] Administrative wage records (e.g., LEHD or SSA data) linked to engineering occupation codes and educational attainment, analyzed with a skill-cell approach (occupation-by-region-by-year). \u2014 This allows disaggregation by specialization within engineering, testing whether wage effects are concentrated in fields with high immigrant-native overlap, and controlling for local demand shocks.",
+        "[PATH:theoretical] Theoretical labor market models of imperfect substitution between native and immigrant engineers, e.g., Borjas (2003) nested CES framework, calibrated with engineering-specific elasticities. \u2014 Such models can clarify whether predicted wage effects from increased competition are large enough to be detectable, and under what conditions (e.g., degree of specialization overlap) the hypothesis holds."
+      ],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "mechanism": "increased labor market competition in overlapping specializations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "decreases",
+      "object": "wage premiums for native workers with a college degree in engineering due to increased competition for jobs and downward pressure on wages",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers in engineering wage premiums for native workers with a college degree in engineering due to increased competition for jobs and downward pressure on wages]",
+        "[PATH:empirical] National Science Foundation's Survey of Earned Doctorates and National Survey of College Graduates, combined with wage data from the Bureau of Labor Statistics (BLS) for engineering occupations from 2010 onward \u2014 These datasets allow for a quasi-experimental analysis of wage trends for native-born engineers relative to the inflow of high-skilled immigrant engineers, controlling for industry, region, and experience. Comparing wage premiums before and after 2010 can directly test the hypothesis.",
+        "[PATH:literature] Borjas, G. (2017). 'The Wage Impact of the Marielitos: A Reappraisal.' ILR Review, 70(5), 1077-1110, and subsequent replication studies focusing on STEM labor markets \u2014 This seminal work provides a methodological framework and baseline estimates for the effect of immigrant labor supply shocks on native wages. Applying similar difference-in-differences or instrumental variable approaches to engineering-specific data since 2010 can confirm or refute the hypothesized downward pressure on wage premiums.",
+        "[PATH:theoretical] Hunt, J. & Gauthier-Loiselle, M. (2010). 'How Much Does Immigration Boost Innovation?' American Economic Journal: Macroeconomics, 2(2), 31-56, extended with updated patent and wage data \u2014 This research suggests high-skilled immigration may increase innovation and productivity, potentially offsetting wage competition effects. A theoretical model incorporating both competition and complementarity effects can help disentangle whether net wage premiums for native engineers actually decrease or instead remain stable or rise, challenging the hypothesis."
+      ],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "temporal": "since 2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "increases",
+      "object": "wage premiums for native workers with a college degree in engineering due to complementarity and innovation spillovers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration of high-skilled workers in engineering increases wage premiums for native workers with a college degree in engineering due to complementarity and innovation spillovers in domain 'engineering']"
+      ],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "does not increase",
+      "object": "wage premiums for native workers with a college degree in engineering, due to labor market competition and substitution effects",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration of high-skilled workers in engineering does not increase wage premiums for native workers with a college degree in engineering, due to labor market competition and substitution effects in domain 'engineering']"
+      ],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Immigration of high-skilled workers",
+      "predicate": "has a positive effect on",
+      "object": "wage premiums for native workers with a college degree in STEM fields only when the immigrant STEM workers are complementary (e.g., in different subfields) rather than substitutable",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers wage premiums for native workers with a college degree in STEM fields only when the immigrant STEM workers are complementary (e.g., in different subfields) rather than substitutable]",
+        "[PATH:empirical] Panel data analysis of U.S. metropolitan areas from 2000-2020, comparing wage growth of native STEM college graduates across subfields (e.g., software engineering vs. materials science) with local inflows of high-skilled immigrants categorized by detailed occupational codes (e.g., SOC or ACS occupation codes) to test complementarity vs. substitutability effects. \u2014 Directly tests the conditional hypothesis by measuring wage premium changes under varying degrees of skill overlap between native and immigrant workers, using exogenous variation from H-1B visa caps or other policy shocks for causal identification.",
+        "[PATH:literature] A systematic review and meta-analysis of existing studies on high-skilled immigration and native wages, focusing on studies that explicitly model skill complementarity (e.g., Borjas (2003), Peri (2012), Kerr & Lincoln (2010)) and extracting effect sizes for STEM subfield interactions. \u2014 Synthesizes prior evidence to assess whether the conditional effect holds across different contexts, data sources, and methodologies, and to identify potential publication bias or heterogeneity in results.",
+        "[PATH:theoretical] A theoretical model of labor market competition with heterogeneous skills (e.g., a Roy model extended to multiple STEM subfields) that derives predictions for wage premiums under complementarity vs. substitutability, and calibrates it using U.S. Census or American Community Survey data on skill distributions. \u2014 Provides a formal framework to clarify the mechanisms and boundary conditions of the hypothesis, and generates testable predictions that can be compared with empirical patterns."
+      ],
+      "scope": {
+        "domain": "STEM fields"
+      },
+      "qualifier": {
+        "condition": "complementarity of skill sets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Immigration of high-skilled workers",
+      "predicate": "has a negative effect on",
+      "object": "wage premiums for native workers with a college degree in STEM fields in both the short term and long term",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers wage premiums for native workers with a college degree in STEM fields in both the short term and long term]",
+        "[PATH:empirical] Longitudinal analysis of American Community Survey (ACS) and Current Population Survey (CPS) data, comparing wage trends for native STEM college graduates in metropolitan areas with high vs. low H-1B visa inflows over 10-20 year periods. \u2014 Provides direct, time-series evidence on wage premium changes for native STEM workers in response to high-skilled immigration, allowing separation of short-term and long-term effects.",
+        "[PATH:literature] Meta-analysis of existing econometric studies on the labor market impact of high-skilled immigration, focusing on studies that use quasi-experimental designs (e.g., shift-share instruments, natural experiments from visa policy changes). \u2014 Synthesizes findings from multiple rigorous studies to assess the overall direction and magnitude of effects, identifying consensus or heterogeneity across contexts and time horizons.",
+        "[PATH:theoretical] Theoretical modeling of a two-sector labor market with imperfect substitution between native and immigrant STEM workers, incorporating endogenous technology adoption and firm dynamics. \u2014 Explores mechanisms through which high-skilled immigration could affect native wage premiums (e.g., complementarity, innovation spillovers, or displacement) and predicts conditions for negative vs. positive effects in short and long run."
+      ],
+      "scope": {
+        "domain": "STEM fields"
+      },
+      "qualifier": {
+        "temporal": "short term and long term",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "decreases",
+      "object": "wage premiums for native workers with a college degree in engineering when the host region's innovation capacity is already saturated",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {
+        "mechanism": "crowding-out of innovation opportunities and reduced marginal returns to complementarity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Immigration of high-skilled workers in engineering",
+      "predicate": "decreases",
+      "object": "wage premiums for native workers with a college degree in engineering due to increased competition for jobs",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "engineering"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
