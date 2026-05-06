@@ -1,0 +1,396 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "independent of compensatory overeating on non-fasting days",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens independent of compensatory overeating on non-fasting days]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "partially mediated by caloric restriction on fasting days",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens partially mediated by caloric restriction on fasting days]"
+      ],
+      "scope": {
+        "domain": "short-term (\u226412 week) interventions"
+      },
+      "qualifier": {
+        "temporal": "within 12-week intervention periods",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits]"
+      ],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "condition": "when non-fasting day energy intake exceeds 125% of estimated needs"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "fully mediated by caloric restriction on fasting days, with no independent metabolic advantage beyond reduced energy intake",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens fully mediated by caloric restriction on fasting days, with no independent metabolic advantage beyond reduced energy intake]",
+        "[PATH:empirical] A controlled feeding trial comparing isocaloric intermittent fasting (e.g., 5:2 diet) with continuous caloric restriction over 12 weeks, with precise measurement of energy intake via doubly labeled water and body composition via DXA, to isolate metabolic rate changes via indirect calorimetry. \u2014 Directly tests whether fasting days confer any thermogenic or hormonal advantage beyond caloric deficit by matching total energy intake between groups, eliminating confounding from ad libitum eating.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials (\u226512 weeks) on intermittent fasting versus continuous energy restriction, focusing on subgroup analyses for weight loss adjusted for self-reported energy intake and objective adherence markers (e.g., urinary nitrogen or ketone levels). \u2014 Pooling existing high-quality trials can reveal whether fasting-specific effects persist after controlling for caloric deficit, providing statistical power to detect or refute a metabolic advantage.",
+        "[PATH:empirical] Mechanistic study measuring 24-hour energy expenditure, respiratory quotient, and fasting-induced autophagy markers (e.g., LC3-II/LC3-I ratio) in a crossover design where participants consume identical total calories on fasting vs. non-fasting schedules, with tight inpatient metabolic ward control. \u2014 Tests the theoretical claim that fasting triggers metabolic adaptations (e.g., increased fat oxidation, mitochondrial uncoupling) that elevate energy expenditure independently of intake, which would contradict full mediation by caloric restriction."
+      ],
+      "scope": {
+        "domain": "short-term (\u226412 week) interventions"
+      },
+      "qualifier": {
+        "temporal": "within 12-week intervention periods",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "primarily driven by metabolic adaptations independent of caloric restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens primarily driven by metabolic adaptations independent of caloric restriction]",
+        "[PATH:empirical] Controlled feeding trial comparing isocaloric intermittent fasting vs. continuous caloric restriction with identical total energy intake over 12 weeks, measuring resting metabolic rate, thermic effect of food, and body composition via DXA \u2014 Directly tests whether weight loss differences arise from metabolic adaptations (e.g., increased energy expenditure) rather than from reduced calorie intake, by holding calories constant.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials on intermittent fasting that report both dietary adherence and energy intake, with subgroup analysis adjusting for caloric restriction \u2014 Synthesizes existing evidence to isolate the independent effect of fasting protocols on metabolic rate and fat loss, controlling for caloric intake across studies.",
+        "[PATH:empirical] Mechanistic study measuring circadian gene expression, mitochondrial efficiency, and hormone profiles (e.g., norepinephrine, ghrelin) during short-term intermittent fasting versus matched caloric restriction in a crossover design \u2014 Identifies specific metabolic pathways (e.g., enhanced lipolysis, thermogenesis) that could drive weight loss independently of energy deficit, providing causal biological evidence."
+      ],
+      "scope": {
+        "domain": "short-term (\u226412 week) interventions"
+      },
+      "qualifier": {
+        "temporal": "short-term (\u226412 week) interventions",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "intermittent fasting regimens with structured behavioral reinforcement on non-fasting days",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "not attenuated in individuals with high disinhibition eating traits, compared to standard intermittent fasting",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens with structured behavioral reinforcement on non-fasting days not attenuated in individuals with high disinhibition eating traits, compared to standard intermittent fasting]",
+        "[PATH:empirical] Randomized controlled trial comparing structured behavioral reinforcement (pre-portioned meals + daily feedback) vs. standard intermittent fasting in adults with high dietary disinhibition, measuring weight loss at 12 and 24 weeks. \u2014 Directly tests the hypothesis by comparing the two regimens in the specified population, providing causal evidence on whether the structured intervention attenuates weight loss in high-dishinibition individuals.",
+        "[PATH:literature] Systematic review or meta-analysis of behavioral reinforcement strategies (e.g., meal provision, self-monitoring feedback) in dietary interventions for individuals with high disinhibition or related eating traits. \u2014 Synthesizes existing evidence on whether structured reinforcement modifies the relationship between disinhibition and weight loss outcomes, offering broader support or refutation beyond a single trial.",
+        "[PATH:empirical] Experimental study examining the mechanism: how pre-portioned meals and daily feedback affect energy intake regulation and adherence in high-dishinibition individuals during intermittent fasting, using ecological momentary assessment. \u2014 Provides mechanistic insight into whether the intervention counteracts disinhibition-driven overeating on non-fasting days, which would explain non-attenuation of weight loss."
+      ],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "condition": "when non-fasting day energy intake is capped at 100% of estimated needs via pre-portioned meals and daily feedback"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "intermittent fasting regimens",
+      "predicate": "lead to sustained weight loss",
+      "object": "even in individuals with high disinhibition eating traits",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting regimens even in individuals with high disinhibition eating traits]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 16:8 or 5:2) versus continuous calorie restriction in adults with high dietary disinhibition (measured via Three-Factor Eating Questionnaire), with weight change as primary outcome over 12+ weeks. \u2014 Directly tests the hypothesis in the specified population and temporal scope, providing causal evidence on sustained weight loss.",
+        "[PATH:empirical] Longitudinal observational study using ecological momentary assessment to track eating behavior, adherence, and weight changes in high-disinhibition individuals practicing intermittent fasting in real-world settings (e.g., Western countries). \u2014 Captures naturalistic adherence and sustainability, addressing whether high disinhibition undermines long-term weight loss under intermittent fasting regimens.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies on intermittent fasting in individuals with high disinhibition or related traits (e.g., binge eating, emotional eating), focusing on weight outcomes at \u226512 weeks. \u2014 Synthesizes available evidence to assess overall effect size and consistency, identifying gaps and moderators for the disputed hypothesis."
+      ],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "temporal": "over a period of at least 12 weeks",
+        "geographic": "primarily studied in Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting regimens produce weight loss outcomes that are attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits in domain 'adults with high dietary disinhibition']"
+      ],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "temporal": "over the course of a 12-week intervention period",
+        "geographic": "primarily in North American and European clinical study populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting regimens",
+      "predicate": "produce weight loss outcomes that are",
+      "object": "not significantly attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting regimens produce weight loss outcomes that are not significantly attenuated by compensatory overeating on non-fasting days in individuals with high disinhibition eating traits in domain 'adults with high dietary disinhibition']"
+      ],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "temporal": "during the intervention period (typically 8\u201324 weeks)",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "intermittent fasting regimens in individuals with high disinhibition eating traits",
+      "predicate": "produce greater long-term weight regain compared to continuous calorie restriction when",
+      "object": "non-fasting day energy intake exceeds 125% of estimated needs",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adults with high dietary disinhibition"
+      },
+      "qualifier": {
+        "condition": "over a 12-month follow-up period"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "intermittent fasting regimens",
+      "predicate": "consistently lead to significant weight loss",
+      "object": "regardless of eating behavior traits on non-fasting days",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adults with diverse dietary behaviors"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
