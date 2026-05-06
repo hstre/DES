@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "does not contain cycles of length exactly 2 as barriers to divergence",
+      "object": "any inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 any inputs congruent to 5 mod 18]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "uncertainty": "The reduction through n/3 may not guarantee escape from all possible 2-cycles, as local mod-18 constraints could still permit periodic trapping under specific iterated compositions, and no exhaustive computational or algebraic proof has been established for this residue class."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "does not contain cycles of length 2",
+      "object": "any inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 any inputs congruent to 5 mod 18]"
+      ],
+      "scope": {
+        "domain": "mod-18 residue class dynamics"
+      },
+      "qualifier": {
+        "uncertainty": "Simulated evidence suggests no 2-cycles exist, but the reduction via n/3 may not cover all possible iteration paths."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "may contain cycles of length 2",
+      "object": "a subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 a subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54]"
+      ],
+      "scope": {
+        "domain": "local mod-54 constraints"
+      },
+      "qualifier": {
+        "uncertainty": "Algebraic composition of the 4n+2 and 2n-1 branches could yield periodic trapping under specific iterated compositions not ruled out by mod-18 analysis alone."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "could have 2-cycles that act as barriers to divergence",
+      "object": "some inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 some inputs congruent to 5 mod 18]"
+      ],
+      "scope": {
+        "domain": "barrier dynamics in the map's orbit structure"
+      },
+      "qualifier": {
+        "uncertainty": "While no 2-cycles have been found computationally, the possibility remains that such cycles exist and prevent divergence for a small subset of inputs, as the proof is not exhaustive."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "does not contain any cycles of any length",
+      "object": "any inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 any inputs congruent to 5 mod 18]",
+        "[PATH:empirical] Exhaustive computational search for cycles up to a large bound (e.g., 10^9) across all residues 5 mod 18, using optimized cycle-detection algorithms (e.g., Floyd's or Brent's) and verifying that no cycle exists within that range. \u2014 Direct simulation can provide strong evidence: if a cycle is found, the hypothesis is refuted; if none are found up to a high bound, confidence in the hypothesis increases, especially given the mod-18 structure.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics on congruence classes modulo powers of 2 and 3, leveraging the mod-3 branching and linear transformations to derive invariants or constraints that preclude cycles for 5 mod 18 inputs. \u2014 A rigorous proof that the map is injective or eventually decreasing on that residue class, or that any cycle would violate a parity or modular invariant, could confirm the hypothesis without exhaustive search.",
+        "[PATH:literature] Literature on iterative maps with mod-3 branching and known behavior for similar residue classes (e.g., the 3x+1 problem and its variants like the 5x+1 or 7x+1 maps), particularly studies of cycle structures in generalized Collatz-type functions. \u2014 Existing results on cycle existence or absence in related maps may offer analogous techniques or counterexamples that inform whether cycles are plausible for 5 mod 18 inputs, helping to contextualize the hypothesis."
+      ],
+      "scope": {
+        "domain": "mod-18 residue class dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the discrete iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "contains cycles of length 2",
+      "object": "some inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 some inputs congruent to 5 mod 18]",
+        "[PATH:empirical] Exhaustive computational search of all residues congruent to 5 mod 18 up to a large bound (e.g., 10^9) to detect 2-cycles in T(n) = n/3, 4n+2, 2n-1 under mod-3 branching \u2014 Direct simulation can confirm or refute the existence of length-2 cycles within the specified residue class, providing statistical evidence for the hypothesis.",
+        "[PATH:theoretical] Algebraic analysis of the functional composition equations for a 2-cycle: solve T(T(n)) = n for n \u2261 5 mod 18, considering all branching sequences \u2014 Deriving necessary and sufficient conditions for a 2-cycle in this mod-3 branching map can prove existence or impossibility without relying on finite computational limits.",
+        "[PATH:literature] Literature on related Collatz-type maps with mod-3 branching, particularly studies of cycles in affine linear maps over integers \u2014 Reviewing known results on cycle structures in similar piecewise linear maps may provide theoretical constraints or analogous examples that inform the likelihood of 2-cycles in this specific residue class."
+      ],
+      "scope": {
+        "domain": "mod-18 residue class dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all finite computational runs tested up to current date",
+        "geographic": "universal, not geographically constrained"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "converges to a single fixed point at n = 1 for all inputs congruent to 5 mod 18 that are also \u2261 5 mod 54, because the 2-cycle collapses under the combined effect of the 4n+2 and 2n-1 branches when composed exactly twice",
+      "object": "all inputs congruent to 5 mod 18 that are also \u2261 5 mod 54",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 all inputs congruent to 5 mod 18 that are also \u2261 5 mod 54]",
+        "[PATH:empirical] Conduct a computational search over all residues modulo 54 that are \u22615 mod 18 and \u22615 mod 54 (i.e., the single residue class 5 mod 54) and iterate the map T(n) for a large sample of inputs (e.g., up to 10^6) to verify whether all converge to 1 and whether any 2-cycle appears before convergence. \u2014 Direct simulation can confirm or refute the claim for the specific residue class. The hypothesis is narrow (only one residue class mod 54), so exhaustive testing up to a large bound is feasible and would either provide strong supporting evidence or a counterexample.",
+        "[PATH:theoretical] Perform a theoretical analysis of the composition of the two branches (4n+2 and 2n-1) applied twice in sequence, deriving explicit algebraic forms and checking whether the composed map forces a reduction in value or a fixed point for numbers \u22615 mod 54. \u2014 The hypothesis hinges on the claim that the 2-cycle collapses under two compositions. A symbolic derivation of the composed map for inputs of the form 54k+5 can determine if the map is contractive or has only the fixed point 1, providing a rigorous proof or disproof.",
+        "[PATH:literature] Search for known results on Collatz-type maps with multiple branches and mod constraints, particularly those involving mod-3 branching and 2-cycles, in literature on generalized Collatz problems and dynamical systems. \u2014 The map T(n) is a variant of the Collatz problem. Published work on similar maps (e.g., by Lagarias, Chamberland, or on '3x+1' generalizations) may contain theorems or techniques (e.g., congruence constraints, cycle analysis) that can be directly applied to evaluate the hypothesis or suggest analogous counterexamples."
+      ],
+      "scope": {
+        "domain": "local mod-54 constraints and iterated branch composition"
+      },
+      "qualifier": {
+        "temporal": "under iteration count up to any finite number, but no proven bound",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "cannot contain cycles of length 2",
+      "object": "any subset of inputs due to the lack of closure under iterated application of the branches",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 any subset of inputs due to the lack of closure under iterated application of the branches]",
+        "[PATH:empirical] Exhaustive computational search for 2-cycles in the map T(n) for all n \u2261 5 (mod 6) up to a large bound (e.g., 10^9) using modular arithmetic constraints to verify if any pair (a, b) with a \u2260 b satisfies T(a)=b and T(b)=a. \u2014 Direct simulation can confirm or refute the existence of 2-cycles within a finite range; if none are found, it supports the lack-of-closure argument, while discovery of a counterexample would refute the hypothesis.",
+        "[PATH:theoretical] Algebraic analysis of the functional equations T(T(n)) = n for n \u2261 5 mod 6, deriving necessary congruences and constraints on the branch selection sequences to prove impossibility of period-2 cycles. \u2014 A rigorous proof that the system of equations leads to contradictions (e.g., modulo 3 or 6) would confirm the hypothesis; conversely, finding a consistent solution would refute it.",
+        "[PATH:literature] Literature review of known results on Collatz-type maps with mod-3 branching, particularly studies on cycle constraints in piecewise linear maps with multiple branches, to identify analogous proven cycle restrictions. \u2014 Existing theorems on cycle lengths in similar recursive maps (e.g., generalized Collatz problems) may provide a theoretical framework or direct evidence that 2-cycles are impossible under the given modular conditions."
+      ],
+      "scope": {
+        "domain": "global cycle constraints"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the discrete iteration sequence",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "contains cycles of length 2",
+      "object": "a subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 contains cycles of length 2 a subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54 in domain 'local mod-54 constraints']"
+      ],
+      "scope": {
+        "domain": "local mod-54 constraints"
+      },
+      "qualifier": {
+        "temporal": "under current mathematical definitions as of 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "does not contain cycles of length 2",
+      "object": "any subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 does not contain cycles of length 2 any subset of inputs congruent to 5 mod 18 that are also \u2261 5 mod 54 in domain 'local mod-54 constraints']"
+      ],
+      "scope": {
+        "domain": "local mod-54 constraints"
+      },
+      "qualifier": {
+        "temporal": "as of the current analysis",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "cannot have any 2-cycles for inputs congruent to 5 mod 18, because the algebraic constraints from the branching conditions force all candidate cycles to collapse to fixed points or diverge",
+      "object": "all inputs congruent to 5 mod 18",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 all inputs congruent to 5 mod 18]",
+        "[PATH:empirical] Exhaustive computational search for 2-cycles among inputs congruent to 5 mod 18 up to a high bound (e.g., 10^9) using the map T(n) with mod-3 branching, checking all candidate cycle equations derived from the branching conditions. \u2014 If no 2-cycles are found in a large sample, it increases confidence in the hypothesis; if one is found, it directly refutes it.",
+        "[PATH:theoretical] Algebraic analysis of the system of equations for a potential 2-cycle: solve T(T(n)) = n for n \u2261 5 mod 18, considering all 3\u00d73 = 9 possible branch combinations, and show that each case either yields n = 0 (fixed point) or leads to contradictions (e.g., non-integer or out-of-domain values). \u2014 This provides a rigorous proof or disproof by exhausting all algebraic possibilities, confirming whether the hypothesis holds for all such inputs.",
+        "[PATH:literature] Review of literature on similar recursive maps with mod-based branching (e.g., Collatz-type maps, 3x+1 variants) for known results on cycle constraints, particularly for residue classes like 5 mod 18. \u2014 Existing theoretical frameworks or proven theorems about cycle structures in such maps may directly apply or offer analogies that confirm or refute the claim without new computation."
+      ],
+      "scope": {
+        "domain": "barrier dynamics in the map's orbit structure"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the forward orbit iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "is guaranteed to diverge for all inputs",
+      "object": "some inputs congruent to 5 mod 18",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 some inputs congruent to 5 mod 18]"
+      ],
+      "scope": {
+        "domain": "barrier dynamics in the map's orbit structure"
+      },
+      "qualifier": {
+        "temporal": "for all iterations of the map",
+        "geographic": "within the domain of integer arithmetic"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "contains a unique 2-cycle",
+      "object": "specifically the pair (5, 23) modulo 54",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "mod-54 residue class 5"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "cannot contain cycles of length 2",
+      "object": "any subset of inputs congruent to 5 mod 18",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global integer constraints"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

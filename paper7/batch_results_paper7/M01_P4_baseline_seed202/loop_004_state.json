@@ -1,0 +1,496 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "produces strictly divergent trajectories for all inputs congruent to 5 mod 18, with no cycles longer than 2",
+      "object": "because the 4n+2 branch dominates the dynamics in that subclass, overcoming any contraction from the n/3 branch",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 because the 4n+2 branch dominates the dynamics in that subclass, overcoming any contraction from the n/3 branch]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "produces trajectories that are strictly divergent",
+      "object": "because the 4n+2 branch increases the value by a factor of approximately 4, while the n/3 branch only reduces it by a factor of 1/3, leading to net growth",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because the 4n+2 branch increases the value by a factor of approximately 4, while the n/3 branch only reduces it by a factor of 1/3, leading to net growth]"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18"
+      },
+      "qualifier": {
+        "temporal": "under iterated application of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "may be dominated by the 2n-1 branch for a subset of these inputs, leading to contraction rather than divergence",
+      "object": "because when the 2n-1 branch is applied repeatedly, it can offset the growth from 4n+2 and create local attractors",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because when the 2n-1 branch is applied repeatedly, it can offset the growth from 4n+2 and create local attractors]"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses"
+      },
+      "qualifier": {
+        "condition": "if the frequency of the 2n-1 branch exceeds a certain threshold along the trajectory"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "contains cycles of length exactly 2 that act as barriers to divergence for some inputs congruent to 5 mod 18",
+      "object": "because the map's structure allows periodic alternation between 4n+2 and 2n-1 that stabilizes the trajectory",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 because the map's structure allows periodic alternation between 4n+2 and 2n-1 that stabilizes the trajectory]"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on cycle detection"
+      },
+      "qualifier": {
+        "exception": "only for inputs that fall into a specific residue pattern modulo 54"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "produces trajectories that are strictly divergent",
+      "object": "because the 4n+2 branch increases the value by a factor of approximately 4, while the n/3 branch only reduces it by a factor of 1/3, leading to net growth, and this effect is amplified for inputs that are also congruent to 11 mod 36 due to a higher frequency of 4n+2 applications",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because the 4n+2 branch increases the value by a factor of approximately 4, while the n/3 branch only reduces it by a factor of 1/3, leading to net growth, and this effect is amplified for inputs that are also congruent to 11 mod 36 due to a higher frequency of 4n+2 applications]",
+        "[PATH:empirical] High-precision computational simulation of T(n) for all n \u2261 5 mod 18 up to a large bound (e.g., 10^9), tracking trajectory length, maximum value, and frequency of 4n+2 vs n/3 applications, with special attention to n \u2261 11 mod 36. \u2014 Direct simulation can test the claimed net growth and higher frequency of 4n+2 for n \u2261 11 mod 36, providing statistical evidence for or against strict divergence.",
+        "[PATH:theoretical] Analytic derivation of a Lyapunov exponent or multiplicative drift for the map restricted to residues modulo 18 and 36, using Markov chain or ergodic theory on the state space of residues. \u2014 A rigorous mathematical model can determine whether the expected log-multiplicative growth per step exceeds zero, confirming or refuting the claimed net growth and amplification effect.",
+        "[PATH:literature] Literature search for known results on similar piecewise linear maps with modular branching (e.g., Collatz-type maps, 3x+1 variants, or maps with linear branches and congruence conditions), particularly those involving growth rates and divergent trajectories. \u2014 Existing studies may provide analogous proofs or counterexamples, helping to contextualize the hypothesis and identify potential pitfalls or supporting frameworks."
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18"
+      },
+      "qualifier": {
+        "temporal": "for all integer inputs congruent to 5 mod 18",
+        "geographic": "within the domain of number theory, no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "includes branches that lead to convergent behavior",
+      "object": "because the n/3 branch significantly reduces the value for high enough inputs, enabling potential convergence depending on the branching sequence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because the n/3 branch significantly reduces the value for high enough inputs, enabling potential convergence depending on the branching sequence]",
+        "[PATH:empirical] Computational exploration of the map T(n) for all n \u2261 5 (mod 18) in a large range (e.g., up to 10^9), recording branching sequences and convergence rates to identify whether the n/3 branch dominates sufficiently to force eventual decrease. \u2014 Direct simulation can test whether, under iterative application, the map consistently reduces values for large n, or whether the 4n+2 and 2n-1 branches cause unbounded growth. Systematic sampling across the residue class can reveal statistical convergence patterns.",
+        "[PATH:theoretical] Theoretical analysis of the Lyapunov exponent or expected growth rate of the map under a random branching model, assuming uniform or weighted probabilities for each branch. \u2014 If the average log-multiplicative effect of the branches is negative for large n, convergence is likely; if positive, divergence is expected. This provides a rigorous bound on the hypothesis beyond empirical sampling.",
+        "[PATH:literature] Comparison with known results on Collatz-type maps and 3x+1 generalizations, particularly those with mod-3 branching and linear transformations (e.g., Lagarias\u2019 surveys on generalized Collatz problems). \u2014 Existing literature may contain analogous maps where convergence conditions are characterized, or where specific residue classes are proven to diverge. This can contextualize the hypothesis and suggest whether the n/3 branch is sufficient for convergence."
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18"
+      },
+      "qualifier": {
+        "temporal": "for sufficiently large n (e.g., n > 10^6) and under iterative application"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is dominated by the 2n-1 branch for all inputs in the residue class 5 mod 18 that are also congruent to 5 mod 54",
+      "object": "because the 2n-1 branch is forced whenever n \u2261 5 mod 18 and n \u2261 5 mod 54, eliminating the 4n+2 branch entirely and guaranteeing monotonic contraction to a fixed point",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because the 2n-1 branch is forced whenever n \u2261 5 mod 18 and n \u2261 5 mod 54, eliminating the 4n+2 branch entirely and guaranteeing monotonic contraction to a fixed point]",
+        "[PATH:empirical] Exhaustive computational verification of T(n) for all n \u2261 5 mod 54 up to a large bound (e.g., 10^6) to check whether the 4n+2 branch ever occurs and whether monotonic contraction holds \u2014 Direct simulation can confirm or refute the claim by checking if the 2n-1 branch is indeed forced for all such n, and whether the iterates converge monotonically to a fixed point, revealing any counterexamples or boundary cases.",
+        "[PATH:theoretical] Analytic proof or disproof using modular arithmetic and properties of the map: show that for n \u2261 5 mod 54, n \u2261 5 mod 18 and additionally n mod 3 \u2260 2, which may force the 2n-1 branch; conversely, check if any n in this class could satisfy the condition for the 4n+2 branch (i.e., n \u2261 2 mod 3) \u2014 A rigorous number-theoretic analysis can determine whether the congruence conditions logically preclude the 4n+2 branch, and whether the map's dynamics guarantee contraction, settling the hypothesis without exhaustive search.",
+        "[PATH:literature] Review of existing literature on piecewise linear maps with mod-3 branching (e.g., similar to the Collatz conjecture variants) to identify known results or counterexamples for residue classes like 5 mod 18 or 5 mod 54 \u2014 Relevant prior work on related iterative maps may have already explored such congruence conditions, providing either supporting theorems or documented exceptions that can directly inform the status of this hypothesis."
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with emphasis on the finer residue subclass 5 mod 54"
+      },
+      "qualifier": {
+        "temporal": "for all iterations of T(n) at any step where n satisfies the congruence conditions",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is not dominated by the 2n-1 branch for any significant subset of these inputs",
+      "object": "because the growth effect of the 4n+2 branch is sufficiently strong to override any contraction from 2n-1, preventing the creation of local attractors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 because the growth effect of the 4n+2 branch is sufficiently strong to override any contraction from 2n-1, preventing the creation of local attractors]",
+        "[PATH:empirical] Systematic computational enumeration of the map T(n) for all integers congruent to 5 mod 18 up to a large bound (e.g., 10^9), tracking the frequency and magnitude of visits to the 2n-1 branch vs. the 4n+2 branch, and analyzing whether any subset forms a closed cycle or attractor. \u2014 Direct simulation can reveal whether the 4n+2 branch indeed dominates in growth, or whether pockets of contraction from 2n-1 create local attractors, thus confirming or refuting the hypothesis.",
+        "[PATH:theoretical] Analytic derivation of the average multiplicative factor per iteration for residues 5 mod 18 under the given branching probabilities, comparing the expected growth rate of 4n+2 against the contraction of 2n-1, possibly using Markov chain or ergodic theory on the residue classes. \u2014 A theoretical bound on the Lyapunov exponent or drift of the map can rigorously determine whether the 4n+2 branch overrides contraction globally, without reliance on finite computational limits.",
+        "[PATH:literature] Literature on similar piecewise linear maps with mod-3 branching (e.g., generalized Collatz-type maps), particularly studies on the 5 mod 18 residue class or analogous 'escape' behavior in number theory. \u2014 Existing results on the dynamics of such maps may provide theorems or counterexamples about attractor formation in specific residue classes, contextualizing the hypothesis within known frameworks."
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses"
+      },
+      "qualifier": {
+        "temporal": "for all iterations",
+        "geographic": "within the set of integers congruent to 5 mod 18"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is dominated by the 2n-1 branch for a subset of these inputs, leading to contraction rather than divergence",
+      "object": "because repeated application of 2n-1 offsets the growth from 4n+2 and creates local attractors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 is dominated by the 2n-1 branch for a subset of these inputs, leading to contraction rather than divergence because repeated application of 2n-1 offsets the growth from 4n+2 and creates local attractors in domain 'number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses']"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses"
+      },
+      "qualifier": {
+        "temporal": "during iterative analysis of residue subclasses within the 5 mod 18 congruence class",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is not dominated by the 2n-1 branch for any subset of these inputs, preventing contraction",
+      "object": "because the branching structure ensures that 4n+2 occurs frequently enough to sustain divergence, overriding any local attractors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18 is not dominated by the 2n-1 branch for any subset of these inputs, preventing contraction because the branching structure ensures that 4n+2 occurs frequently enough to sustain divergence, overriding any local attractors in domain 'number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses']"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on specific residue subclasses"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large integers congruent to 5 mod 18, under the standard iteration order",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "generates a unique infinite divergent trajectory for every input congruent to 5 mod 18 but not falling into the specific residue pattern modulo 54",
+      "object": "because the 2-cycle barrier only exists for a narrow residue class modulo 54, and all other 5 mod 18 inputs eventually escape to a mod-3 branching that forces unbounded growth",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 because the 2-cycle barrier only exists for a narrow residue class modulo 54, and all other 5 mod 18 inputs eventually escape to a mod-3 branching that forces unbounded growth]",
+        "[PATH:empirical] Exhaustive computational search for all residues modulo 54 of inputs congruent to 5 mod 18, tracing trajectories until a clear divergence pattern (e.g., exceeding a large bound or entering a known cycle) is observed for each residue class \u2014 Direct simulation can confirm or refute the claim that only a narrow residue class modulo 54 leads to a 2-cycle barrier, while all others diverge. A systematic scan up to a high iteration limit (e.g., 10^6 steps) would provide empirical evidence for the classification.",
+        "[PATH:theoretical] Analytic derivation of the conditions for the existence of the 2-cycle barrier in terms of modular arithmetic modulo 54, using linear congruences and fixed-point analysis of the map T(n) restricted to residues \u2014 A rigorous proof that the 2-cycle occurs exactly for a specific residue class modulo 54 would confirm the hypothesis's qualifier. Conversely, if the barrier exists for multiple or no residues, the hypothesis would be refuted. This approach leverages number theory to avoid computational limits.",
+        "[PATH:literature] Literature review of known results on piecewise linear maps with mod-3 branching, particularly studies of divergence in maps similar to the Collatz-type functions (e.g., works by Lagarias, Chamberland, or Tao on 3x+1 variants) \u2014 Existing research may contain analogous classifications of divergent trajectories in maps with branching based on modular residues. Finding a known theorem or conjecture about the behavior of such maps for inputs congruent to 5 mod 18 could either support or contradict the hypothesis, providing a theoretical foundation."
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on divergence classification"
+      },
+      "qualifier": {
+        "exception": "inputs that are congruent to a specific residue modulo 54 that triggers the 2-cycle"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6",
+      "predicate": "does not contain cycles of length exactly 2 as barriers to divergence for any inputs congruent to 5 mod 18",
+      "object": "because the map's reduction through n/3 ensures eventual escape from any periodic pattern, preventing stabilization in cyclical trajectories",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 6 because the map's reduction through n/3 ensures eventual escape from any periodic pattern, preventing stabilization in cyclical trajectories]"
+      ],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on cycle detection"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the forward iteration of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is dominated by the 2n-1 branch for exactly those inputs whose base-3 representation contains a specific forbidden digit pattern that prevents repeated activation of the 4n+2 branch",
+      "object": "because the digit pattern determines the mod-3 residue sequence, and a pattern lacking the digit 2 in certain positions forces the trajectory into a contraction loop via repeated 2n-1 steps",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18, with focus on base-3 digit constraints and trajectory classification"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for inputs congruent to 5 mod 18",
+      "predicate": "is dominated by the 4n+2 branch for almost all inputs, leading to divergence rather than contraction",
+      "object": "because the growth rate of 4n+2 significantly outpaces any reduction from 2n-1, preventing local attractors",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "number theory, iterative maps on integers congruent to 5 mod 18"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

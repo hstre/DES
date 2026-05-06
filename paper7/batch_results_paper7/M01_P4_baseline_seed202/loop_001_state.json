@@ -1,0 +1,435 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has no divergent trajectory that escapes to infinity",
+      "object": "for any integer input",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for any integer input]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has no divergent trajectory that escapes to infinity",
+      "object": "for any integer input",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for any integer input]"
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "may have divergent trajectories that escape to infinity",
+      "object": "for some integer inputs, especially those with large odd components",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for some integer inputs, especially those with large odd components]"
+      ],
+      "scope": {
+        "domain": "integers with specific residue classes mod 6"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "exhibits bounded trajectories for all integers tested up to 10^6",
+      "object": "for integer inputs in the range [-10^6, 10^6]",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for integer inputs in the range [-10^6, 10^6]]"
+      ],
+      "scope": {
+        "domain": "finite range of small integers"
+      },
+      "qualifier": {
+        "method": "empirical simulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has a finite set of distinct cycles that all trajectories eventually enter",
+      "object": "for any integer input",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for any integer input]",
+        "[PATH:empirical] Systematic computational search over a wide range of integer seeds (e.g., |n| \u2264 10^6) with rigorous cycle detection and orbit classification \u2014 Empirical enumeration can reveal whether the number of distinct cycles is finite and whether all trajectories converge to known cycles. Disproving the hypothesis would require finding a divergent trajectory or a new cycle beyond a certain bound.",
+        "[PATH:theoretical] Symbolic dynamics or number-theoretic analysis of the map's modular constraints (e.g., invariant sets modulo powers of 3 or 2) \u2014 The piecewise definition suggests possible invariants under iteration. A theoretical proof of eventual periodicity for all integers would confirm the hypothesis; conversely, constructing a counterexample by analyzing growth conditions (e.g., bounding the map's effect on absolute value) could refute it.",
+        "[PATH:literature] Literature on generalized Collatz-type maps with multiple linear branches, especially those with mod-3 branching and negative coefficients \u2014 Existing results on similar maps (e.g., the 3x+1 problem, the 5x+1 problem, or maps with negative coefficients) often provide techniques for proving finiteness of cycles or detecting divergence. A review may uncover known theorems or counterexamples applicable to this specific map."
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps t \u2265 0",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has at least one divergent trajectory that escapes to infinity",
+      "object": "for some integer input",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for some integer input]",
+        "[PATH:empirical] Systematic computational search for divergent trajectories in T(n) across a wide range of initial integers (e.g., up to 10^9) with rigorous orbit length tracking and detection of unbounded growth patterns \u2014 Direct simulation can reveal whether any integer produces a sequence that grows without bound, providing empirical confirmation or refutation of the hypothesis. Large-scale search increases the chance of detecting rare divergent behavior.",
+        "[PATH:theoretical] Analytic study of the dynamics of T(n) using number-theoretic invariants (e.g., modular constraints, growth rates under the piecewise linear map) to prove existence or non-existence of unbounded orbits \u2014 Theoretical analysis can establish necessary conditions for divergence, such as the presence of a positive Lyapunov exponent or invariant subsets that force growth, offering a conclusive proof beyond simulation limits.",
+        "[PATH:literature] Survey of known results on similar piecewise linear maps with modular branching (e.g., Collatz-type conjectures, generalized Syracuse problems) to identify analogous proven divergent trajectories or known constraints \u2014 Existing literature may provide proven criteria for divergence in related maps, which can be adapted to T(n) to either support or undermine the hypothesis through analogy or direct extension."
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps as n iterates",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "diverges to infinity for all inputs n \u2261 5 mod 6, regardless of the size of odd components",
+      "object": "due to a persistent net increase under the iteration rules",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) due to a persistent net increase under the iteration rules]",
+        "[PATH:empirical] High-precision computational exploration of T(n) for all n \u2261 5 mod 6 up to a large bound (e.g., 10^9), tracking net growth rate and escape times, with statistical analysis of trajectory lengths and divergence indicators. \u2014 Systematic simulation can reveal whether all such inputs indeed diverge or if some eventually cycle or converge, providing direct empirical confirmation or refutation of the hypothesis.",
+        "[PATH:theoretical] Analytical study of the map's invariant measures or Lyapunov exponents under the mod-3 branching, focusing on the subset n \u2261 5 mod 6, to determine if the expected multiplicative drift is positive. \u2014 A rigorous mathematical proof or disproof of persistent net increase would establish whether divergence is inevitable, addressing the core claim of the hypothesis.",
+        "[PATH:literature] Review of existing literature on related piecewise-linear maps and Collatz-type problems, particularly those with mod-3 branching and residue-class constraints, for analogous known behaviors or counterexamples. \u2014 Prior results on similar maps may provide theoretical insights, known cycles, or divergence proofs that directly apply to this hypothesis, saving computational effort."
+      ],
+      "scope": {
+        "domain": "integers congruent to 5 modulo 6"
+      },
+      "qualifier": {
+        "temporal": "for all iterates of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has no trajectories that escape to infinity",
+      "object": "for any integer inputs, regardless of their odd or even components",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) for any integer inputs, regardless of their odd or even components]",
+        "[PATH:empirical] High-precision computer simulation of T(n) for a wide range of integer inputs (e.g., up to 10^9) with automated orbit detection for unbounded growth or periodicity \u2014 Direct simulation can identify trajectories that appear to increase without bound or settle into cycles, providing empirical evidence for or against the hypothesis. The mod-3 branching structure may produce rare escapees, so large-scale sampling is necessary.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using number-theoretic invariants (e.g., modular constraints, Lyapunov exponents, or potential functions) to prove boundedness or divergence \u2014 A theoretical proof of boundedness (or existence of escape) would resolve the dispute. Approaches could include constructing a non-negative integer-valued function that strictly decreases under iteration (like a Collatz-type energy) or analyzing the map's behavior in residue classes modulo powers of 3.",
+        "[PATH:literature] Literature review of similar piecewise linear maps with mod-3 branching (e.g., generalized Collatz problems, 3x+1 variants, or Conway's FRACTRAN programs) for known results on boundedness and ergodic properties \u2014 The map T(n) is a variant of the Collatz-type family. Existing theorems or counterexamples from related maps (e.g., the 3x+1 problem, the 5x+1 problem, or maps with multiple branches) may provide insights, proof techniques, or analogous counterexamples that inform this hypothesis."
+      ],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the forward iteration",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has divergent trajectories that escape to infinity",
+      "object": "for some integer inputs with large odd components, due to unbounded growth from the 4n+2 and 2n-1 branches",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) has divergent trajectories that escape to infinity for some integer inputs with large odd components, due to unbounded growth from the 4n+2 and 2n-1 branches in domain 'integers with specific residue classes mod 6']"
+      ],
+      "scope": {
+        "domain": "integers with specific residue classes mod 6"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge (no known counterexample found up to 10^9)",
+        "geographic": "not applicable (mathematical claim without geographic dependence)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "does not have any divergent trajectories that escape to infinity",
+      "object": "for any integer inputs, because the map eventually enters a cycle or reduces to 1 via the n/3 branch",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1) does not have any divergent trajectories that escape to infinity for any integer inputs, because the map eventually enters a cycle or reduces to 1 via the n/3 branch in domain 'integers with specific residue classes mod 6']"
+      ],
+      "scope": {
+        "domain": "integers with specific residue classes mod 6"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has strictly monotonic increase for all inputs congruent to 5 mod 6 under iteration",
+      "object": "leading to provable divergence to infinity",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "integers \u2261 5 (mod 6)"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) with mod-3 branching (n/3, 4n+2, 2n-1)",
+      "predicate": "has bounded trajectories that do not escape to infinity",
+      "object": "for all integer inputs, regardless of their composition",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 37,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
