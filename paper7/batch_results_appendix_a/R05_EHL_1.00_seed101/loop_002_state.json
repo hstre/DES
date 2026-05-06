@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "provides unique metabolic benefits distinct from caloric restriction",
+      "object": "due to specific physiological mechanisms such as enhanced autophagy, improved insulin sensitivity, and altered hormone levels",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting due to specific physiological mechanisms such as enhanced autophagy, improved insulin sensitivity, and altered hormone levels]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "enhances autophagy to a greater extent",
+      "object": "than equivalent caloric restriction without time-restricted feeding",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting than equivalent caloric restriction without time-restricted feeding]"
+      ],
+      "scope": {
+        "domain": "cellular stress response"
+      },
+      "qualifier": {
+        "temporal": "within 24\u201348 hours of fasting initiation",
+        "geographic": "not geographically restricted; applicable to human and animal cellular models globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "may not produce unique metabolic benefits",
+      "object": "when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet]"
+      ],
+      "scope": {
+        "domain": "energy balance and macronutrient equivalence"
+      },
+      "qualifier": {
+        "condition": "if total caloric intake and macronutrient composition are matched"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "improves insulin sensitivity primarily through weight loss",
+      "object": "rather than through unique fasting-specific mechanisms",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting rather than through unique fasting-specific mechanisms]"
+      ],
+      "scope": {
+        "domain": "metabolic regulation in overweight individuals"
+      },
+      "qualifier": {
+        "temporal": "over periods of 8\u201312 weeks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting with a 16:8 daily schedule",
+      "predicate": "induces a more rapid decline in hepatic lipid peroxidation markers",
+      "object": "than isocaloric daily caloric restriction spread across three meals",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with a 16:8 daily schedule than isocaloric daily caloric restriction spread across three meals]",
+        "[PATH:empirical] Time-restricted feeding versus daily calorie restriction on hepatic oxidative stress markers in rodent models: a controlled trial measuring malondialdehyde (MDA) and 4-hydroxynonenal (4-HNE) at 0, 24, and 48 hours \u2014 Directly tests the hypothesis by comparing the two dietary interventions in a controlled mammalian model, specifically measuring lipid peroxidation markers within the critical 48-hour window.",
+        "[PATH:literature] Systematic review and meta-analysis of time-restricted eating versus continuous caloric restriction on biomarkers of oxidative stress in humans and animal models \u2014 Aggregates existing evidence to determine if a rapid decline in hepatic lipid peroxidation is consistently observed under 16:8 intermittent fasting versus isocaloric three-meal regimens, providing statistical power to confirm or refute the claim.",
+        "[PATH:theoretical] Mechanistic study of autophagy and Nrf2 pathway activation kinetics during early fasting periods (0\u201348 hours) in hepatocytes \u2014 Explores the underlying biological mechanisms (e.g., autophagy induction, antioxidant response element activation) that could explain a faster decline in lipid peroxidation markers under intermittent fasting, helping to predict whether such an effect is plausible within 48 hours."
+      ],
+      "scope": {
+        "domain": "oxidative stress response"
+      },
+      "qualifier": {
+        "temporal": "within the first 48 hours of intervention",
+        "geographic": "not geographically restricted; applicable to mammalian liver models"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Equivalent caloric restriction without time-restricted feeding",
+      "predicate": "enhances autophagy to a greater extent",
+      "object": "than intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Equivalent caloric restriction without time-restricted feeding than intermittent fasting]",
+        "[PATH:empirical] Controlled murine feeding study comparing daily caloric restriction (CR) with ad libitum feeding vs. intermittent fasting (IF) matched for total caloric intake, measuring autophagic flux via LC3-II/I ratio and p62 degradation in liver and muscle over 24 hours. \u2014 Directly tests the hypothesis by isolating the effect of feeding schedule under equal caloric loads; autophagic flux markers provide quantitative comparison of autophagy enhancement across the cycle.",
+        "[PATH:literature] Systematic review and meta-analysis of human and animal studies comparing autophagy markers (e.g., beclin-1, ATG5, LC3) between daily CR and IF protocols with matched energy deficits. \u2014 Synthesizes existing conflicting evidence to determine if the temporal pattern of feeding (daily CR vs. IF) consistently modulates autophagy beyond caloric restriction alone; identifies potential confounders like meal timing and nutrient composition.",
+        "[PATH:theoretical] Mathematical modeling of autophagy dynamics under periodic nutrient availability, simulating daily CR (constant low energy) vs. IF (periodic fasting/feeding) with identical total caloric intake, incorporating mTOR and AMPK signaling pathways. \u2014 Predicts whether the temporal profile of nutrient sensing (sustained vs. intermittent suppression of mTOR) differentially affects autophagic activation, providing mechanistic insight to guide experimental design."
+      ],
+      "scope": {
+        "domain": "cellular stress response"
+      },
+      "qualifier": {
+        "temporal": "over a 24-hour feeding cycle"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Intermittent fasting",
+      "predicate": "impairs glucose tolerance and increases insulin resistance compared to an isocaloric standard diet",
+      "object": "when total caloric intake and macronutrient composition are matched, due to prolonged daily fasting windows disrupting circadian glucose regulation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting when total caloric intake and macronutrient composition are matched, due to prolonged daily fasting windows disrupting circadian glucose regulation]",
+        "[PATH:empirical] Controlled randomized crossover trial comparing time-restricted feeding (e.g., 16:8) vs. isocaloric standard diet over 6 weeks, with continuous glucose monitoring and frequently sampled intravenous glucose tolerance tests (FSIVGTT) to measure insulin sensitivity and glucose disposal \u2014 Directly tests the hypothesis under matched caloric and macronutrient conditions in humans, capturing early temporal effects and circadian disruption via glucose dynamics.",
+        "[PATH:literature] Systematic review and meta-analysis of human studies on intermittent fasting with matched energy intake, focusing on outcomes of fasting glucose, insulin, HOMA-IR, and oral glucose tolerance test (OGTT) responses stratified by intervention duration (0-8 weeks) \u2014 Synthesizes existing evidence to assess whether a consistent pattern of impaired glucose tolerance emerges in the specified temporal window, addressing the disputed status.",
+        "[PATH:empirical] Mechanistic study in rodent models with timed feeding vs. ad libitum isocaloric feeding, measuring circadian clock gene expression (e.g., Clock, Bmal1, Per2) in liver and pancreatic islets, along with glucose tolerance and insulin secretion \u2014 Provides mechanistic evidence for the proposed disruption of circadian glucose regulation, which can be extrapolated to humans to confirm or refute the causal pathway."
+      ],
+      "scope": {
+        "domain": "circadian metabolism and glucose homeostasis"
+      },
+      "qualifier": {
+        "temporal": "during the initial 4\u20138 weeks of intervention",
+        "geographic": "human populations in Western industrialized countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Intermittent fasting",
+      "predicate": "produces unique metabolic benefits",
+      "object": "beyond those achieved by standard caloric restriction diets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting beyond those achieved by standard caloric restriction diets]",
+        "[PATH:empirical] Randomized controlled trial comparing time-restricted feeding (e.g., 16:8) to isocaloric standard caloric restriction over \u22656 months, with outcomes including insulin sensitivity, lipid profiles, and inflammatory markers. \u2014 Directly tests whether intermittent fasting yields metabolic improvements beyond those attributable to calorie reduction alone, controlling for total energy intake.",
+        "[PATH:literature] Systematic review and meta-analysis of human studies contrasting intermittent fasting protocols with continuous energy restriction, focusing on biomarkers such as \u03b2-hydroxybutyrate, oxidative stress, and autophagy markers. \u2014 Synthesizes existing evidence to determine if unique metabolic benefits (e.g., ketosis-driven effects) consistently emerge beyond caloric restriction effects across diverse populations.",
+        "[PATH:theoretical] Mechanistic study in animal models (e.g., mice) comparing intermittent fasting to pair-fed caloric restriction, examining circadian gene expression, mitochondrial function, and cellular stress responses. \u2014 Elucidates molecular pathways (e.g., AMPK, mTOR, sirtuins) that might confer distinct benefits, providing causal evidence for mechanisms not replicated by simple caloric restriction."
+      ],
+      "scope": {
+        "domain": "metabolic and physiological effects"
+      },
+      "qualifier": {
+        "temporal": "since early 2010s",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "produces unique metabolic benefits",
+      "object": "even when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting produces unique metabolic benefits even when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet in domain 'energy balance and macronutrient equivalence']"
+      ],
+      "scope": {
+        "domain": "energy balance and macronutrient equivalence"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "does not produce unique metabolic benefits",
+      "object": "when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting does not produce unique metabolic benefits when total caloric intake and macronutrient composition are matched to a standard caloric restriction diet in domain 'energy balance and macronutrient equivalence']"
+      ],
+      "scope": {
+        "domain": "energy balance and macronutrient equivalence"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Intermittent fasting",
+      "predicate": "improves insulin sensitivity primarily through time-restricted feeding-induced circadian alignment",
+      "object": "rather than through weight loss",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting rather than through weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing time-restricted feeding (eTRF) with calorie-matched continuous feeding, measuring insulin sensitivity via hyperinsulinemic-euglycemic clamp at matched weight loss levels \u2014 Directly tests whether circadian alignment of feeding (e.g., early time-restricted feeding) improves insulin sensitivity independently of weight loss by holding caloric intake and weight constant, isolating the timing effect.",
+        "[PATH:empirical] Crossover study assessing insulin sensitivity (HOMA-IR or oral glucose tolerance test) in shift workers or individuals with circadian disruption, comparing intermittent fasting with a non-time-restricted isocaloric diet \u2014 Evaluates the circadian alignment mechanism in a population with inherent circadian misalignment; if intermittent fasting restores insulin sensitivity more than weight loss alone, this supports the hypothesis.",
+        "[PATH:literature] Meta-analysis of human and rodent studies examining the independent effects of meal timing vs. caloric restriction on insulin sensitivity, controlling for body weight changes \u2014 Synthesizes existing evidence to quantify the relative contribution of circadian alignment versus weight loss, identifying gaps and potential confounders in prior research."
+      ],
+      "scope": {
+        "domain": "metabolic regulation in overweight individuals"
+      },
+      "qualifier": {
+        "temporal": "over periods of 8\u201312 weeks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Intermittent fasting",
+      "predicate": "improves insulin sensitivity through unique fasting-specific mechanisms",
+      "object": "beyond just weight loss",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting beyond just weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., time-restricted feeding) to continuous caloric restriction with matched weight loss, measuring insulin sensitivity via hyperinsulinemic-euglycemic clamp \u2014 Directly tests whether intermittent fasting yields insulin sensitivity improvements beyond those attributable to weight loss alone, by controlling for total caloric deficit.",
+        "[PATH:literature] Meta-analysis of human studies evaluating markers of insulin sensitivity (HOMA-IR, fasting insulin) in intermittent fasting protocols with and without weight loss adjustment \u2014 Synthesizes existing evidence to determine if a consistent independent effect of fasting-specific mechanisms (e.g., altered circadian rhythm, autophagy) emerges across studies.",
+        "[PATH:empirical] Mechanistic animal study examining hepatic and adipose insulin signaling (e.g., IRS-1 phosphorylation, GLUT4 translocation) under intermittent fasting versus pair-fed caloric restriction \u2014 Provides controlled biological evidence for fasting-specific molecular pathways (e.g., ketone body signaling, AMPK activation) that improve insulin sensitivity independent of energy balance."
+      ],
+      "scope": {
+        "domain": "metabolic regulation in overweight individuals"
+      },
+      "qualifier": {
+        "temporal": "short-term (\u226412 weeks)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Intermittent fasting",
+      "predicate": "produces greater improvements in insulin sensitivity and beta-cell function",
+      "object": "than an isocaloric, macronutrient-matched standard caloric restriction diet, independent of weight loss",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "glucose metabolism and beta-cell function"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Intermittent fasting",
+      "predicate": "produces unique metabolic benefits",
+      "object": "regardless of matching total caloric intake and macronutrient composition to a standard caloric restriction diet",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "metabolic health and time-restricted feeding"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
