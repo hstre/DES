@@ -1,0 +1,550 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "genetic markers (e.g., FTO, PPARG, and CLOCK variants)",
+      "predicate": "differentially modulate",
+      "object": "changes in resting metabolic rate during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: genetic markers (e.g., FTO, PPARG, and CLOCK variants) changes in resting metabolic rate during intermittent fasting]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "FTO variant (rs9939609)",
+      "predicate": "reduces",
+      "object": "resting metabolic rate during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: FTO variant (rs9939609) resting metabolic rate during intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "human genetics, energy metabolism"
+      },
+      "qualifier": {
+        "effect_direction": "decrease",
+        "population": "Caucasian adults"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "enhance",
+      "object": "compensatory metabolic adaptation during intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: PPARG and CLOCK variants compensatory metabolic adaptation during intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism"
+      },
+      "qualifier": {
+        "mechanism": "PPARG upregulates lipid oxidation; CLOCK alters feeding timing"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "genetic markers (FTO, PPARG, CLOCK)",
+      "predicate": "are unlikely to independently modulate",
+      "object": "resting metabolic rate changes beyond baseline variation in intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "skeptical hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: genetic markers (FTO, PPARG, CLOCK) resting metabolic rate changes beyond baseline variation in intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "population genetics, clinical intermittent fasting trials"
+      },
+      "qualifier": {
+        "confounding_factor": "baseline RMR variance and adherence to fasting protocol"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "FTO variant (rs9939609)",
+      "predicate": "amplifies",
+      "object": "the drop in resting metabolic rate during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: FTO variant (rs9939609) the drop in resting metabolic rate during intermittent fasting]",
+        "[PATH:empirical] Controlled clinical trial measuring resting metabolic rate via indirect calorimetry in Caucasian adults with and without the rs9939609 A allele during a standardized intermittent fasting protocol (e.g., 16:8 time-restricted feeding). \u2014 Directly tests the hypothesis by comparing the drop in resting metabolic rate between carriers and non-carriers under controlled fasting conditions, providing causal evidence for the FTO variant's effect.",
+        "[PATH:literature] Systematic review and meta-analysis of existing studies on FTO rs9939609 and energy expenditure changes during caloric restriction or fasting interventions. \u2014 Synthesizes available data to assess consistency of the effect across populations and study designs, potentially confirming or refuting the hypothesized amplification in Caucasian adults.",
+        "[PATH:theoretical] Mechanistic study in human adipocytes or muscle cells with CRISPR-edited rs9939609 genotype, measuring mitochondrial respiration and metabolic rate under fasting-mimicking conditions. \u2014 Provides mechanistic insight into whether the FTO variant alters cellular energy metabolism pathways (e.g., thermogenesis or substrate oxidation), supporting or challenging the observed effect on resting metabolic rate during fasting."
+      ],
+      "scope": {
+        "domain": "human genetics, energy metabolism"
+      },
+      "qualifier": {
+        "effect_direction": "increase",
+        "population": "Caucasian adults",
+        "comparison": "relative to non-carriers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "FTO variant (rs9939609)",
+      "predicate": "increases",
+      "object": "resting metabolic rate during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: FTO variant (rs9939609) resting metabolic rate during intermittent fasting]",
+        "[PATH:empirical] Controlled crossover trial measuring resting metabolic rate via indirect calorimetry in homozygous risk (AA) vs. non-risk (TT) carriers of rs9939609 during a 24-hour fast and a 48-hour fast, with standardized pre-fast meals and activity monitoring. \u2014 Directly tests the hypothesized effect under controlled conditions, addressing the temporal scope (12\u201348 hours) and providing causal evidence for increased RMR in the risk allele group.",
+        "[PATH:literature] Meta-analysis of genome-wide association studies (GWAS) and candidate gene studies examining FTO rs9939609 and energy expenditure phenotypes (e.g., resting metabolic rate, thermic effect of food, fasting-induced thermogenesis) stratified by fasting duration and ancestry. \u2014 Synthesizes existing data across European and Asian populations to assess consistency of association, detect potential population-specific effects, and quantify effect size while controlling for confounders like BMI and adiposity.",
+        "[PATH:empirical] In vitro or ex vivo functional study of FTO expression and activity in primary adipocytes or hypothalamic neurons derived from rs9939609 risk vs. non-risk carriers, measuring mitochondrial respiration (oxygen consumption rate) under glucose deprivation (simulating fasting). \u2014 Provides mechanistic evidence linking the genetic variant to cellular energy metabolism changes during fasting, which could explain any observed increase in whole-body resting metabolic rate."
+      ],
+      "scope": {
+        "domain": "human genetics, energy metabolism"
+      },
+      "qualifier": {
+        "temporal": "during intermittent fasting periods lasting 12\u201348 hours",
+        "geographic": "global population of European and Asian ancestry"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "synergistically impair",
+      "object": "compensatory metabolic adaptation during intermittent fasting under high-fat diet conditions",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: PPARG and CLOCK variants compensatory metabolic adaptation during intermittent fasting under high-fat diet conditions]",
+        "[PATH:empirical] Time-restricted feeding (TRF) studies in PPARG knockout or variant mouse models on high-fat diet, measuring lipid oxidation rates, fat mass, and insulin sensitivity via metabolic cages and glucose tolerance tests \u2014 Directly tests whether PPARG loss or variant eliminates the metabolic benefit of intermittent fasting under high-fat diet, and whether CLOCK disruption exacerbates fat accumulation.",
+        "[PATH:empirical] Transcriptomic and metabolomic profiling of liver and adipose tissue from mice with CLOCK mutant and PPARG variant alleles subjected to intermittent fasting vs. ad libitum high-fat diet \u2014 Reveals whether PPARG-driven lipid oxidation pathways are suppressed when CLOCK disrupts feeding timing, and identifies compensatory failures leading to insulin resistance.",
+        "[PATH:literature] Systematic review and meta-analysis of human studies linking PPARG Pro12Ala and CLOCK 3111T/C polymorphisms to metabolic outcomes under intermittent fasting protocols \u2014 Provides population-level evidence of synergistic impairment, assessing whether carriers of both variants show worse fat accumulation and insulin resistance during intermittent fasting on high-fat diets."
+      ],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism, nutritional stress"
+      },
+      "qualifier": {
+        "mechanism": "PPARG-driven lipid oxidation fails to compensate when CLOCK disrupts feeding timing, leading to net fat accumulation and insulin resistance"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "impair",
+      "object": "compensatory metabolic adaptation during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: PPARG and CLOCK variants compensatory metabolic adaptation during intermittent fasting]",
+        "[PATH:empirical] Controlled intermittent fasting trial with genotyping of PPARG (e.g., rs1801282) and CLOCK (e.g., rs1801260) variants, measuring metabolic flexibility via respiratory quotient and ketone body dynamics over 72 hours \u2014 Directly tests whether carriers of specific PPARG and CLOCK alleles show blunted metabolic switching and reduced fat oxidation during fasting, compared to non-carriers, under controlled dietary conditions.",
+        "[PATH:literature] Longitudinal cohort study using existing biobank data (e.g., UK Biobank, All of Us) with self-reported or prescribed intermittent fasting patterns, analyzing interactions between PPARG/CLOCK polygenic risk scores and changes in insulin sensitivity, liver fat, and resting energy expenditure \u2014 Leverages large-scale, multi-ancestry datasets to detect statistical interactions between genetic variants and real-world fasting adherence, providing ecological validity to the hypothesized impairment.",
+        "[PATH:empirical] In vitro or animal model experiment using PPARG-knockout or CLOCK-mutant mice subjected to time-restricted feeding, measuring hepatic and adipose tissue gene expression, mitochondrial respiration, and lipid mobilization \u2014 Establishes mechanistic causality by isolating the effects of these variants on circadian regulation of lipid metabolism and fasting-induced metabolic adaptation, which is difficult to achieve in human studies alone."
+      ],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism"
+      },
+      "qualifier": {
+        "temporal": "during intermittent fasting protocols lasting 24\u201372 hours",
+        "geographic": "human populations with mixed ancestry (European, Asian, and African cohorts)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "enhance",
+      "object": "compensatory metabolic adaptation during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms PPARG and CLOCK variants enhance compensatory metabolic adaptation during intermittent fasting in domain 'circadian biology, lipid metabolism']"
+      ],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism"
+      },
+      "qualifier": {
+        "temporal": "during intermittent fasting protocols lasting 16\u201324 hours",
+        "geographic": "human studies in Western European and North American populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "impair or fail to enhance",
+      "object": "compensatory metabolic adaptation during intermittent fasting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms PPARG and CLOCK variants impair or fail to enhance compensatory metabolic adaptation during intermittent fasting in domain 'circadian biology, lipid metabolism']"
+      ],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism"
+      },
+      "qualifier": {
+        "temporal": "during intermittent fasting protocols spanning 16\u201324 hours",
+        "geographic": "human populations with European and Asian ancestry"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "FTO, PPARG, and CLOCK polygenic risk score",
+      "predicate": "moderates",
+      "object": "the effect of intermittent fasting on resting metabolic rate change only when baseline insulin sensitivity is low",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: FTO, PPARG, and CLOCK polygenic risk score the effect of intermittent fasting on resting metabolic rate change only when baseline insulin sensitivity is low]",
+        "[PATH:empirical] Re-analysis of existing intermittent fasting trial data (e.g., TREAT or CALERIE) stratified by baseline HOMA-IR and polygenic risk scores for FTO, PPARG, and CLOCK \u2014 Directly tests the three-way interaction by comparing RMR change between high vs. low PRS groups only in participants with low baseline insulin sensitivity, using already-collected data.",
+        "[PATH:empirical] Prospective cohort study with controlled intermittent fasting intervention, measuring RMR, HOMA-IR, and genotyping for FTO rs9939609, PPARG Pro12Ala, and CLOCK rs1801260 \u2014 Provides de novo evidence specifically designed to detect the hypothesized effect modification, with adequate power for subgroup analysis.",
+        "[PATH:theoretical] Mendelian randomization study using genetic instruments for insulin resistance (e.g., TyG-index-related variants) to test whether genetically predicted low insulin sensitivity modifies the effect of fasting on RMR \u2014 Leverages causal inference methods to strengthen the evidence for a biological interaction, reducing confounding by lifestyle factors common in observational studies."
+      ],
+      "scope": {
+        "domain": "population genetics, clinical intermittent fasting trials, metabolic phenotyping"
+      },
+      "qualifier": {
+        "effect_modifier": "baseline HOMA-IR (insulin resistance)",
+        "interaction_type": "three-way gene-by-lifestyle-by-metabolic-state interaction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "genetic markers (FTO, PPARG, CLOCK)",
+      "predicate": "can significantly influence",
+      "object": "resting metabolic rate changes in response to intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: genetic markers (FTO, PPARG, CLOCK) resting metabolic rate changes in response to intermittent fasting]",
+        "[PATH:empirical] Re-analysis of individual-level data from randomized controlled trials of intermittent fasting (e.g., TREAT, CALERIE) stratified by FTO rs9939609, PPARG rs1801282, and CLOCK rs1801260 genotypes, measuring RMR via indirect calorimetry at baseline and week 8 \u2014 Directly tests the hypothesis by comparing RMR changes across genotype groups within the same protocol, controlling for confounders like energy intake and physical activity, and leverages existing trial data for cost-effective confirmation or refutation.",
+        "[PATH:literature] Systematic review and meta-analysis of observational studies and clinical trials examining the interaction between FTO, PPARG, CLOCK polymorphisms and metabolic responses to dietary interventions (including intermittent fasting) in Caucasian and East Asian populations \u2014 Synthesizes available evidence to assess consistency and effect size across studies, identifies potential population-specific effects, and evaluates whether the hypothesized genetic influence is robust or an artifact of small sample sizes.",
+        "[PATH:theoretical] In vitro or animal model study of FTO, PPARG, and CLOCK gene expression in adipocytes or hypothalamic tissue under intermittent fasting-mimicking conditions, measuring mitochondrial respiration and thermogenic markers \u2014 Provides mechanistic plausibility by testing whether these genetic variants alter cellular energy expenditure pathways (e.g., UCP1, AMPK) during fasting-refeeding cycles, which would support the hypothesis if correlated with RMR changes in humans."
+      ],
+      "scope": {
+        "domain": "population genetics, clinical intermittent fasting trials"
+      },
+      "qualifier": {
+        "temporal": "over 8-week intermittent fasting protocols",
+        "geographic": "primarily studied in Caucasian and East Asian populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "genetic markers (FTO, PPARG, CLOCK)",
+      "predicate": "modulate",
+      "object": "resting metabolic rate changes beyond baseline variation in intermittent fasting",
+      "status": "supported",
+      "confidence": 0.85,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms genetic markers (FTO, PPARG, CLOCK) modulate resting metabolic rate changes beyond baseline variation in intermittent fasting in domain 'population genetics, clinical intermittent fasting trials']"
+      ],
+      "scope": {
+        "domain": "population genetics, clinical intermittent fasting trials"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "genetic markers (FTO, PPARG, CLOCK)",
+      "predicate": "do not modulate",
+      "object": "resting metabolic rate changes beyond baseline variation in intermittent fasting",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "population genetics, clinical intermittent fasting trials"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C015": {
+      "id": "C015",
+      "subject": "PPARG Pro12Ala and CLOCK rs1801260 variants",
+      "predicate": "synergistically suppress",
+      "object": "fasting-induced hepatic gluconeogenesis via PPARGC1A coactivation",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism, glucose homeostasis"
+      },
+      "qualifier": {
+        "mechanism": "PPARG Ala12 allele reduces PPARGC1A binding, while CLOCK variant desynchronizes CREB/CRTC2-mediated gluconeogenic gene expression, together blunting the compensatory glucose output during prolonged fasting."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C016": {
+      "id": "C016",
+      "subject": "PPARG and CLOCK variants",
+      "predicate": "impede",
+      "object": "compensatory metabolic adaptation during intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "circadian biology, lipid metabolism"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C011",
+    "T5[falsifier] on C004 -> C012",
+    "T1 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C015",
+    "T9[falsifier] on C003 -> C016",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T3 on B003"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "B003",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C015"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C016"
+    ]
+  }
+}

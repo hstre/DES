@@ -1,0 +1,500 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss (>12 months)",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss (>12 months)]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Short-term trials show weight loss comparable to caloric restriction, but long-term adherence and metabolic adaptation effects remain uncertain; some observational data suggest no sustained advantage over daily caloric restriction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting",
+      "predicate": "produces comparable short-term weight loss to",
+      "object": "daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting daily caloric restriction]"
+      ],
+      "scope": {
+        "domain": "weight loss, <6 months"
+      },
+      "qualifier": {
+        "note": "Multiple short-term RCTs show similar efficacy; metabolic advantage not consistently demonstrated."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "long-term adherence to intermittent fasting",
+      "predicate": "is lower than",
+      "object": "daily caloric restriction",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: long-term adherence to intermittent fasting daily caloric restriction]"
+      ],
+      "scope": {
+        "domain": "adherence, >12 months"
+      },
+      "qualifier": {
+        "note": "Observational data indicate higher dropout rates and difficulty sustaining fasting windows over a year."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "metabolic adaptation from intermittent fasting",
+      "predicate": "may offset",
+      "object": "long-term weight loss advantage over daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: metabolic adaptation from intermittent fasting long-term weight loss advantage over daily caloric restriction]"
+      ],
+      "scope": {
+        "domain": "metabolic physiology, >12 months"
+      },
+      "qualifier": {
+        "tension": "Some studies suggest compensatory reductions in resting metabolic rate after prolonged fasting, reducing net caloric deficit relative to daily restriction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "time-restricted eating (a form of intermittent fasting)",
+      "predicate": "produces superior short-term fat loss to",
+      "object": "daily caloric restriction with matched energy deficit",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: time-restricted eating (a form of intermittent fasting) daily caloric restriction with matched energy deficit]",
+        "[PATH:empirical] Randomized controlled trial (RCT) comparing time-restricted eating (e.g., 8-hour eating window) vs. daily caloric restriction with matched energy deficit over 12-24 weeks, measuring body fat via DXA or MRI, with strict adherence monitoring (e.g., food diaries, biomarkers). \u2014 Directly tests the hypothesis in the specified short-term domain, controlling for energy deficit to isolate the effect of eating timing on fat loss. Multiple such RCTs with conflicting results exist (e.g., Liu et al., 2022; Lowe et al., 2020); a meta-analysis or large-scale replication would clarify.",
+        "[PATH:literature] Meta-analysis of existing RCTs comparing TRE to CR with matched energy deficit for fat loss <6 months, stratified by adherence, sex, and baseline metabolic health. \u2014 Synthesizes available evidence to assess overall effect size and heterogeneity, identifying whether any subpopulations or study designs drive the disputed claim. A systematic review with meta-regression could resolve conflicting findings."
+      ],
+      "scope": {
+        "domain": "fat loss, <6 months"
+      },
+      "qualifier": {
+        "temporal": "short-term (<6 months), based on studies conducted as of 2024",
+        "geographic": "limited to clinical trial populations in Western countries (e.g., USA, Europe)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "daily caloric restriction",
+      "predicate": "produces superior short-term weight loss compared to",
+      "object": "intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: daily caloric restriction intermittent fasting]",
+        "[PATH:empirical] Randomized controlled trials (RCTs) directly comparing daily caloric restriction with intermittent fasting (e.g., alternate-day fasting or time-restricted eating) over 8-24 weeks, with weight loss as primary outcome \u2014 Head-to-head RCTs provide the strongest causal evidence to resolve the dispute, as they control for adherence, energy deficit magnitude, and confounders like physical activity.",
+        "[PATH:literature] Systematic review and meta-analysis of short-term (<6 months) weight loss studies comparing daily CR vs. IF protocols \u2014 Aggregating existing evidence across multiple studies increases statistical power and can reveal consistent effect sizes, heterogeneity, and moderators (e.g., gender, baseline BMI) that single studies may miss.",
+        "[PATH:theoretical] Mechanistic studies examining adherence rates, compensatory behaviors, and metabolic adaptations (e.g., resting metabolic rate, hunger hormones) under daily CR vs. IF \u2014 Understanding why one regimen might produce superior short-term weight loss\u2014via better compliance, reduced compensatory eating, or differential metabolic effects\u2014can theoretically confirm or refute the hypothesis by explaining observed outcomes."
+      ],
+      "scope": {
+        "domain": "weight loss, <6 months"
+      },
+      "qualifier": {
+        "temporal": "<6 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "long-term adherence to intermittent fasting with structured social support",
+      "predicate": "is higher than",
+      "object": "long-term adherence to daily caloric restriction without social support",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: long-term adherence to intermittent fasting with structured social support long-term adherence to daily caloric restriction without social support]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with structured social support (e.g., group-based accountability) versus daily caloric restriction alone over 12+ months, measuring adherence via self-report and objective biomarkers (e.g., weight, ketones). \u2014 Directly tests the hypothesis in a controlled setting, providing causal evidence on adherence differences with social support as the key moderator.",
+        "[PATH:literature] Systematic review and meta-analysis of dietary adherence in weight loss interventions, focusing on social support components (e.g., group meetings, digital coaching) and their effect on long-term (>12 months) adherence rates. \u2014 Synthesizes existing evidence across multiple studies to assess whether social support consistently improves adherence to intermittent fasting relative to unsupported caloric restriction, addressing generalizability.",
+        "[PATH:empirical] Longitudinal observational study comparing real-world adherence patterns among individuals self-selecting into intermittent fasting with online community support versus those following daily caloric restriction without support, using app-based tracking data over 12 months. \u2014 Provides ecological validity by examining adherence in naturalistic settings, though confounding factors (e.g., motivation) must be controlled via propensity score matching."
+      ],
+      "scope": {
+        "domain": "adherence, >12 months, social support intervention"
+      },
+      "qualifier": {
+        "temporal": "over 12 months of intervention and follow-up",
+        "geographic": "not specified, likely generalizable to Western clinical populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "long-term adherence to intermittent fasting",
+      "predicate": "is higher than",
+      "object": "daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: long-term adherence to intermittent fasting daily caloric restriction]",
+        "[PATH:empirical] Long-term randomized controlled trials (e.g., TREAT or CALERIE extensions) comparing intermittent fasting vs. daily caloric restriction over >12 months, with adherence measured via dietary logs, biomarkers, or app-based tracking. \u2014 Directly tests the hypothesis by providing longitudinal adherence data in real-world or controlled settings, addressing the temporal scope of >12 months.",
+        "[PATH:literature] Systematic reviews and meta-analyses of observational studies on dietary adherence patterns, focusing on dropout rates and self-reported compliance in intermittent fasting vs. continuous energy restriction protocols. \u2014 Synthesizes existing evidence across multiple populations and settings, offering a broader view of adherence trends and identifying moderators (e.g., age, metabolic health) that could confirm or refute the claim.",
+        "[PATH:theoretical] Behavioral economics models of dietary habit formation, incorporating reinforcement schedules and psychological flexibility in fasting-based vs. daily restriction regimens. \u2014 Provides mechanistic predictions about why intermittent fasting might yield higher long-term adherence (e.g., simpler rules, reduced decision fatigue), which can be tested against empirical data and help resolve the disputed status."
+      ],
+      "scope": {
+        "domain": "adherence, >12 months"
+      },
+      "qualifier": {
+        "temporal": ">12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "long-term adherence to intermittent fasting",
+      "predicate": "is lower than",
+      "object": "daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms long-term adherence to intermittent fasting is lower than daily caloric restriction in domain 'adherence, >12 months']"
+      ],
+      "scope": {
+        "domain": "adherence, >12 months"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "long-term adherence to intermittent fasting",
+      "predicate": "is not lower than",
+      "object": "daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms long-term adherence to intermittent fasting is not lower than daily caloric restriction in domain 'adherence, >12 months']"
+      ],
+      "scope": {
+        "domain": "adherence, >12 months"
+      },
+      "qualifier": {
+        "temporal": "studies up to 2024",
+        "geographic": "primarily Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "intermittent fasting combined with high-intensity interval training",
+      "predicate": "prevents",
+      "object": "the compensatory resting metabolic rate reduction that offsets long-term weight loss advantage over daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting combined with high-intensity interval training the compensatory resting metabolic rate reduction that offsets long-term weight loss advantage over daily caloric restriction]",
+        "[PATH:empirical] Randomized controlled trial comparing 12-month intermittent fasting (e.g., 5:2 or time-restricted feeding) plus high-intensity interval training (HIIT) versus daily caloric restriction plus HIIT, with serial measurements of resting metabolic rate (RMR) via indirect calorimetry and body composition via DXA. \u2014 Directly tests the hypothesis by measuring whether the IF+HIIT group shows less RMR decline over the long term compared to daily restriction, controlling for exercise and weight loss.",
+        "[PATH:literature] Systematic review and meta-analysis of studies examining the combined effect of intermittent fasting and HIIT on resting metabolic rate, lean mass preservation, and post-exercise oxygen consumption (EPOC). \u2014 Synthesizes existing evidence to assess whether the proposed compensatory mechanism (preserved lean mass and elevated EPOC) consistently counteracts metabolic adaptation in IF+HIIT protocols versus daily restriction.",
+        "[PATH:empirical] Mechanistic study investigating the effect of HIIT on mitochondrial efficiency and metabolic flexibility during intermittent fasting periods, using muscle biopsies and respirometry in a crossover design over 6-12 months. \u2014 Provides cellular-level evidence for whether HIIT alters the metabolic slowing typically seen with fasting alone, addressing the theoretical tension that HIIT may prevent RMR reduction."
+      ],
+      "scope": {
+        "domain": "exercise physiology, metabolic adaptation, >12 months"
+      },
+      "qualifier": {
+        "tension": "High-intensity interval training may preserve lean mass and elevate post-exercise oxygen consumption, counteracting the metabolic slowing observed with fasting alone."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "intermittent fasting",
+      "predicate": "enhances",
+      "object": "long-term weight loss sustainability over daily caloric restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss sustainability over daily caloric restriction]",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials comparing intermittent fasting (e.g., 5:2, time-restricted eating) with daily caloric restriction for weight loss maintenance at \u226512-month follow-up. \u2014 Directly addresses the hypothesis by synthesizing existing long-term RCT data, providing a pooled estimate of effect size and heterogeneity to confirm or refute superiority of intermittent fasting.",
+        "[PATH:empirical] Prospective cohort study with objective adherence monitoring (e.g., continuous glucose monitors, wearable cameras) tracking weight trajectories over >12 months in participants practicing intermittent fasting vs. daily caloric restriction. \u2014 Long-term observational data with high adherence measurement can reveal real-world sustainability differences, addressing the 'long-term weight loss sustainability' claim beyond controlled trial settings.",
+        "[PATH:empirical] Mechanistic investigation into adaptive thermogenesis, hunger hormones (ghrelin, leptin), and gut microbiome changes over 12+ months in intermittent fasting vs. daily restriction groups. \u2014 Explores biological plausibility: if intermittent fasting attenuates metabolic slowdown or hormonal adaptations that typically undermine weight loss maintenance, this would support the hypothesis; lack of such differences would refute it."
+      ],
+      "scope": {
+        "domain": "metabolic physiology, >12 months"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies, follow-up >12 months",
+        "geographic": "global, primarily Western clinical populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "long-term adherence to intermittent fasting with a 16:8 eating window",
+      "predicate": "is lower than",
+      "object": "daily caloric restriction when both groups receive identical behavioral support and meal planning guidance",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence, >12 months, matched support"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "long-term adherence to intermittent fasting",
+      "predicate": "is higher than",
+      "object": "daily caloric restriction",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence, >12 months"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
