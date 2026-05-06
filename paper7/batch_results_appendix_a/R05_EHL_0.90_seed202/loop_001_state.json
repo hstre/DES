@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "has higher long-term adherence than",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with a flexible eating window fixed-schedule intermittent fasting]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Flexibility may reduce dropout due to social constraints, but fixed schedules could enhance habit formation and self-efficacy; existing trials show conflicting results on adherence at 6-12 months."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "reduces dropout due to social constraints compared to",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with a flexible eating window fixed-schedule intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "adherence at 3-6 months in socially active populations"
+      },
+      "qualifier": {
+        "tension": "Flexibility allows adaptation to social events, but may weaken daily routine commitment."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "fixed-schedule intermittent fasting",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "intermittent fasting with a flexible eating window",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: fixed-schedule intermittent fasting intermittent fasting with a flexible eating window]"
+      ],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation"
+      },
+      "qualifier": {
+        "tension": "Fixed schedules may automate behavior but can be brittle under unexpected schedule disruptions."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "increases total daily caloric intake compared to",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with a flexible eating window fixed-schedule intermittent fasting]",
+        "[PATH:empirical] Randomized controlled trial comparing flexible-window vs fixed-schedule intermittent fasting in socially active adults, with daily caloric intake measured via digital food diaries and verified by doubly labeled water \u2014 Direct empirical comparison in the target population (socially active) over 3-6 months would provide causal evidence on whether flexibility leads to increased caloric intake, addressing the disputed hypothesis with high internal validity.",
+        "[PATH:literature] Systematic review and meta-analysis of observational studies on adherence and compensatory eating behaviors in flexible vs fixed intermittent fasting protocols \u2014 Synthesizing existing evidence across studies can reveal patterns in caloric compensation, especially in socially active contexts, and identify confounders or moderators (e.g., social events, meal timing) that may explain the disputed finding.",
+        "[PATH:empirical] Ecological momentary assessment study tracking real-time eating decisions, social context, and hunger cues in individuals practicing flexible vs fixed intermittent fasting \u2014 Capturing within-day variability and social triggers in naturalistic settings can clarify mechanisms (e.g., social pressure, delayed satiety) that might drive increased intake under flexible windows, providing mechanistic evidence to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "socially active populations at 3-6 months"
+      },
+      "qualifier": {
+        "temporal": "3-6 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "fixed-schedule intermittent fasting",
+      "predicate": "enhances routine adherence and discipline, leading to",
+      "object": "lower dropout rates compared to intermittent fasting with a flexible eating window",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: fixed-schedule intermittent fasting lower dropout rates compared to intermittent fasting with a flexible eating window]",
+        "[PATH:empirical] Randomized controlled trial comparing fixed-schedule (e.g., 16:8 with fixed meal times) vs. flexible-window intermittent fasting in socially active adults, measuring dropout rates at 3 and 6 months. \u2014 Directly tests the hypothesis by comparing adherence outcomes under controlled conditions, controlling for social activity confounders.",
+        "[PATH:empirical] Longitudinal observational study in real-world social settings (e.g., workplace or community cohorts) tracking adherence and dropout rates among individuals self-selecting fixed vs. flexible fasting schedules. \u2014 Provides ecological validity for socially active populations, capturing naturalistic adherence patterns and discipline effects outside laboratory settings.",
+        "[PATH:literature] Systematic review and meta-analysis of adherence and dropout rates in time-restricted eating interventions, stratified by schedule rigidity (fixed vs. flexible windows). \u2014 Synthesizes existing evidence to assess whether the hypothesized effect holds across multiple studies, identifying moderators like social context and temporal scope."
+      ],
+      "scope": {
+        "domain": "adherence at 3-6 months in socially active populations"
+      },
+      "qualifier": {
+        "temporal": "3-6 months",
+        "geographic": "socially active populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "fixed-schedule intermittent fasting with a single daily meal (OMAD)",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "fixed-schedule intermittent fasting with a 6-hour eating window",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: fixed-schedule intermittent fasting with a single daily meal (OMAD) fixed-schedule intermittent fasting with a 6-hour eating window]",
+        "[PATH:empirical] Randomized controlled trial comparing OMAD vs. 6-hour eating window adherence in adults with irregular work schedules, measuring habit formation via self-report habit index and self-efficacy via general self-efficacy scale at 6 and 12 months \u2014 Directly tests the hypothesis in the specified population and scope, providing causal evidence on adherence and psychological mechanisms.",
+        "[PATH:empirical] Ecological momentary assessment study tracking daily decision points, meal timing, and missed meals in individuals practicing OMAD versus time-restricted eating over 3 months \u2014 Captures real-time behavioral data to evaluate the tension that OMAD reduces decision points but increases failure risk when a single meal is missed, informing habit disruption and self-efficacy changes.",
+        "[PATH:literature] Systematic review and meta-analysis of self-regulation theory applied to dietary restriction timing, focusing on decision fatigue, cue-consistency, and habit automatization \u2014 Synthesizes existing theoretical and empirical work to clarify whether narrower eating windows enhance or impair habit formation under conditions of schedule disruption, and identifies moderators like baseline self-regulation."
+      ],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation who experience frequent work schedule disruptions"
+      },
+      "qualifier": {
+        "tension": "A narrower eating window may reduce decision points, but increase the risk of failure when a single meal is missed due to disruption."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with a flexible eating window fixed-schedule intermittent fasting]",
+        "[PATH:empirical] Randomized controlled trial comparing adherence rates and self-efficacy scores at 6 and 12 months between flexible-window intermittent fasting and fixed-schedule intermittent fasting among adults with high baseline self-regulation (e.g., using the Self-Efficacy for Dieting Scale). \u2014 Directly tests the causal claim in the specified domain, controlling for baseline self-regulation and measuring the primary outcomes of habit formation and self-efficacy.",
+        "[PATH:literature] Systematic review and meta-analysis of behavioral interventions for dietary adherence, focusing on studies that compare flexible vs. rigid scheduling approaches and their effects on self-efficacy and long-term habit maintenance. \u2014 Synthesizes existing evidence across multiple studies to assess whether flexibility consistently predicts better adherence and self-efficacy outcomes, especially in populations with high self-regulation.",
+        "[PATH:theoretical] Theoretical modeling study using the Habit-Goal Interface framework or Self-Determination Theory to simulate how flexible eating windows might enhance intrinsic motivation and automaticity compared to fixed schedules. \u2014 Provides mechanistic understanding of why flexibility could improve habit formation and self-efficacy, generating testable predictions that can guide future empirical work."
+      ],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation"
+      },
+      "qualifier": {
+        "temporal": "2020-2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "fixed-schedule intermittent fasting",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "intermittent fasting with a flexible eating window",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms fixed-schedule intermittent fasting enhances habit formation and self-efficacy more than intermittent fasting with a flexible eating window in domain 'adherence at 6-12 months in individuals with high baseline self-regulation']"
+      ],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation"
+      },
+      "qualifier": {
+        "temporal": "6 to 12 months",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting with a flexible eating window enhances habit formation and self-efficacy more than fixed-schedule intermittent fasting in domain 'adherence at 6-12 months in individuals with high baseline self-regulation']"
+      ],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation"
+      },
+      "qualifier": {
+        "temporal": "6 to 12 months",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "fixed-schedule intermittent fasting with a built-in contingency plan for schedule disruptions",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "fixed-schedule intermittent fasting without such a contingency plan",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation who experience at least one schedule disruption per week"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "intermittent fasting with a flexible eating window",
+      "predicate": "enhances habit formation and self-efficacy more than",
+      "object": "fixed-schedule intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "adherence at 6-12 months in individuals with high baseline self-regulation"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
