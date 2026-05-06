@@ -1,0 +1,428 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "caveat": "Results vary by task type, collaboration intensity, and measurement method"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work",
+      "predicate": "increases",
+      "object": "individual task completion speed",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work individual task completion speed]"
+      ],
+      "scope": {
+        "domain": "solo, focused tasks"
+      },
+      "qualifier": {
+        "caveat": "when distractions are minimized and async communication is used"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work",
+      "predicate": "reduces",
+      "object": "team coordination efficiency",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work team coordination efficiency]"
+      ],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {
+        "caveat": "especially when team members are in different time zones"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "remote work",
+      "predicate": "may equal",
+      "object": "office work in overall productivity",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work in overall productivity]"
+      ],
+      "scope": {
+        "domain": "mixed-task environments"
+      },
+      "qualifier": {
+        "caveat": "depends heavily on measurement methodology and self-report bias"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work with high autonomy",
+      "predicate": "increases",
+      "object": "individual task completion speed more than remote work with low autonomy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work with high autonomy individual task completion speed more than remote work with low autonomy]",
+        "[PATH:empirical] Controlled field experiment comparing task completion times for solo, focused tasks between teams with high vs. low autonomy in remote settings (2020-2023) \u2014 Directly tests the causal claim by manipulating autonomy levels and measuring individual task speed in the specified domain and temporal window.",
+        "[PATH:literature] Meta-analysis of remote work productivity studies (2020-2023) that stratify by autonomy level and task type \u2014 Synthesizes existing evidence to assess whether high autonomy consistently outperforms low autonomy for solo, focused tasks, addressing the disputed status."
+      ],
+      "scope": {
+        "domain": "solo, focused tasks"
+      },
+      "qualifier": {
+        "temporal": "2020-2023",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "remote work",
+      "predicate": "decreases",
+      "object": "individual task completion speed",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work individual task completion speed]",
+        "[PATH:literature] Meta-analysis of controlled experiments comparing task completion times for solo, focused tasks in remote vs. on-site settings (e.g., from journals like Journal of Applied Psychology or Proceedings of the ACM on Human-Computer Interaction) \u2014 Synthesizes existing empirical evidence across multiple studies to determine the overall effect size and direction, directly addressing the disputed hypothesis with higher statistical power.",
+        "[PATH:empirical] Longitudinal field study using productivity tracking software (e.g., RescueTime or similar) on a cohort of knowledge workers performing standardized solo tasks during standard business hours, with pre-pandemic baseline data for comparison \u2014 Provides real-world, time-stamped data on individual task completion speed in remote settings versus controlled on-site baselines, capturing temporal and geographic scope specified in the hypothesis.",
+        "[PATH:theoretical] Theoretical model of attention and interruption costs in remote work environments (e.g., based on the attention-restoration theory or the theory of distributed cognition) \u2014 Offers a causal framework to explain why remote work might decrease or increase solo task speed, guiding the design of empirical tests and interpreting conflicting results."
+      ],
+      "scope": {
+        "domain": "solo, focused tasks"
+      },
+      "qualifier": {
+        "temporal": "during standard business hours, pre-pandemic baseline studies",
+        "geographic": "global, with emphasis on developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "remote work with high task interdependence",
+      "predicate": "reduces",
+      "object": "team coordination efficiency more than remote work with low task interdependence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work with high task interdependence team coordination efficiency more than remote work with low task interdependence]",
+        "[PATH:empirical] A meta-analysis of field experiments comparing coordination outcomes (e.g., project completion time, communication frequency) in remote vs. co-located teams with high vs. low task interdependence, controlling for industry and project complexity. \u2014 Directly tests the hypothesis by isolating the moderating effect of task interdependence on coordination efficiency in remote settings, using causal evidence from randomized or quasi-experimental designs.",
+        "[PATH:empirical] Longitudinal survey data from knowledge-intensive firms during 2020-2022, measuring perceived coordination efficiency, task interdependence (via validated scales like the Team Interdependence Scale), and remote work intensity. \u2014 Provides correlational and temporal evidence within the specified temporal and geographic scope, allowing analysis of how changes in remote work interact with interdependence to affect coordination over the pandemic period.",
+        "[PATH:theoretical] Computational simulation modeling of team coordination dynamics (e.g., agent-based models) that varies task interdependence and communication delay (proxy for remote work), to derive theoretical predictions under controlled parameters. \u2014 Supports causal inference by isolating mechanisms (e.g., information loss, feedback delays) that may amplify coordination inefficiency under high interdependence, generating testable predictions for empirical validation."
+      ],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2022)",
+        "geographic": "global, primarily in knowledge-intensive industries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "remote work",
+      "predicate": "enhances",
+      "object": "team coordination efficiency",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work team coordination efficiency]",
+        "[PATH:empirical] Meta-analysis of field experiments on remote vs. co-located team coordination in high-collaboration, synchronous software development projects (e.g., from journals like Organization Science or Management Science) \u2014 Directly tests the hypothesis by aggregating causal evidence from randomized or quasi-experimental designs, controlling for confounds like tool adoption and task interdependence, which matches the scope and qualifier of the hypothesis.",
+        "[PATH:empirical] Longitudinal archival study using digital trace data (e.g., Slack, Jira, or Git commit logs) from post-2020 organizations in developed economies to measure communication latency, task handoff efficiency, and project completion times \u2014 Provides high-resolution, objective behavioral data on coordination efficiency in the specified temporal and geographic context, enabling quantitative confirmation or refutation of the claimed enhancement.",
+        "[PATH:theoretical] Review of coordination theory literature (e.g., Malone & Crowston, 1994; Espinosa et al., 2007) applied to remote work with modern digital tools \u2014 Helps identify boundary conditions under which remote work might enhance or impair coordination (e.g., reliance on synchronous vs. asynchronous communication), clarifying whether the hypothesis aligns with established mechanisms or requires revision."
+      ],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of digital collaboration tools",
+        "geographic": "global, with emphasis on organizations in developed economies with high-speed internet infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work",
+      "predicate": "reduces",
+      "object": "team coordination efficiency",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work reduces team coordination efficiency in domain 'high-collaboration, synchronous projects']"
+      ],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread remote adoption",
+        "geographic": "global, primarily in knowledge-economy firms"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work",
+      "predicate": "does not reduce",
+      "object": "team coordination efficiency",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work does not reduce team coordination efficiency in domain 'high-collaboration, synchronous projects']"
+      ],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020, following widespread adoption of advanced collaboration tools",
+        "geographic": "global, with emphasis on digitally advanced economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "remote work in high-collaboration, synchronous projects with members in different time zones",
+      "predicate": "reduces",
+      "object": "team coordination efficiency more severely than asynchronous task-based work",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "remote work",
+      "predicate": "enhances",
+      "object": "team coordination efficiency",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-collaboration, synchronous projects"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
