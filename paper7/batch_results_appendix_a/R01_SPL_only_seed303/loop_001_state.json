@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The moderating effect of industry type",
+      "predicate": "determines",
+      "object": "the direction and magnitude of the relationship between minimum wage hikes and job loss rates",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The moderating effect of industry type the direction and magnitude of the relationship between minimum wage hikes and job loss rates]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Industry type",
+      "predicate": "strengthens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry type the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors]"
+      ],
+      "scope": {
+        "domain": "low-skill, labor-intensive industries (e.g., retail, hospitality)"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 12 months of hike)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Industry type",
+      "predicate": "weakens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in high-automation sectors",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry type the negative relationship between minimum wage hikes and job loss rates in high-automation sectors]"
+      ],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {
+        "mechanism": "substitution of labor with technology"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The moderating effect of industry type",
+      "predicate": "is confounded by",
+      "object": "regional labor market tightness and local cost-of-living differences",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The moderating effect of industry type regional labor market tightness and local cost-of-living differences]"
+      ],
+      "scope": {
+        "domain": "cross-industry, cross-region comparisons"
+      },
+      "qualifier": {
+        "condition": "when minimum wage hike is not uniform across regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Industry automation readiness",
+      "predicate": "moderates",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry automation readiness the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, combined with state-level minimum wage changes and industry-level automation adoption metrics (e.g., BLS data on capital equipment investment). \u2014 Allows a difference-in-differences or event-study analysis to test whether high-automation industries (e.g., retail with self-checkout) show smaller job losses after minimum wage hikes compared to low-automation industries, directly examining the moderating effect.",
+        "[PATH:theoretical] Acemoglu, D., & Restrepo, P. (2018). 'The Race between Man and Machine: Implications of Technology for Growth, Factor Shares, and Employment.' American Economic Review, 108(6), 1488-1542. \u2014 Provides a theoretical framework for how automation readiness can substitute for low-skill labor, predicting that minimum wage increases accelerate automation adoption, which may offset job losses in the short term. This literature can be extended to model the specific moderating hypothesis.",
+        "[PATH:literature] Meta-analysis of minimum wage employment effects, e.g., Doucouliagos, H., & Stanley, T. D. (2009). 'Publication Selection Bias in Minimum-Wage Research? A Meta-Regression Analysis.' British Journal of Industrial Relations, 47(2), 406-428, stratified by industry automation proxies. \u2014 Synthesizing existing empirical studies that report employment effects by industry can reveal whether the negative relationship is systematically weaker in sectors with high automation readiness, providing indirect confirmation or refutation of the hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skill, labor-intensive industries (e.g., retail, hospitality)"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 12 months of hike)",
+        "condition": "high automation readiness (e.g., self-checkout, automated ordering)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Industry type",
+      "predicate": "weakens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry type the negative relationship between minimum wage hikes and job loss rates in labor-intensive sectors]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) data from the U.S. Census Bureau, linked with state-level minimum wage changes from 2000-2020 \u2014 Allows panel data analysis of job loss rates in retail and hospitality vs. other sectors before and after minimum wage hikes, testing whether industry type moderates the effect.",
+        "[PATH:literature] Meta-analysis of minimum wage employment effects by sector (e.g., Card & Krueger updated studies, or recent NBER working papers) \u2014 Synthesizes existing estimates to assess whether low-skill labor-intensive sectors consistently show weaker negative effects, providing a broader evidentiary basis for the moderation hypothesis.",
+        "[PATH:theoretical] Theoretical model of monopsony power in labor-intensive industries (e.g., Bhaskar, Manning & To, 2002; or more recent extensions) \u2014 Explains why industry type might weaken the negative relationship: higher monopsony power in labor-intensive sectors could allow firms to absorb wage increases without reducing employment, offering a causal mechanism to test empirically."
+      ],
+      "scope": {
+        "domain": "low-skill, labor-intensive industries (e.g., retail, hospitality)"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Industry type",
+      "predicate": "strengthens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in high-automation sectors when firms face binding credit constraints",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry type the negative relationship between minimum wage hikes and job loss rates in high-automation sectors when firms face binding credit constraints]",
+        "[PATH:empirical] Panel data on manufacturing firms from the U.S. Census Bureau's Annual Survey of Manufactures (ASM) linked to state-level minimum wage changes and firm-level credit constraint measures (e.g., from Compustat or Kauffman Firm Survey) \u2014 This source can directly test the hypothesis by examining whether minimum wage hikes lead to higher job loss rates specifically among credit-constrained firms in high-automation sectors, compared to unconstrained firms. The panel structure allows controlling for firm and time fixed effects.",
+        "[PATH:theoretical] A structural model of firm investment and employment decisions under credit frictions, calibrated to high-automation industries (e.g., Dube & Lindner, 2021; or similar work by Acemoglu & Restrepo) \u2014 A structural model can simulate how binding credit constraints interact with minimum wage increases to affect layoffs versus automation investments. This would provide theoretical grounding and counterfactual predictions to compare with empirical patterns.",
+        "[PATH:literature] Literature review of empirical studies on minimum wage effects in capital-intensive industries (e.g., Cengiz et al., 2019; Allegretto et al., 2017) and separate studies on credit constraints and firm employment (e.g., Chodorow-Reich, 2014) \u2014 Synthesizing existing findings from both literatures can reveal whether the hypothesized interaction is plausible or already indirectly supported. This can identify gaps in current evidence and guide the design of new empirical tests."
+      ],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing) with limited access to external financing"
+      },
+      "qualifier": {
+        "mechanism": "credit-constrained firms cannot finance new automation investments and instead reduce labor costs through layoffs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Industry type",
+      "predicate": "strengthens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in high-automation sectors",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Industry type the negative relationship between minimum wage hikes and job loss rates in high-automation sectors]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, linked to industry-level automation indices (e.g., robot density per worker from IFR) and state minimum wage changes post-2010 \u2014 Provides granular, longitudinal data on employment separations by industry and geography, enabling direct testing of whether high-automation sectors show attenuated job loss following minimum wage increases compared to low-automation sectors.",
+        "[PATH:literature] Acemoglu and Restrepo (2017) 'Robots and Jobs: Evidence from US Labor Markets' and subsequent papers on automation and minimum wage interactions \u2014 Establishes theoretical and empirical frameworks for how automation moderates labor demand elasticities; reviewing this literature can clarify mechanisms and identify gaps regarding minimum wage effects in high-automation sectors.",
+        "[PATH:theoretical] Simulated structural model of firm substitution between labor and capital under wage floors, calibrated to US manufacturing data (post-2010) \u2014 Allows counterfactual analysis of how industry type (automation intensity) alters the predicted employment impact of minimum wage hikes, isolating the 'strengthening' effect hypothesized and testing sensitivity to key parameters."
+      ],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Industry type (high-automation, capital-intensive)",
+      "predicate": "dampens",
+      "object": "the negative impact of minimum wage hikes on job loss rates",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Industry type (high-automation, capital-intensive) dampens the negative impact of minimum wage hikes on job loss rates in domain 'high-automation, capital-intensive industries (e.g., manufacturing)']"
+      ],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Industry type (high-automation, capital-intensive)",
+      "predicate": "amplifies",
+      "object": "the negative impact of minimum wage hikes on job loss rates",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Industry type (high-automation, capital-intensive) amplifies the negative impact of minimum wage hikes on job loss rates in domain 'high-automation, capital-intensive industries (e.g., manufacturing)']"
+      ],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {
+        "temporal": "post-2000, based on available studies",
+        "geographic": "United States and other developed economies with similar industrial structures"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The moderating effect of industry type",
+      "predicate": "is fully mediated by",
+      "object": "the local wage-bargaining power of workers in tight labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The moderating effect of industry type the local wage-bargaining power of workers in tight labor markets]",
+        "[PATH:empirical] Panel data on industry-level wage settlements and local unemployment rates across U.S. states with non-uniform minimum wage changes (e.g., from the Current Population Survey or Bureau of Labor Statistics, 2000-2020) \u2014 This would allow testing whether the relationship between minimum wage hikes and wage-bargaining power (measured by union density or wage premiums) varies by industry type (e.g., manufacturing vs. retail) and is fully mediated by local labor market tightness, controlling for regional heterogeneity.",
+        "[PATH:empirical] Cross-country comparative analysis of collective bargaining institutions and wage floors (e.g., OECD Employment and Labour Market Statistics, focusing on countries with decentralized wage setting) \u2014 Such data can test whether industry type moderates the mediation of wage-bargaining power in tight labor markets when minimum wage changes are uneven across regions, providing external validity beyond a single country context.",
+        "[PATH:theoretical] Theoretical models of monopsonistic competition and wage bargaining (e.g., Manning (2003) 'Monopsony in Motion' or recent extensions by Card and Krueger) \u2014 Formalizing how industry-specific labor demand elasticities and regional wage-setting institutions interact to produce full mediation would clarify the causal mechanisms and identify conditions under which the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "cross-industry, cross-region comparisons"
+      },
+      "qualifier": {
+        "condition": "when minimum wage hike is not uniform across regions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The moderating effect of regional labor market tightness and local cost-of-living differences",
+      "predicate": "is independent of",
+      "object": "industry type",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The moderating effect of regional labor market tightness and local cost-of-living differences industry type]",
+        "[PATH:empirical] Bureau of Labor Statistics (BLS) Quarterly Census of Employment and Wages (QCEW) data, merged with state-level unemployment rates and regional price parities from the Bureau of Economic Analysis (BEA), for NAICS industry sectors across U.S. metropolitan and non-metropolitan areas (2010-2023) \u2014 This source provides the granular, longitudinal data on industry-specific wages, employment, and local labor market conditions needed to test whether the relationship between labor market tightness and cost-of-living varies significantly by industry type, or is instead uniform.",
+        "[PATH:theoretical] Systematic literature review of spatial wage differentials and compensating differentials theory (e.g., Roback, 1982; Moretti, 2011; Glaeser & Gottlieb, 2009) with specific attention to studies that control for industry fixed effects \u2014 A review of existing theoretical and empirical work will clarify whether established models predict industry independence (e.g., due to perfect labor mobility) or industry dependence (e.g., due to skill-specific local demand shocks), helping to frame the hypothesis as a testable departure from the standard compensating differentials framework.",
+        "[PATH:empirical] Re-analysis of published cross-industry wage regressions from the Current Population Survey (CPS) or American Community Survey (ACS), interacting industry dummies with MSA-level measures of labor market tightness (e.g., vacancy-to-unemployment ratio) and cost-of-living indices, using a multilevel modeling approach \u2014 This direct econometric test can confirm or refute the independence claim by examining whether interaction terms between industry and local market conditions are jointly insignificant (supporting independence) or significant (refuting it), while controlling for worker demographics and time trends."
+      ],
+      "scope": {
+        "domain": "cross-industry, cross-region comparisons"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "union density",
+      "predicate": "accentuates",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in high-automation sectors",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Industry type",
+      "predicate": "strengthens",
+      "object": "the negative relationship between minimum wage hikes and job loss rates in high-automation sectors",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-automation, capital-intensive industries (e.g., manufacturing)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C013",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
