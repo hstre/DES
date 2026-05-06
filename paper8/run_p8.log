@@ -963,3 +963,1503 @@ Trigger: T3 (t3_request_evidence)
 Operation: t3_request_evidence
 Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
 S(t): 1 claims active, 0 sealed, 0 weak candidates
+
+=== DES Iteration 2 ===
+Focus Claim: C001 [status=supported, confidence=0.45]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T4 (t4_decompose_claim)
+Operation: t4_decompose_claim
+Result: Decomposed into sub-claims: C002, C003, C004
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 3 ===
+Focus Claim: C002 [status=disputed, confidence=0.55]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 4 ===
+Focus Claim: C002 [status=disputed, confidence=0.60]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ N0 where N0 depends on the Lyapunov function'}
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 5 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C005, C006
+S(t): 5 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 6 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C002 sealed.
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 7 ===
+Focus Claim: C003 [status=disputed, confidence=0.38]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 8 ===
+Focus Claim: C003 [status=contradicted, confidence=0.42]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T5 (t5_generate_counter_hypothesis[AD])
+Operation: t5_generate_counter_hypothesis[AD]
+Result: Anti-Delphi T5: C007, C008
+S(t): 6 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 9 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T1 (t1_resolve_conflict)
+Operation: t1_resolve_conflict
+Result: BRANCH created: C003 -> B001, B002
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 10 ===
+Focus Claim: C004 [status=disputed, confidence=0.40]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 11 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C011, C012
+S(t): 10 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 12 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C004 sealed.
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 13 ===
+Focus Claim: C005 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a unique fixed point if
+  object: the Lyapunov-like function is strictly decreasing along every non-fixed trajectory
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 14 ===
+Focus Claim: C005 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a unique fixed point if
+  object: the Lyapunov-like function is strictly decreasing along every non-fixed trajectory
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 15 ===
+Focus Claim: C005 [status=supported, confidence=0.82]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a unique fixed point if
+  object: the Lyapunov-like function is strictly decreasing along every non-fixed trajectory
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C005 sealed.
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 16 ===
+Focus Claim: C006 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: does not necessarily have all trajectories eventually entering a finite cycle even if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 17 ===
+Focus Claim: C006 [status=disputed, confidence=0.55]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: does not necessarily have all trajectories eventually entering a finite cycle even if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ 1', 'geographic': 'in any discrete dynamical system over a complete metric space'}
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 18 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: does not necessarily have all trajectories eventually entering a finite cycle even if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 19 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: does not necessarily have all trajectories eventually entering a finite cycle even if
+  object: the map satisfies a non-expansive condition on some Lyapunov-like function
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C006 sealed.
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 20 ===
+Focus Claim: C007 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: will always converge to a finite cycle if the map is piecewise isometric and the phase space is compact, because
+  object: the piecewise isometry structure imposes a finite number of symbolic itineraries, forcing eventual periodicity through a pigeonhole argument on a compact domain
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 21 ===
+Focus Claim: C007 [status=disputed, confidence=0.55]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: will always converge to a finite cycle if the map is piecewise isometric and the phase space is compact, because
+  object: the piecewise isometry structure imposes a finite number of symbolic itineraries, forcing eventual periodicity through a pigeonhole argument on a compact domain
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps after the initial transient', 'geographic': 'within any compact subset of the phase space'}
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 22 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: will always converge to a finite cycle if the map is piecewise isometric and the phase space is compact, because
+  object: the piecewise isometry structure imposes a finite number of symbolic itineraries, forcing eventual periodicity through a pigeonhole argument on a compact domain
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 23 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: will always converge to a finite cycle if the map is piecewise isometric and the phase space is compact, because
+  object: the piecewise isometry structure imposes a finite number of symbolic itineraries, forcing eventual periodicity through a pigeonhole argument on a compact domain
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C007 sealed.
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 24 ===
+Focus Claim: C008 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot avoid finite cycles under any conditions
+  object: even if the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps, non-cyclical trajectories would still require additional structural or topological constraints which are not present
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 25 ===
+Focus Claim: C008 [status=disputed, confidence=0.55]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot avoid finite cycles under any conditions
+  object: even if the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps, non-cyclical trajectories would still require additional structural or topological constraints which are not present
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ N0 where N0 is the threshold for sufficiently large starting values', 'geographic': 'not applicable'}
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 26 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot avoid finite cycles under any conditions
+  object: even if the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps, non-cyclical trajectories would still require additional structural or topological constraints which are not present
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 2
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 27 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot avoid finite cycles under any conditions
+  object: even if the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps, non-cyclical trajectories would still require additional structural or topological constraints which are not present
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C008 sealed.
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 28 ===
+Focus Claim: B001 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms the recursive map T(n) for sufficientl
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 29 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of current research', 'geographic': 'global'}
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 30 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B001 sealed.
+S(t): 4 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 31 ===
+Focus Claim: B002 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot have trajectories that avoid finite cycles if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem does apply to non-invertible maps under the compactness conditions typically assumed
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms the recursive map T(n) for sufficientl
+S(t): 4 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 32 ===
+Focus Claim: C003 [status=disputed, confidence=0.47 branch_open=True]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all sufficiently large starting values considered in the current analysis', 'geographic': 'not applicable'}
+S(t): 4 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 33 ===
+Focus Claim: C003 [status=disputed, confidence=0.47 branch_open=True]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+Trigger: T9 (t9_trigger_reframing[AD])
+Operation: t9_trigger_reframing[AD]
+Result: Anti-Delphi T9: C013, C014
+S(t): 5 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 34 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot have trajectories that avoid finite cycles if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem does apply to non-invertible maps under the compactness conditions typically assumed
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'under the standard compactness assumptions as of the early 21st century'}
+S(t): 5 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 35 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: cannot have trajectories that avoid finite cycles if a discrete Poincaré-Bendixson property holds, because
+  object: the discrete analogue of the Poincaré-Bendixson theorem does apply to non-invertible maps under the compactness conditions typically assumed
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B002 sealed.
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 36 ===
+Focus Claim: C011 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the Lyapunov function is strictly decreasing along non-cyclic trajectories and the map also satisfies a discrete version of the Poincaré-Bendixson property that holds uniformly for all bounded orbits
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 37 ===
+Focus Claim: C011 [status=disputed, confidence=0.55]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the Lyapunov function is strictly decreasing along non-cyclic trajectories and the map also satisfies a discrete version of the Poincaré-Bendixson property that holds uniformly for all bounded orbits
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all discrete time steps n ≥ 0', 'geographic': 'none'}
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 38 ===
+Focus Claim: C011 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the Lyapunov function is strictly decreasing along non-cyclic trajectories and the map also satisfies a discrete version of the Poincaré-Bendixson property that holds uniformly for all bounded orbits
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 39 ===
+Focus Claim: C011 [status=supported, confidence=0.85]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the Lyapunov function is strictly decreasing along non-cyclic trajectories and the map also satisfies a discrete version of the Poincaré-Bendixson property that holds uniformly for all bounded orbits
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C011 sealed.
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 40 ===
+Focus Claim: C012 [status=disputed, confidence=0.50]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: can have trajectories that never enter a finite cycle
+  object: even if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+[DES] Termination: max iterations (40) reached.
+
+============================================================
+FINAL RESEARCH TRACE
+============================================================
+Total iterations: 40
+Total claims: 14
+Reframings: 1
+
+Global operation history:
+  01. T3 on C001
+  02. T4 on C001
+  03. T3 on C002
+  04. T7 on C002
+  05. T6[hypothesis_builder] on C002 -> C005
+  06. T6[falsifier] on C002 -> C006
+  07. T8 on C002
+  08. T3 on C003
+  09. T5[hypothesis_builder] on C003 -> C007
+  10. T5[falsifier] on C003 -> C008
+  11. T1 on C003
+  12. T3 on C004
+  13. T6[hypothesis_builder] on C004 -> C011
+  14. T6[falsifier] on C004 -> C012
+  15. T8 on C004
+  16. T3 on C005
+  17. T6 on C005
+  18. T8 on C005
+  19. T3 on C006
+  20. T7 on C006
+  21. T6 on C006
+  22. T8 on C006
+  23. T3 on C007
+  24. T7 on C007
+  25. T6 on C007
+  26. T8 on C007
+  27. T3 on C008
+  28. T7 on C008
+  29. T6 on C008
+  30. T8 on C008
+  31. T3 on B001
+  32. T7 on B001
+  33. T8 on B001
+  34. T3 on B002
+  35. T7 on C003
+  36. T9[hypothesis_builder] on C003 -> C013
+  37. T9[falsifier] on C003 -> C014
+  38. T7 on B002
+  39. T8 on B002
+  40. T3 on C011
+  41. T7 on C011
+  42. T6 on C011
+  43. T8 on C011
+  44. T3 on C012
+
+Claim summary:
+  [SEALED] C001: the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a finite cycle if and only if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+    status=supported, confidence=0.45, modality=hypothesis
+    history=['T3', 'T4']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the map satis
+  [SEALED] C002 (child of C001): the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a finite cycle if the map satisfies a non-expansive condition on some Lyapunov-like function
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T7', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the map satis
+  [SEALED] C003 (child of C001): the recursive map T(n) for sufficiently large starting values may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+    status=disputed, confidence=0.47, modality=suggestion
+    history=['T3', 'T5[anti-delphi]', 'T1', 'T7', 'T9[anti-delphi]']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the discrete 
+  [SEALED] C004 (child of C001): the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a finite cycle if and only if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the map satis
+  [SEALED] C005 (child of C002): the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a unique fixed point if the Lyapunov-like function is strictly decreasing along every non-fixed trajectory
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the Lyapunov-
+    evidence: [PATH:empirical] Construct a family of counterexample maps where a strictly decreasing Lyapunov func
+  [SEALED] C006 (child of C002): the recursive map T(n) for sufficiently large starting values does not necessarily have all trajectories eventually entering a finite cycle even if the map satisfies a non-expansive condition on some Lyapunov-like function
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the map satis
+    evidence: [PATH:theoretical] Construct counterexamples in non-compact metric spaces using piecewise isometries
+  [SEALED] C007 (child of C003): the recursive map T(n) for sufficiently large starting values will always converge to a finite cycle if the map is piecewise isometric and the phase space is compact, because the piecewise isometry structure imposes a finite number of symbolic itineraries, forcing eventual periodicity through a pigeonhole argument on a compact domain
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the piecewise
+    evidence: [PATH:literature] Study of symbolic dynamics for piecewise isometric maps on compact metric spaces, 
+  [SEALED] C008 (child of C003): the recursive map T(n) for sufficiently large starting values cannot avoid finite cycles under any conditions even if the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps, non-cyclical trajectories would still require additional structural or topological constraints which are not present
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values even if the d
+    evidence: [PATH:empirical] Systematic computational search for periodic orbits in non-invertible maps (e.g., l
+  [SEALED] B001 (child of C003): the recursive map T(n) for sufficiently large starting values may have trajectories that avoid finite cycles even if a discrete Poincaré-Bendixson property holds, because the discrete analogue of the Poincaré-Bendixson theorem fails for non-invertible maps without additional compactness
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms the recursive map T(n) for sufficiently large starting val
+  [SEALED] B002 (child of C003): the recursive map T(n) for sufficiently large starting values cannot have trajectories that avoid finite cycles if a discrete Poincaré-Bendixson property holds, because the discrete analogue of the Poincaré-Bendixson theorem does apply to non-invertible maps under the compactness conditions typically assumed
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms the recursive map T(n) for sufficiently large starting val
+  [SEALED] C011 (child of C004): the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a finite cycle if and only if the Lyapunov function is strictly decreasing along non-cyclic trajectories and the map also satisfies a discrete version of the Poincaré-Bendixson property that holds uniformly for all bounded orbits
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values the Lyapunov 
+    evidence: [PATH:empirical] Construct counterexamples in 1D or 2D maps (e.g., logistic map or Hénon map) where 
+  [ACTIVE] C012 (child of C004): the recursive map T(n) for sufficiently large starting values can have trajectories that never enter a finite cycle even if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=['T3']
+    evidence: [Simulated evidence for: the recursive map T(n) for sufficiently large starting values even if the m
+  [ACTIVE] C013 (child of C003): the recursive map T(n) for sufficiently large starting values exhibits trajectories that converge to a finite cycle if and only if the map is restricted to a forward-invariant compact subset, because the discrete Poincaré-Bendixson property holds exactly when the map’s omega-limit set is nonempty, compact, and connected, which fails for non-invertible maps on non-compact domains
+    status=unknown, confidence=0.50, modality=hypothesis
+    history=[]
+  [ACTIVE] C014 (child of C003): the recursive map T(n) for sufficiently large starting values must have trajectories that eventually enter finite cycles if a discrete Poincaré-Bendixson property holds, because
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=[]
+
+Epistemic path: T3 on C001 → T4 on C001 → T3 on C002 → T7 on C002 → T6[hypothesis_builder] on C002 -> C005 → T6[falsifier] on C002 -> C006 → T8 on C002 → T3 on C003 → T5[hypothesis_builder] on C003 -> C007 → T5[falsifier] on C003 -> C008 → T1 on C003 → T3 on C004 → T6[hypothesis_builder] on C004 -> C011 → T6[falsifier] on C004 -> C012 → T8 on C004 → T3 on C005 → T6 on C005 → T8 on C005 → T3 on C006 → T7 on C006 → T6 on C006 → T8 on C006 → T3 on C007 → T7 on C007 → T6 on C007 → T8 on C007 → T3 on C008 → T7 on C008 → T6 on C008 → T8 on C008 → T3 on B001 → T7 on B001 → T8 on B001 → T3 on B002 → T7 on C003 → T9[hypothesis_builder] on C003 -> C013 → T9[falsifier] on C003 -> C014 → T7 on B002 → T8 on B002 → T3 on C011 → T7 on C011 → T6 on C011 → T8 on C011 → T3 on C012
+============================================================
+
+  Loop 003 | Q: What is the evidence that the recursive map T(n) for sufficiently larg
+
+Dynamic Epistemic Sequencer v0.1
+Research question: What is the evidence that the recursive map T(n) for sufficiently large starting values can have trajectories that never enter a finite cycle even if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property?
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] Trajectories of the recursive map T(n) with sufficiently large starting values can have trajectories that never enter a finite cycle
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values
+  predicate: can have
+  object: trajectories that never enter a finite cycle
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 1 claims active, 0 sealed, 0 weak candidates
+
+=== DES Iteration 2 ===
+Focus Claim: C001 [status=supported, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values
+  predicate: can have
+  object: trajectories that never enter a finite cycle
+Trigger: T4 (t4_decompose_claim)
+Operation: t4_decompose_claim
+Result: Decomposed into sub-claims: C002, C003, C004
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 3 ===
+Focus Claim: C002 [status=disputed, confidence=0.55]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a finite cycle
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 4 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a finite cycle
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C005, C006
+S(t): 5 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 5 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a finite cycle
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C002 sealed.
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 6 ===
+Focus Claim: C003 [status=disputed, confidence=0.38]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: may exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 7 ===
+Focus Claim: C003 [status=contradicted, confidence=0.42]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: may exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T5 (t5_generate_counter_hypothesis[AD])
+Operation: t5_generate_counter_hypothesis[AD]
+Result: Anti-Delphi T5: C007, C008
+S(t): 6 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 8 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: may exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T1 (t1_resolve_conflict)
+Operation: t1_resolve_conflict
+Result: BRANCH created: C003 -> B001, B002
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 9 ===
+Focus Claim: C004 [status=disputed, confidence=0.45]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is insufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to 
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 10 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is insufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C011, C012
+S(t): 10 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 11 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is insufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C004 sealed.
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 12 ===
+Focus Claim: C005 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a unique fixed point rather than a cycle of length greater than one
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 13 ===
+Focus Claim: C005 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a unique fixed point rather than a cycle of length greater than one
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 9 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 14 ===
+Focus Claim: C005 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: must eventually enter
+  object: a unique fixed point rather than a cycle of length greater than one
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C005 sealed.
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 15 ===
+Focus Claim: C006 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: can exhibit
+  object: chaotic behavior beyond finite cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 16 ===
+Focus Claim: C006 [status=disputed, confidence=0.55]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: can exhibit
+  object: chaotic behavior beyond finite cycles
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all sufficiently large n under the non-expansive Lyapunov condition'}
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 17 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: can exhibit
+  object: chaotic behavior beyond finite cycles
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 8 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 18 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition
+  predicate: can exhibit
+  object: chaotic behavior beyond finite cycles
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C006 sealed.
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 19 ===
+Focus Claim: C007 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: converge to
+  object: a unique attracting invariant set that is either a finite cycle or a quasi-periodic torus, provided the non-expansive Lyapunov function is strictly decreasing along trajectories outside the set
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 20 ===
+Focus Claim: C007 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: converge to
+  object: a unique attracting invariant set that is either a finite cycle or a quasi-periodic torus, provided the non-expansive Lyapunov function is strictly decreasing along trajectories outside the set
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 7 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 21 ===
+Focus Claim: C007 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: converge to
+  object: a unique attracting invariant set that is either a finite cycle or a quasi-periodic torus, provided the non-expansive Lyapunov function is strictly decreasing along trajectories outside the set
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C007 sealed.
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 22 ===
+Focus Claim: C008 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: will converge
+  object: to stable periodic or fixed points within finite cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficientl
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 23 ===
+Focus Claim: C008 [status=disputed, confidence=0.55]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: will converge
+  object: to stable periodic or fixed points within finite cycles
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all sufficiently large starting values, eventually after finite iterations', 'geographic': 'in any discrete dynamical system satisfying the specified conditions'}
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 24 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: will converge
+  object: to stable periodic or fixed points within finite cycles
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 6 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 25 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: will converge
+  object: to stable periodic or fixed points within finite cycles
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C008 sealed.
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 26 ===
+Focus Claim: B001 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge to a finite cycle or fixed point
+  object: due to the topological constraints of the discrete Poincaré-Bendixson theorem
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms Trajectories of the recursive map T(n)
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 27 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge to a finite cycle or fixed point
+  object: due to the topological constraints of the discrete Poincaré-Bendixson theorem
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all sufficiently large starting values in the asymptotic limit', 'geographic': 'not applicable'}
+S(t): 5 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 28 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge to a finite cycle or fixed point
+  object: due to the topological constraints of the discrete Poincaré-Bendixson theorem
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B001 sealed.
+S(t): 4 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 29 ===
+Focus Claim: B002 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: can exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms Trajectories of the recursive map T(n)
+S(t): 4 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 30 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: may exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T9 (t9_trigger_reframing[AD])
+Operation: t9_trigger_reframing[AD]
+Result: Anti-Delphi T9: C013, C014
+S(t): 5 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 31 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: can exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all sufficiently large starting values and under specified conditions', 'geographic': 'not applicable'}
+S(t): 5 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 32 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: can exhibit
+  object: divergent or aperiodic behavior without finite cycles
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B002 sealed.
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 33 ===
+Focus Claim: C011 [status=disputed, confidence=0.50]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to 
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 34 ===
+Focus Claim: C011 [status=supported, confidence=0.82]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 4 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 35 ===
+Focus Claim: C011 [status=supported, confidence=0.82]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C011 sealed.
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 36 ===
+Focus Claim: C012 [status=disputed, confidence=0.50]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to 
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 37 ===
+Focus Claim: C012 [status=disputed, confidence=0.55]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'since the formulation of the discrete Poincaré-Bendixson theorem in the 1990s', 'geographic': 'global'}
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 38 ===
+Focus Claim: C012 [status=supported, confidence=0.85]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 3 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 39 ===
+Focus Claim: C012 [status=supported, confidence=0.85]
+  subject: The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions
+  predicate: is sufficient to rule out
+  object: infinite non-recurrent orbits
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C012 sealed.
+S(t): 2 claims active, 12 sealed, 0 weak candidates
+
+=== DES Iteration 40 ===
+Focus Claim: C013 [status=unknown, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge to
+  object: a finite set of periodic points when the non-expansive Lyapunov function is strictly decreasing on the omega-limit set
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C013 sealed.
+S(t): 1 claims active, 13 sealed, 0 weak candidates
+
+[DES] Termination: max iterations (40) reached.
+
+============================================================
+FINAL RESEARCH TRACE
+============================================================
+Total iterations: 40
+Total claims: 14
+Reframings: 1
+
+Global operation history:
+  01. T3 on C001
+  02. T4 on C001
+  03. T3 on C002
+  04. T6[hypothesis_builder] on C002 -> C005
+  05. T6[falsifier] on C002 -> C006
+  06. T8 on C002
+  07. T3 on C003
+  08. T5[hypothesis_builder] on C003 -> C007
+  09. T5[falsifier] on C003 -> C008
+  10. T1 on C003
+  11. T3 on C004
+  12. T6[hypothesis_builder] on C004 -> C011
+  13. T6[falsifier] on C004 -> C012
+  14. T8 on C004
+  15. T3 on C005
+  16. T6 on C005
+  17. T8 on C005
+  18. T3 on C006
+  19. T7 on C006
+  20. T6 on C006
+  21. T8 on C006
+  22. T3 on C007
+  23. T6 on C007
+  24. T8 on C007
+  25. T3 on C008
+  26. T7 on C008
+  27. T6 on C008
+  28. T8 on C008
+  29. T3 on B001
+  30. T7 on B001
+  31. T8 on B001
+  32. T3 on B002
+  33. T9[hypothesis_builder] on C003 -> C013
+  34. T9[falsifier] on C003 -> C014
+  35. T7 on B002
+  36. T8 on B002
+  37. T3 on C011
+  38. T6 on C011
+  39. T8 on C011
+  40. T3 on C012
+  41. T7 on C012
+  42. T6 on C012
+  43. T8 on C012
+  44. T8 on C013
+
+Claim summary:
+  [SEALED] C001: Trajectories of the recursive map T(n) with sufficiently large starting values can have trajectories that never enter a finite cycle
+    status=supported, confidence=0.50, modality=hypothesis
+    history=['T3', 'T4']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+  [SEALED] C002 (child of C001): Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition must eventually enter a finite cycle
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+  [SEALED] C003 (child of C001): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions may exhibit divergent or aperiodic behavior without finite cycles
+    status=disputed, confidence=0.42, modality=suggestion
+    history=['T3', 'T5[anti-delphi]', 'T1', 'T9[anti-delphi]']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+  [SEALED] C004 (child of C001): The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions is insufficient to rule out infinite non-recurrent orbits
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to maps with non-expans
+  [SEALED] C005 (child of C002): Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition must eventually enter a unique fixed point rather than a cycle of length greater than one
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+    evidence: [PATH:empirical] Systematic numerical simulation of T(n) across a dense grid of initial conditions i
+  [SEALED] C006 (child of C002): Trajectories of the recursive map T(n) with sufficiently large starting values under a non-expansive Lyapunov condition can exhibit chaotic behavior beyond finite cycles
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+    evidence: [PATH:empirical] Numerical simulation of T(n) for a family of non-expansive maps with varying Lyapun
+  [SEALED] C007 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions converge to a unique attracting invariant set that is either a finite cycle or a quasi-periodic torus, provided the non-expansive Lyapunov function is strictly decreasing along trajectories outside the set
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+    evidence: [PATH:empirical] Numerical simulations of the recursive map T(n) for a family of piecewise linear ma
+  [SEALED] C008 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions will converge to stable periodic or fixed points within finite cycles
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) with sufficiently large starting val
+    evidence: [PATH:empirical] Systematic numerical simulations of T(n) on a high-dimensional grid of parameter re
+  [SEALED] B001 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to a finite cycle or fixed point due to the topological constraints of the discrete Poincaré-Bendixson theorem
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms Trajectories of the recursive map T(n) with sufficiently l
+  [SEALED] B002 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions can exhibit divergent or aperiodic behavior without finite cycles
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms Trajectories of the recursive map T(n) with sufficiently l
+  [SEALED] C011 (child of C004): The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions is sufficient to rule out infinite non-recurrent orbits
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6', 'T8']
+    evidence: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to maps with non-expans
+    evidence: [PATH:theoretical] Construct a counterexample using a piecewise linear map on a compact metric space
+  [SEALED] C012 (child of C004): The discrete Poincaré-Bendixson property as applied to maps with non-expansive Lyapunov functions is sufficient to rule out infinite non-recurrent orbits
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The discrete Poincaré-Bendixson property as applied to maps with non-expans
+    evidence: [PATH:theoretical] Detailed analysis of counterexamples in discrete dynamical systems where non-expa
+  [SEALED] C013 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to a finite set of periodic points when the non-expansive Lyapunov function is strictly decreasing on the omega-limit set
+    status=unknown, confidence=0.50, modality=hypothesis
+    history=['T8']
+  [ACTIVE] C014 (child of C003): Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=[]
+
+Epistemic path: T3 on C001 → T4 on C001 → T3 on C002 → T6[hypothesis_builder] on C002 -> C005 → T6[falsifier] on C002 -> C006 → T8 on C002 → T3 on C003 → T5[hypothesis_builder] on C003 -> C007 → T5[falsifier] on C003 -> C008 → T1 on C003 → T3 on C004 → T6[hypothesis_builder] on C004 -> C011 → T6[falsifier] on C004 -> C012 → T8 on C004 → T3 on C005 → T6 on C005 → T8 on C005 → T3 on C006 → T7 on C006 → T6 on C006 → T8 on C006 → T3 on C007 → T6 on C007 → T8 on C007 → T3 on C008 → T7 on C008 → T6 on C008 → T8 on C008 → T3 on B001 → T7 on B001 → T8 on B001 → T3 on B002 → T9[hypothesis_builder] on C003 -> C013 → T9[falsifier] on C003 -> C014 → T7 on B002 → T8 on B002 → T3 on C011 → T6 on C011 → T8 on C011 → T3 on C012 → T7 on C012 → T6 on C012 → T8 on C012 → T8 on C013
+============================================================
+
+  Loop 004 | Q: What is the evidence that Trajectories of the recursive map T(n) with 
+
+Dynamic Epistemic Sequencer v0.1
+Research question: What is the evidence that Trajectories of the recursive map T(n) with sufficiently large starting values under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points?
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points for sufficiently large starting values
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.45]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for sufficiently large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) under combined n
+S(t): 1 claims active, 0 sealed, 0 weak candidates
+
+=== DES Iteration 2 ===
+Focus Claim: C001 [status=supported, confidence=0.45]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for sufficiently large starting values
+Trigger: T4 (t4_decompose_claim)
+Operation: t4_decompose_claim
+Result: Decomposed into sub-claims: C002, C003
+S(t): 2 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 3 ===
+Focus Claim: C002 [status=disputed, confidence=0.55]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, not just sufficiently large ones
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) under combined n
+S(t): 2 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 4 ===
+Focus Claim: C002 [status=disputed, confidence=0.60]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, not just sufficiently large ones
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all iterations n ≥ 1', 'geographic': 'not applicable'}
+S(t): 2 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 5 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, not just sufficiently large ones
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C004, C005
+S(t): 4 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 6 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, not just sufficiently large ones
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C002 sealed.
+S(t): 3 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 7 ===
+Focus Claim: C003 [status=disputed, confidence=0.38]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: may exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: For some parameter regimes of the recursive map T(n) un
+S(t): 3 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 8 ===
+Focus Claim: C003 [status=contradicted, confidence=0.42]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: may exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T5 (t5_generate_counter_hypothesis[AD])
+Operation: t5_generate_counter_hypothesis[AD]
+Result: Anti-Delphi T5: C006, C007
+S(t): 5 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 9 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: may exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T1 (t1_resolve_conflict)
+Operation: t1_resolve_conflict
+Result: BRANCH created: C003 -> B001, B002
+S(t): 7 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 10 ===
+Focus Claim: C004 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, but only if the map is also uniformly expanding on a set of measure zero
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) under combined n
+S(t): 7 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 11 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, but only if the map is also uniformly expanding on a set of measure zero
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 7 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 12 ===
+Focus Claim: C004 [status=supported, confidence=0.82]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: are guaranteed to converge
+  object: to stable cycles or fixed points for all starting values, but only if the map is also uniformly expanding on a set of measure zero
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C004 sealed.
+S(t): 6 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 13 ===
+Focus Claim: C005 [status=disputed, confidence=0.50]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: do not necessarily converge
+  object: to stable cycles or fixed points for all starting values, as some initial conditions may lead to aperiodic or chaotic behavior
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: Trajectories of the recursive map T(n) under combined n
+S(t): 6 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 14 ===
+Focus Claim: C005 [status=disputed, confidence=0.55]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: do not necessarily converge
+  object: to stable cycles or fixed points for all starting values, as some initial conditions may lead to aperiodic or chaotic behavior
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ 0', 'geographic': 'not applicable'}
+S(t): 6 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 15 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: do not necessarily converge
+  object: to stable cycles or fixed points for all starting values, as some initial conditions may lead to aperiodic or chaotic behavior
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 6 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 16 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions
+  predicate: do not necessarily converge
+  object: to stable cycles or fixed points for all starting values, as some initial conditions may lead to aperiodic or chaotic behavior
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C005 sealed.
+S(t): 5 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 17 ===
+Focus Claim: C006 [status=disputed, confidence=0.50]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: yields
+  object: a period-doubling cascade to chaos that is suppressed by a single repelling fixed point when the Lyapunov exponent crosses zero from below
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: For some parameter regimes of the recursive map T(n) un
+S(t): 5 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 18 ===
+Focus Claim: C006 [status=disputed, confidence=0.55]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: yields
+  object: a period-doubling cascade to chaos that is suppressed by a single repelling fixed point when the Lyapunov exponent crosses zero from below
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'during the asymptotic limit as n → ∞'}
+S(t): 5 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 19 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: yields
+  object: a period-doubling cascade to chaos that is suppressed by a single repelling fixed point when the Lyapunov exponent crosses zero from below
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 5 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 20 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: yields
+  object: a period-doubling cascade to chaos that is suppressed by a single repelling fixed point when the Lyapunov exponent crosses zero from below
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C006 sealed.
+S(t): 4 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 21 ===
+Focus Claim: C007 [status=disputed, confidence=0.50]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: must exhibit
+  object: stable or convergent behavior even for large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: For some parameter regimes of the recursive map T(n) un
+S(t): 4 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 22 ===
+Focus Claim: C007 [status=disputed, confidence=0.55]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: must exhibit
+  object: stable or convergent behavior even for large starting values
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'over infinite time horizon', 'geographic': 'not applicable'}
+S(t): 4 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 23 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: must exhibit
+  object: stable or convergent behavior even for large starting values
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 4 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 24 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: must exhibit
+  object: stable or convergent behavior even for large starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C007 sealed.
+S(t): 3 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 25 ===
+Focus Claim: B001 [status=supported, confidence=0.85]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms For some parameter regimes of the recu
+S(t): 3 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 26 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ 1', 'geographic': 'not applicable'}
+S(t): 3 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 27 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B001 sealed.
+S(t): 2 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 28 ===
+Focus Claim: B002 [status=supported, confidence=0.85]
+  subject: For all parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will not exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms For all parameter regimes of the recur
+S(t): 2 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 29 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: For some parameter regimes of the recursive map T(n) under those same conditions
+  predicate: may exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T9 (t9_trigger_reframing[AD])
+Operation: t9_trigger_reframing[AD]
+Result: Anti-Delphi T9: C010, C011
+S(t): 3 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 30 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: For all parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will not exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'over infinite iterations', 'geographic': 'not applicable'}
+S(t): 3 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 31 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: For all parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will not exhibit
+  object: chaotic or non-convergent behavior even for large starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B002 sealed.
+S(t): 2 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 32 ===
+Focus Claim: C010 [status=unknown, confidence=0.50]
+  subject: For parameter regimes of the recursive map T(n) where the Lyapunov exponent is marginally positive and the Poincaré section is not transverse
+  predicate: will produce
+  object: a strange attractor with fractal dimension strictly less than the phase space dimension, regardless of initial condition magnitude
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C010 sealed.
+S(t): 1 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 33 ===
+Focus Claim: C011 [status=disputed, confidence=0.50]
+  subject: For all parameter regimes of the recursive map T(n) under those same conditions
+  predicate: will exhibit
+  object: convergent behavior even for large starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C011 sealed.
+S(t): 0 claims active, 11 sealed, 0 weak candidates
+
+[DES] Termination: all claims sealed.
+
+============================================================
+FINAL RESEARCH TRACE
+============================================================
+Total iterations: 33
+Total claims: 11
+Reframings: 1
+
+Global operation history:
+  01. T3 on C001
+  02. T4 on C001
+  03. T3 on C002
+  04. T7 on C002
+  05. T6[hypothesis_builder] on C002 -> C004
+  06. T6[falsifier] on C002 -> C005
+  07. T8 on C002
+  08. T3 on C003
+  09. T5[hypothesis_builder] on C003 -> C006
+  10. T5[falsifier] on C003 -> C007
+  11. T1 on C003
+  12. T3 on C004
+  13. T6 on C004
+  14. T8 on C004
+  15. T3 on C005
+  16. T7 on C005
+  17. T6 on C005
+  18. T8 on C005
+  19. T3 on C006
+  20. T7 on C006
+  21. T6 on C006
+  22. T8 on C006
+  23. T3 on C007
+  24. T7 on C007
+  25. T6 on C007
+  26. T8 on C007
+  27. T3 on B001
+  28. T7 on B001
+  29. T8 on B001
+  30. T3 on B002
+  31. T9[hypothesis_builder] on C003 -> C010
+  32. T9[falsifier] on C003 -> C011
+  33. T7 on B002
+  34. T8 on B002
+  35. T8 on C010
+  36. T8 on C011
+
+Claim summary:
+  [SEALED] C001: Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points for sufficiently large starting values
+    status=supported, confidence=0.45, modality=hypothesis
+    history=['T3', 'T4']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) under combined non-expansive Lyapuno
+  [SEALED] C002 (child of C001): Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points for all starting values, not just sufficiently large ones
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T7', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) under combined non-expansive Lyapuno
+  [SEALED] C003 (child of C001): For some parameter regimes of the recursive map T(n) under those same conditions may exhibit chaotic or non-convergent behavior even for large starting values
+    status=disputed, confidence=0.42, modality=suggestion
+    history=['T3', 'T5[anti-delphi]', 'T1', 'T9[anti-delphi]']
+    evidence: [Simulated evidence for: For some parameter regimes of the recursive map T(n) under those same condi
+  [SEALED] C004 (child of C002): Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions are guaranteed to converge to stable cycles or fixed points for all starting values, but only if the map is also uniformly expanding on a set of measure zero
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) under combined non-expansive Lyapuno
+    evidence: [PATH:empirical] Construct a family of piecewise linear maps on an interval that satisfy a non-expan
+  [SEALED] C005 (child of C002): Trajectories of the recursive map T(n) under combined non-expansive Lyapunov and discrete Poincaré-Bendixson conditions do not necessarily converge to stable cycles or fixed points for all starting values, as some initial conditions may lead to aperiodic or chaotic behavior
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: Trajectories of the recursive map T(n) under combined non-expansive Lyapuno
+    evidence: [PATH:empirical] Numerical simulation of the map T(n) for a family of non-expansive Lyapunov functio
+  [SEALED] C006 (child of C003): For some parameter regimes of the recursive map T(n) under those same conditions yields a period-doubling cascade to chaos that is suppressed by a single repelling fixed point when the Lyapunov exponent crosses zero from below
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: For some parameter regimes of the recursive map T(n) under those same condi
+    evidence: [PATH:empirical] Numerical simulation of the recursive map T(n) across a fine grid of parameter valu
+  [SEALED] C007 (child of C003): For some parameter regimes of the recursive map T(n) under those same conditions must exhibit stable or convergent behavior even for large starting values
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: For some parameter regimes of the recursive map T(n) under those same condi
+    evidence: [PATH:empirical] Systematic numerical simulation of T(n) across a grid of parameter values and large
+  [SEALED] B001 (child of C003): For some parameter regimes of the recursive map T(n) under those same conditions will exhibit chaotic or non-convergent behavior even for large starting values
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms For some parameter regimes of the recursive map T(n) under
+  [SEALED] B002 (child of C003): For all parameter regimes of the recursive map T(n) under those same conditions will not exhibit chaotic or non-convergent behavior even for large starting values
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms For all parameter regimes of the recursive map T(n) under 
+  [SEALED] C010 (child of C003): For parameter regimes of the recursive map T(n) where the Lyapunov exponent is marginally positive and the Poincaré section is not transverse will produce a strange attractor with fractal dimension strictly less than the phase space dimension, regardless of initial condition magnitude
+    status=unknown, confidence=0.50, modality=hypothesis
+    history=['T8']
+  [SEALED] C011 (child of C003): For all parameter regimes of the recursive map T(n) under those same conditions will exhibit convergent behavior even for large starting values
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=['T8']
+
+Epistemic path: T3 on C001 → T4 on C001 → T3 on C002 → T7 on C002 → T6[hypothesis_builder] on C002 -> C004 → T6[falsifier] on C002 -> C005 → T8 on C002 → T3 on C003 → T5[hypothesis_builder] on C003 -> C006 → T5[falsifier] on C003 -> C007 → T1 on C003 → T3 on C004 → T6 on C004 → T8 on C004 → T3 on C005 → T7 on C005 → T6 on C005 → T8 on C005 → T3 on C006 → T7 on C006 → T6 on C006 → T8 on C006 → T3 on C007 → T7 on C007 → T6 on C007 → T8 on C007 → T3 on B001 → T7 on B001 → T8 on B001 → T3 on B002 → T9[hypothesis_builder] on C003 -> C010 → T9[falsifier] on C003 -> C011 → T7 on B002 → T8 on B002 → T8 on C010 → T8 on C011
+============================================================
+  M01/arm_B/seed101: SEMANTIC_DUPLICATION | loops=5 | depth_lift=4 | op=1/1
+
+=================================================================
+  M01 [Arm C | seed101] | formal_mathematics
+  Seed Q: Investigate the long-term behavior of the recursive map T(n): if n mod
+=================================================================
+
+  Loop 000 | Q: Investigate the long-term behavior of the recursive map T(n): if n mod
+
+Dynamic Epistemic Sequencer v0.1
+Research question: Investigate the long-term behavior of the recursive map T(n): if n mod 3 == 0 then T(n) = n/3, if n mod 3 == 1 then T(n) = 4n+2, if n mod 3 == 2 then T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] The recursive map T(n) defined by the given piecewise function has exactly one nontrivial cycle besides the fixed point at 0
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.45]
+  subject: The recursive map T(n) defined by the given piecewise function
+  predicate: has exactly one nontrivial cycle
+  object: besides the fixed point at 0
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by the given piecewise f
+S(t): 1 claims active, 0 sealed, 0 weak candidates
