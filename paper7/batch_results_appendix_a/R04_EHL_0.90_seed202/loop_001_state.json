@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP growth",
+      "predicate": "negatively predicts",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP growth in developed countries",
+      "predicate": "negatively predicts",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in developed countries subjective wellbeing]"
+      ],
+      "scope": {
+        "domain": "developed economies"
+      },
+      "qualifier": {
+        "condition": "after basic needs are met"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP growth in low-income countries",
+      "predicate": "positively predicts",
+      "object": "subjective wellbeing",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in low-income countries subjective wellbeing]"
+      ],
+      "scope": {
+        "domain": "low-income countries"
+      },
+      "qualifier": {
+        "condition": "during initial stages of development"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP growth",
+      "predicate": "has no direct effect on",
+      "object": "subjective wellbeing",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing]"
+      ],
+      "scope": {
+        "domain": "global, when controlling for income inequality"
+      },
+      "qualifier": {
+        "condition": "after adjusting for relative income effects"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP growth in developed countries",
+      "predicate": "negatively predicts",
+      "object": "subjective wellbeing only in countries with high income inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in developed countries subjective wellbeing only in countries with high income inequality]",
+        "[PATH:empirical] Longitudinal panel data from the World Values Survey or Gallup World Poll, stratified by OECD countries with Gini coefficients above and below 0.35, analyzing within-country changes in GDP per capita and life satisfaction over 10-20 years. \u2014 Directly tests the conditional negative prediction by comparing the GDP-wellbeing relationship across high- and low-inequality developed economies, controlling for basic needs thresholds.",
+        "[PATH:literature] Re-analysis of Easterlin paradox studies (e.g., Easterlin et al., 2010) and subsequent critiques (e.g., Sacks, Stevenson & Wolfers, 2012), focusing on subsamples of countries with Gini > 0.35 to see if the GDP-wellbeing link turns negative. \u2014 Existing literature provides conflicting evidence; a targeted re-analysis can clarify whether the negative relationship is an artifact of pooling heterogeneous inequality contexts.",
+        "[PATH:theoretical] Theoretical models of relative deprivation and status competition (e.g., the 'keeping up with the Joneses' effect) applied to macroeconomic growth, predicting that GDP growth increases wellbeing only if it reduces inequality; otherwise, it may lower wellbeing via social comparison. \u2014 Provides a causal mechanism for why high inequality could invert the GDP-wellbeing relationship, offering testable predictions for empirical work."
+      ],
+      "scope": {
+        "domain": "developed economies"
+      },
+      "qualifier": {
+        "condition": "after basic needs are met and when Gini coefficient exceeds 0.35"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP growth in developed countries",
+      "predicate": "positively predicts",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in developed countries subjective wellbeing]",
+        "[PATH:empirical] World Happiness Report longitudinal data (2000-2020) correlating GDP per capita growth with national average life satisfaction scores across OECD countries \u2014 Directly tests the GDP growth-wellbeing link using standardized subjective wellbeing metrics over the specified temporal and geographic scope.",
+        "[PATH:literature] Easterlin Paradox meta-analysis (e.g., Easterlin et al., 2010) revisiting the relationship between economic growth and happiness in developed nations \u2014 Provides theoretical and empirical counter-evidence suggesting that beyond a threshold, GDP growth does not reliably predict wellbeing increases, challenging the hypothesis.",
+        "[PATH:empirical] Panel data analysis of OECD countries using Gallup World Poll data and national accounts, controlling for income inequality and social trust \u2014 Tests whether the positive prediction holds after adjusting for confounding factors known to moderate the GDP-wellbeing relationship, clarifying causal direction."
+      ],
+      "scope": {
+        "domain": "developed economies"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "negatively affects",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing]",
+        "[PATH:empirical] Panel data analysis using World Values Survey and OECD National Accounts (2000-2020) with multilevel modeling to isolate GDP growth effects from relative income and inequality \u2014 Directly tests the hypothesis in the specified scope by controlling for relative income and inequality, using longitudinal data across OECD countries.",
+        "[PATH:literature] Systematic review or meta-analysis of studies on GDP growth and subjective wellbeing focusing on interaction with income inequality (e.g., Easterlin Paradox literature, Kahneman & Deaton 2010) \u2014 Synthesizes existing evidence to assess whether the negative effect is robust across studies, especially when controlling for inequality and relative income.",
+        "[PATH:theoretical] Theoretical model integrating positional goods, status competition, and inequality (e.g., Frank 2005; Layard 2005) to predict when GDP growth reduces wellbeing \u2014 Provides causal mechanisms explaining why growth might harm wellbeing in high-inequality contexts, guiding empirical specification and interpretation."
+      ],
+      "scope": {
+        "domain": "in countries with high income inequality, after controlling for relative income effects"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP growth",
+      "predicate": "has a significant impact on",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing]",
+        "[PATH:empirical] World Happiness Report (2000-2023) combined with World Bank GDP data \u2014 Cross-country panel analysis comparing annual GDP growth rates with life satisfaction scores can isolate the short- and long-term effects of economic growth on subjective wellbeing, controlling for income levels and other confounds.",
+        "[PATH:literature] Easterlin Paradox meta-analysis (updated to 2023) \u2014 This well-known body of research directly addresses the disputed relationship, showing that while within-country income correlates with wellbeing, cross-country growth often does not. An updated meta-analysis could clarify the temporal and geographic scope of the effect.",
+        "[PATH:empirical] Natural experiment studies of economic shocks (e.g., sudden recessions or booms from commodity price changes or policy reforms) \u2014 Exploiting exogenous variation in GDP growth (e.g., due to oil price shocks or trade policy changes) provides causal identification, helping to confirm or refute whether growth itself drives wellbeing changes beyond other correlated factors."
+      ],
+      "scope": {
+        "domain": "global, across various income levels"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "global, across various income levels"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP growth",
+      "predicate": "has no direct effect on",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth has no direct effect on subjective wellbeing in domain 'global, when controlling for income inequality']"
+      ],
+      "scope": {
+        "domain": "global, when controlling for income inequality"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP growth",
+      "predicate": "has a positive direct effect on",
+      "object": "subjective wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth has a positive direct effect on subjective wellbeing in domain 'global, when controlling for income inequality']"
+      ],
+      "scope": {
+        "domain": "global, when controlling for income inequality"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "global (OECD and BRICS countries)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP growth",
+      "predicate": "negatively affects",
+      "object": "subjective wellbeing",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "in nations with high income inequality, after controlling for absolute income"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP growth",
+      "predicate": "has a direct effect on",
+      "object": "subjective wellbeing",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

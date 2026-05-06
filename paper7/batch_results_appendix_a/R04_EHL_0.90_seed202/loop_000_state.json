@@ -1,0 +1,427 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "is a valid proxy for",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]"
+      ],
+      "scope": {
+        "domain": "developed countries, material dimensions"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP growth",
+      "predicate": "is a poor proxy for",
+      "object": "subjective wellbeing and mental health",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing and mental health]"
+      ],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {
+        "caveat": "strongly moderated by inequality"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "may be inversely correlated with",
+      "object": "ecological sustainability and long-term collective wellbeing",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP ecological sustainability and long-term collective wellbeing]"
+      ],
+      "scope": {
+        "domain": "environmental sustainability, intergenerational wellbeing"
+      },
+      "qualifier": {
+        "context": "high-consumption economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita",
+      "predicate": "overestimates improvements in",
+      "object": "material living standards for the bottom 40% of income earners in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards for the bottom 40% of income earners in developed economies]",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) \u2013 decile shares and real income growth data for bottom 40% \u2014 Directly measures whether bottom 40% real income growth diverges from GDP per capita growth in OECD countries since the 1980s, providing a clear test of the hypothesis.",
+        "[PATH:empirical] Piketty, Saez, and Zucman (2018) 'Distributional National Accounts' \u2013 DINA for developed economies \u2014 Provides comprehensive estimates of income growth across the full distribution, allowing comparison between GDP per capita and bottom 40% material living standards over time.",
+        "[PATH:theoretical] Meyer and Sullivan (2017) 'Consumption and Income Inequality in the U.S.' \u2013 consumption-based measures of material well-being \u2014 Offers a conceptual and empirical alternative to income-based measures; if consumption for the bottom 40% tracks GDP per capita more closely than income, it may refute the hypothesis that GDP per capita overestimates improvements."
+      ],
+      "scope": {
+        "domain": "developed countries, income inequality and material welfare"
+      },
+      "qualifier": {
+        "temporal": "since the 1980s",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "is not a comprehensive measure of",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]",
+        "[PATH:empirical] OECD Better Life Index (BLI) composite indicators of well-being, including housing, income, jobs, community, education, environment, civic engagement, health, life satisfaction, safety, work-life balance \u2014 Directly compares GDP per capita with multidimensional material living standards across OECD countries to test whether GDP per capita alone captures or misses key material dimensions.",
+        "[PATH:literature] Stiglitz, Sen, Fitoussi (2009) 'Report by the Commission on the Measurement of Economic Performance and Social Progress' \u2014 Foundational theoretical and empirical critique arguing GDP is insufficient for measuring material well-being, providing both conceptual framework and evidence for the hypothesis.",
+        "[PATH:empirical] Cross-national panel data on household disposable income, consumption expenditure, and wealth distribution (e.g., OECD Income Distribution Database, Luxembourg Income Study) \u2014 Tests whether GDP per capita trends align with trends in actual household material resources (income, consumption, wealth) in developed economies post-2000, revealing gaps."
+      ],
+      "scope": {
+        "domain": "developed countries, material dimensions"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth in highly unequal societies",
+      "predicate": "inversely correlates with",
+      "object": "population-level subjective wellbeing and mental health",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in highly unequal societies population-level subjective wellbeing and mental health]",
+        "[PATH:empirical] Longitudinal analysis of OECD panel data (e.g., World Happiness Report, Gallup World Poll) linking GDP growth, Gini coefficient, and self-reported life satisfaction or mental health indices (e.g., GHQ-12) from 2000-2020. \u2014 Directly tests the temporal correlation between GDP growth in unequal societies and subjective wellbeing, controlling for confounds like social safety nets.",
+        "[PATH:literature] Systematic review and meta-analysis of studies on income inequality and mental health outcomes (e.g., depression, anxiety) in OECD countries, focusing on within-country changes over time. \u2014 Synthesizes existing evidence to assess whether the inverse correlation holds consistently across different measures, populations, and time periods."
+      ],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP growth",
+      "predicate": "is a strong proxy for",
+      "object": "subjective wellbeing and mental health",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth subjective wellbeing and mental health]",
+        "[PATH:empirical] Longitudinal panel studies (e.g., German Socio-Economic Panel, BHPS) linking GDP per capita growth to individual-level mental health indices (e.g., GHQ-12, SWLS) over 2000-2020 \u2014 Directly tests the temporal correlation between macroeconomic growth and subjective wellbeing at the individual level, controlling for confounders like unemployment or inequality.",
+        "[PATH:literature] Meta-analysis of cross-country comparisons (e.g., World Happiness Report, OECD Better Life Index) examining the GDP-wellbeing relationship within OECD nations \u2014 Synthesizes existing evidence to assess whether the proxy relationship holds consistently across diverse cultural and policy contexts, addressing the 'Easterlin paradox'.",
+        "[PATH:theoretical] Theoretical work on relative income and adaptation (e.g., Kahneman & Deaton, 2010; Luhmann et al., 2012) critiquing GDP as a wellbeing proxy \u2014 Provides conceptual grounds for why GDP growth may fail to capture subjective wellbeing due to hedonic adaptation, social comparison, and non-material determinants, thus refuting the hypothesis."
+      ],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP growth",
+      "predicate": "is a good proxy for",
+      "object": "subjective wellbeing and mental health",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth is a good proxy for subjective wellbeing and mental health in domain 'psychological and subjective wellbeing']"
+      ],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "high-income OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP growth",
+      "predicate": "is a poor proxy for",
+      "object": "subjective wellbeing and mental health",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth is a poor proxy for subjective wellbeing and mental health in domain 'psychological and subjective wellbeing']"
+      ],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "since the 2000s",
+        "geographic": "global, with emphasis on developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP growth",
+      "predicate": "negatively predicts",
+      "object": "subjective wellbeing in high-inequality contexts",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP growth",
+      "predicate": "is a strong predictor of",
+      "object": "improvements in subjective wellbeing and mental health",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "psychological and subjective wellbeing"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
