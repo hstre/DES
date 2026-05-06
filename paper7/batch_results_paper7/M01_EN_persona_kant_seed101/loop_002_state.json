@@ -1,0 +1,428 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The congruence class of n modulo 3",
+      "predicate": "determines",
+      "object": "the eventual convergence or divergence behavior of the recursive map T(n) (with T(n)=n/3 if 3|n, else T(n)=floor(4n/3))",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3 the eventual convergence or divergence behavior of the recursive map T(n) (with T(n)=n/3 if 3|n, else T(n)=floor(4n/3))]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The congruence class of n modulo 3",
+      "predicate": "determines",
+      "object": "whether the recursive map T(n) eventually converges to a fixed point",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3 whether the recursive map T(n) eventually converges to a fixed point]"
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers n at all times",
+        "geographic": "in all regions where the recursive map T(n) is defined"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The congruence class of n modulo 3 for n \u2261 0 mod 3",
+      "predicate": "guarantees",
+      "object": "that T(n) strictly decreases and eventually reaches a cycle of length 1",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "prediction",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3 for n \u2261 0 mod 3 that T(n) strictly decreases and eventually reaches a cycle of length 1]"
+      ],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {
+        "condition": "assuming no overflow or rounding anomalies"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The congruence class of n modulo 3",
+      "predicate": "is not sufficient to determine",
+      "object": "the eventual behavior of T(n) for n \u2261 1 or 2 mod 3, due to sensitivity to initial floor rounding",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3 the eventual behavior of T(n) for n \u2261 1 or 2 mod 3, due to sensitivity to initial floor rounding]"
+      ],
+      "scope": {
+        "domain": "n not divisible by 3"
+      },
+      "qualifier": {
+        "competing_view": "local divergence may be more dependent on binary representation than residue class"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The congruence class of n modulo 3, when n is divisible by 3",
+      "predicate": "is a necessary condition for",
+      "object": "the recursive map T(n) to converge to a fixed point within the first 10 iterations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3, when n is divisible by 3 the recursive map T(n) to converge to a fixed point within the first 10 iterations]",
+        "[PATH:empirical] Systematic computational simulation of T(n) for all positive integers n up to a large bound (e.g., 10^6), recording congruence class modulo 3 for n divisible by 3 and counting iterations to fixed point within first 10 steps. \u2014 Direct empirical testing can reveal whether a statistically significant relationship exists between n \u2261 0 mod 3 and convergence within 10 iterations, providing evidence for or against the hypothesis.",
+        "[PATH:theoretical] Analytical derivation of the dynamics of T(n) for n divisible by 3, focusing on the modular constraints that may force rapid convergence or prevent it, using number theory and recursion analysis. \u2014 A theoretical proof or counterexample would establish the necessity or non-necessity of the congruence condition, resolving the disputed status with logical certainty.",
+        "[PATH:literature] Literature review of known results on the Collatz-like map T(n) (or related recursive maps), searching for prior theorems or conjectures linking congruence modulo 3 to convergence behavior. \u2014 Existing research may already contain proven conditions or counterexamples relevant to this hypothesis, saving effort and providing authoritative support or refutation."
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers n at any time step",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n)",
+      "predicate": "does not rely on",
+      "object": "the congruence class of n modulo 3 to determine convergence to a fixed point",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) the congruence class of n modulo 3 to determine convergence to a fixed point]",
+        "[PATH:empirical] Systematic computational simulation of T(n) for all n up to a large bound (e.g., 10^7), recording convergence behavior stratified by n mod 3. \u2014 Direct empirical testing across congruence classes can reveal whether convergence to a fixed point correlates with n mod 3, providing strong refutation or confirmation of the hypothesis.",
+        "[PATH:theoretical] Analytical derivation of the fixed point equation T(n) = n and characterization of solutions in terms of the map's definition, independent of modulo classes. \u2014 A formal proof that the existence or non-existence of fixed points depends only on the map's algebraic structure, not on residue classes, would confirm the hypothesis.",
+        "[PATH:literature] Literature review of known results on similar recursive maps (e.g., Collatz-like functions) to identify documented dependencies on congruence classes for convergence. \u2014 Existing studies may have already addressed whether modulo classes influence fixed-point convergence, providing indirect evidence or theoretical frameworks applicable to T(n)."
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "for all n at any time step during iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The congruence class of n modulo 9 for n \u2261 0 mod 3",
+      "predicate": "determines",
+      "object": "the number of steps until T(n) reaches the cycle of length 1",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 9 for n \u2261 0 mod 3 the number of steps until T(n) reaches the cycle of length 1]",
+        "[PATH:empirical] Large-scale computational verification: systematically compute T(n) for all n \u2261 0 mod 3 up to, say, 10^9, recording n mod 9 and the number of steps to reach the 4-2-1 cycle, then test for correlation. \u2014 Direct empirical test: if the hypothesis holds, the step counts should cluster by residue class mod 9; otherwise, no systematic pattern will appear.",
+        "[PATH:theoretical] Theoretical analysis of the Collatz map's effect on numbers divisible by 3, focusing on the transformation T(n)=n/3 for n \u2261 0 mod 3, and deriving congruence constraints mod 9 after one or more steps. \u2014 A theoretical derivation can show whether the residue mod 9 is invariant under iteration or determines the branching behavior, thereby confirming or refuting the claimed determinism."
+      ],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The congruence class of n modulo 3 for n \u2261 0 mod 3",
+      "predicate": "does not guarantee",
+      "object": "that T(n) strictly decreases and eventually reaches a cycle of length 1",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The congruence class of n modulo 3 for n \u2261 0 mod 3 that T(n) strictly decreases and eventually reaches a cycle of length 1]",
+        "[PATH:empirical] Systematic computational search over all n divisible by 3 up to a large bound (e.g., 10^6) to record the trajectory of T(n) and check for strict decrease and eventual 1-cycle \u2014 Direct empirical testing can confirm or refute the hypothesis for a finite initial segment; if any counterexample is found, the hypothesis is refuted; if none are found, it increases confidence in the claim but does not prove it.",
+        "[PATH:theoretical] Analytical study of the Collatz-type function T(n) = n/3 for n \u2261 0 mod 3, and T(n) = (an + b) otherwise, with focus on modular constraints and invariant measures \u2014 A theoretical proof or disproof of monotonic decrease and convergence to a 1-cycle for numbers divisible by 3 would settle the hypothesis; this could involve analyzing the dynamics modulo powers of 3 or constructing Lyapunov functions.",
+        "[PATH:literature] Literature review of known results on Collatz-like functions restricted to residue classes, particularly results on eventual periodicity and strict decrease for multiples of the modulus \u2014 Existing work on generalized Collatz problems may contain theorems or counterexamples directly applicable to the congruence class n \u2261 0 mod 3, providing evidence without new computation."
+      ],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain at any time step"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "n divisible by 3",
+      "predicate": "guarantees",
+      "object": "that T(n) strictly decreases and eventually reaches a cycle of length 1",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms n divisible by 3 guarantees that T(n) strictly decreases and eventually reaches a cycle of length 1 in domain 'n divisible by 3']"
+      ],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "n divisible by 3",
+      "predicate": "does not guarantee",
+      "object": "that T(n) strictly decreases and eventually reaches a cycle of length 1",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms n divisible by 3 does not guarantee that T(n) strictly decreases and eventually reaches a cycle of length 1 in domain 'n divisible by 3']"
+      ],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {
+        "temporal": "current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The congruence class of n modulo 9 for n \u2261 0 mod 3",
+      "predicate": "determines",
+      "object": "whether T(n) undergoes exactly one strict decrease before entering a fixed cycle of length 1",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The congruence class of n modulo 3 for n \u2261 0 mod 3",
+      "predicate": "fails to guarantee",
+      "object": "that T(n) strictly decreases and eventually reaches a cycle of length 1",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "n divisible by 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 36,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
