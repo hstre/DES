@@ -95,8 +95,12 @@ DOMAINS = {
     },
     # New domains spanning SH range
     "M01": {
-        "seed": "Does biodiversity loss cause ecosystem service collapse?",
-        "sh_loop0": None, "p4_depth": None, "source": "paper7_new",
+        "seed": ("Investigate the long-term behavior of the recursive map T(n): "
+                 "if n mod 3 == 0 then T(n) = n/3, "
+                 "if n mod 3 == 1 then T(n) = 4n+2, "
+                 "if n mod 3 == 2 then T(n) = 2n-1. "
+                 "Identify cycles, divergence patterns, invariants, and plausible conjectures."),
+        "sh_loop0": None, "p4_depth": None, "source": "paper7_math_probe",
     },
     "M02": {
         "seed": "Is antibiotic resistance an existential threat to modern medicine?",
@@ -835,6 +839,7 @@ def write_summary(all_results: dict):
 
 PERSONA_KEYS = ["popper", "shannon", "darwin"]
 CREATIVE_PERSONA_KEYS = ["mozart", "picasso"]
+MATH_PERSONA_KEYS = ["kant", "darwin", "mozart"]
 ISOLATION_SEEDS = [101, 202, 303]
 
 
@@ -1164,6 +1169,314 @@ def _write_creative_probe_report(domain_id: str, rows: list):
 
 
 # ---------------------------------------------------------------------------
+# Math persona probe (exploratory curiosity)
+# ---------------------------------------------------------------------------
+
+def _extract_math_content(claims: dict) -> dict:
+    """Scan sealed claims for mathematical content keywords."""
+    import re
+    sealed_texts = []
+    for c in claims.values():
+        if c.get("sealed"):
+            text = " ".join([
+                c.get("subject", ""), c.get("predicate", ""), c.get("object", "")
+            ]).lower()
+            sealed_texts.append(text)
+
+    kw = {
+        "cycles": ["cycle", "cyclic", "periodic", "period", "orbit", "returns to"],
+        "fixed_points": ["fixed point", "fixed-point", "equilibrium", "t(n)=n", "t(n) = n"],
+        "invariants": ["invariant", "conserved", "monovariant", "preserved", "monotone"],
+        "divergence": ["diverge", "unbounded", "grows without", "tend to infinity", "escapes"],
+        "convergence": ["converge", "eventually reach", "all trajectories", "basin of attraction"],
+        "conjectures": ["conjecture", "we hypothesize", "it is plausible", "suggests that",
+                        "may be true", "is likely that", "appears to"],
+        "counterexamples": ["counterexample", "counter-example", "exception", "fails for"],
+        "proof": ["proof", "proven", "provable", "cannot be proven", "unprovable", "undecidable"],
+    }
+    hits = {}
+    for category, keywords in kw.items():
+        matches = []
+        for text in sealed_texts:
+            if any(k in text for k in keywords):
+                matches.append(text[:120])
+        hits[category] = matches
+    return hits
+
+
+def run_math_probe(domain_id: str = "M01"):
+    """
+    EXPLORATORY CURIOSITY PROBE — mathematical unknown-problem probe.
+    Runs domain_id × P4_baseline (3 seeds) + [kant, darwin, mozart] × (3 seeds).
+    12 runs total. Results written to paper7/math_persona_probe_{domain_id}.{md,json}.
+    No hypothesis confirmed — labeled exploratory throughout.
+    """
+    info = DOMAINS[domain_id]
+    condition_en  = EXPERIMENTAL_CONDITIONS["EN_persona"]
+    condition_p4  = EXPERIMENTAL_CONDITIONS["P4_baseline"]
+    all_rows      = []
+    p4_baseline_loops: dict[int, int] = {}  # seed -> loops_completed
+
+    # --- P4 baseline ---
+    print(f"\n=== Math probe: P4 baseline ({domain_id}) ===")
+    for seed in ISOLATION_SEEDS:
+        result = run_domain_p7(
+            domain_id=domain_id,
+            seed_question=info["seed"],
+            condition_name="P4_baseline",
+            condition=condition_p4,
+            p4_depth=info.get("p4_depth"),
+            sh_loop0=info.get("sh_loop0"),
+            rng_seed=seed,
+        )
+        p4_baseline_loops[seed] = result.get("loops_completed", 0)
+
+        final_state = _last_loop_state(domain_id, "P4_baseline", None, seed)
+        math_hits   = _extract_math_content(final_state.get("claims", {})) if final_state else {}
+
+        metrics_path = (RESULTS_DIR / f"{domain_id}_P4_baseline_seed{seed}" / "metrics.json")
+        loop0_dup = None
+        if metrics_path.exists():
+            with open(metrics_path) as f:
+                mlist = json.load(f)
+            if mlist:
+                loop0_dup = round(mlist[0].get("semantic_duplication_rate", 0), 4)
+
+        row = {
+            "domain":           domain_id,
+            "persona":          "P4_baseline",
+            "seed":             seed,
+            "loop0_dup":        loop0_dup,
+            "loop0_claim_hash": result.get("loop0_claim_hash"),
+            "en_fired":         0,
+            "loops":            result.get("loops_completed"),
+            "depth_lift":       None,
+            "failure_mode":     result.get("outcome"),
+            "en_events":        [],
+            "math_content":     math_hits,
+            "exploratory":      True,
+            "probe":            "math_probe",
+        }
+        all_rows.append(row)
+        print(f"  [P4_baseline/seed{seed}] loops={row['loops']} outcome={row['failure_mode']}")
+
+    # --- Persona runs ---
+    print(f"\n=== Math probe: EN persona runs ({domain_id}) ===")
+    for persona in MATH_PERSONA_KEYS:
+        for seed in ISOLATION_SEEDS:
+            dir_name = f"{domain_id}_EN_persona_{persona}_seed{seed}"
+            result = run_domain_p7(
+                domain_id=domain_id,
+                seed_question=info["seed"],
+                condition_name="EN_persona",
+                condition=condition_en,
+                p4_depth=p4_baseline_loops.get(seed),
+                sh_loop0=info.get("sh_loop0"),
+                rng_seed=seed,
+                persona_filter=persona,
+            )
+
+            en_log_path = RESULTS_DIR / dir_name / "en_log.json"
+            en_events_detail = []
+            if en_log_path.exists():
+                with open(en_log_path) as f:
+                    raw_en = json.load(f)
+                for ev in raw_en:
+                    sel = ev.get("selected") or {}
+                    en_events_detail.append({
+                        "loop":                     ev.get("loop"),
+                        "question":                 sel.get("question", "")[:200],
+                        "eni_novelty":              sel.get("eni_novelty"),
+                        "eni_admissibility":        sel.get("eni_admissibility"),
+                        "eni_non_drift":            sel.get("eni_non_drift"),
+                        "eni_composite":            sel.get("eni_composite"),
+                        "drift":                    round(1.0 - (sel.get("eni_non_drift") or 0), 4),
+                        "admitted":                 sel.get("admitted"),
+                        "novelty_produced_next_loop": ev.get("novelty_produced_next_loop"),
+                    })
+
+            metrics_path = RESULTS_DIR / dir_name / "metrics.json"
+            loop0_dup = None
+            if metrics_path.exists():
+                with open(metrics_path) as f:
+                    mlist = json.load(f)
+                if mlist:
+                    loop0_dup = round(mlist[0].get("semantic_duplication_rate", 0), 4)
+
+            final_state = _last_loop_state(domain_id, "EN_persona", persona, seed)
+            math_hits   = _extract_math_content(final_state.get("claims", {})) if final_state else {}
+
+            p4_ref = p4_baseline_loops.get(seed)
+            depth_lift = (result.get("loops_completed", 0) - p4_ref) if p4_ref else None
+
+            row = {
+                "domain":           domain_id,
+                "persona":          persona,
+                "seed":             seed,
+                "loop0_dup":        loop0_dup,
+                "loop0_claim_hash": result.get("loop0_claim_hash"),
+                "en_fired":         result.get("en_events", 0),
+                "loops":            result.get("loops_completed"),
+                "depth_lift":       depth_lift,
+                "failure_mode":     result.get("outcome"),
+                "en_events":        en_events_detail,
+                "math_content":     math_hits,
+                "exploratory":      True,
+                "probe":            "math_probe",
+            }
+            all_rows.append(row)
+            print(f"  [{persona}/seed{seed}] loops={row['loops']} "
+                  f"depth_lift={row['depth_lift']} EN={row['en_fired']} "
+                  f"outcome={row['failure_mode']}")
+
+    _write_math_probe_report(domain_id, all_rows, p4_baseline_loops)
+
+
+def _last_loop_state(domain_id: str, condition: str, persona: str | None, seed: int) -> dict | None:
+    """Load the last available loop_*_state.json for a run."""
+    import glob as _glob
+    if persona:
+        dir_name = f"{domain_id}_{condition}_{persona}_seed{seed}"
+    else:
+        dir_name = f"{domain_id}_{condition}_seed{seed}"
+    states = sorted(_glob.glob(str(RESULTS_DIR / dir_name / "loop_*_state.json")))
+    if not states:
+        return None
+    with open(states[-1]) as f:
+        return json.load(f)
+
+
+def _write_math_probe_report(domain_id: str, rows: list, p4_loops: dict):
+    out_dir = Path(__file__).parent
+    seed_q  = DOMAINS[domain_id]["seed"]
+
+    # --- JSON ---
+    json_path = out_dir / f"math_persona_probe_{domain_id}.json"
+    report = {
+        "label": ("EXPLORATORY CURIOSITY PROBE — mathematical unknown-problem probe. "
+                  "Not pre-registered, not confirmatory. "
+                  "All generated mathematical claims are hypotheses requiring external verification."),
+        "domain":        domain_id,
+        "seed_question": seed_q,
+        "personas":      ["P4_baseline"] + MATH_PERSONA_KEYS,
+        "seeds":         ISOLATION_SEEDS,
+        "n_runs":        len(rows),
+        "p4_baseline_loops": p4_loops,
+        "goal": ("Test whether persona operators behave differently on a novel recursive "
+                 "mathematical system unlikely to be memorized from training data. "
+                 "Assess mathematical content quality: cycles, fixed points, invariants, "
+                 "conjectures, false proofs, counterexamples."),
+        "caveats": [
+            "n=3 per persona, single domain (M01). No statistical inference warranted.",
+            "All mathematical claims generated by LLM are HYPOTHESES — require external verification.",
+            "DES is not a math solver. It generates structured claims, not proofs.",
+            "False proof / hallucinated proof detection is keyword-based — may miss subtle errors.",
+            "Python RNG seed != LLM determinism. Claim hashes differ across seeds.",
+            "Thresholds, architecture, and prompts unchanged from N03 runs.",
+        ],
+        "rows": rows,
+    }
+    with open(json_path, "w") as f:
+        json.dump(report, f, indent=2)
+
+    # --- Markdown ---
+    lines = [
+        f"# Math Persona Probe — {domain_id}",
+        "",
+        "**EXPLORATORY CURIOSITY PROBE — not pre-registered, not confirmatory.**  ",
+        "**All mathematical claims generated are HYPOTHESES — require external verification.**  ",
+        f"**Date:** 2026-05-05 | Domain: `{domain_id}`",
+        "",
+        "## Seed Question",
+        "",
+        f"> {seed_q}",
+        "",
+        "---",
+        "",
+        "## Trajectory Metrics",
+        "",
+        "| persona | seed | loops | outcome | depth_lift | EN_fired | loop0_dup | claim_hash |",
+        "|---------|------|-------|---------|------------|----------|-----------|------------|",
+    ]
+    for r in rows:
+        dl    = f"+{r['depth_lift']}" if (r['depth_lift'] or 0) > 0 else str(r['depth_lift'] or "—")
+        chash = f"`{r['loop0_claim_hash']}`" if r.get("loop0_claim_hash") else "*(null)*"
+        lines.append(
+            f"| {r['persona']} | {r['seed']} | {r['loops']} | {r['failure_mode']} "
+            f"| {dl} | {r['en_fired']} | {r.get('loop0_dup','—')} | {chash} |"
+        )
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## Mathematical Content — Detected Concept Hits",
+        "",
+        "*(Keyword scan of sealed claims at terminal loop — not a proof of presence or absence.)*",
+        "",
+    ]
+    categories = ["cycles", "fixed_points", "invariants", "divergence",
+                  "convergence", "conjectures", "counterexamples", "proof"]
+    for r in rows:
+        mc = r.get("math_content", {})
+        if not mc:
+            continue
+        hits = {k: len(v) for k, v in mc.items() if v}
+        if not hits:
+            continue
+        lines.append(f"### {r['persona']} / seed {r['seed']}")
+        for cat in categories:
+            count = len(mc.get(cat, []))
+            if count:
+                lines.append(f"- **{cat}**: {count} claim(s)")
+                for ex in mc.get(cat, [])[:2]:
+                    lines.append(f"  - *{ex[:110]}...*")
+        lines.append("")
+
+    lines += [
+        "---",
+        "",
+        "## EN Event Detail (persona runs)",
+        "",
+    ]
+    for r in rows:
+        if not r.get("en_events"):
+            continue
+        lines.append(f"### {r['persona']} / seed {r['seed']}")
+        lines.append("")
+        lines.append("| loop | eni_novelty | eni_non_drift | drift | eni_composite | admitted | nov_next | question (truncated) |")
+        lines.append("|------|-------------|---------------|-------|---------------|----------|----------|----------------------|")
+        for ev in r["en_events"]:
+            q_trunc = (ev.get("question") or "")[:60].replace("|", "/")
+            lines.append(
+                f"| {ev.get('loop')} | {ev.get('eni_novelty')} | {ev.get('eni_non_drift')} "
+                f"| {ev.get('drift')} | {ev.get('eni_composite')} | {ev.get('admitted')} "
+                f"| {ev.get('novelty_produced_next_loop')} | {q_trunc} |"
+            )
+        lines.append("")
+
+    lines += [
+        "---",
+        "",
+        "## Caveats",
+        "",
+        "1. **n=3 per persona.** Cell counts only. No statistical inference.",
+        "2. **LLM is not a math solver.** DES generates structured claims, not proofs.",
+        "3. **All mathematical claims require external verification.** Do not treat as proved.",
+        "4. **False proof detection is keyword-based.** May miss subtle or implicit proof claims.",
+        "5. **Thresholds and architecture unchanged** from N03 runs.",
+        "6. **Not pre-registered.**",
+    ]
+
+    md_path = out_dir / f"math_persona_probe_{domain_id}.md"
+    with open(md_path, "w") as f:
+        f.write("\n".join(lines))
+
+    print(f"\nMath probe report: {json_path}")
+    print(f"Markdown:          {md_path}")
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -1178,12 +1491,14 @@ def main():
     parser.add_argument("--seed", type=int, default=None,
                         help="RNG seed for reproducibility audit (e.g. 101, 202, 303)")
     parser.add_argument("--persona", type=str, default=None,
-                        choices=PERSONA_KEYS + CREATIVE_PERSONA_KEYS,
+                        choices=PERSONA_KEYS + CREATIVE_PERSONA_KEYS + MATH_PERSONA_KEYS,
                         help="Single-persona filter for EN_persona condition. Isolation use only.")
     parser.add_argument("--persona-isolation", action="store_true",
                         help="Run full persona isolation: N03 × 3 personas × 3 seeds")
     parser.add_argument("--creative-probe", action="store_true",
                         help="EXPLORATORY: run creative persona probe (mozart, picasso) × 3 seeds")
+    parser.add_argument("--math-probe", action="store_true",
+                        help="EXPLORATORY: run math persona probe (kant, darwin, mozart) × 3 seeds on M01")
     args = parser.parse_args()
 
     _init_clients()
@@ -1196,6 +1511,11 @@ def main():
     if args.creative_probe:
         domain = args.domain or "N03"
         run_creative_probe(domain_id=domain)
+        return
+
+    if args.math_probe:
+        domain = args.domain or "M01"
+        run_math_probe(domain_id=domain)
         return
 
     if args.all:

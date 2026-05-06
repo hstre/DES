@@ -140,6 +140,23 @@ PERSONA_PROMPTS = [
         "incompatible perspectives are fractured and superimposed?\n"
         "Domain: {question}\nReturn ONE research question that cannot be asked from any single viewpoint.",
     ),
+    (
+        "kant",
+        "Immanuel Kant",
+        "Apply Kant's transcendental method — ask what must be true a priori for any knowledge "
+        "of this system to be possible:\n"
+        "1. Identify the necessary conditions (categories) that any trajectory or behavior "
+        "in this domain must satisfy — not what is observed, but what is required.\n"
+        "2. Identify boundary conditions that partition the space of possible behaviors into "
+        "distinct classes. What is the schematism that organizes the domain?\n"
+        "3. Identify hidden assumptions that any naive claim about the domain makes. "
+        "Are these assumptions necessary or merely contingent?\n"
+        "4. Ask: what proof structure would be required to establish a result here, "
+        "and what forms of proof are structurally impossible?\n"
+        "Domain: {question}\n"
+        "Return ONE research question that identifies a necessary structural precondition, "
+        "a boundary condition, or an a priori constraint on what can be known about this system.",
+    ),
 ]
 
 ADJACENT_PROMPTS = [
