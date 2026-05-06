@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is neither necessary nor sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n) under specific modular constraints",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n) under specific modular constraints]"
+      ],
+      "scope": {
+        "domain": "residue classes modulo 2^k with k \u2265 3"
+      },
+      "qualifier": {
+        "condition": "when restricted to a subset of initial conditions with fixed parity pattern"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is necessary but not sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {
+        "limitation": "additional combinatorial or dynamical invariants are required"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is neither necessary nor sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]"
+      ],
+      "scope": {
+        "domain": "general case without special constraints"
+      },
+      "qualifier": {
+        "perspective": "competing with the first two sub-claims, as it denies both necessity and sufficiency"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The combined effect of parity and residue classes modulo 2^k with k \u2265 3",
+      "predicate": "is sufficient to determine",
+      "object": "the exact count of preimages for each residue class within the basin of period-5 cycles in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo 2^k with k \u2265 3 the exact count of preimages for each residue class within the basin of period-5 cycles in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all period-5 cycles for T(n) for a range of moduli 2^k (k=3 to, say, k=10), recording the exact preimage counts per residue class and comparing them to predictions based solely on parity and residue class combinations. \u2014 Direct simulation can confirm or refute whether the combined parity and residue class information uniquely determines the preimage counts, by checking for counterexamples where different cycles with the same parity pattern yield different counts.",
+        "[PATH:theoretical] Derivation of a closed-form formula for the number of preimages of a given residue class modulo 2^k under the Collatz-like map T(n), expressed in terms of the parity pattern of the cycle and the residue class constraints, using algebraic number theory and modular arithmetic. \u2014 A rigorous mathematical proof would either confirm the hypothesis by showing the count is fully determined, or refute it by revealing that additional information (e.g., the exact cycle trajectory) is required, thereby establishing the limits of the claimed sufficiency.",
+        "[PATH:literature] Review of existing literature on the structure of basins of attraction in generalized Collatz maps, especially works by Lagarias, Chamberland, or Monks that analyze preimage trees and residue class dynamics for cycles of small period. \u2014 Prior theoretical results may already contain theorems or counterexamples that bear directly on whether parity and residue classes modulo 2^k suffice to determine preimage counts for period-5 cycles, saving the need for new computation or derivation."
+      ],
+      "scope": {
+        "domain": "residue classes modulo 2^k with k \u2265 3"
+      },
+      "qualifier": {
+        "condition": "when the parity pattern of the cycle is fixed and k is chosen such that the cycle's residues are fully resolved"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is insufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n) under specific modular constraints",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n) under specific modular constraints]",
+        "[PATH:empirical] Systematic computational enumeration of basin sizes for T(n) modulo 2^k (k=3,4,5) for all residues classes, cross-referenced with parity sequences up to period 5 cycles. \u2014 Direct simulation can test whether parity and higher-power residue classes jointly constrain basin sizes or leave indeterminacy, by comparing observed distributions to random expectation.",
+        "[PATH:theoretical] Extension of Terras's theorem and the 3x+1 stopping time results to the Collatz-like map T(n) with explicit modular constraints for period 5 cycles. \u2014 Theoretical analysis of the functional graph's structure under higher-power moduli could prove whether the combined constraints are sufficient to determine basin size, or reveal necessary additional conditions.",
+        "[PATH:literature] Review of literature on modular constraints in generalized Collatz problems (e.g., work by Lagarias, Applegate, and Wirsching) focusing on period-length dependence on residue classes modulo powers of 2. \u2014 Existing results may provide bounds or counterexamples that clarify the sufficiency of parity and higher-power residue classes for determining basin sizes of short cycles, informing the hypothesis's plausibility."
+      ],
+      "scope": {
+        "domain": "residue classes modulo 2^k with k \u2265 3"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is necessary but not sufficient to determine, and the specific ordering of parity transitions within the 5-cycle",
+      "object": "uniquely determines the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers uniquely determines the basin size of cycles of period 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Exhaustive computational enumeration of all 5-cycles for T(n) = n/2 if n even, (3n+1)/2 if n odd, up to a large bound, recording parity sequences and residue classes modulo 2^k for k=1,...,5, then analyzing basin sizes via backward iteration \u2014 Direct simulation can test whether specific parity patterns (e.g., P1, P2, P3, P4, P5) combined with residues modulo higher powers (e.g., mod 4, 8, 16) uniquely predict the number of preimages and thus basin size, for all discovered 5-cycles.",
+        "[PATH:theoretical] Theoretical derivation using the functional equation of the Collatz-like map: expressing the basin size in terms of the multiplicative and additive contributions of the parity vector and the 2-adic valuation of the iterates \u2014 A formal proof that the basin size depends only on the parity sequence and residue classes modulo powers of 2 would confirm the hypothesis; conversely, showing that two different 5-cycles share the same parity and residue data but have different basin sizes would refute it.",
+        "[PATH:literature] Survey of known results on Collatz-type cycles, particularly the work of Lagarias, Terras, and others on the 3x+1 problem, and any existing classification of 5-cycles in generalized maps like T(n) = (an+b)/c \u2014 Existing literature may already contain partial classifications or counterexamples that either support or undermine the claim that parity and higher-power residues uniquely determine basin size for period-5 cycles."
+      ],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {
+        "temporal": "for all times t",
+        "geographic": "in the domain of positive integers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Parity and residue classes modulo higher powers",
+      "predicate": "are both necessary and sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all residue classes modulo 2^k for k up to, say, 10, and mapping their behavior under T(n) for period-5 cycles, comparing predicted basin sizes to actual counts from brute-force iteration over n up to 10^7. \u2014 Directly tests whether parity and higher-power residue classes are sufficient to determine basin size by checking consistency across many examples; refutation would occur if two numbers with identical residues yield different basin sizes.",
+        "[PATH:theoretical] Theoretical analysis using linear algebra on the functional graph of T(n) restricted to periodic points of period 5, deriving necessary and sufficient conditions on residue classes modulo 2^m for membership in a given basin, building on existing results for the 3x+1 problem. \u2014 Provides a proof-based confirmation or refutation by establishing algebraic invariants; if the residue classes alone cannot uniquely determine basin structure (e.g., due to branching or non-local dependencies), the hypothesis would be refuted.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps, specifically papers by Lagarias, Terras, or Wirsching that characterize cycles and basins via congruence conditions, and comparison with the claimed necessity and sufficiency for period-5 cycles. \u2014 Existing theorems may already imply that higher powers are insufficient (e.g., due to the existence of distinct basins with identical residue profiles) or may provide the theoretical framework to prove the hypothesis."
+      ],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The combined effect of parity and residue classes modulo higher powers is sufficient to determine the basin size of cycles of period 5 in the Collatz-like map T(n) in domain 'all integers n > 0']"
+      ],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is insufficient and irrelevant for determining",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The combined effect of parity and residue classes modulo higher powers is insufficient and irrelevant for determining the basin size of cycles of period 5 in the Collatz-like map T(n) in domain 'all integers n > 0']"
+      ],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The combined effect of parity and residue classes modulo 2^k for k \u2265 3",
+      "predicate": "is sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo 2^k for k \u2265 3 the basin size of cycles of period 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all residues modulo 2^k for k=3,4,5,... and tracking cycle basin sizes for period-5 cycles in T(n) \u2014 Direct simulation across increasing k can reveal whether the combined parity and residue class information uniquely determines basin sizes for period-5 cycles, and whether the pattern breaks for k=1 or k=2 as hypothesized.",
+        "[PATH:theoretical] Theoretical analysis using modular arithmetic and symbolic dynamics on the Collatz-like map T(n), focusing on the structure of preimage trees and cycle constraints modulo 2^k \u2014 A proof that the basin size depends only on the residue class modulo 2^k for k\u22653 would confirm the hypothesis; a counterexample or demonstration of dependence on higher-order structure would refute it.",
+        "[PATH:literature] Review of known results on Collatz-type maps, particularly works by Lagarias, Terras, or Applegate and Lagarias on cycle periods and modular constraints \u2014 Existing literature may already contain partial results or related conjectures about how parity and residue classes modulo powers of two constrain cycle basins, which could support or contradict the hypothesis."
+      ],
+      "scope": {
+        "domain": "when k is at least 3, but not for k=1 or k=2"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is both necessary and sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The combined effect of parity and residue classes modulo higher powers the basin size of cycles of period 5 in the Collatz-like map T(n)]",
+        "[PATH:empirical] Systematic computational enumeration of all residue classes modulo 2^k for k up to, say, 8, for the Collatz-like map T(n) = n/2 if n even, (5n+1)/2 if n odd, to determine exact basin sizes for all cycles of period 5 \u2014 Direct simulation can reveal whether parity and higher-power residue classes uniquely determine basin sizes for period-5 cycles, or whether additional modular constraints are needed, thereby confirming or refuting the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis using the concept of 'admissible sequences' and 'parity vectors' for period-5 cycles in generalized Collatz maps, building on work by Lagarias and others (e.g., Lagarias, J.C. 'The 3x+1 Problem and Its Generalizations') \u2014 A rigorous proof that the basin size depends only on the parity pattern and residue classes modulo higher powers would require extending known results on cycle structure and convergence in Collatz-type maps; this direction can either prove the hypothesis or find counterexamples.",
+        "[PATH:literature] Literature review of known results on the '5x+1' problem and other Collatz-like maps, focusing on period-5 cycles and their basin structures (e.g., papers by Belaga, Mignosi, or Oliveira e Silva) \u2014 Existing studies may have already characterized basin sizes for small periods in such maps; cross-referencing their findings with the hypothesis can provide evidence for or against the claimed necessity and sufficiency."
+      ],
+      "scope": {
+        "domain": "general case without special constraints"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is insufficient, and the number of trailing binary zeros (2-adic valuation) is the missing invariant that fully determines",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The combined effect of parity and residue classes modulo higher powers",
+      "predicate": "is neither necessary nor sufficient to determine",
+      "object": "the basin size of cycles of period 5 in the Collatz-like map T(n)",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all integers n > 0"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
