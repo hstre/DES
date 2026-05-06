@@ -1,0 +1,439 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "in local labor markets with moderate to high minimum wage floors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Raising the minimum wage",
+      "predicate": "reduces",
+      "object": "job turnover and training costs for employers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage job turnover and training costs for employers]"
+      ],
+      "scope": {
+        "domain": "local labor markets with moderate to high minimum wage floors"
+      },
+      "qualifier": {
+        "temporal": "during periods of low unemployment (2015\u20132019)",
+        "geographic": "United States, specifically states with minimum wage floors between $10 and $15 per hour"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers in labor markets with high automation potential",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage unemployment among low-skilled workers in labor markets with high automation potential]"
+      ],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "United States and European Union"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Raising the minimum wage",
+      "predicate": "has no significant effect on",
+      "object": "overall employment levels in tight labor markets",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage overall employment levels in tight labor markets]"
+      ],
+      "scope": {
+        "domain": "tight labor markets with low unemployment"
+      },
+      "qualifier": {
+        "temporal": "during periods of low unemployment (e.g., unemployment rate below 4%)",
+        "geographic": "in advanced economies with high labor demand"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Raising the minimum wage to $15 per hour",
+      "predicate": "increases",
+      "object": "employer investment in automation and labor-saving technology",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage to $15 per hour employer investment in automation and labor-saving technology]",
+        "[PATH:empirical] Panel data on fast-food industry employment and capital expenditure across U.S. states with varying minimum wage increases (e.g., from Bureau of Labor Statistics and Compustat) \u2014 Directly tests whether firms in a labor-intensive sector substitute capital for labor when minimum wages rise, controlling for local unemployment and pre-existing wage floors.",
+        "[PATH:literature] Acemoglu and Restrepo (2018) 'The Race between Man and Machine' (American Economic Review) and subsequent replication studies focusing on minimum wage effects \u2014 Provides theoretical framework and empirical evidence on how wage floors accelerate automation adoption, especially in tight labor markets, and can be compared with the hypothesis's temporal and geographic scope.",
+        "[PATH:empirical] Survey of manufacturing and retail firms in states with $10\u2013$15 minimum wage floors during 2015\u20132019, querying planned automation investments and actual adoption \u2014 Captures firm-level decision-making and investment timing, offering causal insight into whether minimum wage hikes directly trigger automation rather than just correlating with it."
+      ],
+      "scope": {
+        "domain": "local labor markets with moderate to high minimum wage floors"
+      },
+      "qualifier": {
+        "temporal": "during periods of low unemployment (2015\u20132019)",
+        "geographic": "United States, specifically states with minimum wage floors between $10 and $15 per hour"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "job turnover and training costs for employers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage job turnover and training costs for employers]",
+        "[PATH:empirical] Longitudinal employer-employee matched panel data from the U.S. Census Bureau's Longitudinal Employer-Household Dynamics (LEHD) program, focusing on local labor markets that experienced minimum wage increases. \u2014 This source allows direct estimation of job turnover rates and training expenditures before and after minimum wage hikes, controlling for firm and worker fixed effects, providing causal evidence on the hypothesized increase.",
+        "[PATH:literature] Meta-analysis of minimum wage studies published in journals such as the Journal of Labor Economics or Industrial and Labor Relations Review, specifically those reporting effects on labor turnover and firm training costs. \u2014 Synthesizing existing empirical findings across multiple contexts can reveal the overall direction and magnitude of the effect, and identify moderating factors like local labor market tightness or minimum wage levels.",
+        "[PATH:empirical] Firm-level surveys or case studies of training program adjustments in low-wage industries (e.g., retail, hospitality) following state or city minimum wage increases, conducted by research organizations like the Federal Reserve Banks or the Upjohn Institute. \u2014 Qualitative and quantitative firm-level data can directly measure changes in training costs and turnover intentions, offering granular insight into employer responses that aggregate data might miss."
+      ],
+      "scope": {
+        "domain": "local labor markets with moderate to high minimum wage floors"
+      },
+      "qualifier": {
+        "temporal": "during periods of minimum wage increases or adjustments",
+        "geographic": "in local labor markets with moderate to high minimum wage floors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Raising the minimum wage",
+      "predicate": "accelerates",
+      "object": "the displacement of low-skilled workers by automation in industries with high automation potential",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage the displacement of low-skilled workers by automation in industries with high automation potential]",
+        "[PATH:empirical] Panel data analysis of U.S. local labor markets (e.g., from the Quarterly Census of Employment and Wages) linking minimum wage increases to changes in automation-related job displacement measures (e.g., robot adoption rates per industry) over 2010-2020 \u2014 Directly tests the causal relationship by exploiting variation in minimum wage changes across states and time, controlling for industry automation potential.",
+        "[PATH:empirical] Firm-level surveys or case studies in high-automation industries (e.g., warehousing, fast food) examining investment decisions in automation technologies following minimum wage hikes \u2014 Provides micro-level evidence on whether labor cost increases accelerate automation adoption, which is a key mechanism underlying the hypothesis.",
+        "[PATH:literature] Acemoglu and Restrepo (2018) 'The Race between Man and Machine' and subsequent literature on minimum wage and automation \u2014 Reviews existing theoretical and empirical frameworks that model the trade-off between labor costs and automation incentives, highlighting conditions under which the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "since the early 2010s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Raising the minimum wage",
+      "predicate": "leads to",
+      "object": "increased job security and productivity among low-skilled workers in labor markets with high automation potential",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Raising the minimum wage increased job security and productivity among low-skilled workers in labor markets with high automation potential]",
+        "[PATH:empirical] Bureau of Labor Statistics (BLS) microdata on industry-level employment, wages, and automation adoption (e.g., robot density per worker) linked to state minimum wage changes from 2010\u20132025 \u2014 Allows a difference-in-differences or event-study analysis to test whether minimum wage increases in high-automation industries are associated with changes in job tenure (security) and output per worker (productivity) for low-skilled workers.",
+        "[PATH:literature] Acemoglu & Restrepo (2020), 'Robots and Jobs: Evidence from US Labor Markets', Journal of Political Economy \u2014 Provides a theoretical and empirical framework for how automation affects labor demand and job displacement; can be extended to test whether higher minimum wages incentivize firms to substitute capital for labor or instead raise productivity through efficiency wages.",
+        "[PATH:empirical] Survey or field experiment on low-skilled workers in automated manufacturing or warehousing (e.g., Amazon fulfillment centers) before and after a minimum wage hike, measuring perceived job security, turnover rates, and piece-rate productivity \u2014 Directly captures worker-level outcomes in a high-automation setting, addressing the causal mechanism (e.g., motivation, reduced shirking) that could link higher wages to increased security and productivity."
+      ],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132025",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled workers in labor markets with high automation potential",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage increases unemployment among low-skilled workers in labor markets with high automation potential in domain 'industries with high automation potential']"
+      ],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "during periods of rapid automation adoption (2010\u20132025)",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Raising the minimum wage",
+      "predicate": "does not increase",
+      "object": "unemployment among low-skilled workers in labor markets with high automation potential",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Raising the minimum wage does not increase unemployment among low-skilled workers in labor markets with high automation potential in domain 'industries with high automation potential']"
+      ],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "2010-2023",
+        "geographic": "United States, Germany, Japan"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Raising the minimum wage",
+      "predicate": "accelerates the substitution of",
+      "object": "low-skilled workers by automation in industries with high automation potential",
+      "status": "unknown",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "United States and European Union"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Raising the minimum wage",
+      "predicate": "decreases",
+      "object": "unemployment among low-skilled workers by increasing their purchasing power and stimulating demand in local economies",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "industries with high automation potential"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 37,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
