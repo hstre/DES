@@ -1,0 +1,398 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "low-skilled immigration",
+      "predicate": "reduces wages",
+      "object": "native workers without a high school diploma in construction and manufacturing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration native workers without a high school diploma in construction and manufacturing]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Competing substitution vs. complementarity effects and local labor market adjustments create unresolved empirical disagreement"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "low-skilled immigration",
+      "predicate": "reduces wages",
+      "object": "native workers without a high school diploma in construction and manufacturing in local labor markets with high immigrant density",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration native workers without a high school diploma in construction and manufacturing in local labor markets with high immigrant density]"
+      ],
+      "scope": {
+        "domain": "local labor markets with high immigrant density"
+      },
+      "qualifier": {
+        "tension": "Focuses on conditions where substitution effects are strongest, but may not generalize."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "low-skilled immigration",
+      "predicate": "increases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong]"
+      ],
+      "scope": {
+        "domain": "labor markets with strong complementarity dynamics"
+      },
+      "qualifier": {
+        "tension": "Competing perspective: productivity spillovers from immigrant labor can raise native wages, creating epistemic friction with substitution-based claims."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "low-skilled immigration",
+      "predicate": "reduces wages",
+      "object": "native workers without a high school diploma in construction and manufacturing in local labor markets with high immigrant density, but only when local product demand is inelastic",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration native workers without a high school diploma in construction and manufacturing in local labor markets with high immigrant density, but only when local product demand is inelastic]",
+        "[PATH:empirical] Borjas, G. J. (2003). The labor demand curve is downward sloping: Reexamining the impact of immigration on the labor market. Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This foundational study provides a spatial correlations approach to estimate wage effects of low-skilled immigration, directly relevant to the hypothesis's focus on native workers without a high school diploma and construction/manufacturing sectors. Replicating its methodology with 2000-2020 data and conditioning on local product demand elasticity could confirm or refute the conditional effect.",
+        "[PATH:empirical] Card, D. (2001). Immigrant inflows, native outflows, and the local labor market impacts of higher immigration. Journal of Labor Economics, 19(1), 22-64. \u2014 Card's analysis of the Mariel boatlift and other immigration shocks offers a natural experiment framework to isolate causal wage effects in dense local labor markets. Extending this work to test for heterogeneity by product demand elasticity (e.g., using industry-level demand shifters) would directly address the scope condition of inelastic demand.",
+        "[PATH:theoretical] Acemoglu, D., & Autor, D. (2011). Skills, tasks and technologies: Implications for employment and earnings. Handbook of Labor Economics, 4, 1043-1171. \u2014 This comprehensive theoretical framework models how immigration affects wages through task displacement and product demand channels. Applying its predictions to construction and manufacturing\u2014sectors with potentially inelastic demand due to housing or infrastructure needs\u2014provides a theoretical basis to derive testable implications for the conditional wage reduction hypothesis."
+      ],
+      "scope": {
+        "domain": "local labor markets with high immigrant density and inelastic product demand"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "low-skilled immigration",
+      "predicate": "increases economic activity",
+      "object": "local labor markets with high immigrant density",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration local labor markets with high immigrant density]",
+        "[PATH:empirical] Card, D. (1990). 'The Impact of the Mariel Boatlift on the Miami Labor Market.' Industrial and Labor Relations Review, 43(2), 245-257. \u2014 This classic natural experiment examines the effect of a sudden influx of low-skilled immigrants on local wages and employment in Miami, providing direct empirical evidence on economic activity changes in high-density immigrant labor markets.",
+        "[PATH:empirical] Peri, G. (2012). 'The Effect of Immigration on Productivity: Evidence from U.S. States.' Review of Economics and Statistics, 94(1), 348-358. \u2014 This study uses state-level data to show that immigration increases productivity and economic output, offering a complementary perspective on how low-skilled immigration may stimulate economic activity through specialization and innovation.",
+        "[PATH:literature] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This influential paper challenges the hypothesis by arguing that immigration reduces wages for competing native workers, potentially dampening overall economic activity. Reviewing this counterargument is essential for assessing the disputed claim."
+      ],
+      "scope": {
+        "domain": "local labor markets with high immigrant density"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States metropolitan areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "low-skilled immigration in construction and manufacturing with strong complementarity",
+      "predicate": "raises the probability of occupational upgrading",
+      "object": "native workers without a high school diploma",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration in construction and manufacturing with strong complementarity native workers without a high school diploma]",
+        "[PATH:empirical] Current Population Survey (CPS) merged outgoing rotation group data, 2010-2020, focusing on native workers without a high school diploma in construction and manufacturing MSAs with high low-skilled immigration influx \u2014 Directly tests whether occupational upgrading (e.g., moving to higher-skilled construction/manufacturing roles or to other sectors) is more likely for this demographic in regions with strong complementarity dynamics, using individual-level panel data to control for selection and local labor market conditions.",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, linked to county-level immigration data from American Community Survey, with difference-in-differences or instrumental variable analysis (e.g., using historical settlement patterns) \u2014 Provides broader geographic and temporal coverage to isolate causal effects of low-skilled immigration on native workers' job transitions, leveraging the strong complementarity assumption in construction and manufacturing where immigrants may fill lower-tier tasks, allowing natives to move up.",
+        "[PATH:theoretical] Theoretical models of task-based production with heterogeneous labor, e.g., Peri and Sparber (2009) or Ottaviano and Peri (2012), extended to explicitly model occupational upgrading thresholds for native high school dropouts \u2014 Helps clarify the mechanisms and boundary conditions under which complementarity raises upgrading probability, such as the degree of task specialization, elasticity of substitution, and labor market frictions, guiding empirical tests and interpreting null results."
+      ],
+      "scope": {
+        "domain": "labor markets with strong complementarity dynamics"
+      },
+      "qualifier": {
+        "temporal": "2010-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "low-skilled immigration",
+      "predicate": "decreases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: low-skilled immigration native workers without a high school diploma in construction and manufacturing]",
+        "[PATH:empirical] Card (2009) 'Immigration and Inequality' and subsequent replications using US Census and ACS data from 2000-2020 \u2014 This foundational study and its replications directly estimate wage effects of low-skilled immigration on native high school dropouts in construction and manufacturing, providing causal identification via spatial or skill-group variation.",
+        "[PATH:empirical] Dustmann, Sch\u00f6nberg & Stuhler (2017) 'Labor Supply Shocks and the Dynamics of Local Wages' \u2014 This paper uses a dynamic adjustment model to capture short- and long-run wage effects of low-skilled immigration, addressing temporal scope (2000-2020) and potential displacement in competitive labor markets.",
+        "[PATH:literature] Meta-analysis by Longhi, Nijkamp & Poot (2010) 'Meta-analyses of Labour-Market Impacts of Immigration' \u2014 A comprehensive synthesis of dozens of studies helps adjudicate the disputed claim by quantifying average effect sizes and heterogeneity across contexts, including construction and manufacturing."
+      ],
+      "scope": {
+        "domain": "labor markets with high competition for low-skilled jobs"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "low-skilled immigration",
+      "predicate": "increases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms low-skilled immigration increases wages native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong in domain 'labor markets with strong complementarity dynamics']"
+      ],
+      "scope": {
+        "domain": "labor markets with strong complementarity dynamics"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "low-skilled immigration",
+      "predicate": "decreases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms low-skilled immigration decreases wages native workers without a high school diploma in construction and manufacturing when complementarity with higher-skilled workers is strong in domain 'labor markets with strong complementarity dynamics']"
+      ],
+      "scope": {
+        "domain": "labor markets with strong complementarity dynamics"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "low-skilled immigration",
+      "predicate": "increases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing only when the local economy also exhibits high capital investment in automation-complementary technologies",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor markets with strong complementarity dynamics and high automation investment"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "low-skilled immigration",
+      "predicate": "decreases wages",
+      "object": "native workers without a high school diploma in construction and manufacturing due to increased labor supply outstripping demand",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor markets with excess labor supply"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
