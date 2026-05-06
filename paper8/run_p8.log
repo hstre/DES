@@ -1,0 +1,965 @@
+
+=================================================================
+  M01 [Arm B | seed101] | formal_mathematics
+  Seed Q: Investigate the long-term behavior of the recursive map T(n): if n mod
+=================================================================
+
+  Loop 000 | Q: Investigate the long-term behavior of the recursive map T(n): if n mod
+
+Dynamic Epistemic Sequencer v0.1
+Research question: Investigate the long-term behavior of the recursive map T(n): if n mod 3 == 0 then T(n) = n/3, if n mod 3 == 1 then T(n) = 4n+2, if n mod 3 == 2 then T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3, T(n)=4n+2 if n≡1 mod 3, T(n)=2n-1 if n≡2 mod 3 has only finitely many distinct cycles for all positive integer starting values a finite set of cycles, possibly including a unique fixed point or small cycles
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.40]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3, T(n)=4n+2 if n≡1 mod 3, T(n)=2n-1 if n≡2 mod 3
+  predicate: has only finitely many distinct cycles for all positive integer starting values
+  object: a finite set of cycles, possibly including a unique fixed point or small cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3
+S(t): 1 claims active, 0 sealed, 0 weak candidates
+
+=== DES Iteration 2 ===
+Focus Claim: C001 [status=supported, confidence=0.40]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3, T(n)=4n+2 if n≡1 mod 3, T(n)=2n-1 if n≡2 mod 3
+  predicate: has only finitely many distinct cycles for all positive integer starting values
+  object: a finite set of cycles, possibly including a unique fixed point or small cycles
+Trigger: T4 (t4_decompose_claim)
+Operation: t4_decompose_claim
+Result: Decomposed into sub-claims: C002, C003, C004
+S(t): 3 claims active, 1 sealed, 1 weak candidates
+
+=== DES Iteration 3 ===
+Focus Claim: C002 [status=disputed, confidence=0.42]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at most one nontrivial cycle besides the fixed point 0
+  object: a single small cycle (e.g., of length 2 or 3) for all positive integer starting values that do not diverge
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 3 claims active, 1 sealed, 1 weak candidates
+
+=== DES Iteration 4 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at most one nontrivial cycle besides the fixed point 0
+  object: a single small cycle (e.g., of length 2 or 3) for all positive integer starting values that do not diverge
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C005, C006
+S(t): 5 claims active, 1 sealed, 1 weak candidates
+
+=== DES Iteration 5 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at most one nontrivial cycle besides the fixed point 0
+  object: a single small cycle (e.g., of length 2 or 3) for all positive integer starting values that do not diverge
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C002 sealed.
+S(t): 4 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 6 ===
+Focus Claim: C003 [status=disputed, confidence=0.33]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 4 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 7 ===
+Focus Claim: C003 [status=contradicted, confidence=0.42]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T5 (t5_generate_counter_hypothesis[AD])
+Operation: t5_generate_counter_hypothesis[AD]
+Result: Anti-Delphi T5: C007, C008
+S(t): 6 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 8 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T1 (t1_resolve_conflict)
+Operation: t1_resolve_conflict
+Result: BRANCH created: C003 -> B001, B002
+S(t): 8 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 9 ===
+Focus Claim: C005 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has exactly one nontrivial cycle (2 → 1 → 2) and no other cycles or divergent trajectories
+  object: all positive integer starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 8 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 10 ===
+Focus Claim: C005 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has exactly one nontrivial cycle (2 → 1 → 2) and no other cycles or divergent trajectories
+  object: all positive integer starting values
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps as the function iterates', 'geographic': 'not applicable'}
+S(t): 8 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 11 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has exactly one nontrivial cycle (2 → 1 → 2) and no other cycles or divergent trajectories
+  object: all positive integer starting values
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 2
+S(t): 8 claims active, 2 sealed, 1 weak candidates
+
+=== DES Iteration 12 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has exactly one nontrivial cycle (2 → 1 → 2) and no other cycles or divergent trajectories
+  object: all positive integer starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C005 sealed.
+S(t): 7 claims active, 3 sealed, 1 weak candidates
+
+=== DES Iteration 13 ===
+Focus Claim: C006 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has multiple nontrivial cycles besides the fixed point 0
+  object: several small cycles for positive integer starting values, some of which may not have been observed in simulations up to 10^6
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 7 claims active, 3 sealed, 1 weak candidates
+
+=== DES Iteration 14 ===
+Focus Claim: C006 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has multiple nontrivial cycles besides the fixed point 0
+  object: several small cycles for positive integer starting values, some of which may not have been observed in simulations up to 10^6
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of simulation limits up to 10^6', 'geographic': 'not applicable'}
+S(t): 7 claims active, 3 sealed, 1 weak candidates
+
+=== DES Iteration 15 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has multiple nontrivial cycles besides the fixed point 0
+  object: several small cycles for positive integer starting values, some of which may not have been observed in simulations up to 10^6
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 7 claims active, 3 sealed, 1 weak candidates
+
+=== DES Iteration 16 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has multiple nontrivial cycles besides the fixed point 0
+  object: several small cycles for positive integer starting values, some of which may not have been observed in simulations up to 10^6
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C006 sealed.
+S(t): 6 claims active, 4 sealed, 1 weak candidates
+
+=== DES Iteration 17 ===
+Focus Claim: C007 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has only finitely many distinct cycles
+  object: a finite set of cycles, each of which eventually traps all starting values that enter a sufficiently large bounded region, because the 4n+2 branch's exponential growth is counterbalanced by the 2n-1 and n/3 branches forcing eventual collapse to small numbers
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 6 claims active, 4 sealed, 1 weak candidates
+
+=== DES Iteration 18 ===
+Focus Claim: C007 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has only finitely many distinct cycles
+  object: a finite set of cycles, each of which eventually traps all starting values that enter a sufficiently large bounded region, because the 4n+2 branch's exponential growth is counterbalanced by the 2n-1 and n/3 branches forcing eventual collapse to small numbers
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all positive integer starting values, under iteration', 'geographic': 'not applicable'}
+S(t): 6 claims active, 4 sealed, 1 weak candidates
+
+=== DES Iteration 19 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has only finitely many distinct cycles
+  object: a finite set of cycles, each of which eventually traps all starting values that enter a sufficiently large bounded region, because the 4n+2 branch's exponential growth is counterbalanced by the 2n-1 and n/3 branches forcing eventual collapse to small numbers
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 6 claims active, 4 sealed, 1 weak candidates
+
+=== DES Iteration 20 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has only finitely many distinct cycles
+  object: a finite set of cycles, each of which eventually traps all starting values that enter a sufficiently large bounded region, because the 4n+2 branch's exponential growth is counterbalanced by the 2n-1 and n/3 branches forcing eventual collapse to small numbers
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C007 sealed.
+S(t): 5 claims active, 5 sealed, 1 weak candidates
+
+=== DES Iteration 21 ===
+Focus Claim: C008 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: eventually reaches a fixed finite cycle for any starting value
+  object: a convergence to a set of known cycles instead of forming new ones, countering the claim of an infinite family
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 5 claims active, 5 sealed, 1 weak candidates
+
+=== DES Iteration 22 ===
+Focus Claim: C008 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: eventually reaches a fixed finite cycle for any starting value
+  object: a convergence to a set of known cycles instead of forming new ones, countering the claim of an infinite family
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of extensive computational verification up to 10^9', 'geographic': 'not applicable'}
+S(t): 5 claims active, 5 sealed, 1 weak candidates
+
+=== DES Iteration 23 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: eventually reaches a fixed finite cycle for any starting value
+  object: a convergence to a set of known cycles instead of forming new ones, countering the claim of an infinite family
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 5 claims active, 5 sealed, 1 weak candidates
+
+=== DES Iteration 24 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: eventually reaches a fixed finite cycle for any starting value
+  object: a convergence to a set of known cycles instead of forming new ones, countering the claim of an infinite family
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C008 sealed.
+S(t): 4 claims active, 6 sealed, 1 weak candidates
+
+=== DES Iteration 25 ===
+Focus Claim: B001 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)
+S(t): 4 claims active, 6 sealed, 1 weak candidates
+
+=== DES Iteration 26 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps in the iteration process', 'geographic': 'global, within the domain of positive integers'}
+S(t): 4 claims active, 6 sealed, 1 weak candidates
+
+=== DES Iteration 27 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B001 sealed.
+S(t): 3 claims active, 7 sealed, 1 weak candidates
+
+=== DES Iteration 28 ===
+Focus Claim: B002 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have infinitely many distinct cycles for any starting values
+  object: only finitely many cycles exist, likely due to eventual convergence to a small set of attractors, despite the 4n+2 branch's growth
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)
+S(t): 3 claims active, 7 sealed, 1 weak candidates
+
+=== DES Iteration 29 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has infinitely many distinct cycles for some starting values
+  object: an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+Trigger: T9 (t9_trigger_reframing[AD])
+Operation: t9_trigger_reframing[AD]
+Result: Anti-Delphi T9: C011, C012
+S(t): 4 claims active, 8 sealed, 1 weak candidates
+
+=== DES Iteration 30 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have infinitely many distinct cycles for any starting values
+  object: only finitely many cycles exist, likely due to eventual convergence to a small set of attractors, despite the 4n+2 branch's growth
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'under current heuristic analysis and known simulation bounds', 'geographic': 'not applicable'}
+S(t): 4 claims active, 8 sealed, 1 weak candidates
+
+=== DES Iteration 31 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have infinitely many distinct cycles for any starting values
+  object: only finitely many cycles exist, likely due to eventual convergence to a small set of attractors, despite the 4n+2 branch's growth
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B002 sealed.
+S(t): 3 claims active, 9 sealed, 1 weak candidates
+
+=== DES Iteration 32 ===
+Focus Claim: C011 [status=unknown, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has exactly one nontrivial cycle for all starting values except those that eventually reach a fixed point
+  object: a single nontrivial cycle of length 2: 2 → 1 → 6 → 2, with all other trajectories either converging to this cycle or to the fixed point 0
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C011 sealed.
+S(t): 2 claims active, 10 sealed, 1 weak candidates
+
+=== DES Iteration 33 ===
+Focus Claim: C012 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: exhibits convergence to a finite set of cycles
+  object: a limited number of cycles regardless of starting values, due to inherent constraints in the map's structure
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C012 sealed.
+S(t): 1 claims active, 11 sealed, 1 weak candidates
+
+[DES] No active claims to process. Terminating.
+
+============================================================
+FINAL RESEARCH TRACE
+============================================================
+Total iterations: 33
+Total claims: 12
+Reframings: 1
+
+Global operation history:
+  01. T3 on C001
+  02. T4 on C001
+  03. T3 on C002
+  04. T6[hypothesis_builder] on C002 -> C005
+  05. T6[falsifier] on C002 -> C006
+  06. T8 on C002
+  07. T3 on C003
+  08. T5[hypothesis_builder] on C003 -> C007
+  09. T5[falsifier] on C003 -> C008
+  10. T1 on C003
+  11. T3 on C005
+  12. T7 on C005
+  13. T6 on C005
+  14. T8 on C005
+  15. T3 on C006
+  16. T7 on C006
+  17. T6 on C006
+  18. T8 on C006
+  19. T3 on C007
+  20. T7 on C007
+  21. T6 on C007
+  22. T8 on C007
+  23. T3 on C008
+  24. T7 on C008
+  25. T6 on C008
+  26. T8 on C008
+  27. T3 on B001
+  28. T7 on B001
+  29. T8 on B001
+  30. T3 on B002
+  31. T9[hypothesis_builder] on C003 -> C011
+  32. T9[falsifier] on C003 -> C012
+  33. T7 on B002
+  34. T8 on B002
+  35. T8 on C011
+  36. T8 on C012
+
+Claim summary:
+  [SEALED] C001: The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3, T(n)=4n+2 if n≡1 mod 3, T(n)=2n-1 if n≡2 mod 3 has only finitely many distinct cycles for all positive integer starting values a finite set of cycles, possibly including a unique fixed point or small cycles
+    status=supported, confidence=0.40, modality=hypothesis
+    history=['T3', 'T4']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n≡0 mod 3, T(n)=4n+2 if n≡1 m
+  [SEALED] C002 (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has at most one nontrivial cycle besides the fixed point 0 a single small cycle (e.g., of length 2 or 3) for all positive integer starting values that do not diverge
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [SEALED] C003 (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has infinitely many distinct cycles for some starting values an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+    status=disputed, confidence=0.42, modality=suggestion
+    history=['T3', 'T5[anti-delphi]', 'T1', 'T9[anti-delphi]']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [ACTIVE] C004 [WEAK] (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 likely produces unbounded trajectories for a positive proportion of starting values divergent orbits that never enter any cycle
+    status=unknown, confidence=0.29, modality=hypothesis
+    history=[]
+  [SEALED] C005 (child of C002): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has exactly one nontrivial cycle (2 → 1 → 2) and no other cycles or divergent trajectories all positive integer starting values
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Computational verification of all starting values up to a large bound (e.g., 10^9) 
+  [SEALED] C006 (child of C002): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has multiple nontrivial cycles besides the fixed point 0 several small cycles for positive integer starting values, some of which may not have been observed in simulations up to 10^6
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Extended computational search for cycles up to 10^9 or higher using optimized algor
+  [SEALED] C007 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has only finitely many distinct cycles a finite set of cycles, each of which eventually traps all starting values that enter a sufficiently large bounded region, because the 4n+2 branch's exponential growth is counterbalanced by the 2n-1 and n/3 branches forcing eventual collapse to small numbers
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Exhaustive computational search for all cycles up to a large bound (e.g., 10^9) usi
+  [SEALED] C008 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 eventually reaches a fixed finite cycle for any starting value a convergence to a set of known cycles instead of forming new ones, countering the claim of an infinite family
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Extend computational verification to 10^12 using optimized modular arithmetic and c
+  [SEALED] B001 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has infinitely many distinct cycles for some starting values an infinite family of cycles, possibly with increasing lengths, due to the multiplicative growth in the 4n+2 branch
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3,
+  [SEALED] B002 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 does not have infinitely many distinct cycles for any starting values only finitely many cycles exist, likely due to eventual convergence to a small set of attractors, despite the 4n+2 branch's growth
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3,
+  [SEALED] C011 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has exactly one nontrivial cycle for all starting values except those that eventually reach a fixed point a single nontrivial cycle of length 2: 2 → 1 → 6 → 2, with all other trajectories either converging to this cycle or to the fixed point 0
+    status=unknown, confidence=0.50, modality=hypothesis
+    history=['T8']
+  [SEALED] C012 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 exhibits convergence to a finite set of cycles a limited number of cycles regardless of starting values, due to inherent constraints in the map's structure
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=['T8']
+
+Epistemic path: T3 on C001 → T4 on C001 → T3 on C002 → T6[hypothesis_builder] on C002 -> C005 → T6[falsifier] on C002 -> C006 → T8 on C002 → T3 on C003 → T5[hypothesis_builder] on C003 -> C007 → T5[falsifier] on C003 -> C008 → T1 on C003 → T3 on C005 → T7 on C005 → T6 on C005 → T8 on C005 → T3 on C006 → T7 on C006 → T6 on C006 → T8 on C006 → T3 on C007 → T7 on C007 → T6 on C007 → T8 on C007 → T3 on C008 → T7 on C008 → T6 on C008 → T8 on C008 → T3 on B001 → T7 on B001 → T8 on B001 → T3 on B002 → T9[hypothesis_builder] on C003 -> C011 → T9[falsifier] on C003 -> C012 → T7 on B002 → T8 on B002 → T8 on C011 → T8 on C012
+============================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 12/103 [00:00<00:04, 18.28it/s]Loading weights:  23%|██▎       | 24/103 [00:01<00:04, 16.93it/s]Loading weights:  37%|███▋      | 38/103 [00:02<00:04, 16.14it/s]Loading weights:  56%|█████▋    | 58/103 [00:02<00:01, 24.40it/s]Loading weights: 100%|██████████| 103/103 [00:02<00:00, 37.81it/s]
+
+  Loop 001 | Q: What is the evidence that The recursive map T(n) defined by T(n)=n/3 i
+
+Dynamic Epistemic Sequencer v0.1
+Research question: What is the evidence that The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 likely produces unbounded trajectories for a positive proportion of starting values divergent orbits that never enter any cycle?
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 produces unbounded trajectories for a positive proportion of starting values divergent orbits that never enter any cycle
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 1 claims active, 0 sealed, 0 weak candidates
+
+=== DES Iteration 2 ===
+Focus Claim: C001 [status=supported, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T4 (t4_decompose_claim)
+Operation: t4_decompose_claim
+Result: Decomposed into sub-claims: C002, C003, C004
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 3 ===
+Focus Claim: C002 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 4 ===
+Focus Claim: C002 [status=disputed, confidence=0.60]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'asymptotically as n → ∞'}
+S(t): 3 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 5 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T6 (t6_explore_evidence_path[AD])
+Operation: t6_explore_evidence_path[AD]
+Result: Anti-Delphi T6: C005, C006
+S(t): 5 claims active, 1 sealed, 0 weak candidates
+
+=== DES Iteration 6 ===
+Focus Claim: C002 [status=supported, confidence=0.82]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories for a positive proportion of starting values
+  object: divergent orbits that never enter any cycle
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C002 sealed.
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 7 ===
+Focus Claim: C003 [status=disputed, confidence=0.38]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 4 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 8 ===
+Focus Claim: C003 [status=contradicted, confidence=0.42]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T5 (t5_generate_counter_hypothesis[AD])
+Operation: t5_generate_counter_hypothesis[AD]
+Result: Anti-Delphi T5: C007, C008
+S(t): 6 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 9 ===
+Focus Claim: C003 [status=disputed, confidence=0.42 branch_open=True]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T1 (t1_resolve_conflict)
+Operation: t1_resolve_conflict
+Result: BRANCH created: C003 -> B001, B002
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 10 ===
+Focus Claim: C004 [status=disputed, confidence=0.42]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories only for a set of starting values of density zero
+  object: almost all values converge to cycles
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 11 ===
+Focus Claim: C004 [status=disputed, confidence=0.47]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories only for a set of starting values of density zero
+  object: almost all values converge to cycles
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'asymptotically as n → ∞'}
+S(t): 8 claims active, 2 sealed, 0 weak candidates
+
+=== DES Iteration 12 ===
+Focus Claim: C004 [status=disputed, confidence=0.47]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces unbounded trajectories only for a set of starting values of density zero
+  object: almost all values converge to cycles
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C004 sealed.
+S(t): 7 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 13 ===
+Focus Claim: C005 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has a positive proportion of starting values that eventually enter a single global attractor cycle of length 3
+  object: convergent trajectories that cycle through {1, 6, 2}
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 7 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 14 ===
+Focus Claim: C005 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has a positive proportion of starting values that eventually enter a single global attractor cycle of length 3
+  object: convergent trajectories that cycle through {1, 6, 2}
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'over infinite time horizon', 'geographic': 'not applicable'}
+S(t): 7 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 15 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has a positive proportion of starting values that eventually enter a single global attractor cycle of length 3
+  object: convergent trajectories that cycle through {1, 6, 2}
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 7 claims active, 3 sealed, 0 weak candidates
+
+=== DES Iteration 16 ===
+Focus Claim: C005 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has a positive proportion of starting values that eventually enter a single global attractor cycle of length 3
+  object: convergent trajectories that cycle through {1, 6, 2}
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C005 sealed.
+S(t): 6 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 17 ===
+Focus Claim: C006 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces bounded trajectories for almost all starting values
+  object: orbits that eventually enter a cycle
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 6 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 18 ===
+Focus Claim: C006 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces bounded trajectories for almost all starting values
+  object: orbits that eventually enter a cycle
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all positive integers tested up to 10^6'}
+S(t): 6 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 19 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces bounded trajectories for almost all starting values
+  object: orbits that eventually enter a cycle
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 6 claims active, 4 sealed, 0 weak candidates
+
+=== DES Iteration 20 ===
+Focus Claim: C006 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: produces bounded trajectories for almost all starting values
+  object: orbits that eventually enter a cycle
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C006 sealed.
+S(t): 5 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 21 ===
+Focus Claim: C007 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories for starting values congruent to 1 mod 3 eventually enter a fixed point, while those congruent to 2 mod 3 enter a 2-cycle, for all integers greater than 10^6
+  object: no unbounded orbits and only two attractor types (a fixed point and a 2-cycle) exist beyond that bound
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 5 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 22 ===
+Focus Claim: C007 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories for starting values congruent to 1 mod 3 eventually enter a fixed point, while those congruent to 2 mod 3 enter a 2-cycle, for all integers greater than 10^6
+  object: no unbounded orbits and only two attractor types (a fixed point and a 2-cycle) exist beyond that bound
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of the latest simulation run', 'geographic': 'global'}
+S(t): 5 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 23 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories for starting values congruent to 1 mod 3 eventually enter a fixed point, while those congruent to 2 mod 3 enter a 2-cycle, for all integers greater than 10^6
+  object: no unbounded orbits and only two attractor types (a fixed point and a 2-cycle) exist beyond that bound
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 5 claims active, 5 sealed, 0 weak candidates
+
+=== DES Iteration 24 ===
+Focus Claim: C007 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories for starting values congruent to 1 mod 3 eventually enter a fixed point, while those congruent to 2 mod 3 enter a 2-cycle, for all integers greater than 10^6
+  object: no unbounded orbits and only two attractor types (a fixed point and a 2-cycle) exist beyond that bound
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C007 sealed.
+S(t): 4 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 25 ===
+Focus Claim: C008 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have all trajectories eventually entering a finite cycle
+  object: there exist unbounded orbits for some sufficiently large starting values
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod
+S(t): 4 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 26 ===
+Focus Claim: C008 [status=disputed, confidence=0.55]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have all trajectories eventually entering a finite cycle
+  object: there exist unbounded orbits for some sufficiently large starting values
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'for all time steps n ≥ 0'}
+S(t): 4 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 27 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have all trajectories eventually entering a finite cycle
+  object: there exist unbounded orbits for some sufficiently large starting values
+Trigger: T6 (t6_explore_evidence_path)
+Operation: t6_explore_evidence_path
+Result: Evidence paths added: 3
+S(t): 4 claims active, 6 sealed, 0 weak candidates
+
+=== DES Iteration 28 ===
+Focus Claim: C008 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: does not have all trajectories eventually entering a finite cycle
+  object: there exist unbounded orbits for some sufficiently large starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C008 sealed.
+S(t): 3 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 29 ===
+Focus Claim: B001 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)
+S(t): 3 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 30 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of 2025', 'geographic': 'global'}
+S(t): 3 claims active, 7 sealed, 0 weak candidates
+
+=== DES Iteration 31 ===
+Focus Claim: B001 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B001 sealed.
+S(t): 2 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 32 ===
+Focus Claim: B002 [status=supported, confidence=0.85]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at least one trajectory that grows without bound for some sufficiently large starting value
+  object: unbounded orbits exist beyond a certain bound
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added → status=supported, confidence=0.85: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)
+S(t): 2 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 33 ===
+Focus Claim: C003 [status=disputed, confidence=0.47 branch_open=True]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of current computational verification up to n ≤ 10^9'}
+S(t): 2 claims active, 8 sealed, 0 weak candidates
+
+=== DES Iteration 34 ===
+Focus Claim: C003 [status=disputed, confidence=0.47 branch_open=True]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound
+Trigger: T9 (t9_trigger_reframing[AD])
+Operation: t9_trigger_reframing[AD]
+Result: Anti-Delphi T9: C011, C012
+S(t): 3 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 35 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at least one trajectory that grows without bound for some sufficiently large starting value
+  object: unbounded orbits exist beyond a certain bound
+Trigger: T7 (t7_refine_qualifier)
+Operation: t7_refine_qualifier
+Result: Qualifier added: {'temporal': 'as of 2025', 'geographic': 'global'}
+S(t): 3 claims active, 9 sealed, 0 weak candidates
+
+=== DES Iteration 36 ===
+Focus Claim: B002 [status=supported, confidence=0.90]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at least one trajectory that grows without bound for some sufficiently large starting value
+  object: unbounded orbits exist beyond a certain bound
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim B002 sealed.
+S(t): 2 claims active, 10 sealed, 0 weak candidates
+
+=== DES Iteration 37 ===
+Focus Claim: C011 [status=unknown, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has all trajectories eventually entering a finite cycle for all sufficiently large starting values
+  object: no unbounded orbits exist beyond a certain bound, and in fact every trajectory eventually reaches the unique attracting cycle {1, 6, 2}
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C011 sealed.
+S(t): 1 claims active, 11 sealed, 0 weak candidates
+
+=== DES Iteration 38 ===
+Focus Claim: C012 [status=disputed, confidence=0.50]
+  subject: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3
+  predicate: has at least one trajectory that grows without bound
+  object: existence of unbounded orbits for certain starting values
+Trigger: T8 (t8_seal_claim)
+Operation: t8_seal_claim
+Result: Claim C012 sealed.
+S(t): 0 claims active, 12 sealed, 0 weak candidates
+
+[DES] Termination: all claims sealed.
+
+============================================================
+FINAL RESEARCH TRACE
+============================================================
+Total iterations: 38
+Total claims: 12
+Reframings: 1
+
+Global operation history:
+  01. T3 on C001
+  02. T4 on C001
+  03. T3 on C002
+  04. T7 on C002
+  05. T6[hypothesis_builder] on C002 -> C005
+  06. T6[falsifier] on C002 -> C006
+  07. T8 on C002
+  08. T3 on C003
+  09. T5[hypothesis_builder] on C003 -> C007
+  10. T5[falsifier] on C003 -> C008
+  11. T1 on C003
+  12. T3 on C004
+  13. T7 on C004
+  14. T8 on C004
+  15. T3 on C005
+  16. T7 on C005
+  17. T6 on C005
+  18. T8 on C005
+  19. T3 on C006
+  20. T7 on C006
+  21. T6 on C006
+  22. T8 on C006
+  23. T3 on C007
+  24. T7 on C007
+  25. T6 on C007
+  26. T8 on C007
+  27. T3 on C008
+  28. T7 on C008
+  29. T6 on C008
+  30. T8 on C008
+  31. T3 on B001
+  32. T7 on B001
+  33. T8 on B001
+  34. T3 on B002
+  35. T7 on C003
+  36. T9[hypothesis_builder] on C003 -> C011
+  37. T9[falsifier] on C003 -> C012
+  38. T7 on B002
+  39. T8 on B002
+  40. T8 on C011
+  41. T8 on C012
+
+Claim summary:
+  [SEALED] C001: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 produces unbounded trajectories for a positive proportion of starting values divergent orbits that never enter any cycle
+    status=supported, confidence=0.50, modality=hypothesis
+    history=['T3', 'T4']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [SEALED] C002 (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 produces unbounded trajectories for a positive proportion of starting values divergent orbits that never enter any cycle
+    status=supported, confidence=0.82, modality=hypothesis
+    history=['T3', 'T7', 'T6[anti-delphi]', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [SEALED] C003 (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has all trajectories eventually entering a finite cycle for all sufficiently large starting values no unbounded orbits exist beyond a certain bound
+    status=disputed, confidence=0.47, modality=conjecture
+    history=['T3', 'T5[anti-delphi]', 'T1', 'T7', 'T9[anti-delphi]']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [SEALED] C004 (child of C001): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 produces unbounded trajectories only for a set of starting values of density zero almost all values converge to cycles
+    status=disputed, confidence=0.47, modality=suggestion
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+  [SEALED] C005 (child of C002): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has a positive proportion of starting values that eventually enter a single global attractor cycle of length 3 convergent trajectories that cycle through {1, 6, 2}
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Exhaustive computational search for all n up to a large bound (e.g., 10^9), trackin
+  [SEALED] C006 (child of C002): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 produces bounded trajectories for almost all starting values orbits that eventually enter a cycle
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Exhaustive computational search for cycles and divergence up to 10^9 or higher, wit
+  [SEALED] C007 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has all trajectories for starting values congruent to 1 mod 3 eventually enter a fixed point, while those congruent to 2 mod 3 enter a 2-cycle, for all integers greater than 10^6 no unbounded orbits and only two attractor types (a fixed point and a 2-cycle) exist beyond that bound
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] Extend numerical simulations to a much larger range (e.g., up to 10^12) with statis
+  [SEALED] C008 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 does not have all trajectories eventually entering a finite cycle there exist unbounded orbits for some sufficiently large starting values
+    status=supported, confidence=0.85, modality=hypothesis
+    history=['T3', 'T7', 'T6', 'T8']
+    evidence: [Simulated evidence for: The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡
+    evidence: [PATH:empirical] High-performance computational search for divergent trajectories in the range 10^6 
+  [SEALED] B001 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has all trajectories eventually entering a finite cycle for all sufficiently large starting values no unbounded orbits exist beyond a certain bound
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3,
+  [SEALED] B002 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has at least one trajectory that grows without bound for some sufficiently large starting value unbounded orbits exist beyond a certain bound
+    status=supported, confidence=0.90, modality=hypothesis
+    history=['T3', 'T7', 'T8']
+    evidence: [Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3,
+  [SEALED] C011 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has all trajectories eventually entering a finite cycle for all sufficiently large starting values no unbounded orbits exist beyond a certain bound, and in fact every trajectory eventually reaches the unique attracting cycle {1, 6, 2}
+    status=unknown, confidence=0.50, modality=hypothesis
+    history=['T8']
+  [SEALED] C012 (child of C003): The recursive map T(n) defined by T(n)=n/3 if n ≡ 0 mod 3, T(n)=4n+2 if n ≡ 1 mod 3, T(n)=2n-1 if n ≡ 2 mod 3 has at least one trajectory that grows without bound existence of unbounded orbits for certain starting values
+    status=disputed, confidence=0.50, modality=hypothesis
+    history=['T8']
+
+Epistemic path: T3 on C001 → T4 on C001 → T3 on C002 → T7 on C002 → T6[hypothesis_builder] on C002 -> C005 → T6[falsifier] on C002 -> C006 → T8 on C002 → T3 on C003 → T5[hypothesis_builder] on C003 -> C007 → T5[falsifier] on C003 -> C008 → T1 on C003 → T3 on C004 → T7 on C004 → T8 on C004 → T3 on C005 → T7 on C005 → T6 on C005 → T8 on C005 → T3 on C006 → T7 on C006 → T6 on C006 → T8 on C006 → T3 on C007 → T7 on C007 → T6 on C007 → T8 on C007 → T3 on C008 → T7 on C008 → T6 on C008 → T8 on C008 → T3 on B001 → T7 on B001 → T8 on B001 → T3 on B002 → T7 on C003 → T9[hypothesis_builder] on C003 -> C011 → T9[falsifier] on C003 -> C012 → T7 on B002 → T8 on B002 → T8 on C011 → T8 on C012
+============================================================
+  [operator] early_saturation → boundary_condition_analysis
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 2745.09it/s]
+  [operator] admitted: What are the invariant properties and boundary conditions ne
+
+  Loop 002 | Q: What are the invariant properties and boundary conditions necessary fo
+
+Dynamic Epistemic Sequencer v0.1
+Research question: What are the invariant properties and boundary conditions necessary for ensuring that the recursive map T(n) results in all trajectories eventually entering a finite cycle for sufficiently large starting values?
+Mode: Anti-Delphi | builder=deepseek-chat | falsifier=openai/gpt-4o
+------------------------------------------------------------
+Generating initial claim via LLM...
+Initial claim: [C001] the recursive map T(n) for sufficiently large starting values has all trajectories eventually entering a finite cycle if and only if the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+
+=== DES Iteration 1 ===
+Focus Claim: C001 [status=disputed, confidence=0.45]
+  subject: the recursive map T(n) for sufficiently large starting values
+  predicate: has all trajectories eventually entering a finite cycle if and only if
+  object: the map satisfies both a non-expansive condition on some Lyapunov-like function and a discrete version of the Poincaré-Bendixson property
+Trigger: T3 (t3_request_evidence)
+Operation: t3_request_evidence
+Result: Evidence added: [Simulated evidence for: the recursive map T(n) for sufficiently large starting 
+S(t): 1 claims active, 0 sealed, 0 weak candidates
