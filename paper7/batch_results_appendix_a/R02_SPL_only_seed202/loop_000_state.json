@@ -1,0 +1,500 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work",
+      "predicate": "increases individual task focus more than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {
+        "domain": "individual deep work tasks"
+      },
+      "qualifier": {
+        "temporal": "during non-pandemic periods",
+        "geographic": "in countries with high-speed internet access"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "remote work",
+      "predicate": "reduces spontaneous collaboration compared to",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work in 2020",
+        "geographic": "global, with emphasis on knowledge-economy sectors in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {
+        "domain": "routine individual tasks"
+      },
+      "qualifier": {
+        "condition": "when employees have dedicated home office space"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work",
+      "predicate": "increases individual task focus more than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]",
+        "[PATH:empirical] A controlled experiment comparing task completion times and error rates on complex problem-solving tasks between remote workers with dedicated private workspaces and those in open-plan offices, both in high-speed internet regions. \u2014 Directly tests the core claim by isolating the effect of workspace type and internet quality on focus, providing causal evidence.",
+        "[PATH:literature] A systematic literature review and meta-analysis of existing studies on remote work productivity, focusing on moderators such as home workspace privacy and internet speed. \u2014 Synthesizes prior findings to assess the consistency and generalizability of the hypothesis across different contexts and methodologies.",
+        "[PATH:theoretical] A theoretical model based on attention restoration theory and environmental psychology, predicting how private workspaces reduce distractions and cognitive load, with implications for complex tasks. \u2014 Provides mechanistic explanation for the hypothesized effect, helping to refine predictions and identify boundary conditions for empirical testing."
+      ],
+      "scope": {
+        "domain": "complex problem-solving tasks"
+      },
+      "qualifier": {
+        "temporal": "only when workers have dedicated private workspaces at home",
+        "geographic": "in countries with high-speed internet access"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "office work",
+      "predicate": "increases individual task focus more than",
+      "object": "remote work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: office work remote work]",
+        "[PATH:empirical] Controlled experiment comparing task completion time and error rates for deep work tasks (e.g., coding, writing) in office vs. remote settings during standard business hours in urban corporate environments. \u2014 Directly tests the causal claim by isolating the effect of work location on individual task focus under specified temporal and geographic conditions.",
+        "[PATH:literature] Systematic review of meta-analyses on the impact of open-plan offices vs. home offices on attention and productivity (e.g., studies from organizational psychology or human-computer interaction journals). \u2014 Synthesizes existing evidence across multiple studies to assess the weight of support for or against the hypothesis, addressing the 'disputed' status.",
+        "[PATH:theoretical] Computational model of attention allocation and environmental distractions in office vs. remote work contexts, parameterized with empirical data on noise, interruptions, and self-regulation. \u2014 Provides a mechanistic explanation for how office environments might increase focus (e.g., via social presence or routine) or decrease it (e.g., via interruptions), helping to resolve conflicting empirical findings."
+      ],
+      "scope": {
+        "domain": "individual deep work tasks"
+      },
+      "qualifier": {
+        "temporal": "during standard business hours",
+        "geographic": "in urban corporate office environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "remote work with structured daily cross-functional check-ins",
+      "predicate": "increases spontaneous collaboration compared to",
+      "object": "remote work without such check-ins",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work with structured daily cross-functional check-ins remote work without such check-ins]",
+        "[PATH:empirical] Longitudinal field experiment in a global tech company: random assignment of distributed teams (spanning \u22653 time zones) to daily structured cross-functional check-ins vs. no such check-ins; measure spontaneous collaboration via digital trace data (e.g., unscheduled Slack messages, ad hoc video calls) over six months. \u2014 Directly tests the causal claim under the specified temporal and geographic scope, providing high internal validity and relevance to the disputed hypothesis.",
+        "[PATH:literature] Meta-analysis of remote collaboration interventions: systematically review studies comparing structured daily meetings (e.g., stand-ups, cross-functional syncs) with unstructured remote work, focusing on outcomes like serendipitous interactions, cross-team knowledge sharing, and innovation metrics. \u2014 Synthesizes existing evidence to assess generalizability and identify moderators (e.g., team size, time zone overlap) that could explain the current disputed status."
+      ],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "during the first six months of implementation",
+        "geographic": "in global technology companies with distributed teams across at least three time zones"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "remote work",
+      "predicate": "enhances spontaneous collaboration compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]",
+        "[PATH:empirical] A longitudinal field experiment comparing idea generation and cross-team communication logs in remote vs. office-based teams in global North tech firms \u2014 Directly measures spontaneous collaboration events (e.g., unplanned calls, shared documents, cross-project messages) in controlled settings, isolating the effect of work mode on serendipitous interactions.",
+        "[PATH:literature] Meta-analysis of existing studies on virtual communication and team innovation (e.g., Allen & Henn, 2007; recent post-2020 reviews in Organization Science or Journal of Management) \u2014 Synthesizes conflicting findings across contexts, identifying moderators like team size, digital tool use, and task interdependence that may explain the disputed status of the hypothesis.",
+        "[PATH:empirical] Network analysis of digital trace data (e.g., Slack, Teams, email) from global North knowledge-economy firms, comparing pre-2020 office and post-2020 remote collaboration patterns \u2014 Provides objective, large-scale evidence on whether remote work reduces or increases cross-functional, unplanned interactions, using metrics like tie strength, bridging ties, and communication diversity."
+      ],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020 pandemic era",
+        "geographic": "global North knowledge-economy contexts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "remote work",
+      "predicate": "reduces spontaneous collaboration compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work reduces spontaneous collaboration compared to office work in domain 'team innovation and cross-functional projects']"
+      ],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work in 2020",
+        "geographic": "global, with emphasis on knowledge economy sectors in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "remote work",
+      "predicate": "does not reduce spontaneous collaboration compared to",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms remote work does not reduce spontaneous collaboration compared to office work in domain 'team innovation and cross-functional projects']"
+      ],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "post-pandemic period (2023\u20132025)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]",
+        "[PATH:empirical] A randomized controlled trial comparing productivity (e.g., task completion time, error rate) on routine individual tasks between employees with dedicated home office space and daily structured check-ins versus those in a traditional office setting. \u2014 Directly tests the conditional hypothesis by isolating the effect of the specified conditions (dedicated space, structured check-ins) on productivity for routine individual tasks, providing causal evidence.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity that includes moderators such as workspace quality and check-in frequency, focusing on routine individual tasks. \u2014 Synthesizes prior evidence to assess whether the condition (dedicated space and structured check-ins) consistently moderates the productivity advantage of remote work over office work, leveraging existing data.",
+        "[PATH:theoretical] Theoretical model of self-regulation and environmental psychology explaining how dedicated workspaces reduce distractions and structured check-ins enhance accountability, leading to higher productivity for routine tasks. \u2014 Provides a mechanistic explanation for the hypothesis, which can be used to derive testable predictions and identify boundary conditions, strengthening or refuting the logical foundation of the claim."
+      ],
+      "scope": {
+        "domain": "routine individual tasks"
+      },
+      "qualifier": {
+        "condition": "only when employees have dedicated home office space and are subject to daily structured check-ins"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "office work",
+      "predicate": "is more productive than",
+      "object": "remote work",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: office work remote work]"
+      ],
+      "scope": {
+        "domain": "routine individual tasks"
+      },
+      "qualifier": {
+        "temporal": "pre-2020, before widespread adoption of remote collaboration tools",
+        "geographic": "United States, urban office settings"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "remote work",
+      "predicate": "reduces the frequency of cross-functional serendipitous encounters compared to",
+      "object": "office work",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work in 2020",
+        "geographic": "global, with emphasis on knowledge-economy sectors in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "remote work",
+      "predicate": "enhances spontaneous collaboration beyond",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team innovation and cross-functional projects"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
