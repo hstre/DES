@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are critically dependent on the parity and divisibility patterns of the initial seed, rather than on the magnitude of the seed alone",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are critically dependent on the parity and divisibility patterns of the initial seed, rather than on the magnitude of the seed alone]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "conflicting empirical observations in small- versus large-seed regimes suggest that cycle stability may not be monotonic with respect to seed size, challenging the assumption that larger seeds converge to more complex attractors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "depend primarily on the parity and divisibility patterns of the initial seed, with seed magnitude exerting negligible influence across all tested ranges",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties depend primarily on the parity and divisibility patterns of the initial seed, with seed magnitude exerting negligible influence across all tested ranges]"
+      ],
+      "scope": {
+        "domain": "small- to moderate-seed regimes (n < 10^6)"
+      },
+      "qualifier": {
+        "tension": "consistent with simulations in constrained parameter spaces, but may not generalize to larger seeds"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are modulated by seed magnitude in a non-monotonic way, such that parity and divisibility patterns alone cannot predict cycle stability for very large seeds",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are modulated by seed magnitude in a non-monotonic way, such that parity and divisibility patterns alone cannot predict cycle stability for very large seeds]"
+      ],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {
+        "tension": "conflicts with the small-seed pattern, indicating a possible phase transition or additional scaling factor not captured by parity/divisibility alone"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are critically dependent on the parity and divisibility patterns of the initial seed, rather than on the magnitude of the seed alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are critically dependent on the parity and divisibility patterns of the initial seed, rather than on the magnitude of the seed alone]"
+      ],
+      "scope": {
+        "domain": "all seed sizes"
+      },
+      "qualifier": {
+        "tension": "the claimed universality is disputed due to conflicting empirical observations in small- versus large-seed regimes, suggesting that magnitude may play a secondary but non-negligible role"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "depend primarily on the parity and divisibility patterns of the initial seed, with seed magnitude exerting negligible influence across all tested ranges, except that when the seed contains a prime factor congruent to 1 mod 4, the cycle length is always a multiple of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties depend primarily on the parity and divisibility patterns of the initial seed, with seed magnitude exerting negligible influence across all tested ranges, except that when the seed contains a prime factor congruent to 1 mod 4, the cycle length is always a multiple of 3]",
+        "[PATH:empirical] Systematic computational exploration of T(n) for seeds with known prime factorizations, focusing on primes \u2261 1 mod 4 versus other residues, across n up to 10^6, recording cycle lengths and attraction basins. \u2014 Directly tests the claimed dependency on parity and divisibility patterns, and the specific claim that seeds with a prime factor \u2261 1 mod 4 always yield cycle lengths that are multiples of 3. A large-scale, controlled simulation can confirm or refute the pattern with statistical significance.",
+        "[PATH:theoretical] Theoretical analysis of the map T(n) using modular arithmetic and group theory, particularly examining the behavior of iterates modulo small primes and the structure of cycles under the influence of prime factors congruent to 1 mod 4. \u2014 Provides a mathematical proof or disproof of the observed regularities. If the cycle-length multiple-of-3 property holds, it likely stems from a number-theoretic invariant (e.g., a multiplicative order condition modulo 3 or a related modulus) that can be derived analytically."
+      ],
+      "scope": {
+        "domain": "small- to moderate-seed regimes (n < 10^6)"
+      },
+      "qualifier": {
+        "temporal": "observations up to simulation run 2025-03-21",
+        "geographic": "mathematical domain, no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are significantly influenced by the magnitude of the initial seed, with parity and divisibility patterns playing a secondary role in certain regimes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are significantly influenced by the magnitude of the initial seed, with parity and divisibility patterns playing a secondary role in certain regimes]",
+        "[PATH:empirical] Systematic computational sweep of T(n) for n in [1, 10^6] with controlled parity and divisibility subsampling, recording cycle length and attraction basin size as functions of seed magnitude. \u2014 Directly tests the claimed dominance of seed magnitude over parity/divisibility by isolating these variables; can confirm or refute the secondary role of number-theoretic properties.",
+        "[PATH:theoretical] Analytical study of the map's dynamics using modular arithmetic and ergodic theory, focusing on the influence of initial value modulo small primes on cycle emergence. \u2014 Provides a mathematical foundation to determine whether seed magnitude or divisibility patterns fundamentally govern the attraction basins, potentially refuting the hypothesis if parity/divisibility are primary.",
+        "[PATH:literature] Re-analysis of existing datasets from prior computational studies of similar recursive maps (e.g., Collatz-like iterations) with seed ranges below 10^6, comparing cycle statistics against the hypothesis. \u2014 Leverages published evidence to assess generalizability and consistency of the claimed influence, identifying regimes where the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "small- to moderate-seed regimes (n < 10^6)"
+      },
+      "qualifier": {
+        "temporal": "observed in computational simulations from 2020 to 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits a transition in the dominant cycle type from short, low-period cycles to long, high-period cycles when seed magnitude exceeds a critical threshold near 10^10",
+      "object": "due to the cumulative effect of prime factor multiplicities exceeding a density threshold, overriding the influence of parity and divisibility patterns observed for smaller seeds",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties due to the cumulative effect of prime factor multiplicities exceeding a density threshold, overriding the influence of parity and divisibility patterns observed for smaller seeds]",
+        "[PATH:empirical] High-precision numerical simulations of T(n) for seeds in the range 10^9 to 10^11, systematically recording cycle lengths and dominant cycle types, with statistical analysis of prime factor multiplicity distributions. \u2014 Directly tests the predicted transition near 10^10 by generating empirical data on cycle types and correlating them with prime factor multiplicities, allowing confirmation or refutation of the threshold and the proposed causal mechanism.",
+        "[PATH:theoretical] Analytical derivation of the expected cycle length as a function of seed size using probabilistic number theory, modeling the cumulative effect of prime factor multiplicities as a stochastic process and comparing with parity/divisibility-based heuristics. \u2014 Provides a formal mathematical framework to predict whether and why a transition should occur, enabling rigorous comparison with empirical results and clarifying the conditions under which prime factor density overrides other influences.",
+        "[PATH:literature] Literature review of existing studies on similar recursive maps (e.g., Collatz-type functions, linear congruential generators) that exhibit phase transitions in cycle structure with seed magnitude, focusing on any documented thresholds or mechanisms involving prime factor multiplicities. \u2014 Contextualizes the hypothesis within known phenomena, potentially revealing analogous transitions or refuting the novelty/plausibility of the proposed mechanism, and may provide methodological precedents for analysis."
+      ],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^10)"
+      },
+      "qualifier": {
+        "temporal": "during the transition regime as seed magnitude crosses the critical threshold near 10^10",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are solely determined by parity and divisibility patterns, even for very large seeds, without any influence from seed magnitude in a non-monotonic way",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are solely determined by parity and divisibility patterns, even for very large seeds, without any influence from seed magnitude in a non-monotonic way]",
+        "[PATH:empirical] Systematic computational search for cycle lengths and attraction basins of T(n) for n > 10^9 with controlled parity and divisibility classes (e.g., using modular arithmetic to generate seeds of varying magnitude but fixed residue classes). \u2014 Directly tests the claim that seed magnitude does not influence cycle emergence or basin structure in a non-monotonic way, by comparing outcomes across orders of magnitude while holding parity and divisibility constant.",
+        "[PATH:theoretical] Theoretical analysis via dynamical systems and number theory: prove that T(n) is eventually periodic and that its dynamics factor through a finite-state automaton based on parity and divisibility (e.g., using a Markov chain on residue classes modulo a power of 2 or 3). \u2014 If the map's long-term behavior depends only on parity and divisibility patterns, then a rigorous reduction to a finite-state system would confirm the hypothesis; otherwise, counterexamples would refute it.",
+        "[PATH:literature] Literature review of known results on generalized Collatz-type maps and their dependence on seed magnitude (e.g., works by Lagarias, Chamberland, or Monks on 3x+1 variants and their statistical properties). \u2014 Existing studies may already provide evidence for or against the independence of cycle structure from seed magnitude in similar recursive maps, informing the plausibility of the hypothesis."
+      ],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {
+        "temporal": "until present computational verification limits",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties for very large seeds (n > 10^9)",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure are modulated by seed magnitude in a non-monotonic way",
+      "object": "such that parity and divisibility patterns alone cannot predict cycle stability",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) under specific initial conditions and number-theoretic properties for very large seeds (n > 10^9) exhibits stable cycles whose emergence and attraction basin structure are modulated by seed magnitude in a non-monotonic way such that parity and divisibility patterns alone cannot predict cycle stability in domain 'large-seed regimes (n > 10^9)']"
+      ],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {
+        "temporal": "observed in computational experiments conducted between 2020 and 2023",
+        "geographic": "simulated on distributed computing clusters in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties for very large seeds (n > 10^9)",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure are fully determined by parity and divisibility patterns",
+      "object": "such that seed magnitude does not introduce any additional non-monotonic modulation beyond these number-theoretic properties",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) under specific initial conditions and number-theoretic properties for very large seeds (n > 10^9) exhibits stable cycles whose emergence and attraction basin structure are fully determined by parity and divisibility patterns such that seed magnitude does not introduce any additional non-monotonic modulation beyond these number-theoretic properties in domain 'large-seed regimes (n > 10^9)']"
+      ],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical understanding (2025)",
+        "geographic": "universal (applicable to all integer sequences meeting conditions)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "has an attraction basin structure that",
+      "object": "is fully determined by the binary length of the seed when the seed is a power of two, overriding parity and divisibility patterns",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties is fully determined by the binary length of the seed when the seed is a power of two, overriding parity and divisibility patterns]",
+        "[PATH:empirical] Systematic simulation of T(n) for all powers of two from 2^1 to 2^30, recording basin size, cycle length, and transient length, and comparing to predictions based on binary length alone. \u2014 Direct empirical test: if binary length fully determines basin structure for powers of two, then all seeds with the same binary length should yield identical attraction basin properties, overriding any parity or divisibility effects. Discrepancies would refute the hypothesis.",
+        "[PATH:theoretical] Analytic derivation of T(n) dynamics for n = 2^k using number-theoretic properties of the map (e.g., modular arithmetic, binary representation evolution) to prove or disprove that the basin structure depends only on k. \u2014 A rigorous mathematical proof would confirm the hypothesis; a counterexample derived from the map's definition would refute it. This addresses the underlying mechanism rather than just empirical pattern.",
+        "[PATH:literature] Literature search on known results for recursive maps with power-of-two seeds, including Collatz-like maps and binary shift dynamics, to see if similar determinism by binary length has been established or contradicted. \u2014 Existing work may already contain relevant theorems or counterexamples, saving effort and providing context. If no prior results exist, this highlights the novelty of the hypothesis."
+      ],
+      "scope": {
+        "domain": "seeds that are powers of two"
+      },
+      "qualifier": {
+        "temporal": "for all finite binary lengths",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose emergence and attraction basin structure",
+      "object": "are primarily influenced by the magnitude of the initial seed, rather than on the parity and divisibility patterns alone",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) under specific initial conditions and number-theoretic properties are primarily influenced by the magnitude of the initial seed, rather than on the parity and divisibility patterns alone]"
+      ],
+      "scope": {
+        "domain": "all seed sizes"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iterated map sequence",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "has a cycle-attraction probability that",
+      "object": "is governed primarily by the base-2 logarithm of the seed's largest prime factor, overriding parity and divisibility effects when n > 10^9",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "the recursive map T(n) under specific initial conditions and number-theoretic properties",
+      "predicate": "exhibits stable cycles whose structure and emergence",
+      "object": "are predominantly determined by parity and divisibility patterns, even in large-seed regimes, without requiring additional factors",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "large-seed regimes (n > 10^9)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
