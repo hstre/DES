@@ -1,0 +1,391 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "correlates with",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]"
+      ],
+      "scope": {
+        "domain": "high-income countries, short-term economic growth"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "OECD high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "non-material dimensions of wellbeing (e.g., mental health, social cohesion)",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-material dimensions of wellbeing (e.g., mental health, social cohesion)]",
+        "[CONFLICT] The claim that GDP fails to capture non-material dimensions of wellbeing is disputed because there is no consensus on whether GDP should or can measure such subjective and social factors, and evidence is simulated rather than empirical."
+      ],
+      "scope": {
+        "domain": "subjective wellbeing, social indicators"
+      },
+      "qualifier": {
+        "temporal": "since the 1970s",
+        "geographic": "global, with emphasis on OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP growth",
+      "predicate": "may inversely relate to",
+      "object": "long-term ecological sustainability and future wellbeing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth long-term ecological sustainability and future wellbeing]"
+      ],
+      "scope": {
+        "domain": "environmental sustainability, intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "long-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita",
+      "predicate": "is a weaker predictor of",
+      "object": "median household disposable income growth in OECD high-income countries",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita median household disposable income growth in OECD high-income countries]",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) and National Accounts data for 2010\u20132020, comparing GDP per capita growth with median household disposable income growth across OECD high-income countries \u2014 Directly tests the hypothesis by computing and comparing the predictive power (e.g., R-squared, root mean squared error) of GDP per capita growth on median disposable income growth over the specified period.",
+        "[PATH:empirical] LIS Cross-National Data Center (Luxembourg Income Study) microdata, panel or repeated cross-section, to examine within-country decile-level income dynamics against aggregate GDP per capita \u2014 Allows disaggregation of household income growth by percentile, testing whether GDP per capita is a weaker predictor specifically for the median (middle 50%) versus other segments, and controlling for distributional shifts.",
+        "[PATH:literature] Literature review of studies on decoupling between GDP growth and median income (e.g., work by Atkinson, Piketty, or OECD reports on inclusive growth), focusing on high-income OECD countries post-2010 \u2014 Synthesizes existing empirical findings and theoretical explanations (e.g., rising inequality, capital-biased technical change) that support or challenge the hypothesis, and identifies gaps in the evidence."
+      ],
+      "scope": {
+        "domain": "high-income countries, short-term economic growth"
+      },
+      "qualifier": {
+        "temporal": "2010\u20132020",
+        "geographic": "OECD high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "does not adequately reflect",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]",
+        "[PATH:empirical] OECD Better Life Index and related reports on multidimensional well-being \u2014 Provides direct cross-country data on material living conditions (housing, income, jobs, etc.) that can be compared with GDP per capita trends since 2000, allowing empirical test of divergence.",
+        "[PATH:empirical] Piketty, Saez, and Zucman's distributional national accounts (DINA) for OECD countries \u2014 Measures how GDP growth is distributed across income groups; if median income or consumption lags behind GDP per capita, this would confirm that GDP per capita inadequately reflects typical material living standards.",
+        "[PATH:literature] Stiglitz, Sen, Fitoussi (2009) 'Report by the Commission on the Measurement of Economic Performance and Social Progress' and subsequent literature \u2014 Provides theoretical and empirical arguments for why GDP per capita fails to capture material well-being, especially in high-inequality contexts, and suggests alternative metrics."
+      ],
+      "scope": {
+        "domain": "high-income countries, economic inequality"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "OECD high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth in OECD countries",
+      "predicate": "negatively correlates with",
+      "object": "aggregate social trust scores over the same period",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth in OECD countries aggregate social trust scores over the same period]",
+        "[PATH:empirical] World Values Survey (WVS) and European Social Survey (ESS) longitudinal trust data combined with OECD National Accounts GDP growth figures, 2000-2020 \u2014 Directly tests the correlation using repeated cross-sectional trust measures and official GDP growth statistics across all OECD members over the specified period, controlling for country fixed effects and time trends.",
+        "[PATH:empirical] A panel regression analysis using the OECD Better Life Index trust subcomponent and quarterly GDP growth rates, with lag structures to account for reverse causality \u2014 Allows examination of temporal precedence and robustness of the negative correlation, addressing potential endogeneity between economic performance and social trust.",
+        "[PATH:theoretical] Theoretical literature on 'trust as social capital' vs. 'economic anxiety and institutional distrust' (e.g., Putnam, 2000; Rothstein & Uslaner, 2005; Algan & Cahuc, 2014) \u2014 Provides competing causal mechanisms: one predicts trust declines during rapid growth due to inequality or disruption, another predicts trust increases with prosperity. Reviewing this literature clarifies whether observed negative correlation is spurious or theoretically grounded."
+      ],
+      "scope": {
+        "domain": "social indicators, political economy"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD member countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "indirectly influences",
+      "object": "non-material dimensions of wellbeing (e.g., mental health, social cohesion)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-material dimensions of wellbeing (e.g., mental health, social cohesion)]",
+        "[PATH:empirical] Longitudinal panel data from the European Social Survey (ESS) measuring mental health (e.g., WHO-5 index) and social trust/cohesion indicators alongside national GDP per capita growth rates for OECD countries (2002-2020) \u2014 Directly tests the temporal link between GDP growth and changes in non-material wellbeing within the specified geographic and temporal scope, allowing for within-country and between-country comparisons to confirm or refute the hypothesized indirect influence.",
+        "[PATH:literature] Meta-analysis of studies on the 'Easterlin Paradox' and subjective wellbeing in high-income OECD countries post-2000, focusing on non-material dimensions beyond life satisfaction (e.g., psychological flourishing, community belonging) \u2014 Synthesizes existing evidence on the debated relationship between economic growth and non-material wellbeing, identifying gaps and moderators (e.g., inequality, social policy) that could clarify whether GDP indirectly influences these dimensions.",
+        "[PATH:theoretical] Theoretical framework integrating 'social capital theory' and 'materialist/post-materialist values shift' (Inglehart) to model causal pathways from GDP growth through institutional trust, social networks, and mental health outcomes \u2014 Provides a mechanistic explanation for how GDP might indirectly affect non-material wellbeing (e.g., via funding social services or eroding community ties), generating testable predictions that can be evaluated against empirical data."
+      ],
+      "scope": {
+        "domain": "subjective wellbeing, social indicators"
+      },
+      "qualifier": {
+        "temporal": "post-2000 economic growth periods",
+        "geographic": "high-income OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "GDP growth",
+      "predicate": "inversely correlates with",
+      "object": "the rate of renewable resource regeneration in ecological systems",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth the rate of renewable resource regeneration in ecological systems]",
+        "[PATH:empirical] World Bank's adjusted net savings (ANS) indicator, which accounts for depletion of natural resources, combined with GDP growth time series for multiple countries over 20+ years \u2014 This allows direct statistical testing of the inverse correlation between GDP growth and renewable resource regeneration rates, controlling for other factors like technology and policy.",
+        "[PATH:literature] Peer-reviewed literature on the Environmental Kuznets Curve (EKC) and its critiques, particularly studies examining resource use intensity in high-growth versus steady-state economies \u2014 Synthesizing existing empirical findings from EKC research can reveal whether the hypothesized inverse relationship holds across different development stages and resource types.",
+        "[PATH:theoretical] Dynamic system modeling of coupled human-natural systems (e.g., using the World3 model or updated integrated assessment models) that simulate long-term feedbacks between economic growth and renewable resource stocks \u2014 Theoretical models can test the hypothesis under controlled assumptions, clarifying mechanisms such as resource overuse, substitution, and regeneration lag times, and identify conditions under which the correlation might be reversed or non-existent."
+      ],
+      "scope": {
+        "domain": "environmental sustainability, resource economics"
+      },
+      "qualifier": {
+        "temporal": "long-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Technological innovation driven by GDP growth",
+      "predicate": "can enhance",
+      "object": "long-term ecological sustainability and future wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Technological innovation driven by GDP growth long-term ecological sustainability and future wellbeing]",
+        "[PATH:empirical] Cross-country panel data on GDP growth, R&D spending, and environmental indicators (e.g., CO2 emissions, resource efficiency, biodiversity indices) from 1990 to present, analyzed via Granger causality or instrumental variable methods \u2014 Directly tests whether GDP-driven technological innovation precedes or correlates with improvements in ecological sustainability and wellbeing, controlling for confounding factors like policy or energy mix.",
+        "[PATH:literature] Meta-analysis of case studies on green technology adoption (e.g., renewable energy, circular economy practices) in rapidly growing economies (e.g., China, India, Germany) and their long-term environmental outcomes \u2014 Synthesizes existing evidence on whether innovation spurred by economic growth yields net ecological benefits or is offset by rebound effects and increased resource consumption.",
+        "[PATH:theoretical] Integrated assessment models (e.g., DICE, REMIND) projecting future ecological sustainability under scenarios of high vs. low GDP-driven innovation, including feedback loops between technology, growth, and environmental limits \u2014 Evaluates the theoretical plausibility that innovation can decouple growth from environmental degradation over the 21st century, considering intergenerational equity and planetary boundaries."
+      ],
+      "scope": {
+        "domain": "environmental sustainability, intergenerational equity"
+      },
+      "qualifier": {
+        "temporal": "21st century, post-Industrial Revolution",
+        "geographic": "global, with emphasis on developed and emerging economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T7 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 36,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}
