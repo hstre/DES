@@ -1,0 +1,280 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "material living standards in industrialized economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material living standards in industrialized economies]"
+      ],
+      "scope": {
+        "domain": "high-income countries with diversified market economies"
+      },
+      "qualifier": {
+        "temporal": "post-1950 to present",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "non-material aspects of human wellbeing such as mental health, social cohesion, and environmental quality",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-material aspects of human wellbeing such as mental health, social cohesion, and environmental quality]",
+        "[CONFLICT] The claim asserts that GDP fails to capture non-material aspects of wellbeing, but this is disputed because some argue GDP indirectly correlates with or enables improvements in these areas, especially in low-income economies where material gains are foundational."
+      ],
+      "scope": {
+        "domain": "global context, particularly low-income and subsistence economies"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global context, particularly low-income and subsistence economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP per capita growth",
+      "predicate": "is a weaker proxy for",
+      "object": "material living standards in industrialized economies than median household disposable income growth",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita growth material living standards in industrialized economies than median household disposable income growth]",
+        "[PATH:empirical] OECD Income Distribution Database and National Accounts data (e.g., cross-country panel regression comparing GDP per capita growth vs. median household disposable income growth as predictors of self-reported life satisfaction or material deprivation indices) \u2014 This would directly test the predictive validity of each proxy for material living standards by using individual-level welfare outcomes as the benchmark, controlling for inflation and household composition.",
+        "[PATH:theoretical] Piketty, Saez, and Zucman (2018) 'Distributional National Accounts' methodology applied to multiple OECD countries \u2014 This work formalizes the gap between aggregate GDP growth and median income growth, providing a theoretical framework to assess why median disposable income may better capture the experience of typical households in industrialized economies.",
+        "[PATH:literature] Systematic review of literature on 'GDP and well-being' (e.g., Stiglitz, Sen, Fitoussi Commission report) and subsequent empirical tests using the OECD Better Life Index \u2014 Synthesizing existing findings on the divergence between GDP per capita and median income growth in high-income countries post-1980 can identify whether consensus supports the hypothesis or reveals counterexamples."
+      ],
+      "scope": {
+        "domain": "high-income countries with diversified market economies"
+      },
+      "qualifier": {
+        "temporal": "post-1980 to present",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "does not account for",
+      "object": "income inequality and non-market transactions",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality and non-market transactions]",
+        "[PATH:empirical] Panel data analysis of Gini coefficients and GDP per capita growth across OECD countries (1980-2020) \u2014 Directly tests whether GDP growth in high-income countries has systematically diverged from measures of income inequality, providing quantitative evidence on the hypothesis's temporal and geographic scope.",
+        "[PATH:empirical] National accounts satellite estimates for household production and volunteer work (e.g., US BEA, UK ONS, Statistics Canada) \u2014 Compares GDP with augmented measures that include non-market transactions. If GDP diverges significantly from these broader welfare indicators, it supports the hypothesis; if not, it refutes it.",
+        "[PATH:literature] Review of literature on GDP as a welfare measure (e.g., Stiglitz-Sen-Fitoussi Commission, 2009; Jones & Klenow, 2016) \u2014 Synthesizes theoretical arguments and empirical findings on GDP's limitations regarding inequality and non-market activity, contextualizing the hypothesis within established economic discourse."
+      ],
+      "scope": {
+        "domain": "high-income countries with diversified market economies"
+      },
+      "qualifier": {
+        "temporal": "since the 1980s",
+        "geographic": "high-income countries with diversified market economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "In low-income and subsistence economies, GDP's failure to capture non-material wellbeing",
+      "predicate": "leads to systematic underestimation of",
+      "object": "the economic value of communal land stewardship and indigenous knowledge systems",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: In low-income and subsistence economies, GDP's failure to capture non-material wellbeing the economic value of communal land stewardship and indigenous knowledge systems]",
+        "[PATH:empirical] Case studies comparing GDP per capita with alternative well-being indices (e.g., Genuine Progress Indicator, Human Development Index) in indigenous communities in the Amazon or Sub-Saharan Africa \u2014 Directly tests whether GDP underestimates value by contrasting conventional metrics with those that incorporate non-material and stewardship factors.",
+        "[PATH:empirical] Ethnographic economic valuations of indigenous land management (e.g., studies by the World Bank or UN on ecosystem services from communal lands in low-income economies) \u2014 Provides quantitative estimates of the economic contribution of communal stewardship, which GDP omits, enabling comparison to GDP-based assessments.",
+        "[PATH:theoretical] Theoretical critique from ecological economics literature (e.g., works by Herman Daly or Kate Raworth on 'doughnut economics') \u2014 Establishes conceptual basis for why GDP systematically excludes non-material and communal value, supporting the hypothesis's causal logic."
+      ],
+      "scope": {
+        "domain": "global context, particularly low-income and subsistence economies"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century, when GDP became widely adopted as a primary economic metric",
+        "geographic": "low-income and subsistence economies globally, excluding high-income industrialized nations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP",
+      "predicate": "is a reliable indicator of",
+      "object": "economic performance and growth in terms of tangible outputs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic performance and growth in terms of tangible outputs]",
+        "[PATH:empirical] Empirical comparisons of GDP growth rates with multi-dimensional well-being indices (e.g., Human Development Index, Genuine Progress Indicator) across countries and time periods \u2014 Systematic correlation and regression analyses can reveal how well GDP captures tangible output growth versus broader welfare dimensions, testing the hypothesis' core claim.",
+        "[PATH:empirical] Historical case studies of post-WWII economic booms (e.g., Japan, South Korea, China) examining the alignment between GDP increases and tangible industrial output data (e.g., steel tonnage, manufactured goods) \u2014 Directly assesses GDP's reliability as a proxy for tangible outputs by comparing macroeconomic aggregates with physical production metrics in high-growth periods.",
+        "[PATH:literature] Theoretical literature on national accounting and limitations of GDP (e.g., critiques by Simon Kuznets, Diane Coyle, and ecological economists) \u2014 Provides foundational arguments and conceptual frameworks that either support or challenge GDP's reliability for measuring tangible economic performance, informing the hypothesis' disputed status."
+      ],
+      "scope": {
+        "domain": "global economic analysis and policy formulation"
+      },
+      "qualifier": {
+        "temporal": "post-World War II era (1950\u2013present)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T2 on C003",
+    "T7 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 26,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006"
+    ],
+    "falsifier": [
+      "C005",
+      "C007"
+    ]
+  }
+}
