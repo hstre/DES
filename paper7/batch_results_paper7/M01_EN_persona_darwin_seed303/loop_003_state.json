@@ -1,0 +1,425 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intrinsic number properties (e.g., parity, residue classes) in T(n)",
+      "predicate": "determine the basin size of each cycle of period length \u2264 5",
+      "object": "independent of initial conditions",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intrinsic number properties (e.g., parity, residue classes) in T(n) independent of initial conditions]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Parity (even/odd) of T(n) values",
+      "predicate": "determines the basin size of each cycle of period length \u2264 5",
+      "object": "independent of initial conditions",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Parity (even/odd) of T(n) values independent of initial conditions]"
+      ],
+      "scope": {
+        "domain": "integer sequences under iterative mapping"
+      },
+      "qualifier": {
+        "temporal": "under iteration of the 3x+1-like map for all integer sequences defined over \u2115"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "modulate basin sizes of cycles of period length \u2264 5",
+      "object": "dependent on the specific residue class distribution of initial values",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Residue classes modulo small primes in T(n) dependent on the specific residue class distribution of initial values]"
+      ],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {
+        "condition": "when initial values are sampled from non-uniform residue distributions"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intrinsic number properties (parity, residue classes) in T(n)",
+      "predicate": "are insufficient to predict basin sizes of cycles of period length \u2264 5",
+      "object": "without additional structural invariants",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intrinsic number properties (parity, residue classes) in T(n) without additional structural invariants]"
+      ],
+      "scope": {
+        "domain": "general T(n) dynamics over integers"
+      },
+      "qualifier": {
+        "caveat": "based on observed counterexamples where same residue class yields different basin sizes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Parity (even/odd) of T(n) values under the 3x+1 map",
+      "predicate": "determines the exact number of distinct cycles of period length \u2264 5",
+      "object": "only when the sequence is initiated from numbers congruent to 1 mod 4",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Parity (even/odd) of T(n) values under the 3x+1 map only when the sequence is initiated from numbers congruent to 1 mod 4]",
+        "[PATH:empirical] Systematic computational enumeration of all sequences starting from numbers congruent to 1 mod 4 up to a large bound (e.g., 10^6), recording the parity of T(n) values and counting distinct cycles of period \u2264 5. \u2014 Direct empirical test can determine whether the parity pattern from 1 mod 4 starters uniquely determines the cycle count, or if counterexamples exist where different parity sequences yield the same cycle set.",
+        "[PATH:theoretical] Theoretical analysis of the cycle structure of the 3x+1 map restricted to residue classes modulo 4, focusing on the functional equation linking parity sequences to cycle membership. \u2014 If the parity sequence from 1 mod 4 starters is proven to be a complete invariant for cycles of length \u2264 5, the hypothesis holds; otherwise, a counterexample or proof of non-uniqueness refutes it.",
+        "[PATH:literature] Review of known literature on parity-based cycle classification in the 3x+1 problem, such as works by Lagarias, Terras, or Oliveira e Silva, specifically searching for results linking initial residue class 1 mod 4 to cycle enumeration. \u2014 Existing theoretical results may already confirm or contradict the claim, providing a rapid resolution without new computation."
+      ],
+      "scope": {
+        "domain": "integer sequences under iterative mapping"
+      },
+      "qualifier": {
+        "temporal": "under iteration of the 3x+1-like map for all integer sequences defined over \u2115"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Initial conditions",
+      "predicate": "have a significant influence on",
+      "object": "the basin size of each cycle of period length \u2264 5",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Initial conditions the basin size of each cycle of period length \u2264 5]",
+        "[PATH:empirical] Systematic numerical simulation of the logistic map for a dense grid of initial conditions in [0,1], enumerating all cycles of period \u2264 5 and computing their basin sizes via forward iteration until convergence or period detection \u2014 Direct empirical test: if basin sizes vary significantly with initial condition (e.g., for the same period-3 cycle), the hypothesis is confirmed; if they remain constant across initial conditions, it is refuted.",
+        "[PATH:theoretical] Analytical derivation of basin boundaries using symbolic dynamics and kneading theory for the logistic map, focusing on the structure of preimages of periodic points for periods 1 through 5 \u2014 Theoretical analysis can determine whether the basin of attraction for each low-period cycle is entirely determined by the map's critical points and parameter, independent of initial condition choice, thus refuting the hypothesis.",
+        "[PATH:literature] Literature review of known results on basin structure in unimodal maps, e.g., papers by Milnor, Thurston, or Devaney on the logistic map's topological conjugacy to the tent map and its implications for basin invariance \u2014 Existing theoretical work may already prove that for the logistic map at a fixed parameter, basin sizes of periodic cycles are determined solely by the map's dynamics and are not sensitive to the initial condition (except for a set of measure zero), providing evidence to refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "integer sequences under iterative mapping"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers under repeated application of the logistic map"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "determine the exact number and location of 2-cycles and 3-cycles",
+      "object": "independently of the magnitude of initial values, provided the residue distribution is non-uniform",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Residue classes modulo small primes in T(n) independently of the magnitude of initial values, provided the residue distribution is non-uniform]",
+        "[PATH:empirical] Systematic computational search over all residue classes modulo small primes (e.g., 2, 3, 5, 7) for T(n) = n/2 if n even, (3n+1)/2 if n odd, across a wide range of initial values with non-uniform residue distributions, tracking cycle lengths and locations. \u2014 Direct simulation can confirm or refute whether the number and location of 2-cycles and 3-cycles remain invariant under non-uniform residue distributions, independent of initial value magnitude.",
+        "[PATH:theoretical] Analytic derivation of cycle constraints using modular arithmetic and linear congruences for T(n) iterates, focusing on the fixed points and period-2/3 conditions modulo small primes, with explicit treatment of non-uniform initial residue frequencies. \u2014 A theoretical proof or counterexample can establish whether the cycle structure is determined solely by residue classes modulo small primes, regardless of the distribution's uniformity.",
+        "[PATH:literature] Review of known results on the 3x+1 problem and its generalizations (e.g., Lagarias' annotated bibliography, Terras' theorem on stopping times, and work on cycle constraints modulo small numbers) to identify whether similar invariance claims have been proven or disproven. \u2014 Existing literature may already contain theorems or counterexamples that directly address the dependency of cycle structure on residue distribution uniformity."
+      ],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all time steps n \u2265 0 under iterated application of T",
+        "geographic": "universal, not geographically bounded"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "do not influence basin sizes of cycles of period length \u2264 5",
+      "object": "regardless of the residue class distribution of initial values",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Residue classes modulo small primes in T(n) regardless of the residue class distribution of initial values]",
+        "[PATH:empirical] Exhaustive computational enumeration of T(n) trajectories for all n up to a large bound (e.g., 10^7), stratified by residue classes modulo small primes (2,3,5), to measure basin sizes for cycles of length \u2264 5. \u2014 Direct simulation can reveal whether different initial residue class distributions correlate with changes in basin sizes, providing a clear empirical test of the hypothesis.",
+        "[PATH:theoretical] Analytic derivation of the functional graph structure of T(n) using modular arithmetic constraints, focusing on preimage counts and cycle stability modulo small primes. \u2014 A theoretical proof that the dynamics of T(n) are independent of residue class distributions for short cycles would confirm the hypothesis; conversely, finding a dependency would refute it.",
+        "[PATH:literature] Review of existing literature on Collatz-type iterations and modular constraints, particularly studies on cycle lengths and basin sizes in generalized T(n) functions. \u2014 Prior work may have already addressed similar questions, providing either supporting evidence or counterexamples that can inform the hypothesis without new computation."
+      ],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {
+        "temporal": "during the iteration of T(n) for all integer n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "modulate basin sizes of cycles of period length \u2264 5",
+      "object": "dependent on the specific residue class distribution of initial values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Residue classes modulo small primes in T(n) modulate basin sizes of cycles of period length \u2264 5 dependent on the specific residue class distribution of initial values in domain 'modular arithmetic constraints on T(n) dynamics']"
+      ],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all initial values tested up to 10^6",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "do not modulate basin sizes of cycles of period length \u2264 5",
+      "object": "dependent on the specific residue class distribution of initial values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Residue classes modulo small primes in T(n) do not modulate basin sizes of cycles of period length \u2264 5 dependent on the specific residue class distribution of initial values in domain 'modular arithmetic constraints on T(n) dynamics']"
+      ],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all initial values under iteration of T(n) with period length \u2264 5",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "determine the existence of a unique dominant cycle of period length \u2264 5",
+      "object": "for initial values drawn from a single residue class modulo 3",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Residue classes modulo small primes in T(n)",
+      "predicate": "do not influence basin sizes of cycles of period length \u2264 5",
+      "object": "independent of the residue class distribution of initial values",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modular arithmetic constraints on T(n) dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
