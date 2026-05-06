@@ -1,0 +1,426 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "improves team collaboration efficiency",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Asynchronous collaboration may reduce interruptions and support deep work, but may also increase coordination overhead and delay feedback, leading to contested outcomes on overall efficiency."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "reduces interruptions and supports deep work for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]"
+      ],
+      "scope": {
+        "domain": "individual productivity in asynchronous environments"
+      },
+      "qualifier": {
+        "benefit": "fewer context switches, higher flow state"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "increases coordination overhead and delays feedback for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]"
+      ],
+      "scope": {
+        "domain": "team-level synchronization and decision latency"
+      },
+      "qualifier": {
+        "cost": "asynchronous handoffs can fragment progress, reduce iteration speed"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Remote work",
+      "predicate": "yields contested net efficiency outcomes for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]"
+      ],
+      "scope": {
+        "domain": "overall team collaboration efficiency"
+      },
+      "qualifier": {
+        "tension": "the balance between reduced interruptions and increased coordination delays depends on task interdependence and communication norms"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work",
+      "predicate": "reduces interruptions and supports deep work for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]",
+        "[PATH:empirical] Controlled experiment comparing deep work performance (e.g., complex problem-solving or writing tasks) between remote workers with private home offices and those without, measuring interruption frequency and task completion time. \u2014 Directly tests the qualifier about dedicated private workspace; quantifies causal effect on interruptions and deep work outcomes.",
+        "[PATH:empirical] Longitudinal field study using experience sampling method (ESM) with remote employees across different home environments, tracking self-reported interruptions, focus, and task type (high-focus vs. collaborative). \u2014 Captures real-world variability in workspace conditions and task demands; can confirm whether the effect holds only for high-focus, low-coordination tasks as specified.",
+        "[PATH:literature] Meta-analysis of existing studies on open-plan offices vs. private offices and their impact on deep work, adapted to remote work contexts. \u2014 Leverages established findings on physical workspace and interruption frequency; provides theoretical grounding for the qualifier and can identify boundary conditions."
+      ],
+      "scope": {
+        "domain": "individual productivity in asynchronous environments"
+      },
+      "qualifier": {
+        "refinement": "only when the worker has a dedicated, private workspace at home"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote work",
+      "predicate": "introduces new interruptions and challenges deep work for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]",
+        "[PATH:empirical] Longitudinal field experiment comparing deep work metrics (e.g., flow state frequency, task completion time) for knowledge workers in remote vs. co-located settings, controlling for task type and interruption logs. \u2014 Directly tests whether remote work introduces net new interruptions that degrade focus on high-concentration tasks, providing causal evidence for or against the hypothesis.",
+        "[PATH:literature] Meta-analysis of published studies on remote work interruptions and individual productivity (e.g., from journals like Journal of Applied Psychology or Computers in Human Behavior), focusing on tasks with low real-time coordination. \u2014 Synthesizes existing empirical findings to assess the overall effect size and consistency, helping to resolve the disputed status by aggregating diverse evidence.",
+        "[PATH:theoretical] Theoretical model of attention dynamics in asynchronous environments, drawing on cognitive load theory and interruption science, to predict conditions under which remote work interruptions either hinder or benefit deep work. \u2014 Provides a framework to explain why the hypothesis may hold in some contexts but not others, guiding future empirical tests and clarifying boundary conditions."
+      ],
+      "scope": {
+        "domain": "individual productivity in asynchronous environments"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global, primarily in knowledge-intensive sectors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work",
+      "predicate": "increases coordination overhead and delays feedback more for",
+      "object": "tasks requiring high individual focus and low real-time coordination when team members are in different time zones",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination when team members are in different time zones]",
+        "[PATH:empirical] Controlled experiment comparing task completion time and error rates for highly focused individual tasks (e.g., deep coding, analytical writing) across same-timezone vs. different-timezone remote teams, with coordination handoffs measured via digital trace data. \u2014 Directly tests the causal claim that time zone differences amplify coordination overhead and delay feedback for such tasks, controlling for baseline remote work effects.",
+        "[PATH:empirical] Longitudinal field study using communication logs (e.g., Slack, email timestamps) and project management data (e.g., cycle time, rework frequency) from distributed engineering teams, stratified by task focus requirements and time zone overlap. \u2014 Provides ecologically valid evidence on whether asynchronous handoff inefficiency disproportionately degrades iteration speed for high-focus, low-coordination tasks in multi-timezone settings.",
+        "[PATH:literature] Review of existing literature on temporal dispersion in global software teams, focusing on studies that measure coordination costs (e.g., delay in issue resolution, number of handoff iterations) for tasks categorized by interdependence and cognitive load. \u2014 Synthesizes prior findings to assess whether the hypothesis is supported or contradicted by available evidence, and identifies gaps for further empirical work."
+      ],
+      "scope": {
+        "domain": "temporal dispersion and asynchronous handoff inefficiency"
+      },
+      "qualifier": {
+        "cost": "time zone differences amplify fragmentation and reduce iteration speed beyond baseline remote work effects"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Remote work",
+      "predicate": "enhances productivity and accelerates completion of",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work tasks requiring high individual focus and low real-time coordination]",
+        "[PATH:empirical] Controlled field experiment comparing productivity on individual-focused tasks (e.g., coding, writing) across remote and co-located settings, measuring output metrics like task completion time and error rates. \u2014 Provides direct causal evidence by isolating the effect of remote work on focused tasks while controlling for coordination demands and environmental confounds.",
+        "[PATH:literature] Meta-analysis of longitudinal surveys and diary studies (e.g., from academic databases like PsycINFO or Scopus) examining self-reported and objective productivity in knowledge-economy workers post-2020. \u2014 Synthesizes existing evidence across diverse samples to assess generalizability and consistency of the productivity enhancement claim, while identifying moderators like task type and coordination needs.",
+        "[PATH:theoretical] Theoretical modeling of attention allocation and task-switching costs in remote versus office environments, based on cognitive load theory. \u2014 Provides a mechanistic framework to explain why low-coordination tasks might benefit from reduced interruptions and deeper focus in remote settings, helping to refine boundary conditions for the hypothesis."
+      ],
+      "scope": {
+        "domain": "individual performance and task efficiency"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of remote work infrastructure",
+        "geographic": "global, primarily in knowledge-economy sectors with reliable internet access"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "increases coordination overhead and delays feedback for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work increases coordination overhead and delays feedback for tasks requiring high individual focus and low real-time coordination in domain 'team-level synchronization and decision latency']"
+      ],
+      "scope": {
+        "domain": "team-level synchronization and decision latency"
+      },
+      "qualifier": {
+        "temporal": "during the period of widespread adoption of remote work tools (2020\u20132023)",
+        "geographic": "primarily in North American and European technology companies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "reduces coordination overhead and accelerates feedback for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work reduces coordination overhead and accelerates feedback for tasks requiring high individual focus and low real-time coordination in domain 'team-level synchronization and decision latency']"
+      ],
+      "scope": {
+        "domain": "team-level synchronization and decision latency"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of digital collaboration tools in 2020",
+        "geographic": "global, primarily in knowledge-work industries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Remote work",
+      "predicate": "reduces coordination overhead and accelerates feedback for",
+      "object": "tasks requiring high individual focus and low real-time coordination, when supported by structured asynchronous checkpoints",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team-level synchronization and decision latency"
+      },
+      "qualifier": {
+        "condition": "structured asynchronous checkpoints (e.g., daily written status updates, predefined decision deadlines) reduce fragmentation and iteration drag",
+        "contrast": "without such structure, overhead increases as claimed"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Remote work",
+      "predicate": "enhances productivity and reduces unnecessary interruptions for",
+      "object": "tasks requiring high individual focus and low real-time coordination",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "individual performance and focus"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
