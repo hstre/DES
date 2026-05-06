@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "caveat": "Effect sizes vary by task type, team coordination demands, and measurement methodology (self-report vs. objective output)."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "improves individual task efficiency for",
+      "object": "solitary, deep-focus tasks",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work solitary, deep-focus tasks]"
+      ],
+      "scope": {
+        "domain": "individual productivity in knowledge work"
+      },
+      "qualifier": {
+        "caveat": "Based on self-report measures; objective output data often shows smaller effects."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "reduces team coordination effectiveness for",
+      "object": "complex collaborative projects",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work complex collaborative projects]"
+      ],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {
+        "caveat": "Effect is moderated by team size, task interdependence, and communication tool quality."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Office work",
+      "predicate": "outperforms remote work in",
+      "object": "spontaneous knowledge transfer and mentoring",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Office work spontaneous knowledge transfer and mentoring]"
+      ],
+      "scope": {
+        "domain": "organizational learning and junior employee development"
+      },
+      "qualifier": {
+        "caveat": "Benefits are often unmeasured in standard productivity metrics but critical for long-term growth."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work",
+      "predicate": "reduces individual task efficiency for",
+      "object": "collaborative, interdependent tasks requiring real-time coordination",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work collaborative, interdependent tasks requiring real-time coordination]",
+        "[PATH:empirical] Controlled field experiment comparing task completion time and error rates for collaborative software development teams working remotely vs. co-located on time-sensitive, interdependent tasks (e.g., debugging a live system). \u2014 Directly tests the hypothesis by measuring individual efficiency under real-time coordination demands, controlling for confounding variables like task complexity and communication medium.",
+        "[PATH:literature] Systematic review and meta-analysis of studies on remote work productivity, focusing on studies that isolate task interdependence and real-time coordination (e.g., papers indexed in PsycINFO or Web of Science using keywords: 'remote work', 'task interdependence', 'real-time coordination', 'efficiency'). \u2014 Aggregates existing evidence across multiple contexts to assess the generalizability of the hypothesis and identify moderators (e.g., team size, communication tools).",
+        "[PATH:empirical] Longitudinal analysis of digital trace data from collaboration platforms (e.g., Slack, Jira, GitHub) measuring individual throughput and response latency on tasks with high dependency chains before and during the pandemic. \u2014 Provides objective, high-resolution behavioral data to quantify efficiency changes in real-world settings, complementing self-report measures and addressing the temporal scope of the hypothesis."
+      ],
+      "scope": {
+        "domain": "individual productivity in knowledge work"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2022)",
+        "geographic": "global, primarily in knowledge-intensive industries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote work",
+      "predicate": "diminishes individual task efficiency for",
+      "object": "solitary, deep-focus tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work solitary, deep-focus tasks]",
+        "[PATH:empirical] Controlled field experiment comparing task completion times and error rates for solitary deep-focus tasks (e.g., coding, writing) between remote and co-located knowledge workers, using time-tracking and output quality metrics. \u2014 Direct causal evidence on individual efficiency can be obtained by isolating the remote work condition while controlling for task type, interruptions, and environmental factors, addressing the disputed status with high internal validity.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity (e.g., from journals like Journal of Applied Psychology or Management Science) focusing specifically on solitary, cognitively demanding tasks, with moderator analysis for task complexity and autonomy. \u2014 Synthesizing prior evidence can reveal consistent patterns or heterogeneity across studies, helping to confirm or refute the hypothesis while accounting for publication bias and varying operational definitions of 'deep-focus tasks'.",
+        "[PATH:empirical] Longitudinal survey and diary study tracking knowledge workers' self-reported deep-focus time, flow states, and task completion rates over several months, with pre- and post-remote work transition comparisons. \u2014 Capturing temporal dynamics and within-subject changes can address the post-2020 surge context, providing ecological validity and insights into adaptation effects that cross-sectional designs miss."
+      ],
+      "scope": {
+        "domain": "individual productivity in knowledge work"
+      },
+      "qualifier": {
+        "temporal": "post-2020 remote work surge",
+        "geographic": "global knowledge economy"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work",
+      "predicate": "reduces team coordination effectiveness for",
+      "object": "complex collaborative projects that require high-frequency, unstructured communication",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work complex collaborative projects that require high-frequency, unstructured communication]",
+        "[PATH:empirical] Longitudinal field study comparing communication logs (e.g., Slack, email, meeting transcripts) between co-located and remote teams working on complex R&D projects, measuring coordination breakdowns (e.g., response delays, misalignment episodes) and project outcomes (e.g., time-to-decision, innovation quality). \u2014 Directly tests the predicate by quantifying coordination effectiveness in high-frequency, unstructured communication contexts, controlling for project complexity and team size.",
+        "[PATH:literature] Meta-analysis of published experiments and surveys on remote collaboration (e.g., from journals like Organization Science or Journal of Applied Psychology) focusing on moderating variables such as task interdependence, communication modality richness, and team familiarity. \u2014 Aggregates existing evidence to assess whether the effect is robust across studies and identifies boundary conditions (e.g., whether video calls mitigate the reduction).",
+        "[PATH:theoretical] Agent-based simulation modeling team coordination under varying remote work conditions (e.g., asynchronous vs. synchronous communication, network topology) to predict emergent coordination failures in complex, high-stakes projects. \u2014 Provides a causal mechanism explanation for how remote work disrupts spontaneous information sharing and rapid feedback loops, allowing counterfactual testing of alternative coordination structures."
+      ],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work in 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Remote work",
+      "predicate": "enhances team coordination effectiveness for",
+      "object": "complex collaborative projects",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work complex collaborative projects]",
+        "[PATH:empirical] A meta-analysis of field experiments comparing remote vs. co-located teams on complex innovation tasks (e.g., product design or strategic decision-making), controlling for task interdependence and communication frequency. \u2014 Directly tests the causal claim by aggregating high-quality experimental evidence across contexts, addressing the disputed status with quantitative synthesis.",
+        "[PATH:empirical] Longitudinal case studies of global software development or R&D teams (since 2020) that measure coordination effectiveness via objective metrics (e.g., project milestones met, error rates, rework time) and subjective team surveys. \u2014 Provides contextualized, real-world data on remote coordination in complex, collaborative projects, capturing temporal and geographic scope while controlling for confounding factors like team maturity.",
+        "[PATH:theoretical] Theoretical model of media richness and task complexity applied to remote work (e.g., updated Daft & Lengel framework), tested with simulation or archival data from project management tools. \u2014 Explains the mechanisms (e.g., information loss, synchronicity) that might enhance or hinder coordination, offering a falsifiable basis for the hypothesis and guiding empirical design."
+      ],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "impairs",
+      "object": "real-time coordination and spontaneous problem-solving in complex collaborative projects",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work impairs real-time coordination and spontaneous problem-solving in complex collaborative projects in domain 'team-based innovation and decision-making']"
+      ],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {
+        "temporal": "since the widespread adoption of remote work tools in 2020",
+        "geographic": "primarily in knowledge-economy sectors within OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "can equal or enhance",
+      "object": "team coordination effectiveness for complex collaborative projects when supported by structured communication norms and high-quality digital tools",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work can equal or enhance team coordination effectiveness for complex collaborative projects when supported by structured communication norms and high-quality digital tools in domain 'team-based innovation and decision-making']"
+      ],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of remote collaboration tools",
+        "geographic": "primarily in high-income countries with reliable broadband infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Office work",
+      "predicate": "outperforms remote work in",
+      "object": "mentoring of junior employees from underrepresented backgrounds",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Office work mentoring of junior employees from underrepresented backgrounds]",
+        "[PATH:empirical] Longitudinal study comparing mentoring outcomes (e.g., career advancement, retention, satisfaction) for junior employees from underrepresented backgrounds in office vs. remote settings, controlling for industry and company size (e.g., data from LinkedIn, internal HR records). \u2014 Directly tests the hypothesis by measuring whether in-person interaction provides unique benefits for mentoring of underrepresented groups, such as informal networking and sponsorship, which may be harder to replicate remotely.",
+        "[PATH:literature] Meta-analysis of existing literature on remote work and equity in professional development, focusing on mentoring of underrepresented groups (e.g., studies from journals like Journal of Vocational Behavior or Harvard Business Review). \u2014 Synthesizes available evidence to determine if patterns across studies support or contradict the hypothesis, accounting for contextual factors like industry, mentorship structure, and demographic composition.",
+        "[PATH:theoretical] Theoretical framework from social capital theory and organizational behavior, examining how physical co-location affects trust-building, informal knowledge transfer, and psychological safety for underrepresented mentees. \u2014 Provides a causal mechanism to explain why office work might outperform remote work in this context, or identifies conditions (e.g., structured virtual mentoring programs) that could mitigate any disadvantage."
+      ],
+      "scope": {
+        "domain": "equity in early-career professional development"
+      },
+      "qualifier": {
+        "temporal": "2020-2024",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Remote work",
+      "predicate": "outperforms office work in",
+      "object": "spontaneous knowledge transfer and mentoring",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work spontaneous knowledge transfer and mentoring]"
+      ],
+      "scope": {
+        "domain": "organizational learning and junior employee development"
+      },
+      "qualifier": {
+        "temporal": "since 2020 (post-pandemic remote work era)",
+        "geographic": "global (with emphasis on knowledge-intensive industries)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Remote work",
+      "predicate": "increases coordination effectiveness for",
+      "object": "complex collaborative projects when supported by AI-mediated synchronous communication tools",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Remote work",
+      "predicate": "enhances team coordination effectiveness for",
+      "object": "complex collaborative projects",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team-based innovation and decision-making"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

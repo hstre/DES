@@ -1,0 +1,429 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "outperforms",
+      "object": "office work in spontaneous knowledge transfer and mentoring",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work in spontaneous knowledge transfer and mentoring]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While remote work offers flexibility and digital tools for planned mentoring, the loss of informal, unplanned interactions (e.g., watercooler conversations, ad-hoc problem solving) may reduce serendipitous knowledge transfer. Empirical findings are mixed: some studies show digital tools can replicate or even enhance certain forms of mentoring, whereas others find a significant decline in spontaneous knowledge sharing, especially for tacit knowledge and early-career employees."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Digital tools for remote work",
+      "predicate": "can replicate or enhance",
+      "object": "planned mentoring interactions for explicit knowledge",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Digital tools for remote work planned mentoring interactions for explicit knowledge]"
+      ],
+      "scope": {
+        "domain": "explicit knowledge transfer"
+      },
+      "qualifier": {
+        "tension": "Supports the idea that remote work is not universally inferior, but only for structured, scheduled exchanges."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "significantly reduces",
+      "object": "spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees]"
+      ],
+      "scope": {
+        "domain": "tacit knowledge and serendipitous interaction"
+      },
+      "qualifier": {
+        "tension": "This competes with the first sub-claim by highlighting a domain where remote work clearly underperforms, creating epistemic friction despite not outright contradicting the first."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Office work",
+      "predicate": "fosters",
+      "object": "informal mentoring through unplanned interactions (e.g., watercooler conversations, ad-hoc problem solving)",
+      "status": "disputed",
+      "confidence": 0.6,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Office work informal mentoring through unplanned interactions (e.g., watercooler conversations, ad-hoc problem solving)]"
+      ],
+      "scope": {
+        "domain": "informal mentoring for early-career employees"
+      },
+      "qualifier": {
+        "tension": "Qualifies the overall claim by specifying a context where office work retains an advantage, but does not claim it is superior in all aspects."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Asynchronous video messaging tools for remote work",
+      "predicate": "reduce the effectiveness of",
+      "object": "planned mentoring interactions for explicit knowledge compared to synchronous video calls",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Asynchronous video messaging tools for remote work planned mentoring interactions for explicit knowledge compared to synchronous video calls]",
+        "[PATH:empirical] Controlled experiment comparing knowledge retention and transfer in asynchronous video vs. synchronous video mentoring sessions, with pre/post tests on explicit knowledge tasks. \u2014 Directly tests the causal claim by measuring effectiveness (e.g., recall, application) of explicit knowledge transfer under both modalities, controlling for mentor/mentee variables.",
+        "[PATH:literature] Meta-analysis of remote mentoring and video communication studies (2020-2024) from databases like PsycINFO, ACM Digital Library, or Web of Science, focusing on explicit knowledge outcomes. \u2014 Synthesizes existing evidence to assess whether asynchronous tools consistently reduce effectiveness, identifying moderators such as task complexity or interaction frequency.",
+        "[PATH:theoretical] Theoretical framework based on media richness theory and cognitive load theory applied to asynchronous vs. synchronous mentoring for explicit knowledge. \u2014 Provides a mechanistic explanation for why asynchronous tools might reduce effectiveness (e.g., reduced feedback loops, increased cognitive load), generating testable predictions to guide empirical work."
+      ],
+      "scope": {
+        "domain": "explicit knowledge transfer"
+      },
+      "qualifier": {
+        "temporal": "2020-2024",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Digital tools for remote work",
+      "predicate": "cannot replicate or enhance",
+      "object": "planned mentoring interactions for explicit knowledge",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Digital tools for remote work planned mentoring interactions for explicit knowledge]",
+        "[PATH:literature] Meta-analysis of remote mentoring studies (e.g., Ghosh & Reio, 2022; or comparable systematic reviews) \u2014 A systematic review of empirical studies on remote mentoring can aggregate effect sizes for explicit knowledge transfer, testing whether digital tools underperform or match in-person planned mentoring.",
+        "[PATH:empirical] Controlled experiment comparing planned mentoring via video-conferencing vs. in-person for explicit knowledge tasks (e.g., coding tutorials, procedural training) \u2014 Directly tests the hypothesis by measuring knowledge retention and transfer accuracy under both conditions, controlling for mentor quality and interaction structure.",
+        "[PATH:theoretical] Theoretical analysis of media richness and knowledge codification in digital environments (e.g., Daft & Lengel, 1986; Nonaka & Takeuchi, 1995) \u2014 Examines whether planned explicit knowledge transfer is inherently constrained by reduced cues in digital tools, providing a framework to predict when replication or enhancement might fail."
+      ],
+      "scope": {
+        "domain": "explicit knowledge transfer"
+      },
+      "qualifier": {
+        "temporal": "as of current remote work practices (2020\u20132025)",
+        "geographic": "global, with emphasis on high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work with structured virtual mentoring programs",
+      "predicate": "can fully compensate for the loss of",
+      "object": "spontaneous knowledge sharing and tacit knowledge transfer for early-career employees",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work with structured virtual mentoring programs spontaneous knowledge sharing and tacit knowledge transfer for early-career employees]",
+        "[PATH:empirical] Longitudinal field experiment comparing early-career employees in fully remote settings with structured virtual mentoring versus those in hybrid or in-person settings, measuring tacit knowledge acquisition via performance-based assessments and self-reported learning incidents over 12 months. \u2014 Directly tests causal claim under specified temporal scope; captures both objective and subjective measures of tacit knowledge transfer.",
+        "[PATH:literature] Meta-analysis of studies on virtual mentoring effectiveness and informal knowledge sharing in digitally mature organizations, focusing on early-career outcomes and moderators like mentoring structure, frequency, and platform affordances. \u2014 Synthesizes existing evidence to assess whether structured programs can approach the effects of spontaneous interaction, and identifies gaps in current research.",
+        "[PATH:empirical] Ethnographic or diary-based study of spontaneous knowledge sharing events in remote teams with high digital maturity, analyzing the frequency, content, and impact of serendipitous interactions compared to planned mentoring sessions. \u2014 Provides qualitative and quantitative data on the nature of tacit knowledge transfer that structured programs aim to replace, enabling comparison of mechanisms and outcomes."
+      ],
+      "scope": {
+        "domain": "tacit knowledge and serendipitous interaction"
+      },
+      "qualifier": {
+        "temporal": "during the initial transition to remote work (first 12 months)",
+        "geographic": "in organizations with high digital maturity and established remote collaboration infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "spontaneous knowledge sharing and tacit knowledge transfer through digital collaboration tools",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work spontaneous knowledge sharing and tacit knowledge transfer through digital collaboration tools]",
+        "[PATH:empirical] Longitudinal field study comparing knowledge-sharing metrics (e.g., unsolicited help threads, cross-team message frequency) in fully remote vs. hybrid teams at a global tech company, using digital collaboration tool logs and surveys on tacit knowledge transfer. \u2014 Directly tests the hypothesis by measuring spontaneous knowledge sharing in a controlled, real-world setting, addressing the disputed status with quantitative and qualitative data.",
+        "[PATH:literature] Meta-analysis of peer-reviewed studies on virtual team communication and tacit knowledge transfer published between 2020 and 2025, focusing on moderators like tool type (e.g., Slack, Teams, Miro), team size, and task complexity. \u2014 Synthesizes existing evidence to assess overall effect size and identify conditions under which remote work enhances or hinders tacit knowledge sharing, clarifying the disputed claim.",
+        "[PATH:empirical] Experimental lab study comparing dyadic problem-solving tasks (requiring tacit knowledge) conducted face-to-face vs. via video conferencing with shared digital whiteboards, measuring solution quality and self-reported knowledge transfer. \u2014 Isolates the effect of digital collaboration tools on tacit knowledge transfer under controlled conditions, providing causal evidence to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "digital communication and collaboration"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of remote work",
+        "geographic": "global, primarily in knowledge-intensive industries with digital infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "significantly reduces",
+      "object": "spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work significantly reduces spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees in domain 'tacit knowledge and serendipitous interaction']"
+      ],
+      "scope": {
+        "domain": "tacit knowledge and serendipitous interaction"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020-2023)",
+        "geographic": "in developed countries with high internet penetration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "does not significantly reduce",
+      "object": "spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees, due to digital tools and structured mentoring",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work does not significantly reduce spontaneous knowledge sharing and tacit knowledge transfer, especially for early-career employees, due to digital tools and structured mentoring in domain 'tacit knowledge and serendipitous interaction']"
+      ],
+      "scope": {
+        "domain": "tacit knowledge and serendipitous interaction"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "early-career employees' acquisition of tacit knowledge more than mid- or late-career employees' acquisition of explicit knowledge",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "tacit knowledge transfer and career stage"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Remote work",
+      "predicate": "enhances",
+      "object": "knowledge sharing and tacit knowledge transfer through digital collaboration tools, even for early-career employees",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "digital communication and collaborative technology"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
