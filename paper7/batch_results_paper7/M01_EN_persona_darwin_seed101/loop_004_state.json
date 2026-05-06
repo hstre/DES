@@ -1,0 +1,493 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "initial values with a contiguous block of exactly three 1-bits in binary expansion",
+      "predicate": "exhibit",
+      "object": "a significantly different convergence rate or attractor under the recursive map T(n) compared to values without such a block, with the difference being consistent across varied initial conditions",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits in binary expansion a significantly different convergence rate or attractor under the recursive map T(n) compared to values without such a block, with the difference being consistent across varied initial conditions]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "initial values with a contiguous block of exactly three 1-bits in binary expansion",
+      "predicate": "exhibit",
+      "object": "a convergence rate under T(n) that is statistically distinguishable from random values, but only within a specific range of n (e.g., 10^3 to 10^5)",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits in binary expansion a convergence rate under T(n) that is statistically distinguishable from random values, but only within a specific range of n (e.g., 10^3 to 10^5)]"
+      ],
+      "scope": {
+        "domain": "computational dynamics for moderate-sized integers"
+      },
+      "qualifier": {
+        "temporal": "during computational simulations conducted in 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "an artifact of small-sample bias or specific simulation parameters, and does not persist under rigorous statistical testing with broader initial condition sampling",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits an artifact of small-sample bias or specific simulation parameters, and does not persist under rigorous statistical testing with broader initial condition sampling]"
+      ],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {
+        "temporal": "under the simulation runs conducted prior to 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "initial values with a contiguous block of exactly three 1-bits",
+      "predicate": "may exhibit",
+      "object": "a different attractor only when the block appears in the least significant bits, while block position in higher bits yields no significant effect",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits a different attractor only when the block appears in the least significant bits, while block position in higher bits yields no significant effect]"
+      ],
+      "scope": {
+        "domain": "bit-position dependence in binary representation"
+      },
+      "qualifier": {
+        "temporal": "based on current simulation data up to 2025",
+        "geographic": "applicable to binary representations in digital computing contexts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "initial values with a contiguous block of exactly three 1-bits and a trailing 0-bit in binary expansion",
+      "predicate": "exhibit",
+      "object": "a convergence rate under T(n) that is statistically distinguishable from random values only when the block is at the least significant end of the binary representation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits and a trailing 0-bit in binary expansion a convergence rate under T(n) that is statistically distinguishable from random values only when the block is at the least significant end of the binary representation]",
+        "[PATH:empirical] Systematic computational simulation comparing convergence rates for all integers up to, say, 2^20 that have a contiguous block of exactly three 1-bits and a trailing 0-bit, with the block placed at varying bit positions from LSB to MSB, using T(n) as defined (e.g., Collatz-like or similar map). \u2014 Direct empirical test can determine whether the convergence rate differs statistically when the block is at the least significant end versus other positions, thereby confirming or refuting the hypothesis.",
+        "[PATH:theoretical] Analytical derivation of the effect of the block position on the iterated dynamics under T(n), using tools from binary analysis or symbolic dynamics (e.g., studying the evolution of the binary pattern under T(n) as a finite automaton). \u2014 A theoretical model can explain whether and why only the least-significant block position yields distinguishable convergence behavior, providing a proof or counterexample independent of simulation limits.",
+        "[PATH:literature] Review of existing literature on binary pattern sensitivity in T(n)-like iterations (e.g., 3x+1 problem, generalized Collatz maps, or binary shift-and-add dynamics) for evidence of similar position-dependent convergence anomalies. \u2014 If prior work documents analogous phenomena (e.g., only trailing patterns affect convergence), it would support the hypothesis; absence of such reports would cast doubt on its plausibility."
+      ],
+      "scope": {
+        "domain": "computational dynamics for moderate-sized integers"
+      },
+      "qualifier": {
+        "temporal": "during computational simulations conducted in 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "initial values with a contiguous block of exactly three 1-bits in binary expansion",
+      "predicate": "do not exhibit",
+      "object": "a convergence rate under T(n) that is statistically distinguishable from random values within any specific range of n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits in binary expansion a convergence rate under T(n) that is statistically distinguishable from random values within any specific range of n]",
+        "[PATH:empirical] High-precision simulation study comparing convergence rates of initial values with exactly three contiguous 1-bits against randomly chosen integers of comparable bit-length, over 10^6 iterations, using statistical tests (e.g., Kolmogorov-Smirnov) on the distribution of iteration counts to reach a fixed point or cycle. \u2014 Directly tests the hypothesis by generating empirical distributions under controlled conditions, allowing detection of statistically significant deviations if they exist.",
+        "[PATH:theoretical] Analytical derivation of the iterated function T(n) (e.g., a Collatz-like map) to determine whether the presence of a contiguous block of three 1-bits imposes a deterministic constraint on the trajectory's parity or growth pattern, potentially leading to a provable convergence rate bound. \u2014 A mathematical proof that such initial values either do or do not produce a distinctive convergence rate would definitively confirm or refute the hypothesis, independent of simulation limitations.",
+        "[PATH:literature] Survey of existing literature on binary pattern sensitivity in iterated arithmetic functions, particularly studies on the 3x+1 problem or similar dynamics that examine initial values with specific bit patterns (e.g., blocks of 1s). \u2014 Prior work may already contain relevant results or methodologies that can be applied to this specific pattern, saving effort and providing context for the statistical distinguishability claim."
+      ],
+      "scope": {
+        "domain": "computational dynamics for moderate-sized integers"
+      },
+      "qualifier": {
+        "temporal": "over the first 10^6 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "actually a genuine dynamical phenomenon that becomes statistically detectable only when initial conditions are sampled from a distribution that mirrors the natural frequency of such bit patterns in the full state space",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits actually a genuine dynamical phenomenon that becomes statistically detectable only when initial conditions are sampled from a distribution that mirrors the natural frequency of such bit patterns in the full state space]",
+        "[PATH:empirical] Systematic Monte Carlo sampling of initial conditions from the full state space of a representative dynamical system (e.g., rule 30 or rule 90 cellular automaton), stratified by presence/absence of contiguous three-1-bit blocks, measuring convergence rates and attractor distributions \u2014 Directly tests whether the observed difference persists under proper natural-frequency sampling, controlling for sampling bias that might create spurious correlations.",
+        "[PATH:theoretical] Analytical derivation of the expected distribution of contiguous three-1-bit blocks in the full state space for a given bit-length, coupled with a theoretical analysis of how such patterns influence the system's transition graph and attractor basins \u2014 Provides a formal, distribution-independent foundation to determine if the pattern genuinely alters dynamics or is merely an artifact of uneven sampling.",
+        "[PATH:literature] Review of existing literature on pattern-sensitive dynamics in cellular automata and Boolean networks, focusing on studies that explicitly address the role of initial condition distributions and the detectability of rare bit-pattern effects \u2014 Identifies whether similar phenomena have been confirmed or refuted in related systems, and whether methodological pitfalls (e.g., biased sampling) have been previously addressed."
+      ],
+      "scope": {
+        "domain": "dynamical systems and statistical sampling theory"
+      },
+      "qualifier": {
+        "temporal": "under sampling conditions that match the natural frequency of 3-bit contiguous blocks in the full state space",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "persists",
+      "object": "even under rigorous statistical testing with broader initial condition sampling, indicating a fundamental property rather than an artifact",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits even under rigorous statistical testing with broader initial condition sampling, indicating a fundamental property rather than an artifact]",
+        "[PATH:empirical] Systematic Monte Carlo simulation with exhaustive sampling of initial conditions across multiple bit-lengths (e.g., 16-bit to 64-bit), combined with permutation tests to assess whether the observed convergence difference exceeds chance levels. \u2014 Broadens the statistical basis beyond limited runs, directly testing robustness and ruling out sampling artifacts.",
+        "[PATH:theoretical] Analytical derivation of convergence dynamics for binary strings with a contiguous block of three 1-bits, using state-space analysis or Markov chain modeling to predict attractor behavior. \u2014 Provides a formal proof or disproof of fundamental property, independent of simulation parameters.",
+        "[PATH:literature] Re-analysis of published data from prior studies on binary string dynamics (e.g., rule 30 or similar cellular automata), focusing on the specific block pattern and applying rigorous statistical corrections for multiple comparisons. \u2014 Leverages existing evidence to check reproducibility and identify potential confounding variables in earlier claims."
+      ],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {
+        "temporal": "as of the latest simulation runs in 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "a genuine dynamical phenomenon that persists under rigorous statistical testing with broader initial condition sampling",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits is a genuine dynamical phenomenon that persists under rigorous statistical testing with broader initial condition sampling in domain 'statistical robustness and reproducibility']"
+      ],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global / simulation-based (no geographic dependency)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "an artifact of small-sample bias or specific simulation parameters, and does not persist under rigorous statistical testing with broader initial condition sampling",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits is an artifact of small-sample bias or specific simulation parameters, and does not persist under rigorous statistical testing with broader initial condition sampling in domain 'statistical robustness and reproducibility']"
+      ],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {
+        "temporal": "observed in simulations prior to 2025, not confirmed under broader sampling",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "initial values with a contiguous block of exactly three 1-bits in the least significant bits",
+      "predicate": "deterministically converge to",
+      "object": "a distinct attractor cycle of period 2, while identical blocks in any higher bit position converge to a single fixed point attractor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: initial values with a contiguous block of exactly three 1-bits in the least significant bits a distinct attractor cycle of period 2, while identical blocks in any higher bit position converge to a single fixed point attractor]",
+        "[PATH:empirical] Systematic simulation sweep over all initial binary strings of length up to, say, 20 bits, with a contiguous block of exactly three 1-bits in the least significant bits, and separately for identical blocks in each higher bit position, recording attractor period and fixed point convergence under a deterministic update rule (e.g., a rule from elementary cellular automata or a custom binary state machine). \u2014 Direct empirical testing across a comprehensive range of initial conditions can confirm whether the claimed distinction between LSB and higher-bit positions holds universally, or if counterexamples exist that refute the hypothesis.",
+        "[PATH:theoretical] Analytical proof using algebraic or graph-theoretic methods on the state transition graph induced by the rule, focusing on the symmetry and influence of bit position on cycle structure (e.g., showing that the least significant bit position uniquely enables period-2 cycles due to carry-like interactions, while higher bits are trapped in fixed points). \u2014 A theoretical derivation would provide rigorous confirmation or refutation by explaining the underlying mechanism, and can identify necessary conditions for the observed behavior beyond finite simulation limits.",
+        "[PATH:literature] Literature review of known results in binary dynamical systems, particularly studies on bit-position-dependent attractors in rules such as rule 90, rule 150, or other linear/nonlinear binary cellular automata, and any documented cases of period-2 cycles emerging from specific bit patterns. \u2014 Existing research may already contain proofs or counterexamples related to bit-position dependence, providing a quicker path to confirmation or refutation without new simulations, and can contextualize the hypothesis within established knowledge."
+      ],
+      "scope": {
+        "domain": "bit-position dependence in binary representation"
+      },
+      "qualifier": {
+        "temporal": "under all tested simulation iterations up to 10^6 steps",
+        "geographic": "applicable to binary state space regardless of physical location"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "initial values with a contiguous block of exactly three 1-bits",
+      "predicate": "consistently exhibit",
+      "object": "a different attractor regardless of the block's position in the binary representation, indicating significant effects across all bit positions",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "bit-position dependence in binary representation"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "a genuine dynamical effect that becomes statistically significant when initial conditions are sampled from a distribution that mirrors the natural frequency of such patterns in the full state space",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "the observed difference in convergence rate or attractor for values with a contiguous block of exactly three 1-bits",
+      "predicate": "is",
+      "object": "a robust phenomenon that persists across varied simulation parameters and extensive initial condition sampling, indicating a fundamental property rather than an artifact",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "statistical robustness and reproducibility"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
