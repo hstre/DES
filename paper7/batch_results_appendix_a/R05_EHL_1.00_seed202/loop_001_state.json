@@ -1,0 +1,497 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting",
+      "predicate": "produces greater preservation of lean body mass compared to continuous caloric restriction",
+      "object": "after 12 months of equivalent total weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting after 12 months of equivalent total weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting",
+      "predicate": "produces greater preservation of lean body mass compared to continuous caloric restriction",
+      "object": "after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass]"
+      ],
+      "scope": {
+        "domain": "body composition in resistance-trained individuals"
+      },
+      "qualifier": {
+        "condition": "high baseline muscle mass"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "intermittent fasting",
+      "predicate": "may lead to greater loss of lean body mass than continuous caloric restriction",
+      "object": "when total weight loss is equivalent and exercise is not controlled",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting when total weight loss is equivalent and exercise is not controlled]"
+      ],
+      "scope": {
+        "domain": "general population without structured exercise"
+      },
+      "qualifier": {
+        "condition": "absence of resistance training"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting",
+      "predicate": "shows no significant difference in lean body mass preservation compared to continuous caloric restriction",
+      "object": "after 12 months of equivalent total weight loss, when protein intake is matched between groups",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting after 12 months of equivalent total weight loss, when protein intake is matched between groups]"
+      ],
+      "scope": {
+        "domain": "protein-controlled dietary interventions"
+      },
+      "qualifier": {
+        "condition": "protein intake standardized to \u22651.2 g/kg/day"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "intermittent fasting with protein-pacing",
+      "predicate": "produces greater preservation of lean body mass compared to standard intermittent fasting",
+      "object": "after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with protein-pacing after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting with protein-pacing (IF-P) versus standard intermittent fasting (IF) in resistance-trained individuals with high baseline muscle mass, measuring lean body mass via DXA or MRI at baseline, 6 months, and 12 months with matched total weight loss. \u2014 Directly tests the hypothesis under controlled conditions, isolating the effect of protein-pacing while controlling for total weight loss and baseline muscle mass.",
+        "[PATH:literature] Meta-analysis of studies on protein-pacing during caloric restriction in athletic populations, focusing on lean mass retention outcomes over \u226512 months. \u2014 Synthesizes existing data to assess whether protein-pacing consistently shows superior lean mass preservation compared to standard fasting protocols, with subgroup analysis on high baseline muscle mass.",
+        "[PATH:theoretical] Mechanistic study examining the effects of IF versus IF-P on muscle protein synthesis rates, anabolic signaling (e.g., mTOR pathway), and nitrogen balance in resistance-trained individuals with high muscle mass. \u2014 Provides biological plausibility by testing whether protein-pacing enhances muscle protein synthesis or attenuates catabolism during intermittent fasting, supporting or refuting the hypothesized mechanism."
+      ],
+      "scope": {
+        "domain": "body composition in resistance-trained individuals"
+      },
+      "qualifier": {
+        "condition": "high baseline muscle mass"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "continuous caloric restriction",
+      "predicate": "produces equal or greater preservation of lean body mass compared to intermittent fasting",
+      "object": "after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: continuous caloric restriction after 12 months of equivalent total weight loss, in individuals with high baseline muscle mass]",
+        "[PATH:empirical] Randomized controlled trial comparing continuous caloric restriction (e.g., 25% daily deficit) vs. intermittent fasting (e.g., 5:2 diet) over 12 months in resistance-trained individuals with high baseline lean mass, with DXA-measured body composition as primary outcome. \u2014 Directly tests the hypothesis in the specified population and timeframe, controlling for equivalent total weight loss, to determine which regimen better preserves lean mass.",
+        "[PATH:literature] Meta-analysis of existing studies on caloric restriction modalities and lean mass retention in athletes or high-muscle-mass populations, focusing on trials with \u22656-month follow-up and protein intake standardization. \u2014 Synthesizes available evidence to assess consistency across studies, identify effect moderators (e.g., training status, protein timing), and evaluate statistical power for the specific subgroup.",
+        "[PATH:theoretical] Mechanistic study examining the effects of intermittent fasting vs. continuous restriction on muscle protein synthesis rates, anabolic signaling (mTORC1 pathway), and nitrogen balance in resistance-trained individuals over a 12-week controlled feeding period. \u2014 Provides biological plausibility by investigating whether intermittent fasting's longer fasting windows impair muscle protein synthesis or anabolic response relative to daily caloric deficits, informing the longer-term outcome."
+      ],
+      "scope": {
+        "domain": "body composition in resistance-trained individuals"
+      },
+      "qualifier": {
+        "temporal": "after 12 months of equivalent total weight loss"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "intermittent fasting with protein-pacing",
+      "predicate": "significantly attenuates loss of lean body mass compared to standard intermittent fasting",
+      "object": "when total weight loss and caloric deficit are matched and resistance training is absent",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with protein-pacing when total weight loss and caloric deficit are matched and resistance training is absent]",
+        "[PATH:empirical] Controlled trial comparing intermittent fasting with protein-pacing (e.g., 25-30g protein per meal spaced 3-4 hours apart) vs. standard intermittent fasting (e.g., 16:8 or 5:2) in overweight adults without resistance training, measuring lean body mass via DXA or MRI at 8-16 weeks \u2014 Directly tests the hypothesis under matched caloric deficit and no structured exercise, providing causal evidence on lean mass preservation.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials examining protein timing and distribution during energy restriction on body composition in sedentary populations \u2014 Synthesizes existing data to assess whether protein-pacing (vs. standard fasting) attenuates lean mass loss, controlling for total protein intake and exercise status.",
+        "[PATH:theoretical] Mechanistic study of muscle protein synthesis and autophagy markers in response to intermittent fasting with vs. without protein-pacing in a rodent model of energy restriction \u2014 Explores biological plausibility (e.g., mTOR activation, leucine signaling, reduced catabolism) to support or refute the hypothesized effect in the absence of resistance training."
+      ],
+      "scope": {
+        "domain": "overweight adults not engaging in structured exercise"
+      },
+      "qualifier": {
+        "temporal": "over a period of 8 to 16 weeks",
+        "geographic": "studies conducted in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "intermittent fasting",
+      "predicate": "may preserve lean body mass better than continuous caloric restriction",
+      "object": "even when total weight loss is equivalent and exercise is not controlled",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting even when total weight loss is equivalent and exercise is not controlled]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted feeding) vs. continuous caloric restriction with matched total energy deficit, measuring lean body mass via DXA or MRI over 12 weeks in sedentary adults. \u2014 Directly tests the hypothesis under the specified scope (no exercise control, general population) and temporal window, providing causal evidence on lean mass preservation.",
+        "[PATH:literature] Meta-analysis of existing RCTs on intermittent fasting vs. continuous caloric restriction that includes subgroup analyses for studies without structured exercise interventions. \u2014 Synthesizes available data to assess consistency of effect across studies, increasing statistical power to detect differences in lean mass preservation when exercise is not controlled.",
+        "[PATH:theoretical] Mechanistic study investigating differential effects of intermittent fasting vs. continuous caloric restriction on muscle protein synthesis, autophagy, and hormonal regulators (e.g., growth hormone, IGF-1, cortisol) in humans. \u2014 Provides biological plausibility for any observed differences in lean mass preservation, helping to confirm or refute the underlying mechanism hypothesized to favor intermittent fasting."
+      ],
+      "scope": {
+        "domain": "general population without structured exercise"
+      },
+      "qualifier": {
+        "temporal": "short-term (up to 12 weeks)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "intermittent fasting",
+      "predicate": "leads to greater loss of lean body mass than continuous caloric restriction",
+      "object": "when total weight loss is equivalent and exercise is not controlled",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting leads to greater loss of lean body mass than continuous caloric restriction when total weight loss is equivalent and exercise is not controlled in domain 'general population without structured exercise']"
+      ],
+      "scope": {
+        "domain": "general population without structured exercise"
+      },
+      "qualifier": {
+        "temporal": "studies up to 2024",
+        "geographic": "primarily Western populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting",
+      "predicate": "does not lead to greater loss of lean body mass than continuous caloric restriction",
+      "object": "when total weight loss is equivalent and exercise is not controlled",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting does not lead to greater loss of lean body mass than continuous caloric restriction when total weight loss is equivalent and exercise is not controlled in domain 'general population without structured exercise']"
+      ],
+      "scope": {
+        "domain": "general population without structured exercise"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "intermittent fasting with early time-restricted feeding (eTRF)",
+      "predicate": "significantly reduces lean body mass loss compared to continuous caloric restriction",
+      "object": "after 12 months of equivalent total weight loss, when protein intake is matched at \u22651.2 g/kg/day and resistance training is standardized",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting with early time-restricted feeding (eTRF) after 12 months of equivalent total weight loss, when protein intake is matched at \u22651.2 g/kg/day and resistance training is standardized]",
+        "[PATH:empirical] Randomized controlled trial comparing eTRF vs. continuous caloric restriction with matched protein intake (\u22651.2 g/kg/day) and standardized resistance training over 12 months, measuring lean body mass via DXA or MRI \u2014 Directly tests the hypothesis under the specified conditions, providing causal evidence on lean mass preservation.",
+        "[PATH:literature] Meta-analysis of time-restricted feeding interventions that control for protein intake and exercise, focusing on body composition outcomes \u2014 Synthesizes existing data to assess consistency of effect across studies, increasing statistical power and generalizability.",
+        "[PATH:theoretical] Mechanistic study on the effect of eTRF versus continuous restriction on muscle protein synthesis rates (e.g., via stable isotope tracers) and anabolic signaling (e.g., mTOR pathway) under matched protein intake \u2014 Explores biological plausibility: eTRF may alter circadian regulation of muscle metabolism, potentially reducing catabolism beyond caloric restriction alone."
+      ],
+      "scope": {
+        "domain": "protein-controlled dietary interventions with concurrent resistance training"
+      },
+      "qualifier": {
+        "condition": "protein intake standardized to \u22651.2 g/kg/day and resistance training frequency \u22653 sessions/week"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "intermittent fasting",
+      "predicate": "preserves lean body mass more effectively than continuous caloric restriction",
+      "object": "after 12 months of equivalent total weight loss, when protein intake is matched between groups",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting after 12 months of equivalent total weight loss, when protein intake is matched between groups]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted eating) versus daily caloric restriction with protein intake matched at 1.6-2.0 g/kg body weight, measuring lean body mass via DXA or MRI at baseline, 6, and 12 months. \u2014 Directly tests the hypothesis under controlled conditions with equivalent total weight loss and matched protein intake, providing causal evidence to confirm or refute the claim.",
+        "[PATH:literature] Meta-analysis of existing RCTs on intermittent fasting that stratify by protein intake level (high vs. low) and report changes in lean body mass over 12 months or longer. \u2014 Synthesizes available data to assess whether the effect holds across studies when protein intake is controlled, increasing statistical power and generalizability.",
+        "[PATH:theoretical] Mechanistic study examining the effect of intermittent fasting on muscle protein synthesis and breakdown pathways (e.g., mTOR, AMPK, autophagy markers) compared to continuous caloric restriction under isonitrogenous conditions in human muscle biopsies. \u2014 Provides biological plausibility for the hypothesis by revealing whether intermittent fasting differentially modulates anabolic and catabolic signaling, supporting or undermining the predicted preservation of lean mass."
+      ],
+      "scope": {
+        "domain": "protein-controlled dietary interventions"
+      },
+      "qualifier": {
+        "temporal": "after 12 months of equivalent total weight loss",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "intermittent fasting with concurrent resistance training",
+      "predicate": "results in less loss of lean body mass than continuous caloric restriction with equivalent resistance training",
+      "object": "when total weight loss and training volume are matched",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "general population with structured resistance training"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "intermittent fasting",
+      "predicate": "may preserve lean body mass more effectively than continuous caloric restriction",
+      "object": "by promoting hormonal adaptations and metabolic efficiency",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "general population without structured exercise"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

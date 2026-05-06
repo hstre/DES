@@ -1,0 +1,345 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Observational studies suggest adherence and metabolic benefits may support long-term efficacy, but randomized controlled trials often show no significant difference from caloric restriction over 12+ months, with high dropout rates and potential compensatory behaviors"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "intermittent fasting",
+      "predicate": "promotes",
+      "object": "greater adherence than continuous caloric restriction over 6 months",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting greater adherence than continuous caloric restriction over 6 months]"
+      ],
+      "scope": {
+        "domain": "short-term dietary adherence"
+      },
+      "qualifier": {
+        "tension": "Observational data indicate higher initial adherence, but long-term dropout rates may erase this advantage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "no significant difference in weight loss compared to caloric restriction after 12 months",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting no significant difference in weight loss compared to caloric restriction after 12 months]"
+      ],
+      "scope": {
+        "domain": "long-term weight loss efficacy"
+      },
+      "qualifier": {
+        "tension": "RCTs show similar outcomes, but compensatory behaviors and metabolic adaptation may differ between approaches"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "intermittent fasting",
+      "predicate": "may induce",
+      "object": "compensatory overeating on non-fasting days, undermining long-term weight loss",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting compensatory overeating on non-fasting days, undermining long-term weight loss]"
+      ],
+      "scope": {
+        "domain": "behavioral compensation"
+      },
+      "qualifier": {
+        "tension": "This mechanism is frequently cited to explain the attenuation of weight loss in longer trials, yet direct evidence remains limited"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "greater preservation of lean body mass compared to caloric restriction after 12 months, despite equivalent weight loss",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting greater preservation of lean body mass compared to caloric restriction after 12 months, despite equivalent weight loss]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted feeding) to continuous caloric restriction with dual-energy X-ray absorptiometry (DXA) or MRI for body composition at 12 months \u2014 Directly tests the hypothesis by measuring lean body mass preservation alongside total weight loss, controlling for caloric equivalence and duration.",
+        "[PATH:empirical] Longitudinal study measuring biomarkers of autophagy (e.g., LC3-II/I ratio, p62 levels) and hormonal profiles (e.g., growth hormone, IGF-1, cortisol) in participants undergoing intermittent fasting vs. caloric restriction \u2014 Evaluates the proposed mechanistic pathway (autophagy and hormonal differences) that could explain differential lean mass preservation, providing confirmatory or refuting evidence for the qualifier.",
+        "[PATH:literature] Systematic review and meta-analysis of existing RCTs on intermittent fasting vs. caloric restriction for body composition outcomes, with subgroup analysis by duration (\u226512 months) and lean mass measurement method \u2014 Synthesizes available evidence to assess consistency, effect size, and potential confounders, offering a higher-level confirmation or refutation of the hypothesis across multiple studies."
+      ],
+      "scope": {
+        "domain": "body composition outcomes in long-term weight loss"
+      },
+      "qualifier": {
+        "tension": "While total weight loss may be equivalent, intermittent fasting may better attenuate loss of lean mass through differential effects on autophagy and hormonal profiles"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "greater adherence and metabolic benefits leading to more effective weight loss than caloric restriction after 12 months",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: intermittent fasting greater adherence and metabolic benefits leading to more effective weight loss than caloric restriction after 12 months]",
+        "[PATH:empirical] Randomized controlled trial comparing time-restricted eating (e.g., 16:8) vs. daily caloric restriction over 12+ months, with adherence and metabolic markers (e.g., HbA1c, fasting insulin) as primary endpoints. \u2014 Directly tests the hypothesis in a controlled setting, measuring both adherence rates and metabolic benefits at the specified 12-month endpoint, which is critical for resolving the dispute over long-term efficacy.",
+        "[PATH:literature] Systematic review and meta-analysis of long-term dietary intervention studies (\u226512 months) contrasting intermittent fasting protocols with continuous caloric restriction, focusing on weight loss, adherence, and metabolic outcomes. \u2014 Synthesizes existing evidence to assess consistency across studies and population variability, providing a broader evidence base to confirm or refute the claimed superiority of intermittent fasting.",
+        "[PATH:theoretical] Mechanistic study investigating differences in hunger hormones (e.g., ghrelin, PYY) and behavioral reward pathways (e.g., fMRI responses to food cues) between intermittent fasting and caloric restriction over 6\u201312 months. \u2014 Explores underlying mechanisms that could explain potential adherence and metabolic differences, helping to validate or challenge the hypothesized causal pathway from fasting regimen to superior weight loss."
+      ],
+      "scope": {
+        "domain": "long-term weight loss efficacy"
+      },
+      "qualifier": {
+        "temporal": "after 12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "equivalent weight loss to caloric restriction after 12 months in controlled trials",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting produces equivalent weight loss to caloric restriction after 12 months in controlled trials in domain 'long-term weight loss efficacy']"
+      ],
+      "scope": {
+        "domain": "long-term weight loss efficacy"
+      },
+      "qualifier": {
+        "temporal": "post-2010 clinical trials up to 2024",
+        "geographic": "predominantly North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "different weight loss outcomes compared to caloric restriction after 12 months due to compensatory behaviors and metabolic adaptation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms intermittent fasting produces different weight loss outcomes compared to caloric restriction after 12 months due to compensatory behaviors and metabolic adaptation in domain 'long-term weight loss efficacy']"
+      ],
+      "scope": {
+        "domain": "long-term weight loss efficacy"
+      },
+      "qualifier": {
+        "temporal": "after 12 months",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "greater preservation of lean body mass compared to continuous caloric restriction after 12 months, despite equivalent total weight loss",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "body composition maintenance in long-term weight loss"
+      },
+      "qualifier": {
+        "tension": "Caloric restriction often leads to proportional loss of lean mass; intermittent fasting may trigger autophagy and growth hormone pulses that mitigate this effect, but compensatory overeating on non-fasting days could offset preservation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "intermittent fasting",
+      "predicate": "produces",
+      "object": "greater metabolic benefits and improved body composition compared to caloric restriction after 12 months",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term health and metabolic outcomes"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C009",
+    "T9[falsifier] on C003 -> C010",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C009",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 25,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C010"
+    ]
+  }
+}
