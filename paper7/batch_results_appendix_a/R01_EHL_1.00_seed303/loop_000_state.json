@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "low-skilled workers in competitive labor markets",
+        "magnitude": "depends on elasticity of labor demand and wage floor level"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employment among low-skilled workers in competitive labor markets with elastic labor demand",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment among low-skilled workers in competitive labor markets with elastic labor demand]"
+      ],
+      "scope": {
+        "domain": "low-skilled workers, competitive markets, elastic demand"
+      },
+      "qualifier": {
+        "condition": "when the wage floor is set significantly above the market-clearing rate"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "employment and earnings for low-skilled workers in monopsonistic labor markets",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment and earnings for low-skilled workers in monopsonistic labor markets]"
+      ],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {
+        "condition": "when the wage floor is set moderately above the previous wage"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "has no significant net effect on",
+      "object": "overall unemployment",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage overall unemployment]"
+      ],
+      "scope": {
+        "domain": "aggregate economy, short to medium term"
+      },
+      "qualifier": {
+        "context": "due to offsetting effects across different worker segments and firm types"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employment among low-skilled workers in competitive labor markets with elastic labor demand",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment among low-skilled workers in competitive labor markets with elastic labor demand]",
+        "[PATH:empirical] Quasi-experimental studies of large minimum wage increases in U.S. states (e.g., Washington, California) using synthetic control methods to isolate effects on low-skilled employment in retail and food services. \u2014 These studies directly test the hypothesis in real competitive markets with elastic demand, and can show whether employment drops when the wage floor is set significantly above market-clearing and monopsony power is low.",
+        "[PATH:literature] Meta-analysis of minimum wage employment elasticities, focusing on studies that explicitly measure employer concentration and labor demand elasticity (e.g., Card & Krueger, 1995; subsequent replications). \u2014 Synthesizing existing evidence across contexts with varying monopsony power and demand elasticity can confirm whether the predicted negative effect is robust or conditional, clarifying the disputed status.",
+        "[PATH:theoretical] Structural labor market model calibrated with firm-level data on wage-setting power and labor demand elasticity, simulating minimum wage increases above market-clearing in competitive sectors. \u2014 A model can isolate the causal mechanism specified in the qualifier (limited monopsony, elastic demand) and test counterfactuals, providing theoretical confirmation or refutation of the hypothesized employment reduction."
+      ],
+      "scope": {
+        "domain": "low-skilled workers in competitive markets with elastic demand, within regions with high employer concentration"
+      },
+      "qualifier": {
+        "condition": "when the wage floor is set significantly above the market-clearing rate and employers have limited monopsony power"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "stimulates",
+      "object": "economic activity and job growth in competitive labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage economic activity and job growth in competitive labor markets]",
+        "[PATH:empirical] Card and Krueger (1994) study of the New Jersey minimum wage increase and its effect on fast-food employment in Pennsylvania border counties \u2014 This classic natural experiment directly tests the hypothesis in a competitive labor market (fast-food industry) and provides empirical evidence on job growth effects, challenging the traditional view that minimum wage increases reduce employment.",
+        "[PATH:literature] Meta-analysis by Doucouliagos and Stanley (2009) on the employment effects of minimum wage increases \u2014 A comprehensive meta-analysis synthesizes dozens of studies to assess the overall empirical consensus, helping to determine whether the hypothesis holds across multiple competitive labor market contexts and time periods since the 1990s.",
+        "[PATH:theoretical] Theoretical model of monopsonistic competition (e.g., Manning, 2003) applied to minimum wage effects in low-wage labor markets \u2014 This framework explains how minimum wage increases can stimulate employment and economic activity when firms have market power in hiring, providing a theoretical basis for the hypothesis in competitive but imperfect labor markets."
+      ],
+      "scope": {
+        "domain": "competitive markets"
+      },
+      "qualifier": {
+        "temporal": "since the 1990s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "job turnover and increases firm-specific training for low-skilled workers in monopsonistic labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage job turnover and increases firm-specific training for low-skilled workers in monopsonistic labor markets]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases (e.g., state-level or city-level increases in the U.S.) that measure job tenure, turnover rates, and employer-provided training for low-skilled workers in concentrated labor markets (e.g., retail, fast food). \u2014 Direct empirical evidence from natural experiments can test whether moderately raised minimum wages reduce turnover and increase firm-specific training, especially in markets with few employers (monopsony).",
+        "[PATH:empirical] Firm-level surveys or administrative data on training expenditures and employee retention before and after minimum wage hikes, focusing on firms in low-wage, low-skill sectors with high employer market power (e.g., nursing homes, agriculture). \u2014 Such data can isolate the causal effect of minimum wage changes on firm investment in worker training, conditional on market concentration, providing a direct test of the hypothesized mechanism.",
+        "[PATH:theoretical] Theoretical models of monopsonistic labor markets with endogenous training (e.g., search-and-matching models with wage floors), published in labor economics journals (e.g., Journal of Labor Economics, American Economic Review). \u2014 A review of existing theoretical literature can clarify the conditions under which a moderate minimum wage reduces turnover and spurs training, and identify predictions that can be empirically tested, thereby refining or refuting the hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {
+        "condition": "when the wage floor is set moderately above the previous wage"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employment for low-skilled workers in monopsonistic labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment for low-skilled workers in monopsonistic labor markets]",
+        "[PATH:empirical] Card and Krueger (1994) 'Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania' (replication studies post-2000) \u2014 This landmark study, along with subsequent replications and extensions using modern data, directly tests the effect of minimum wage increases on low-skilled employment in a market (fast food) often characterized by monopsonistic features. Comparing employment outcomes in New Jersey (which raised the minimum wage) versus Pennsylvania (which did not) provides a quasi-experimental test of the hypothesis.",
+        "[PATH:theoretical] Manning (2003) 'Monopsony in Motion: Imperfect Competition in Labor Markets' \u2014 This foundational text develops the theoretical framework for monopsonistic labor markets, explaining why minimum wages may not reduce employment (and could even increase it) under certain conditions. Reviewing this theory helps clarify the mechanisms and boundary conditions (e.g., degree of monopsony power, labor supply elasticity) under which the hypothesis would hold, guiding empirical testing.",
+        "[PATH:literature] Systematic review by Neumark and Wascher (2007) 'Minimum Wages and Employment' (updated meta-analyses post-2000) \u2014 This comprehensive review and its subsequent updates synthesize hundreds of empirical studies on minimum wage effects, including those focused on low-skilled workers. It identifies which studies find employment decreases, and under what market conditions (e.g., monopsony vs. competitive markets), providing a meta-analytic basis to confirm or refute the hypothesis within the specified scope."
+      ],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "raising the minimum wage moderately above the previous wage in monopsonistic labor markets",
+      "predicate": "increases",
+      "object": "employment and earnings for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage moderately above the previous wage in monopsonistic labor markets increases employment and earnings for low-skilled workers in domain 'low-skilled workers, monopsonistic markets']"
+      ],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "United States and comparable developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "raising the minimum wage moderately above the previous wage in monopsonistic labor markets",
+      "predicate": "decreases",
+      "object": "employment for low-skilled workers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms raising the minimum wage moderately above the previous wage in monopsonistic labor markets decreases employment for low-skilled workers in domain 'low-skilled workers, monopsonistic markets']"
+      ],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {
+        "temporal": "2000-2023",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employment for low-skilled workers in monopsonistic labor markets when the wage floor is set substantially above the previous wage",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employment opportunities for low-skilled workers even in monopsonistic labor markets",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "low-skilled workers, monopsonistic markets"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
