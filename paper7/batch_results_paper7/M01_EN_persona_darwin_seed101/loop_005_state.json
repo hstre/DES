@@ -1,0 +1,433 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of an initial value n0",
+      "predicate": "exerts a statistically significant selection pressure that consistently alters convergence behavior",
+      "object": "the recursive map T(n) toward either faster convergence or divergence compared to initial values lacking such a block",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of an initial value n0 the recursive map T(n) toward either faster convergence or divergence compared to initial values lacking such a block]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "causes a statistically significant acceleration of convergence in the recursive map T(n) toward a fixed point",
+      "object": "compared to initial values with no such block",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 compared to initial values with no such block]"
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position"
+      },
+      "qualifier": {
+        "temporal": "for all time steps up to convergence in the simulation runs",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "leads to a statistically significant increase in divergence (non-termination) under T(n)",
+      "object": "relative to initial values lacking such a block",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 relative to initial values lacking such a block]"
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions"
+      },
+      "qualifier": {
+        "temporal": "based on simulation runs up to 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The effect of a contiguous block of exactly three 1-bits on T(n) convergence",
+      "predicate": "is not a consistent selection pressure but is highly sensitive to the parity and bit-length of n0, often cancelling out in aggregate",
+      "object": "such that no single directional effect (faster convergence or divergence) dominates across all n0",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The effect of a contiguous block of exactly three 1-bits on T(n) convergence such that no single directional effect (faster convergence or divergence) dominates across all n0]"
+      ],
+      "scope": {
+        "domain": "statistical analysis of T(n) over multiple initial values with varying bit-length and parity"
+      },
+      "qualifier": {
+        "condition": "when averaging over large sample sets with diverse binary patterns"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0, specifically when that block is aligned to the least significant bit (i.e., the block ends at bit position 0)",
+      "predicate": "causes a significantly greater acceleration of convergence in the recursive map T(n) toward a fixed point",
+      "object": "compared to initial values where the block of three 1-bits appears at any other position",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0, specifically when that block is aligned to the least significant bit (i.e., the block ends at bit position 0) compared to initial values where the block of three 1-bits appears at any other position]",
+        "[PATH:empirical] Systematic computational simulation comparing iteration counts to fixed point for all n0 with a '111' block at LSB versus all other positions in a fixed bit-length range (e.g., up to 2^20), controlling for total number of bits and Hamming weight. \u2014 Directly tests the hypothesis by measuring convergence acceleration under controlled conditions, providing quantitative evidence for or against the LSB-alignment effect.",
+        "[PATH:theoretical] Analytical derivation of the effect of LSB-aligned '111' on the recursion T(n) using modular arithmetic and binary carry propagation, compared to shifted blocks. \u2014 Provides a formal explanation for any observed acceleration, or refutes it by showing that block position does not affect convergence rate in the map's dynamics.",
+        "[PATH:literature] Literature review of known results on the Collatz-like map T(n) and binary patterns, focusing on studies that examine the influence of trailing bits on iteration length or fixed-point attraction. \u2014 Identifies existing theoretical frameworks or experimental findings that either support or contradict the hypothesis, situating this claim within broader research."
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at the least significant end"
+      },
+      "qualifier": {
+        "temporal": "for all iterations of T(n) until a fixed point is reached",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "does not cause any statistically significant acceleration of convergence in the recursive map T(n) toward a fixed point",
+      "object": "compared to initial values with no such block",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 compared to initial values with no such block]",
+        "[PATH:empirical] Systematic computational simulation comparing convergence steps of T(n) for all n0 up to a large bound (e.g., 2^20), stratified by presence vs. absence of a contiguous '111' block in binary expansion, using statistical tests (e.g., Mann-Whitney U) to assess acceleration. \u2014 Directly tests the hypothesis by generating large-scale data on convergence behavior, allowing detection of even small effect sizes if present.",
+        "[PATH:theoretical] Theoretical analysis of the binary dynamics of T(n) as a cellular automaton or finite-state machine, focusing on the effect of isolated '111' patterns on the trajectory length to fixed point, possibly using symbolic dynamics or Lyapunov exponents. \u2014 Provides a formal, non-simulative understanding of whether the '111' block can influence convergence speed, potentially proving invariance or predicting conditions for acceleration.",
+        "[PATH:literature] Literature search on related recursive maps (e.g., Collatz-like functions, binary shift maps) for known results on the influence of specific binary patterns on convergence rates, particularly patterns of three consecutive 1s. \u2014 May reveal existing theorems or counterexamples that directly address or can be adapted to this hypothesis, avoiding redundant investigation."
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position"
+      },
+      "qualifier": {
+        "temporal": "over all finite iteration steps of T(n) up to convergence",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The position of the contiguous block of exactly three 1-bits in the binary expansion of n0, specifically when it appears in the least significant bits (LSBs)",
+      "predicate": "leads to a statistically significant increase in divergence (non-termination) under T(n) compared to when the block appears in the most significant bits (MSBs)",
+      "object": "for initial values of n0 with a single '111' block",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The position of the contiguous block of exactly three 1-bits in the binary expansion of n0, specifically when it appears in the least significant bits (LSBs) for initial values of n0 with a single '111' block]",
+        "[PATH:empirical] Systematic computational experiment varying the position of a single '111' block in n0 from LSB to MSB, tracking divergence rates over multiple random seeds and step limits (e.g., 10^6 steps) with statistical significance testing (e.g., chi-square or permutation test). \u2014 Directly tests the hypothesis by comparing divergence frequencies for LSB vs MSB placements under controlled conditions, providing quantitative evidence to confirm or refute the claimed effect.",
+        "[PATH:theoretical] Analytical study of the Collatz-like map T(n) focusing on binary patterns and their impact on iteration dynamics, particularly the role of trailing 1-blocks in generating growth or cycles (e.g., via modular constraints or symbolic dynamics). \u2014 A theoretical derivation of how the position of a '111' block affects the probability of non-termination would either support the hypothesis (if LSB blocks cause more instability) or refute it (if position is irrelevant given fixed block size).",
+        "[PATH:literature] Literature review of prior work on Collatz-type functions and binary block dynamics, including papers on '3x+1' problem variants, 1-block effects, and termination criteria (e.g., works by Lagarias, Terras, or Conway). \u2014 Existing theoretical or empirical results on the influence of low-order bits on divergence may already address the hypothesis, providing a basis for confirmation or refutation without new experiments."
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with a single '111' block, comparing LSB versus MSB placement"
+      },
+      "qualifier": {
+        "temporal": "for all initial n0 with a single '111' block tested under deterministic iteration of T(n) up to a fixed step limit (e.g., 10^6 steps) in computational experiments",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "does not lead to any significant difference in divergence (non-termination) under T(n)",
+      "object": "relative to initial values lacking such a block",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 relative to initial values lacking such a block]",
+        "[PATH:empirical] Systematic computational experiment comparing termination rates of T(n) for n0 with and without a '111' block, stratified by bit-length and block position, using at least 10^7 random samples per condition. \u2014 Directly tests the hypothesis by generating large-scale statistics on divergence frequency; high statistical power can detect even small differences, and stratification controls for confounds like bit-length or block position.",
+        "[PATH:theoretical] Analytical study of the Collatz-like map T(n) focusing on the influence of specific binary patterns on the dynamics, e.g., using symbolic dynamics or automata theory to model how a '111' block affects the trajectory's eventual behavior. \u2014 Provides a formal understanding of whether the block pattern can create invariant or periodic structures that alter termination probability; can yield proofs or rigorous bounds, complementing empirical findings.",
+        "[PATH:literature] Review of existing literature on Collatz conjecture variants and binary pattern effects, particularly studies that examine the role of runs of 1s in termination or divergence (e.g., works by Lagarias, Terras, or recent computational surveys). \u2014 Contextualizes the hypothesis within established knowledge; may reveal prior evidence for or against a pattern effect, or identify methodological pitfalls (e.g., small sample sizes, biased initial value selection) to avoid."
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions"
+      },
+      "qualifier": {
+        "temporal": "for all finite simulation steps up to 10^6 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "is not associated with a statistically significant increase in divergence (non-termination) under T(n)",
+      "object": "relative to initial values lacking such a block",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 is not associated with a statistically significant increase in divergence (non-termination) under T(n) relative to initial values lacking such a block in domain 'binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions']"
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "causes a statistically significant increase in divergence (non-termination) under T(n)",
+      "object": "relative to initial values lacking such a block",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0 causes a statistically significant increase in divergence (non-termination) under T(n) relative to initial values lacking such a block in domain 'binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions']"
+      ],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position, especially high-bit positions"
+      },
+      "qualifier": {
+        "temporal": "over the first 10^6 iterations of T(n) in computational experiments",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0, specifically when that block is aligned to the least significant bit (i.e., n0 \u2261 7 mod 8)",
+      "predicate": "amplifies the divergence rate (non-termination) under T(n) by at least a factor of 2 compared to other positions of the '111' block",
+      "object": "relative to initial values where the block appears at higher bit positions",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at LSB position versus higher positions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The presence of a contiguous block of exactly three 1-bits in the binary expansion of n0",
+      "predicate": "has no statistically significant impact on divergence (non-termination) under T(n)",
+      "object": "compared to initial values lacking such a block",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "binary dynamics of T(n) for n0 with block pattern '111' at any position"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 37,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
