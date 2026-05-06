@@ -1,0 +1,435 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Integration of technology (e.g., fasting apps) into intermittent fasting regimens",
+      "predicate": "moderates",
+      "object": "user commitment and long-term weight loss success",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Integration of technology (e.g., fasting apps) into intermittent fasting regimens user commitment and long-term weight loss success]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While apps may enhance adherence through reminders and tracking, they could also reduce intrinsic motivation or increase obsessive self-monitoring, leading to higher dropout or rebound weight gain."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Reminders and tracking features in fasting apps",
+      "predicate": "enhance",
+      "object": "short-term adherence to intermittent fasting regimens",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Reminders and tracking features in fasting apps short-term adherence to intermittent fasting regimens]"
+      ],
+      "scope": {
+        "domain": "behavioral adherence during first 4 weeks"
+      },
+      "qualifier": {
+        "temporal": "first 4 weeks of use",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Obsessive self-monitoring via fasting apps",
+      "predicate": "increases",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Obsessive self-monitoring via fasting apps risk of dropout and rebound weight gain in intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "Western countries"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Gamification and social features in fasting apps",
+      "predicate": "reduces",
+      "object": "intrinsic motivation for sustained intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Gamification and social features in fasting apps intrinsic motivation for sustained intermittent fasting]"
+      ],
+      "scope": {
+        "domain": "users with high baseline self-regulation"
+      },
+      "qualifier": {
+        "tension": "This competes with the adherence benefit: what helps short-term compliance may undermine long-term autonomy."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Reminders and tracking features in fasting apps",
+      "predicate": "reduce",
+      "object": "short-term adherence to intermittent fasting regimens among users with high baseline impulsivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Reminders and tracking features in fasting apps short-term adherence to intermittent fasting regimens among users with high baseline impulsivity]",
+        "[PATH:empirical] Randomized controlled trial comparing adherence rates in high-impulsivity users assigned to app-based reminders vs. no-reminder control over 4 weeks \u2014 Directly tests causal effect of reminders on short-term adherence in the target subgroup, providing high internal validity for the disputed hypothesis.",
+        "[PATH:empirical] Ecological momentary assessment (EMA) study tracking daily impulsivity states and app engagement in first-time intermittent fasting users \u2014 Captures real-time fluctuations in impulsivity and response to reminders, clarifying whether the effect is moderated by trait vs. state impulsivity within the specified temporal scope.",
+        "[PATH:literature] Meta-analysis of digital health interventions for dietary adherence, with subgroup analysis by impulsivity measures \u2014 Synthesizes existing evidence across studies to assess consistency of the moderation effect and identify potential confounding variables, strengthening or refuting the hypothesis at a broader level."
+      ],
+      "scope": {
+        "domain": "behavioral adherence during first 4 weeks, moderated by trait impulsivity"
+      },
+      "qualifier": {
+        "temporal": "first 4 weeks of use",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Reminders and tracking features in fasting apps",
+      "predicate": "diminish",
+      "object": "user motivation for long-term adherence to intermittent fasting regimens",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Reminders and tracking features in fasting apps user motivation for long-term adherence to intermittent fasting regimens]",
+        "[PATH:empirical] Longitudinal randomized controlled trial comparing fasting app usage with and without reminders/tracking features, measuring adherence at 3, 6, and 12 months \u2014 Directly tests whether these features diminish motivation over the first 6 months versus a control, providing causal evidence for the disputed hypothesis.",
+        "[PATH:literature] Systematic review of digital health intervention studies on habit formation and motivation decay in dietary adherence apps \u2014 Synthesizes existing findings on how tracking and reminders affect intrinsic motivation and long-term adherence, helping contextualize the hypothesis within broader behavioral science evidence.",
+        "[PATH:theoretical] Self-determination theory framework applied to fasting app design: analysis of autonomy, competence, and relatedness in user experience \u2014 Provides a theoretical basis to predict that excessive reminders and tracking may undermine intrinsic motivation by reducing perceived autonomy, which could explain the hypothesized diminishing effect."
+      ],
+      "scope": {
+        "domain": "behavioral adherence beyond initial engagement period"
+      },
+      "qualifier": {
+        "temporal": "during the first 6 months of use",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Obsessive self-monitoring via fasting apps with gamified rewards",
+      "predicate": "increases",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting compared to apps without gamification",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Obsessive self-monitoring via fasting apps with gamified rewards risk of dropout and rebound weight gain in intermittent fasting compared to apps without gamification]",
+        "[PATH:empirical] Randomized controlled trial comparing dropout rates and 12-month weight trajectories in intermittent fasting users of gamified apps vs. non-gamified tracking apps \u2014 Directly tests the causal effect of gamified self-monitoring on long-term adherence and weight regain, addressing the core hypothesis with high internal validity.",
+        "[PATH:empirical] Longitudinal cohort study using app analytics (e.g., daily log-in frequency, reward redemption patterns) to predict discontinuation and weight rebound in intermittent fasting populations over 6\u201312 months \u2014 Provides real-world behavioral data linking obsessive self-monitoring (measured via engagement metrics) to dropout and rebound, offering ecological validity and potential for dose-response analysis.",
+        "[PATH:literature] Systematic review and meta-analysis of gamification effects on adherence and weight outcomes in digital health interventions for weight loss, with subgroup analysis by fasting protocols \u2014 Synthesizes existing evidence across studies to assess whether gamification consistently increases dropout and rebound in intermittent fasting contexts, controlling for confounding variables."
+      ],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132025",
+        "geographic": "global, predominantly Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Obsessive self-monitoring via fasting apps",
+      "predicate": "decreases",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Obsessive self-monitoring via fasting apps risk of dropout and rebound weight gain in intermittent fasting]",
+        "[PATH:empirical] Longitudinal cohort study comparing dropout and rebound rates among intermittent fasting users of self-monitoring apps vs. non-app users, with >6-month follow-up \u2014 Directly tests the hypothesis by measuring actual behavioral outcomes (dropout and weight regain) in the target population, controlling for confounders like baseline motivation and app engagement features.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials on digital self-monitoring interventions for intermittent fasting, focusing on adherence and weight maintenance beyond 6 months \u2014 Synthesizes existing evidence across studies to assess whether obsessive self-monitoring (e.g., high frequency logging, calorie tracking) is associated with poorer long-term outcomes, providing statistical power and generalizability."
+      ],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of fasting apps",
+        "geographic": "primarily in high-income countries with smartphone saturation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Obsessive self-monitoring via fasting apps",
+      "predicate": "increases",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Obsessive self-monitoring via fasting apps increases risk of dropout and rebound weight gain in intermittent fasting in domain 'long-term weight maintenance beyond 6 months']"
+      ],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Obsessive self-monitoring via fasting apps",
+      "predicate": "does not increase",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Obsessive self-monitoring via fasting apps does not increase risk of dropout and rebound weight gain in intermittent fasting in domain 'long-term weight maintenance beyond 6 months']"
+      ],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "studies conducted between 2018 and 2023",
+        "geographic": "predominantly in North America and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Obsessive self-monitoring via fasting apps that include social comparison features",
+      "predicate": "increases",
+      "object": "risk of dropout and rebound weight gain more than apps without social comparison features",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "Western countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Obsessive self-monitoring via fasting apps",
+      "predicate": "decreases",
+      "object": "risk of dropout and rebound weight gain in intermittent fasting",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term weight maintenance beyond 6 months"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 36,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

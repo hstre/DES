@@ -1,0 +1,344 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Some randomized trials show modest weight loss comparable to caloric restriction in the short term, but long-term adherence and metabolic adaptation effects remain contested, with limited data beyond 12 months."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "produces",
+      "object": "modest weight loss comparable to caloric restriction within 12 months",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting modest weight loss comparable to caloric restriction within 12 months]"
+      ],
+      "scope": {
+        "domain": "short-term intervention (<12 months), controlled trials"
+      },
+      "qualifier": {
+        "evidence": "Randomized trials, short-term adherence high"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months]"
+      ],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence"
+      },
+      "qualifier": {
+        "tension": "Competing mechanism: metabolic slowdown may offset initial benefits"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "is less effective than",
+      "object": "continuous caloric restriction for sustained weight loss due to adherence challenges",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting continuous caloric restriction for sustained weight loss due to adherence challenges]"
+      ],
+      "scope": {
+        "domain": "behavioral adherence in free-living populations"
+      },
+      "qualifier": {
+        "tension": "Qualifying perspective: adherence drop-off beyond 6 months creates epistemic friction with short-term efficacy data"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Intermittent fasting with high-protein intake",
+      "predicate": "attenuates",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting with high-protein intake metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months]",
+        "[PATH:empirical] Randomized controlled trial comparing intermittent fasting (e.g., 5:2 or time-restricted eating) with high-protein (\u22651.6 g/kg/day) versus standard protein intake over 18-24 months, measuring changes in resting metabolic rate, fat-free mass, and weight loss trajectory. \u2014 Directly tests whether high-protein intake attenuates metabolic adaptation in a long-term real-world setting, addressing the core causal claim with controlled conditions.",
+        "[PATH:literature] Meta-analysis of existing studies on protein intake and metabolic adaptation during caloric restriction, focusing on subgroups practicing intermittent fasting for >12 months. \u2014 Synthesizes available evidence to detect consistent attenuation effects, accounting for heterogeneity in fasting protocols and adherence, and can clarify if the hypothesized effect is supported across populations."
+      ],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence, protein intake \u22651.6 g/kg/day"
+      },
+      "qualifier": {
+        "tension": "High-protein diets may preserve lean mass and resting metabolic rate, counteracting the metabolic slowdown observed in standard intermittent fasting protocols"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Intermittent fasting",
+      "predicate": "improves",
+      "object": "long-term weight loss efficacy and metabolic health beyond 12 months",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss efficacy and metabolic health beyond 12 months]",
+        "[PATH:literature] A systematic review and meta-analysis of randomized controlled trials comparing intermittent fasting (e.g., alternate-day fasting, time-restricted eating) to continuous caloric restriction with follow-up of at least 12 months, focusing on weight maintenance and metabolic markers (e.g., HbA1c, lipids, insulin sensitivity). \u2014 Provides pooled effect estimates from existing long-term trials, directly addressing the hypothesis's temporal scope and disputed status by quantifying efficacy and adherence beyond 12 months.",
+        "[PATH:empirical] A prospective cohort study in real-world settings (e.g., using mobile health apps or dietary logs) tracking adherence and weight outcomes over 12\u201324 months in individuals self-selecting intermittent fasting versus standard dietary approaches, with controls for baseline metabolic health. \u2014 Captures real-world adherence and long-term metabolic effects outside controlled trial conditions, addressing the scope domain and clarifying whether benefits persist under typical lifestyle constraints.",
+        "[PATH:theoretical] A theoretical modeling study incorporating dynamic energy balance and metabolic adaptation (e.g., using differential equations of fat oxidation, hunger signaling, and circadian rhythms) to simulate long-term weight loss trajectories under intermittent fasting versus daily restriction. \u2014 Tests mechanistic plausibility of sustained metabolic improvements beyond 12 months, informing whether observed effects are likely due to energy restriction alone or unique fasting-induced pathways, thereby guiding empirical hypothesis refinement."
+      ],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence"
+      },
+      "qualifier": {
+        "temporal": "post-2010 studies, follow-up >12 months",
+        "geographic": "global, primarily high-income countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Intermittent fasting",
+      "predicate": "leads to",
+      "object": "metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting leads to metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months in domain 'long-term intervention (>12 months), real-world adherence']"
+      ],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence"
+      },
+      "qualifier": {
+        "temporal": "after 12 months of intervention",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Intermittent fasting",
+      "predicate": "does not lead to",
+      "object": "clinically significant metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Intermittent fasting does not lead to clinically significant metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months in domain 'long-term intervention (>12 months), real-world adherence']"
+      ],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence"
+      },
+      "qualifier": {
+        "temporal": "studies conducted between 2015 and 2023",
+        "geographic": "primarily North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Intermittent fasting with high-protein refeeding",
+      "predicate": "attenuates",
+      "object": "the metabolic adaptation that reduces long-term weight loss efficacy beyond 12 months",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence, controlled protein intake"
+      },
+      "qualifier": {
+        "tension": "Competing mechanism: protein-induced thermogenesis may counter metabolic slowdown"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Intermittent fasting",
+      "predicate": "enhances",
+      "object": "long-term weight loss efficacy through sustained metabolic health improvements",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term intervention (>12 months), real-world adherence"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C009",
+    "T9[falsifier] on C003 -> C010",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C009",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 25,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C010"
+    ]
+  }
+}
