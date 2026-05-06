@@ -1,0 +1,501 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The structural analogy between the recursive map T(n) and modular state transitions in social networks",
+      "predicate": "predicts",
+      "object": "emergent bistability in network activity levels under modular interaction constraints",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The structural analogy between the recursive map T(n) and modular state transitions in social networks emergent bistability in network activity levels under modular interaction constraints]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "It remains unresolved whether the deterministic modular rules of T(n) can produce realistic, non-trivial social dynamics, or whether stochastic noise and heterogeneous agent behavior in real networks will collapse the predicted patterns into uniform activity or randomness."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The deterministic modular rules of the recursive map T(n)",
+      "predicate": "are sufficient to produce",
+      "object": "emergent bistability in network activity levels, even without stochastic noise or agent heterogeneity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The deterministic modular rules of the recursive map T(n) emergent bistability in network activity levels, even without stochastic noise or agent heterogeneity]"
+      ],
+      "scope": {
+        "domain": "pure computational social dynamics"
+      },
+      "qualifier": {
+        "tension": "This assumes that the deterministic structure alone can sustain non-trivial patterns, but real networks may require additional randomness."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "collapse",
+      "object": "the predicted bistable patterns into uniform activity or randomness",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Stochastic noise and heterogeneous agent behavior in real social networks the predicted bistable patterns into uniform activity or randomness]"
+      ],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {
+        "tension": "This competes with the first sub-claim by questioning the robustness of the analogy under realistic conditions."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The structural analogy between T(n) and modular state transitions",
+      "predicate": "requires",
+      "object": "additional coupling mechanisms or noise injection to generate realistic social dynamics",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The structural analogy between T(n) and modular state transitions additional coupling mechanisms or noise injection to generate realistic social dynamics]"
+      ],
+      "scope": {
+        "domain": "hybrid theoretical-empirical modeling"
+      },
+      "qualifier": {
+        "tension": "This qualifies both previous claims by suggesting that neither pure determinism nor pure randomness is sufficient, creating epistemic friction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The deterministic modular rules of the recursive map T(n)",
+      "predicate": "are sufficient to produce",
+      "object": "emergent bistability in network activity levels, even without stochastic noise or agent heterogeneity, but only when the modular base is prime",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The deterministic modular rules of the recursive map T(n) emergent bistability in network activity levels, even without stochastic noise or agent heterogeneity, but only when the modular base is prime]",
+        "[PATH:empirical] Systematic computational bifurcation analysis of T(n) over prime vs. composite moduli, varying n and initial conditions to map bistability regions \u2014 Directly tests the core claim by comparing dynamics under prime and composite bases, quantifying presence or absence of bistability and periodicity.",
+        "[PATH:literature] Review of known results on nonlinear modular maps (e.g., logistic map modulo m, Collatz-type functions) for periodicity and fixed-point structure \u2014 Provides theoretical context on how prime moduli affect cycle lengths and attractor landscapes, potentially confirming the necessity of primality for bistability.",
+        "[PATH:theoretical] Proof sketch: Show that composite moduli force T(n) into periodic orbits with period dividing the modulus's totient, precluding bistability; for prime moduli, show existence of at least two distinct basins with no cycles \u2014 Offers a mathematical foundation that either confirms the condition or reveals counterexamples, resolving the dispute at a formal level."
+      ],
+      "scope": {
+        "domain": "pure computational social dynamics"
+      },
+      "qualifier": {
+        "tension": "This refines the original claim by specifying a necessary condition (prime modulus) that may resolve the dispute, as composite moduli introduce periodicity that destroys bistability."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Emergent bistability in network activity levels",
+      "predicate": "requires",
+      "object": "stochastic noise or agent heterogeneity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Emergent bistability in network activity levels stochastic noise or agent heterogeneity]",
+        "[PATH:empirical] Systematic computational experiments comparing deterministic and stochastic network models of activity propagation (e.g., Ising-like or threshold models on random and scale-free graphs) \u2014 Directly tests whether removing noise or homogenizing agents eliminates bistability, confirming the necessity of stochastic noise or heterogeneity.",
+        "[PATH:empirical] Agent-based simulations with controlled heterogeneity gradients (e.g., varying thresholds, activation probabilities, or influence weights) to map the phase boundary between monostable and bistable regimes \u2014 Isolates the specific role of agent heterogeneity in enabling bistability, providing quantitative evidence for or against the hypothesis.",
+        "[PATH:theoretical] Mathematical analysis of mean-field approximations and bifurcation theory for coupled nonlinear oscillator or contagion models with and without quenched disorder \u2014 Provides formal proof that stochastic noise or heterogeneity is a necessary condition for bistability in such systems, or identifies alternative mechanisms (e.g., network structure) that could produce bistability without them."
+      ],
+      "scope": {
+        "domain": "pure computational social dynamics"
+      },
+      "qualifier": {
+        "temporal": "in computational simulations with no specified time frame",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "amplify",
+      "object": "the emergence of metastable clusters rather than uniform activity or randomness",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Stochastic noise and heterogeneous agent behavior in real social networks the emergence of metastable clusters rather than uniform activity or randomness]",
+        "[PATH:empirical] Longitudinal interaction data from a large online platform (e.g., Reddit, Twitter, or a social network game) with user activity timestamps and network structure, analyzed using community detection and temporal clustering algorithms to identify metastable clusters under varying noise levels. \u2014 Directly tests whether stochastic noise and heterogeneous behavior in real user populations lead to metastable clusters, as opposed to uniform activity or randomness, by comparing observed cluster persistence with simulation predictions.",
+        "[PATH:theoretical] Agent-based simulation studies that systematically vary noise parameters and heterogeneity (e.g., using the Deffuant model or voter model with heterogeneous update rules) on empirical network topologies, comparing outcomes to baseline models without noise or with homogeneous agents. \u2014 Provides controlled, replicable evidence for the causal role of noise and heterogeneity in amplifying metastable clustering, enabling isolation of mechanisms and comparison with real-world patterns.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on opinion dynamics, social contagion, and collective behavior in online platforms (e.g., from journals like PNAS, Nature Human Behaviour, or Physical Review E) that report cluster formation, focusing on conditions of sustained interaction and heterogeneous populations. \u2014 Synthesizes prior evidence to assess whether metastable clusters are consistently observed under noise and heterogeneity, and whether alternative explanations (e.g., network structure alone) are ruled out, thus confirming or refuting the hypothesis across multiple contexts."
+      ],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {
+        "temporal": "during periods of sustained interaction",
+        "geographic": "in online social network platforms with heterogeneous user populations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "reinforce",
+      "object": "the predicted bistable patterns leading to emergent complexity and stability",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Stochastic noise and heterogeneous agent behavior in real social networks the predicted bistable patterns leading to emergent complexity and stability]",
+        "[PATH:empirical] Re-analysis of empirical social network datasets (e.g., Facebook, Twitter, or collaboration networks) using agent-based models that introduce controlled stochastic noise and measure the emergence of bistable opinion clusters or behavioral regimes. \u2014 Directly tests whether adding realistic noise to heterogeneous agents in real-world network structures produces the predicted bistable patterns, providing confirmatory or disconfirmatory evidence for the hypothesis.",
+        "[PATH:literature] Systematic literature review of studies on noise-induced transitions in social dynamics models (e.g., voter models, threshold models, or Ising-like opinion models) on empirical networks, focusing on reported bistability and complexity metrics. \u2014 Synthesizes existing evidence from multiple studies to assess whether the predicted pattern is consistently observed or refuted across different contexts, strengthening or weakening the hypothesis.",
+        "[PATH:theoretical] Controlled simulation experiments comparing synthetic networks (e.g., scale-free, small-world) with empirical networks under varying noise levels, using statistical tests for bistability (e.g., bimodality of final state distributions, hysteresis analysis). \u2014 Provides a rigorous theoretical benchmark to isolate the role of network structure from noise effects, clarifying whether the hypothesis holds generally or only under specific conditions."
+      ],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {
+        "temporal": "during simulation experiments with synthetic and empirical network data (2000-2020)",
+        "geographic": "global (online and offline social networks across multiple regions)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "disrupt",
+      "object": "the predicted bistable patterns into uniform activity or randomness",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Stochastic noise and heterogeneous agent behavior in real social networks disrupt the predicted bistable patterns into uniform activity or randomness in domain 'empirical social networks']"
+      ],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {
+        "temporal": "during periods of high agent heterogeneity and moderate noise levels",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "preserve",
+      "object": "the predicted bistable patterns despite realistic perturbations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Stochastic noise and heterogeneous agent behavior in real social networks preserve the predicted bistable patterns despite realistic perturbations in domain 'empirical social networks']"
+      ],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132024",
+        "geographic": "global (simulated networks)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Noise injection into T(n) modular state transitions",
+      "predicate": "produces",
+      "object": "phase transitions in social consensus that are absent under pure coupling mechanisms",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Noise injection into T(n) modular state transitions phase transitions in social consensus that are absent under pure coupling mechanisms]",
+        "[PATH:empirical] Controlled agent-based simulations varying noise intensity in T(n) modular state transitions, measuring consensus phase transitions via order parameters (e.g., magnetization, cluster size) \u2014 Directly tests whether noise injection induces phase transitions absent under pure coupling by systematically comparing dynamics with and without noise in simulated transient regimes.",
+        "[PATH:theoretical] Analytical derivation of mean-field equations for T(n) modular state transitions with additive noise, examining bifurcation structure and stability of consensus states \u2014 Provides mathematical confirmation of whether noise can introduce new phase transitions (e.g., noise-induced transitions) that pure coupling cannot, grounding the hypothesis in formal theory.",
+        "[PATH:literature] Literature review of noise-induced phase transitions in coupled dynamical systems (e.g., stochastic Kuramoto models, noisy voter models) and their application to social consensus \u2014 Contextualizes the hypothesis within established results, identifying whether similar noise-driven transitions have been observed in related modular state-transition models, thus supporting or refuting the claim via analogy."
+      ],
+      "scope": {
+        "domain": "hybrid theoretical-empirical modeling"
+      },
+      "qualifier": {
+        "temporal": "during simulated transient regimes in modular state transitions",
+        "geographic": "abstracted from geographically distributed agent-based models"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The structural analogy between T(n) and modular state transitions",
+      "predicate": "does not require",
+      "object": "additional coupling mechanisms or noise injection to generate realistic social dynamics",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The structural analogy between T(n) and modular state transitions additional coupling mechanisms or noise injection to generate realistic social dynamics]",
+        "[PATH:empirical] Agent-based simulation comparing T(n)-based modular state transition models with and without noise injection, measuring the Kullback-Leibler divergence of emergent social dynamics from empirical datasets (e.g., the SNAP social interaction datasets). \u2014 Directly tests whether additional noise or coupling is required by comparing simulation outputs to real-world social dynamics; low divergence without noise would confirm the hypothesis, high divergence would refute it.",
+        "[PATH:theoretical] Analytical derivation of the mapping between the topological properties of T(n) (e.g., its adjacency spectrum or recurrence structure) and the transition probabilities in a modular state machine, drawing on literature from dynamical systems and graph theory (e.g., works by Barab\u00e1si or Watts). \u2014 Provides a formal proof or disproof of the sufficiency of the analogy alone to generate realistic dynamics, without needing extra mechanisms; if the mapping is bijective and preserves entropy, the hypothesis is supported.",
+        "[PATH:literature] Literature review of existing hybrid theoretical-empirical models in social dynamics (e.g., Schelling segregation models, Axelrod cultural diffusion) that use modular state transitions, focusing on whether they explicitly rely on noise or coupling to match empirical data. \u2014 Surveys prior evidence and consensus; if successful models are found that rely solely on structural analogy (like T(n)) without added noise, it strengthens the hypothesis; if all require such mechanisms, it refutes it."
+      ],
+      "scope": {
+        "domain": "hybrid theoretical-empirical modeling"
+      },
+      "qualifier": {
+        "temporal": "during simulation runs with modular state transitions",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "induce",
+      "object": "a third stable state of intermittent cascades rather than uniform activity or randomness",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Stochastic noise and heterogeneous agent behavior in real social networks",
+      "predicate": "preserve",
+      "object": "the predicted bistable patterns against uniform activity or randomness",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "empirical social networks"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
