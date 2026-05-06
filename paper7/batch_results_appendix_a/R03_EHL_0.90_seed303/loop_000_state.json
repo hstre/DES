@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Low-skilled immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers without a high school diploma",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration wages for native workers without a high school diploma]"
+      ],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "short-term"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "High-skilled immigration",
+      "predicate": "increases",
+      "object": "wages for native workers with advanced degrees",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: High-skilled immigration wages for native workers with advanced degrees]"
+      ],
+      "scope": {
+        "domain": "labor economics, high-skilled segment"
+      },
+      "qualifier": {
+        "complementarity": "positive spillover"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Overall immigration",
+      "predicate": "has negligible effect on",
+      "object": "average wages for native workers in the long run",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Overall immigration average wages for native workers in the long run]"
+      ],
+      "scope": {
+        "domain": "macroeconomics, long-term equilibrium"
+      },
+      "qualifier": {
+        "countervailing": "capital adjustment and productivity gains"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Low-skilled immigration",
+      "predicate": "reduces",
+      "object": "employment rates for native workers without a high school diploma, but only in states with no binding minimum wage",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration employment rates for native workers without a high school diploma, but only in states with no binding minimum wage]",
+        "[PATH:empirical] Compare employment trends of native low-skilled workers in states with and without binding minimum wages, using CPS or ACS microdata and a difference-in-differences approach around immigration shocks. \u2014 Directly tests the conditional effect: if the hypothesis holds, negative employment effects should appear only in states without binding minimum wages, serving as a quasi-experimental comparison.",
+        "[PATH:literature] Meta-analysis of existing studies on low-skilled immigration and native employment, stratified by state minimum wage policy (e.g., studies by Card, Borjas, or Peri). \u2014 Synthesizing prior evidence can reveal whether the pattern holds across different datasets and time periods, and whether the 'binding minimum wage' condition has been consistently tested.",
+        "[PATH:theoretical] Structural labor market model incorporating immigration, wage floors, and substitution elasticities between native and immigrant low-skilled workers. \u2014 A calibrated model can simulate the hypothesized interaction, showing under which conditions immigration reduces native employment only when minimum wages are non-binding, and identifying key parameter sensitivities."
+      ],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "short-term",
+        "condition": "absence of a binding minimum wage floor"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases",
+      "object": "economic demand and job opportunities for native workers without a high school diploma",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration economic demand and job opportunities for native workers without a high school diploma]",
+        "[PATH:empirical] Analysis of Current Population Survey (CPS) data merged with local immigration inflows (e.g., using the Borjas approach) to estimate wage and employment effects for native high school dropouts in U.S. urban areas from 2000-2020. \u2014 Directly tests the hypothesis by measuring changes in demand and job opportunities for the target group, controlling for other labor market factors.",
+        "[PATH:literature] Meta-analysis of studies on low-skilled immigration's impact on native labor outcomes (e.g., Peri, 2012; Ottaviano & Peri, 2012) focusing on complementarity vs. substitutability effects in low-skilled segments. \u2014 Synthesizes existing evidence to determine whether the net effect is positive (demand-driven) or negative (competition-driven), clarifying the dispute.",
+        "[PATH:theoretical] Structural labor market model incorporating task specialization and local demand spillovers (e.g., from consumption of immigrant goods/services) to simulate the effect of increased low-skilled immigration on native employment. \u2014 Provides a causal framework to isolate mechanisms\u2014such as increased local demand offsetting substitution\u2014that could confirm or refute the hypothesis beyond reduced-form correlations."
+      ],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "post-2000 period",
+        "geographic": "United States urban labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Low-skilled immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers without a high school diploma",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Low-skilled immigration reduces wages for native workers without a high school diploma in domain 'labor economics, low-skilled segment']"
+      ],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Low-skilled immigration",
+      "predicate": "does not reduce",
+      "object": "wages for native workers without a high school diploma",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Low-skilled immigration does not reduce wages for native workers without a high school diploma in domain 'labor economics, low-skilled segment']"
+      ],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Overall immigration",
+      "predicate": "has a positive effect on",
+      "object": "average wages for native workers with high school education or less in the long run",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Overall immigration average wages for native workers with high school education or less in the long run]",
+        "[PATH:empirical] Long-run panel data studies comparing U.S. states or countries with varying immigration inflows over decades, controlling for capital stock and skill-biased technical change \u2014 Directly tests the long-run impact on low-skilled native wages, isolating the capital deepening and service demand mechanisms from short-run displacement effects.",
+        "[PATH:theoretical] General equilibrium models of immigration with heterogeneous labor and endogenous capital accumulation (e.g., extended versions of Borjas, Ottaviano & Peri frameworks) \u2014 Models formalize the proposed mechanism of complementarity and capital adjustment, allowing sensitivity analysis of key parameters (elasticity of substitution, capital response) to assess whether positive long-run wage effects are plausible.",
+        "[PATH:literature] Meta-analysis of existing empirical literature on immigration's wage effects for low-skilled natives, focusing on long-run estimates and controlling for publication bias \u2014 Synthesizes conflicting findings across studies to determine whether a consensus exists for positive long-run effects, and identifies conditions (e.g., labor market flexibility, capital mobility) under which the effect holds."
+      ],
+      "scope": {
+        "domain": "macroeconomics, long-term equilibrium, labor market segmentation"
+      },
+      "qualifier": {
+        "mechanism": "increased demand for complementary low-skilled services and capital deepening"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Overall immigration",
+      "predicate": "significantly impacts",
+      "object": "average wages for native workers in the long run",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Overall immigration average wages for native workers in the long run]",
+        "[PATH:empirical] Meta-analysis of quasi-experimental studies on immigration's long-run wage effects in OECD countries (e.g., Card, 2009; Borjas, 2014; Peri, 2012) \u2014 Provides systematic empirical evidence on the magnitude and direction of wage impacts for native workers, controlling for skill substitution and complementarity over decades.",
+        "[PATH:theoretical] Dynamic general equilibrium models with heterogeneous labor markets (e.g., Ottaviano & Peri, 2012; Dustmann, Frattini & Preston, 2013) \u2014 Simulates long-run wage equilibrium under immigration shocks, accounting for capital adjustment, technology adoption, and labor supply elasticity, clarifying causal mechanisms.",
+        "[PATH:empirical] Longitudinal panel studies using natural experiments (e.g., Mariel Boatlift, Venezuelan migration to Colombia) with 10\u201320 year follow-up data \u2014 Offers credible causal identification of immigration's persistent wage effects on native workers in flexible labor markets, directly testing the hypothesis' temporal scope."
+      ],
+      "scope": {
+        "domain": "macroeconomics, long-term equilibrium"
+      },
+      "qualifier": {
+        "temporal": "over a period of 10\u201320 years",
+        "geographic": "developed economies with flexible labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases",
+      "object": "employment churn for native workers without a high school diploma",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {
+        "temporal": "short-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases",
+      "object": "economic opportunities and job diversity for native workers without a high school diploma",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "labor economics, low-skilled segment"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C002"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T5[hypothesis_builder] on C002 -> C005",
+    "T5[falsifier] on C002 -> C006",
+    "T1 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C002 -> C011",
+    "T9[falsifier] on C002 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 33,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C010",
+      "C012"
+    ]
+  }
+}

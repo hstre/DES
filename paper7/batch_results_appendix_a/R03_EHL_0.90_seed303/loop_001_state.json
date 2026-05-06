@@ -1,0 +1,397 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in urban labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in urban labor markets]"
+      ],
+      "scope": {
+        "domain": "urban labor markets"
+      },
+      "qualifier": {
+        "temporal": "during periods of economic expansion (2000-2019)",
+        "geographic": "in major U.S. metropolitan areas"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Low-skilled immigration",
+      "predicate": "decreases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in rural labor markets]"
+      ],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "mechanism": "reduced seasonal volatility via labor supply smoothing"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in urban labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in urban labor markets]",
+        "[PATH:empirical] Longitudinal employer-household dynamics data (LEHD) from U.S. Census Bureau, linked with American Community Survey (ACS) migration and occupation data \u2014 LEHD provides quarterly job flows and churn metrics at the metropolitan level. By merging with ACS data on native workers without a high school diploma and controlling for housing cost growth, one can directly test whether low-skilled immigration correlates with increased job separation and rehiring rates in high-housing-cost urban areas during economic expansions.",
+        "[PATH:literature] Meta-analysis of existing studies on immigration and labor market churn, focusing on low-skilled native workers in U.S. cities (e.g., work by Card, Peri, or Ottaviano) \u2014 A systematic review of published and working papers can synthesize evidence on the disputed hypothesis, identifying whether the effect is robust across different datasets, time periods, and housing cost conditions. This would help clarify the conditional nature of the claim (only in cities with high housing cost growth).",
+        "[PATH:theoretical] Simulated general equilibrium model of urban labor markets with heterogeneous workers, immigration shocks, and housing supply constraints \u2014 A calibrated model can isolate the causal mechanism: if low-skilled immigration increases churn by displacing natives or by accelerating job turnover in tight housing markets. This theoretical approach can test the conditional prediction and provide counterfactual scenarios to guide empirical work."
+      ],
+      "scope": {
+        "domain": "urban labor markets"
+      },
+      "qualifier": {
+        "temporal": "during periods of economic expansion (2000-2019)",
+        "geographic": "in major U.S. metropolitan areas",
+        "conditional": "only in cities with high housing cost growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Low-skilled immigration",
+      "predicate": "decreases employment churn for",
+      "object": "native workers without a high school diploma in urban labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in urban labor markets]",
+        "[PATH:empirical] Longitudinal analysis of Current Population Survey (CPS) data merged with local immigration inflows (e.g., using the Borjas approach) to estimate job separation and hiring rates for native high school dropouts in major U.S. urban areas, 2000\u20132020. \u2014 Directly tests whether changes in low-skilled immigration correlate with reduced employment churn (i.e., lower job turnover) for the specified native subgroup, controlling for local economic conditions.",
+        "[PATH:empirical] Ethnographic or case-study research on employer hiring practices and job stability in urban low-wage labor markets (e.g., restaurant, construction, cleaning sectors) with high immigrant shares. \u2014 Provides qualitative evidence on mechanisms\u2014such as employers preferring immigrants for stable, low-turnover positions\u2014that could explain reduced churn for native workers, or refute it by showing displacement effects.",
+        "[PATH:theoretical] Review of theoretical models on labor market matching and job turnover (e.g., search-and-matching models with heterogeneous workers) applied to immigration shocks. \u2014 Helps interpret empirical findings by clarifying conditions under which low-skilled immigration could decrease native job churn (e.g., through complementarity or labor market segmentation) versus increase it."
+      ],
+      "scope": {
+        "domain": "urban labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "major U.S. urban labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in rural labor markets]",
+        "[PATH:empirical] Longitudinal employer-employee matched data from rural counties (e.g., U.S. Census Bureau's LEHD or similar administrative data) tracking job separations and hires among native high school dropouts during seasonal peaks \u2014 Directly tests the displacement mechanism by measuring changes in churn rates for the target group when low-skilled immigrant labor supply increases in peak demand periods, controlling for local economic shocks.",
+        "[PATH:empirical] Natural experiment studies exploiting variation in immigration enforcement policies (e.g., E-Verify mandates or immigration raids) in rural areas to compare employment stability of native low-skilled workers before and after changes in immigrant labor availability \u2014 Provides causal identification by using policy shifts as exogenous shocks to immigrant labor supply, enabling rigorous testing of whether reduced immigrant presence lowers churn for native workers without high school diplomas.",
+        "[PATH:theoretical] Survey or qualitative case studies of employer hiring practices in rural agricultural and service sectors during harvest or tourism peaks \u2014 Elucidates the proposed mechanism by documenting employer preferences for flexible immigrant labor and the resulting displacement patterns, complementing quantitative evidence with behavioral insights and contextual validity."
+      ],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "mechanism": "displacement during peak demand periods due to employer preference for flexible immigrant labor"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Low-skilled immigration native workers without a high school diploma in rural labor markets]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) from the U.S. Census Bureau, linked with county-level immigration data from the American Community Survey (ACS) for 2000-2020 \u2014 QWI provides measures of job churn (hires, separations, turnover) by educational attainment and geography. Combining these with ACS immigration flows allows a difference-in-differences or panel regression analysis to test whether low-skilled immigration in rural counties is associated with increased employment churn for native workers without a high school diploma, controlling for local economic conditions.",
+        "[PATH:empirical] National Agricultural Workers Survey (NAWS) and USDA Economic Research Service county-level data on rural labor markets \u2014 NAWS provides detailed data on low-skilled immigrant workers in rural and agricultural sectors. Merging this with USDA data on employment stability and turnover rates for native low-education workers can isolate the specific impact of immigrant labor supply on churn, accounting for seasonal and industry-specific factors.",
+        "[PATH:literature] Meta-analysis of existing studies on immigration and labor market churn (e.g., Peri & Sparber 2009, Card 2001, and recent papers on rural labor dynamics) \u2014 A systematic review and meta-analysis of published and working papers that estimate the effect of low-skilled immigration on job turnover or displacement, focusing on rural or low-education native workers, can synthesize existing evidence and identify gaps, providing theoretical and empirical grounding to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States rural counties"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Low-skilled immigration",
+      "predicate": "decreases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Low-skilled immigration decreases employment churn for native workers without a high school diploma in rural labor markets in domain 'rural labor markets']"
+      ],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Low-skilled immigration increases employment churn for native workers without a high school diploma in rural labor markets in domain 'rural labor markets']"
+      ],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "United States rural counties"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases wage volatility for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {
+        "mechanism": "crowding out during peak demand periods, amplifying seasonal wage swings"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Low-skilled immigration",
+      "predicate": "increases employment churn for",
+      "object": "native workers without a high school diploma in rural labor markets",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "rural labor markets"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}
