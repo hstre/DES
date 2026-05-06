@@ -1,0 +1,401 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are determined by",
+      "object": "the parity of the initial value n_0, with odd seeds leading exclusively to divergent trajectories and even seeds to finite cycles",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) the parity of the initial value n_0, with odd seeds leading exclusively to divergent trajectories and even seeds to finite cycles]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are determined solely by",
+      "object": "the parity of the initial value n_0, with odd seeds leading to divergent trajectories",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) the parity of the initial value n_0, with odd seeds leading to divergent trajectories]"
+      ],
+      "scope": {
+        "domain": "odd initial values"
+      },
+      "qualifier": {
+        "temporal": "for all t \u2265 0",
+        "geographic": "within the domain of integer arithmetic"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "may depend on",
+      "object": "the specific binary structure of n_0, not merely its parity, so that some odd seeds converge",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) the specific binary structure of n_0, not merely its parity, so that some odd seeds converge]"
+      ],
+      "scope": {
+        "domain": "odd initial values with particular binary patterns"
+      },
+      "qualifier": {
+        "temporal": "under iterative simulation up to 10^6 steps",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The long-term dynamics of the recursive map T(n) for odd initial values",
+      "predicate": "are not solely determined by parity but depend critically on",
+      "object": "the residue class of n_0 modulo 4, with n_0 \u2261 1 (mod 4) producing bounded orbits while n_0 \u2261 3 (mod 4) yields divergence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) for odd initial values the residue class of n_0 modulo 4, with n_0 \u2261 1 (mod 4) producing bounded orbits while n_0 \u2261 3 (mod 4) yields divergence]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) for a large stratified sample of odd n_0 \u2261 1 (mod 4) and n_0 \u2261 3 (mod 4) over 10^8 iterations, tracking orbit maxima and boundedness thresholds \u2014 Directly tests the predicted dichotomy by extending the iteration range far beyond the current 10^6 limit, reducing sampling bias and clarifying whether observed boundedness is transient or persistent.",
+        "[PATH:theoretical] Analytic investigation of the map's behavior under base-2 representation and modular arithmetic, focusing on the effect of the initial residue modulo 4 on the distribution of trailing zeros in iterates \u2014 Provides a rigorous foundation to determine whether the residue class influences the long-term parity dynamics and whether divergence for n_0 \u2261 3 (mod 4) is provable or an artifact of finite simulation.",
+        "[PATH:literature] Systematic literature review of known results on iterated maps with parity-dependent rules, especially the Collatz conjecture and its variants, searching for documented dependencies on initial residues modulo powers of 2 \u2014 Contextualizes the hypothesis within established research, potentially revealing analogous proven behaviors or counterexamples that support or undermine the claimed modulo 4 dichotomy."
+      ],
+      "scope": {
+        "domain": "odd initial values"
+      },
+      "qualifier": {
+        "temporal": "for initial values within the first 10^6 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are significantly influenced by",
+      "object": "additional factors beyond the parity of the initial value n_0, such as specific arithmetic patterns and structure of n_0",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) additional factors beyond the parity of the initial value n_0, such as specific arithmetic patterns and structure of n_0]",
+        "[PATH:empirical] Systematic computational analysis of T(n) trajectories for n_0 with varying binary digit patterns (e.g., runs of 1s, Hamming weight) across a large range of initial values, controlling for parity \u2014 Directly tests whether arithmetic structure beyond parity (e.g., number of trailing zeros, binary entropy) correlates with long-term dynamics, such as cycle length or convergence time, providing confirmatory or refutatory evidence.",
+        "[PATH:theoretical] Theoretical investigation using algebraic or number-theoretic invariants (e.g., modular constraints, p-adic valuations) to derive necessary conditions for long-term behavior that depend on specific residue classes or digit patterns \u2014 If such invariants exist and predict dynamics beyond parity, they would confirm the hypothesis; if no such invariants can be established, the hypothesis is weakened."
+      ],
+      "scope": {
+        "domain": "all initial integer values"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are determined by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary representation of n_0, which forces convergence regardless of parity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) the presence of a contiguous block of exactly three 1-bits in the binary representation of n_0, which forces convergence regardless of parity]",
+        "[PATH:empirical] Systematic simulation across all odd n_0 up to, say, 10^6, isolating those with exactly three consecutive 1-bits in binary, and tracking T(n) until convergence or cycle detection \u2014 Directly tests the hypothesis by checking whether all such initial values indeed converge, and whether the pattern is sufficient regardless of parity.",
+        "[PATH:theoretical] Analytic study of the map T(n) in terms of binary string rewriting, focusing on how a block of three consecutive 1s evolves under iteration and whether it forces a monotonic decrease in some measure (e.g., sum of bits or log n) \u2014 Provides a formal proof or refutation by showing that the binary pattern either always leads to a reduction to a known convergent case or can be disrupted by counterexamples.",
+        "[PATH:literature] Literature on Collatz-like maps and binary pattern dynamics, particularly papers examining the role of consecutive 1-bits in convergence (e.g., works by Lagarias, Terras, or Allouche) \u2014 Places the hypothesis in context of known results and may reveal existing theorems or counterexamples about similar binary constraints in recursive maps."
+      ],
+      "scope": {
+        "domain": "odd initial values with a specific binary pattern of three consecutive 1s"
+      },
+      "qualifier": {
+        "temporal": "for all time steps t \u2265 0",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are invariant under",
+      "object": "the parity of n_0, rendering binary structure irrelevant for convergence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term dynamics of the recursive map T(n) the parity of n_0, rendering binary structure irrelevant for convergence]",
+        "[PATH:empirical] Generate and analyze statistical distributions of convergence times for T(n) across a large, stratified sample of initial n_0 values, explicitly controlling for binary pattern features (e.g., Hamming weight, run lengths) and testing for parity-based differences after transient decay. \u2014 Direct simulation can reveal whether convergence dynamics depend only on parity or are influenced by deeper binary structure, providing quantitative evidence to confirm or refute the invariance claim.",
+        "[PATH:theoretical] Develop a rigorous analytic proof that the long-term dynamics of T(n) depend solely on the parity of n_0, using symbolic dynamics or number-theoretic invariants to show that binary patterns beyond the least significant bit are irrelevant after transients. \u2014 A theoretical derivation would either confirm the hypothesis by establishing invariance or refute it by identifying counterexamples where binary structure affects convergence, thereby resolving the disputed status.",
+        "[PATH:literature] Conduct a systematic literature review of known results on recursive maps similar to T(n) (e.g., Collatz-like functions, cellular automata analogs) to identify prior proofs or counterexamples regarding the role of binary structure versus parity in long-term dynamics. \u2014 Existing research may already contain relevant theorems or empirical findings that directly support or contradict the hypothesis, saving effort and providing context for the disputed claim."
+      ],
+      "scope": {
+        "domain": "all initial values regardless of binary patterns"
+      },
+      "qualifier": {
+        "temporal": "for all t > t_0 after transient effects have decayed",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "depend solely on",
+      "object": "the parity of n_0, so that all odd seeds diverge",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The long-term dynamics of the recursive map T(n) depend solely on the parity of n_0, so that all odd seeds diverge in domain 'odd initial values with particular binary patterns']"
+      ],
+      "scope": {
+        "domain": "odd initial values with particular binary patterns"
+      },
+      "qualifier": {
+        "temporal": "for all integer time steps n \u2265 0 under iterated application",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "depend on",
+      "object": "the specific binary structure of n_0, not merely its parity, so that some odd seeds converge",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The long-term dynamics of the recursive map T(n) depend on the specific binary structure of n_0, not merely its parity, so that some odd seeds converge in domain 'odd initial values with particular binary patterns']"
+      ],
+      "scope": {
+        "domain": "odd initial values with particular binary patterns"
+      },
+      "qualifier": {
+        "temporal": "for all discrete time steps n \u2265 0",
+        "geographic": "no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are fully determined by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0, which forces convergence regardless of parity",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "odd initial values with binary patterns containing a run of three or more consecutive 1s"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The long-term dynamics of the recursive map T(n)",
+      "predicate": "are determined solely by",
+      "object": "the parity of n_0, regardless of its specific binary structure, ensuring all odd seeds diverge",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all odd initial values"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are fully determined by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are fully determined by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0]"
+      ],
+      "scope": {
+        "domain": "binary expansions with block length exactly 3"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n_0 under iteration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are influenced, but not fully determined, by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0]",
+        "[CONFLICT] The claim asserts that a contiguous block of exactly three 1-bits influences but does not fully determine long-term dynamics, yet the low confidence (0.42) and caveat that other patterns or parity may dominate indicate insufficient evidence to settle whether this specific block is a significant factor, leading to dispute."
+      ],
+      "scope": {
+        "domain": "binary expansions with block length at least 3"
+      },
+      "qualifier": {
+        "caveat": "other block patterns or parity may dominate in many cases"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are primarily governed by",
+      "object": "the total number and spacing of 1-bit blocks, not solely by a single triple",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the total number and spacing of 1-bit blocks, not solely by a single triple]"
+      ],
+      "scope": {
+        "domain": "all binary expansions"
+      },
+      "qualifier": {
+        "competing_perspective": "emphasizes block multiplicity over exact triple presence"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are fully determined by",
+      "object": "the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0, regardless of the block's position within the expansion",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0, regardless of the block's position within the expansion]",
+        "[PATH:empirical] Systematic computational exploration of T(n) for all n_0 up to 2^20, categorizing binary expansions by presence and position of exactly three contiguous 1-bits, and measuring convergence or divergence under iteration \u2014 A large-scale empirical scan can directly test whether the hypothesized condition correlates with long-term dynamics, and whether the block's position matters, to confirm or refute the claim with statistical power.",
+        "[PATH:theoretical] Theoretical analysis of the recursive map T(n) using symbolic dynamics on binary strings, focusing on invariant sets and the role of specific block patterns (e.g., '111') in determining eventual periodicity or escape \u2014 A rigorous mathematical proof or counterexample could establish whether the presence of a contiguous triple-1 block is necessary and sufficient for determining dynamics, potentially revealing deeper structural constraints."
+      ],
+      "scope": {
+        "domain": "binary expansions with block length exactly 3"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n_0 under iteration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are influenced by",
+      "object": "multiple factors beyond the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) multiple factors beyond the presence of a contiguous block of exactly three 1-bits in the binary expansion of n_0]",
+        "[PATH:empirical] Systematic computational exploration of T(n) dynamics across a diverse set of initial binary strings with varying patterns (e.g., isolated 1s, runs of length 2 or 4, alternating bits, sparse blocks) and statistical analysis of eventual periodicity or growth \u2014 Directly tests whether non-3-bit-block features (e.g., run length, spacing, Hamming weight) systematically alter long-term behavior, providing evidence for or against the hypothesis that multiple factors matter.",
+        "[PATH:theoretical] Theoretical derivation of invariants or conserved quantities under T(n) using algebraic or combinatorial methods (e.g., linear recurrence relations, modular constraints, or symbolic dynamics) \u2014 If rigorous invariants exist that depend only on the presence of a contiguous block of three 1-bits, the hypothesis would be refuted; conversely, if invariants require other binary features, the hypothesis is supported.",
+        "[PATH:literature] Literature survey of known results on similar recursive maps over binary strings (e.g., Collatz-like functions, cellular automata rules, or binary shift maps) that identify critical structural determinants of dynamics \u2014 Existing studies may already demonstrate that factors like block length, parity patterns, or fractal dimensions influence long-term behavior, providing indirect evidence for or against the hypothesis."
+      ],
+      "scope": {
+        "domain": "binary expansions with various structural properties"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n_0 under iterated application"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are fully determined by",
+      "object": "the parity of the number of contiguous blocks of exactly three 1-bits in the binary expansion of n_0, when n_0 is odd",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) the parity of the number of contiguous blocks of exactly three 1-bits in the binary expansion of n_0, when n_0 is odd]",
+        "[PATH:empirical] Systematic computational census of odd starting numbers with binary expansions containing at least one block of three 1-bits, tracking T(n) dynamics and recording parity of block counts over many iterations \u2014 Direct simulation across a large sample (e.g., all odd n_0 up to 2^20) can test whether the parity of contiguous triple-1 blocks consistently predicts long-term behavior (e.g., convergence to a fixed point or cycle). Discrepancies would refute the hypothesis.",
+        "[PATH:theoretical] Analytical derivation linking the recursive map T(n) to binary block structure, possibly using automata theory or symbolic dynamics \u2014 A formal proof that T(n) only depends on the parity of triple-1 blocks would confirm the hypothesis; conversely, showing a counterexample where two numbers with same parity but different long-term dynamics would refute it. This could involve constructing a state machine that exactly models T's action on binary strings.",
+        "[PATH:literature] Review of existing literature on recursive maps and binary block patterns (e.g., Collatz-like maps, cellular automata, or number-theoretic transformations) \u2014 Prior work may have already characterized similar dependencies (e.g., parity of runs in binary expansions). Finding a known theorem or counterexample that either supports or contradicts the claim would provide strong evidence without new computation."
+      ],
+      "scope": {
+        "domain": "odd starting numbers with binary expansions containing at least one block of three 1-bits"
+      },
+      "qualifier": {
+        "temporal": "for all time steps t \u2265 0 given the initial condition",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the long-term dynamics of the recursive map T(n)",
+      "predicate": "are predominantly determined by",
+      "object": "global structural properties of n_0's binary expansion, rather than isolated patterns like a contiguous block of three 1-bits",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the long-term dynamics of the recursive map T(n) global structural properties of n_0's binary expansion, rather than isolated patterns like a contiguous block of three 1-bits]",
+        "[PATH:empirical] Systematic simulation study comparing the long-term dynamics of T(n) for initial values n_0 whose binary expansions differ only in global structural properties (e.g., fractal dimension, autocorrelation) vs. those differing only in the presence/absence of a specific 3-bit pattern, with statistical analysis of trajectory lengths and attractor distributions. \u2014 Directly tests whether global structural features (e.g., block entropy, Kolmogorov complexity) dominate over local patterns like '111' in determining outcomes, by controlling for confounds and measuring effect sizes across a large sample of n_0.",
+        "[PATH:theoretical] Theoretical derivation linking the dynamics of T(n) to the binary expansion's autocorrelation function or its spectral density, using tools from symbolic dynamics and ergodic theory, to prove that the map's sensitivity to global structure is a consequence of its definition. \u2014 Provides a formal framework to explain why global properties (e.g., long-range correlations) would dominate, potentially refuting the claim if the derivation shows that isolated patterns can also be decisive under certain conditions.",
+        "[PATH:literature] Literature review of known results on similar recursive maps (e.g., Collatz-like functions, cellular automata) that relate long-term behavior to global binary expansion properties, such as the role of prefix-suffix structures or entropy in determining eventual cycles. \u2014 Contextualizes the hypothesis within established research, identifying analogous cases where global properties were shown to be dominant or where local patterns were found to be critical, thus informing the plausibility of the claim."
+      ],
+      "scope": {
+        "domain": "binary expansions with varying complexity"
+      },
+      "qualifier": {
+        "temporal": "over all iterates from n_0 to termination"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 27,
+  "focus_claim_id": "C008",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007"
+    ],
+    "falsifier": [
+      "C006",
+      "C008"
+    ]
+  }
+}
