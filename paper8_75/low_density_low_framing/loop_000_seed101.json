@@ -1,0 +1,409 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "exhibits a finite number of distinct cycles that are independent of the starting integer n",
+      "object": "the behavior of T(n) for all n \u2208 \u2115",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules the behavior of T(n) for all n \u2208 \u2115]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Experimental evidence suggests some starting values (e.g., n=1) lead to a short cycle (1 \u2192 6 \u2192 2 \u2192 3 \u2192 1), while others (e.g., n=4) appear to diverge to large values, but no proof exists that the map has only finitely many cycles or that divergence is unbounded for all non-cyclic seeds."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "has at least one finite cycle",
+      "object": "starting integer n = 1",
+      "status": "disputed",
+      "confidence": 0.85,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules starting integer n = 1]"
+      ],
+      "scope": {
+        "domain": "empirical evidence for n=1"
+      },
+      "qualifier": {
+        "tension": "This cycle is well-documented for n=1, but does not generalize to all starting values."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "exhibits unbounded divergence for infinitely many starting integers",
+      "object": "the set of n that do not belong to any finite cycle",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules the set of n that do not belong to any finite cycle]"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior for large n"
+      },
+      "qualifier": {
+        "tension": "Experimental evidence for n=4 suggests divergence, but no proof exists that this behavior is universal or that cycles are finite in number."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "may have infinitely many distinct cycles",
+      "object": "the complete set of starting integers n \u2208 \u2115",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules the complete set of starting integers n \u2208 \u2115]"
+      ],
+      "scope": {
+        "domain": "theoretical possibility"
+      },
+      "qualifier": {
+        "tension": "This competes with the hypothesis of finitely many cycles; the known short cycle for n=1 does not rule out additional cycles at larger or more exotic seeds."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "exhibits eventual convergence to finite cycles for all sufficiently large starting integers",
+      "object": "the set of n that do not belong to any finite cycle",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules the set of n that do not belong to any finite cycle]",
+        "[PATH:empirical] Extensive computational search for cycles up to a large bound (e.g., 10^9) with rigorous cycle detection algorithms and statistical analysis of trajectory lengths \u2014 Systematic simulation can determine whether all sufficiently large starting numbers eventually enter a finite cycle, and whether any divergent trajectories exist. The reported divergence at n=4 can be tested for robustness and generality.",
+        "[PATH:theoretical] Analytic number theory or dynamical systems approach to prove existence of an invariant measure or Lyapunov function for T(n), or to derive necessary conditions for divergence \u2014 A theoretical proof that T(n) is eventually periodic for all large n (or that a divergent orbit exists) would resolve the hypothesis. This could involve studying congruence constraints, growth rates, or ergodic properties of the map.",
+        "[PATH:literature] Survey of known results on similar recursive maps (e.g., Collatz-like functions, piecewise linear maps with congruence rules) in the literature \u2014 Existing work on related maps may offer techniques or partial results (e.g., classification of cycles, bounds on cycle lengths) that can be adapted to this specific T(n), potentially confirming or refuting the hypothesis."
+      ],
+      "scope": {
+        "domain": "asymptotic behavior for large n"
+      },
+      "qualifier": {
+        "tension": "Experimental evidence for n=4 suggests divergence, but no proof exists that this behavior is universal or that cycles are finite in number."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "exhibits unbounded divergence for infinitely many starting integers",
+      "object": "the set of n that do not belong to any finite cycle",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given congruence rules exhibits unbounded divergence for infinitely many starting integers the set of n that do not belong to any finite cycle in domain 'asymptotic behavior for large n']"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior for large n"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "does not exhibit unbounded divergence for infinitely many starting integers",
+      "object": "the set of n that do not belong to any finite cycle",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given congruence rules does not exhibit unbounded divergence for infinitely many starting integers the set of n that do not belong to any finite cycle in domain 'asymptotic behavior for large n']"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior for large n"
+      },
+      "qualifier": {
+        "temporal": "asymptotic limit as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "has only finitely many distinct cycles",
+      "object": "the complete set of starting integers n \u2208 \u2115",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given congruence rules the complete set of starting integers n \u2208 \u2115]",
+        "[PATH:empirical] Exhaustive computational search for cycles up to a very large bound (e.g., 10^12) using optimized collision detection and cycle-finding algorithms (e.g., Floyd's or Brent's algorithm) on the map T(n). \u2014 If no new cycles are found beyond the known one for n=1 up to a high bound, it increases confidence in the finitely many cycles hypothesis; discovery of a new cycle would refute it.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using number-theoretic invariants (e.g., modular constraints, growth rates, or potential functions) to prove that all trajectories either converge to a known cycle or diverge, thereby bounding the number of possible cycles. \u2014 A rigorous proof that the map is eventually periodic with only a limited set of attractors would confirm the hypothesis, while a proof of infinite distinct cycles would refute it.",
+        "[PATH:literature] Systematic literature review of known results on similar piecewise linear maps or Collatz-type problems (e.g., the Collatz conjecture, 3x+1 problem variants) to identify analogous proven cycle structures or known counterexamples. \u2014 If analogous maps have been shown to have only finitely many cycles, it supports the hypothesis; if such maps often exhibit infinitely many cycles under certain conditions, it weakens the hypothesis."
+      ],
+      "scope": {
+        "domain": "theoretical possibility"
+      },
+      "qualifier": {
+        "tension": "This competes with the hypothesis of finitely many cycles; the known short cycle for n=1 does not rule out additional cycles at larger or more exotic seeds."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "has infinitely many distinct cycles",
+      "object": "the complete set of starting integers n \u2208 \u2115",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given congruence rules has infinitely many distinct cycles the complete set of starting integers n \u2208 \u2115 in domain 'theoretical possibility']"
+      ],
+      "scope": {
+        "domain": "theoretical possibility"
+      },
+      "qualifier": {
+        "temporal": "for all n \u2208 \u2115",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "The recursive map T(n) defined by the given congruence rules",
+      "predicate": "has only finitely many distinct cycles",
+      "object": "the complete set of starting integers n \u2208 \u2115",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given congruence rules has only finitely many distinct cycles the complete set of starting integers n \u2208 \u2115 in domain 'theoretical possibility']"
+      ],
+      "scope": {
+        "domain": "theoretical possibility"
+      },
+      "qualifier": {
+        "temporal": "as of the current state of research",
+        "geographic": "universal"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) defined by congruence rules",
+      "predicate": "exhibits a bifurcation in long-term behavior depending on initial conditions",
+      "object": "with a dense subset of starting integers converging to finite cycles while a complementary sparse but infinite subset diverges unboundedly",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] Both hypotheses are supported with equal confidence, suggesting that the apparent contradiction arises from different subsets of starting integers. A refined claim that the map's dynamics are not uniform\u2014most large numbers converge, but infinitely many diverge\u2014integrates both perspectives without contradiction and points to a more complex, possibly fractal, phase space structure."
+      ],
+      "scope": {
+        "domain": "asymptotic behavior for large n"
+      },
+      "qualifier": {
+        "tension": "Experimental evidence for n=4 suggests divergence, but no proof exists that this behavior is universal or that cycles are finite in number."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n)",
+      "predicate": "exhibits",
+      "object": "a finite number of distinct cycles within any bounded initial segment of \u2115, but an infinite number of distinct cycles when considering all \u2115 due to non-periodic long-range behavior",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C008, B003]",
+        "[SYNTHESIS] Branch A's finite-cycle claim may be true for all starting integers that eventually fall into a small attractor set, while Branch B's infinite-cycle claim could hold if the map generates divergent or ever-larger cycles that escape that attractor. The contradiction resolves by distinguishing between cycles that are reachable from any initial integer (finite) versus cycles that exist in the full phase space (infinite), possibly due to a fractal or self-similar structure where new cycles appear at arbitrarily large scales."
+      ],
+      "scope": {
+        "domain": "theoretical possibility"
+      },
+      "qualifier": {
+        "tension": "This competes with the hypothesis of finitely many cycles; the known short cycle for n=1 does not rule out additional cycles at larger or more exotic seeds."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T5 on C004",
+    "T1 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B003",
+    "T7 on B003",
+    "T8 on B003",
+    "T3 on B004",
+    "T9 on C004",
+    "T7 on B004",
+    "T8 on B004",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 2,
+  "iteration": 32,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 0,
+  "roles_generated": {}
+}

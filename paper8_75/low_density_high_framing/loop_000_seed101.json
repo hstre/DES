@@ -1,0 +1,274 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) with mod-3 branching",
+      "predicate": "has a previously undetected non-trivial cycle",
+      "object": "beyond the known fixed point at n=1 and the 2-cycle (2, 4)",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with mod-3 branching beyond the known fixed point at n=1 and the 2-cycle (2, 4)]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Preliminary computational searches up to 10^7 have found only the cycles {1} and {2,4}, but the map's piecewise linear structure resembles Collatz-type problems where large cycles or divergent orbits may exist beyond current search bounds; the existence of any other cycle remains an open question."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "has no non-trivial cycles for n \u2264 10^7",
+      "object": "based on exhaustive computational search up to that bound",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: the map T(n) with mod-3 branching based on exhaustive computational search up to that bound]"
+      ],
+      "scope": {
+        "domain": "computational enumeration"
+      },
+      "qualifier": {
+        "method": "exhaustive search",
+        "bound": "10^7"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "is structurally analogous to Collatz-type maps known to harbor large cycles or divergent orbits",
+      "object": "beyond current search limits (n > 10^7)",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the map T(n) with mod-3 branching beyond current search limits (n > 10^7)]"
+      ],
+      "scope": {
+        "domain": "structural analogy and open problem status"
+      },
+      "qualifier": {
+        "tension": "The piecewise linear form resembles systems where cycles appear only at astronomically large values, making search-based absence inconclusive."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "is likely to have no other cycles beyond {1} and {2,4}",
+      "object": "if the map is eventually periodic for all starting values",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the map T(n) with mod-3 branching if the map is eventually periodic for all starting values]"
+      ],
+      "scope": {
+        "domain": "theoretical convergence properties"
+      },
+      "qualifier": {
+        "competing_perspective": "This sub-claim assumes eventual periodicity, which is unproven; the absence of cycles up to 10^7 may reflect a finite search limit rather than a property of the map."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "is structurally dissimilar to Collatz-type maps known to harbor large cycles or divergent orbits",
+      "object": "beyond current search limits (n > 10^7)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the map T(n) with mod-3 branching beyond current search limits (n > 10^7)]",
+        "[PATH:empirical] Extend computational search for cycles and divergent trajectories in T(n) up to n = 10^12 using optimized modular arithmetic and cycle-detection algorithms, with statistical analysis of orbit lengths and maxima. \u2014 Directly tests whether large cycles or divergent orbits appear beyond the current limit, addressing the inconclusiveness of search-based absence due to potentially astronomically large values.",
+        "[PATH:theoretical] Apply ergodic theory and measure-preserving transformation analysis to T(n), comparing its invariant measures and Lyapunov exponents to known Collatz-type maps (e.g., 3x+1, 5x+1) that exhibit large cycles or divergence. \u2014 Provides a rigorous structural comparison of dynamical properties, potentially confirming or refuting dissimilarity beyond mere computational limits.",
+        "[PATH:literature] Survey literature on piecewise linear maps with mod-3 branching, focusing on known results about cycle existence, divergence criteria, and connections to Diophantine approximation or p-adic analysis (e.g., works by Lagarias, Terras, or Tao). \u2014 Contextualizes T(n) within established theoretical frameworks, revealing whether its structure is genuinely novel or falls under known categories that predict large cycles."
+      ],
+      "scope": {
+        "domain": "structural analogy and open problem status"
+      },
+      "qualifier": {
+        "tension": "The piecewise linear form resembles systems where cycles appear only at astronomically large values, making search-based absence inconclusive."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "is structurally analogous to Collatz-type maps known to harbor large cycles or divergent orbits",
+      "object": "beyond current search limits (n > 10^7)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the map T(n) with mod-3 branching is structurally analogous to Collatz-type maps known to harbor large cycles or divergent orbits beyond current search limits (n > 10^7) in domain 'structural analogy and open problem status']"
+      ],
+      "scope": {
+        "domain": "structural analogy and open problem status"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global mathematical research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the map T(n) with mod-3 branching",
+      "predicate": "is not structurally analogous to Collatz-type maps known to harbor large cycles or divergent orbits",
+      "object": "beyond current search limits (n > 10^7)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the map T(n) with mod-3 branching is not structurally analogous to Collatz-type maps known to harbor large cycles or divergent orbits beyond current search limits (n > 10^7) in domain 'structural analogy and open problem status']"
+      ],
+      "scope": {
+        "domain": "structural analogy and open problem status"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global mathematical literature"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "T(n) with mod-3 branching",
+      "predicate": "may exhibit",
+      "object": "structural features that are both dissimilar and analogous to known Collatz-type maps, depending on the scale of analysis",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] The two hypotheses can be reconciled by recognizing that local structural dissimilarities (e.g., branching rules) do not preclude global dynamical analogies (e.g., existence of large cycles or divergent orbits). The apparent contradiction arises from conflating different levels of structural comparison. A refined claim integrates both perspectives by specifying that T(n) differs in mod-3 branching pattern from maps with known large cycles/divergent orbits, but shares deeper dynamical properties that could still permit such phenomena beyond current search limits."
+      ],
+      "scope": {
+        "domain": "structural analogy and open problem status"
+      },
+      "qualifier": {
+        "tension": "The piecewise linear form resembles systems where cycles appear only at astronomically large values, making search-based absence inconclusive."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 20,
+  "focus_claim_id": "C008",
+  "anti_delphi_activations": 0,
+  "roles_generated": {}
+}

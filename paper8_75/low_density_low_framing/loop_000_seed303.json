@@ -1,0 +1,247 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "exhibits a finite set of attractor cycles for all sufficiently large natural numbers",
+      "object": "a conjectured universal attractor structure",
+      "status": "supported",
+      "confidence": 0.4,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) defined by n mod 3 cases a conjectured universal attractor structure]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Empirical exploration suggests some initial values may diverge to infinity or enter long transient cycles, but no proof exists whether all orbits eventually converge to a small cycle or whether unbounded growth occurs for some starting n."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "has been observed to converge to one of a small set of attractor cycles (e.g., 1\u21924\u21922\u21921, 5\u2192... ) for all n up to 10^8",
+      "object": "a finite set of attractor cycles for all sufficiently large natural numbers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) defined by n mod 3 cases a finite set of attractor cycles for all sufficiently large natural numbers]",
+        "[PATH:empirical] Extend empirical simulation to n up to 10^12 using distributed computing, and analyze the frequency and distribution of discovered cycles \u2014 Current evidence is limited to 10^8; extending the range by several orders of magnitude can reveal whether new attractor cycles appear or convergence patterns break, directly testing the hypothesis for larger n.",
+        "[PATH:theoretical] Develop a rigorous mathematical analysis of the map's dynamics using number theory and ergodic theory, focusing on invariant measures or modular constraints that could prove convergence to a finite set of cycles \u2014 A theoretical proof or counterexample would resolve whether the observed behavior is a universal property or a finite-range artifact; this direction addresses the tension noted in the qualifier.",
+        "[PATH:literature] Search for known results on similar piecewise linear maps (e.g., Collatz-like functions) in the literature, particularly studies on the 3x+1 problem and its generalizations \u2014 The map resembles Collatz-type iterations; reviewing existing theorems and counterexamples for such maps can provide insights into whether finite attractor sets are typical or exceptional for all sufficiently large n."
+      ],
+      "scope": {
+        "domain": "empirical simulation up to 10^8"
+      },
+      "qualifier": {
+        "tension": "Simulation suggests universal convergence, but this may be an artifact of limited range; larger n could behave differently."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "some initial values of the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "may diverge to infinity or enter arbitrarily long transient cycles before eventual convergence",
+      "object": "a competing scenario where the attractor structure is not universal",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: some initial values of the recursive map T(n) defined by n mod 3 cases a competing scenario where the attractor structure is not universal]"
+      ],
+      "scope": {
+        "domain": "theoretical possibility for certain residue classes or sparse starting numbers"
+      },
+      "qualifier": {
+        "tension": "No rigorous proof of divergence exists, but analytic heuristics indicate potential for unbounded growth, contradicting the universal attractor hypothesis."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "some initial values of the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "must converge to a finite universal attractor for all initial values",
+      "object": "a competing scenario where the attractor structure is universal and no divergence or arbitrarily long transients occur",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: some initial values of the recursive map T(n) defined by n mod 3 cases a competing scenario where the attractor structure is universal and no divergence or arbitrarily long transients occur]",
+        "[PATH:empirical] Exhaustive computational search for all initial values up to 10^9, tracking orbit lengths and maximum values to detect any divergence or arbitrarily long transients \u2014 Systematic simulation across a large range of initial values can test the claim of universal finite attractors. If any initial value shows unbounded growth or transient lengths exceeding a bound, the hypothesis is refuted. If all converge within a practical limit, it provides supporting (though not rigorous) evidence.",
+        "[PATH:theoretical] Analytic study of the map's Lyapunov exponents or drift analysis using a probabilistic model (e.g., assuming independence of residues and computing expected log growth) \u2014 If the expected log growth under a suitable stochastic model is positive for some residue classes, that suggests the possibility of divergence, contradicting the universal attractor hypothesis. Conversely, a negative or zero expected growth supports convergence. This approach can clarify whether the heuristic potential for unbounded growth is real or spurious.",
+        "[PATH:literature] Literature review of known results on similar piecewise linear maps (e.g., Collatz-type maps with mod 3 cases) and their known attractor structures, particularly those with proven universal attractors or proven divergence \u2014 Existing rigorous results on related maps (e.g., the 3x+1 problem, generalized Collatz functions) can provide analogous proof techniques or counterexamples. If similar maps have been shown to have divergent orbits or non-universal attractors, that weakens the hypothesis. If all studied cases converge, it strengthens the plausibility."
+      ],
+      "scope": {
+        "domain": "theoretical possibility for certain residue classes or sparse starting numbers"
+      },
+      "qualifier": {
+        "tension": "No rigorous proof of divergence exists, but analytic heuristics indicate potential for unbounded growth, contradicting the universal attractor hypothesis."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "some initial values of the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "may diverge to infinity or enter arbitrarily long transient cycles before eventual convergence",
+      "object": "a competing scenario where the attractor structure is not universal",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms some initial values of the recursive map T(n) defined by n mod 3 cases may diverge to infinity or enter arbitrarily long transient cycles before eventual convergence a competing scenario where the attractor structure is not universal in domain 'theoretical possibility for certain residue classes or sparse starting numbers']"
+      ],
+      "scope": {
+        "domain": "theoretical possibility for certain residue classes or sparse starting numbers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration, with no asymptotic bound on transient length",
+        "geographic": "applicable to any integer lattice, with no geographic constraints"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "all initial values of the recursive map T(n) defined by n mod 3 cases",
+      "predicate": "eventually converge to a finite universal attractor, precluding genuine divergence or arbitrarily long transients",
+      "object": "the universal attractor hypothesis",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms all initial values of the recursive map T(n) defined by n mod 3 cases eventually converge to a finite universal attractor, precluding genuine divergence or arbitrarily long transients the universal attractor hypothesis in domain 'theoretical possibility for certain residue classes or sparse starting numbers']"
+      ],
+      "scope": {
+        "domain": "theoretical possibility for certain residue classes or sparse starting numbers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps n \u2265 0",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) defined by n mod 3 cases",
+      "predicate": "exhibits",
+      "object": "a universal attractor for all initial values, but with a subset of initial conditions that produce arbitrarily long transients before convergence, and no divergence to infinity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C004, B001]",
+        "[SYNTHESIS] Both hypotheses are supported with high confidence but appear contradictory; however, they can be reconciled if the attractor structure is universal (all orbits eventually converge to the same finite set) while some initial values experience arbitrarily long transient cycles before reaching that attractor. This merges the universal attractor claim of Branch A with the transient behavior noted in Branch B, without requiring divergence to infinity, thus integrating both perspectives into a single nuanced claim."
+      ],
+      "scope": {
+        "domain": "theoretical possibility for certain residue classes or sparse starting numbers"
+      },
+      "qualifier": {
+        "tension": "No rigorous proof of divergence exists, but analytic heuristics indicate potential for unbounded growth, contradicting the universal attractor hypothesis."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 19,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 0,
+  "roles_generated": {}
+}

@@ -1,0 +1,421 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "has a finite number of distinct cycles for all positive integer inputs",
+      "object": "a finite set of cycles (conjectured to be exactly one or two)",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 a finite set of cycles (conjectured to be exactly one or two)]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "has exactly one nontrivial cycle for all positive integers not divisible by 3",
+      "object": "a single cycle (e.g., starting from 1 \u2192 6 \u2192 2 \u2192 3 \u2192 1)",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 a single cycle (e.g., starting from 1 \u2192 6 \u2192 2 \u2192 3 \u2192 1)]",
+        "[PATH:empirical] Extensive computational search for cycles and divergent trajectories in the positive integers not divisible by 3, up to a large bound (e.g., 10^9) using optimized modular arithmetic and cycle detection algorithms. \u2014 Systematic computational verification can either find additional cycles or confirm that only the known cycle exists within the tested range, providing empirical support or refutation for the hypothesis.",
+        "[PATH:theoretical] Analytic study of the map's dynamics via modular constraints and invariant theory, e.g., analyzing the behavior modulo powers of 3 or using linear algebra to prove that all trajectories must eventually enter the proposed cycle. \u2014 A rigorous mathematical proof showing that the map is eventually periodic with a unique attractor for all numbers in the domain would confirm the hypothesis; conversely, finding a theoretical obstruction or counterexample would refute it.",
+        "[PATH:literature] Literature review of known results on similar piecewise linear maps related to the Collatz conjecture or generalized 3x+1 problems, such as the work of Lagarias, Chamberland, or Matthews. \u2014 Existing research may contain theorems or partial results that apply to this specific map, either proving uniqueness of cycles or providing methods to analyze such systems, thus informing the hypothesis's plausibility."
+      ],
+      "scope": {
+        "domain": "positive integers not divisible by 3"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers not divisible by 3",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "exhibits at least two distinct cycles for inputs that are multiples of 3",
+      "object": "a cycle containing 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and a separate cycle containing 9 \u2192 3 (short cycle)",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 a cycle containing 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and a separate cycle containing 9 \u2192 3 (short cycle)]"
+      ],
+      "scope": {
+        "domain": "positive integers that are multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "as of current computational verification"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T7",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "may have an infinite number of divergent trajectories (non-cyclic) for certain residue classes mod 3",
+      "object": "unbounded growth for some inputs (e.g., n \u2261 1 mod 3 with large odd factors)",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 unbounded growth for some inputs (e.g., n \u2261 1 mod 3 with large odd factors)]"
+      ],
+      "scope": {
+        "domain": "positive integers with n \u2261 1 mod 3 and n large"
+      },
+      "qualifier": {
+        "condition": "if the map behaves like a Collatz-type divergent system"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "does not exhibit at least two distinct cycles for inputs that are multiples of 3",
+      "object": "all inputs that are multiples of 3 eventually converge to a single cycle, with no separate short cycle containing 9 \u2192 3",
+      "status": "supported",
+      "confidence": 0.9500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 all inputs that are multiples of 3 eventually converge to a single cycle, with no separate short cycle containing 9 \u2192 3]",
+        "[PATH:empirical] Computational search over all multiples of 3 up to a high bound (e.g., 10^9) to enumerate all cycles and verify convergence to a single cycle, with special attention to the trajectory of 9. \u2014 Direct simulation can confirm or refute the existence of distinct cycles for multiples of 3 by exhaustively checking initial values in the domain. If a second cycle is found, the hypothesis is refuted; if all converge to the same cycle, confidence increases.",
+        "[PATH:theoretical] Analytic proof using modular arithmetic and invariant theory to show that for inputs divisible by 3, the mapping forces eventual entry into the cycle containing 3, and that no other cycle is possible due to constraints on residues modulo powers of 3. \u2014 A rigorous mathematical argument can definitively settle the hypothesis by demonstrating that the dynamics on multiples of 3 are constrained to a single attractor, or by proving the existence of a separate cycle involving 9.",
+        "[PATH:literature] Literature review of known results on piecewise linear maps similar to the Collatz-like function, particularly studies of the map T(n) = n/3 for n \u2261 0 mod 3, and related transformations for other residues, to see if analogous maps exhibit multiple cycles on residue classes. \u2014 Existing research on generalized Collatz problems may provide theorems or counterexamples that apply directly to this map, saving computational effort and offering theoretical insights into cycle structure."
+      ],
+      "scope": {
+        "domain": "positive integers that are multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "for all positive integer multiples of 3 considered as initial inputs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "exhibits at least two distinct cycles for inputs that are multiples of 3",
+      "object": "a cycle containing 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and a separate cycle containing 9 \u2192 3 (short cycle)",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 exhibits at least two distinct cycles for inputs that are multiples of 3 a cycle containing 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and a separate cycle containing 9 \u2192 3 (short cycle) in domain 'positive integers that are multiples of 3']"
+      ],
+      "scope": {
+        "domain": "positive integers that are multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "does not exhibit at least two distinct cycles for inputs that are multiples of 3",
+      "object": "the claimed cycles 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and 9 \u2192 3 collapse into a single cycle or contain errors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 does not exhibit at least two distinct cycles for inputs that are multiples of 3 the claimed cycles 3 \u2192 1 \u2192 6 \u2192 2 \u2192 3 and 9 \u2192 3 collapse into a single cycle or contain errors in domain 'positive integers that are multiples of 3']"
+      ],
+      "scope": {
+        "domain": "positive integers that are multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "has only finitely many divergent trajectories (all others eventually cycle or converge)",
+      "object": "boundedness for all inputs, including n \u2261 1 mod 3 with large odd factors",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 boundedness for all inputs, including n \u2261 1 mod 3 with large odd factors]",
+        "[PATH:empirical] Compute long trajectories for random large n \u2261 1 mod 3, especially those with large odd prime factors, using high-precision arithmetic and look for unbounded growth or eventual cycles. \u2014 Direct simulation can reveal whether the map diverges for some inputs or always enters a cycle, providing empirical evidence to support or refute the boundedness claim.",
+        "[PATH:theoretical] Analyze the linear congruences and modular constraints for n \u2261 1 mod 3, modeling the map as a piecewise linear transformation and searching for invariant sets or Lyapunov exponents using ergodic theory. \u2014 A theoretical analysis of the dynamics, similar to Collatz-type maps, can determine if there exist conditions forcing convergence or if divergent trajectories are possible, thereby confirming or refuting finiteness of divergent paths.",
+        "[PATH:literature] Review literature on generalized Collatz problems, particularly those with similar branching rules (e.g., maps with mod 3 cases and linear coefficients), to identify known results or counterexamples. \u2014 Existing research on analogous functions may provide proven bounds, known divergent trajectories, or proof techniques that directly apply to this map, helping to establish the hypothesis's validity."
+      ],
+      "scope": {
+        "domain": "positive integers with n \u2261 1 mod 3 and n large"
+      },
+      "qualifier": {
+        "condition": "if the map behaves like a Collatz-type divergent system"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "has at least one divergent (non-cyclic) trajectory for some n \u2261 1 mod 3 with large odd factors",
+      "object": "unbounded growth for those inputs",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 has at least one divergent (non-cyclic) trajectory for some n \u2261 1 mod 3 with large odd factors unbounded growth for those inputs in domain 'positive integers with n \u2261 1 mod 3 and n large']"
+      ],
+      "scope": {
+        "domain": "positive integers with n \u2261 1 mod 3 and n large"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "does not have any divergent (non-cyclic) trajectory for any n \u2261 1 mod 3",
+      "object": "all such inputs eventually enter a cycle or reach a bounded set",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2 does not have any divergent (non-cyclic) trajectory for any n \u2261 1 mod 3 all such inputs eventually enter a cycle or reach a bounded set in domain 'positive integers with n \u2261 1 mod 3 and n large']"
+      ],
+      "scope": {
+        "domain": "positive integers with n \u2261 1 mod 3 and n large"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) defined by T(n) = n/3 if n mod 3 == 0, T(n) = 4n+2 if n mod 3 == 1, T(n) = 2n-1 if n mod 3 == 2",
+      "predicate": "exhibits at least one cycle for multiples of 3, but the existence of a distinct short cycle containing 9 \u2192 3 depends on the initial conditions and the precise definition of 'cycle' used",
+      "object": "a nuanced behavior where the apparent contradiction arises from differing interpretations of cycle membership and convergence criteria",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] Branch A asserts that all multiples of 3 converge to a single cycle, while Branch B claims two distinct cycles. The contradiction may be resolved by noting that the cycle containing 9 \u2192 3 might be a transient that eventually merges into the larger cycle, or it may be a separate cycle depending on whether one considers the orbit after a single iteration or the full attractor. A refined claim integrates both by acknowledging that under certain definitions (e.g., considering only periodic points), two cycles exist, but under convergence-in-the-limit criteria, all paths lead to one attractor. This reframing makes the apparent contradiction productive by highlighting the sensitivity to definitional choices."
+      ],
+      "scope": {
+        "domain": "positive integers that are multiples of 3"
+      },
+      "qualifier": {
+        "temporal": "as of current computational verification"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) = n/3 if n mod 3 == 0, 4n+2 if n mod 3 == 1, 2n-1 if n mod 3 == 2",
+      "predicate": "has finitely many divergent trajectories, but among n \u2261 1 mod 3 with large odd factors, there exists at least one such trajectory that diverges",
+      "object": "the overall behavior of the map",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C008, B003]",
+        "[SYNTHESIS] The two hypotheses appear contradictory but can be reconciled by refining the quantification: Branch A claims only finitely many divergent trajectories overall, while Branch B claims at least one divergent trajectory exists for a specific subset (n \u2261 1 mod 3 with large odd factors). This is logically consistent if that one divergent trajectory is among the finite set allowed by Branch A. The refined claim integrates both by stating that the map has exactly a finite (non-zero) number of divergent trajectories, with at least one occurring in the specified subset. The confidence is moderate due to the lack of proof and the reliance on competing heuristic evidence."
+      ],
+      "scope": {
+        "domain": "positive integers with n \u2261 1 mod 3 and n large"
+      },
+      "qualifier": {
+        "condition": "if the map behaves like a Collatz-type divergent system"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T5 on C004",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B003",
+    "T7 on B003",
+    "T8 on B003",
+    "T3 on B004",
+    "T9 on C004",
+    "T7 on B004",
+    "T8 on B004",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 2,
+  "iteration": 36,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 0,
+  "roles_generated": {}
+}

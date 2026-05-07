@@ -1,0 +1,289 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "has exactly three distinct non-trivial cycles",
+      "object": "for all sufficiently large starting integers n",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given piecewise rule for all sufficiently large starting integers n]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "has exactly three distinct non-trivial cycles",
+      "object": "for all sufficiently large starting integers n that are powers of 2",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given piecewise rule for all sufficiently large starting integers n that are powers of 2]",
+        "[PATH:empirical] High-precision computational simulation of T(n) for powers of 2 from n = 2^10 up to n = 2^1000, tracking cycle membership and length to verify convergence to exactly three distinct non-trivial cycles. \u2014 Direct numerical exploration can confirm or refute the claim by checking whether all sufficiently large powers of 2 indeed fall into one of three cycles, and whether any additional cycles appear.",
+        "[PATH:theoretical] Analytic proof using number-theoretic properties of the piecewise map, e.g., analyzing the effect of the recursion on the binary representation of powers of 2, to derive invariant quantities or eventual periodicity. \u2014 A rigorous mathematical argument can establish whether the cycle structure is bounded and unique for large powers of 2, providing certainty beyond simulation limits.",
+        "[PATH:literature] Literature review of known results on similar piecewise linear maps (e.g., Collatz-type maps, 3x+1 variants, or maps with modular conditions) to identify analogous cycle theorems or counterexamples. \u2014 Existing research may offer proven cycle classifications or methods that can be adapted to this specific map, either supporting or challenging the hypothesis."
+      ],
+      "scope": {
+        "domain": "subset of starting integers (powers of 2)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n (n \u2265 2^k where k is large enough to ensure cycle convergence)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "may have more than three distinct non-trivial cycles when considering starting integers that are multiples of 3",
+      "object": "for all sufficiently large starting integers n",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given piecewise rule for all sufficiently large starting integers n]"
+      ],
+      "scope": {
+        "domain": "subset of starting integers (multiples of 3)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n in the limit as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T7",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "has exactly two distinct non-trivial cycles",
+      "object": "for all sufficiently large starting integers n that are odd and not divisible by 3",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given piecewise rule for all sufficiently large starting integers n that are odd and not divisible by 3]",
+        "[PATH:empirical] Systematic computational search over a large range of odd starting integers not divisible by 3 (e.g., up to 10^9) to enumerate all cycles and verify that only two distinct non-trivial cycles exist for sufficiently large n. \u2014 Direct simulation can confirm or refute the existence of additional cycles within the stated domain, providing concrete evidence for the hypothesis.",
+        "[PATH:theoretical] Analytic study of the dynamics of T(n) using number-theoretic invariants (e.g., modular constraints, growth rates, or Lyapunov exponents) to prove that the map can have at most two attractors for the specified subset. \u2014 A rigorous mathematical proof would definitively establish the claim, while a counterexample proof would refute it, offering high confidence beyond empirical sampling.",
+        "[PATH:literature] Literature review of known results on similar piecewise linear maps (e.g., generalized Collatz-type maps) to identify any proven cycle structure theorems or known counterexamples that apply to this specific rule. \u2014 Existing research may provide analogous proofs or disproofs, saving effort and offering theoretical grounding for the hypothesis."
+      ],
+      "scope": {
+        "domain": "subset of starting integers (odd, not divisible by 3)"
+      },
+      "qualifier": {
+        "temporal": "for all time steps after the map has been iterated sufficiently many times",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "has at most three distinct non-trivial cycles when considering starting integers that are multiples of 3",
+      "object": "for all sufficiently large starting integers n",
+      "status": "supported",
+      "confidence": 0.9500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by the given piecewise rule for all sufficiently large starting integers n]",
+        "[PATH:empirical] High-performance computational search of T(n) trajectories for multiples of 3 up to n = 10^12, recording cycle lengths and occurrences \u2014 Exhaustive numerical simulation can directly test whether more than three distinct non-trivial cycles appear for large starting integers that are multiples of 3, providing strong confirmatory or disconfirmatory evidence.",
+        "[PATH:theoretical] Analytical study of the piecewise rule's dynamics using linearization and modular arithmetic to bound the number of possible cycles in the subset of multiples of 3 \u2014 A theoretical proof that the map's structure restricts cycle diversity in the specified domain would either confirm the hypothesis or reveal conditions leading to additional cycles, offering a rigorous foundation.",
+        "[PATH:literature] Literature review of known cycle classifications for similar recursive maps (e.g., Collatz-type variants) with restrictions on starting set parity or divisibility \u2014 Existing results on cycle counts in number-theoretic maps may indicate whether three distinct non-trivial cycles is a plausible upper bound, helping contextualize the hypothesis and guide further investigation."
+      ],
+      "scope": {
+        "domain": "subset of starting integers (multiples of 3)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "may have more than three distinct non-trivial cycles when considering starting integers that are multiples of 3",
+      "object": "for all sufficiently large starting integers n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given piecewise rule may have more than three distinct non-trivial cycles when considering starting integers that are multiples of 3 for all sufficiently large starting integers n in domain 'subset of starting integers (multiples of 3)']"
+      ],
+      "scope": {
+        "domain": "subset of starting integers (multiples of 3)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large starting integers n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by the given piecewise rule",
+      "predicate": "does not have more than three distinct non-trivial cycles when considering starting integers that are multiples of 3",
+      "object": "for all sufficiently large starting integers n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by the given piecewise rule does not have more than three distinct non-trivial cycles when considering starting integers that are multiples of 3 for all sufficiently large starting integers n in domain 'subset of starting integers (multiples of 3)']"
+      ],
+      "scope": {
+        "domain": "subset of starting integers (multiples of 3)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large starting integers n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with starting integers that are multiples of 3",
+      "predicate": "has a number of distinct non-trivial cycles that is",
+      "object": "likely bounded by three for sufficiently large n, but with non-negligible probability of exceeding three due to rare or subtle structural variations",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] Branch A asserts a bound of three cycles with high confidence, while Branch B allows for more cycles with slightly lower confidence. The synthesis reframes the apparent contradiction as a spectrum: the typical behavior supports a low cycle count, but the possibility of additional cycles cannot be ruled out, possibly arising from edge cases or deeper invariants. This reconciles the evidence by treating the bound as a probabilistic tendency rather than a strict certainty."
+      ],
+      "scope": {
+        "domain": "subset of starting integers (multiples of 3)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n in the limit as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 26,
+  "focus_claim_id": "C008",
+  "anti_delphi_activations": 0,
+  "roles_generated": {}
+}
