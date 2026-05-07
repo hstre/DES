@@ -1,0 +1,437 @@
+{
+  "domain_id": "M01",
+  "seed": 202,
+  "merge_after": 2,
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 1,
+  "operator_log": [],
+  "branch_results": [],
+  "n_branches": 0,
+  "post_merge_results": [],
+  "n_post_merges": 0,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite set of cycles",
+      "object": "for all positive integers n",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for all positive integers n]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite set of cycles",
+      "object": "for all positive integers n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for all positive integers n]"
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "since the map was defined",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has infinitely many distinct cycles",
+      "object": "for a dense subset of positive integers n",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for a dense subset of positive integers n]"
+      ],
+      "scope": {
+        "domain": "dense subset of positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite set of cycles only if n is restricted to a certain residue class modulo 3",
+      "object": "for n \u2261 1 mod 3",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for n \u2261 1 mod 3]"
+      ],
+      "scope": {
+        "domain": "n \u2261 1 mod 3"
+      },
+      "qualifier": {
+        "condition": "restriction to a specific residue class"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has exactly one non-trivial cycle",
+      "object": "for all positive integers n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for all positive integers n]",
+        "[PATH:empirical] Exhaustive computational verification for n up to 10^9 using optimized cycle-detection algorithms \u2014 If the map has only one non-trivial cycle, then for all n in this range, no other cycle should appear. A counterexample would refute the hypothesis; no counterexample would increase confidence.",
+        "[PATH:theoretical] Analytic study of the dynamics as a piecewise linear map, searching for invariant measures or Lyapunov exponents \u2014 Rigorous analysis of the modular rules may prove that all trajectories converge to a unique cycle, or reveal conditions for multiple cycles, thereby confirming or refuting the claim.",
+        "[PATH:literature] Survey of known results on similar Collatz-type maps with modular constraints in the literature (e.g., Lagarias, 2020) \u2014 Comparative analysis with proven dynamics of related maps can indicate whether a single non-trivial cycle is plausible or if multiple cycles are typical, providing indirect evidence."
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has an infinite set of cycles",
+      "object": "for some positive integers n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for some positive integers n]",
+        "[PATH:empirical] Exhaustive computational search over a large initial range of n (e.g., up to 10^9) with cycle detection algorithms, recording all distinct cycles found for T(n) under the given modular rules. \u2014 Direct simulation can confirm or refute the existence of infinitely many cycles by showing either a finite number of cycles in a large sample or evidence of new cycles appearing beyond any bound.",
+        "[PATH:theoretical] Analytic number theory study of the map's dynamics, possibly relating it to known iterative functions (e.g., Collatz-like maps) to prove that the number of cycles is finite or infinite based on modular constraints and growth properties. \u2014 A theoretical proof can definitively settle the dispute by deriving necessary conditions for cycle existence and bounding cycle lengths or counts, independent of computational limits.",
+        "[PATH:literature] Literature review of similar piecewise linear maps with modular rules (e.g., generalized Collatz problems, 3x+1 variants) to identify known results on cycle finiteness or infiniteness, and to apply analogous proof techniques. \u2014 Existing research on related maps may provide proven theorems, counterexamples, or methodological insights that directly apply to T(n), avoiding redundant work."
+      ],
+      "scope": {
+        "domain": "all positive integers n"
+      },
+      "qualifier": {
+        "temporal": "since the map was defined",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has exactly one nontrivial cycle",
+      "object": "for all positive integers n not in a set of density zero",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for all positive integers n not in a set of density zero]",
+        "[PATH:empirical] Computational search for cycles in T(n) up to very large bounds (e.g., n < 10^12) with statistical analysis of orbit lengths and densities \u2014 If a nontrivial cycle exists, it may be detected by exhaustive or heuristic search; absence up to high bounds combined with density-zero exceptional set analysis would support the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the dynamics of T(n) using modular arithmetic and ergodic theory, focusing on invariant measures and cycle structure for piecewise linear maps \u2014 Proving that the only possible cycles are trivial or that any cycle must belong to a set of density zero would confirm or refute the hypothesis via rigorous mathematical reasoning.",
+        "[PATH:literature] Literature review of known results on similar recursive maps (e.g., Collatz-type maps) and their cycle classification, particularly for 3-adic or mod-3 variants \u2014 Existing theorems on cycle existence and density properties for related maps can provide analogies or direct techniques to assess the likelihood of a single nontrivial cycle."
+      ],
+      "scope": {
+        "domain": "all positive integers n not in a set of density zero"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical literature",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite number of distinct cycles",
+      "object": "for a dense subset of positive integers n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for a dense subset of positive integers n]",
+        "[PATH:empirical] Systematic computational enumeration of trajectories for all n in [1, 10^6] with classification of cycle lengths and frequencies, stratified by residue classes modulo 3 \u2014 A large-scale simulation can reveal whether the number of distinct cycles grows without bound or stabilizes, and whether the set of starting numbers leading to a finite set of cycles is dense. Comparing patterns across residue classes directly tests the modular rule's effect.",
+        "[PATH:theoretical] Analytic study of the functional graph of T(n) using number-theoretic invariants (e.g., parity, valuation at 3) and contraction mapping arguments \u2014 Proving that the dynamics reduce to a finite state space (e.g., via boundedness of trajectories or eventual periodicity modulo a power of 3) would confirm the hypothesis; conversely, constructing an infinite family of distinct cycles would refute it.",
+        "[PATH:literature] Literature review of known results on piecewise linear maps with modular rules, such as the Collatz conjecture variants and generalized 3x+1 problems \u2014 Existing theorems (e.g., on the finite cycle property for certain residue-based maps) may directly apply or provide analogies, and known counterexamples (e.g., maps with infinitely many cycles) can guide refutation strategies."
+      ],
+      "scope": {
+        "domain": "dense subset of positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration",
+        "geographic": "no specific geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has infinitely many distinct cycles",
+      "object": "for a dense subset of positive integers n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with modular rules for n mod 3 has infinitely many distinct cycles for a dense subset of positive integers n in domain 'dense subset of positive integers']"
+      ],
+      "scope": {
+        "domain": "dense subset of positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has only finitely many distinct cycles",
+      "object": "for any subset of positive integers n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with modular rules for n mod 3 has only finitely many distinct cycles for any subset of positive integers n in domain 'dense subset of positive integers']"
+      ],
+      "scope": {
+        "domain": "dense subset of positive integers"
+      },
+      "qualifier": {
+        "temporal": "under current mathematical understanding",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has exactly one nontrivial cycle",
+      "object": "for all n \u2261 1 mod 3 that are not powers of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with modular rules for n mod 3 for all n \u2261 1 mod 3 that are not powers of 3]",
+        "[PATH:empirical] High-performance computational search for cycles in T(n) for n \u2261 1 mod 3 up to a large bound (e.g., 10^12), with rigorous cycle detection and verification of non-power-of-3 condition \u2014 Systematic exhaustive search can directly confirm or refute the existence of nontrivial cycles within the specified domain, providing strong empirical evidence for or against the hypothesis.",
+        "[PATH:theoretical] Analytic study of the dynamical system defined by T(n) using modular arithmetic invariants and Lyapunov functions tailored to the 1 mod 3 residue class \u2014 Developing a potential function or invariant that strictly decreases along trajectories (except at fixed points) could prove that no nontrivial cycles exist, or conversely, constructing a counterexample cycle analytically would refute the hypothesis.",
+        "[PATH:literature] Literature review of known results on related piecewise-linear maps (e.g., Collatz-type maps) with modular constraints, focusing on cycle classification for residue classes \u2014 Existing theorems on cycle structures in similar recursive maps may provide proof techniques or known counterexamples that apply to this specific map, helping to contextualize and evaluate the hypothesis without starting from scratch."
+      ],
+      "scope": {
+        "domain": "n \u2261 1 mod 3, n not a power of 3"
+      },
+      "qualifier": {
+        "temporal": "since formulation of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite set of cycles for any residue class modulo 3",
+      "object": "for n \u2261 0, 1, 2 mod 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all residue classes modulo 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has exactly one nontrivial attracting cycle",
+      "object": "for all positive integers n not in a set of density zero",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all positive integers n not in a set of density zero"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The recursive map T(n) with modular rules for n mod 3",
+      "predicate": "has a finite number of distinct cycles",
+      "object": "for any subset of positive integers n",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "any subset of positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  }
+}

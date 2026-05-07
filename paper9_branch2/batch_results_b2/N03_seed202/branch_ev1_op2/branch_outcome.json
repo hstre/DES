@@ -1,0 +1,436 @@
+{
+  "branch_id": "branch_ev1_op2",
+  "_branch_dir": "paper9_branch2/batch_results_b2/N03_seed202/branch_ev1_op2",
+  "operator_id": "boundary_condition_analysis",
+  "question": "What are the invariant structural conditions and boundary cases necessary to enable continual learning in artificial gen",
+  "loops_completed": 2,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "can be resolved by",
+      "object": "a fixed bottleneck alone, without requiring dynamic or adaptive mechanisms",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the trade-off between stability and plasticity in continual learning a fixed bottleneck alone, without requiring dynamic or adaptive mechanisms]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Fixed bottlenecks may prevent catastrophic forgetting but can also limit the ability to integrate new knowledge, while adaptive mechanisms are thought to be necessary for balancing these competing demands; whether a static architecture alone suffices remains an open empirical question."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "a fixed bottleneck in continual learning",
+      "predicate": "is sufficient to prevent catastrophic forgetting across diverse task sequences",
+      "object": "without any dynamic or adaptive mechanisms",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a fixed bottleneck in continual learning without any dynamic or adaptive mechanisms]"
+      ],
+      "scope": {
+        "domain": "continual learning with static architecture"
+      },
+      "qualifier": {
+        "tension": "Assumes that a fixed representational bottleneck can compress old and new tasks into a shared, stable latent space, but may fail when tasks are highly dissimilar."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "requires adaptive mechanisms because",
+      "object": "a fixed bottleneck alone cannot adjust its capacity to accommodate novel knowledge without overwriting previously learned patterns",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the trade-off between stability and plasticity in continual learning a fixed bottleneck alone cannot adjust its capacity to accommodate novel knowledge without overwriting previously learned patterns]"
+      ],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {
+        "tension": "This perspective directly challenges the sufficiency of a static bottleneck, arguing that plasticity demands dynamic allocation of representational resources."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the effectiveness of a fixed bottleneck for continual learning",
+      "predicate": "depends on the specific nature of the task sequence, such as",
+      "object": "task similarity and input dimensionality, rather than being universally resolvable by static mechanisms alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the effectiveness of a fixed bottleneck for continual learning task similarity and input dimensionality, rather than being universally resolvable by static mechanisms alone]"
+      ],
+      "scope": {
+        "domain": "continual learning under varying task relationships"
+      },
+      "qualifier": {
+        "tension": "Qualifies both previous claims by introducing a contextual dependency, suggesting the trade-off is not resolved purely by architecture but by task characteristics."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "a fixed bottleneck in continual learning",
+      "predicate": "is insufficient to prevent catastrophic forgetting across diverse task sequences",
+      "object": "when tasks exhibit high representational dissimilarity, as measured by cosine distance between their optimal latent embeddings",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a fixed bottleneck in continual learning when tasks exhibit high representational dissimilarity, as measured by cosine distance between their optimal latent embeddings]",
+        "[PATH:empirical] Empirical study comparing fixed vs. adaptive bottlenecks on task sequences with controlled cosine dissimilarity (e.g., permuted MNIST vs. CIFAR-100 superclasses) \u2014 Directly tests whether fixed bottleneck capacity fails as representational dissimilarity increases, by measuring forgetting via task-specific accuracy drops.",
+        "[PATH:theoretical] Theoretical analysis of information bottleneck trade-off in continual learning (e.g., deriving bounds on forgetting as function of bottleneck size and task embedding divergence) \u2014 Provides formal conditions under which a fixed bottleneck is insufficient, confirming or refuting the hypothesis via mathematical necessity.",
+        "[PATH:literature] Literature review of existing continual learning benchmarks (e.g., split ImageNet, 5-datasets) that report forgetting metrics alongside task embedding similarities \u2014 Synthesizes prior empirical evidence to check for consistent pattern: high dissimilarity tasks correlate with catastrophic forgetting under fixed bottleneck architectures."
+      ],
+      "scope": {
+        "domain": "continual learning with static architecture and fixed bottleneck"
+      },
+      "qualifier": {
+        "temporal": "during training on task sequences with high representational dissimilarity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "a fixed bottleneck in continual learning",
+      "predicate": "is insufficient to prevent catastrophic forgetting across diverse task sequences",
+      "object": "without any dynamic or adaptive mechanisms",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a fixed bottleneck in continual learning without any dynamic or adaptive mechanisms]",
+        "[PATH:empirical] Systematic comparison of fixed-bottleneck architectures (e.g., VAE with fixed capacity) vs. dynamic expansion methods on benchmark continual learning datasets (e.g., Split MNIST, Permuted MNIST, CIFAR-100) \u2014 Directly tests whether a fixed bottleneck without adaptation fails to prevent catastrophic forgetting, by measuring forgetting rates and task accuracy across diverse sequences.",
+        "[PATH:theoretical] Theoretical analysis of information bottleneck trade-off in continual learning (e.g., deriving bounds on forgetting as a function of bottleneck capacity and task similarity) \u2014 Provides formal understanding of whether a fixed bottleneck can ever suffice, given non-stationary distributions, by linking capacity constraints to representational interference.",
+        "[PATH:literature] Meta-analysis of existing literature on fixed vs. adaptive architectures in continual learning (e.g., papers on Progressive Networks, Elastic Weight Consolidation, and fixed-capacity models) \u2014 Synthesizes prior empirical and theoretical findings to assess consensus on sufficiency of fixed bottlenecks, identifying gaps and contradictory results."
+      ],
+      "scope": {
+        "domain": "continual learning with static architecture"
+      },
+      "qualifier": {
+        "temporal": "during training on task sequences with non-stationary distributions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "adaptive mechanisms in continual learning",
+      "predicate": "must include a learnable gating function that selectively activates subsets of representational units per task, because",
+      "object": "without such task-specific gating, even dynamic capacity allocation fails to prevent catastrophic interference when task distributions are open-ended and overlapping",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: adaptive mechanisms in continual learning without such task-specific gating, even dynamic capacity allocation fails to prevent catastrophic interference when task distributions are open-ended and overlapping]",
+        "[PATH:empirical] A controlled empirical study comparing continual learning agents with and without learnable gating on a sequence of overlapping, open-ended task distributions (e.g., permuted MNIST, CIFAR-100 with superclasses), measuring catastrophic interference via forgetting and backward transfer metrics. \u2014 Directly tests the claim that gating prevents interference in open-ended overlapping tasks; if non-gating dynamic capacity methods (e.g., progressive networks, elastic weight consolidation) also perform well, the hypothesis is refuted.",
+        "[PATH:theoretical] Theoretical analysis of representational overlap and gradient interference in continual learning, formalizing conditions under which gating reduces interference compared to capacity allocation alone (e.g., using information-theoretic or linear algebra frameworks). \u2014 Provides formal proof or counterexample: if gating is shown mathematically to be necessary for any bounded-capacity system to avoid interference under open-ended distributions, the hypothesis is supported; otherwise, it is challenged.",
+        "[PATH:literature] Meta-analysis of recent continual learning literature (2020\u20132025) cataloging methods with and without task-specific gating, focusing on results in open-ended, overlapping task scenarios (e.g., from NeurIPS, ICML, ICLR proceedings). \u2014 Aggregates existing evidence to determine whether empirical trends favor gating over capacity-only approaches, revealing if the hypothesis aligns with or contradicts the broader research consensus."
+      ],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "can be effectively managed with a fixed bottleneck because",
+      "object": "appropriate regularization techniques can prevent the overwriting of previously learned patterns, eliminating the need for adaptive mechanisms",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the trade-off between stability and plasticity in continual learning appropriate regularization techniques can prevent the overwriting of previously learned patterns, eliminating the need for adaptive mechanisms]",
+        "[PATH:empirical] Systematic comparison of fixed-bottleneck architectures (e.g., EWC, SI) vs. adaptive methods (e.g., progressive networks, expert gates) on a suite of continual learning benchmarks with bounded task complexity \u2014 Directly tests whether fixed regularization alone suffices without adaptive mechanisms, by measuring forgetting and forward transfer across tasks.",
+        "[PATH:theoretical] Theoretical analysis of capacity limits in fixed-bottleneck models under open-ended task distributions, using information-theoretic bounds (e.g., on mutual information between task-specific parameters) \u2014 Determines if a fixed bottleneck can provably prevent overwriting for any bounded-complexity task sequence, or if adaptive mechanisms are required beyond a certain task diversity."
+      ],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {
+        "temporal": "under stationary task distributions with bounded complexity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "requires adaptive mechanisms because",
+      "object": "a fixed bottleneck alone cannot adjust its capacity to accommodate novel knowledge without overwriting previously learned patterns",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the trade-off between stability and plasticity in continual learning requires adaptive mechanisms because a fixed bottleneck alone cannot adjust its capacity to accommodate novel knowledge without overwriting previously learned patterns in domain 'continual learning with open-ended task distributions']"
+      ],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {
+        "temporal": "since the formulation of the stability-plasticity dilemma in neural networks",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "does not require adaptive mechanisms because",
+      "object": "a fixed bottleneck, when appropriately sized and regularized, is sufficient to accommodate novel knowledge without overwriting previously learned patterns",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the trade-off between stability and plasticity in continual learning does not require adaptive mechanisms because a fixed bottleneck, when appropriately sized and regularized, is sufficient to accommodate novel knowledge without overwriting previously learned patterns in domain 'continual learning with open-ended task distributions']"
+      ],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 research findings",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the effectiveness of a fixed bottleneck for continual learning",
+      "predicate": "is negatively correlated with the entropy of the task sequence, such that",
+      "object": "higher task entropy exacerbates catastrophic forgetting even when input dimensionality is low",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the effectiveness of a fixed bottleneck for continual learning higher task entropy exacerbates catastrophic forgetting even when input dimensionality is low]",
+        "[PATH:empirical] Controlled simulation of task sequences with varying entropy (e.g., permuted MNIST, split CIFAR-10) while fixing bottleneck size and input dimensionality, measuring forgetting via metrics like average accuracy drop or backward transfer \u2014 Directly tests the hypothesis by manipulating task entropy as the independent variable and catastrophic forgetting as the dependent variable, while controlling for input dimensionality and bottleneck structure.",
+        "[PATH:theoretical] Analytical derivation of the relationship between task sequence entropy and the representational collapse of a fixed bottleneck in linear or deep linear networks \u2014 Provides a formal understanding of why higher entropy might exacerbate forgetting, e.g., through increased interference in the bottleneck's limited capacity, which can be generalized to nonlinear settings.",
+        "[PATH:literature] Review of existing continual learning benchmarks and meta-analyses (e.g., from Chaudhry et al., 2019; van de Ven & Tolias, 2019) that report forgetting rates across tasks with different degrees of relatedness or entropy \u2014 Leverages prior empirical findings to assess whether the hypothesized negative correlation is supported across diverse settings, and identifies gaps where task entropy was not explicitly controlled."
+      ],
+      "scope": {
+        "domain": "continual learning under varying task relationships"
+      },
+      "qualifier": {
+        "temporal": "during training on task sequences with varying entropy",
+        "geographic": "in simulated environments with low-dimensional input"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the effectiveness of a fixed bottleneck for continual learning",
+      "predicate": "can be universally enhanced by static architectural mechanisms alone",
+      "object": "without reliance on task-specific characteristics like task similarity and input dimensionality",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the effectiveness of a fixed bottleneck for continual learning without reliance on task-specific characteristics like task similarity and input dimensionality]"
+      ],
+      "scope": {
+        "domain": "continual learning under varying task relationships"
+      },
+      "qualifier": {
+        "temporal": "in the context of current simulated environments (2020\u20132025)",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "is resolved by a neuromodulatory gating mechanism that",
+      "object": "dynamically expands the representational bottleneck for novel tasks while compressing it for previously learned tasks, thereby preventing catastrophic forgetting without requiring a fixed capacity limit",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "the trade-off between stability and plasticity in continual learning",
+      "predicate": "can be effectively managed using fixed structures because",
+      "object": "a well-designed fixed bottleneck can prioritize information encoding and retrieval without the need for dynamic capacity adjustments",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "continual learning with open-ended task distributions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 11
+}

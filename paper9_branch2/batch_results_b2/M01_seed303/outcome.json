@@ -1,0 +1,351 @@
+{
+  "domain_id": "M01",
+  "seed": 303,
+  "merge_after": 2,
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 2,
+  "operator_log": [],
+  "branch_results": [],
+  "n_branches": 0,
+  "post_merge_results": [],
+  "n_post_merges": 0,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "must have a globally attracting set of cycles that impose uniform behavior across all residue classes",
+      "object": "the claim that such uniform behavior holds for all initial n",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that such uniform behavior holds for all initial n]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "has a globally attracting set of cycles that impose uniform behavior across all residue classes",
+      "object": "the claim that such uniform behavior holds for all initial n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that such uniform behavior holds for all initial n]"
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all n at all times under iteration",
+        "geographic": "all positive integers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "exhibits divergent trajectories for a positive-density set of initial n",
+      "object": "the claim that uniform behavior fails for some residue classes",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that uniform behavior fails for some residue classes]"
+      ],
+      "scope": {
+        "domain": "a subset of residue classes modulo 6"
+      },
+      "qualifier": {
+        "temporal": "as n grows large"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "has a globally attracting set of cycles that impose uniform behavior across all residue classes",
+      "object": "the claim that such uniform behavior holds for all initial n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that such uniform behavior holds for all initial n]",
+        "[PATH:empirical] Conduct exhaustive computational verification on all residue classes modulo powers of 3 (e.g., mod 9, 27, 81) for initial n up to a large bound (e.g., 10^7), tracking cycle membership and transient lengths. \u2014 Uniform behavior across residue classes would manifest as consistent cycle attraction and similar transient statistics; any deviation would refute the claim.",
+        "[PATH:theoretical] Develop a theoretical analysis of the map's dynamics using modular arithmetic and functional composition, aiming to prove that all trajectories eventually enter one of a finite set of cycles, with the same cycle for each residue class modulo 3^k. \u2014 A rigorous proof or disproof of cycle uniformity would settle the hypothesis; for instance, showing that the map is conjugate to a known system with proven ergodic properties.",
+        "[PATH:literature] Search the literature for known results on piecewise linear maps with similar branching rules (e.g., Collatz-type maps) that exhibit global attraction to a set of cycles, and compare the residue-class behavior. \u2014 Existing theorems or counterexamples from related maps (e.g., the 3x+1 problem or its variants) could provide analogies or methods to confirm or refute the claimed uniformity."
+      ],
+      "scope": {
+        "domain": "all positive integers congruent to 0 or 2 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all n at all times under iteration",
+        "geographic": "all positive integers congruent to 0 or 2 mod 3"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "demonstrates chaotic behavior with no uniformity across residue classes",
+      "object": "the claim that such chaotic behavior exists for some initial n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that such chaotic behavior exists for some initial n]",
+        "[PATH:empirical] Systematic simulation of T(n) trajectories for a large sample of initial n across all residue classes modulo 3, 6, 12, and 24, with statistical analysis of periodicity, divergence, and mixing rates \u2014 Direct computational testing can reveal whether the map exhibits chaotic behavior uniformly across residue classes or if some classes show regular patterns, thereby confirming or refuting the claim of no uniformity.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using symbolic dynamics, specifically encoding each step as a symbol based on the rule applied, and analyzing the resulting shift space for properties like topological transitivity and sensitive dependence on initial conditions \u2014 A rigorous theoretical framework can determine if the map is truly chaotic (e.g., Devaney chaos) or if it collapses to periodic orbits for all starting points, providing a definitive answer independent of finite simulation.",
+        "[PATH:literature] Literature review of known results on piecewise linear maps with multiple rules, particularly those related to the Collatz conjecture and its generalizations, focusing on residue class uniformity or lack thereof \u2014 Existing research on similar iterative maps may offer proven theorems or counterexamples that directly apply to this map, saving effort and providing authoritative evidence."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain, at all times",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "has divergent trajectories for all n \u2261 2 mod 6, while all n \u2261 0 mod 6 converge to a fixed point",
+      "object": "the claim that uniform behavior fails for some residue classes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that uniform behavior fails for some residue classes]",
+        "[PATH:empirical] Systematic computational exploration of T(n) for all n \u2261 2 mod 6 up to a large bound (e.g., 10^6), tracking trajectory lengths and detecting cycles or divergence indicators (e.g., unbounded growth or reaching a previously unseen state). \u2014 Direct simulation can test the claimed divergence for n \u2261 2 mod 6 and convergence for n \u2261 0 mod 6, providing concrete counterexamples or supporting patterns.",
+        "[PATH:theoretical] Analytical study of T(n) using modular arithmetic and invariant theory, focusing on the dynamics modulo powers of 2 and 3 to derive necessary conditions for cycle existence or divergence. \u2014 A theoretical proof or disproof of the residue-class-dependent behavior would resolve the disputed status; invariants like parity or mod 6 transitions can reveal structural constraints.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., Collatz-type functions) with multiple rules, searching for known results on residue-class trajectories or fixed-point theorems for such maps. \u2014 Existing work on generalized Collatz problems may offer analogous proofs or counterexamples, informing whether uniform behavior across residue classes is typical or exceptional."
+      ],
+      "scope": {
+        "domain": "residue classes modulo 6"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain, as iterated indefinitely",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "exhibits convergent trajectories for all residue classes modulo 6",
+      "object": "the claim that uniform behavior holds universally",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with rules n/3, 4n+2, 2n-1 the claim that uniform behavior holds universally]",
+        "[PATH:empirical] Systematic computational verification of T(n) trajectories for all n from 1 to 10^6, stratified by residue class modulo 6, with convergence criteria defined as reaching a fixed point or cycle within a bounded number of steps. \u2014 Direct computational testing across all residue classes modulo 6 can confirm or refute the claim of uniform convergence behavior under the given iteration limit, providing statistical evidence for or against the hypothesis.",
+        "[PATH:theoretical] Analytical derivation of invariant sets or Lyapunov-like functions for the map T(n) that constrain possible dynamics for each residue class modulo 6. \u2014 A theoretical proof or counterexample using number theory or dynamical systems can establish whether uniform behavior holds universally, independent of computational limits, and explain the mechanisms behind convergence or divergence.",
+        "[PATH:literature] Literature review of known results on similar piecewise linear maps (e.g., the Collatz conjecture variants, 3x+1 problem, or other affine maps) to identify analogous behavior or counterexamples that might inform the dynamics of T(n). \u2014 Existing research on related recursive maps may provide insights, proof techniques, or known counterexamples that can be adapted to evaluate the claim of uniform convergence across residue classes modulo 6."
+      ],
+      "scope": {
+        "domain": "all residue classes modulo 6"
+      },
+      "qualifier": {
+        "temporal": "for all integers n \u2265 1 under iteration steps up to 10^6",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "exhibits divergent trajectories for a positive-density set of initial n",
+      "object": "the claim that uniform behavior fails for some residue classes modulo 6",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with rules n/3, 4n+2, 2n-1 exhibits divergent trajectories for a positive-density set of initial n the claim that uniform behavior fails for some residue classes modulo 6 in domain 'a subset of residue classes modulo 6']"
+      ],
+      "scope": {
+        "domain": "a subset of residue classes modulo 6"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "does not exhibit divergent trajectories for a positive-density set of initial n",
+      "object": "the counterclaim that uniform behavior holds for all residue classes modulo 6",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with rules n/3, 4n+2, 2n-1 does not exhibit divergent trajectories for a positive-density set of initial n the counterclaim that uniform behavior holds for all residue classes modulo 6 in domain 'a subset of residue classes modulo 6']"
+      ],
+      "scope": {
+        "domain": "a subset of residue classes modulo 6"
+      },
+      "qualifier": {
+        "temporal": "as of the latest known simulations and analyses",
+        "geographic": "no geographic constraint applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "has divergent trajectories for all initial n \u2261 2 mod 6",
+      "object": "the claim that uniform behavior fails for some residue classes",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "the residue class n \u2261 2 (mod 6)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with rules n/3, 4n+2, 2n-1",
+      "predicate": "exhibits uniform behavior across all residue classes modulo 6",
+      "object": "the claim that divergent trajectories do not exist for a positive-density set of initial n",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all residue classes modulo 6"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  }
+}
