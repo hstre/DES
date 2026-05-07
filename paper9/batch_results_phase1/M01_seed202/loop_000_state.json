@@ -1,0 +1,493 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "contains",
+      "object": "a finite set of attractor cycles that all orbits eventually reach",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a finite set of attractor cycles that all orbits eventually reach]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "has",
+      "object": "a unique global attractor cycle that all orbits eventually reach",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a unique global attractor cycle that all orbits eventually reach]"
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain at all times",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "exhibits",
+      "object": "a finite set of distinct attractor cycles, each with its own basin of attraction, and some orbits may diverge",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a finite set of distinct attractor cycles, each with its own basin of attraction, and some orbits may diverge]"
+      ],
+      "scope": {
+        "domain": "a restricted subset of integers (e.g., n \u2261 0 mod 3)"
+      },
+      "qualifier": {
+        "condition": "if the map is defined with a specific form of the mod 3 rule"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "contains",
+      "object": "at least one transient orbit that never enters any cycle, contradicting the finite-attractor hypothesis",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching at least one transient orbit that never enters any cycle, contradicting the finite-attractor hypothesis]"
+      ],
+      "scope": {
+        "domain": "numerical evidence up to 10^6"
+      },
+      "qualifier": {
+        "caveat": "based on limited simulation depth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "has",
+      "object": "a unique global attractor cycle that includes only numbers congruent to 2 mod 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a unique global attractor cycle that includes only numbers congruent to 2 mod 3]",
+        "[PATH:empirical] Exhaustive computational search for cycles of T(n) up to a large bound (e.g., 10^9) with rigorous verification of attractor convergence \u2014 If a unique global attractor exists containing only numbers \u2261 2 mod 3, then all starting numbers up to the bound should eventually enter such a cycle. Simulated evidence is mentioned, but a systematic, bounded exhaustive search can confirm or refute the uniqueness and the residue condition.",
+        "[PATH:theoretical] Formal proof using number-theoretic invariants (e.g., modular constraints on iterates of T(n) under mod 3 branching) and analysis of possible cycle structures \u2014 A rigorous proof or disproof of the claim that all cycles must consist solely of numbers \u2261 2 mod 3, and that only one cycle exists, would settle the hypothesis. This could involve studying the functional graph of T(n) modulo powers of 3.",
+        "[PATH:literature] Survey of known results on similar piecewise linear maps (e.g., Collatz-type maps with modulus branching) in the literature \u2014 Existing research on related recursive maps may contain theorems or counterexamples that directly apply to T(n). For instance, work on 3x+1 variants or generalized Collatz functions often classifies attractor cycles and could provide analogies or contradictions."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps under iteration of T(n)",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "does not have",
+      "object": "a unique global attractor cycle, as some orbits are proven to diverge",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a unique global attractor cycle, as some orbits are proven to diverge]",
+        "[PATH:empirical] Extended numerical simulation of T(n) for n up to 10^9, with rigorous detection of divergent orbits via stopping-time analysis and cycle detection algorithms \u2014 The current confidence is based on observations up to 10^6. Extending the range by three orders of magnitude can reveal whether apparent divergence persists or eventually converges, reducing uncertainty about the existence of a unique global attractor.",
+        "[PATH:theoretical] Analytic proof of unbounded growth for a subset of initial conditions, using modular arithmetic and invariant theory (e.g., showing that certain residue classes under mod 3 branching lead to strictly increasing trajectories) \u2014 A theoretical proof of divergence for a non-empty set of positive integers would definitively refute the existence of a unique global attractor cycle, moving beyond empirical observation to a certainty.",
+        "[PATH:literature] Literature review of similar recursive maps with mod-k branching (e.g., generalized Collatz-type functions) to identify known results on attractor uniqueness and divergence conditions \u2014 Contextualizing T(n) within established results on piecewise linear maps can reveal whether the observed behavior is typical or anomalous, and whether proof techniques from related systems can be adapted."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "over the observed iteration range up to 10^6"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "exhibits exactly one attractor cycle of length 2 when restricted to n \u2261 0 mod 3",
+      "object": "all such orbits converge to the cycle (0 \u2192 0) or diverge to infinity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching all such orbits converge to the cycle (0 \u2192 0) or diverge to infinity]",
+        "[PATH:empirical] Exhaustive computational search for T(n) on n \u2261 0 mod 3 up to a large bound (e.g., n \u2264 10^9) to enumerate all cycles and check convergence to (0\u21920) or divergence. \u2014 Direct simulation can confirm or refute the claim of exactly one attractor cycle of length 2 within the domain, and test whether all orbits either converge to that cycle or diverge to infinity, by detecting any other attractors or cycles.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using modular arithmetic and invariant theory, particularly examining the behavior of T(n) for n divisible by 3 and proving that any cycle must satisfy specific congruences. \u2014 A rigorous proof of the cycle structure and convergence properties would confirm the hypothesis; a counterexample in the form of a different cycle or a bounded non-convergent orbit would refute it.",
+        "[PATH:literature] Review of literature on piecewise linear maps with mod 3 branching, e.g., generalizations of the Collatz conjecture or similar iterative maps over integers. \u2014 Existing results on related maps may provide insights or known theorems about attractor cycles for n \u2261 0 mod 3, potentially supporting or contradicting the uniqueness claim."
+      ],
+      "scope": {
+        "domain": "n \u2261 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all integer n \u2265 0",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "does not exhibit",
+      "object": "a finite set of distinct attractor cycles, as all orbits eventually converge to a single cycle regardless of initial conditions",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching a finite set of distinct attractor cycles, as all orbits eventually converge to a single cycle regardless of initial conditions]",
+        "[PATH:empirical] Exhaustive computational search over all residues modulo powers of 3 (e.g., up to 3^k for k=10) to enumerate all possible cycles in the restricted domain n \u2261 0 mod 3, combined with rigorous proof that no other cycles exist via modular constraints or contraction arguments. \u2014 Direct simulation can detect if multiple distinct cycles exist or if all orbits converge to a single cycle, providing concrete evidence for or against the hypothesis.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using number-theoretic invariants (e.g., valuation of 3-adic norm) and functional equations to prove convergence or divergence of orbits, possibly applying techniques from the Collatz conjecture literature. \u2014 A theoretical proof would resolve the dispute definitively, as empirical simulation alone cannot cover all integers; such analysis could confirm or refute the existence of multiple attractor cycles.",
+        "[PATH:literature] Review of known results on recursive maps with mod 3 branching, particularly those related to the 3x+1 problem and its generalizations, in journals like 'Discrete Mathematics' or 'Journal of Number Theory'. \u2014 Existing literature may contain analogous theorems or counterexamples that directly apply to this restricted subset, saving effort and providing rigorous evidence."
+      ],
+      "scope": {
+        "domain": "a restricted subset of integers (e.g., n \u2261 0 mod 3)"
+      },
+      "qualifier": {
+        "temporal": "for all n in the restricted subset under iteration from any starting value",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "exhibits",
+      "object": "only finitely many attractor cycles, each with a well-defined basin, and no orbits diverge to infinity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod 3 branching exhibits only finitely many attractor cycles, each with a well-defined basin, and no orbits diverge to infinity in domain 'a restricted subset of integers (e.g., n \u2261 0 mod 3)']"
+      ],
+      "scope": {
+        "domain": "a restricted subset of integers (e.g., n \u2261 0 mod 3)"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "within the integer domain of n \u2261 0 mod 3"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "exhibits",
+      "object": "infinitely many distinct attractor cycles, fractal basin boundaries, and some orbits diverge",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) with mod 3 branching exhibits infinitely many distinct attractor cycles, fractal basin boundaries, and some orbits diverge in domain 'a restricted subset of integers (e.g., n \u2261 0 mod 3)']"
+      ],
+      "scope": {
+        "domain": "a restricted subset of integers (e.g., n \u2261 0 mod 3)"
+      },
+      "qualifier": {
+        "temporal": "under iterated application of the map"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "has a transient orbit that diverges to infinity",
+      "object": "rather than entering a cycle or finite attractor, under unbounded iteration from a specific integer seed below 10^6",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching rather than entering a cycle or finite attractor, under unbounded iteration from a specific integer seed below 10^6]",
+        "[PATH:empirical] Extend simulation depth to 10^12 steps for the specific seed using optimized arbitrary-precision arithmetic on a distributed computing cluster, tracking the trajectory for unbounded growth patterns (e.g., exponential increase in magnitude) rather than eventual cycle detection. \u2014 Current simulations up to 10^8 steps may be insufficient to rule out a very long transient before eventual cycle entry. Deeper simulation provides stronger evidence for divergence, especially if the map's dynamics are chaotic and slow to reveal asymptotic behavior.",
+        "[PATH:theoretical] Derive a theoretical bound or invariant (e.g., using modular arithmetic or Lyapunov-like functions) that proves that for any seed below 10^6, the map T(n) must eventually enter a cycle or that certain residue classes force unbounded growth. For example, search for a conserved quantity under the mod 3 branching that limits growth or, conversely, find a condition that guarantees divergence. \u2014 Empirical evidence alone is suggestive but not definitive for infinite iteration. A rigorous proof would settle the dispute; if no such invariant exists, the hypothesis remains plausible. Current literature on similar recursive maps (e.g., Collatz-like problems) often relies on such theoretical structures.",
+        "[PATH:literature] Conduct a literature review of known results on recursive maps with modular branching, focusing on the Collatz conjecture and its variants (e.g., the 3x+1 problem, generalized Collatz functions). Identify any proven theorems about the existence of divergent trajectories in related maps, or statistical evidence that most seeds converge. \u2014 The map T(n) with mod 3 branching is a natural generalization of the Collatz map. Existing results on the undecidability or behavior of such maps (e.g., by Conway, Lagarias, or Kurtz and Simon) can provide context and possibly methods to confirm or refute the hypothesis, or at least indicate whether a divergent orbit is plausible."
+      ],
+      "scope": {
+        "domain": "numerical evidence up to 10^6 with extended simulation depth beyond 10^8 steps"
+      },
+      "qualifier": {
+        "temporal": "as of simulation runs completed in 2024",
+        "geographic": "simulated on computational clusters in North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "does not contain",
+      "object": "any transient orbit that never enters any cycle, supporting the finite-attractor hypothesis",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) with mod 3 branching any transient orbit that never enters any cycle, supporting the finite-attractor hypothesis]"
+      ],
+      "scope": {
+        "domain": "numerical evidence up to 10^6"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "exhibits",
+      "object": "exactly one nontrivial attractor cycle within the subset n \u2261 0 mod 3, with all other trajectories in that subset diverging or collapsing to a fixed point",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "n \u2261 0 mod 3, with the mod 3 rule defined as T(n) = n/3 when n \u2261 0 mod 3, else T(n) = (2n \u00b1 1)/3 depending on residue"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The recursive map T(n) with mod 3 branching",
+      "predicate": "does not exhibit",
+      "object": "a finite set of distinct attractor cycles, leading to all orbits eventually converging to a single cycle",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "a restricted subset of integers (e.g., n \u2261 0 mod 3)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

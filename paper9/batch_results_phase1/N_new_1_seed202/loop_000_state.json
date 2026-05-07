@@ -1,0 +1,395 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Aspirin therapy",
+      "predicate": "reduces",
+      "object": "cardiovascular event risk in otherwise healthy adults over 50",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy cardiovascular event risk in otherwise healthy adults over 50]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Recent trials (e.g., ASPREE, ARRIVE) suggest increased bleeding risk may offset any modest benefit in primary prevention, while older meta-analyses show a small absolute risk reduction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Aspirin therapy",
+      "predicate": "reduces",
+      "object": "absolute risk of cardiovascular events by approximately 0.1% per year in primary prevention adults over 50",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy absolute risk of cardiovascular events by approximately 0.1% per year in primary prevention adults over 50]"
+      ],
+      "scope": {
+        "domain": "meta-analyses of older trials (pre-2010)"
+      },
+      "qualifier": {
+        "tension": "The effect size is small and may not be clinically meaningful for individuals without known cardiovascular disease."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Aspirin therapy",
+      "predicate": "increases",
+      "object": "risk of major bleeding events in healthy adults over 50 without prior cardiovascular disease",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy risk of major bleeding events in healthy adults over 50 without prior cardiovascular disease]"
+      ],
+      "scope": {
+        "domain": "recent large-scale trials (ASPREE, ARRIVE)"
+      },
+      "qualifier": {
+        "tension": "The bleeding risk appears to offset or even outweigh the modest cardiovascular benefit, especially in older populations with lower baseline risk."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Aspirin therapy",
+      "predicate": "increases",
+      "object": "absolute risk of major gastrointestinal bleeding by approximately 0.15% per year in primary prevention adults over 50",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy absolute risk of major gastrointestinal bleeding by approximately 0.15% per year in primary prevention adults over 50]",
+        "[PATH:empirical] Individual participant data meta-analysis of primary prevention aspirin trials (e.g., ASPREE, ARRIVE, JPPP) with standardized bleeding outcome definitions and age-stratified analysis for adults >50 \u2014 Pooling updated trial data with consistent bleeding adjudication can directly estimate the absolute risk increase in the specified population and resolve discrepancies from older pre-2010 trials.",
+        "[PATH:empirical] Longitudinal cohort study using electronic health records (e.g., CPRD or Medicare claims) comparing gastrointestinal bleeding rates in aspirin users vs. non-users among primary prevention patients aged 50+ with no prior cardiovascular disease \u2014 Real-world observational data can provide precise absolute risk estimates and assess whether the 0.15% per year figure holds in contemporary practice, accounting for modern co-therapies like proton pump inhibitors.",
+        "[PATH:theoretical] Quantitative risk-benefit decision model incorporating updated bleeding risk, cardiovascular event rates, and age-specific baseline risks from recent meta-analyses \u2014 A formal net-harm analysis can test the tension claim by comparing the small absolute bleeding risk against potential cardiovascular benefits, clarifying thresholds where harm outweighs benefit in older asymptomatic adults."
+      ],
+      "scope": {
+        "domain": "reanalysis of older trials (pre-2010) with updated bleeding event adjudication"
+      },
+      "qualifier": {
+        "tension": "If bleeding risk exceeds cardiovascular benefit in older adults without known disease, net harm may outweigh any small risk reduction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Aspirin therapy",
+      "predicate": "increases",
+      "object": "risk of bleeding complications in primary prevention adults over 50",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy risk of bleeding complications in primary prevention adults over 50]",
+        "[PATH:empirical] ASPREE trial (Aspirin in Reducing Events in the Elderly) post-hoc analysis on bleeding complications in primary prevention adults over 50 \u2014 The ASPREE trial is a landmark randomized controlled trial specifically designed to evaluate aspirin use in healthy older adults (\u226570 years, but includes those over 50 in primary prevention). Its published bleeding outcome data, including intracranial and gastrointestinal hemorrhage rates, directly test the hypothesis that aspirin increases bleeding risk in this population.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized trials on aspirin for primary prevention (e.g., Zheng & Roddick, 2019, or recent Cochrane review update) \u2014 A comprehensive meta-analysis of all major primary prevention trials (including ASPREE, ARRIVE, ASCEND) provides pooled effect estimates for bleeding complications. This can confirm or refute the hypothesis by synthesizing data across diverse populations and clarifying the magnitude of risk in adults over 50.",
+        "[PATH:empirical] Subgroup analysis of bleeding risk by age in the ARRIVE trial (Aspirin to Reduce Risk of Initial Vascular Events) with focus on participants aged 50-59 \u2014 The ARRIVE trial enrolled adults with moderate cardiovascular risk (mean age ~54). Its published data on bleeding events stratified by age can directly address whether the increased bleeding risk is significant in the 50+ age group, supplementing findings from older cohorts."
+      ],
+      "scope": {
+        "domain": "recent studies and clinical guidelines (post-2010)"
+      },
+      "qualifier": {
+        "temporal": "post-2010",
+        "geographic": "global (primarily Western clinical study populations)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Aspirin therapy",
+      "predicate": "increases",
+      "object": "risk of intracranial hemorrhage specifically among healthy adults over 50 without prior cardiovascular disease who also have subclinical markers of cerebral small vessel disease",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy risk of intracranial hemorrhage specifically among healthy adults over 50 without prior cardiovascular disease who also have subclinical markers of cerebral small vessel disease]",
+        "[PATH:empirical] Prospective cohort study with baseline MRI screening for cerebral small vessel disease (e.g., leukoaraiosis, microbleeds) in healthy adults >50, randomized to aspirin vs placebo, with long-term follow-up for intracranial hemorrhage \u2014 Directly tests the interaction between subclinical small vessel disease markers and aspirin-related hemorrhage risk, avoiding post-hoc limitations of ASPREE and ARRIVE.",
+        "[PATH:literature] Systematic review and individual patient data meta-analysis of randomized controlled trials (e.g., ASPREE, ARRIVE, JPPP) stratified by baseline MRI evidence of small vessel disease \u2014 Aggregates existing trial data to increase statistical power for subgroup analysis, clarifying whether the observed risk is reproducible across populations and imaging protocols.",
+        "[PATH:theoretical] Biomechanical modeling of aspirin's effect on cerebral microbleed rupture threshold in aged microvessels with amyloid angiopathy or hypertensive arteriopathy \u2014 Provides mechanistic plausibility by linking aspirin's antiplatelet effect to hemorrhage risk specifically in vessels already compromised by small vessel disease, informing biological basis for the hypothesis."
+      ],
+      "scope": {
+        "domain": "post-hoc imaging substudies of ASPREE and ARRIVE"
+      },
+      "qualifier": {
+        "temporal": "post-hoc analyses of ASPREE and ARRIVE trials (2001-2016)",
+        "geographic": "primarily United States and Australia (ASPREE), United Kingdom and Europe (ARRIVE)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Aspirin therapy",
+      "predicate": "does not significantly increase",
+      "object": "risk of major bleeding events in healthy adults over 50 without prior cardiovascular disease",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin therapy risk of major bleeding events in healthy adults over 50 without prior cardiovascular disease]",
+        "[PATH:empirical] Individual patient data meta-analysis of randomized controlled trials (e.g., ASPREE, ARRIVE, and similar trials) comparing low-dose aspirin vs. placebo in adults \u226550 without prior CVD, with primary outcome of major bleeding (e.g., intracranial, gastrointestinal) and stratification by age, sex, and frailty. \u2014 Such a meta-analysis would directly test the hypothesis by pooling high-quality trial data to assess bleeding risk with greater statistical power, accounting for heterogeneity across studies and subgroups, thus clarifying whether the observed null effect is robust or masks small but clinically meaningful increases.",
+        "[PATH:empirical] Long-term observational cohort study using large-scale electronic health records or claims databases (e.g., UK Biobank, Medicare) with propensity-score matching to compare bleeding events in aspirin users vs. non-users among healthy adults \u226550 without prior CVD, adjusting for confounders like hypertension and NSAID use. \u2014 Observational data can capture real-world bleeding incidence over extended follow-up beyond typical trial durations, and careful adjustment for confounding can help confirm or refute the hypothesis by detecting rare or delayed bleeding events that trials might miss, while also addressing generalizability beyond trial populations.",
+        "[PATH:theoretical] Systematic review of dose-response relationships in existing literature, focusing on the biological mechanism of aspirin's effect on platelet aggregation and mucosal injury, with quantitative synthesis of bleeding risk across different aspirin doses (e.g., 75 mg, 100 mg, 325 mg) in older adults without CVD. \u2014 Understanding the dose-response curve can theoretically inform whether a null finding at low doses might be plausible, and a systematic review of mechanistic studies (e.g., endoscopic or biomarker studies) can establish whether there is a threshold below which bleeding risk is truly negligible, thereby supporting or undermining the hypothesis from a pathophysiological perspective."
+      ],
+      "scope": {
+        "domain": "recent meta-analyses and observational studies"
+      },
+      "qualifier": {
+        "temporal": "studies published between 2018 and 2023",
+        "geographic": "primarily North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Aspirin therapy in healthy adults over 50 without prior cardiovascular disease",
+      "predicate": "increases",
+      "object": "risk of major bleeding events to a clinically significant degree that outweighs any cardiovascular benefit",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Aspirin therapy in healthy adults over 50 without prior cardiovascular disease increases risk of major bleeding events to a clinically significant degree that outweighs any cardiovascular benefit in domain 'recent large-scale trials (ASPREE, ARRIVE)']"
+      ],
+      "scope": {
+        "domain": "recent large-scale trials (ASPREE, ARRIVE)"
+      },
+      "qualifier": {
+        "temporal": "2018-2022",
+        "geographic": "United States, Australia, and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Aspirin therapy in healthy adults over 50 without prior cardiovascular disease",
+      "predicate": "does not increase",
+      "object": "risk of major bleeding events beyond an acceptable threshold when cardiovascular benefit is considered",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Aspirin therapy in healthy adults over 50 without prior cardiovascular disease does not increase risk of major bleeding events beyond an acceptable threshold when cardiovascular benefit is considered in domain 'recent large-scale trials (ASPREE, ARRIVE)']"
+      ],
+      "scope": {
+        "domain": "recent large-scale trials (ASPREE, ARRIVE)"
+      },
+      "qualifier": {
+        "temporal": "2018\u20132020 (publication period of ASPREE and ARRIVE trials)",
+        "geographic": "United States, Australia, United Kingdom (trial locations)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Aspirin therapy in healthy adults over 50 with elevated baseline inflammatory markers (CRP > 3 mg/L)",
+      "predicate": "increases",
+      "object": "risk of major bleeding events more than in those with normal CRP, while offering no net cardiovascular benefit",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "post-hoc analysis of ASPREE and ARRIVE inflammatory biomarker substudies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Aspirin therapy",
+      "predicate": "does not significantly increase",
+      "object": "risk of major bleeding events in healthy adults over 50 without prior cardiovascular disease",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "recent large-scale trials (ASPREE, ARRIVE)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C010",
+    "T9[falsifier] on C003 -> C011",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C010",
+    "T8 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 32,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006",
+      "C010"
+    ],
+    "falsifier": [
+      "C005",
+      "C007",
+      "C011"
+    ]
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Aspirin prophylaxis",
+      "predicate": "reduces",
+      "object": "cardiovascular event risk in otherwise healthy adults over 50",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin prophylaxis cardiovascular event risk in otherwise healthy adults over 50]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Recent trials (e.g., ASPREE, ARRIVE) show no net benefit and increased bleeding risk, while older meta-analyses suggested modest risk reduction; benefit may depend on individual baseline risk stratification not yet validated."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Aspirin prophylaxis in older adults (\u226570)",
+      "predicate": "increases",
+      "object": "major bleeding risk without net cardiovascular benefit",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "observation",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin prophylaxis in older adults (\u226570) major bleeding risk without net cardiovascular benefit]"
+      ],
+      "scope": {
+        "domain": "geriatric primary prevention"
+      },
+      "qualifier": {
+        "tension": "Based on ASPREE trial results, the risk of gastrointestinal and intracranial bleeding outweighs any potential cardiovascular risk reduction in this age group."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk",
+      "predicate": "may reduce",
+      "object": "cardiovascular event risk when bleeding risk is low",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk cardiovascular event risk when bleeding risk is low]"
+      ],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {
+        "tension": "Older meta-analyses suggest a modest benefit in this subgroup, but recent trials (ARRIVE) failed to replicate a significant reduction, and validated risk stratification tools are lacking."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk and low bleeding risk",
+      "predicate": "reduces",
+      "object": "nonfatal myocardial infarction risk only when combined with a proton pump inhibitor",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk and low bleeding risk nonfatal myocardial infarction risk only when combined with a proton pump inhibitor]",
+        "[PATH:empirical] Post-hoc analysis of ARRIVE trial data stratifying by concomitant PPI use and bleeding events \u2014 Re-analyzing the ARRIVE trial, which excluded high-risk patients and did not mandate gastroprotection, could reveal whether participants who happened to be on a PPI had a lower rate of upper GI bleeding and a correspondingly greater reduction in nonfatal MI, directly testing the hypothesis that bleeding offsets MI benefit.",
+        "[PATH:empirical] Randomized controlled trial of aspirin + PPI vs. aspirin alone in adults 50-59 with elevated 10-year CV risk and low bleeding risk \u2014 A dedicated RCT in the exact target subgroup, with mandatory PPI co-prescription in one arm, would provide the highest-quality evidence to confirm or refute whether gastroprotection unmasks a net MI reduction, avoiding confounding by indication present in observational analyses.",
+        "[PATH:literature] Systematic review and meta-analysis of aspirin primary prevention trials with individual-level PPI and bleeding data \u2014 Pooling individual patient data from trials like ARRIVE, ASPREE, and ASCEND, stratifying by PPI use and bleeding outcomes, could quantify the interaction between GI bleeding events and MI reduction, offering a theoretical and empirical basis for the hypothesized effect modification."
+      ],
+      "scope": {
+        "domain": "gastroprotected stratified primary prevention"
+      },
+      "qualifier": {
+        "tension": "The ARRIVE trial excluded higher-risk patients and did not mandate gastroprotection, possibly masking a true benefit for MI reduction by allowing upper GI bleeding events to offset gains; this hypothesis proposes that co-prescribing a PPI would unmask a net benefit for MI in the target subgroup."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk",
+      "predicate": "does not significantly reduce",
+      "object": "cardiovascular event risk even when bleeding risk is low",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk cardiovascular event risk even when bleeding risk is low]",
+        "[PATH:empirical] Post-hoc analysis of the ASPREE trial (Aspirin in Reducing Events in the Elderly) stratified by 10-year cardiovascular risk score in adults aged 50-59 with low bleeding risk \u2014 ASPREE is a large, placebo-controlled trial that directly tested aspirin in primary prevention. A subgroup analysis focusing on the specified age and risk stratum could provide direct evidence on whether aspirin reduces cardiovascular events when bleeding risk is low, addressing the disputed hypothesis.",
+        "[PATH:literature] Meta-analysis of individual participant data from randomized trials of aspirin in primary prevention (e.g., from the Antithrombotic Trialists' Collaboration) with stratification by age and baseline cardiovascular risk \u2014 Pooling data across trials (e.g., JPAD, POPADAD, ARRIVE) can increase statistical power to detect a modest effect in the narrow age-risk subgroup and assess heterogeneity, especially for the low-bleeding-risk subset. This would confirm or refute the null effect claim.",
+        "[PATH:empirical] Causal modeling using electronic health records from a large US healthcare system (e.g., Optum or Medicare) to emulate a target trial of aspirin initiation in adults 50-59 with elevated 10-year risk and low bleeding risk \u2014 Observational data with rigorous target trial emulation can provide real-world evidence on the net benefit of aspirin in this specific population, controlling for confounders and assessing outcomes over 2014-2024, directly testing the hypothesis in the specified geographic and temporal scope."
+      ],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {
+        "temporal": "2014\u20132024",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk",
+      "predicate": "reduces",
+      "object": "cardiovascular event risk when bleeding risk is low",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk reduces cardiovascular event risk when bleeding risk is low in domain 'stratified primary prevention']"
+      ],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {
+        "temporal": "current guidelines (e.g., USPSTF 2022)",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk",
+      "predicate": "does not reduce",
+      "object": "cardiovascular event risk when bleeding risk is low",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk does not reduce cardiovascular event risk when bleeding risk is low in domain 'stratified primary prevention']"
+      ],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {
+        "temporal": "2016\u20132022",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk and low bleeding risk",
+      "predicate": "reduces",
+      "object": "first nonfatal myocardial infarction but not cardiovascular mortality or stroke",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Aspirin prophylaxis in adults 50\u201359 with elevated 10-year cardiovascular risk",
+      "predicate": "does not reduce",
+      "object": "cardiovascular event risk even when bleeding risk is low",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "stratified primary prevention"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C004",
+    "T5[falsifier] on C003 -> C005",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C008",
+    "T9[falsifier] on C003 -> C009",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008",
+    "T8 on C009"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 23,
+  "focus_claim_id": "C009",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C008"
+    ],
+    "falsifier": [
+      "C005",
+      "C009"
+    ]
+  }
+}
