@@ -8,7 +8,7 @@
 | Architecture | EME score | Clusters | Total claims |
 |-------------|-----------|----------|--------------|
 | Arch A (merged) | 3.0277 | 4 | 65 |
-| Arch B (branches) | 8.788 | 12 | 271 |
+| Arch B (branches) | 12.0257 | 16 | 380 |
 | Arm B baseline (Paper 8) | 2.8195 | 4 | 65 |
 
 ## Hypothesis Verdicts
@@ -21,4 +21,4 @@
 
 ## Negative Findings
 - arch_a_fallback triggered: see per-run operator_log
-- Arch B branches spawned: 19
+- Arch B branches spawned: 28

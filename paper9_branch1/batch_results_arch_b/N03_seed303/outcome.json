@@ -2,10 +2,2488 @@
   "domain_id": "N03",
   "seed": 303,
   "arch": "B",
-  "outcome": "LOOP_COMPLETE",
-  "loops_completed": 1,
-  "operator_log": [],
-  "branch_results": [],
-  "n_branches": 0,
-  "final_claims": {}
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 5,
+  "operator_log": [
+    {
+      "loop": 1,
+      "parallel_event": 1,
+      "n_candidates": 3,
+      "n_admitted": 2,
+      "candidate_ops": [
+        "boundary_condition_analysis",
+        "recursive_modulation"
+      ]
+    },
+    {
+      "loop": 3,
+      "parallel_event": 2,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "boundary_condition_analysis",
+        "recursive_modulation"
+      ]
+    }
+  ],
+  "branch_results": [
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the invariant structural components and boundary conditions required for integrating causal reasoning modules i",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "integrating causal reasoning modules into current AI architectures",
+          "predicate": "requires",
+          "object": "explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into current AI architectures explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "between the inductive biases of deep learning scaling laws and the formal requirements for causal discovery and intervention"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "integrating causal reasoning modules into current AI architectures",
+          "predicate": "requires",
+          "object": "explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into current AI architectures explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization]"
+          ],
+          "scope": {
+            "domain": "formal causal reasoning"
+          },
+          "qualifier": {
+            "basis": "standard assumptions in causal discovery and intervention"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "deep learning scaling laws",
+          "predicate": "can achieve",
+          "object": "discontinuous out-of-distribution generalization without explicit boundary conditions",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: deep learning scaling laws discontinuous out-of-distribution generalization without explicit boundary conditions]"
+          ],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {
+            "tension": "contradicts the formal requirement for explicit boundary conditions by relying on implicit inductive biases from large-scale training"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "integrating causal reasoning modules into current AI architectures",
+          "predicate": "may be hindered by",
+          "object": "the tension between formal causal requirements and the inductive biases of deep learning scaling laws",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into current AI architectures the tension between formal causal requirements and the inductive biases of deep learning scaling laws]"
+          ],
+          "scope": {
+            "domain": "AI alignment and architecture design"
+          },
+          "qualifier": {
+            "perspective": "competing: suggests that the integration itself is problematic, rather than the boundary conditions being the sole requirement"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "integrating causal reasoning modules into current AI architectures",
+          "predicate": "requires",
+          "object": "a learned causal graph that is invariant across training tasks, or else discontinuous out-of-distribution generalization fails even with explicit boundary conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into current AI architectures a learned causal graph that is invariant across training tasks, or else discontinuous out-of-distribution generalization fails even with explicit boundary conditions]",
+            "[PATH:empirical] Systematic benchmark experiments comparing OOD generalization of causal vs. non-causal models with explicit boundary conditions (e.g., on ColoredMNIST or CausalWorld variants where training tasks share no invariant graph) \u2014 Directly tests whether lack of invariant causal graph leads to discontinuous failure even when boundary conditions are provided, as predicted.",
+            "[PATH:theoretical] Theoretical analysis of generalization bounds for causal representation learning under task distribution shifts (e.g., extending work by Peters, B\u00fchlmann, or Sch\u00f6lkopf on invariant causal prediction) \u2014 Formally examines necessary and sufficient conditions for OOD generalization, clarifying whether invariance is required or if boundary conditions can compensate.",
+            "[PATH:literature] Literature review of recent failures in modular causal reasoning systems (e.g., from NeurIPS 2024 workshops on causality and out-of-distribution robustness) \u2014 Aggregates empirical and theoretical evidence from multiple studies to assess the prevalence and severity of failure modes when causal graphs are not invariant."
+          ],
+          "scope": {
+            "domain": "formal causal reasoning"
+          },
+          "qualifier": {
+            "temporal": "current state of AI research (2025)",
+            "geographic": "global AI research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "integrating causal reasoning modules into current AI architectures",
+          "predicate": "does not require",
+          "object": "explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into current AI architectures explicitly defined boundary conditions on the training distribution's support to enable discontinuous out-of-distribution generalization]",
+            "[PATH:empirical] Experimental comparison of causal vs. non-causal models (e.g., Causal-BART, NCMs) on benchmark OOD tasks like ColoredMNIST or MooC with discontinuous distribution shifts (e.g., unseen color combinations or novel object-reward mappings) \u2014 Directly tests whether causal modules generalize to out-of-support shifts without explicit boundary definitions, by measuring performance drops or invariance failures.",
+            "[PATH:theoretical] Formal analysis of identifiability and generalization bounds for Structural Causal Models (SCMs) under intervention-based shifts, e.g., work by Peters, B\u00fchlmann, or Pearl on 'Causal Inference and Generalization' \u2014 Provides necessary conditions (e.g., causal sufficiency, positivity) that may imply boundary conditions are required; refutation would require proof of sufficiency without such conditions.",
+            "[PATH:literature] Literature survey of recent 'causal representation learning' papers (e.g., from NeurIPS, ICML, 2020-2024) that claim OOD generalization via disentangled causal factors, checking whether they implicitly assume support overlap or use data augmentation to enforce boundaries \u2014 Reveals whether current successful implementations rely on explicit or implicit boundary conditions, clarifying the empirical state of the claim."
+          ],
+          "scope": {
+            "domain": "formal causal reasoning"
+          },
+          "qualifier": {
+            "temporal": "as of current AI architectures (pre-2025)",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "deep learning scaling laws",
+          "predicate": "fail to achieve",
+          "object": "discontinuous out-of-distribution generalization without explicit boundary conditions when training data is drawn from a heavy-tailed distribution",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: deep learning scaling laws discontinuous out-of-distribution generalization without explicit boundary conditions when training data is drawn from a heavy-tailed distribution]",
+            "[PATH:empirical] Systematic empirical evaluation of transformer-based LLMs on synthetic heavy-tailed distribution tasks (e.g., Zipfian or Pareto-distributed training data) with out-of-distribution test sets that require discontinuous generalization (e.g., extrapolation to unseen functional forms or sudden rule shifts) \u2014 Directly tests whether scaling (model size, data volume) enables discontinuous OOD generalization under heavy-tailed training data, which is the core claim. Controlled synthetic data avoids confounds from real-world data and allows precise measurement of boundary conditions.",
+            "[PATH:theoretical] Theoretical analysis of the implicit bias of gradient descent in overparameterized models trained on heavy-tailed distributions, focusing on the relationship between spectral properties of the data covariance and the model's extrapolation to out-of-support regions \u2014 Provides a formal framework to determine whether scaling laws alone can overcome the need for explicit boundary conditions. Existing theory (e.g., neural tangent kernel, random features) suggests that without explicit regularization or architectural inductive biases, heavy tails may hinder such generalization, offering a refutation route.",
+            "[PATH:literature] Literature review and meta-analysis of published scaling law experiments that test for emergent abilities (e.g., sudden jumps in performance on novel tasks) under non-uniform training distributions, with particular attention to studies reporting discontinuous generalization failures \u2014 Synthesizes existing evidence from diverse models (e.g., GPT, PaLM, Chinchilla) and tasks to assess whether the hypothesis aligns with or contradicts known results. This can identify whether the claim is already supported or refuted by prior work."
+          ],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "deep learning models",
+          "predicate": "require",
+          "object": "explicit boundary conditions to achieve reliable out-of-distribution generalization",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: deep learning models explicit boundary conditions to achieve reliable out-of-distribution generalization]",
+            "[PATH:empirical] Systematic empirical study comparing OOD generalization performance of deep learning models with and without explicit boundary constraints across standard benchmarks (e.g., WILDS, DomainBed) \u2014 Directly tests the hypothesis by manipulating the presence of explicit boundary conditions and measuring OOD generalization reliability, providing quantitative evidence for or against the claim.",
+            "[PATH:theoretical] Theoretical analysis of the role of inductive biases (e.g., spectral bias, Lipschitz constraints) in bounding the hypothesis space for OOD generalization, building on works like 'A Theory of Universal Learning' or 'Benign Overfitting' \u2014 Establishes formal conditions under which explicit boundaries (e.g., norm constraints, margin conditions) are necessary or sufficient for reliable OOD generalization, clarifying the hypothesis's theoretical underpinnings.",
+            "[PATH:literature] Literature review of recent empirical findings on OOD generalization in large-scale models (e.g., CLIP, GPT-4) that implicitly learn boundary conditions via pretraining, such as 'Distributional Generalization: A New Kind of Invariance' or 'Out-of-Distribution Generalization via Risk Extrapolation' \u2014 Surveys whether state-of-the-art models achieve reliable OOD generalization without explicit boundary constraints, challenging or supporting the hypothesis based on existing evidence."
+          ],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "deep learning scaling laws",
+          "predicate": "enable",
+          "object": "discontinuous out-of-distribution generalization by learning implicit boundary representations from large-scale data",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms deep learning scaling laws enable discontinuous out-of-distribution generalization by learning implicit boundary representations from large-scale data in domain 'empirical deep learning']"
+          ],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "deep learning scaling laws",
+          "predicate": "cannot achieve",
+          "object": "discontinuous out-of-distribution generalization without explicit boundary conditions due to inherent inductive bias limitations",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms deep learning scaling laws cannot achieve discontinuous out-of-distribution generalization without explicit boundary conditions due to inherent inductive bias limitations in domain 'empirical deep learning']"
+          ],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {
+            "temporal": "as of current state-of-the-art (2025)",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "deep learning scaling laws",
+          "predicate": "cannot achieve",
+          "object": "discontinuous out-of-distribution generalization without explicit boundary conditions when training data is generated by a finite-state automaton",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "deep learning scaling laws",
+          "predicate": "require",
+          "object": "explicit boundary conditions for reliable out-of-distribution generalization",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "empirical deep learning"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How might integrating causal reasoning modules into AI architectures impact the scalability of generalization capabiliti",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "impacts",
+          "object": "scalability of generalization capabilities beyond current distributional limits",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures scalability of generalization capabilities beyond current distributional limits]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "improves",
+          "object": "sample efficiency for out-of-distribution generalization in structured environments",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures sample efficiency for out-of-distribution generalization in structured environments]"
+          ],
+          "scope": {
+            "domain": "reinforcement learning with discrete state spaces"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "reduces",
+          "object": "scalability due to increased computational overhead and brittleness in high-dimensional inputs",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures scalability due to increased computational overhead and brittleness in high-dimensional inputs]"
+          ],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {
+            "temporal": "2024-2026",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "provides",
+          "object": "marginal gains in generalization only when the training distribution already contains latent causal structure",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures marginal gains in generalization only when the training distribution already contains latent causal structure]"
+          ],
+          "scope": {
+            "domain": "tabular data with known confounders"
+          },
+          "qualifier": {
+            "temporal": "2020-2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "degrades",
+          "object": "sample efficiency for out-of-distribution generalization in unstructured environments",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures sample efficiency for out-of-distribution generalization in unstructured environments]",
+            "[PATH:empirical] Controlled ablation study in a continuous-state RL benchmark (e.g., MuJoCo or DM Control) comparing model-based agents with and without a causal reasoning module (e.g., causal graph learning or intervention-based planning) on out-of-distribution generalization tasks (e.g., modified dynamics or unseen terrains). Measure sample efficiency during training. \u2014 Directly tests the hypothesis by isolating the causal module's effect on sample efficiency in unstructured, continuous environments under distribution shift.",
+            "[PATH:theoretical] Theoretical analysis of the sample complexity of causal discovery and inference in high-dimensional continuous state spaces, e.g., deriving bounds on the number of interactions needed to learn causal structure versus model-free or non-causal model-based approaches for generalization. \u2014 Provides a formal understanding of whether the overhead of causal reasoning necessarily degrades sample efficiency, or if it could be beneficial in certain regimes."
+          ],
+          "scope": {
+            "domain": "reinforcement learning with continuous state spaces"
+          },
+          "qualifier": {
+            "temporal": "during the training phase of model-based RL agents",
+            "geographic": "simulated environments with continuous state spaces"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "hinders",
+          "object": "sample efficiency for out-of-distribution generalization in structured environments",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures sample efficiency for out-of-distribution generalization in structured environments]",
+            "[PATH:empirical] Benchmark causal RL agents (e.g., Causal PPO, Causal IB) on OOD generalization tasks in discrete state spaces (e.g., Gridworld variants with causal structure shifts) and compare sample efficiency against non-causal baselines (e.g., standard PPO, DQN). \u2014 Direct empirical comparison in the specified domain (RL, discrete state spaces) can confirm whether causal modules hinder sample efficiency for OOD generalization, as the hypothesis claims, or if they help, thus refuting it.",
+            "[PATH:theoretical] Theoretical analysis of sample complexity lower bounds for causal vs. non-causal learners in structured discrete environments with distribution shift (e.g., using PAC-Bayes or information-theoretic frameworks). \u2014 A theoretical proof could establish whether causal reasoning inherently imposes additional sample cost for OOD generalization, providing a principled confirmation or refutation of the hypothesis beyond empirical noise.",
+            "[PATH:literature] Systematic literature review of recent (2023\u20132025) papers on causal RL in discrete state spaces, focusing on reported sample efficiency metrics for OOD generalization tasks (e.g., from NeurIPS, ICML, ICLR proceedings). \u2014 Aggregating existing evidence from multiple studies can reveal a consensus or lack thereof, helping to confirm or refute the disputed claim with broader support than a single experiment."
+          ],
+          "scope": {
+            "domain": "reinforcement learning with discrete state spaces"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "simulated environments only"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "sparse causal attention mechanisms in transformer-based vision-language models",
+          "predicate": "improve",
+          "object": "scalability and robustness by reducing computational overhead and maintaining causal fidelity in high-dimensional inputs",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: sparse causal attention mechanisms in transformer-based vision-language models scalability and robustness by reducing computational overhead and maintaining causal fidelity in high-dimensional inputs]",
+            "[PATH:empirical] Ablation studies on sparse causal attention patterns in large-scale vision-language transformers (e.g., Flamingo, BLIP-2) using varying sparsity ratios and measuring computational cost, causal fidelity, and downstream task accuracy \u2014 Direct empirical comparison of sparse vs. dense causal attention under controlled conditions would quantify the trade-off between reduced overhead and maintained fidelity, providing strong evidence for or against the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis of sparse attention complexity and causal consistency bounds in high-dimensional inputs, building on works like 'Sparse Attention with Learned Patterns' or 'Causal Attention for Multimodal Transformers' \u2014 A formal framework proving conditions under which sparsity preserves causal structure (or fails to) would clarify whether scalability gains can be achieved without sacrificing robustness, offering a principled refutation or confirmation.",
+            "[PATH:literature] Systematic review of recent literature (2023\u2013present) on efficient attention mechanisms for vision-language models, including sparse, linear, and causal variants, with meta-analysis of reported scalability and robustness metrics \u2014 Synthesizing existing empirical results from multiple studies can reveal consistent patterns or contradictions regarding the efficacy of sparse causal attention, helping to resolve the current disputed status."
+          ],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {
+            "temporal": "since 2023",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "enhances",
+          "object": "scalability by improving model interpretability and robustness in handling high-dimensional inputs",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures scalability by improving model interpretability and robustness in handling high-dimensional inputs]",
+            "[PATH:empirical] Controlled experiments comparing training throughput and inference latency of causal vs. non-causal vision transformers on ImageNet-scale datasets (e.g., CausalViT vs. standard ViT) \u2014 Directly tests whether causal reasoning modules improve scalability in high-dimensional vision tasks by measuring computational efficiency and robustness to distribution shifts.",
+            "[PATH:theoretical] Theoretical analysis of sample complexity bounds for causal representation learning in high-dimensional settings (e.g., extending the work of Zhang et al. on causal discovery for deep generative models) \u2014 Provides formal guarantees on whether causal modules reduce the required data or compute for robust generalization, which is a core aspect of scalability.",
+            "[PATH:literature] Systematic literature review of recent (2023\u20132025) papers on causal reasoning in large language models, focusing on reported scalability metrics (e.g., parameter count, training steps, and robustness to adversarial inputs) \u2014 Aggregates existing evidence to assess the consensus on whether causal integration enhances scalability across language tasks, highlighting gaps and conflicting results."
+          ],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {
+            "temporal": "since 2023",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "reduces",
+          "object": "scalability due to increased computational overhead and brittleness in high-dimensional inputs",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms integrating causal reasoning modules into AI architectures reduces scalability due to increased computational overhead and brittleness in high-dimensional inputs in domain 'large-scale vision and language tasks']"
+          ],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "does not reduce",
+          "object": "scalability and can improve robustness in high-dimensional inputs via structured priors",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms integrating causal reasoning modules into AI architectures does not reduce scalability and can improve robustness in high-dimensional inputs via structured priors in domain 'large-scale vision and language tasks']"
+          ],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "yields subadditive gains in generalization",
+          "object": "when the training distribution contains latent causal structure that is partially obfuscated by measurement noise",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: integrating causal reasoning modules into AI architectures when the training distribution contains latent causal structure that is partially obfuscated by measurement noise]",
+            "[PATH:empirical] Controlled simulation study comparing standard deep learning vs. causal reasoning architectures (e.g., CausalGAN, CausalVAE, or DoWhy-based models) on synthetic tabular datasets with known confounders and varying levels of additive measurement noise, then evaluating out-of-distribution generalization performance via metrics like AUROC or RMSE on held-out causal structures. \u2014 Directly tests the hypothesis under the specified scope (tabular data, known confounders, additive noise) by manipulating the obfuscation level and measuring generalization gains; subadditive gains would be indicated if the improvement from adding causal modules is less than the sum of improvements from addressing each noise source separately.",
+            "[PATH:theoretical] Theoretical analysis of generalization bounds for causal representation learning under measurement noise, e.g., extending the work of Sch\u00f6lkopf et al. (2021) on causal disentanglement or Zhang et al. (2022) on invariant risk minimization, to derive conditions under which causal modules yield subadditive vs. superadditive benefits. \u2014 Provides formal justification for the subadditive claim by quantifying how noise-induced confounding interacts with causal module capacity; can predict regimes where the hypothesis holds or fails, guiding empirical design.",
+            "[PATH:literature] Meta-analysis of existing benchmarks such as the CausalBench or CauseMe datasets, comparing published results from causal vs. non-causal models on tasks with latent confounders and noise, focusing on generalization error decomposition (e.g., bias-variance-covariance terms). \u2014 Aggregates evidence from multiple studies to assess whether the pattern of subadditive gains is consistent across different causal architectures and noise conditions, providing a robust empirical foundation for the hypothesis without new experiments."
+          ],
+          "scope": {
+            "domain": "tabular data with known confounders and additive noise"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global research contexts"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "provides",
+          "object": "significant improvements in generalization across various distributions, even when the training distribution lacks explicit causal structure",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "tabular data with known confounders"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "improves",
+          "object": "scalability in high-dimensional inputs when combined with sparse attention mechanisms and hierarchical causal abstraction",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "integrating causal reasoning modules into AI architectures",
+          "predicate": "enhances",
+          "object": "scalability by improving generalization and robustness in complex tasks",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "large-scale vision and language tasks"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 10
+    },
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what selection conditions does the decoupling of perception and reasoning in AI architectures enhance robustness i",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "enhances robustness to out-of-distribution data only when",
+          "object": "the perception module is trained with a diversity of distributional shifts that exceed the reasoning module's capacity to generate compensatory internal models",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupling perception and reasoning in AI architectures the perception module is trained with a diversity of distributional shifts that exceed the reasoning module's capacity to generate compensatory internal models]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "Contradictory findings: Some studies show that decoupling improves OOD generalization via modular composition, while others show that joint end-to-end training outperforms decoupled systems when distribution shifts are structured (e.g., adversarial or naturalistic). The fitness landscape depends on whether the decoupling allows independent adaptation of perception or merely creates compounding errors."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "improves robustness to out-of-distribution data when",
+          "object": "the perception module is trained on distributional shifts that are diverse and independent of the reasoning module's learned compensatory strategies",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupling perception and reasoning in AI architectures the perception module is trained on distributional shifts that are diverse and independent of the reasoning module's learned compensatory strategies]"
+          ],
+          "scope": {
+            "domain": "robustness to unstructured distribution shifts"
+          },
+          "qualifier": {
+            "tension": "Assumes that diversity of shifts in perception training is sufficient to prevent reasoning module from overfitting to spurious correlations."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "can reduce robustness to out-of-distribution data when",
+          "object": "the perception module's errors are amplified by the reasoning module's inability to adapt, especially under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupling perception and reasoning in AI architectures the perception module's errors are amplified by the reasoning module's inability to adapt, especially under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts]"
+          ],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {
+            "tension": "Highlights that decoupling may create compounding errors rather than enabling modular adaptation, especially when shifts are not independently sampled."
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "Joint end-to-end training of perception and reasoning",
+          "predicate": "can outperform decoupled systems for out-of-distribution data when",
+          "object": "the distribution shifts are structured and the reasoning module can learn compensatory internal models that align with perception errors",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Joint end-to-end training of perception and reasoning the distribution shifts are structured and the reasoning module can learn compensatory internal models that align with perception errors]"
+          ],
+          "scope": {
+            "domain": "robustness to structured, adversarial, or naturalistic distribution shifts"
+          },
+          "qualifier": {
+            "tension": "Contradicts the first sub-claim by suggesting that joint training allows reasoning to compensate for perception errors, while decoupling may prevent such compensation."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "improves robustness to out-of-distribution data only when",
+          "object": "the perception module is trained on distributional shifts that are diverse, independent of the reasoning module's learned compensatory strategies, and explicitly include adversarial or worst-case shifts that the reasoning module cannot later exploit",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupling perception and reasoning in AI architectures the perception module is trained on distributional shifts that are diverse, independent of the reasoning module's learned compensatory strategies, and explicitly include adversarial or worst-case shifts that the reasoning module cannot later exploit]",
+            "[PATH:empirical] Controlled experiments comparing modular (decoupled perception+reasoning) vs. end-to-end architectures on systematically generated out-of-distribution shifts (e.g., ImageNet-C variants, synthetic corruptions, and adversarial patches) with independent variation in perception training data diversity and reasoning module exposure. \u2014 Directly tests the hypothesis by isolating the effect of perception training diversity and independence from reasoning compensatory strategies. If decoupled models with diverse, adversarial perception training robustly outperform end-to-end models only under those specific conditions, the hypothesis is supported; otherwise, it may be refuted.",
+            "[PATH:theoretical] Theoretical analysis of information bottlenecks and gradient interference in modular vs. end-to-end systems under distribution shift, building on work in causal representation learning and robust optimization (e.g., Parascandolo et al. 2020, Ahuja et al. 2021). \u2014 Provides formal conditions under which decoupling prevents the reasoning module from learning compensatory strategies that exploit perception shortcuts. Can confirm the necessity of the 'independent' and 'adversarial' qualifiers, or show they are insufficient.",
+            "[PATH:literature] Meta-analysis of published robustness results from modular AI systems (e.g., in autonomous driving, medical imaging) that explicitly report perception training data composition (diversity, adversarial examples) and reasoning module architecture. \u2014 Aggregates existing evidence to assess whether the claimed conditional robustness holds across different domains and shift types. Can reveal if the hypothesis is supported in practice or if counterexamples exist where decoupling alone suffices or fails despite the specified training conditions."
+          ],
+          "scope": {
+            "domain": "robustness to unstructured distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "since 2020, during the era of deep learning-based modular AI systems",
+            "geographic": "global, with emphasis on research contexts in North America, Europe, and East Asia"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "Coupling perception and reasoning in AI architectures",
+          "predicate": "enhances robustness to out-of-distribution data when",
+          "object": "the perception and reasoning modules are jointly optimized to handle distributional shifts in a coordinated manner",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Coupling perception and reasoning in AI architectures the perception and reasoning modules are jointly optimized to handle distributional shifts in a coordinated manner]",
+            "[PATH:empirical] Controlled experiments on synthetic distribution shifts (e.g., rotated MNIST, corrupted CIFAR-10) comparing end-to-end joint optimization of a perception module (CNN) and a reasoning module (e.g., neural-symbolic or graph network) against modular training with fixed perception. \u2014 Directly tests whether joint optimization under coordinated distributional shifts improves robustness over decoupled or sequentially trained modules, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis of gradient alignment between perception and reasoning losses under distribution shift (e.g., using influence functions or loss landscape geometry) in papers from ICLR/NeurIPS 2022-2024. \u2014 A formal characterization of when joint optimization leads to coordinated adaptation (e.g., shared feature invariance) can confirm the necessary conditions for robustness, or refute the hypothesis by showing that coupling harms generalization.",
+            "[PATH:literature] Survey and meta-analysis of benchmarks on out-of-distribution robustness in neuro-symbolic architectures (e.g., CLEVR-Hans, CLUTRR, or WILDS) from 2020 onward. \u2014 Aggregating existing empirical results across diverse domains and distribution shifts can reveal whether the claimed advantage holds generally or is limited to specific scenarios, thus informing the dispute."
+          ],
+          "scope": {
+            "domain": "robustness to unstructured distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "can improve robustness to out-of-distribution data when",
+          "object": "the reasoning module is trained with a meta-learning objective that explicitly accounts for perception module uncertainty, enabling it to dynamically reweight or discard unreliable perceptual inputs under structured distribution shifts",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupling perception and reasoning in AI architectures the reasoning module is trained with a meta-learning objective that explicitly accounts for perception module uncertainty, enabling it to dynamically reweight or discard unreliable perceptual inputs under structured distribution shifts]",
+            "[PATH:empirical] Experimental benchmark on structured distribution shifts (e.g., CIFAR-10-C, ImageNet-C, or synthetic domain shifts) comparing end-to-end models against decoupled architectures where the reasoning module uses a meta-learned weighting or gating mechanism conditioned on perception uncertainty estimates \u2014 Directly tests the hypothesis by measuring robustness gains when the reasoning module adaptively reweights perceptual inputs under known types of distribution shift, providing quantitative evidence for or against the claimed benefit.",
+            "[PATH:theoretical] Theoretical analysis of Bayesian meta-learning for selective perception integration, e.g., deriving generalization bounds for reasoning modules that can discard or downweight uncertain perceptual features under covariate shift \u2014 Clarifies the conditions under which decoupling with uncertainty-aware meta-learning improves robustness, potentially confirming the hypothesis if bounds show reduced sensitivity to shift, or refuting it if no advantage is provable.",
+            "[PATH:literature] Literature review of existing work on modular architectures with uncertainty-aware reasoning (e.g., neural-symbolic systems, probabilistic programming, or attention-based filtering of perception outputs) to identify whether prior studies have observed robustness improvements or failures under structured distribution shifts \u2014 Synthesizes prior evidence to assess whether the proposed mechanism has been implicitly tested or contradicted, offering a broader context to evaluate the hypothesis without new experiments."
+          ],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {
+            "tension": "Challenges the original claim by proposing that decoupling can be beneficial if the reasoning module is equipped with adaptive mechanisms to handle perception errors, rather than amplifying them."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "Integrating perception and reasoning in AI architectures",
+          "predicate": "can enhance robustness to out-of-distribution data when",
+          "object": "the reasoning module is able to correct perception module's errors through adaptive mechanisms, particularly under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Integrating perception and reasoning in AI architectures the reasoning module is able to correct perception module's errors through adaptive mechanisms, particularly under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts]",
+            "[PATH:empirical] Controlled experiments comparing robustness of modular (perception+reasoning) vs. end-to-end models on benchmark datasets with structured distribution shifts (e.g., ImageNet-C, ImageNet-A, adversarial patches). \u2014 Directly tests whether a reasoning module that can correct perception errors (e.g., via iterative refinement, feedback loops, or symbolic constraints) improves robustness under the specified shifts. Comparisons across multiple architectures and shift types can confirm or refute the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis of adaptive mechanisms in compositional architectures, focusing on conditions under which error correction in a reasoning module can compensate for correlated perception failures. \u2014 Provides formal bounds or necessary/sufficient conditions for robustness gains, clarifying when the hypothesis holds (e.g., under low-dimensional structured shifts) and when it fails (e.g., under high-entropy, uncorrelated noise).",
+            "[PATH:literature] Literature survey of existing neuro-symbolic and hybrid AI systems that implement perception-reasoning feedback loops (e.g., Neural-Symbolic Concept Learner, CLEVRER, or Scene Graph Generation with iterative refinement), analyzing their reported robustness to distribution shifts. \u2014 Aggregates evidence from prior work to identify patterns, common failure modes, and successful adaptive mechanisms, helping to assess the generalizability of the hypothesis across different implementations and domains."
+          ],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "under structured distribution shifts occurring during model evaluation"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "reduces robustness to out-of-distribution data because",
+          "object": "the perception module's errors are amplified by the reasoning module's inability to adapt, especially under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Decoupling perception and reasoning in AI architectures reduces robustness to out-of-distribution data because the perception module's errors are amplified by the reasoning module's inability to adapt, especially under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts in domain 'robustness to structured, correlated distribution shifts']"
+          ],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global AI research communities"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "can increase robustness to out-of-distribution data because",
+          "object": "it allows independent optimization and targeted adaptation of each module, reducing error compounding under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Decoupling perception and reasoning in AI architectures can increase robustness to out-of-distribution data because it allows independent optimization and targeted adaptation of each module, reducing error compounding under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts in domain 'robustness to structured, correlated distribution shifts']"
+          ],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global AI research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "Joint end-to-end training of perception and reasoning",
+          "predicate": "will fail to outperform decoupled systems for out-of-distribution data when",
+          "object": "the distribution shift is unstructured or adversarial, because the reasoning module overfits to the specific structure of perception errors seen during training",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Joint end-to-end training of perception and reasoning the distribution shift is unstructured or adversarial, because the reasoning module overfits to the specific structure of perception errors seen during training]",
+            "[PATH:empirical] Conduct controlled experiments comparing joint end-to-end training vs. decoupled training on vision-language tasks (e.g., CLEVR, GQA) with synthetic unstructured distribution shifts (e.g., random image corruptions, adversarial patches). Measure reasoning module's sensitivity to perception error patterns via diagnostic probes. \u2014 Directly tests whether reasoning overfits to training-time perception errors by evaluating out-of-distribution performance under unstructured or adversarial shifts, isolating the effect of joint training.",
+            "[PATH:theoretical] Theoretical analysis of generalization bounds for joint vs. decoupled systems under distribution shift, using PAC-Bayes or information-theoretic frameworks that account for the dependence between perception and reasoning modules. \u2014 Provides formal justification for why joint training could cause overfitting to perception error structure, potentially confirming the hypothesis if bounds are tighter for decoupled systems under adversarial shifts.",
+            "[PATH:literature] Survey and meta-analysis of existing benchmarks (e.g., OOD-CV, WILDS, ShapeNet) where joint end-to-end models have been tested under unstructured distribution shifts, focusing on failure modes linked to reasoning module overfitting. \u2014 Aggregates prior empirical evidence to assess whether the hypothesized pattern holds across diverse domains, strengthening or refuting the claim through systematic review."
+          ],
+          "scope": {
+            "domain": "robustness to unstructured or adversarial distribution shifts"
+          },
+          "qualifier": {
+            "tension": "Refines the original claim by specifying a boundary condition where joint training is detrimental rather than beneficial."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "Decoupled systems of perception and reasoning",
+          "predicate": "can outperform joint end-to-end training for out-of-distribution data when",
+          "object": "the distribution shifts are structured and specialized models for perception and reasoning can independently optimize for specific errors without interference",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Decoupled systems of perception and reasoning the distribution shifts are structured and specialized models for perception and reasoning can independently optimize for specific errors without interference]",
+            "[PATH:empirical] Comparative study of decoupled vs. end-to-end vision-language models on benchmarks like OOD-CV, WILDS, or ImageNet-C, with structured shifts (e.g., object occlusion, viewpoint changes, naturalistic corruptions). \u2014 Directly tests whether decoupled systems outperform end-to-end models under structured distribution shifts where perception and reasoning errors can be isolated and optimized independently. Controlled comparison on established OOD benchmarks would provide clear confirmatory or refutatory evidence.",
+            "[PATH:theoretical] Theoretical analysis of error decomposition in modular vs. monolithic architectures under domain shift, building on work like 'Distributionally Robust Optimization' and 'Causal Representation Learning'. \u2014 Formalizes conditions under which decoupling reduces interference between perception and reasoning errors. This could clarify why structured shifts favor decoupling, and predict failure modes (e.g., when shifts are unstructured or adversarial)."
+          ],
+          "scope": {
+            "domain": "robustness to structured, adversarial, or naturalistic distribution shifts"
+          },
+          "qualifier": {
+            "temporal": "under current experimental conditions and known benchmarks as of 2025",
+            "geographic": "global, based on simulated and controlled laboratory settings"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "can improve robustness to out-of-distribution data when",
+          "object": "the perception module is trained with a disentangled representation that isolates task-relevant features from spurious correlations, and the reasoning module is constrained to rely only on those features, under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "Decoupling perception and reasoning in AI architectures",
+          "predicate": "can enhance robustness to out-of-distribution data when",
+          "object": "the reasoning module is designed to include adaptive mechanisms that compensate for errors in the perception module, allowing for improved generalization under structured distribution shifts such as adversarial perturbations or naturalistic domain shifts",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "robustness to structured, correlated distribution shifts"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What structural conditions and boundary cases must exist within AI architectures for the decoupling of perception and re",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "Structural conditions and boundary cases within AI architectures",
+          "predicate": "cause",
+          "object": "a significant reduction in system accuracy when processing ambiguous perceptual inputs",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Structural conditions and boundary cases within AI architectures a significant reduction in system accuracy when processing ambiguous perceptual inputs]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "condition": "only when the decoupling creates a representational gap that prevents top-down contextual priors from constraining bottom-up perceptual inference",
+            "uncertainty": "it is contested whether this effect is primarily due to architectural modularity, loss of feedback pathways, or the absence of shared latent spaces"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "Architectural modularity in AI systems",
+          "predicate": "causes",
+          "object": "a significant reduction in system accuracy when processing ambiguous perceptual inputs",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Architectural modularity in AI systems a significant reduction in system accuracy when processing ambiguous perceptual inputs]"
+          ],
+          "scope": {
+            "domain": "modular vs. integrated architectures"
+          },
+          "qualifier": {
+            "condition": "when modules are strictly separated and lack cross-modal feedback",
+            "uncertainty": "the degree to which modularity alone is responsible remains unclear"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "Loss of feedback pathways",
+          "predicate": "is the primary cause of",
+          "object": "reduced accuracy during ambiguous perceptual input processing",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: Loss of feedback pathways reduced accuracy during ambiguous perceptual input processing]"
+          ],
+          "scope": {
+            "domain": "feedback mechanisms in hierarchical perception"
+          },
+          "qualifier": {
+            "condition": "when top-down contextual priors are disconnected from bottom-up inference",
+            "uncertainty": "competing with the modularity hypothesis and shared latent space explanation"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "Absence of shared latent spaces",
+          "predicate": "prevents",
+          "object": "top-down contextual priors from constraining bottom-up perceptual inference",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Absence of shared latent spaces top-down contextual priors from constraining bottom-up perceptual inference]"
+          ],
+          "scope": {
+            "domain": "representational alignment in multi-modal AI"
+          },
+          "qualifier": {
+            "condition": "when decoupling creates a representational gap",
+            "uncertainty": "it is contested whether this effect is independent of modularity or loss of feedback"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "Architectural modularity in AI systems with strict separation and no cross-modal feedback",
+          "predicate": "causes",
+          "object": "a greater reduction in system accuracy for ambiguous perceptual inputs than for unambiguous inputs, relative to integrated architectures",
+          "status": "supported",
+          "confidence": 0.9000000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Architectural modularity in AI systems with strict separation and no cross-modal feedback a greater reduction in system accuracy for ambiguous perceptual inputs than for unambiguous inputs, relative to integrated architectures]",
+            "[PATH:empirical] Controlled experiment comparing modular (e.g., separate vision and language modules) vs. integrated (e.g., multimodal transformer) architectures on tasks with systematically varied input ambiguity (e.g., blurred images, noisy text) and measuring accuracy drop per ambiguity level \u2014 Directly tests the hypothesis by manipulating the key variable (architectural modularity vs. integration) and the independent variable (input ambiguity), providing causal evidence on accuracy reduction.",
+            "[PATH:literature] Literature review and meta-analysis of published benchmarks (e.g., on VQA, audio-visual speech recognition) that compare modular and integrated systems, focusing on performance under ambiguous inputs \u2014 Synthesizes existing evidence across multiple studies to assess whether the hypothesized pattern holds generally, increasing statistical power and generalizability over a single experiment.",
+            "[PATH:theoretical] Theoretical analysis using information theory or Bayesian inference to model how strict separation without cross-modal feedback amplifies errors under ambiguity due to loss of mutual information between modalities \u2014 Provides a formal causal mechanism explaining why modularity would cause greater accuracy reduction under ambiguity, which can be used to generate testable predictions and refine the hypothesis."
+          ],
+          "scope": {
+            "domain": "modular vs. integrated architectures under varying input ambiguity levels"
+          },
+          "qualifier": {
+            "temporal": "present-day AI systems",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "Architectural modularity in AI systems",
+          "predicate": "enhances",
+          "object": "system adaptability and robustness when processing ambiguous perceptual inputs",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Architectural modularity in AI systems system adaptability and robustness when processing ambiguous perceptual inputs]",
+            "[PATH:empirical] Controlled experiments comparing modular vs. monolithic deep learning architectures on ambiguous image classification tasks (e.g., ImageNet-C or CIFAR-10-C with adversarial perturbations) \u2014 Directly tests whether modularity improves robustness and adaptability under perceptual ambiguity, providing quantitative metrics (e.g., accuracy drop, recovery time) to confirm or refute the hypothesis.",
+            "[PATH:literature] Systematic review of published studies on modular neural networks and their performance on out-of-distribution or noisy inputs (e.g., from NeurIPS, ICML, or ICLR proceedings 2020-2024) \u2014 Synthesizes existing evidence across the global AI research community to assess whether the claimed enhancement is consistently observed or disputed, clarifying the status of the hypothesis."
+          ],
+          "scope": {
+            "domain": "modular vs. integrated architectures"
+          },
+          "qualifier": {
+            "temporal": "during the 2020s",
+            "geographic": "global AI research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "Loss of feedback pathways specifically in the ventral visual stream",
+          "predicate": "is the primary cause of",
+          "object": "reduced accuracy during ambiguous perceptual input processing",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Loss of feedback pathways specifically in the ventral visual stream reduced accuracy during ambiguous perceptual input processing]",
+            "[PATH:empirical] Lesion studies in non-human primates selectively disrupting feedback connections from V2/V4 to V1 while preserving feedforward pathways, followed by behavioral testing on ambiguous figure-ground perception tasks \u2014 Directly tests whether loss of ventral stream feedback alone causes accuracy deficits in ambiguous perception, controlling for competing modularity hypotheses via anatomical specificity.",
+            "[PATH:theoretical] Computational modeling of hierarchical predictive coding with and without ventral-stream feedback ablation, simulating ambiguous input processing and comparing accuracy outcomes to human psychophysical data \u2014 Provides mechanistic grounding for causal role of feedback, allowing isolation of shared latent space explanations and testing of qualifier conditions.",
+            "[PATH:literature] Systematic review and meta-analysis of human fMRI or MEG studies contrasting effective connectivity in ventral stream during ambiguous vs. unambiguous perception, with statistical control for dorsal stream involvement \u2014 Evaluates existing evidence for specificity of ventral feedback in ambiguity resolution, identifying gaps and converging support for the hypothesis."
+          ],
+          "scope": {
+            "domain": "feedback mechanisms in hierarchical perception"
+          },
+          "qualifier": {
+            "condition": "when top-down contextual priors are disconnected from bottom-up inference and the competing modularity hypothesis is controlled for",
+            "uncertainty": "shared latent space explanation is ruled out by lesion-specific behavioral dissociations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "Integration of feedforward and feedback processes",
+          "predicate": "is more crucial than loss of feedback pathways for",
+          "object": "maintaining accuracy during ambiguous perceptual input processing",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Integration of feedforward and feedback processes maintaining accuracy during ambiguous perceptual input processing]",
+            "[PATH:empirical] Dynamic causal modeling (DCM) of fMRI data during bistable perception tasks (e.g., Necker cube or Rubin vase) to compare effective connectivity of feedforward vs. feedback pathways in ambiguous vs. unambiguous conditions. \u2014 If feedforward-feedback integration is more crucial than loss of feedback alone, DCM should show that disruption of integration (e.g., via altered coupling) impairs accuracy more than selective attenuation of feedback connections during early perceptual processing.",
+            "[PATH:theoretical] Computational modeling of hierarchical neural networks with controlled feedforward-feedback integration and selective feedback ablation, simulating ambiguous input processing (e.g., with noise or occlusion) within the first 200 ms. \u2014 This approach can directly test the hypothesis by comparing accuracy under conditions of intact integration versus isolated feedback loss, providing mechanistic predictions for empirical validation.",
+            "[PATH:literature] Literature review of studies on visual perception in patients with disrupted feedback pathways (e.g., schizophrenia or stroke) versus those with impaired integration (e.g., autism spectrum disorders), focusing on ambiguous stimulus tasks. \u2014 Existing clinical and experimental data can be synthesized to assess whether integration deficits correlate more strongly with perceptual accuracy loss than feedback pathway damage alone, supporting or refuting the hypothesis."
+          ],
+          "scope": {
+            "domain": "feedback and feedforward integration in hierarchical perception"
+          },
+          "qualifier": {
+            "temporal": "during initial perceptual processing (within first 200 ms after stimulus onset)",
+            "geographic": "simulated neural network environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "Loss of feedback pathways",
+          "predicate": "is the primary cause of",
+          "object": "reduced accuracy during ambiguous perceptual input processing",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Loss of feedback pathways is the primary cause of reduced accuracy during ambiguous perceptual input processing in domain 'feedback mechanisms in hierarchical perception']"
+          ],
+          "scope": {
+            "domain": "feedback mechanisms in hierarchical perception"
+          },
+          "qualifier": {
+            "temporal": "during active perceptual tasks with ambiguous stimuli",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "Modularity of perceptual processing",
+          "predicate": "is the primary cause of",
+          "object": "reduced accuracy during ambiguous perceptual input processing",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Modularity of perceptual processing is the primary cause of reduced accuracy during ambiguous perceptual input processing in domain 'feedback mechanisms in hierarchical perception']"
+          ],
+          "scope": {
+            "domain": "feedback mechanisms in hierarchical perception"
+          },
+          "qualifier": {
+            "temporal": "during experimental sessions with ambiguous stimuli",
+            "geographic": "laboratory settings in cognitive neuroscience research"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "Forced alignment of shared latent spaces via contrastive objectives",
+          "predicate": "restores",
+          "object": "top-down contextual priors constraining bottom-up perceptual inference",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Forced alignment of shared latent spaces via contrastive objectives top-down contextual priors constraining bottom-up perceptual inference]",
+            "[PATH:empirical] A controlled experiment comparing contrastive vs. non-contrastive alignment on paired cross-modal data (e.g., image-caption pairs) with matched latent dimensions, measuring the degree to which top-down contextual priors (e.g., language) influence bottom-up perceptual inference (e.g., visual feature reconstruction) under varying levels of modality-specific noise. \u2014 Directly tests the hypothesis by manipulating the alignment method and noise, providing causal evidence for or against restoration of top-down constraints.",
+            "[PATH:theoretical] Theoretical analysis of the geometry of contrastively aligned latent spaces, examining whether the contrastive objective inherently induces a structure that supports top-down modulation (e.g., via conditional independence or mutual information bounds) and identifying conditions under which feedback pathways are necessary. \u2014 Clarifies the mechanism behind the hypothesized restoration, addressing the uncertainty about robustness to noise and the need for explicit feedback.",
+            "[PATH:literature] Literature review of studies on representational alignment in multi-modal AI (e.g., CLIP, ALIGN, VLM benchmarks), focusing on experiments that test top-down effects on perception (e.g., language-guided visual attention or reconstruction) and whether contrastive objectives alone suffice or require additional architectural components like cross-attention. \u2014 Synthesizes existing evidence to assess the hypothesis's plausibility and identifies gaps or contradictory findings that could confirm or refute it."
+          ],
+          "scope": {
+            "domain": "representational alignment in multi-modal AI"
+          },
+          "qualifier": {
+            "condition": "when the contrastive loss is applied to paired cross-modal data and the latent dimensionality is matched",
+            "uncertainty": "it is unknown whether this restoration is robust to modality-specific noise or requires explicit feedback pathways"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "Presence of shared latent spaces",
+          "predicate": "enables",
+          "object": "top-down contextual priors to constrain bottom-up perceptual inference",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Presence of shared latent spaces top-down contextual priors to constrain bottom-up perceptual inference]",
+            "[PATH:empirical] Controlled experiments comparing performance of multi-modal AI systems (e.g., CLIP, GATO) on perceptual tasks with and without explicit shared latent space regularization, measuring top-down constraint effects on bottom-up inference accuracy. \u2014 Directly tests whether shared latent spaces causally enable top-down priors to constrain inference, by manipulating presence vs. absence of such spaces and measuring downstream perceptual outcomes.",
+            "[PATH:theoretical] Computational analysis of representational geometry in models trained with shared latent spaces (e.g., using CKA, RSA) to quantify alignment between modalities and correlate with effectiveness of top-down modulation during inference. \u2014 Provides mechanistic evidence: if shared latent spaces are the mechanism, then higher alignment should predict stronger top-down constraint, enabling confirmation or refutation of the hypothesized causal relationship.",
+            "[PATH:literature] Systematic literature review of recent (2020s) papers on multi-modal representational alignment, focusing on studies that report or fail to report top-down contextual effects in models with and without shared latent spaces. \u2014 Aggregates existing evidence across the global research community to assess whether the disputed hypothesis is consistently supported or contradicted, given the current theoretical discourse."
+          ],
+          "scope": {
+            "domain": "representational alignment in multi-modal AI"
+          },
+          "qualifier": {
+            "temporal": "current theoretical discourse (2020s)",
+            "geographic": "global AI research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "Loss of feedback pathways",
+          "predicate": "is the primary cause of",
+          "object": "reduced accuracy during ambiguous perceptual input processing, specifically by impairing the disambiguation of competing neural representations",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "feedback mechanisms in hierarchical perception"
+          },
+          "qualifier": {
+            "condition": "when top-down contextual priors are disconnected from bottom-up inference",
+            "prediction": "Restoring feedback pathways selectively in early visual cortex will rescue accuracy only for ambiguous stimuli with strong contextual priors, but not for stimuli with weak priors"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "Enhanced bottom-up processing",
+          "predicate": "is the primary cause of",
+          "object": "increased accuracy during ambiguous perceptual input processing",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "bottom-up mechanisms in hierarchical perception"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How can the decoupling of perceptual inputs and cognitive processing in AI systems affect decision-making accuracy in en",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "reduces decision-making accuracy in high-ambiguity environments",
+          "object": "due to the loss of integrated feedback mechanisms",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems due to the loss of integrated feedback mechanisms]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "reduces decision-making accuracy in high-ambiguity environments",
+          "object": "due to the loss of integrated feedback mechanisms",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems due to the loss of integrated feedback mechanisms]"
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments"
+          },
+          "qualifier": {
+            "temporal": "during periods of incomplete sensor data or adversarial input",
+            "geographic": "applicable to all deployed AI systems operating under such conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "improves decision-making accuracy in high-ambiguity environments",
+          "object": "because isolated processing reduces noise interference from feedback loops",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems because isolated processing reduces noise interference from feedback loops]"
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {
+            "temporal": "during active inference phases in real-time decision loops",
+            "geographic": "applicable to simulated and controlled lab environments, not validated in field deployments"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "increases decision-making accuracy in high-ambiguity environments",
+          "object": "when the decoupling is achieved via a dedicated meta-cognitive module that evaluates and filters perceptual noise before cognitive integration",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems when the decoupling is achieved via a dedicated meta-cognitive module that evaluates and filters perceptual noise before cognitive integration]",
+            "[PATH:empirical] Controlled experiments comparing decision accuracy of AI systems with and without a meta-cognitive noise-filtering module in high-ambiguity environments (e.g., partial sensor occlusion or adversarial perturbations). \u2014 Directly tests the causal claim by measuring decision accuracy under the specified conditions, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:literature] Review of computational cognitive architectures (e.g., SOAR, ACT-R) that implement meta-cognitive layers for perceptual filtering, analyzing their performance in ambiguous tasks. \u2014 Synthesizes existing findings from cognitive science and AI to assess whether modular decoupling of perception and cognition has been shown to improve robustness under uncertainty.",
+            "[PATH:theoretical] Theoretical analysis using Bayesian decision theory or information-theoretic models to derive conditions under which a dedicated meta-cognitive module improves decision accuracy versus holistic processing in ambiguous settings. \u2014 Provides formal grounding for the hypothesis, predicting boundary conditions and mechanisms, which can then be empirically validated."
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments"
+          },
+          "qualifier": {
+            "temporal": "during periods of incomplete sensor data or adversarial input",
+            "geographic": "applicable to all deployed AI systems operating under such conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "enhances decision-making accuracy in high-ambiguity environments",
+          "object": "by allowing specialized processing modules to independently focus on specific tasks",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems by allowing specialized processing modules to independently focus on specific tasks]",
+            "[PATH:empirical] Controlled experiments comparing modular vs. integrated AI architectures on high-ambiguity decision tasks (e.g., military target identification or medical diagnosis under time pressure) \u2014 Directly tests whether decoupled perceptual and cognitive modules improve accuracy in real-time, high-ambiguity settings, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:literature] Literature review of cognitive science and AI systems that separate perception from reasoning (e.g., dual-process theories in cognitive science, modular neural networks, or capsule networks) \u2014 Establishes theoretical grounding and identifies prior empirical findings on decoupling, helping to assess plausibility and boundary conditions of the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis using information theory or Bayesian decision theory to model the effect of modular independence on decision accuracy under ambiguity \u2014 Provides formal predictions about when decoupling helps or hinders, enabling rigorous falsification and clarifying necessary conditions for the claimed enhancement."
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments"
+          },
+          "qualifier": {
+            "temporal": "during real-time operations in dynamic high-ambiguity environments",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "temporal alignment of decoupled perceptual and cognitive modules",
+          "predicate": "degrades decision-making accuracy in high-ambiguity environments",
+          "object": "because asynchronous integration reintroduces noise through timing mismatches",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: temporal alignment of decoupled perceptual and cognitive modules because asynchronous integration reintroduces noise through timing mismatches]",
+            "[PATH:empirical] Controlled behavioral experiment comparing decision accuracy in high-ambiguity visual tasks under synchronous vs. asynchronous perceptual-cognitive timing conditions, with EEG or MEG to measure neural timing mismatches. \u2014 Directly tests whether induced asynchrony degrades accuracy in noisy, ambiguous environments, providing causal evidence for the timing mismatch noise mechanism.",
+            "[PATH:theoretical] Computational modeling study using a recurrent neural network with decoupled perceptual and cognitive modules, systematically varying temporal alignment parameters while measuring decision performance in simulated high-ambiguity task-switching scenarios. \u2014 Allows controlled manipulation of timing mismatches and isolation of noise reintroduction effects, complementing empirical constraints with mechanistic predictions."
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {
+            "temporal": "during high-frequency task switching in simulated environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "impairs decision-making accuracy in high-ambiguity environments",
+          "object": "because integrated processing is essential for contextual understanding and adaptability",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: decoupling of perceptual inputs and cognitive processing in AI systems because integrated processing is essential for contextual understanding and adaptability]",
+            "[PATH:empirical] Controlled experiments comparing integrated vs. modular AI architectures on ambiguous visual classification tasks (e.g., noisy MNIST or CIFAR-10-C) \u2014 Directly tests whether decoupled perception and cognition reduces accuracy in high-ambiguity settings, matching the hypothesis's scope.",
+            "[PATH:literature] Review of cognitive science literature on embodied cognition and perceptual-cognitive integration in human decision-making under uncertainty \u2014 Provides theoretical grounding for why integrated processing is essential, offering analogical evidence for AI systems.",
+            "[PATH:theoretical] Theoretical analysis of information bottlenecks in transformer-based architectures with separate perceptual and reasoning modules \u2014 Models how decoupling may cause loss of contextual cues, predicting performance degradation in noisy feedback environments."
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {
+            "temporal": "current generation of AI architectures (2020\u20132025)",
+            "geographic": "simulated environments and controlled lab settings"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "improves decision-making accuracy in high-ambiguity environments",
+          "object": "because isolated processing reduces noise interference from feedback loops",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms decoupling of perceptual inputs and cognitive processing in AI systems improves decision-making accuracy in high-ambiguity environments because isolated processing reduces noise interference from feedback loops in domain 'high-ambiguity environments with noisy feedback']"
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {
+            "temporal": "post-2020 AI system architectures",
+            "geographic": "global research laboratories and simulation environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "degrades decision-making accuracy in high-ambiguity environments",
+          "object": "because isolated processing loses contextual cues necessary for disambiguation",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms decoupling of perceptual inputs and cognitive processing in AI systems degrades decision-making accuracy in high-ambiguity environments because isolated processing loses contextual cues necessary for disambiguation in domain 'high-ambiguity environments with noisy feedback']"
+          ],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C010": {
+          "id": "C010",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "reduces decision-making accuracy in high-ambiguity environments",
+          "object": "because isolated processing eliminates necessary contextual recalibration from feedback loops",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "decoupling of perceptual inputs and cognitive processing in AI systems",
+          "predicate": "decreases decision-making accuracy in high-ambiguity environments",
+          "object": "because it limits the integration of contextual information necessary for accurate assessments",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "high-ambiguity environments with noisy feedback"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    }
+  ],
+  "n_branches": 5,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "enhances robustness to out-of-distribution data only under",
+      "object": "specific selection conditions involving high perceptual uncertainty and low task complexity",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures specific selection conditions involving high perceptual uncertainty and low task complexity]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "enhances robustness to out-of-distribution data under",
+      "object": "conditions of high perceptual uncertainty, regardless of task complexity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures conditions of high perceptual uncertainty, regardless of task complexity]"
+      ],
+      "scope": {
+        "domain": "perception-dominant tasks with ambiguous inputs"
+      },
+      "qualifier": {
+        "temporal": "during the inference phase only, not training",
+        "geographic": "simulated environments with synthetic ambiguity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "reduces robustness to out-of-distribution data under",
+      "object": "conditions of low perceptual uncertainty combined with high task complexity",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures conditions of low perceptual uncertainty combined with high task complexity]"
+      ],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "provides no significant robustness benefit for out-of-distribution data when",
+      "object": "perceptual uncertainty is low and task complexity is low",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures perceptual uncertainty is low and task complexity is low]"
+      ],
+      "scope": {
+        "domain": "simple, well-structured tasks with reliable perception"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global, based on simulated data"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "reduces catastrophic error propagation in",
+      "object": "high-dimensional input spaces with perceptual aliasing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures high-dimensional input spaces with perceptual aliasing]",
+        "[PATH:empirical] Controlled experiments comparing end-to-end vs. modular architectures on navigation tasks in procedurally generated mazes with perceptual aliasing (e.g., identical corridors leading to different exits) \u2014 Directly tests whether decoupling perception (e.g., object detection) from reasoning (e.g., path planning) reduces error cascades when input ambiguity increases under distribution shift, matching the hypothesis's scope.",
+        "[PATH:theoretical] Theoretical analysis of error propagation bounds in Bayesian or causal factor graphs with separate perception and reasoning modules vs. monolithic neural networks \u2014 Provides formal guarantees or counterexamples on how modularity affects the amplification of perceptual aliasing errors into reasoning failures, clarifying the disputed confidence and mechanistic basis."
+      ],
+      "scope": {
+        "domain": "perception-dominant tasks with ambiguous inputs"
+      },
+      "qualifier": {
+        "temporal": "during inference under distribution shift",
+        "geographic": "simulated environments with synthetic ambiguity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "coupling perception and reasoning in AI architectures",
+      "predicate": "improves adaptability to out-of-distribution data under",
+      "object": "conditions of high perceptual uncertainty, especially in complex tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: coupling perception and reasoning in AI architectures conditions of high perceptual uncertainty, especially in complex tasks]",
+        "[PATH:empirical] Benchmarking on the CLEVR-Hans or SHIFT dataset variants with controlled perceptual noise and distribution shift \u2014 These datasets allow systematic manipulation of perceptual uncertainty (e.g., blur, occlusion, lighting) and out-of-distribution task shifts. Comparing architectures with and without explicit perception-reasoning coupling on accuracy and robustness would provide direct empirical evidence for or against the hypothesis.",
+        "[PATH:literature] Systematic literature review of neuro-symbolic vs. end-to-end deep learning approaches on perception-dominant tasks (e.g., autonomous driving, medical imaging under domain shift) \u2014 A meta-analysis of existing studies (post-2020) can reveal patterns: if coupled architectures consistently outperform purely perceptual models under high uncertainty and distribution shift, it supports the hypothesis; if not, it refutes it."
+      ],
+      "scope": {
+        "domain": "perception-dominant tasks with ambiguous inputs"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global AI research settings"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "increases sensitivity to adversarial perturbations in perceptual inputs when task complexity is high",
+      "object": "even under conditions of low perceptual uncertainty",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures even under conditions of low perceptual uncertainty]",
+        "[PATH:empirical] Controlled experiments comparing end-to-end vs. modular architectures (e.g., perception module + reasoning module) on complex reasoning benchmarks like CLEVR or NLVR under adversarial perturbations (e.g., FGSM, PGD) with low perceptual noise \u2014 Directly tests whether decoupling increases adversarial sensitivity by measuring accuracy drops in high-complexity tasks, controlling for perceptual uncertainty.",
+        "[PATH:theoretical] Theoretical analysis of gradient propagation and error accumulation in modular vs. monolithic systems under adversarial inputs, e.g., using information bottleneck or Lipschitz continuity frameworks \u2014 Provides formal predictions about how decoupling might amplify or mitigate sensitivity to perturbations, especially when reasoning complexity is high.",
+        "[PATH:literature] Meta-analysis of existing studies on modular AI safety (e.g., from ICLR, NeurIPS workshops on robustness) that report adversarial robustness in decomposed architectures \u2014 Synthesizes scattered evidence to assess whether the hypothesized effect holds across different implementations and task domains."
+      ],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "enhances robustness to out-of-distribution data under",
+      "object": "conditions of low perceptual uncertainty combined with high task complexity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures conditions of low perceptual uncertainty combined with high task complexity]",
+        "[PATH:empirical] Controlled experiments comparing modular (perception-reasoning decoupled) vs. end-to-end architectures on synthetic datasets with known perceptual noise and varying reasoning complexity, e.g., CLEVR-Hans or dSprites variants. \u2014 Directly tests the hypothesis by manipulating perceptual uncertainty (low vs. high noise) and task complexity (e.g., simple vs. compositional reasoning) while measuring out-of-distribution robustness.",
+        "[PATH:theoretical] Theoretical analysis using causal abstraction or information bottleneck frameworks to formalize conditions under which decoupling improves generalization to shifted distributions. \u2014 Provides formal bounds or proofs linking decoupling to robustness, clarifying the specific role of low perceptual uncertainty and high task complexity.",
+        "[PATH:literature] Systematic literature review of benchmarks like OOD-CV, Visual Reasoning OOD, and NLVR2, comparing performance of modular reasoning systems (e.g., Neuro-Symbolic, TbD-Net) vs. monolithic models under distribution shift. \u2014 Synthesizes existing evidence across domains to assess whether the hypothesized conditions consistently yield robustness gains, or if counterexamples exist."
+      ],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during current generation of AI architectures",
+        "geographic": "generalizable across domains with clear perceptual inputs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "reduces robustness to out-of-distribution data under",
+      "object": "conditions of low perceptual uncertainty combined with high task complexity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms decoupling perception and reasoning in AI architectures reduces robustness to out-of-distribution data under conditions of low perceptual uncertainty combined with high task complexity in domain 'complex reasoning tasks with clear perceptual inputs']"
+      ],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 research",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "does not reduce robustness to out-of-distribution data under",
+      "object": "conditions of low perceptual uncertainty combined with high task complexity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms decoupling perception and reasoning in AI architectures does not reduce robustness to out-of-distribution data under conditions of low perceptual uncertainty combined with high task complexity in domain 'complex reasoning tasks with clear perceptual inputs']"
+      ],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "actually degrades robustness for out-of-distribution data when",
+      "object": "perceptual uncertainty is low and task complexity is high",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: decoupling perception and reasoning in AI architectures perceptual uncertainty is low and task complexity is high]",
+        "[PATH:empirical] Controlled experiment comparing end-to-end neural models versus modular (perception-reasoning decoupled) architectures on a suite of out-of-distribution visual reasoning tasks (e.g., CLEVR-Hans, compositionally shifted CLEVR) where perceptual noise is low but task complexity is high. \u2014 Directly tests the hypothesis by measuring robustness (e.g., accuracy drop on OOD examples) under the specified conditions, isolating the effect of decoupling.",
+        "[PATH:theoretical] Theoretical analysis of information bottlenecks and error propagation in modular AI pipelines, focusing on conditions where perceptual modules have high confidence but reasoning modules face high combinatorial complexity. \u2014 Provides formal bounds or proofs on how decoupling can amplify reasoning errors when perceptual outputs are deterministic (low uncertainty) but the reasoning task requires flexible composition, potentially explaining the hypothesized degradation."
+      ],
+      "scope": {
+        "domain": "complex, multi-step reasoning tasks with reliable perception"
+      },
+      "qualifier": {
+        "temporal": "current AI systems (as of 2025)",
+        "geographic": "global, general-purpose AI systems"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "provides significant robustness benefits for out-of-distribution data even when",
+      "object": "perceptual uncertainty is low and task complexity is low",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "simple, well-structured tasks with reliable perception"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "decoupling perception and reasoning in AI architectures",
+      "predicate": "increases robustness to out-of-distribution data under",
+      "object": "conditions of high perceptual uncertainty combined with low task complexity",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "simple reasoning tasks with noisy perceptual inputs"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "integrating perception and reasoning in AI architectures",
+      "predicate": "enhances robustness to out-of-distribution data under",
+      "object": "conditions of low perceptual uncertainty combined with high task complexity",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "complex reasoning tasks with clear perceptual inputs"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  }
 }
