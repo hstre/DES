@@ -1,0 +1,371 @@
+{
+  "operator_id": "adaptive_variation_selection",
+  "question": "Under what selection conditions does the recursive map T(n) exhibit dominance of contraction trajectories over growth tr",
+  "outcome": "BRANCH_COMPLETE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is determined by",
+      "object": "the ratio of the average contraction factor to the local expansion rate in regions of low n",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the ratio of the average contraction factor to the local expansion rate in regions of low n]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Empirical studies of iterated maps show that contraction can dominate even when local expansion is frequent, but the precise selection condition (e.g., threshold on Lyapunov exponent vs. basin geometry) remains contested between analytical and simulation-based approaches."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is determined by",
+      "object": "the ratio of the average contraction factor to the local expansion rate in regions of low n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the ratio of the average contraction factor to the local expansion rate in regions of low n]"
+      ],
+      "scope": {
+        "domain": "analytical dynamical systems theory"
+      },
+      "qualifier": {
+        "condition": "when the ratio exceeds a threshold derived from the Lyapunov exponent of the map"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is primarily governed by",
+      "object": "the basin geometry and topological structure of the map's attractor",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the basin geometry and topological structure of the map's attractor]"
+      ],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {
+        "tension": "contradicts the analytical threshold hypothesis, as simulations show contraction dominance even when the average contraction-to-expansion ratio is below the predicted Lyapunov threshold"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is partially modulated by",
+      "object": "the specific distribution of n-values in the low-n region, not just the average ratio",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the specific distribution of n-values in the low-n region, not just the average ratio]"
+      ],
+      "scope": {
+        "domain": "probabilistic analysis of iterated maps"
+      },
+      "qualifier": {
+        "condition": "when the variance of local expansion rates is high, the average ratio becomes an insufficient predictor"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is determined by",
+      "object": "the parity of the number of consecutive low-n steps preceding each contraction event",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the parity of the number of consecutive low-n steps preceding each contraction event]",
+        "[PATH:empirical] Systematic computational simulation varying the parity of consecutive low-n steps while holding the average contraction factor constant, and measuring the ratio of contraction to growth trajectory lengths in T(n) \u2014 Directly tests the hypothesis by isolating the effect of parity patterns on trajectory dominance under controlled conditions, providing quantitative confirmation or refutation.",
+        "[PATH:theoretical] Analytical derivation of the expected trajectory length ratio as a function of parity-dependent step patterns using Markov chain or symbolic dynamics on the recursive map T(n) \u2014 Provides a formal mathematical relationship between parity sequences and contraction dominance, enabling rigorous verification of the claimed dependency without simulation artifacts.",
+        "[PATH:literature] Literature review of existing studies on parity-dependent dynamics in Collatz-like maps or similar recursive number-theoretic transformations \u2014 Surveys prior results on how step parity influences contraction/expansion balance, contextualizing the hypothesis within known phenomena and identifying potential counterexamples or supporting evidence."
+      ],
+      "scope": {
+        "domain": "analytical dynamical systems theory"
+      },
+      "qualifier": {
+        "condition": "when the average contraction factor is held constant and the local expansion rate is modulated by parity-dependent step patterns"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "growth trajectories dominance over contraction trajectories in the recursive map T(n)",
+      "predicate": "is determined by",
+      "object": "the local expansion rate surpassing the average contraction factor in regions of high n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: growth trajectories dominance over contraction trajectories in the recursive map T(n) the local expansion rate surpassing the average contraction factor in regions of high n]",
+        "[PATH:theoretical] Rigorous asymptotic analysis of the ratio of local expansion to average contraction in T(n) for n \u2192 \u221e, using methods from analytic number theory or ergodic theory \u2014 A formal derivation of the condition under which expansion dominates contraction would confirm or refute the hypothesis by establishing a threshold for the local expansion rate relative to the average contraction factor.",
+        "[PATH:empirical] High-precision numerical simulation of T(n) trajectories for n up to 10^12, measuring local expansion rates and average contraction factors across multiple scales \u2014 Direct computational evidence can test whether growth trajectories indeed dominate for sufficiently large n, by comparing the fraction of trajectories that grow versus contract in high-n regions.",
+        "[PATH:literature] Survey of known results on expansion-contraction balance in similar recursive maps (e.g., Collatz-type functions, piecewise linear maps) from the dynamical systems literature \u2014 Existing studies may provide analogous conditions or counterexamples that inform whether the hypothesized dominance is plausible or contradicted by known behavior in related systems."
+      ],
+      "scope": {
+        "domain": "analytical dynamical systems theory"
+      },
+      "qualifier": {
+        "temporal": "for sufficiently large n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is caused by",
+      "object": "the fractal dimension of the basin boundary exceeding the information dimension of the attractor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the fractal dimension of the basin boundary exceeding the information dimension of the attractor]",
+        "[PATH:empirical] High-resolution simulation of T(n) with systematic variation of control parameters to compute both the fractal dimension of the basin boundary and the information dimension of the attractor, and to correlate the ratio of contraction vs. growth trajectories with the difference between these dimensions. \u2014 Directly tests the causal claim by manipulating the key geometric quantities and observing the predicted effect on trajectory dominance, using the same simulation framework as the original studies.",
+        "[PATH:literature] Meta-analysis of published simulation data on T(n) from University X and Institute Y (2020\u20132023) to re-examine the statistical relationship between basin boundary fractal dimension, attractor information dimension, and trajectory classification counts. \u2014 Leverages existing evidence to independently verify or challenge the correlation, controlling for potential artifacts or selective reporting in individual simulation runs.",
+        "[PATH:theoretical] Analytical derivation of a necessary condition linking the inequality of fractal dimension and information dimension to the asymptotic ratio of contraction to growth trajectories in T(n), using concepts from dynamical systems theory (e.g., saddle-node bifurcations, basin boundary structure). \u2014 Provides a formal mathematical foundation that either supports the causal mechanism or reveals alternative explanations, thereby strengthening or refuting the hypothesis beyond empirical correlations."
+      ],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {
+        "temporal": "during simulation runs from 2020 to 2023",
+        "geographic": "in computational laboratories at University X and Institute Y"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is primarily governed by",
+      "object": "external perturbations and stochastic influences not accounted for in the basin geometry",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) external perturbations and stochastic influences not accounted for in the basin geometry]",
+        "[PATH:empirical] Controlled simulation experiments systematically varying noise amplitude and correlation structure in the recursive map T(n), while tracking the frequency of contraction vs. growth trajectories \u2014 Directly tests whether external perturbations causally govern trajectory dominance, by isolating stochastic influences from basin geometry effects.",
+        "[PATH:theoretical] Theoretical analysis deriving the sensitivity of T(n) contraction/growth basins to small perturbations using Lyapunov exponents or basin boundary stability metrics \u2014 Provides a formal basis to determine if stochastic influences can override geometric basin structure, thus confirming or refuting the claimed primacy of perturbations."
+      ],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {
+        "temporal": "during simulation runs with stochastic noise injection",
+        "geographic": "within the computational environment of the simulation-based empirical studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is primarily governed by",
+      "object": "the basin geometry and topological structure of the map's attractor",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms dominance of contraction trajectories over growth trajectories in the recursive map T(n) is primarily governed by the basin geometry and topological structure of the map's attractor in domain 'simulation-based empirical studies']"
+      ],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {
+        "temporal": "during the observation period of the simulation runs",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is primarily governed by",
+      "object": "the average contraction-to-expansion ratio relative to the Lyapunov threshold, independent of basin geometry",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms dominance of contraction trajectories over growth trajectories in the recursive map T(n) is primarily governed by the average contraction-to-expansion ratio relative to the Lyapunov threshold, independent of basin geometry in domain 'simulation-based empirical studies']"
+      ],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {
+        "temporal": "simulation runs conducted between 2020 and 2024",
+        "geographic": "not applicable (simulation-based study)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is caused by",
+      "object": "the fractal dimensionality of the basin boundary exceeding a critical value of 1.5",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+      "predicate": "is primarily governed by",
+      "object": "external perturbations and parameter fluctuations rather than intrinsic basin geometry",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "simulation-based empirical studies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 12
+}

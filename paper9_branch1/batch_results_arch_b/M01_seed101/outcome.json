@@ -1,0 +1,2817 @@
+{
+  "domain_id": "M01",
+  "seed": 101,
+  "arch": "B",
+  "outcome": "MAX_LOOPS_REACHED",
+  "loops_completed": 5,
+  "operator_log": [
+    {
+      "loop": 1,
+      "parallel_event": 1,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "recursive_modulation",
+        "boundary_condition_analysis"
+      ]
+    },
+    {
+      "loop": 2,
+      "parallel_event": 2,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "recursive_modulation",
+        "adaptive_variation_selection",
+        "boundary_condition_analysis"
+      ]
+    }
+  ],
+  "branch_results": [
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what initial conditions and parameter values does the recursive map T(n) favor contraction trajectories over growt",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "favors contraction trajectories over growth trajectories",
+          "object": "the long-term stability of the system is maintained through periodic collapse rather than asymptotic expansion",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the long-term stability of the system is maintained through periodic collapse rather than asymptotic expansion]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "favors contraction trajectories over growth trajectories",
+          "object": "the long-term stability of the system is maintained through periodic collapse rather than asymptotic expansion",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the long-term stability of the system is maintained through periodic collapse rather than asymptotic expansion]"
+          ],
+          "scope": {
+            "domain": "dynamical systems with low coupling"
+          },
+          "qualifier": {
+            "temporal": "for iteration steps n < 10^5 and perturbation amplitude > 0.8"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits transient growth before eventual contraction",
+          "object": "the system's stability is temporarily supported by early expansion before collapse becomes dominant",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the system's stability is temporarily supported by early expansion before collapse becomes dominant]"
+          ],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {
+            "time_scale": "short-term"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "may also produce intermittent bursts of growth that delay collapse",
+          "object": "the system's long-term behavior could alternate between contraction and expansion phases, challenging the periodic collapse interpretation",
+          "status": "unknown",
+          "confidence": 0.28,
+          "modality": "speculation",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "nonlinear dynamics with rare events"
+          },
+          "qualifier": {
+            "coupling_strength": "near-critical low values"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits a transition from periodic collapse to chaotic escape when the perturbation amplitude exceeds a critical threshold of 0.95",
+          "object": "the long-term stability of the system is lost through unbounded divergence rather than maintained by periodic collapse",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the long-term stability of the system is lost through unbounded divergence rather than maintained by periodic collapse]",
+            "[PATH:empirical] Numerical simulation of the recursive map T(n) with perturbation amplitude sweeping from 0.8 to 1.0 at increments of 0.01, tracking Lyapunov exponents and escape times for n up to 10^5 \u2014 Directly tests the hypothesized critical threshold at 0.95 by measuring the transition from bounded periodic collapse (negative Lyapunov exponent) to chaotic escape (positive exponent) and verifying unbounded divergence above the threshold.",
+            "[PATH:theoretical] Analytical bifurcation analysis of the map T(n) under low coupling, focusing on the stability of fixed points and periodic orbits as perturbation amplitude varies \u2014 Provides a mathematical proof of the existence and nature of the transition at the critical threshold, confirming whether the loss of stability occurs via a boundary crisis or other bifurcation mechanism.",
+            "[PATH:literature] Review of known results in coupled map lattices with low coupling and strong perturbations, e.g., work by Kaneko (1990) on 'chaotic itinerancy' or 'collapse and escape' phenomena \u2014 Contextualizes the hypothesis within established dynamical systems theory, identifying whether similar threshold behaviors have been observed or predicted, and whether the specific value 0.95 aligns with known scaling laws."
+          ],
+          "scope": {
+            "domain": "dynamical systems with low coupling"
+          },
+          "qualifier": {
+            "temporal": "for iteration steps n < 10^5 and perturbation amplitude > 0.8"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "favors growth trajectories over contraction trajectories",
+          "object": "the long-term stability of the system is achieved through asymptotic expansion rather than periodic collapse",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the long-term stability of the system is achieved through asymptotic expansion rather than periodic collapse]",
+            "[PATH:empirical] Conduct systematic numerical simulations of T(n) across a grid of high perturbation amplitudes and low coupling strengths, measuring the asymptotic growth rate versus collapse frequency over 10^6 iterations for multiple random initial conditions. \u2014 Direct empirical testing under the specified temporal and coupling conditions can confirm whether growth trajectories dominate collapse, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Perform a bifurcation analysis and Lyapunov exponent computation for T(n) as a function of perturbation amplitude and coupling strength, focusing on regimes near the transition between expansion and periodic collapse. \u2014 Theoretical analysis can identify stability boundaries and attractor types, revealing whether asymptotic expansion is a generic property or if collapse regimes exist in the parameter space.",
+            "[PATH:literature] Review existing literature on low-coupling dynamical systems with high perturbation, such as studies of coupled map lattices or discrete-time predator-prey models with weak interactions. \u2014 Comparative analysis of published results can contextualize the hypothesized behavior, potentially confirming similar patterns or highlighting counterexamples where collapse is favored."
+          ],
+          "scope": {
+            "domain": "dynamical systems with low coupling"
+          },
+          "qualifier": {
+            "temporal": "for simulation durations up to 10^6 iterations and initial transient periods of at least 1000 steps",
+            "geographic": "in computational models of low-coupling dynamical systems with no spatial embedding"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits a critical perturbation amplitude threshold above which transient growth is replaced by immediate contraction",
+          "object": "the system's transient expansion phase is suppressed once initial perturbation amplitude exceeds a specific value, causing collapse to dominate from the first iteration",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the system's transient expansion phase is suppressed once initial perturbation amplitude exceeds a specific value, causing collapse to dominate from the first iteration]",
+            "[PATH:empirical] Systematic numerical bifurcation analysis of the recursive map T(n) across a range of perturbation amplitudes and coupling strengths, focusing on the transition from transient growth to immediate contraction. \u2014 Direct simulation can map the critical amplitude threshold and verify whether the transient expansion phase is suppressed above it, providing quantitative confirmation or refutation of the hypothesis.",
+            "[PATH:theoretical] Analytical derivation of stability boundaries for weakly coupled maps with large initial perturbations, using Lyapunov exponent or contraction mapping theory. \u2014 A theoretical model can predict the existence and value of the critical threshold, offering a rigorous foundation for the observed behavior and distinguishing it from mere numerical artifacts.",
+            "[PATH:literature] Review of existing literature on threshold-induced suppression of transient dynamics in coupled map lattices or similar weakly coupled nonlinear systems. \u2014 Comparing with known results (e.g., in coupled logistic maps or network synchronization) can reveal whether this threshold effect is a general phenomenon or specific to T(n), and identify prior evidence or counterexamples."
+          ],
+          "scope": {
+            "domain": "threshold effects in weakly coupled transient systems"
+          },
+          "qualifier": {
+            "time_scale": "short-term"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "does not exhibit transient growth and instead immediately contracts",
+          "object": "the system's instability prevents any significant expansion, leading to a swift collapse",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength the system's instability prevents any significant expansion, leading to a swift collapse]",
+            "[PATH:empirical] Direct numerical simulation of the coupled logistic map lattice with high-amplitude initial perturbations and coupling strength < 0.1, measuring the L2 norm over the first 1000 iterations. \u2014 Provides direct quantitative evidence of whether transient growth occurs or immediate contraction dominates, testing the hypothesis under controlled parameters.",
+            "[PATH:theoretical] Linear stability analysis of the Jacobian matrix for the weakly coupled map system under high perturbation amplitude, examining the spectral radius and pseudospectra. \u2014 Determines whether the system's linearized dynamics allow transient amplification (non-normality effects) or guarantee contraction, offering a mechanistic explanation for the observed behavior."
+          ],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {
+            "temporal": "during the first 1000 iterations after perturbation onset",
+            "geographic": "within the parameter space of weakly coupled logistic maps on a 2D lattice"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits transient growth before eventual contraction",
+          "object": "the system's stability is temporarily supported by early expansion before collapse becomes dominant",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength exhibits transient growth before eventual contraction the system's stability is temporarily supported by early expansion before collapse becomes dominant in domain 'transient dynamics in weakly coupled systems']"
+          ],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {
+            "temporal": "during the first 50 iterations of the recursive map",
+            "geographic": "in the parameter space of weakly coupled oscillators"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "does not exhibit transient growth before eventual contraction",
+          "object": "the system's stability is not temporarily supported by early expansion; instead, the system undergoes immediate contraction from the outset",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength does not exhibit transient growth before eventual contraction the system's stability is not temporarily supported by early expansion; instead, the system undergoes immediate contraction from the outset in domain 'transient dynamics in weakly coupled systems']"
+          ],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {
+            "temporal": "under initial conditions with high perturbation amplitude and low coupling strength, observed during the first 100 iterations of T(n)",
+            "geographic": "simulated in a one-dimensional coupled map lattice with nearest-neighbor coupling"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits a delayed onset of collapse proportional to the logarithm of the perturbation amplitude",
+          "object": "the duration of transient growth scales with the initial perturbation amplitude, delaying the eventual contraction phase",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {
+            "scaling_relation": "logarithmic"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the recursive map T(n) under initial conditions with high perturbation amplitude and low coupling strength",
+          "predicate": "exhibits immediate contraction without significant transient growth",
+          "object": "the system's stability is dominated by collapse dynamics from the outset, preventing any temporary expansion",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "transient dynamics in weakly coupled systems"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How might the interplay between exponential growth mechanisms and iterative reduction strategies in algorithmic pathways",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "Exponential growth mechanisms and iterative reduction strategies in algorithmic pathways",
+          "predicate": "influence",
+          "object": "the long-term stability of sequences defined by initial conditions n \u2261 1 (mod 3)",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Exponential growth mechanisms and iterative reduction strategies in algorithmic pathways the long-term stability of sequences defined by initial conditions n \u2261 1 (mod 3)]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "Exponential growth mechanisms in algorithmic pathways",
+          "predicate": "destabilize",
+          "object": "sequences defined by initial conditions n \u2261 1 (mod 3)",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Exponential growth mechanisms in algorithmic pathways sequences defined by initial conditions n \u2261 1 (mod 3)]"
+          ],
+          "scope": {
+            "domain": "iterative reduction dynamics"
+          },
+          "qualifier": {
+            "temporal": "during iterative reduction cycles with step size > 2",
+            "geographic": "simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "counteract",
+          "object": "exponential growth mechanisms",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3) exponential growth mechanisms]"
+          ],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {
+            "temporal": "transient"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "The interaction of exponential growth and iterative reduction",
+          "predicate": "yields",
+          "object": "bounded long-term stability for sequences with n \u2261 1 (mod 3)",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: The interaction of exponential growth and iterative reduction bounded long-term stability for sequences with n \u2261 1 (mod 3)]"
+          ],
+          "scope": {
+            "domain": "long-term asymptotic behavior"
+          },
+          "qualifier": {
+            "condition": "if and only if reduction rate exceeds growth rate"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "Exponential growth mechanisms in algorithmic pathways",
+          "predicate": "amplify",
+          "object": "the divergence rate of sequences defined by initial conditions n \u2261 1 (mod 3) under step sizes > 2",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Exponential growth mechanisms in algorithmic pathways the divergence rate of sequences defined by initial conditions n \u2261 1 (mod 3) under step sizes > 2]",
+            "[PATH:empirical] Systematic computational simulation of iterative reduction dynamics with step sizes > 2, varying initial conditions n \u2261 1 (mod 3) and tracking divergence rates over cycles where step size is odd \u2014 Directly tests the hypothesis by measuring whether divergence rates increase under the specified conditions, providing empirical confirmation or refutation.",
+            "[PATH:theoretical] Analytical modeling of growth bounds in algorithmic pathways using number-theoretic properties of modular arithmetic and step-size parity \u2014 Can derive formal conditions under which exponential growth occurs or is bounded, clarifying the disputed relationship between initial condition congruence and step size parity.",
+            "[PATH:literature] Literature review of known results on divergence in Collatz-like or related iterative reduction systems, focusing on mod 3 constraints and odd step sizes \u2014 Existing studies may already contain theorems or counterexamples that either support or contradict the hypothesized amplification effect, offering a basis for validation or refutation without new experiments."
+          ],
+          "scope": {
+            "domain": "iterative reduction dynamics"
+          },
+          "qualifier": {
+            "temporal": "during cycles where step size is odd and greater than 2",
+            "geographic": "simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "Exponential growth mechanisms in algorithmic pathways",
+          "predicate": "stabilize",
+          "object": "sequences defined by initial conditions n \u2261 1 (mod 3)",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Exponential growth mechanisms in algorithmic pathways sequences defined by initial conditions n \u2261 1 (mod 3)]",
+            "[PATH:empirical] Perform controlled computational simulations of iterative reduction dynamics for a large sample of initial conditions n \u2261 1 (mod 3), tracking growth rates and stabilization behavior over 10^6 steps, with statistical analysis of variance across different algorithmic pathways. \u2014 Direct empirical testing under the specified temporal and geographic scope can provide quantitative evidence for or against stabilization, given the moderate confidence level.",
+            "[PATH:literature] Review existing literature on convergence properties of Collatz-like sequences and related iterative reduction systems, focusing on studies that examine modular constraints (e.g., n \u2261 1 mod 3) and exponential growth mechanisms. \u2014 Theoretical and empirical findings from established research on similar dynamics may reveal known stabilization patterns or counterexamples, helping to contextualize and validate the hypothesis.",
+            "[PATH:theoretical] Develop a formal mathematical model of the algorithmic pathway's state space, analyzing fixed points, attractors, and Lyapunov exponents for sequences with initial condition n \u2261 1 (mod 3), to predict stabilization conditions theoretically. \u2014 A theoretical analysis can identify necessary or sufficient conditions for stabilization, offering a rigorous foundation to confirm or refute the hypothesis beyond simulation limits."
+          ],
+          "scope": {
+            "domain": "iterative reduction dynamics"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^6 iterative steps",
+            "geographic": "in simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "induce",
+          "object": "exponential decay in trajectory length when combined with a parity-based branching rule",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3) exponential decay in trajectory length when combined with a parity-based branching rule]",
+            "[PATH:empirical] Empirical simulation study varying initial n \u2261 1 (mod 3) and measuring trajectory lengths under parity-based branching versus uniform reduction \u2014 Directly tests whether parity-based branching induces exponential decay in trajectory length compared to baseline reduction strategies, providing quantitative confirmation or refutation.",
+            "[PATH:theoretical] Theoretical analysis using Markov chain models of iterative reduction with state-dependent branching probabilities \u2014 Derives expected trajectory length as a function of initial condition and branching rule, establishing whether exponential decay is mathematically inevitable or contingent on specific parameters.",
+            "[PATH:literature] Literature review of known results on reduction sequences (e.g., Collatz-like dynamics, Euclidean algorithm variants) that exhibit parity-sensitive decay rates \u2014 Contextualizes the hypothesis within existing work on iterative reduction, identifying whether similar exponential decay patterns have been observed or ruled out in related systems."
+          ],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {
+            "temporal": "simulation runs under controlled conditions (no specified time limit)",
+            "geographic": "not applicable (abstract algorithmic domain)"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "enhance",
+          "object": "exponential growth mechanisms",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3) exponential growth mechanisms]",
+            "[PATH:empirical] Controlled simulation study comparing reduction sequences for n \u2261 1 (mod 3) vs. other residue classes over 10^3 steps, tracking step counts and intermediate value distributions. \u2014 Directly tests whether exponential growth mechanisms are uniquely enhanced for this residue class; provides quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Analytical proof or counterexample bounding the maximum step length or value growth for sequences with n \u2261 1 (mod 3) under iterated reduction rules (e.g., Collatz-type maps). \u2014 Establishes a rigorous foundation: if growth is provably bounded, the hypothesis is refuted; if unbounded growth is shown, it is confirmed.",
+            "[PATH:literature] Literature review of known results on reduction dynamics for modular residue classes, focusing on n \u2261 1 (mod 3) in short algorithmic pathways (e.g., papers on Collatz conjecture variants or 3x+1 problem). \u2014 Identifies prior empirical or theoretical findings that either support or contradict the claimed enhancement, situating the hypothesis within existing knowledge."
+          ],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {
+            "temporal": "during initial 10^3 iteration steps",
+            "geographic": "within simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "suppress",
+          "object": "exponential growth mechanisms",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3) suppress exponential growth mechanisms in domain 'short-term algorithmic pathways']"
+          ],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {
+            "temporal": "within first 10^5 iteration steps",
+            "geographic": "simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "amplify",
+          "object": "exponential growth mechanisms",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3) amplify exponential growth mechanisms in domain 'short-term algorithmic pathways']"
+          ],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {
+            "temporal": "within the first 10^6 iteration steps",
+            "geographic": "simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "amplify",
+          "object": "the transient suppression of exponential growth mechanisms",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "Iterative reduction strategies applied to sequences with initial conditions n \u2261 1 (mod 3)",
+          "predicate": "amplify",
+          "object": "exponential growth mechanisms",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "short-term algorithmic pathways"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the invariants and boundary conditions required for the recursive map T(n) to consistently produce unbounded gr",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "requires",
+          "object": "a specific invariant ratio between branching factor and modulus residue cycle length to avoid eventual convergence",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a specific invariant ratio between branching factor and modulus residue cycle length to avoid eventual convergence]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "exhibits",
+          "object": "a fixed invariant ratio between branching factor and modulus residue cycle length that prevents convergence",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a fixed invariant ratio between branching factor and modulus residue cycle length that prevents convergence]"
+          ],
+          "scope": {
+            "domain": "iterated function dynamics on residue classes"
+          },
+          "qualifier": {
+            "temporal": "asymptotic"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "does not require",
+          "object": "any fixed invariant ratio to avoid convergence; convergence behavior is dominated by local modular arithmetic anomalies",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) any fixed invariant ratio to avoid convergence; convergence behavior is dominated by local modular arithmetic anomalies]"
+          ],
+          "scope": {
+            "domain": "small-scale computational experiments"
+          },
+          "qualifier": {
+            "method": "empirical counterexample search"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the invariant ratio between branching factor and modulus residue cycle length",
+          "predicate": "is",
+          "object": "a necessary condition for non-convergence only when the modulus is composite and branching factor exceeds 2",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the invariant ratio between branching factor and modulus residue cycle length a necessary condition for non-convergence only when the modulus is composite and branching factor exceeds 2]"
+          ],
+          "scope": {
+            "domain": "modular arithmetic constraints"
+          },
+          "qualifier": {
+            "condition": "composite modulus"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "exhibits",
+          "object": "a strictly decreasing ratio of branching factor to modulus residue cycle length under repeated application of T(n) = (n-1)/3, converging to a fixed point of zero",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a strictly decreasing ratio of branching factor to modulus residue cycle length under repeated application of T(n) = (n-1)/3, converging to a fixed point of zero]",
+            "[PATH:empirical] Computational simulation of the iterated map T(n) = (n-1)/3 for all n \u2261 1 (mod 3) up to a large bound, recording branching factor (number of preimages) and cycle lengths at each residue modulus step. \u2014 Direct simulation can test whether the ratio of branching factor to residue cycle length strictly decreases under repeated application and whether it converges to zero, providing quantitative confirmation or refutation.",
+            "[PATH:theoretical] Analytical derivation of the dynamics of T(n) = (n-1)/3 on residue classes modulo powers of 3, using number theory and dynamical systems theory to characterize branching and cycle structure. \u2014 A rigorous mathematical proof or counterexample can establish the monotonic behavior and limiting fixed point, resolving the disputed status with formal reasoning.",
+            "[PATH:literature] Literature review of known results on linear fractional maps and their iteration on residue classes, particularly in the context of the Collatz conjecture and similar 3x+1 variants. \u2014 Existing studies on related maps (e.g., T(n) = n/3 for n \u2261 0 mod 3) may contain analogous branching and cycle properties that can be adapted or compared to evaluate the hypothesis."
+          ],
+          "scope": {
+            "domain": "iterated function dynamics on residue classes"
+          },
+          "qualifier": {
+            "temporal": "under repeated application of T(n) = (n-1)/3 for n \u2261 1 (mod 3) within the domain of iterated function dynamics on residue classes",
+            "geographic": "no geographic constraint"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "demonstrates",
+          "object": "a dynamic balance between the branching factor and modulus residue cycle length that allows for convergence",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a dynamic balance between the branching factor and modulus residue cycle length that allows for convergence]",
+            "[PATH:empirical] Systematic simulation study of T(n) for n \u2261 1 mod 3 across varying modulus cycle lengths and branching factor thresholds, with convergence metrics recorded up to 10^8 iterations \u2014 Extending the observation range beyond 10^6 can reveal whether the claimed dynamic balance persists or breaks down, providing direct confirmation or refutation of the hypothesis.",
+            "[PATH:theoretical] Analytic derivation of the expected convergence time using branching process theory and Markov chain analysis on residue classes modulo powers of 3 \u2014 A formal mathematical model can determine if a stable balance between branching factor and cycle length is possible, or if the observed behavior is merely transient or artifactual.",
+            "[PATH:literature] Review of literature on Collatz-type maps and generalized Syracuse problems, specifically studies of maps with mod-3 residue restrictions and their convergence properties \u2014 Existing theoretical results (e.g., on the 3x+1 problem and its variants) may already characterize the dynamics for n \u2261 1 mod 3, offering either support or contradiction for the hypothesized balance."
+          ],
+          "scope": {
+            "domain": "iterated function dynamics on residue classes"
+          },
+          "qualifier": {
+            "temporal": "during the observation period of simulated iterations up to 10^6",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "requires",
+          "object": "a hidden invariant ratio modulo 9 to prevent convergence in all cases",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a hidden invariant ratio modulo 9 to prevent convergence in all cases]",
+            "[PATH:empirical] Systematic computational enumeration of T(n) trajectories for all n \u2261 1 (mod 3) up to 10^6, recording residue cycles modulo 9 and checking for invariant ratio \u2014 Directly tests whether a hidden invariant ratio modulo 9 exists by exhaustive search; if found, supports hypothesis; if no such ratio appears across all residues, refutes it.",
+            "[PATH:theoretical] Analytic derivation of the fixed-point equation for T(n) under the constraint n \u2261 1 (mod 3), solving for invariant ratios modulo 9 using modular arithmetic and algebraic number theory \u2014 A theoretical proof of existence or non-existence of an invariant ratio would settle the hypothesis definitively, independent of computational limits.",
+            "[PATH:literature] Survey of known results on Collatz-type maps and modular invariants in the literature (e.g., work by Lagarias, Terras, or Conway on generalized 3x+1 problems) \u2014 Existing theoretical frameworks may already characterize such invariants; a literature review could confirm the hypothesis or show it contradicts established theorems."
+          ],
+          "scope": {
+            "domain": "extended computational experiments across residue classes modulo 9"
+          },
+          "qualifier": {
+            "temporal": "2025-04-10T00:00:00Z/2025-04-10T23:59:59Z",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "requires",
+          "object": "a fixed invariant ratio to avoid convergence; convergence behavior is fundamentally linked to consistent ratio conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 (mod 3) a fixed invariant ratio to avoid convergence; convergence behavior is fundamentally linked to consistent ratio conditions]",
+            "[PATH:theoretical] Formal analysis of invariant ratios in piecewise linear maps, e.g., Collatz-type functions, using ergodic theory or measure-preserving transformations \u2014 Deriving necessary conditions for convergence in maps like T(n) for n \u2261 1 (mod 3) often involves identifying invariant measures or ratios that govern long-term behavior; theoretical work on such invariants can confirm whether a fixed ratio is required.",
+            "[PATH:empirical] Systematic computational simulation of T(n) trajectories over a large sample of starting values (e.g., up to 10^9), recording ratios of steps to convergence and testing for consistent ratio thresholds \u2014 Empirical evidence from exhaustive or randomized sampling can reveal whether convergence occurs only when certain ratio conditions hold, or if exceptions exist, thus refuting or supporting the hypothesized link.",
+            "[PATH:literature] Survey of known results on the 3x+1 problem and its generalizations, focusing on modular constraints and ratio-based convergence criteria \u2014 Existing literature on Collatz-type dynamics often discusses invariant ratios and convergence conditions; reviewing such work can provide corroborating or contradictory evidence regarding the necessity of a fixed invariant ratio for n \u2261 1 (mod 3)."
+          ],
+          "scope": {
+            "domain": "theoretical analysis"
+          },
+          "qualifier": {
+            "temporal": "during theoretical analysis of the recursive map T(n) for n \u2261 1 (mod 3)",
+            "geographic": "none"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "requires",
+          "object": "a fixed invariant ratio to avoid convergence; convergence behavior is not dominated by local modular arithmetic anomalies",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 (mod 3) requires a fixed invariant ratio to avoid convergence; convergence behavior is not dominated by local modular arithmetic anomalies in domain 'small-scale computational experiments']"
+          ],
+          "scope": {
+            "domain": "small-scale computational experiments"
+          },
+          "qualifier": {
+            "temporal": "during the observation period of small-scale computational experiments",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "does not require",
+          "object": "any fixed invariant ratio to avoid convergence; convergence behavior is dominated by local modular arithmetic anomalies",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 (mod 3) does not require any fixed invariant ratio to avoid convergence; convergence behavior is dominated by local modular arithmetic anomalies in domain 'small-scale computational experiments']"
+          ],
+          "scope": {
+            "domain": "small-scale computational experiments"
+          },
+          "qualifier": {
+            "temporal": "experiments conducted up to 2023",
+            "geographic": "global computational simulations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the invariant ratio between branching factor and modulus residue cycle length",
+          "predicate": "is",
+          "object": "sufficient for non-convergence when the modulus is prime and branching factor is exactly 2",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the invariant ratio between branching factor and modulus residue cycle length sufficient for non-convergence when the modulus is prime and branching factor is exactly 2]",
+            "[PATH:empirical] Systematic computational search over all primes p < 10^6 and all starting residues, recording the cycle length of the map f(x) = (2*x) mod p, and comparing the ratio of branching factor (2) to the cycle length for non-convergent trajectories. \u2014 Direct simulation can test the invariant ratio claim: if the ratio is sufficient for non-convergence, then for each prime where the ratio exceeds some threshold, we should observe that no trajectory converges to a fixed point. This can confirm or refute the hypothesis across a broad parameter space.",
+            "[PATH:literature] Review of known results on the dynamics of linear congruential generators and the Collatz-like maps with modulus p, focusing on the relationship between multiplier (branching factor) and the order of the multiplicative group modulo p. \u2014 Existing theorems (e.g., from number theory and dynamical systems) may already characterize convergence in terms of the multiplicative order of the branching factor modulo p. If the invariant ratio reduces to a known condition (e.g., the order dividing p-1), the literature can either support or contradict the hypothesis.",
+            "[PATH:theoretical] Analytical proof attempt: Derive necessary and sufficient conditions for non-convergence of the map x -> (b*x) mod p (with b=2) in terms of the cycle length of the residue class modulo p, and compare to the ratio b/cycle_length. \u2014 A rigorous mathematical derivation can establish whether the ratio b/cycle_length is indeed the controlling factor, or whether other invariants (like the gcd of b and p-1) are decisive. This would either confirm the hypothesis as a theorem or refute it by counterexample."
+          ],
+          "scope": {
+            "domain": "modular arithmetic constraints"
+          },
+          "qualifier": {
+            "temporal": "during the period of simulation-based analysis",
+            "geographic": "global mathematical literature"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the invariant ratio between branching factor and modulus residue cycle length",
+          "predicate": "is not",
+          "object": "a necessary condition for non-convergence regardless of the modulus and branching factor",
+          "status": "disputed",
+          "confidence": 0.55,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the invariant ratio between branching factor and modulus residue cycle length a necessary condition for non-convergence regardless of the modulus and branching factor]"
+          ],
+          "scope": {
+            "domain": "modular arithmetic constraints"
+          },
+          "qualifier": {
+            "temporal": "as of the current experimental simulation data"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "is fully determined in its convergence by",
+          "object": "the residue class of n modulo 9, overriding any broader ratio-based constraints",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "small-scale computational experiments"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "the recursive map T(n) for n \u2261 1 (mod 3)",
+          "predicate": "requires",
+          "object": "a fixed invariant ratio to avoid convergence; convergence behavior is not merely dominated by local modular arithmetic anomalies",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "small-scale computational experiments"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How can moderate to high parameter coupling in neural networks lead to emergent contraction dynamics outside of stabilit",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "moderate to high parameter coupling in neural networks",
+          "predicate": "leads to",
+          "object": "emergent contraction dynamics outside stability regions that are structurally analogous to transient chaotic contraction in recursive maps",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: moderate to high parameter coupling in neural networks emergent contraction dynamics outside stability regions that are structurally analogous to transient chaotic contraction in recursive maps]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "moderate to high parameter coupling in neural networks",
+          "predicate": "leads to",
+          "object": "emergent contraction dynamics outside stability regions",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: moderate to high parameter coupling in neural networks emergent contraction dynamics outside stability regions]"
+          ],
+          "scope": {
+            "domain": "recurrent neural networks with symmetric weights"
+          },
+          "qualifier": {
+            "temporal": "during training with moderate to high coupling"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "high parameter coupling in neural networks",
+          "predicate": "is better explained by",
+          "object": "noise-driven diffusion rather than deterministic chaotic contraction",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: high parameter coupling in neural networks noise-driven diffusion rather than deterministic chaotic contraction]"
+          ],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {
+            "competing_explanation": true
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "transient chaotic contraction in recursive maps",
+          "predicate": "provides only a superficial analogy for",
+          "object": "contraction dynamics in neural networks with moderate coupling",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "critique",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction in recursive maps contraction dynamics in neural networks with moderate coupling]"
+          ],
+          "scope": {
+            "domain": "non-autonomous neural systems with time-varying inputs"
+          },
+          "qualifier": {
+            "analogy_limitation": "structural differences in attractor topology"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "moderate to high parameter coupling in neural networks with symmetric weights",
+          "predicate": "reduces",
+          "object": "the critical coupling threshold for onset of chaotic dynamics",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: moderate to high parameter coupling in neural networks with symmetric weights the critical coupling threshold for onset of chaotic dynamics]",
+            "[PATH:empirical] Lyapunov exponent analysis of deep symmetric RNNs trained with varying coupling strengths \u2014 Directly measuring the maximal Lyapunov exponent as a function of coupling strength in networks with 3+ layers would provide quantitative evidence for changes in the critical threshold for chaos.",
+            "[PATH:theoretical] Mean-field theory for deep recurrent networks with symmetric weights \u2014 Developing or extending mean-field models that incorporate symmetric weight constraints and layer depth could analytically predict how parameter coupling shifts the onset of chaotic dynamics, offering a theoretical benchmark.",
+            "[PATH:literature] Review of prior empirical studies on chaos in symmetric vs. asymmetric RNNs (e.g., Sompolinsky et al., 1988; Crisanti & Sompolinsky, 2018) \u2014 Systematic comparison of existing results on chaos thresholds in symmetric networks (e.g., spin-glass models) with newer deep RNN findings could reveal whether the hypothesized reduction is supported or contradicted by prior data."
+          ],
+          "scope": {
+            "domain": "recurrent neural networks with symmetric weights"
+          },
+          "qualifier": {
+            "temporal": "during training with moderate to high coupling",
+            "conditional": "when network depth exceeds three layers"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "moderate to high parameter coupling in neural networks",
+          "predicate": "improves",
+          "object": "stability and robustness within designed regions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: moderate to high parameter coupling in neural networks stability and robustness within designed regions]",
+            "[PATH:theoretical] Recurrent neural networks with symmetric weights: a stability analysis via eigenvalue dynamics \u2014 A mathematical analysis of how coupling strength between parameters affects the eigenvalue spectrum of the weight matrix can directly test whether moderate-to-high coupling stabilizes or destabilizes the network's dynamics within specified regions.",
+            "[PATH:empirical] Controlled perturbation experiments on symmetric-weight RNNs with varying coupling coefficients \u2014 Systematic simulation studies that vary coupling strength (e.g., from low to high) and measure robustness (e.g., resilience to input noise or parameter drift) can provide direct empirical evidence to confirm or refute the hypothesis.",
+            "[PATH:literature] Survey of stability conditions in symmetric recurrent networks (post-2015 literature) \u2014 A targeted review of recent papers on symmetric weight RNNs, focusing on reported relationships between parameter coupling and stability/robustness, can aggregate existing evidence and identify gaps or contradictory findings."
+          ],
+          "scope": {
+            "domain": "recurrent neural networks with symmetric weights"
+          },
+          "qualifier": {
+            "temporal": "post-2015, during active research on symmetric weight RNNs",
+            "geographic": "global research community, primarily in academic simulation environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "high parameter coupling in neural networks with stochastic activation",
+          "predicate": "is better explained by",
+          "object": "a noise-driven diffusion process that exhibits a critical coupling threshold beyond which dynamics collapse into deterministic contraction",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: high parameter coupling in neural networks with stochastic activation a noise-driven diffusion process that exhibits a critical coupling threshold beyond which dynamics collapse into deterministic contraction]",
+            "[PATH:empirical] Systematic measurement of the Lyapunov exponent spectrum across varying coupling strengths in feedforward networks with stochastic activation, tracking the transition from chaotic to contractive dynamics during training epochs 50\u2013200. \u2014 Directly tests the predicted critical coupling threshold: if the maximal Lyapunov exponent crosses zero at a specific coupling value, it confirms the noise-driven diffusion collapses into deterministic contraction; failure to observe such a transition would refute the hypothesis.",
+            "[PATH:theoretical] Analytical derivation of a mean-field Fokker-Planck equation for the activation distribution in the high-coupling limit, incorporating stochastic activation noise and parameter coupling as a diffusion coefficient. \u2014 Provides a formal mathematical model predicting the critical threshold and contraction behavior. If the derived diffusion process matches simulation dynamics near the threshold, it supports the hypothesis; if the model predicts no such transition, it refutes the core claim.",
+            "[PATH:literature] Literature review and meta-analysis of existing studies on noise-induced transitions in neural network training, focusing on phase diagrams of stochastic activations (e.g., works by Tishby, Saxe, or Poole on information bottleneck and edge of chaos). \u2014 Contextualizes the hypothesis within known phenomena: if prior work already demonstrates similar collapse-to-contraction transitions in related stochastic networks, it strengthens plausibility; if no such threshold has been reported, it suggests the hypothesis may be novel but requires stronger empirical support."
+          ],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {
+            "temporal": "during training epochs 50\u2013200 with batch size 32",
+            "geographic": "simulated on GPU clusters in North America and Europe"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "high parameter coupling in neural networks",
+          "predicate": "is better explained by",
+          "object": "deterministic chaotic contraction rather than noise-driven diffusion",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: high parameter coupling in neural networks deterministic chaotic contraction rather than noise-driven diffusion]",
+            "[PATH:empirical] Lyapunov exponent analysis of hidden layer activations in feedforward networks with stochastic activation (e.g., ReLU with dropout) across varying parameter coupling strengths, comparing contraction rates to noise-driven diffusion baselines. \u2014 Directly measures whether dynamics are dominated by deterministic contraction (negative Lyapunov exponents) or stochastic diffusion (positive/neutral exponents) under controlled coupling regimes.",
+            "[PATH:theoretical] Theoretical derivation of the effective dynamics of high-parameter coupling in the mean-field limit of stochastic feedforward networks, using tools from random matrix theory and stochastic differential equations. \u2014 Provides formal conditions under which chaotic contraction emerges versus noise-driven diffusion, clarifying the mechanistic basis of the hypothesis.",
+            "[PATH:literature] Survey of empirical studies on training dynamics in overparameterized neural networks (e.g., 'neural tangent kernel' regime, 'lottery ticket' hypothesis) from 2015\u20132025, focusing on evidence for contraction vs. diffusion in loss landscapes. \u2014 Synthesizes existing results to assess whether high coupling typically leads to contraction (e.g., sharp minima) or diffusion (e.g., wide basins) in practice."
+          ],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {
+            "temporal": "2015\u20132025 training regimes",
+            "geographic": "simulated environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "high parameter coupling in neural networks",
+          "predicate": "is better explained by",
+          "object": "noise-driven diffusion",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms high parameter coupling in neural networks is better explained by noise-driven diffusion in domain 'feedforward networks with stochastic activation']"
+          ],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {
+            "temporal": "as of 2024",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "high parameter coupling in neural networks",
+          "predicate": "is better explained by",
+          "object": "deterministic chaotic contraction",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms high parameter coupling in neural networks is better explained by deterministic chaotic contraction in domain 'feedforward networks with stochastic activation']"
+          ],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "high parameter coupling in neural networks with stochastic activation",
+          "predicate": "is best modeled by",
+          "object": "a fractional Brownian motion process with memory-dependent diffusion coefficient",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "high parameter coupling in neural networks",
+          "predicate": "is better explained by",
+          "object": "deterministic chaotic contraction rather than noise-driven diffusion",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "feedforward networks with stochastic activation"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what selection conditions and on what fitness landscape does parameter coupling influence the dominance of contrac",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "parameter coupling",
+          "predicate": "modulates the dominance of contraction trajectories over growth trajectories",
+          "object": "in the recursive map T(n)",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n)]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "parameter coupling",
+          "predicate": "increases the influence of contraction trajectories",
+          "object": "in the recursive map T(n) under high iteration counts",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) under high iteration counts]"
+          ],
+          "scope": {
+            "domain": "high-iteration dynamics"
+          },
+          "qualifier": {
+            "temporal": "during high-iteration regimes exceeding 10^4 steps",
+            "geographic": "in simulated discrete dynamical systems"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "parameter coupling",
+          "predicate": "has no significant effect on the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) when initial conditions are symmetric]"
+          ],
+          "scope": {
+            "domain": "symmetric initial conditions"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^6 iterations",
+            "geographic": "none"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "parameter coupling",
+          "predicate": "may suppress growth trajectories indirectly via secondary feedback loops",
+          "object": "in the recursive map T(n) under moderate parameter ranges",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "speculation",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) under moderate parameter ranges]"
+          ],
+          "scope": {
+            "domain": "moderate parameter ranges"
+          },
+          "qualifier": {
+            "mechanism": "secondary feedback"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "parameter coupling",
+          "predicate": "reduces the variance of contraction trajectories",
+          "object": "in the recursive map T(n) under high iteration counts",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) under high iteration counts]",
+            "[PATH:empirical] Systematic numerical simulations of T(n) across a range of coupling parameters, measuring variance of contraction trajectories at iteration counts >10^4 \u2014 Directly tests whether coupling reduces variance under the specified high-iteration regime. Controlled variation of coupling strength can confirm or refute the hypothesized effect.",
+            "[PATH:theoretical] Lyapunov exponent analysis and bifurcation theory for coupled recursive maps \u2014 Provides a mathematical framework to predict how parameter coupling alters contraction dynamics and variance in the asymptotic limit, offering a theoretical basis to support or contradict the empirical claim."
+          ],
+          "scope": {
+            "domain": "high-iteration dynamics"
+          },
+          "qualifier": {
+            "temporal": "during high-iteration regimes exceeding 10^4 steps",
+            "geographic": "in simulated discrete dynamical systems"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "parameter coupling",
+          "predicate": "reduces the influence of contraction trajectories",
+          "object": "in the recursive map T(n) under high iteration counts",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) under high iteration counts]",
+            "[PATH:empirical] High-precision numerical simulations of T(n) with controlled parameter coupling, varying coupling strength and recording contraction trajectory metrics for n > 10^6 \u2014 Directly tests whether increased coupling reduces the influence of contraction trajectories at high iteration counts, providing quantitative evidence to confirm or refute the hypothesis.",
+            "[PATH:theoretical] Analytical stability analysis of the recursive map T(n) under coupling, using Lyapunov exponents or contraction mapping theorems to derive conditions for trajectory suppression \u2014 Provides a formal mathematical framework to determine if parameter coupling inherently reduces contraction influence, independent of simulation artifacts.",
+            "[PATH:literature] Literature review of studies on coupled recursive maps and high-iteration dynamics, focusing on known results for contraction behavior and parameter sensitivity \u2014 Identifies prior empirical or theoretical findings that either support or contradict the hypothesis, contextualizing the disputed claim within existing knowledge."
+          ],
+          "scope": {
+            "domain": "high-iteration dynamics"
+          },
+          "qualifier": {
+            "temporal": "for iteration counts n > 10^6",
+            "geographic": "simulated in computational models"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "parameter coupling",
+          "predicate": "significantly shifts the balance toward contraction trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric and coupling strength exceeds a threshold of 0.7",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) when initial conditions are symmetric and coupling strength exceeds a threshold of 0.7]",
+            "[PATH:empirical] Conduct a systematic numerical simulation study of the recursive map T(n) under symmetric initial conditions, varying coupling strength from 0.5 to 0.9 in increments of 0.01, and recording contraction trajectory frequency over 10^4 iterations for at least 1000 random symmetric seeds. \u2014 Direct simulation will provide statistical evidence on whether the threshold at 0.7 reliably separates contraction from expansion trajectories, allowing confirmation or refutation of the claimed threshold effect.",
+            "[PATH:theoretical] Derive a stability criterion for the coupled map system using Jacobian eigenvalue analysis or Lyapunov exponent calculations, focusing on the symmetric subspace and coupling strength as a bifurcation parameter. \u2014 A theoretical derivation can establish whether a bifurcation occurs exactly at coupling strength 0.7, providing a rigorous mathematical basis for the observed shift and ruling out numerical artifacts.",
+            "[PATH:literature] Review existing literature on coupled recursive maps, particularly studies on symmetric initial conditions and contraction dynamics (e.g., work by Kaneko, Ding, or similar on coupled logistic or tent maps with symmetric coupling). \u2014 Prior published results may contain analogous threshold behaviors or contradictory findings, helping to contextualize the hypothesis and identify whether the 0.7 threshold is a known phenomenon or a novel claim."
+          ],
+          "scope": {
+            "domain": "symmetric initial conditions with high coupling strength"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^4 iterations after coupling onset",
+            "geographic": "within the modeled parameter space of the recursive map T(n)"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "parameter coupling",
+          "predicate": "significantly alters the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: parameter coupling in the recursive map T(n) when initial conditions are symmetric]",
+            "[PATH:empirical] Systematic numerical bifurcation analysis of T(n) under symmetric initial conditions, varying the coupling parameter across a fine grid and recording contraction-to-growth ratios over the first 1000 iterations \u2014 Direct simulation can isolate whether coupling alters the balance, and repeated runs can establish statistical significance, thereby confirming or refuting the hypothesis with quantitative evidence.",
+            "[PATH:theoretical] Analytical derivation of the Jacobian or Lyapunov exponents for the symmetric subspace of T(n) as a function of the coupling parameter \u2014 A theoretical proof or counterexample would provide rigorous confirmation or refutation, clarifying whether the coupling term fundamentally changes the stability or growth dynamics compared to the uncoupled case.",
+            "[PATH:literature] Review of existing literature on coupled recursive maps with symmetric initial conditions, focusing on studies that report contraction/growth balance metrics or similar parameter coupling effects \u2014 Prior published results may already contain relevant simulations or theoretical results that address this hypothesis, saving effort and providing independent validation or contradiction."
+          ],
+          "scope": {
+            "domain": "symmetric initial conditions"
+          },
+          "qualifier": {
+            "temporal": "during the first 1000 iterations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "parameter coupling",
+          "predicate": "significantly shifts the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms parameter coupling significantly shifts the balance between contraction and growth trajectories in the recursive map T(n) when initial conditions are symmetric in domain 'symmetric initial conditions']"
+          ],
+          "scope": {
+            "domain": "symmetric initial conditions"
+          },
+          "qualifier": {
+            "temporal": "in the limit as n \u2192 \u221e",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "parameter coupling",
+          "predicate": "has no significant effect on the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms parameter coupling has no significant effect on the balance between contraction and growth trajectories in the recursive map T(n) when initial conditions are symmetric in domain 'symmetric initial conditions']"
+          ],
+          "scope": {
+            "domain": "symmetric initial conditions"
+          },
+          "qualifier": {
+            "temporal": "for all time steps where the map remains defined and symmetric",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "parameter coupling",
+          "predicate": "significantly disrupts the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are asymmetric",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "asymmetric initial conditions"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^6 iterations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "parameter coupling",
+          "predicate": "has a significant effect on the balance between contraction and growth trajectories",
+          "object": "in the recursive map T(n) when initial conditions are symmetric",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "symmetric initial conditions"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What structural invariants and boundary conditions must be present in the recursive map T(n) for transient chaotic contr",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "require",
+          "object": "structural invariants and boundary conditions in the recursive map T(n) that include a non-zero topological entropy gradient and a repelling heteroclinic cycle under moderate to high parameter coupling",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins structural invariants and boundary conditions in the recursive map T(n) that include a non-zero topological entropy gradient and a repelling heteroclinic cycle under moderate to high parameter coupling]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "are primarily determined by",
+          "object": "structural invariants in the recursive map T(n) under moderate parameter coupling",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins structural invariants in the recursive map T(n) under moderate parameter coupling]"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "temporal": "during moderate coupling parameter sweeps in numerical simulations from 2000\u20132025",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "may be suppressed or regularized by",
+          "object": "boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle]"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {
+            "condition": "if boundary conditions are sufficiently strong"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "require",
+          "object": "a non-zero topological entropy gradient but not necessarily a repelling heteroclinic cycle under moderate coupling",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins a non-zero topological entropy gradient but not necessarily a repelling heteroclinic cycle under moderate coupling]"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "alternative": "the heteroclinic cycle may be replaced by a chaotic saddle"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "are primarily determined by",
+          "object": "the Lyapunov exponent gradient across the coupling parameter space, not by structural invariants",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins the Lyapunov exponent gradient across the coupling parameter space, not by structural invariants]",
+            "[PATH:empirical] Systematic numerical simulations of coupled logistic map lattices or coupled Lorenz systems, measuring transient contraction lifetimes while systematically varying the coupling parameter gradient and comparing against predictions from the Lyapunov exponent gradient. \u2014 Directly tests whether the gradient of the Lyapunov exponent, rather than structural invariants (e.g., topological entropy or homoclinic tangles), governs the duration and prevalence of transient chaotic contraction outside bounded basins in the specified coupling regime and Lyapunov time scales.",
+            "[PATH:theoretical] Rigorous derivation of a scaling law relating the mean escape time from transient chaotic contraction to the Lyapunov exponent gradient, using random dynamical systems theory or large deviation principles. \u2014 Provides a mathematical foundation to confirm the hypothesis by showing that the gradient is the dominant factor, or refute it by identifying conditions under which structural invariants (e.g., invariant manifolds or symmetry properties) become rate-limiting.",
+            "[PATH:literature] Review of existing literature on transient chaos in moderate coupling regimes, focusing on studies that compare Lyapunov-exponent-based predictions with those from invariant measures or topological indices (e.g., papers by Ott, Grebogi, Yorke, or Lai). \u2014 Synthesizes prior evidence to assess whether the hypothesis aligns with known results or if counterexamples exist where structural invariants dominate, thereby clarifying the disputed status."
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "temporal": "for coupling parameter gradients measured over 10^3\u201310^5 Lyapunov times"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "are not influenced by",
+          "object": "structural invariants in the recursive map T(n) under moderate parameter coupling",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins structural invariants in the recursive map T(n) under moderate parameter coupling]",
+            "[PATH:empirical] Controlled numerical experiments on the recursive map T(n) with systematic variation of coupling strength, measuring the correlation between transient chaotic contraction trajectory metrics (e.g., Lyapunov exponents, escape times) and structural invariants (e.g., topological entropy, homoclinic tangles) across the moderate coupling regime. \u2014 Direct simulation can test whether changes in structural invariants produce statistically significant changes in trajectory behavior, thereby confirming or refuting the hypothesis of independence.",
+            "[PATH:theoretical] Theoretical analysis using symbolic dynamics or shadowing lemma to derive necessary conditions for structural invariants to influence transient chaotic contraction outside bounded basins under moderate coupling. \u2014 A mathematical proof or counterexample can establish whether invariants necessarily constrain such trajectories, providing a rigorous basis to evaluate the disputed claim.",
+            "[PATH:literature] Literature review of prior studies on transient chaos in coupled maps (e.g., work by Ott, Grebogi, or Lai) focusing on the role of invariant structures in weakly coupled systems, particularly for trajectories outside basins of attraction. \u2014 Existing empirical and theoretical results may already address the coupling regime in question, allowing assessment of whether the hypothesis aligns with or contradicts established knowledge."
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "temporal": "under moderate parameter coupling conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "are universally regularized into periodic orbits when",
+          "object": "boundary conditions enforce a zero topological entropy gradient and the system's Lyapunov dimension falls below 1.5",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins boundary conditions enforce a zero topological entropy gradient and the system's Lyapunov dimension falls below 1.5]",
+            "[PATH:empirical] High-resolution numerical simulations of coupled chaotic oscillators (e.g., Lorenz or R\u00f6ssler systems) with controlled boundary conditions enforcing zero topological entropy gradient and Lyapunov dimension < 1.5, run for >10^5 Lyapunov times under sustained parameter sweeps. \u2014 Direct simulation can test whether transient chaotic contraction trajectories indeed regularize into periodic orbits under the specified conditions, providing controlled, repeatable evidence for or against the hypothesis.",
+            "[PATH:theoretical] Rigorous mathematical analysis linking topological entropy gradient, Lyapunov dimension, and the existence of periodic orbits in contracting flows, building on the Conley index theory and the work of Katok, Milnor, and Young. \u2014 A theoretical proof or counterexample within the context of smooth dynamical systems could confirm the necessary and sufficient conditions for regularization, clarifying the disputed status of the hypothesis.",
+            "[PATH:literature] Systematic literature review of known examples of transient chaos regularization in systems with low Lyapunov dimension and constrained entropy, such as in the Lorenz system near the homoclinic bifurcation or in the H\u00e9non map with dissipation. \u2014 Existing documented cases may already support or contradict the hypothesis; a focused review can identify gaps or corroborating patterns, strengthening the evidence base without new simulations."
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {
+            "temporal": "under sustained parameter sweep conditions lasting at least 10^5 Lyapunov times"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "cannot be suppressed or regularized by",
+          "object": "boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle]",
+            "[PATH:empirical] High-resolution numerical simulations of coupled nonlinear oscillators with parameter sweeps across the high-coupling regime, systematically varying boundary conditions to enforce zero topological entropy gradient and measuring transient contraction trajectories in the presence of a repelling heteroclinic cycle. \u2014 Directly tests whether such boundary conditions can suppress or regularize the transient chaotic contraction trajectories, providing clear numerical confirmation or refutation.",
+            "[PATH:theoretical] Analytical study using topological entropy theory and symbolic dynamics to derive necessary conditions for regularization of chaotic transients in systems with heteroclinic cycles, focusing on the role of entropy gradient constraints. \u2014 Provides a rigorous mathematical framework to determine if zero topological entropy gradient is sufficient to suppress chaotic transients, independent of simulation limitations.",
+            "[PATH:literature] Review of existing literature on chaotic transients in high-coupling parameter regimes, particularly studies on heteroclinic cycles and boundary condition effects (e.g., work by Ott, Grebogi, and Yorke on chaotic saddles and transient chaos). \u2014 Identifies prior evidence or counterexamples that may already support or contradict the hypothesis, helping to contextualize the disputed claim."
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {
+            "temporal": "during high-parameter coupling regime simulations with fixed boundary conditions",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "can be suppressed or regularized by",
+          "object": "boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms transient chaotic contraction trajectories outside bounded basins can be suppressed or regularized by boundary conditions that enforce a zero topological entropy gradient, even in the presence of a repelling heteroclinic cycle in domain 'nonlinear dynamics, high parameter coupling regime']"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {
+            "temporal": "under steady-state simulation conditions (t \u2192 \u221e)",
+            "geographic": "applicable to generic dissipative systems, no geographic constraint"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "cannot be suppressed or regularized by",
+          "object": "boundary conditions that enforce a zero topological entropy gradient, due to the persistent destabilizing influence of a repelling heteroclinic cycle",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms transient chaotic contraction trajectories outside bounded basins cannot be suppressed or regularized by boundary conditions that enforce a zero topological entropy gradient, due to the persistent destabilizing influence of a repelling heteroclinic cycle in domain 'nonlinear dynamics, high parameter coupling regime']"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {
+            "temporal": "observed under high-parameter coupling conditions in simulations spanning 10^4 to 10^6 time units",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "require",
+          "object": "a non-zero topological entropy gradient but not necessarily a repelling heteroclinic cycle under moderate coupling",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins a non-zero topological entropy gradient but not necessarily a repelling heteroclinic cycle under moderate coupling]",
+            "[PATH:empirical] Numerical simulation of a coupled Lorenz or R\u00f6ssler system with moderate coupling strength, tracking transient trajectories and computing local topological entropy via symbolic dynamics or Lyapunov exponent fields \u2014 Directly tests whether transient chaotic contraction outside bounded basins coincides with a non-zero entropy gradient and identifies homoclinic tangencies in saddle stable manifolds, without requiring a repelling heteroclinic cycle.",
+            "[PATH:theoretical] Analytical construction of a piecewise-linear map (e.g., a variant of the H\u00e9non or Lozi map) parameterized to exhibit homoclinic tangencies while varying coupling strength, then computing entropy gradient via Markov partition methods \u2014 Provides a controlled mathematical setting to verify the necessity of a non-zero entropy gradient and the sufficiency of at least one homoclinic tangency, independent of heteroclinic cycles.",
+            "[PATH:literature] Review of existing literature on transient chaos and basin boundary structures in moderate coupling regimes, focusing on studies of homoclinic tangencies and entropy gradients (e.g., works by Ott, Grebogi, Yorke; or recent papers on chaotic transients in coupled oscillators) \u2014 Synthesizes prior evidence to confirm or contradict the hypothesis, identifying cases where transient chaotic contraction occurs without a repelling heteroclinic cycle and whether entropy gradient conditions are met."
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "refinement": "the entropy gradient must be supported by at least one homoclinic tangency in the saddle's stable manifold"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "do not require",
+          "object": "a non-zero topological entropy gradient but necessarily involve a repelling heteroclinic cycle under moderate coupling",
+          "status": "disputed",
+          "confidence": 0.55,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: transient chaotic contraction trajectories outside bounded basins a non-zero topological entropy gradient but necessarily involve a repelling heteroclinic cycle under moderate coupling]"
+          ],
+          "scope": {
+            "domain": "nonlinear dynamics, moderate coupling regime"
+          },
+          "qualifier": {
+            "temporal": "under transient coupling conditions observed in simulation runs of duration \u2264 10^3 Lyapunov times",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "transient chaotic contraction trajectories outside bounded basins",
+          "predicate": "are completely eliminated by",
+          "object": "boundary conditions that enforce a zero topological entropy gradient, provided the repelling heteroclinic cycle is embedded in a phase space of dimension greater than three",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "boundary conditions that enforce a zero topological entropy gradient",
+          "predicate": "cannot suppress or regularize",
+          "object": "transient chaotic contraction trajectories outside bounded basins",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "nonlinear dynamics, high parameter coupling regime"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    }
+  ],
+  "n_branches": 6,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "leads to",
+      "object": "catastrophic forgetting of previously learned representations, not mere performance degradation from divergence",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks catastrophic forgetting of previously learned representations, not mere performance degradation from divergence]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "leads to",
+      "object": "catastrophic forgetting of previously learned representations in continual learning settings",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks catastrophic forgetting of previously learned representations in continual learning settings]"
+      ],
+      "scope": {
+        "domain": "continual learning"
+      },
+      "qualifier": {
+        "temporal": "during training on non-stationary task sequences"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "may cause",
+      "object": "performance degradation from representational divergence rather than true catastrophic forgetting",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks performance degradation from representational divergence rather than true catastrophic forgetting]"
+      ],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {
+        "mechanism": "divergence"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "can be mitigated by",
+      "object": "sparse or modular connectivity that preserves previously learned representations",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks sparse or modular connectivity that preserves previously learned representations]"
+      ],
+      "scope": {
+        "domain": "network architecture design"
+      },
+      "qualifier": {
+        "condition": "if coupling is reduced via structural sparsity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "is mitigated by",
+      "object": "explicit task-specific orthogonal projection of gradient updates onto a low-rank subspace",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks explicit task-specific orthogonal projection of gradient updates onto a low-rank subspace]",
+        "[PATH:empirical] Controlled experiments on continual learning benchmarks (e.g., Split CIFAR-100, Permuted MNIST) comparing orthogonal projection methods (e.g., GEM, A-GEM, OGD) against standard fine-tuning and EWC, measuring forgetting and forward transfer. \u2014 Directly tests whether explicit orthogonal projection of gradient updates reduces parameter coupling and catastrophic forgetting, providing quantitative evidence for or against the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of gradient interference in overparameterized networks, deriving conditions under which low-rank orthogonal projections minimize task interference and preserve previously learned representations. \u2014 Formalizes the mechanism linking orthogonal projection to mitigated coupling, offering a mathematical framework to predict when the hypothesis holds and to interpret empirical results.",
+        "[PATH:literature] Literature review of continual learning methods using gradient projection (e.g., Orthogonal Gradient Descent, Projectron, GEM) and their reported effectiveness in high-coupling regimes (e.g., deep ResNets, transformers). \u2014 Synthesizes existing empirical and theoretical findings to assess the consistency of evidence across different architectures, tasks, and coupling levels, and identifies gaps or contradictions."
+      ],
+      "scope": {
+        "domain": "continual learning"
+      },
+      "qualifier": {
+        "temporal": "during training on non-stationary task sequences"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "prevents",
+      "object": "catastrophic forgetting by enhancing shared knowledge retention across tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks catastrophic forgetting by enhancing shared knowledge retention across tasks]",
+        "[PATH:empirical] Controlled experiments comparing Elastic Weight Consolidation (EWC) variants with and without extreme parameter coupling on permuted MNIST and CIFAR-100 continual learning benchmarks \u2014 Directly tests whether increasing coupling strength (e.g., via higher Fisher information matrix penalties) reduces catastrophic forgetting while preserving shared representations; quantifies trade-offs between coupling and plasticity.",
+        "[PATH:theoretical] Theoretical analysis of gradient overlap and representation similarity in overparameterized networks (e.g., neural tangent kernel regime) during sequential task training \u2014 Provides formal bounds on how extreme parameter coupling affects gradient alignment and shared subspace retention across tasks, clarifying whether coupling inherently prevents forgetting or induces negative transfer.",
+        "[PATH:literature] Meta-analysis of continual learning literature focusing on regularization-based methods (e.g., EWC, SI, MAS) and their reported coupling parameters versus forgetting rates \u2014 Surveys existing empirical results to identify whether studies that used higher regularization strengths (proxy for coupling) consistently report lower forgetting, or whether extreme coupling leads to performance degradation on new tasks."
+      ],
+      "scope": {
+        "domain": "continual learning"
+      },
+      "qualifier": {
+        "temporal": "during the training phase of continual learning sequences",
+        "geographic": "simulated environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "causes",
+      "object": "representational divergence that is reversible via low-rank adaptation methods (e.g., LoRA) but not via full fine-tuning",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks representational divergence that is reversible via low-rank adaptation methods (e.g., LoRA) but not via full fine-tuning]",
+        "[PATH:empirical] Controlled comparison experiment: train a large language model (e.g., Llama-2-7B) on a source task, then fine-tune on a target task using both full fine-tuning and LoRA. Measure representational divergence via CKA or SVCCA on hidden states before and after fine-tuning, and assess reversibility by re-evaluating on the source task. \u2014 Directly tests whether representational divergence induced by high parameter coupling is reversible under LoRA but not under full fine-tuning, providing empirical evidence for the asymmetry.",
+        "[PATH:theoretical] Theoretical analysis of the Hessian spectrum and gradient dynamics in overparameterized neural networks, focusing on the effect of low-rank constraints on the reversibility of weight updates (e.g., comparing the nullspace of the Hessian under full fine-tuning vs. LoRA). \u2014 Can reveal whether the low-rank adaptation inherently preserves a subspace that allows reversal of representational shifts, while full fine-tuning disrupts it, confirming the proposed mechanism."
+      ],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {
+        "mechanism": "reversibility asymmetry between adaptation methods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "leads to",
+      "object": "improved generalization and robustness across tasks",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks improved generalization and robustness across tasks]",
+        "[PATH:empirical] Empirical study comparing fine-tuning performance of fully coupled vs. sparsely coupled neural networks on a diverse set of downstream tasks (e.g., GLUE, CIFAR-100, and medical imaging benchmarks) \u2014 Directly tests the hypothesis by measuring generalization and robustness under controlled coupling conditions, providing quantitative evidence for or against the claim.",
+        "[PATH:theoretical] Theoretical analysis of the relationship between parameter coupling strength and the Hessian spectrum or loss landscape curvature in overparameterized models \u2014 Helps establish whether high coupling inherently leads to flatter minima or better conditioning, which are known correlates of improved generalization and robustness.",
+        "[PATH:literature] Literature review of recent papers on 'mode connectivity' and 'lottery ticket hypothesis' in transfer learning contexts \u2014 Synthesizes existing findings on how coupling affects task transfer and robustness, potentially revealing contradictions or supporting evidence that can clarify the disputed hypothesis."
+      ],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {
+        "temporal": "since 2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "causes",
+      "object": "performance degradation primarily via representational divergence, not true catastrophic forgetting",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms extremely high parameter coupling in neural networks causes performance degradation primarily via representational divergence, not true catastrophic forgetting in domain 'fine-tuning or transfer learning']"
+      ],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {
+        "temporal": "since 2020"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "causes",
+      "object": "performance degradation primarily via true catastrophic forgetting, not representational divergence",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms extremely high parameter coupling in neural networks causes performance degradation primarily via true catastrophic forgetting, not representational divergence in domain 'fine-tuning or transfer learning']"
+      ],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {
+        "temporal": "since 2017"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "is more effectively mitigated by",
+      "object": "dynamic sparse connectivity that adapts connectivity patterns during training rather than static sparsity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks dynamic sparse connectivity that adapts connectivity patterns during training rather than static sparsity]",
+        "[PATH:empirical] Comparative empirical study on training dynamics of static vs. dynamic sparse networks across multiple architectures (e.g., ResNet, Transformer) using controlled coupling metrics \u2014 Directly tests the hypothesis by measuring parameter coupling strength and mitigation effectiveness under both sparsity regimes, providing quantitative evidence for or against dynamic adaptation benefits.",
+        "[PATH:theoretical] Theoretical analysis of gradient flow and information propagation in dynamically rewiring sparse networks \u2014 Establishes formal conditions under which dynamic connectivity reduces coupling compared to static sparsity, clarifying mechanisms and boundary conditions for the hypothesis.",
+        "[PATH:literature] Systematic literature review of recent works on sparse training (e.g., SET, RigL, DSR) focusing on coupling-related metrics such as feature overlap, gradient similarity, and entanglement \u2014 Aggregates existing evidence from multiple studies to assess consistency of findings and identify gaps, strengthening or refuting the hypothesis through meta-analysis."
+      ],
+      "scope": {
+        "domain": "network architecture design"
+      },
+      "qualifier": {
+        "temporal": "during training of deep neural networks in the 2020s",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "is exacerbated by",
+      "object": "sparse or modular connectivity that preserves previously learned representations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: extremely high parameter coupling in neural networks sparse or modular connectivity that preserves previously learned representations]",
+        "[PATH:empirical] Controlled experiments comparing catastrophic forgetting in dense vs. modular networks on sequential task learning (e.g., permuted MNIST, CIFAR-100 with task labels) \u2014 Directly tests whether modular/sparse connectivity that preserves representations exacerbates parameter coupling under non-stationary distributions by measuring interference and forgetting rates.",
+        "[PATH:theoretical] Theoretical analysis of gradient overlap and Hessian eigenvalues in modular architectures with frozen or slow-updated modules \u2014 Provides formal conditions under which sparse connectivity increases coupling between parameter updates, potentially explaining the hypothesized exacerbation via increased gradient alignment or reduced plasticity.",
+        "[PATH:literature] Review of literature on continual learning and network compression (e.g., papers on elastic weight consolidation, progressive neural networks, and lottery ticket hypothesis) \u2014 Existing empirical and theoretical findings on how preserving representations affects parameter coupling and forgetting can be synthesized to assess the plausibility of the hypothesis."
+      ],
+      "scope": {
+        "domain": "network architecture design"
+      },
+      "qualifier": {
+        "temporal": "during training on non-stationary distributions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "causes",
+      "object": "representational divergence that is amplified by repeated fine-tuning on similar tasks, leading to monotonic performance loss even with low learning rates",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "sequential fine-tuning on similar tasks"
+      },
+      "qualifier": {
+        "mechanism": "divergence amplification"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "extremely high parameter coupling in neural networks",
+      "predicate": "leads to",
+      "object": "enhanced performance through synergistic feature learning",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "fine-tuning or transfer learning"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  }
+}

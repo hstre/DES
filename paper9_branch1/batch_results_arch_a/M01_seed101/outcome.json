@@ -1,0 +1,473 @@
+{
+  "domain_id": "M01",
+  "seed": 101,
+  "arch": "A",
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 1,
+  "operator_log": [],
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has a finite number of distinct cycles",
+      "object": "for all positive integer inputs",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for all positive integer inputs]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly one cycle (1 \u2192 1) for all positive integer inputs",
+      "object": "when restricted to n \u2261 0 mod 3",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 when restricted to n \u2261 0 mod 3]"
+      ],
+      "scope": {
+        "domain": "n \u2261 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all time steps n",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has at least two distinct cycles",
+      "object": "for inputs not congruent to 0 mod 3",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3]"
+      ],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain at any time step"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "may have an unbounded number of distinct cycles",
+      "object": "for some positive integer inputs under a modified iteration rule",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for some positive integer inputs under a modified iteration rule]"
+      ],
+      "scope": {
+        "domain": "modified iteration rule"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": true,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly one cycle (1 \u2192 1) for all positive integer inputs",
+      "object": "when restricted to n \u2261 0 mod 3 and with the additional rule that T(n) = n/3 for n divisible by 3, and T(n) = 2n + 1 otherwise",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 when restricted to n \u2261 0 mod 3 and with the additional rule that T(n) = n/3 for n divisible by 3, and T(n) = 2n + 1 otherwise]",
+        "[PATH:empirical] Computational search for cycles up to a large bound (e.g., 10^9) with random seed sampling \u2014 If the map has only the trivial cycle (1\u21921), then exhaustive or Monte Carlo sampling over a wide range of n \u2261 0 mod 3 should not yield any other cycle. Finding a nontrivial cycle would refute the hypothesis; failing to find one increases confidence.",
+        "[PATH:theoretical] Analytic reduction to a known Collatz-like function and application of existing cycle theorems (e.g., Lagarias, 1985) \u2014 The map is a variant of the Collatz function. The hypothesis can be examined by transforming it into a form covered by known results on 3x+1 generalizations, potentially proving or disproving uniqueness of the fixed point via modular constraints or invariant theory.",
+        "[PATH:literature] Literature review of generalized Collatz problems with mod-3 restrictions (e.g., '3x+1 problem with base 3' or 'Misiurewicz cycles') \u2014 Existing studies may have already characterized cycles for maps of the form T(n)=n/3 when 3|n, else 2n+1. A targeted search in the Collatz literature could confirm whether this specific cycle structure is known or has been disproven."
+      ],
+      "scope": {
+        "domain": "n \u2261 0 mod 3 with the modified T(n) definition"
+      },
+      "qualifier": {
+        "temporal": "for all positive integer inputs n at any time step in the recursion",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has multiple cycles",
+      "object": "when restricted to n \u2261 0 mod 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 when restricted to n \u2261 0 mod 3]",
+        "[PATH:empirical] Numerical simulation of T(n) for all n \u2261 0 mod 3 up to a large bound (e.g., 10^6) with cycle detection \u2014 Systematic computational search can directly reveal whether multiple distinct cycles exist within the restricted domain, providing empirical confirmation or counterexample.",
+        "[PATH:theoretical] Analytic study of the function's iteration structure using modular arithmetic and algebraic invariants \u2014 A theoretical analysis can determine if the map's dynamics force a unique cycle or allow multiple cycles, based on properties of the recursion modulo powers of 3."
+      ],
+      "scope": {
+        "domain": "n \u2261 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all positive integers n",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly two distinct cycles",
+      "object": "for all positive integer inputs not congruent to 0 mod 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for all positive integer inputs not congruent to 0 mod 3]",
+        "[PATH:empirical] Exhaustive computational enumeration of T(n) for all n up to a large bound (e.g., 10^7) with n not divisible by 3, checking cycle membership and count \u2014 Direct simulation can confirm or refute the existence of exactly two distinct cycles within a finite range, providing strong inductive evidence if no counterexample appears.",
+        "[PATH:theoretical] Analytical proof using modular arithmetic and state-space analysis of the recursion T(n) = n/3 if n \u2261 0 mod 3, else T(n) = floor((n mod 3)*n + 1)? (Clarify definition) \u2013 but assuming standard 3x+1-like map, a theoretical derivation of cycle structure via invariants \u2014 A rigorous proof that the map's dynamics partition non-multiples of 3 into exactly two cycles would settle the hypothesis definitively, or reveal additional cycles.",
+        "[PATH:literature] Literature search on known results for piecewise-linear maps with modulus 3, such as the Collatz-type function variants (e.g., Lagarias' surveys or the '3n+1' problem archives) \u2014 Existing work may have already characterized cycles for similar maps, providing either a direct answer or methods applicable to this specific recursion."
+      ],
+      "scope": {
+        "domain": "n \u2262 0 mod 3, n \u2208 \u2115\u207a"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly one distinct cycle",
+      "object": "for inputs not congruent to 0 mod 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3]",
+        "[PATH:empirical] Exhaustive simulation of T(n) for n up to 10^6, tracking cycle length and entry points for all n not divisible by 3 \u2014 A large-scale computational search can directly test whether all such n eventually enter the same cycle, providing strong empirical support or counterexamples.",
+        "[PATH:theoretical] Analytic proof using modular arithmetic and contraction mapping principles on the dynamics of T(n) modulo powers of 3 \u2014 A rigorous mathematical proof would confirm the hypothesis definitively, while a counterexample construction (e.g., finding a second cycle) would refute it.",
+        "[PATH:literature] Survey of known Collatz-like maps and their cycle structures, particularly those with mod-3 conditional rules \u2014 Reviewing existing results on similar piecewise linear maps can reveal whether such uniqueness is typical or exceptional, and may provide prior proofs or counterexamples."
+      ],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "for all integer n considered at any time step",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3",
+      "predicate": "has exactly two distinct cycles",
+      "object": "for inputs not congruent to 0 mod 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3 has exactly two distinct cycles for inputs not congruent to 0 mod 3 in domain 'n \u2262 0 mod 3']"
+      ],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3",
+      "predicate": "has only one cycle",
+      "object": "for inputs not congruent to 0 mod 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The recursive map T(n) defined by n mod 3 for inputs not congruent to 0 mod 3 has only one cycle for inputs not congruent to 0 mod 3 in domain 'n \u2262 0 mod 3']"
+      ],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {
+        "temporal": "as of 2024",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly 5 distinct cycles",
+      "object": "for all positive integer inputs under the modified iteration rule that replaces n with floor(n/3) when n \u2261 0 (mod 3), and with 3n+1 otherwise",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The recursive map T(n) defined by n mod 3 for all positive integer inputs under the modified iteration rule that replaces n with floor(n/3) when n \u2261 0 (mod 3), and with 3n+1 otherwise]",
+        "[PATH:empirical] Exhaustive computational verification for all positive integers up to 10^9, with cycle detection and classification using hash tables or Floyd's algorithm \u2014 Current verification only up to 10^6 may be insufficient; extending the range significantly (e.g., to 10^9) can either confirm the five-cycle hypothesis or reveal new cycles, increasing confidence or refuting the claim.",
+        "[PATH:theoretical] Analytic study of the dynamics of the map using modular arithmetic and invariant functions (e.g., analyzing residues modulo powers of 3 or constructing a Lyapunov-like function) \u2014 A theoretical proof that the map has exactly five cycles would require understanding its structure, such as showing that all trajectories eventually enter one of a finite set of attractors. This could involve proving boundedness or periodicity constraints via number-theoretic invariants.",
+        "[PATH:literature] Review of literature on generalized Collatz-type maps, particularly those with a 3-adic or base-3 structure (e.g., works by Lagarias, Terras, or Monks) \u2014 Similar modified Collatz maps often have known cycle structures; comparing this map to known results might reveal analogous behavior or provide counterexamples, helping to classify the map within existing frameworks."
+      ],
+      "scope": {
+        "domain": "modified iteration rule"
+      },
+      "qualifier": {
+        "temporal": "for all positive integer inputs up to 10^6 verified",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has a finite number of distinct cycles",
+      "object": "for all positive integer inputs under any modified iteration rule",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modified iteration rule"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "The recursive map T(n) defined by n mod 3 under a modified iteration rule",
+      "predicate": "has an unbounded number of distinct cycles",
+      "object": "for some positive integer inputs",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modified iteration rule"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "The recursive map T(n) defined by n mod 3 under a modified iteration rule",
+      "predicate": "has only finitely many distinct cycles",
+      "object": "for all positive integer inputs",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modified iteration rule"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C015": {
+      "id": "C015",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly two distinct cycles",
+      "object": "for all inputs not congruent to 0 mod 3",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C016": {
+      "id": "C016",
+      "subject": "The recursive map T(n) defined by n mod 3",
+      "predicate": "has exactly one cycle",
+      "object": "for inputs not congruent to 0 mod 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "n \u2262 0 mod 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  }
+}

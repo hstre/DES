@@ -1,0 +1,2296 @@
+{
+  "domain_id": "M01",
+  "seed": 202,
+  "arch": "B",
+  "outcome": "LOOP_COMPLETE",
+  "loops_completed": 5,
+  "operator_log": [
+    {
+      "loop": 0,
+      "parallel_event": 1,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "recursive_modulation",
+        "boundary_condition_analysis"
+      ]
+    },
+    {
+      "loop": 1,
+      "parallel_event": 2,
+      "n_candidates": 3,
+      "n_admitted": 2,
+      "candidate_ops": [
+        "recursive_modulation",
+        "boundary_condition_analysis"
+      ]
+    }
+  ],
+  "branch_results": [
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what selection conditions does the recursive map T(n) exhibit dominance of contraction trajectories over growth tr",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is determined by",
+          "object": "the ratio of the average contraction factor to the local expansion rate in regions of low n",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the ratio of the average contraction factor to the local expansion rate in regions of low n]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "Empirical studies of iterated maps show that contraction can dominate even when local expansion is frequent, but the precise selection condition (e.g., threshold on Lyapunov exponent vs. basin geometry) remains contested between analytical and simulation-based approaches."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is determined by",
+          "object": "the ratio of the average contraction factor to the local expansion rate in regions of low n",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the ratio of the average contraction factor to the local expansion rate in regions of low n]"
+          ],
+          "scope": {
+            "domain": "analytical dynamical systems theory"
+          },
+          "qualifier": {
+            "condition": "when the ratio exceeds a threshold derived from the Lyapunov exponent of the map"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is primarily governed by",
+          "object": "the basin geometry and topological structure of the map's attractor",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the basin geometry and topological structure of the map's attractor]"
+          ],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {
+            "tension": "contradicts the analytical threshold hypothesis, as simulations show contraction dominance even when the average contraction-to-expansion ratio is below the predicted Lyapunov threshold"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is partially modulated by",
+          "object": "the specific distribution of n-values in the low-n region, not just the average ratio",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the specific distribution of n-values in the low-n region, not just the average ratio]"
+          ],
+          "scope": {
+            "domain": "probabilistic analysis of iterated maps"
+          },
+          "qualifier": {
+            "condition": "when the variance of local expansion rates is high, the average ratio becomes an insufficient predictor"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is determined by",
+          "object": "the parity of the number of consecutive low-n steps preceding each contraction event",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the parity of the number of consecutive low-n steps preceding each contraction event]",
+            "[PATH:empirical] Systematic computational simulation varying the parity of consecutive low-n steps while holding the average contraction factor constant, and measuring the ratio of contraction to growth trajectory lengths in T(n) \u2014 Directly tests the hypothesis by isolating the effect of parity patterns on trajectory dominance under controlled conditions, providing quantitative confirmation or refutation.",
+            "[PATH:theoretical] Analytical derivation of the expected trajectory length ratio as a function of parity-dependent step patterns using Markov chain or symbolic dynamics on the recursive map T(n) \u2014 Provides a formal mathematical relationship between parity sequences and contraction dominance, enabling rigorous verification of the claimed dependency without simulation artifacts.",
+            "[PATH:literature] Literature review of existing studies on parity-dependent dynamics in Collatz-like maps or similar recursive number-theoretic transformations \u2014 Surveys prior results on how step parity influences contraction/expansion balance, contextualizing the hypothesis within known phenomena and identifying potential counterexamples or supporting evidence."
+          ],
+          "scope": {
+            "domain": "analytical dynamical systems theory"
+          },
+          "qualifier": {
+            "condition": "when the average contraction factor is held constant and the local expansion rate is modulated by parity-dependent step patterns"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "growth trajectories dominance over contraction trajectories in the recursive map T(n)",
+          "predicate": "is determined by",
+          "object": "the local expansion rate surpassing the average contraction factor in regions of high n",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: growth trajectories dominance over contraction trajectories in the recursive map T(n) the local expansion rate surpassing the average contraction factor in regions of high n]",
+            "[PATH:theoretical] Rigorous asymptotic analysis of the ratio of local expansion to average contraction in T(n) for n \u2192 \u221e, using methods from analytic number theory or ergodic theory \u2014 A formal derivation of the condition under which expansion dominates contraction would confirm or refute the hypothesis by establishing a threshold for the local expansion rate relative to the average contraction factor.",
+            "[PATH:empirical] High-precision numerical simulation of T(n) trajectories for n up to 10^12, measuring local expansion rates and average contraction factors across multiple scales \u2014 Direct computational evidence can test whether growth trajectories indeed dominate for sufficiently large n, by comparing the fraction of trajectories that grow versus contract in high-n regions.",
+            "[PATH:literature] Survey of known results on expansion-contraction balance in similar recursive maps (e.g., Collatz-type functions, piecewise linear maps) from the dynamical systems literature \u2014 Existing studies may provide analogous conditions or counterexamples that inform whether the hypothesized dominance is plausible or contradicted by known behavior in related systems."
+          ],
+          "scope": {
+            "domain": "analytical dynamical systems theory"
+          },
+          "qualifier": {
+            "temporal": "for sufficiently large n"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is caused by",
+          "object": "the fractal dimension of the basin boundary exceeding the information dimension of the attractor",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) the fractal dimension of the basin boundary exceeding the information dimension of the attractor]",
+            "[PATH:empirical] High-resolution simulation of T(n) with systematic variation of control parameters to compute both the fractal dimension of the basin boundary and the information dimension of the attractor, and to correlate the ratio of contraction vs. growth trajectories with the difference between these dimensions. \u2014 Directly tests the causal claim by manipulating the key geometric quantities and observing the predicted effect on trajectory dominance, using the same simulation framework as the original studies.",
+            "[PATH:literature] Meta-analysis of published simulation data on T(n) from University X and Institute Y (2020\u20132023) to re-examine the statistical relationship between basin boundary fractal dimension, attractor information dimension, and trajectory classification counts. \u2014 Leverages existing evidence to independently verify or challenge the correlation, controlling for potential artifacts or selective reporting in individual simulation runs.",
+            "[PATH:theoretical] Analytical derivation of a necessary condition linking the inequality of fractal dimension and information dimension to the asymptotic ratio of contraction to growth trajectories in T(n), using concepts from dynamical systems theory (e.g., saddle-node bifurcations, basin boundary structure). \u2014 Provides a formal mathematical foundation that either supports the causal mechanism or reveals alternative explanations, thereby strengthening or refuting the hypothesis beyond empirical correlations."
+          ],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {
+            "temporal": "during simulation runs from 2020 to 2023",
+            "geographic": "in computational laboratories at University X and Institute Y"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is primarily governed by",
+          "object": "external perturbations and stochastic influences not accounted for in the basin geometry",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: dominance of contraction trajectories over growth trajectories in the recursive map T(n) external perturbations and stochastic influences not accounted for in the basin geometry]",
+            "[PATH:empirical] Controlled simulation experiments systematically varying noise amplitude and correlation structure in the recursive map T(n), while tracking the frequency of contraction vs. growth trajectories \u2014 Directly tests whether external perturbations causally govern trajectory dominance, by isolating stochastic influences from basin geometry effects.",
+            "[PATH:theoretical] Theoretical analysis deriving the sensitivity of T(n) contraction/growth basins to small perturbations using Lyapunov exponents or basin boundary stability metrics \u2014 Provides a formal basis to determine if stochastic influences can override geometric basin structure, thus confirming or refuting the claimed primacy of perturbations."
+          ],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {
+            "temporal": "during simulation runs with stochastic noise injection",
+            "geographic": "within the computational environment of the simulation-based empirical studies"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is primarily governed by",
+          "object": "the basin geometry and topological structure of the map's attractor",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms dominance of contraction trajectories over growth trajectories in the recursive map T(n) is primarily governed by the basin geometry and topological structure of the map's attractor in domain 'simulation-based empirical studies']"
+          ],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {
+            "temporal": "during the observation period of the simulation runs",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is primarily governed by",
+          "object": "the average contraction-to-expansion ratio relative to the Lyapunov threshold, independent of basin geometry",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms dominance of contraction trajectories over growth trajectories in the recursive map T(n) is primarily governed by the average contraction-to-expansion ratio relative to the Lyapunov threshold, independent of basin geometry in domain 'simulation-based empirical studies']"
+          ],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {
+            "temporal": "simulation runs conducted between 2020 and 2024",
+            "geographic": "not applicable (simulation-based study)"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is caused by",
+          "object": "the fractal dimensionality of the basin boundary exceeding a critical value of 1.5",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "dominance of contraction trajectories over growth trajectories in the recursive map T(n)",
+          "predicate": "is primarily governed by",
+          "object": "external perturbations and parameter fluctuations rather than intrinsic basin geometry",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "simulation-based empirical studies"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How might the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n) reflect analogous unbounded divergent trajec",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n)",
+          "predicate": "reflects",
+          "object": "analogous unbounded divergent trajectories in complex systems with non-standard cyclic behaviors",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n) analogous unbounded divergent trajectories in complex systems with non-standard cyclic behaviors]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n)",
+          "predicate": "produces",
+          "object": "unbounded divergent trajectories for a non-negligible set of initial conditions",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n) unbounded divergent trajectories for a non-negligible set of initial conditions]"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems under 3-adic arithmetic"
+          },
+          "qualifier": {
+            "temporal": "under iteration for all t in \u2115",
+            "geographic": "in the field of 3-adic integers \u211a\u2083"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "not structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to fundamental differences in state-space topology",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the unbounded divergent trajectories generated by the 3-adic branching rule not structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to fundamental differences in state-space topology]"
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "reason": "topological constraints in 3-adic valuation versus continuous or discrete-time complex systems"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the apparent analogy between the 3-adic branching rule and complex system trajectories",
+          "predicate": "may be",
+          "object": "an artifact of finite simulation resolution rather than a genuine structural correspondence",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "speculation",
+          "evidence_refs": [
+            "[Simulated evidence for: the apparent analogy between the 3-adic branching rule and complex system trajectories an artifact of finite simulation resolution rather than a genuine structural correspondence]"
+          ],
+          "scope": {
+            "domain": "computational simulation of recursive maps"
+          },
+          "qualifier": {
+            "condition": "if simulation depth is limited or initial conditions are not randomly sampled"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n)",
+          "predicate": "produces",
+          "object": "divergent trajectories whose 3-adic valuations grow linearly with iteration count for a positive-density subset of initial conditions in \u211a\u2083",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n) divergent trajectories whose 3-adic valuations grow linearly with iteration count for a positive-density subset of initial conditions in \u211a\u2083]",
+            "[PATH:empirical] High-precision 3-adic simulation of T(n) for a random sample of 3-adic integers (e.g., n \u2261 0,1,2 mod 3) over 10^6 iterations, tracking v_3(T^t(n)) for each trajectory \u2014 Direct computational evidence can test whether linear growth of 3-adic valuation occurs for a positive-density subset, and whether the branching rule (n/3, 4n+2, 2n-1) sustains divergence rather than convergence to a cycle.",
+            "[PATH:theoretical] Rigorous analysis of the induced map on the 3-adic tree, constructing a measure-theoretic model for the valuation increments under the branching rule, using ergodic theory on the 3-adic integers \u2014 A theoretical proof or counterexample of linear v_3 growth requires understanding the invariant measure and the expected drift of the valuation under the random walk induced by the rule. This would confirm or refute the density claim.",
+            "[PATH:literature] Review of existing literature on 3-adic analogues of the Collatz map, e.g., work by Lagarias, Bernstein, or Monks, specifically on the '3x+1' problem in \u211a\u2083 and related branching dynamics \u2014 Prior studies may have established bounds on valuation growth or identified constraints from 3-adic ergodic theory that either support or contradict the hypothesis of linear growth for a positive-density set of initial conditions."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems under 3-adic arithmetic"
+          },
+          "qualifier": {
+            "temporal": "under iteration for all t in \u2115",
+            "geographic": "in the field of 3-adic integers \u211a\u2083"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n)",
+          "predicate": "results in",
+          "object": "bounded and periodic trajectories for almost all initial conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching rule (n/3, 4n+2, 2n-1) in recursive map T(n) bounded and periodic trajectories for almost all initial conditions]",
+            "[PATH:empirical] Systematic computational exploration of the 3-adic map T(n) for n up to 10^6, tracking cycle lengths and frequencies of bounded vs. divergent trajectories \u2014 Large-scale simulation can directly test the hypothesis that almost all initial conditions yield bounded periodic orbits, by measuring the proportion of trajectories that escape a fixed bound or fail to repeat within a given number of steps.",
+            "[PATH:theoretical] Analytic study of the 3-adic valuation and ergodic properties of the map T(n) = n/3 if 3|n, else 4n+2 or 2n-1, using p-adic dynamical systems theory \u2014 A rigorous proof or counterexample may be derived by analyzing the map's behavior in the 3-adic integers, examining invariant measures, and determining whether almost all orbits are preperiodic under the given branching rule."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems under 3-adic arithmetic"
+          },
+          "qualifier": {
+            "temporal": "under iteration for all integer initial conditions n \u2265 0",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "structurally analogous to the unbounded growth in certain piecewise linear maps with a single repelling fixed point, despite differences in state-space topology",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the unbounded divergent trajectories generated by the 3-adic branching rule structurally analogous to the unbounded growth in certain piecewise linear maps with a single repelling fixed point, despite differences in state-space topology]",
+            "[PATH:empirical] Computational simulation comparing escape rates and orbit distributions of the 3-adic branching rule against piecewise linear maps (e.g., the tent map with slope > 1) under identical initial conditions \u2014 Direct numerical comparison can reveal whether the structural analogy extends to quantitative measures such as Lyapunov exponents, escape time distributions, and sensitivity to initial conditions, thereby confirming or refuting the claimed shared mechanism.",
+            "[PATH:theoretical] Theoretical analysis of topological conjugacy or semi-conjugacy between the 3-adic branching rule and a piecewise linear expanding map on a suitable symbolic space \u2014 Establishing or disproving the existence of a conjugacy would rigorously determine whether the observed analogy is superficial or reflects a deeper dynamical equivalence, addressing the core of the hypothesis.",
+            "[PATH:literature] Literature review of known results on the dynamics of p-adic maps and piecewise linear expanding maps, focusing on conditions for unbounded growth and the role of repelling fixed points \u2014 Synthesizing existing theoretical frameworks (e.g., from ergodic theory and p-adic dynamics) can clarify whether the analogy is already supported or contradicted by established theorems, and may reveal overlooked constraints or exceptions."
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "reason": "both systems exhibit deterministic escape to infinity under iterated application of a locally expanding rule, suggesting a shared mechanism of topological expansion rate overriding cycle structure"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to underlying similarities in recursive dynamics across distinct topological spaces",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the unbounded divergent trajectories generated by the 3-adic branching rule structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to underlying similarities in recursive dynamics across distinct topological spaces]",
+            "[PATH:empirical] Computational analysis of 3-adic branching rule trajectories using symbolic dynamics and comparison with phase-space trajectories of non-integrable Hamiltonian systems \u2014 Simulate the 3-adic branching rule to generate unbounded divergent trajectories, then apply recurrence quantification analysis and topological entropy measures to compare with known divergent behaviors in Hamiltonian systems with non-standard cycles (e.g., Arnold diffusion). This could confirm structural analogies in divergence patterns.",
+            "[PATH:literature] Literature review of recursive maps in p-adic analysis and complex systems theory, focusing on the works of Volovich, Dragovich, and Khrennikov on p-adic dynamical systems, and of Ott, Grebogi, and Yorke on chaotic transients in non-standard cycles \u2014 Synthesize existing theoretical frameworks that link p-adic recursion to complex system dynamics. Identify if prior studies have already established or refuted the claimed analogy between 3-adic branching and behaviors like chaotic itineraries or fractal basin boundaries in systems with non-standard cycles.",
+            "[PATH:theoretical] Theoretical derivation of an isomorphism between the 3-adic branching rule's divergence operator and a renormalization group transformation in a complex system with non-standard cycles (e.g., a logistic map with periodic windows) \u2014 Construct a formal mapping between the recursive dynamics of the 3-adic tree and the renormalization group flow in a complex system exhibiting non-standard cycles. Proving or disproving such an isomorphism would directly confirm or refute the hypothesis at a structural level."
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "temporal": "during the analysis of recursive maps in theoretical dynamics (2020\u20132025)",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to shared properties of state-space topology under recursive iteration",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the unbounded divergent trajectories generated by the 3-adic branching rule are structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to shared properties of state-space topology under recursive iteration in domain 'comparative analysis of recursive maps and complex system dynamics']"
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "temporal": "as of the early 21st century",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "not structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to fundamental differences in state-space topology",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the unbounded divergent trajectories generated by the 3-adic branching rule are not structurally analogous to divergent behaviors in complex systems with non-standard cycles, due to fundamental differences in state-space topology in domain 'comparative analysis of recursive maps and complex system dynamics']"
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "temporal": "under current mathematical frameworks and simulations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "structurally analogous to divergent behaviors in certain non-Archimedean dynamical systems with non-standard cycles, provided the state-space is endowed with a hierarchical ultrametric topology",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {
+            "reason": "hierarchical ultrametric spaces permit non-standard cycles that mirror the valuation-based divergence in 3-adic branching, challenging the claim's topological incomparability"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the unbounded divergent trajectories generated by the 3-adic branching rule",
+          "predicate": "are",
+          "object": "structurally analogous to divergent behaviors in complex systems with non-standard cycles, as both exhibit similar recursive dynamics despite differences in state-space topology",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "comparative analysis of recursive maps and complex system dynamics"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the necessary structural invariants, boundary conditions, and initial preconditions of the 3-adic branching map",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a critical scaling exponent in the local H\u00f6lder condition at infinity",
+          "object": "in order to guarantee the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 in order to guarantee the existence of at least one divergent trajectory]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a critical scaling exponent in the local H\u00f6lder condition at infinity",
+          "object": "in order to guarantee the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 in order to guarantee the existence of at least one divergent trajectory]"
+          ],
+          "scope": {
+            "domain": "local H\u00f6lder regularity at infinity"
+          },
+          "qualifier": {
+            "temporal": "for all time steps t \u2265 0 in the forward orbit",
+            "geographic": "within the domain of 3-adic integers"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "may instead rely on a global Lipschitz bound rather than a local H\u00f6lder exponent",
+          "object": "to ensure the existence of at least one divergent trajectory",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 to ensure the existence of at least one divergent trajectory]"
+          ],
+          "scope": {
+            "domain": "global regularity conditions"
+          },
+          "qualifier": {
+            "alternative": "global Lipschitz condition"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "does not necessarily require any critical scaling exponent",
+          "object": "if the map's branching structure itself forces divergence for all admissible initial conditions",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 if the map's branching structure itself forces divergence for all admissible initial conditions]"
+          ],
+          "scope": {
+            "domain": "combinatorial branching structure"
+          },
+          "qualifier": {
+            "competing_perspective": "structural inevitability"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "satisfies a local H\u00f6lder exponent strictly greater than 1/2 at infinity",
+          "object": "if and only if the map possesses at least one divergent trajectory whose 3-adic valuation grows at least linearly",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 if and only if the map possesses at least one divergent trajectory whose 3-adic valuation grows at least linearly]",
+            "[PATH:empirical] High-precision computational search for divergent trajectories of T(n) with n \u2261 3 mod 6, tracking 3-adic valuation growth up to large n (e.g., n > 10^6) \u2014 Direct computational verification can test whether any divergent trajectory exists with at least linear 3-adic valuation growth, and conversely, whether absence of such trajectories coincides with failure of the local H\u00f6lder exponent > 1/2.",
+            "[PATH:theoretical] Analytic study of the 3-adic branching map's regularity using ultrametric analysis and local H\u00f6lder exponents near infinity \u2014 A rigorous derivation linking the local H\u00f6lder exponent at infinity to the asymptotic growth of 3-adic valuations along trajectories could confirm the if-and-only-if claim, either by proving equivalence or finding a counterexample.",
+            "[PATH:literature] Review of known results on 3-adic dynamical systems, specifically works by Lagarias, Bernstein, or others on the Collatz-type maps and valuation growth \u2014 Existing literature may contain partial results or counterexamples regarding the relationship between H\u00f6lder regularity and valuation growth in p-adic settings, which can either support or refute the hypothesis without new computation."
+          ],
+          "scope": {
+            "domain": "local H\u00f6lder regularity at infinity and 3-adic valuation growth"
+          },
+          "qualifier": {
+            "temporal": "for all known computational evidence as of 2025",
+            "geographic": "in the context of 3-adic dynamical systems over the integers"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "does not require a critical scaling exponent in the local H\u00f6lder condition at infinity",
+          "object": "to guarantee the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 to guarantee the existence of at least one divergent trajectory]",
+            "[PATH:theoretical] Construct explicit 3-adic trajectories for n \u2261 3 mod 6 under the map T(n) = n/3 if n \u2261 0 mod 3, else (n+1)/3, and analyze their growth rates without imposing H\u00f6lder conditions at infinity. \u2014 Direct construction and analysis of divergent trajectories in \u2124\u2083 can test whether a critical H\u00f6lder exponent is necessary. If a divergent orbit exists without such regularity, the hypothesis is supported; if none can be found, refutation is suggested.",
+            "[PATH:empirical] Numerical simulation of the 3-adic branching map on a large sample of initial conditions n \u2261 3 mod 6, recording orbit lengths and divergence behavior for times t up to 10^6, with statistical analysis of escape rates. \u2014 Empirical evidence from computational experiments can reveal whether divergent trajectories occur in practice. Absence of divergence in extensive simulations would challenge the hypothesis, while presence would confirm it.",
+            "[PATH:literature] Review of existing literature on p-adic dynamical systems and H\u00f6lder regularity, particularly works by Anashin, Khrennikov, or Fan, focusing on conditions for divergence in 3-adic maps. \u2014 Prior theoretical results may already establish or refute the necessity of critical H\u00f6lder exponents for divergence in 3-adic settings. A systematic literature review can provide foundational support or counterexamples."
+          ],
+          "scope": {
+            "domain": "local H\u00f6lder regularity at infinity"
+          },
+          "qualifier": {
+            "temporal": "for all times t \u2265 0",
+            "geographic": "in the 3-adic integer space \u2124\u2083"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a global Lipschitz constant less than 1",
+          "object": "to guarantee the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 to guarantee the existence of at least one divergent trajectory]",
+            "[PATH:empirical] Experimental computation of T(n) trajectories for all n \u2261 3 mod 6 up to a large bound (e.g., 10^9) to detect any divergent orbit and estimate the global Lipschitz constant via finite-difference approximations over the domain. \u2014 If no divergent trajectory is found, the hypothesis is weakened; if a divergent orbit exists, one can test whether the Lipschitz constant requirement holds locally.",
+            "[PATH:theoretical] Analytic derivation of the global Lipschitz constant for T restricted to n \u2261 3 mod 6, using p-adic analysis and the structure of the 3-adic branching map, potentially via contraction mapping principles on the 3-adic integers. \u2014 A theoretical bound on the Lipschitz constant would directly confirm or refute whether it must be less than 1 for divergence, clarifying the necessary condition.",
+            "[PATH:literature] Review of literature on the dynamics of 3-adic maps and the Collatz-like branching functions, particularly works by Lagarias, Terras, or Garcia on necessary conditions for divergent trajectories in arithmetic dynamical systems. \u2014 Existing theorems may already provide constraints on Lipschitz constants for divergent orbits, offering a proof or counterexample without new computation."
+          ],
+          "scope": {
+            "domain": "global regularity conditions"
+          },
+          "qualifier": {
+            "temporal": "for all time steps t \u2265 0 in the forward orbit",
+            "geographic": "over the entire domain of integers congruent to 3 mod 6"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "inherently requires a local H\u00f6lder exponent rather than a global Lipschitz bound",
+          "object": "to ensure the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 to ensure the existence of at least one divergent trajectory]",
+            "[PATH:theoretical] Construct explicit 3-adic trajectories for n \u2261 3 mod 6 under T(n) = (n - 3)/3 when n \u2261 3 mod 6, and compute local H\u00f6lder exponents at points of divergence using p-adic ultrametric analysis; compare with global Lipschitz bound failure. \u2014 Direct computation of local regularity exponents for specific divergent orbits can test whether a H\u00f6lder condition is necessary and sufficient, while a global Lipschitz bound would preclude divergence if it held.",
+            "[PATH:literature] Literature review of p-adic dynamical systems and branching maps, focusing on known results for the 3x+1 problem and its generalizations (e.g., Lagarias, Sinai, or Buescu & Stewart) to see if analogous maps require local H\u00f6lder regularity for divergent trajectories. \u2014 Existing theoretical frameworks may already contain proofs or counterexamples linking regularity conditions to divergence in 3-adic settings, providing comparative evidence.",
+            "[PATH:empirical] Numerical simulation of the T(n) map restricted to n \u2261 3 mod 6 over a large sample, measuring the scaling of local variations (e.g., using p-adic derivatives) to estimate H\u00f6lder exponents and test for divergence events. \u2014 Empirical observation of trajectory behavior can reveal whether divergence correlates with local H\u00f6lder regularity below a threshold, and whether a global Lipschitz bound would be violated in such cases."
+          ],
+          "scope": {
+            "domain": "local regularity conditions"
+          },
+          "qualifier": {
+            "temporal": "under current 3-adic dynamical analysis frameworks",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a global Lipschitz bound",
+          "object": "to ensure the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the 3-adic branching map T(n) with n \u2261 3 mod 6 requires a global Lipschitz bound to ensure the existence of at least one divergent trajectory in domain 'global regularity conditions']"
+          ],
+          "scope": {
+            "domain": "global regularity conditions"
+          },
+          "qualifier": {
+            "temporal": "in all known computational experiments up to 2025",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "does not require a global Lipschitz bound, but may rely on a local H\u00f6lder exponent",
+          "object": "to ensure the existence of at least one divergent trajectory",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the 3-adic branching map T(n) with n \u2261 3 mod 6 does not require a global Lipschitz bound, but may rely on a local H\u00f6lder exponent to ensure the existence of at least one divergent trajectory in domain 'global regularity conditions']"
+          ],
+          "scope": {
+            "domain": "global regularity conditions"
+          },
+          "qualifier": {
+            "temporal": "as of current mathematical literature",
+            "geographic": "applicable to all real numbers in the domain"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a critical scaling exponent of exactly 1.5",
+          "object": "to guarantee divergence for all admissible initial conditions, because the branching structure alone yields a non-zero measure of convergent orbits",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 to guarantee divergence for all admissible initial conditions, because the branching structure alone yields a non-zero measure of convergent orbits]",
+            "[PATH:theoretical] Rigorous measure-theoretic analysis of the 3-adic branching map restricted to n \u2261 3 mod 6, computing the exact Hausdorff dimension of the set of convergent initial conditions under the standard iteration scheme. \u2014 The hypothesis asserts that branching structure alone yields a non-zero measure of convergent orbits, implying a critical exponent of exactly 1.5 is needed to guarantee divergence. A direct calculation of the measure of convergent orbits as a function of the scaling exponent would confirm or refute the threshold.",
+            "[PATH:empirical] High-precision numerical simulations sampling initial conditions n \u2261 3 mod 6 across a range of scaling exponents around 1.5, with statistical estimation of the proportion of divergent vs. convergent orbits. \u2014 Empirical evidence is needed to test whether the divergence guarantee holds exactly at exponent 1.5 and fails at slightly lower values. Large-scale simulation can detect whether a non-zero measure of convergent orbits persists below that threshold.",
+            "[PATH:literature] Survey of existing literature on 3-adic dynamical systems, focusing on known results for branching maps with arithmetic constraints (e.g., works by Lagarias, Everest, or related p-adic ergodic theory). \u2014 The hypothesis is marked as disputed; a thorough literature review may reveal prior proofs or counterexamples concerning the critical exponent for divergence in such constrained branching structures, potentially settling the dispute without new computation."
+          ],
+          "scope": {
+            "domain": "combinatorial branching structure"
+          },
+          "qualifier": {
+            "temporal": "under the standard 3-adic iteration scheme as defined in current literature",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a critical scaling exponent",
+          "object": "even if the map's branching structure itself forces divergence for all admissible initial conditions",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the 3-adic branching map T(n) with n \u2261 3 mod 6 even if the map's branching structure itself forces divergence for all admissible initial conditions]"
+          ],
+          "scope": {
+            "domain": "combinatorial branching structure"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3"
+          ],
+          "parent_id": "C004"
+        },
+        "B003": {
+          "id": "B003",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a critical scaling exponent",
+          "object": "to force divergence for all admissible initial conditions",
+          "status": "hypothesis",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "combinatorial branching structure"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "B004": {
+          "id": "B004",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "does not require any critical scaling exponent",
+          "object": "because its branching structure alone forces divergence for all admissible initial conditions",
+          "status": "hypothesis",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "combinatorial branching structure"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "C015": {
+          "id": "C015",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "requires a global Lipschitz constant strictly less than 1",
+          "object": "to guarantee the existence of at least one divergent trajectory",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "global regularity conditions"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C016": {
+          "id": "C016",
+          "subject": "the 3-adic branching map T(n) with n \u2261 3 mod 6",
+          "predicate": "must rely on a local H\u00f6lder exponent rather than a global Lipschitz bound",
+          "object": "to ensure the existence of at least one divergent trajectory",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "local regularity conditions"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 10
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How do adaptive algorithms in machine learning balance the dominance of convergence over divergence when the error lands",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "Adaptive algorithms in machine learning",
+          "predicate": "balance the dominance of convergence over divergence",
+          "object": "only when hidden computational costs of convergent actions are explicitly incorporated into the optimization criteria",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Adaptive algorithms in machine learning only when hidden computational costs of convergent actions are explicitly incorporated into the optimization criteria]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "Adaptive algorithms in machine learning",
+          "predicate": "can balance convergence and divergence without",
+          "object": "explicitly incorporating hidden computational costs of convergent actions into the optimization criteria",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Adaptive algorithms in machine learning explicitly incorporating hidden computational costs of convergent actions into the optimization criteria]"
+          ],
+          "scope": {
+            "domain": "online learning with bounded resources"
+          },
+          "qualifier": {
+            "temporal": "during the period 2020\u20132024",
+            "geographic": "global academic and industrial research contexts"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "are negligible in practice for",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: Hidden computational costs of convergent actions convergence-divergence balance in adaptive algorithms]"
+          ],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "when training steps are few"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "Explicit incorporation of hidden costs",
+          "predicate": "may over-regularize and",
+          "object": "hinder the exploratory divergence needed for generalization in adaptive algorithms",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: Explicit incorporation of hidden costs hinder the exploratory divergence needed for generalization in adaptive algorithms]"
+          ],
+          "scope": {
+            "domain": "reinforcement learning with sparse rewards"
+          },
+          "qualifier": {
+            "caveat": "unless cost estimates are dynamically adjusted"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "Adaptive algorithms in machine learning",
+          "predicate": "that explicitly incorporate hidden computational costs of convergent actions into the optimization criteria",
+          "object": "will achieve lower total resource consumption than those that do not, even when the hidden costs are underestimated by up to 30%",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Adaptive algorithms in machine learning will achieve lower total resource consumption than those that do not, even when the hidden costs are underestimated by up to 30%]",
+            "[PATH:empirical] A controlled empirical study comparing resource consumption of adaptive vs. non-adaptive online learning algorithms on a suite of bounded-resource tasks, with systematic underestimation of hidden costs (e.g., energy for gradient computation, memory reallocation) by 10%, 20%, and 30%. \u2014 Directly tests the hypothesis by measuring total resource usage under varying levels of cost underestimation, providing quantitative evidence for or against the claimed advantage.",
+            "[PATH:theoretical] Theoretical analysis deriving upper bounds on total resource consumption for algorithms that incorporate hidden costs into optimization, using regret or convergence rate frameworks, and comparing them to algorithms that ignore such costs. \u2014 Establishes formal conditions under which the hypothesis holds (or fails), clarifying the role of underestimation magnitude and algorithm structure, and can generalize beyond specific empirical settings.",
+            "[PATH:literature] Systematic literature review of prior work on resource-aware online learning (e.g., papers on energy-efficient SGD, memory-constrained bandits, or cost-sensitive optimization) to extract existing empirical and theoretical results that address hidden cost incorporation. \u2014 Identifies whether prior findings support or contradict the hypothesis, revealing gaps or confirming patterns across different domains and cost types, without requiring new experiments."
+          ],
+          "scope": {
+            "domain": "online learning with bounded resources"
+          },
+          "qualifier": {
+            "temporal": "during the period 2020\u20132024",
+            "geographic": "global academic and industrial research contexts"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "Adaptive algorithms in machine learning",
+          "predicate": "cannot balance convergence and divergence without",
+          "object": "explicitly incorporating hidden computational costs of convergent actions into the optimization criteria",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Adaptive algorithms in machine learning explicitly incorporating hidden computational costs of convergent actions into the optimization criteria]",
+            "[PATH:empirical] Empirical study of online learning algorithms (e.g., SGD variants, Adam) tracking per-step computational cost vs. convergence rate under bounded resource constraints \u2014 Directly tests whether algorithms that ignore hidden computational costs (e.g., gradient recomputation, memory overhead) fail to balance convergence and divergence, compared to those that explicitly incorporate such costs.",
+            "[PATH:theoretical] Theoretical analysis of regret bounds for adaptive algorithms with explicit cost-aware regularization \u2014 Formalizes the hypothesis by proving that without incorporating hidden costs, convergence-divergence trade-offs are impossible to maintain in worst-case bounded-resource settings.",
+            "[PATH:literature] Systematic literature review of papers on resource-adaptive online learning (2020\u2013present) focusing on cost-aware optimization objectives \u2014 Identifies existing evidence for or against the hypothesis by synthesizing results from works like 'Adaptive Learning with Bounded Resources' and 'Cost-Sensitive Online Learning'."
+          ],
+          "scope": {
+            "domain": "online learning with bounded resources"
+          },
+          "qualifier": {
+            "temporal": "since 2020",
+            "geographic": "global research community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "dominate convergence time in",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Hidden computational costs of convergent actions convergence-divergence balance in adaptive algorithms]",
+            "[PATH:empirical] Perform controlled experiments comparing wall-clock convergence time vs. iteration-based convergence curves for adaptive algorithms (e.g., Adam, RMSprop) on large-scale batch training tasks, explicitly measuring per-step computational overhead due to adaptive updates (e.g., gradient statistics maintenance, memory access patterns). \u2014 Directly tests the hypothesis by isolating hidden computational costs (e.g., cache misses, synchronization delays) that scale with training steps, potentially dominating convergence time even if iteration count is low.",
+            "[PATH:theoretical] Develop a theoretical model of convergence-divergence balance that incorporates amortized per-step cost functions for convergent actions (e.g., moment updates, learning rate schedules) and analyze the trade-off between step count and step cost in large-scale settings. \u2014 Provides formal bounds on when hidden costs dominate, enabling prediction of regimes where the hypothesis holds or fails, which can then be validated empirically.",
+            "[PATH:literature] Survey and meta-analyze existing literature on adaptive optimization in large-batch training, focusing on reported wall-clock times vs. iteration counts, and identify cases where convergence time is disproportionately high despite few iterations. \u2014 Leverages prior empirical results to find converging or conflicting evidence, and highlights gaps where hidden costs may have been overlooked."
+          ],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "when training steps are many"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "are significant in practice for",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Hidden computational costs of convergent actions convergence-divergence balance in adaptive algorithms]",
+            "[PATH:empirical] Profiling convergence-divergence dynamics in adaptive SGD variants (e.g., Adam, AdaGrad) on large-scale training runs, measuring per-iteration computational overhead from gradient normalization, moment updates, and adaptive step scaling. \u2014 Directly measures hidden costs (e.g., extra memory bandwidth, synchronization delays) that could shift the convergence-divergence balance, especially on distributed clusters where communication latency amplifies these costs.",
+            "[PATH:theoretical] Theoretical analysis of adaptive algorithm convergence rates under resource constraints, modeling the effect of per-iteration computational overhead on the effective learning rate and stability margin. \u2014 Provides formal bounds on when hidden costs become significant relative to convergence guarantees, helping to refute or confirm the hypothesis by linking overhead magnitude to divergence risk.",
+            "[PATH:literature] Review of empirical studies on communication-efficient distributed training (e.g., gradient compression, asynchronous updates) that report unexpected divergence or degraded convergence in long runs. \u2014 Existing evidence may already document cases where hidden computational costs (e.g., from compression/decompression, staleness handling) alter the convergence-divergence balance, offering indirect support or counterexamples."
+          ],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "during large-scale batch training runs exceeding 1000 iterations",
+            "geographic": "globally distributed compute clusters"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "are noticeable and can degrade",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Hidden computational costs of convergent actions are noticeable and can degrade convergence-divergence balance in adaptive algorithms in domain 'large-scale batch training']"
+          ],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "during large-scale batch training runs exceeding 1000 steps",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "are negligible in practice for",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms Hidden computational costs of convergent actions are negligible in practice for convergence-divergence balance in adaptive algorithms in domain 'large-scale batch training']"
+          ],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "since 2018",
+            "geographic": "global research labs"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "dominate the total training time in",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {
+            "temporal": "when training steps exceed a threshold proportional to model parameter count"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "Hidden computational costs of convergent actions",
+          "predicate": "are significant in practice for",
+          "object": "convergence-divergence balance in adaptive algorithms",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "large-scale batch training"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the invariant structural conditions and boundary cases within the fitness landscape that must be present for th",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "exhibits transient coexistence or reversal of trajectory dominance",
+          "object": "when and only when the fitness landscape contains a low-dimensional saddle manifold that couples high-variance growth penalties with delayed contraction costs",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions when and only when the fitness landscape contains a low-dimensional saddle manifold that couples high-variance growth penalties with delayed contraction costs]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "exhibits transient coexistence or reversal of trajectory dominance",
+          "object": "only when the fitness landscape contains a low-dimensional saddle manifold that couples high-variance growth penalties with delayed contraction costs",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions only when the fitness landscape contains a low-dimensional saddle manifold that couples high-variance growth penalties with delayed contraction costs]"
+          ],
+          "scope": {
+            "domain": "theoretical evolutionary dynamics"
+          },
+          "qualifier": {
+            "temporal": "over evolutionary timescales under stationary landscape conditions",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "can exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "even in the absence of a low-dimensional saddle manifold, due to stochastic resonance or higher-order nonlinear interactions",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions even in the absence of a low-dimensional saddle manifold, due to stochastic resonance or higher-order nonlinear interactions]"
+          ],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {
+            "condition": "when noise amplitude exceeds a threshold"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "exhibits transient coexistence or reversal of trajectory dominance",
+          "object": "when and only when the fitness landscape contains a low-dimensional saddle manifold, but the coupling between high-variance growth penalties and delayed contraction costs is mediated by an intermediate regulatory variable",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions when and only when the fitness landscape contains a low-dimensional saddle manifold, but the coupling between high-variance growth penalties and delayed contraction costs is mediated by an intermediate regulatory variable]"
+          ],
+          "scope": {
+            "domain": "regulatory network models"
+          },
+          "qualifier": {
+            "caveat": "requires empirical validation of the mediator variable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "collapses to a single dominant trajectory",
+          "object": "when the saddle manifold is perturbed by adding a small periodic forcing that decorrelates the coupling between growth penalties and contraction costs",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions when the saddle manifold is perturbed by adding a small periodic forcing that decorrelates the coupling between growth penalties and contraction costs]",
+            "[PATH:empirical] Numerical simulation of T(n) with a stochastic periodic forcing term added to the saddle manifold, varying the amplitude and frequency of forcing to measure the degree of trajectory collapse over evolutionary timescales \u2014 Directly tests the hypothesis by observing whether the map collapses to a single dominant trajectory when the coupling between growth penalties and contraction costs is decorrelated via periodic perturbation.",
+            "[PATH:theoretical] Analytical stability analysis of the perturbed recursive map using Floquet theory or Lyapunov exponents to determine conditions under which the dominant trajectory emerges \u2014 Provides a mathematical proof or condition for collapse, confirming whether the decorrelation mechanism is sufficient and necessary for the hypothesized behavior.",
+            "[PATH:literature] Review of existing literature on periodic forcing in evolutionary game dynamics and coupled map lattices, focusing on studies of saddle manifolds and trajectory convergence \u2014 Contextualizes the hypothesis within established findings, potentially revealing counterexamples or supporting evidence from related systems."
+          ],
+          "scope": {
+            "domain": "theoretical evolutionary dynamics"
+          },
+          "qualifier": {
+            "temporal": "over evolutionary timescales under stationary landscape conditions",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "exhibits transient coexistence or reversal of trajectory dominance",
+          "object": "without the need for a low-dimensional saddle manifold, as long as transient perturbations exist in the fitness landscape promoting high-variance growth",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions without the need for a low-dimensional saddle manifold, as long as transient perturbations exist in the fitness landscape promoting high-variance growth]",
+            "[PATH:empirical] Agent-based simulations of evolutionary dynamics on rugged fitness landscapes with controlled transient perturbations (e.g., random fitness bursts or periodic environmental shifts) to measure trajectory dominance reversals and coexistence times without saddle manifolds. \u2014 Directly tests the core claim by manipulating perturbation intensity and variance growth, allowing comparison of coexistence/reversal rates against baseline models with low-dimensional saddles.",
+            "[PATH:theoretical] Analytical derivation of the recursive map T(n) under high-variance growth conditions, focusing on Lyapunov exponents and invariant measures to determine whether transient coexistence can emerge without saddle structures. \u2014 Provides formal proof or counterexample to the necessity of saddle manifolds, clarifying the mathematical conditions under which the hypothesis holds.",
+            "[PATH:literature] Review of literature on transient dynamics in evolutionary game theory and population genetics (e.g., work by Hastings, Schreiber, or Doebeli) that documents dominance reversals in finite-time simulations with non-saddle mechanisms. \u2014 Identifies existing empirical or theoretical evidence supporting or contradicting the hypothesis, and reveals gaps in current understanding of transient coexistence mechanisms."
+          ],
+          "scope": {
+            "domain": "theoretical evolutionary dynamics"
+          },
+          "qualifier": {
+            "temporal": "during transient perturbation regimes in finite-time evolutionary simulations",
+            "geographic": "applicable to abstract fitness landscapes without spatial constraints"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "will exhibit transient coexistence only when the noise amplitude is tuned to a specific resonance band aligned with the dominant eigenfrequency of the higher-order nonlinear interactions",
+          "object": "because off-resonance noise suppresses the transient coexistence and restores single-trajectory dominance regardless of the absence of a saddle manifold",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions because off-resonance noise suppresses the transient coexistence and restores single-trajectory dominance regardless of the absence of a saddle manifold]",
+            "[PATH:empirical] Systematic numerical simulations of T(n) under band-limited noise with controlled frequency offsets, measuring transient coexistence lifetimes and trajectory dominance ratios \u2014 Directly tests the core claim by varying noise amplitude and frequency relative to the hypothesized eigenfrequency, allowing observation of resonance vs. off-resonance effects on transient coexistence and single-trajectory dominance.",
+            "[PATH:theoretical] Analytical derivation of the dominant eigenfrequency of higher-order nonlinear interactions in T(n) via linearization around the chaotic saddle or unstable periodic orbits, followed by Floquet or Lyapunov analysis \u2014 Provides a mathematical basis for predicting the resonance band and its alignment, enabling falsifiable predictions for the empirical simulations and clarifying the role of nonlinear interactions absent a saddle manifold.",
+            "[PATH:literature] Review of literature on noise-induced transient coexistence in non-equilibrium systems (e.g., stochastic resonance in maps, coherence resonance in excitable systems) to identify analogous mechanisms and boundary conditions \u2014 Contextualizes the hypothesis within known phenomena, helping to assess plausibility and identify experimental or simulation protocols that have already tested similar resonance-driven transient coexistence in related dynamical systems."
+          ],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {
+            "condition": "noise amplitude is within a narrow, frequency-dependent window"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "cannot exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "because low-dimensional saddle manifolds are necessary for such dynamics, and stochastic resonance or higher-order nonlinear interactions alone are insufficient",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions because low-dimensional saddle manifolds are necessary for such dynamics, and stochastic resonance or higher-order nonlinear interactions alone are insufficient]",
+            "[PATH:empirical] Systematic simulation sweep of T(n) across parameter spaces that explicitly exclude low-dimensional saddle manifolds, measuring transient coexistence and dominance reversal counts \u2014 Directly tests the necessity claim by observing whether the predicted dynamics occur when the proposed necessary condition is absent.",
+            "[PATH:theoretical] Theoretical analysis of necessary conditions for transient coexistence in stochastic recursive maps, using center manifold reduction and stochastic bifurcation theory \u2014 Establishes whether low-dimensional saddle manifolds are indeed mathematically necessary, or if stochastic resonance or higher-order interactions could suffice under certain conditions.",
+            "[PATH:literature] Literature review of prior studies on transient dynamics in simulated stochastic landscapes, focusing on cases where saddle manifolds were absent yet coexistence or dominance reversal was observed \u2014 Provides empirical counterexamples from existing work that could refute the hypothesis, or confirms the absence of such cases to support it."
+          ],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {
+            "temporal": "during simulation runs with parameter sets where low-dimensional saddle manifolds are absent",
+            "geographic": "within simulated stochastic landscapes only"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "can exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "even in the absence of a low-dimensional saddle manifold, due to stochastic resonance or higher-order nonlinear interactions",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) under selection conditions can exhibit transient coexistence or reversal of trajectory dominance even in the absence of a low-dimensional saddle manifold, due to stochastic resonance or higher-order nonlinear interactions in domain 'simulated stochastic landscapes']"
+          ],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {
+            "temporal": "during simulated evolutionary runs of up to 10^6 iterations",
+            "geographic": "in computational environments with stochastic noise and high-dimensional parameter spaces"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "cannot exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "in the absence of a low-dimensional saddle manifold, even with stochastic resonance or higher-order nonlinear interactions",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) under selection conditions cannot exhibit transient coexistence or reversal of trajectory dominance in the absence of a low-dimensional saddle manifold, even with stochastic resonance or higher-order nonlinear interactions in domain 'simulated stochastic landscapes']"
+          ],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {
+            "temporal": "during the simulation runtime up to 10^6 iterations",
+            "geographic": "within the bounded parameter space of the stochastic landscape model"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "reverses trajectory dominance only when the intermediate regulatory variable is itself under homeostatic feedback control",
+          "object": "because the coupling between high-variance growth penalties and delayed contraction costs becomes unstable in the absence of such feedback, preventing transient coexistence on the saddle manifold",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions because the coupling between high-variance growth penalties and delayed contraction costs becomes unstable in the absence of such feedback, preventing transient coexistence on the saddle manifold]",
+            "[PATH:empirical] Time-series analysis of simulated regulatory networks with and without homeostatic feedback, measuring trajectory dominance reversal frequency and transient coexistence duration on saddle manifolds \u2014 Directly tests the core causal claim by comparing network dynamics under both conditions, providing quantitative evidence for or against the instability mechanism.",
+            "[PATH:theoretical] Analytical derivation of stability conditions for the recursive map T(n) under high-variance growth penalties and delayed contraction costs, using Lyapunov exponents or eigenvalue analysis of the Jacobian on the saddle manifold \u2014 Establishes whether the absence of homeostatic feedback necessarily leads to instability, confirming or refuting the proposed mathematical basis for the trajectory reversal.",
+            "[PATH:literature] Review of literature on feedback control in regulatory network models, focusing on studies of transient dynamics and saddle-node bifurcations in systems with delayed costs and stochastic growth \u2014 Identifies prior empirical or theoretical evidence for similar instability mechanisms, providing context to assess plausibility and potential counterexamples."
+          ],
+          "scope": {
+            "domain": "regulatory network models"
+          },
+          "qualifier": {
+            "temporal": "during the transient phase of regulatory network evolution before stable fixed-point convergence",
+            "geographic": "simulated regulatory network models with homeostatic feedback architecture"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "does not exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "regardless of the presence of a low-dimensional saddle manifold or the mediation by an intermediate regulatory variable",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) under selection conditions regardless of the presence of a low-dimensional saddle manifold or the mediation by an intermediate regulatory variable]",
+            "[PATH:empirical] Systematic simulation of T(n) under varying low-dimensional saddle manifold structures, with and without an intermediate regulatory variable, measuring trajectory dominance and coexistence times during the transient phase. \u2014 Directly tests the hypothesis by manipulating the key variables (saddle manifold, intermediate regulator) and observing whether transient coexistence or reversal of trajectory dominance occurs, providing clear confirmatory or refutatory evidence.",
+            "[PATH:theoretical] Analytical derivation of the asymptotic behavior of T(n) using center manifold reduction and comparison theorems for regulatory network dynamics. \u2014 A rigorous mathematical proof can establish whether the claimed invariances hold under the specified conditions, offering a definitive theoretical resolution to the disputed hypothesis.",
+            "[PATH:literature] Meta-analysis of existing literature on transient dynamics in regulatory network models, focusing on studies that report coexistence or dominance reversal in recursive maps under selection. \u2014 Reviewing prior empirical and theoretical work can identify whether counterexamples or supporting evidence already exist, helping to contextualize the hypothesis and guide further targeted simulations."
+          ],
+          "scope": {
+            "domain": "regulatory network models"
+          },
+          "qualifier": {
+            "temporal": "during the transient phase of the regulatory network evolution",
+            "geographic": "in silico regulatory network models"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "will exhibit a statistically significant increase in the duration of transient coexistence",
+          "object": "when the noise amplitude is tuned to an intermediate resonance band, even if the underlying deterministic dynamics are globally attracting to a single fixed point",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "the recursive map T(n) under selection conditions",
+          "predicate": "cannot exhibit transient coexistence or reversal of trajectory dominance",
+          "object": "in the absence of a low-dimensional saddle manifold, as these phenomena require deterministic structures rather than stochastic resonance or higher-order nonlinear interactions alone",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "simulated stochastic landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    }
+  ],
+  "n_branches": 5,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Fixed-step methods",
+      "predicate": "provide consistent performance advantages over adaptive algorithms",
+      "object": "by eliminating hyperparameter tuning complexities",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Fixed-step methods by eliminating hyperparameter tuning complexities]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While fixed-step methods avoid costly hyperparameter search, adaptive algorithms may outperform them across heterogeneous data distributions, and the trade-off between tuning overhead and final accuracy remains contested in the literature."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Fixed-step methods",
+      "predicate": "eliminate",
+      "object": "the overhead of hyperparameter tuning",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Fixed-step methods the overhead of hyperparameter tuning]"
+      ],
+      "scope": {
+        "domain": "optimization with limited computational budget"
+      },
+      "qualifier": {
+        "concession": "This advantage is most pronounced when the problem space is well-understood or stationary."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Adaptive algorithms",
+      "predicate": "achieve higher final accuracy than fixed-step methods",
+      "object": "across heterogeneous or non-stationary data distributions",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Adaptive algorithms across heterogeneous or non-stationary data distributions]",
+        "[CONFLICT] The claim that adaptive algorithms achieve higher accuracy than fixed-step methods across heterogeneous or non-stationary distributions is disputed because the performance edge often comes with additional tuning complexity and computational overhead, which may negate the accuracy benefit in practice."
+      ],
+      "scope": {
+        "domain": "non-stationary or multi-modal optimization landscapes"
+      },
+      "qualifier": {
+        "tension": "This performance edge often comes at the cost of additional tuning complexity and computational overhead."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Fixed-step methods",
+      "predicate": "increase",
+      "object": "the risk of suboptimal convergence when the problem space is non-stationary or rapidly changing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Fixed-step methods the risk of suboptimal convergence when the problem space is non-stationary or rapidly changing]",
+        "[PATH:empirical] Comparative empirical study of fixed-step vs. adaptive-step methods in non-stationary optimization benchmarks (e.g., moving peaks, rotating hyperplane problems) \u2014 Directly tests the hypothesis by measuring convergence quality and risk of suboptimality under controlled non-stationary conditions with limited budget.",
+        "[PATH:theoretical] Theoretical analysis of fixed-step gradient descent convergence bounds under time-varying objective functions (e.g., regret bounds or dynamic regret in online convex optimization) \u2014 Provides formal guarantees or counterexamples regarding how fixed step sizes affect convergence optimality when the problem changes, clarifying the mechanism behind the hypothesized risk.",
+        "[PATH:literature] Literature review on adaptive step-size strategies (e.g., AdaGrad, RMSProp, or line search) for non-stationary optimization, comparing their performance to fixed-step baselines \u2014 Synthesizes existing evidence on whether fixed-step methods indeed show higher suboptimal convergence rates in dynamic environments, supporting or refuting the hypothesis via accumulated empirical and theoretical findings."
+      ],
+      "scope": {
+        "domain": "optimization with limited computational budget"
+      },
+      "qualifier": {
+        "temporal": "during periods of non-stationarity or rapid change in the problem space"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Fixed-step methods",
+      "predicate": "increase",
+      "object": "the need for hyperparameter tuning",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Fixed-step methods the need for hyperparameter tuning]",
+        "[PATH:empirical] Controlled benchmark experiments comparing fixed-step optimizers (e.g., SGD with fixed LR) against adaptive methods (e.g., Adam) across a suite of deep learning tasks with limited computational budgets, measuring the variance in performance across hyperparameter configurations. \u2014 Directly tests whether fixed-step methods require more tuning to achieve comparable results under budget constraints, providing concrete data to confirm or refute the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of convergence rates for fixed-step gradient-based methods under bounded gradient noise, deriving the sensitivity of convergence to step-size choices as a function of budget. \u2014 Provides formal bounds on how hyperparameter misspecification degrades performance, clarifying whether fixed-step methods inherently demand more tuning in resource-limited settings.",
+        "[PATH:literature] Systematic literature review of empirical studies (e.g., from NeurIPS, ICML, ICLR) that report hyperparameter tuning effort for fixed-step vs. adaptive methods in optimization with limited compute. \u2014 Aggregates existing evidence across many studies to assess whether there is a consensus that fixed-step methods increase tuning burden, addressing the disputed status of the hypothesis."
+      ],
+      "scope": {
+        "domain": "optimization with limited computational budget"
+      },
+      "qualifier": {
+        "temporal": "since the 2010s",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Adaptive algorithms with explicit change-point detection",
+      "predicate": "outperform both standard adaptive algorithms and fixed-step methods",
+      "object": "in non-stationary environments where the frequency of distribution shifts is unknown and variable",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Adaptive algorithms with explicit change-point detection in non-stationary environments where the frequency of distribution shifts is unknown and variable]",
+        "[PATH:empirical] Comparative benchmark experiments on synthetic non-stationary datasets with varying shift frequencies (e.g., rotating hyperplane, abrupt vs. gradual drift) \u2014 Directly tests whether explicit change-point detectors (e.g., ADWIN, BOCD) yield lower cumulative regret or faster adaptation than fixed-step (e.g., constant learning rate SGD) and standard adaptive methods (e.g., AdaGrad, Adam) when shift intervals are unknown and variable.",
+        "[PATH:theoretical] Regret bounds analysis for algorithms with change-point detection under unknown, variable shift intervals (e.g., minimax lower bounds or dynamic regret analysis) \u2014 Deriving or extending theoretical guarantees (e.g., O(\u221aT) regret with known change points vs. O(T^{2/3}) under unknown intervals) can confirm or refute the claimed superiority by quantifying the cost of detection delay and false alarms.",
+        "[PATH:literature] Meta-analysis of existing empirical studies comparing change-point detection-based learners (e.g., FHDDM, RDDM) against non-adaptive baselines in online learning benchmarks (e.g., MOA, scikit-multiflow) \u2014 Surveying published results across diverse drift scenarios (e.g., real-world data streams like electricity pricing, forest cover type) can reveal whether the advantage holds consistently or only under specific conditions, thus supporting or challenging the hypothesis."
+      ],
+      "scope": {
+        "domain": "online learning under unknown, variable-rate regime changes"
+      },
+      "qualifier": {
+        "temporal": "under simulated online learning conditions with no specified real-world time frame",
+        "geographic": "not applicable (simulated environment)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Fixed-step methods",
+      "predicate": "can outperform adaptive algorithms",
+      "object": "in terms of simplicity and computational efficiency",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Fixed-step methods in terms of simplicity and computational efficiency]",
+        "[PATH:empirical] Benchmark experiments comparing fixed-step gradient descent vs. Adam/Adagrad on non-stationary (e.g., noisy or drifting) and multi-modal functions (e.g., Rastrigin, Ackley) from the COCO (Comparing Continuous Optimizers) platform \u2014 Direct empirical comparison under the specified domain conditions can reveal whether fixed-step methods maintain competitive performance in simplicity and efficiency, especially when adaptive methods incur overhead from step-size tuning.",
+        "[PATH:theoretical] Theoretical analysis of convergence rates for fixed-step vs. adaptive methods in non-stationary convex optimization (e.g., using regret bounds or oracle complexity models) \u2014 A formal proof or counterexample showing that fixed-step methods achieve near-optimal regret in non-stationary settings (due to lower per-iteration cost) would support the hypothesis; otherwise, adaptive methods may be fundamentally necessary.",
+        "[PATH:literature] Historical review of optimization literature from the 1990s (e.g., papers on stochastic approximation, Kiefer-Wolfowitz, or early neural network training) comparing fixed-step and adaptive approaches before widespread library support \u2014 Surveying pre-2000s empirical studies and practitioner reports can provide evidence of whether fixed-step methods were preferred in resource-constrained environments, confirming the temporal qualifier of the hypothesis."
+      ],
+      "scope": {
+        "domain": "non-stationary or multi-modal optimization landscapes"
+      },
+      "qualifier": {
+        "temporal": "prior to the availability of adaptive step-size control in standard libraries (pre-2000s)",
+        "geographic": "applicable to any computational environment with limited resources"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  }
+}
