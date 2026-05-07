@@ -1,0 +1,379 @@
+{
+  "branch_id": "branch_ev2_op0",
+  "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev2_op0",
+  "operator_id": "adaptive_variation_selection",
+  "question": "Under what conditions does the nonlinear rescaling factor influence the dominance of diverging trajectories over contrac",
+  "loops_completed": 2,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is independent of",
+      "object": "the parity of the iteration index",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "depends on",
+      "object": "the parity of the iteration index when the iteration count is low",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index when the iteration count is low]"
+      ],
+      "scope": {
+        "domain": "small iteration counts (< 10)"
+      },
+      "qualifier": {
+        "temporal": "during small iteration counts (< 10)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is independent of",
+      "object": "the parity of the iteration index for all sufficiently large iterations",
+      "status": "disputed",
+      "confidence": 0.7000000000000001,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index for all sufficiently large iterations]"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iteration index \u2192 \u221e)"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "shows a transient dependence on",
+      "object": "the parity of the iteration index only when the map is applied to non-optimal initial values",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index only when the map is applied to non-optimal initial values]"
+      ],
+      "scope": {
+        "domain": "specific initial conditions (n with high entropy)"
+      },
+      "qualifier": {
+        "temporal": "during the first 10^5 iterations"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is dominated by",
+      "object": "the parity of the iteration index regardless of iteration count magnitude",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index regardless of iteration count magnitude]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) for n \u2261 1 mod 3 across a wide range of iteration counts, recording the nonlinear rescaling factor as a function of iteration index parity \u2014 Direct computational evidence can reveal whether the rescaling factor consistently depends on parity of the iteration index, independent of iteration count magnitude. Simulated data with rigorous statistical testing (e.g., permutation tests) can confirm or refute dominance by parity.",
+        "[PATH:theoretical] Analytical derivation of closed-form expressions for the rescaling factor in T(n) for n \u2261 1 mod 3, using modular arithmetic and number-theoretic properties \u2014 A theoretical proof that the rescaling factor is a function only of parity (or not) would settle the hypothesis. This could involve analyzing the map's structure under iteration modulo powers of 2 or 3.",
+        "[PATH:literature] Systematic review of literature on recursive maps with conditional rescaling (e.g., Collatz-like maps), focusing on parity-dependent behavior in residues modulo 3 \u2014 Existing studies may have already characterized similar rescaling factors for n \u2261 1 mod 3, providing evidence or counterexamples from known results on iteration-index parity effects."
+      ],
+      "scope": {
+        "domain": "all iteration counts"
+      },
+      "qualifier": {
+        "temporal": "for all iteration counts"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is independent of",
+      "object": "the parity of the iteration index when the iteration count is low",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index when the iteration count is low]",
+        "[PATH:empirical] Run systematic simulations of T(n) for n \u2261 1 mod 3 across all small iteration counts (<10), recording the nonlinear rescaling factor separately for even and odd iteration indices, then testing for statistical independence via chi-squared or permutation tests. \u2014 Direct empirical test can reveal whether parity of iteration index correlates with the rescaling factor in the low-count regime, confirming or refuting the claimed independence.",
+        "[PATH:theoretical] Derive an algebraic expression for the rescaling factor in T(n) for n \u2261 1 mod 3, analyzing its dependence on iteration index parity using modular arithmetic or dynamical systems theory. \u2014 A theoretical derivation can prove whether the factor is structurally independent of parity, providing a definitive answer that simulation alone may not guarantee due to limited sample sizes.",
+        "[PATH:literature] Survey existing literature on recursive maps (e.g., Collatz-like functions) for known results on parity-dependent rescaling, especially for small iteration counts and residues modulo 3. \u2014 Prior work may have already addressed this specific property, saving effort and providing theoretical context or counterexamples that directly inform the hypothesis."
+      ],
+      "scope": {
+        "domain": "small iteration counts (< 10)"
+      },
+      "qualifier": {
+        "temporal": "iteration count < 10"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is entirely independent of",
+      "object": "the parity of the iteration index for all initial values, including non-optimal ones, once the map is iterated beyond a transient threshold of 10 steps",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index for all initial values, including non-optimal ones, once the map is iterated beyond a transient threshold of 10 steps]",
+        "[PATH:empirical] High-precision computational simulation of T(n) for a stratified random sample of n \u2261 1 mod 3 with n < 10^6, recording the nonlinear rescaling factor at each iteration step beyond the 10-step transient threshold, and testing for correlation with parity of iteration index. \u2014 Direct empirical test can confirm or refute independence by measuring the relationship between the factor and parity across a large, representative set of initial values.",
+        "[PATH:theoretical] Analytical derivation of the closed-form expression for the nonlinear rescaling factor as a function of iteration index for n \u2261 1 mod 3, using algebraic properties of the map T(n) and modular arithmetic. \u2014 A rigorous mathematical proof or counterexample would settle the hypothesis definitively, showing whether parity dependence can arise from the map's structure.",
+        "[PATH:literature] Review of existing literature on recursive maps with modular constraints, particularly studies on the 3x+1 problem or similar Collatz-type maps, focusing on any reported parity dependencies or transient behavior. \u2014 Prior work may provide theorems, conjectures, or empirical patterns that either support or contradict the claimed independence, saving effort and contextualizing the hypothesis."
+      ],
+      "scope": {
+        "domain": "all initial values n \u2261 1 mod 3 with n < 10^6"
+      },
+      "qualifier": {
+        "temporal": "after 10 iterations beyond the transient threshold",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "demonstrates a consistent dependence on",
+      "object": "the parity of the iteration index regardless of initial value optimality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index regardless of initial value optimality]",
+        "[PATH:empirical] Systematic computational experiments tracking the rescaling factor across parity of iteration index for multiple random initial values satisfying n \u2261 1 mod 3, with convergence/divergence criteria \u2014 Direct simulation can test if the factor consistently depends on iteration parity across diverse initial conditions, providing clear confirmatory or refutatory data.",
+        "[PATH:theoretical] Analytical derivation of the rescaling factor's closed-form expression from the recursive map's structure, isolating parity-dependent terms \u2014 A formal mathematical proof can determine whether the parity dependence is inherent to the map's definition or an artifact of specific initial values, offering definitive theoretical resolution.",
+        "[PATH:literature] Review of existing literature on parity-dependent scaling in recursive maps (e.g., Collatz-type or piecewise linear maps) for patterns or counterexamples \u2014 Comparing with known results can reveal whether such parity dependence is a documented phenomenon or contradicts established behaviors, informing the hypothesis's plausibility."
+      ],
+      "scope": {
+        "domain": "all initial conditions"
+      },
+      "qualifier": {
+        "temporal": "for all iterations up to the point of convergence or divergence",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "does exhibit a transient dependence on",
+      "object": "the parity of the iteration index when the map is applied to non-optimal initial values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 does exhibit a transient dependence on the parity of the iteration index when the map is applied to non-optimal initial values in domain 'specific initial conditions (n with high entropy)']"
+      ],
+      "scope": {
+        "domain": "specific initial conditions (n with high entropy)"
+      },
+      "qualifier": {
+        "temporal": "during the first 10^3 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "does not exhibit any dependence on",
+      "object": "the parity of the iteration index, even when the map is applied to non-optimal initial values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 does not exhibit any dependence on the parity of the iteration index, even when the map is applied to non-optimal initial values in domain 'specific initial conditions (n with high entropy)']"
+      ],
+      "scope": {
+        "domain": "specific initial conditions (n with high entropy)"
+      },
+      "qualifier": {
+        "temporal": "under all observed iteration counts in the study",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is entirely determined by",
+      "object": "the binary expansion of the initial n when the map is applied to non-optimal initial values",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "specific initial conditions (n with high entropy)"
+      },
+      "qualifier": {
+        "temporal": "during the first 10^5 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is entirely independent of",
+      "object": "the parity of the iteration index regardless of initial values",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all initial conditions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "n_sealed": 12
+}

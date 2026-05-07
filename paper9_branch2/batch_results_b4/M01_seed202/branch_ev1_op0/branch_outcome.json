@@ -1,0 +1,378 @@
+{
+  "branch_id": "branch_ev1_op0",
+  "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev1_op0",
+  "operator_id": "adaptive_variation_selection",
+  "question": "Under what selection conditions does the recursive map T(n) for n \u2261 1 mod 3 predominantly lead to diverging trajectories",
+  "loops_completed": 3,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is a dense countable set",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+      ],
+      "scope": {
+        "domain": "rational numbers with denominator a power of 3"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is dense but not necessarily countable",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+      ],
+      "scope": {
+        "domain": "all rational numbers in (0,1)"
+      },
+      "qualifier": {
+        "uncertainty": "complement density may include uncountable components"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction that is only a proper subset of the rational numbers with denominator a power of 3",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+      ],
+      "scope": {
+        "domain": "rational numbers with denominator a power of 3"
+      },
+      "qualifier": {
+        "restriction": "only those that are eventually periodic under T"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3, and also includes all rational numbers in (0,1) with denominator a power of 2",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3 or a power of 2",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3 or a power of 2]",
+        "[PATH:empirical] Explicit enumeration and iterative simulation of T(n) for all rationals in (0,1) with denominator 3^k (k=1 to 10) and 2^m (m=1 to 10), recording convergence patterns and fixed points. \u2014 Systematic computational testing can directly confirm or refute whether all such rationals eventually fall into the same basin, especially since the denominators are bounded and the map is recursive.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using modular arithmetic and reduction properties, focusing on the behavior of fractions with denominator a power of 3 versus a power of 2. \u2014 A proof or counterexample may arise from examining how T(n) transforms denominators under the condition n \u2261 1 mod 3, potentially revealing invariants or attractors that differ between the two denominator classes.",
+        "[PATH:literature] Literature search on recursive maps of rational numbers with restricted denominators, particularly studies on the Collatz-like maps or 3x+1 variants, to identify analogous results or known counterexamples. \u2014 Existing work on similar recursive maps may provide theorems or conjectures that directly apply to this hypothesis, or highlight structural differences between denominator classes that could refute the claim."
+      ],
+      "scope": {
+        "domain": "rational numbers with denominator a power of 3 or a power of 2"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "does not have a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+        "[PATH:empirical] Simulate the dynamics of T(n) for all rational numbers in (0,1) with denominator 3^k for k up to, say, 10, and check whether any initial condition fails to converge to a fixed cycle or eventually exits the set. \u2014 A systematic computational search can reveal whether every such rational eventually enters a finite attractor or whether some escape or exhibit divergent behavior, thus directly testing the basin-of-attraction claim.",
+        "[PATH:theoretical] Analyze the number-theoretic structure of T(n) when n \u2261 1 mod 3, focusing on the transformation of fractions in base 3; prove that the map is conjugate to a shift map on the ternary expansion, and characterize periodic points and preimages. \u2014 If the map is topologically conjugate to a full shift on a Cantor set, then the set of rationals with denominator a power of 3 may be measure-zero and not a full basin; conversely, if the shift is eventually periodic for all such rationals, it would support the opposite conclusion.",
+        "[PATH:literature] Review existing literature on recursive maps defined by modular conditions (e.g., Collatz-like maps restricted to rationals with 3-adic denominators) for known results on eventual periodicity or divergence. \u2014 Prior work on 3x+1 type problems or 3-adic dynamical systems may provide theorems or counterexamples directly applicable to the behavior of T(n) on this specific subset, helping to confirm or refute the hypothesis without new computation."
+      ],
+      "scope": {
+        "domain": "rational numbers with denominator a power of 3"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement contains a Cantor set of irrational numbers in (0,1)",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+        "[PATH:empirical] Construct explicit examples of irrational numbers in (0,1) that are not in the basin of attraction by simulating the recursive map T(n) for n \u2261 1 mod 3 on base-3 expansions of numbers with non-repeating patterns, and test whether they converge to a rational with denominator a power of 3. \u2014 If the complement contains a Cantor set, there should be uncountably many irrationals that do not converge to the claimed basin. Empirical simulation can identify candidate numbers and test convergence behavior, providing evidence for or against the existence of such a set.",
+        "[PATH:theoretical] Analyze the map T(n) theoretically using symbolic dynamics on the ternary expansion, where n \u2261 1 mod 3 corresponds to a specific digit restriction, and determine the set of points whose orbits avoid a certain invariant set of rationals. \u2014 A rigorous mathematical proof that the set of irrationals not in the basin is homeomorphic to a Cantor set would confirm the hypothesis. Conversely, showing that all irrationals eventually map into the rational basin would refute it. This direction leverages known results on piecewise linear maps and invariant sets.",
+        "[PATH:literature] Review literature on the dynamics of the 3x+1 problem or similar piecewise linear maps, particularly studies on the set of numbers with bounded partial quotients or with base-3 expansions that avoid certain patterns. \u2014 The recursive map T(n) for n \u2261 1 mod 3 is reminiscent of the Collatz-type maps. Existing work on the existence of Cantor sets in the complement of basins of attraction for such maps (e.g., in the context of the 3n+1 conjecture) can provide analogous results or techniques to evaluate this specific hypothesis."
+      ],
+      "scope": {
+        "domain": "all real numbers in (0,1)"
+      },
+      "qualifier": {
+        "temporal": "for all time steps n \u2265 0",
+        "geographic": "within the unit interval (0,1) of the real line"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is countable",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+        "[PATH:empirical] Explicit enumeration of rationals with denominator a power of 3 in (0,1) and simulation of T(n) for each such rational, checking convergence to a fixed point or cycle \u2014 If the complement of the basin is countable, then all but countably many rationals in (0,1) converge under T. Simulating T on a dense set of rationals (e.g., all with denominator up to 3^10) can reveal whether the only non-convergent points are those with denominator a power of 3, or if others also fail.",
+        "[PATH:theoretical] Analytic study of the map T(n) for n \u2261 1 mod 3, focusing on the dynamics of the ternary expansion of rational numbers \u2014 The condition n \u2261 1 mod 3 suggests a connection to base-3 expansions. Proving that T acts as a shift on the ternary digits of rationals with denominator a power of 3, and that other rationals eventually map into this set or converge, would confirm the hypothesis. Conversely, finding a rational not of that form that fails to converge would refute it.",
+        "[PATH:literature] Literature search for known results on number-theoretic recursive maps with modular constraints, especially those related to the 3x+1 problem or Collatz-type maps \u2014 The map T(n) for n \u2261 1 mod 3 may be a variant of the Collatz function. Existing work on the behavior of rational numbers under such maps (e.g., the '3x+1 problem on rationals') could provide theorems or counterexamples that directly apply to this hypothesis."
+      ],
+      "scope": {
+        "domain": "all rational numbers in (0,1)"
+      },
+      "qualifier": {
+        "temporal": "since the map's definition in 2020",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is dense and countable",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 has a basin of attraction whose complement is dense and countable the set of all rational numbers in (0,1) with denominator a power of 3 in domain 'all rational numbers in (0,1)']"
+      ],
+      "scope": {
+        "domain": "all rational numbers in (0,1)"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the discrete dynamical system",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is dense and uncountable",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 has a basin of attraction whose complement is dense and uncountable the set of all rational numbers in (0,1) with denominator a power of 3 in domain 'all rational numbers in (0,1)']"
+      ],
+      "scope": {
+        "domain": "all rational numbers in (0,1)"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement contains uncountably many Liouville numbers in (0,1)",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all real numbers in (0,1)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "has a basin of attraction whose complement is countable and not dense",
+      "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all rational numbers in (0,1)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 12
+}

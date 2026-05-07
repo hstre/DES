@@ -1,0 +1,438 @@
+{
+  "branch_id": "branch_ev2_op2",
+  "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev2_op2",
+  "operator_id": "recursive_modulation",
+  "question": "How might the recursive map T(n) for n \u2261 1 mod 3 inform the stability of bounded cycles in complex systems when rescalin",
+  "loops_completed": 1,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "informs the stability of bounded cycles in complex systems",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While rescaling factors are often assumed necessary for cycle stability in recursive maps, there is contested evidence that removing or minimizing them may either destabilize bounded cycles or reveal hidden invariant structures, depending on the congruence class of n. The specific role of n \u2261 1 mod 3 in this context remains unresolved."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "exhibits bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "tension": "This sub-claim assumes that minimizing rescaling factors can preserve or even reveal hidden invariant structures for this specific residue class."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "loses bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "tension": "This sub-claim competes with the first by proposing that removal of rescaling factors introduces destabilization rather than revealing invariants, reflecting the unresolved role of n \u2261 1 mod 3."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "is sensitive to the presence of rescaling factors in a way that differs qualitatively from other residue classes",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+      ],
+      "scope": {
+        "domain": "comparative analysis of recursive maps across congruence classes"
+      },
+      "qualifier": {
+        "tension": "This sub-claim qualifies the debate by shifting focus to class-specific sensitivity, suggesting that neither full stability nor full destabilization may be generalizable without considering class-specific dynamics."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "converges to a single fixed point",
+      "object": "when rescaling factors are removed and the map is restricted to the 1 mod 3 residue class",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are removed and the map is restricted to the 1 mod 3 residue class]",
+        "[PATH:empirical] Systematic computational exploration of the restricted map on all residues congruent to 1 mod 3 up to a large bound (e.g., 10^6) with multiple random seeds, tracking whether all trajectories collapse to a single fixed point after removing rescaling factors. \u2014 Direct simulation can reveal counterexamples or confirm convergence patterns, providing empirical support or refutation for the hypothesis.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using modular arithmetic and contraction mapping principles, focusing on the invariant set within the 1 mod 3 residue class and the effect of rescaling removal on fixed point uniqueness. \u2014 A rigorous mathematical proof or disproof of convergence to a single fixed point would settle the dispute, and theoretical insights can guide empirical checks.",
+        "[PATH:literature] Review of existing literature on similar recursive maps with congruence restrictions (e.g., Collatz-type maps, 3x+1 variants) to identify known fixed points, cycles, or divergence behaviors under analogous constraints. \u2014 Prior work may already contain relevant results or methods that can be directly applied to evaluate this specific hypothesis, saving effort and providing context."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "for all n in the domain at any iteration step",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "exhibits unbounded cycle instability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+        "[PATH:empirical] Direct numerical simulation of T(n) for n \u2261 1 mod 3 over a large range of initial conditions (e.g., n up to 10^9) with rescaling factors set to 1, recording cycle lengths and maximum values to detect unbounded growth. \u2014 Empirical evidence from exhaustive simulation can directly confirm or refute the presence of unbounded cycles by checking whether any trajectory escapes to infinity or enters a finite cycle of bounded length.",
+        "[PATH:theoretical] Analytic proof using modular arithmetic and Lyapunov-like functions to bound the iteration under minimized rescaling, comparing to known results for similar maps (e.g., Collatz-type dynamics). \u2014 A theoretical approach can establish necessary conditions for instability, such as existence of invariant measures or growth rates, and resolve whether the claimed instability is mathematically possible or ruled out by congruence constraints.",
+        "[PATH:literature] Literature review of studies on piecewise linear maps with congruence classes (e.g., the 3x+1 problem, generalized Syracuse maps) focusing on behavior when scaling factors are removed or minimized. \u2014 Existing results on similar recursive maps may provide analogous proofs or counterexamples, helping to determine whether unbounded cycle instability is a known phenomenon under the specified conditions."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "for all time steps t \u2265 0 in the discrete iteration",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "exhibits unbounded growth for all initial values",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+        "[PATH:empirical] Systematic computational search over all residue classes modulo powers of 3 for T(n) = (n - 1)/3 when n \u2261 1 mod 3, with no rescaling, tracking maximum trajectory values up to large iteration counts (e.g., 10^6 steps). \u2014 Direct numerical simulation can reveal whether trajectories diverge to infinity or enter cycles, providing concrete evidence for or against unbounded growth under the specified conditions.",
+        "[PATH:theoretical] Theoretical analysis of the dynamical system as a random walk with drift, using martingale or Lyapunov function methods to bound expected growth rates. \u2014 If the map can be shown to have a positive drift on average for all initial values in the residue class, it would support unbounded growth; otherwise, a bounded drift or recurrent behavior could refute the hypothesis.",
+        "[PATH:literature] Review of known results on the 3x+1 problem and its variants, particularly studies of maps with restricted rescaling (e.g., the 'minimal' 3x+1 map or the '5x+1' problem) that exhibit unbounded trajectories. \u2014 The hypothesis parallels open questions in Collatz-type dynamics; existing literature on similar maps with minimized rescaling may provide analogies, counterexamples, or proof techniques that confirm or refute unbounded growth."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "over infinite time horizon"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "gains bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+        "[PATH:empirical] Systematic computational search for cycles in the reduced map T'(n) = n/3 for n \u2261 0 mod 3, T'(n) = (2n-1)/3 for n \u2261 1 mod 3, T'(n) = (4n+1)/3 for n \u2261 2 mod 3 (rescaling removed), with exhaustive testing up to large initial values \u2014 Direct simulation can reveal whether the map without rescaling factors produces bounded cycles or diverges, providing empirical confirmation or refutation of the hypothesis.",
+        "[PATH:theoretical] Analytic study of invariant densities or Lyapunov exponents for the map T(n) with minimized rescaling (e.g., using continued fraction expansions or ergodic theory for piecewise linear maps over integers) \u2014 Rigorous mathematical analysis of the map's dynamics can determine conditions for bounded cycle stability, especially if the map can be transformed into a known system with known stability properties.",
+        "[PATH:literature] Literature on the generalized Collatz problem and its variants (e.g., Lagarias' annotated bibliography on the 3x+1 problem and related maps with congruence constraints) \u2014 Existing theoretical results and known cycles from similar maps (e.g., the 3x+1 problem, 5x+1 problem, or maps with mod 3 constraints) may provide analogies or counterexamples that inform the stability of cycles under rescaling removal."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "under iterated application of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "retains bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 retains bounded cycle stability when rescaling factors are minimized or removed in domain 'discrete dynamical systems with congruence constraints']"
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "for all iterative steps under the given congruence condition",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "loses bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 loses bounded cycle stability when rescaling factors are minimized or removed in domain 'discrete dynamical systems with congruence constraints']"
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {
+        "temporal": "under asymptotic iteration as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed",
+      "predicate": "exhibits a strictly higher average iteration count to convergence than maps for n \u2261 0 mod 3 or n \u2261 2 mod 3",
+      "object": "under identical rescaling factor minimization protocols",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed under identical rescaling factor minimization protocols]",
+        "[PATH:empirical] Systematic computational experiments comparing average iteration counts to convergence for T(n) under minimized rescaling factors across all congruence classes mod 3, using a fixed set of initial values and convergence criteria, with statistical significance testing \u2014 Directly tests the hypothesis by generating comparative data under controlled conditions, allowing confirmation or refutation of the claimed higher average iteration count for n \u2261 1 mod 3.",
+        "[PATH:theoretical] Analytic derivation of expected iteration counts for T(n) in each congruence class under the rescaling factor minimization protocol, using properties of modular arithmetic and dynamical systems theory \u2014 Provides a mathematical proof or counterexample that explains the observed differences, offering a foundation to confirm or refute the hypothesis beyond empirical variability.",
+        "[PATH:literature] Meta-analysis of published results from 2020-2024 on recursive maps and their convergence behavior, focusing on studies that report iteration counts by congruence class and rescaling protocol \u2014 Leverages existing evidence to assess consistency with the hypothesis, potentially revealing overlooked patterns or contradictions that support or undermine the claim."
+      ],
+      "scope": {
+        "domain": "comparative analysis of recursive maps across congruence classes"
+      },
+      "qualifier": {
+        "temporal": "as observed in computational experiments from 2020 to 2024",
+        "geographic": "across simulated environments with no geographic constraints"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "exhibits the same sensitivity to rescaling factors as other residue classes",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+      ],
+      "scope": {
+        "domain": "comparative analysis of recursive maps across congruence classes"
+      },
+      "qualifier": {
+        "temporal": "under simulated conditions with no specified time constraint",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "exhibits monotonic divergence to infinity",
+      "object": "when rescaling factors are minimized or removed and initial values are drawn from a dense subset of the domain",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+      "predicate": "gains bounded cycle stability",
+      "object": "when rescaling factors are minimized or removed",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "discrete dynamical systems with congruence constraints"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 11
+}

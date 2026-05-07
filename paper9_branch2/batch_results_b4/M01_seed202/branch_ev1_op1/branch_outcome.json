@@ -1,0 +1,454 @@
+{
+  "branch_id": "branch_ev1_op1",
+  "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev1_op1",
+  "operator_id": "recursive_modulation",
+  "question": "How might the recursive map T(n) for n \u2261 1 mod 3, when modeled as a dynamical system with inherent stochastic perturbati",
+  "loops_completed": 4,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more effectively achieved by",
+      "object": "anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias",
+      "status": "supported",
+      "confidence": 0.52,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "noise_distribution": "bounded support",
+        "adaptation_mechanism": "accumulated drift tracking",
+        "comparison_baseline": "fixed-magnitude anti-correlated bias"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more effectively achieved by",
+      "object": "anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias]"
+      ],
+      "scope": {
+        "domain": "bounded-support noise distributions with stationary second-order statistics"
+      },
+      "qualifier": {
+        "noise_distribution": "bounded support",
+        "adaptation_mechanism": "accumulated drift tracking",
+        "comparison_baseline": "fixed-magnitude anti-correlated bias"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more robustly achieved by",
+      "object": "fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias]"
+      ],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments"
+      },
+      "qualifier": {
+        "noise_distribution": "bounded support with sudden shifts",
+        "adaptation_mechanism": "periodic recalibration",
+        "comparison_baseline": "time-varying adaptive bias"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is equally well achieved by either method when",
+      "object": "the noise mean is known and the map's Lyapunov exponent is sufficiently negative",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the noise mean is known and the map's Lyapunov exponent is sufficiently negative]"
+      ],
+      "scope": {
+        "domain": "deterministic chaos with known noise statistics and strong contraction"
+      },
+      "qualifier": {
+        "noise_distribution": "bounded support, known mean",
+        "adaptation_mechanism": "none required",
+        "comparison_baseline": "both methods equivalent"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is less sensitive to initial bias magnitude when using",
+      "object": "time-varying adaptive bias driven by exponentially weighted drift estimates compared to fixed-magnitude anti-correlated bias",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise time-varying adaptive bias driven by exponentially weighted drift estimates compared to fixed-magnitude anti-correlated bias]",
+        "[PATH:empirical] Controlled simulation study comparing adaptive EWMA bias vs. fixed anti-correlated bias across a range of initial bias magnitudes and bounded noise distributions (e.g., uniform, truncated Gaussian) for the recursive map T(n) with n \u2261 1 mod 3 \u2014 Directly tests the hypothesis by measuring residual drift variance after 10^5 iterations under varying initial biases. Can confirm or refute sensitivity differences by systematically varying bias magnitude and noise distribution parameters.",
+        "[PATH:theoretical] Theoretical analysis of convergence and drift cancellation in nonlinear recursive maps with additive Markovian noise, focusing on the role of exponentially weighted drift estimators vs. static bias compensation \u2014 Provides mathematical bounds on residual drift variance as a function of initial bias magnitude and adaptation rate. Can establish whether the adaptive mechanism inherently reduces sensitivity to initial conditions compared to fixed anti-correlated bias.",
+        "[PATH:literature] Literature review of adaptive bias correction techniques in iterative algorithms (e.g., stochastic approximation, online learning) with stationary noise, particularly studies comparing adaptive vs. fixed bias schemes \u2014 Surveys existing empirical and theoretical results on bias sensitivity in related domains. May reveal general principles or counterexamples that inform the plausibility of the hypothesis for the specific recursive map structure."
+      ],
+      "scope": {
+        "domain": "bounded-support noise distributions with stationary second-order statistics"
+      },
+      "qualifier": {
+        "adaptation_mechanism": "exponentially weighted moving average of accumulated drift",
+        "comparison_baseline": "fixed-magnitude anti-correlated bias",
+        "sensitivity_metric": "variance of residual drift after 10^5 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more effectively achieved by",
+      "object": "fixed-magnitude anti-correlated bias than by anti-correlated noise with time-varying adaptive bias",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise fixed-magnitude anti-correlated bias than by anti-correlated noise with time-varying adaptive bias]",
+        "[PATH:empirical] Controlled simulation study comparing fixed-magnitude anti-correlated bias versus adaptive bias under bounded-support noise with stationary second-order statistics over 10^5 iterations, measuring drift cancellation in T(n) for n \u2261 1 mod 3 \u2014 Directly tests the hypothesis by systematically varying bias type and magnitude while holding noise distribution fixed, allowing quantitative comparison of drift cancellation efficacy.",
+        "[PATH:theoretical] Theoretical analysis of drift cancellation in recursive maps with anti-correlated perturbations, focusing on convergence rates and bias-variance trade-offs for fixed versus adaptive schemes \u2014 Provides mathematical grounding for whether fixed-magnitude anti-correlated bias can outperform adaptive methods, especially under stationary noise where adaptation may introduce unnecessary variance.",
+        "[PATH:literature] Literature review of prior work on bias injection for drift reduction in iterative algorithms (e.g., stochastic approximation, reinforcement learning with value function recursion) under correlated noise \u2014 Identifies existing evidence or counterexamples from related domains that can inform whether fixed anti-correlated bias is generally more effective than adaptive approaches for drift cancellation."
+      ],
+      "scope": {
+        "domain": "bounded-support noise distributions with stationary second-order statistics"
+      },
+      "qualifier": {
+        "temporal": "over simulation time steps up to 10^5 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more robustly achieved by",
+      "object": "a fixed-magnitude anti-correlated bias with periodic recalibration that uses a phase-locked window rather than a fixed schedule",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise a fixed-magnitude anti-correlated bias with periodic recalibration that uses a phase-locked window rather than a fixed schedule]",
+        "[PATH:empirical] Controlled simulation study comparing fixed-schedule vs. phase-locked recalibration under non-stationary noise with periodic shifts (e.g., square-wave modulation of noise mean). \u2014 Directly tests the hypothesis by measuring drift cancellation performance (e.g., residual bias variance) across multiple noise cycles, with the phase-locked window triggered by a phase detector on the noise shift signal.",
+        "[PATH:theoretical] Theoretical analysis of convergence bounds for recursive estimators with periodic recalibration, using Lyapunov drift arguments and stochastic approximation theory. \u2014 Provides formal conditions under which phase-locked recalibration reduces asymptotic bias compared to fixed schedules, especially when noise shifts are abrupt and periodic.",
+        "[PATH:literature] Literature review of adaptive filtering and phase-locked loop (PLL) methods applied to bias cancellation in recursive algorithms (e.g., LMS with periodic coefficient reset). \u2014 Identifies prior work on synchronization-based recalibration in non-stationary environments, which can be extended to the specific T(n) map with n \u2261 1 mod 3 structure."
+      ],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments with periodic structure"
+      },
+      "qualifier": {
+        "recalibration_trigger": "phase-locked to the noise shift cycle",
+        "comparison_baseline": "fixed-schedule periodic recalibration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more effectively achieved by",
+      "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration]",
+        "[PATH:empirical] Controlled simulation study comparing time-varying adaptive bias (e.g., Kalman-filter-based drift correction) against fixed-magnitude anti-correlated bias with periodic recalibration under non-stationary noise regimes, measuring drift residual and convergence time for n \u2261 1 mod 3 steps in T(n). \u2014 Directly tests the hypothesis by generating quantitative performance metrics under the specified temporal and environmental conditions.",
+        "[PATH:theoretical] Theoretical analysis of bias update laws for recursive maps with nonzero-mean noise, deriving conditions under which adaptive bias achieves zero steady-state drift versus fixed-bias schemes when noise statistics change abruptly. \u2014 Provides formal guarantees or counterexamples that clarify the regimes where each method dominates, informing the disputed comparison."
+      ],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments"
+      },
+      "qualifier": {
+        "temporal": "during periods of non-stationary or abruptly changing noise conditions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more robustly achieved by",
+      "object": "fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise is more robustly achieved by fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias in domain 'non-stationary or abruptly changing noise environments']"
+      ],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments"
+      },
+      "qualifier": {
+        "temporal": "for simulation durations up to 10^6 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more robustly achieved by",
+      "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise is more robustly achieved by time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration in domain 'non-stationary or abruptly changing noise environments']"
+      ],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments"
+      },
+      "qualifier": {
+        "temporal": "under simulated transient noise conditions lasting up to 10^4 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is strictly more robust to unknown noise-distribution shape when",
+      "object": "the map's Lyapunov exponent is sufficiently negative and the first-order moment is estimated online",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the map's Lyapunov exponent is sufficiently negative and the first-order moment is estimated online]",
+        "[PATH:empirical] Controlled simulation study comparing online moment estimation vs. fixed-threshold drift cancellation in the T(n) map for n \u2261 1 mod 3, with systematically varied noise distributions (e.g., uniform, asymmetric, multimodal) and Lyapunov exponents measured via finite-time Lyapunov exponent estimation. \u2014 Directly tests the hypothesis by manipulating noise-distribution shape and Lyapunov exponent sign/magnitude, isolating the effect of online moment estimation on drift robustness under distributional uncertainty.",
+        "[PATH:theoretical] Theoretical analysis of the stochastic contraction properties of the recursive map under online moment estimation, extending results from 'Stochastic Stability of Chaotic Systems with Unknown Noise' (e.g., L. Arnold, Random Dynamical Systems) and 'Adaptive Filtering for Chaotic Maps' (e.g., H. Kantz & T. Schreiber, Nonlinear Time Series Analysis). \u2014 Provides a formal justification for why sufficiently negative Lyapunov exponents combined with online first-order moment estimation can suppress drift regardless of noise shape, potentially confirming the hypothesis or revealing boundary conditions.",
+        "[PATH:literature] Literature review of drift-cancellation methods in chaotic maps with non-Gaussian noise, focusing on comparisons between online moment estimation and batch methods (e.g., in 'Robust Chaos Synchronization under Unknown Noise Distributions', Phys. Rev. E, 2018; 'Drift Compensation in Iterated Maps with Additive Noise', Chaos, 2020). \u2014 Synthesizes existing evidence on the comparative robustness of online vs. batch estimation against distributional uncertainty, identifying whether the hypothesis aligns with established findings or contradicts them."
+      ],
+      "scope": {
+        "domain": "deterministic chaos with unknown noise statistics and strong contraction"
+      },
+      "qualifier": {
+        "noise_distribution": "unknown shape, bounded support",
+        "adaptation_mechanism": "online moment estimation",
+        "comparison_baseline": "method A outperforms method B under distributional uncertainty"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is better achieved by a method that actively compensates for noise when",
+      "object": "the noise mean is known and the map's Lyapunov exponent is sufficiently negative",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the noise mean is known and the map's Lyapunov exponent is sufficiently negative]",
+        "[PATH:empirical] Numerical simulation of T(n) with known nonzero-mean noise and varying Lyapunov exponents, comparing active compensation vs. passive methods for drift cancellation \u2014 Directly tests the hypothesis by systematically varying the Lyapunov exponent and noise mean, measuring drift magnitude in the n \u2261 1 mod 3 subsequence.",
+        "[PATH:theoretical] Analytical derivation of drift bounds for contracting maps with additive noise, using control-theoretic feedback to cancel the known mean \u2014 Provides a formal proof that active compensation reduces drift exactly when the Lyapunov exponent is sufficiently negative, clarifying the threshold and conditions.",
+        "[PATH:literature] Literature review on noise cancellation in chaotic maps (e.g., Ott\u2013Grebogi\u2013Yorke method, synchronization-based approaches) applied to maps with known noise statistics \u2014 Surveys existing methods and their known limitations, identifying whether active compensation with known mean has been studied in similar contracting regimes."
+      ],
+      "scope": {
+        "domain": "deterministic chaos with known noise statistics and strong contraction"
+      },
+      "qualifier": {
+        "temporal": "when the map's Lyapunov exponent remains sufficiently negative throughout the iteration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more robustly achieved by",
+      "object": "fixed-magnitude anti-correlated bias with periodic recalibration only when the noise shift magnitude exceeds a threshold of 0.3 * bias magnitude",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments with bounded noise shifts"
+      },
+      "qualifier": {
+        "threshold_condition": "shift magnitude > 0.3 * bias magnitude",
+        "failure_mode": "time-varying adaptive bias outperforms when shifts are smaller than this threshold"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+      "predicate": "is more effectively achieved by",
+      "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "non-stationary or abruptly changing noise environments"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 13
+}
