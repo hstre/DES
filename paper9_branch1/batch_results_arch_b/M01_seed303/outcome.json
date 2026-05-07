@@ -1,0 +1,2732 @@
+{
+  "domain_id": "M01",
+  "seed": 303,
+  "arch": "B",
+  "outcome": "MAX_LOOPS_REACHED",
+  "loops_completed": 5,
+  "operator_log": [
+    {
+      "loop": 0,
+      "parallel_event": 1,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "recursive_modulation",
+        "boundary_condition_analysis"
+      ]
+    },
+    {
+      "loop": 1,
+      "parallel_event": 2,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "boundary_condition_analysis",
+        "recursive_modulation",
+        "adaptive_variation_selection"
+      ]
+    }
+  ],
+  "branch_results": [
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what conditions do selection pressures and fitness landscapes favor the dominance of growth trajectories over cont",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "condition": "under specific parameter regimes where the mod 3 rule induces periodic attractors versus chaotic basins"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]"
+          ],
+          "scope": {
+            "domain": "periodic attractor regimes"
+          },
+          "qualifier": {
+            "condition": "when the mod 3 rule yields stable periodic attractors"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]"
+          ],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {
+            "condition": "when the mod 3 rule yields chaotic dynamics with high sensitivity to initial conditions"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor neither growth nor contraction trajectories consistently",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]"
+          ],
+          "scope": {
+            "domain": "mixed parameter regimes"
+          },
+          "qualifier": {
+            "condition": "when the mod 3 rule produces transient chaos or intermittent switching between periodic and chaotic behavior"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "reverse the dominance to favor contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]",
+            "[PATH:empirical] Systematic computational experiments on logistic map variants with mod 3 nonlinearities, systematically varying the selection pressure parameter (e.g., growth rate r) and measuring the dominance of contraction vs. growth trajectories in chaotic regimes via Lyapunov exponent spectra and basin boundary analysis. \u2014 Directly tests the hypothesis by simulating the fitness landscape and quantifying trajectory dominance under chaotic mod 3 rules, providing clear numerical evidence for or against a reversal of dominance.",
+            "[PATH:theoretical] Analytical derivation of stability conditions and bifurcation structure for recursive maps with a mod 3 rule, using renormalization group methods or symbolic dynamics to characterize when contraction trajectories become more probable than growth trajectories in chaotic attractor regimes. \u2014 Provides a formal mathematical framework to predict the condition under which dominance reverses, allowing rigorous confirmation or refutation of the hypothesis without reliance on finite simulations.",
+            "[PATH:literature] Literature review of known results on fitness landscapes in chaotic systems, focusing on studies of mod N rules (especially mod 3) in discrete dynamical systems and their implications for evolutionary dynamics, such as work on chaos-driven selection reversals in population biology or adaptive walks. \u2014 Identifies existing theoretical or empirical evidence that indirectly supports or contradicts the hypothesis, contextualizing the claim within established knowledge and revealing gaps that the hypothesis might fill."
+          ],
+          "scope": {
+            "domain": "chaotic attractor regimes"
+          },
+          "qualifier": {
+            "condition": "when the mod 3 rule yields chaotic rather than periodic attractors"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]",
+            "[PATH:empirical] Systematic parameter sweep of mod 3 recursive maps under varying selection pressures, tracking the frequency of contraction vs. growth trajectories across multiple random initial conditions \u2014 Direct simulation can quantify whether contraction trajectories dominate in the fitness landscape, providing empirical confirmation or refutation of the hypothesis within the specified parameter space.",
+            "[PATH:theoretical] Analytical derivation of Lyapunov exponents for mod 3 recursive maps under selective constraints, focusing on periodic attractor regimes \u2014 A theoretical model can establish whether contraction dynamics are inherently more stable or favored by selection, offering a mechanistic explanation that either supports or contradicts the empirical pattern.",
+            "[PATH:literature] Review of known attractor dominance patterns in similar discrete dynamical systems (e.g., logistic map, tent map) under selection-like constraints \u2014 Existing studies on fitness landscapes and periodic attractors may reveal analogous dominance of contraction trajectories, providing comparative evidence to assess the generality of the hypothesis."
+          ],
+          "scope": {
+            "domain": "periodic attractor regimes"
+          },
+          "qualifier": {
+            "temporal": "during the study period of the simulation",
+            "geographic": "in the parameter space of the modeled system"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules under periodic external forcing",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules under periodic external forcing]",
+            "[PATH:empirical] Systematic numerical simulations of the mod-3 recursive map under periodic forcing with varying forcing periods relative to the Lyapunov time, measuring contraction vs. growth trajectory frequencies in fitness landscape terms. \u2014 Directly tests the core claim by quantifying selection pressures across the specified condition, providing statistical evidence for or against the contraction bias.",
+            "[PATH:literature] Literature review of studies on chaotic attractor dynamics and resonance in discrete maps, particularly those linking Lyapunov exponents to external forcing periods (e.g., work on stochastic resonance or period-adding cascades in logistic-like maps). \u2014 Establishes theoretical context and existing findings on whether matching forcing to Lyapunov time induces contraction or expansion in trajectory ensembles, helping to validate or refute the hypothesis from prior knowledge.",
+            "[PATH:theoretical] Analytical derivation of the selection gradient in a simplified fitness landscape applied to the mod-3 map under periodic forcing, using Lyapunov exponent analysis and perturbation theory. \u2014 Provides a formal mathematical framework to predict whether contraction trajectories are favored, offering a rigorous basis to confirm or refute the hypothesized selection pressure without relying solely on simulation."
+          ],
+          "scope": {
+            "domain": "chaotic basin regimes with modulated input"
+          },
+          "qualifier": {
+            "condition": "when the external forcing period matches the Lyapunov time of the chaotic attractor"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]",
+            "[PATH:empirical] Conduct systematic computational experiments comparing the distribution of trajectory lengths (growth vs. contraction) across a range of mod 3 recursive maps under random initial conditions, tracking dominance over 10^4 iterations. \u2014 Directly tests the hypothesis by generating quantitative evidence on whether growth trajectories outcompete contraction ones in simulated chaotic basin regimes, providing empirical confirmation or refutation.",
+            "[PATH:literature] Review literature on fitness landscapes in dynamical systems, particularly studies on Lyapunov exponents and attractor stability in discrete maps (e.g., logistic map, tent map) with modular constraints. \u2014 Existing theoretical and empirical work on selection pressures in chaotic systems may reveal whether growth dominance is a general property or specific to mod 3 rules, contextualizing the hypothesis.",
+            "[PATH:theoretical] Develop a theoretical model analyzing the probability of growth vs. contraction trajectories in mod 3 recursive maps using Markov chain or ergodic theory approaches, focusing on invariant measures and transient dynamics. \u2014 A formal proof or counterexample based on the mathematical structure of mod 3 rules could establish whether selection pressures inherently favor growth, offering robust confirmation or refutation independent of simulation parameters."
+          ],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {
+            "temporal": "during simulated iterations over 10^4 time steps",
+            "geographic": "within computational models of chaotic basin regimes"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms selection pressures and fitness landscapes favor the dominance of contraction trajectories over growth trajectories recursive maps with mod 3 rules in domain 'chaotic basin regimes']"
+          ],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {
+            "temporal": "during the observation period of 2020\u20132024",
+            "geographic": "not specified"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms selection pressures and fitness landscapes favor the dominance of growth trajectories over contraction trajectories recursive maps with mod 3 rules in domain 'chaotic basin regimes']"
+          ],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {
+            "temporal": "for timescales up to 10^6 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "consistently favor contraction trajectories over growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]",
+            "[PATH:empirical] Replicate digital evolution experiments using Avida or similar platforms with mod-3 rule-based fitness functions, measuring trajectory distributions under low mutation rates in early stages. \u2014 Directly tests the hypothesis by observing whether selection favors contraction over growth in controlled digital ecosystems, matching the specified scope.",
+            "[PATH:theoretical] Analytical study of fitness landscapes generated by recursive maps with mod-3 rules, computing local curvature and gradient dynamics to predict trajectory biases. \u2014 Provides a mathematical foundation to confirm or refute the directional selection claim without relying on stochastic simulations, clarifying underlying mechanisms.",
+            "[PATH:literature] Systematic literature review of prior studies on mod-3 rule-based evolutionary dynamics in digital organisms (e.g., work by Adami, Wilke, or Lenski) focusing on early-stage trajectory patterns. \u2014 Leverages existing evidence to assess consistency with the hypothesis, identifying potential contradictions or supportive patterns across different parameter regimes."
+          ],
+          "scope": {
+            "domain": "mixed parameter regimes with low mutation rates"
+          },
+          "qualifier": {
+            "temporal": "during early evolutionary stages before mutation accumulation",
+            "geographic": "within simulated digital ecosystems"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "consistently favor growth trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: selection pressures and fitness landscapes recursive maps with mod 3 rules]",
+            "[PATH:empirical] Replicate the in silico ecosystem simulations with varying periodic boundary conditions and systematically record fitness trajectories under different mod 3 rule sets, comparing growth rates against non-mod-3 recursive maps. \u2014 Direct simulation under the specified temporal and geographic scope can test whether mod 3 rules are consistently favored during early adaptation phases, providing controlled empirical data to confirm or refute the hypothesis.",
+            "[PATH:theoretical] Analytical derivation of the fitness landscape curvature for recursive maps with mod 3 rules versus alternative modular arithmetic constraints, using dynamical systems theory and evolutionary game theory. \u2014 A theoretical model can determine the conditions under which mod 3 rules produce local fitness maxima or stable growth trajectories, clarifying whether selection pressures inherently favor such maps or if the effect depends on specific parameter regimes.",
+            "[PATH:literature] Comprehensive literature review of published studies on modular arithmetic in evolutionary dynamics, focusing on recursive maps and fitness landscapes in silico, to identify any existing evidence or counterexamples. \u2014 Synthesizing prior work can reveal whether the pattern has been observed in other contexts, highlight methodological biases, and assess the generalizability of the hypothesis across different model ecosystems."
+          ],
+          "scope": {
+            "domain": "mixed parameter regimes"
+          },
+          "qualifier": {
+            "temporal": "during early evolutionary adaptation phases",
+            "geographic": "in silico ecosystems with periodic boundary conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "reverse to favor growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {
+            "condition": "when the mod 3 rule is supplemented with a periodic reset mechanism that re-initializes trajectories near high-fitness regions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "selection pressures and fitness landscapes",
+          "predicate": "favor the dominance of growth trajectories over contraction trajectories",
+          "object": "recursive maps with mod 3 rules",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "chaotic basin regimes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How does the introduction of probabilistic transitions in the recursive map T(n) affect the existence of infinitely many",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the introduction of probabilistic transitions in the recursive map T(n)",
+          "predicate": "affects",
+          "object": "the existence of infinitely many divergent orbits for certain positive integers",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the introduction of probabilistic transitions in the recursive map T(n) the existence of infinitely many divergent orbits for certain positive integers]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "increase",
+          "object": "the proportion of divergent orbits among positive integers",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) the proportion of divergent orbits among positive integers]"
+          ],
+          "scope": {
+            "domain": "asymptotic density analysis"
+          },
+          "qualifier": {
+            "temporal": "as n \u2192 \u221e",
+            "geographic": "within the set of positive integers under the Collatz-like map T"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "introduce",
+          "object": "a critical threshold in n beyond which divergence is suppressed",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) a critical threshold in n beyond which divergence is suppressed]"
+          ],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {
+            "temporal": "during the small n regime",
+            "geographic": "simulated environment"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the deterministic backbone of T(n)",
+          "predicate": "constrains",
+          "object": "the effect of probabilistic transitions on orbit divergence",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "competing hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the deterministic backbone of T(n) the effect of probabilistic transitions on orbit divergence]"
+          ],
+          "scope": {
+            "domain": "structural invariants"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^6 iterations of T(n)",
+            "geographic": "within the parameter subspace where deterministic backbone is non-zero"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "decrease",
+          "object": "the proportion of divergent orbits among positive integers",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) the proportion of divergent orbits among positive integers]",
+            "[PATH:empirical] Numerical simulation of ensemble averages of orbit lengths under the perturbed Collatz map for n up to 10^9, with varying perturbation magnitudes and measurement of the proportion of orbits exceeding a large cutoff length \u2014 Direct computational evidence can estimate the asymptotic proportion of divergent orbits by observing trends in the tail of the orbit-length distribution as n increases, providing empirical confirmation or refutation of the hypothesized decrease.",
+            "[PATH:theoretical] Rigorous analysis using stochastic process models (e.g., branching processes or Markov chains) to derive the critical perturbation threshold for almost-sure boundedness, and to compute the asymptotic density of divergent orbits as a function of perturbation strength \u2014 A theoretical model can establish whether small random perturbations generically reduce the proportion of divergent orbits to zero, or whether a positive density persists, thus confirming or refuting the hypothesis with mathematical proof.",
+            "[PATH:literature] Review of known results on stochastic perturbations of Collatz-like maps, including work by Lagarias, Terras, and others on the effect of random noise on the convergence properties of 3x+1-type iterations \u2014 Existing literature may already contain theorems or conjectures about the effect of perturbations on the density of divergent orbits, providing a foundation to either support or contradict the hypothesis without new computation."
+          ],
+          "scope": {
+            "domain": "asymptotic density analysis"
+          },
+          "qualifier": {
+            "temporal": "as n \u2192 \u221e",
+            "geographic": "within the set of positive integers under the Collatz-like map T, when the map is modified to include a small random perturbation at each step"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "decrease",
+          "object": "the proportion of divergent orbits among positive integers",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) the proportion of divergent orbits among positive integers]",
+            "[PATH:empirical] Large-scale computational simulation of T(n) orbits for n up to 2^60, tracking orbit length and divergence indicators \u2014 Systematic high-resolution simulation can provide statistical evidence on whether the proportion of divergent orbits decreases as n grows, by measuring escape rates and comparing to probabilistic models.",
+            "[PATH:theoretical] Analytical study of stochastic models for Collatz-like maps, e.g., random walk approximations with state-dependent transition probabilities \u2014 Rigorous probabilistic analysis of the underlying Markov chain can yield asymptotic bounds on the density of divergent orbits, either confirming or refuting the hypothesized decrease.",
+            "[PATH:literature] Review of known results on the Collatz conjecture and generalized 3x+1 problems, particularly work by Lagarias, Terras, and others on the distribution of stopping times \u2014 Existing literature may contain theorems or empirical trends that directly address the asymptotic density of divergent orbits, providing a baseline to compare against the hypothesis."
+          ],
+          "scope": {
+            "domain": "asymptotic density analysis"
+          },
+          "qualifier": {
+            "temporal": "as n \u2192 \u221e",
+            "geographic": "within the set of positive integers under the Collatz-like map T"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "are eliminated by",
+          "object": "a parity-dependent locking effect in n, rather than a single critical threshold",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) a parity-dependent locking effect in n, rather than a single critical threshold]",
+            "[PATH:empirical] Systematic numerical simulation of T(n) for n=1 to 20 under symmetric boundary conditions, measuring transition probabilities as a function of n parity \u2014 Directly tests the claim by generating high-resolution data on transient dynamics, allowing comparison of locking effects between even and odd n versus a single threshold model.",
+            "[PATH:theoretical] Analytical derivation of the master equation for T(n) in the small-n regime, focusing on parity-dependent fixed points and bifurcation structure \u2014 Provides a formal mathematical basis to determine whether the observed probabilistic transitions are inherently locked to parity or arise from a single critical point, clarifying the mechanism."
+          ],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {
+            "temporal": "during initial transient dynamics for n < 20",
+            "geographic": "under symmetric boundary conditions only"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "do not introduce",
+          "object": "a critical threshold in n beyond which divergence is suppressed",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: probabilistic transitions in T(n) a critical threshold in n beyond which divergence is suppressed]",
+            "[PATH:empirical] Systematic simulation sweep across n values in the small n regime, measuring divergence magnitude and transient phase duration with high temporal resolution \u2014 Directly tests whether a critical threshold exists by observing if divergence suppression emerges abruptly or gradually as n increases, providing clear empirical confirmation or refutation.",
+            "[PATH:theoretical] Analytical derivation of the stochastic dynamics governing T(n) during the initial transient phase, focusing on the probability distribution of divergence events as a function of n \u2014 A mathematical model can predict whether a threshold behavior is inherent to the transition probabilities or if suppression is a continuous effect, clarifying the underlying mechanism.",
+            "[PATH:literature] Review of prior lattice simulation studies on transient divergence in small-n systems, particularly those reporting phase transitions or threshold effects in similar probabilistic models \u2014 Existing published results may already contain evidence for or against a critical threshold, enabling validation without new experiments and contextualizing the disputed hypothesis."
+          ],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {
+            "temporal": "during the initial transient phase of T(n) evolution",
+            "geographic": "within the simulated lattice environment"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "introduce",
+          "object": "a critical threshold in n beyond which divergence is suppressed",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms probabilistic transitions in T(n) introduce a critical threshold in n beyond which divergence is suppressed in domain 'small n regime']"
+          ],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {
+            "temporal": "during simulations conducted in 2023",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "do not introduce",
+          "object": "any critical threshold in n; divergence persists for all n",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms probabilistic transitions in T(n) do not introduce any critical threshold in n; divergence persists for all n in domain 'small n regime']"
+          ],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {
+            "temporal": "2025",
+            "geographic": "global simulation environment"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "emerge only when",
+          "object": "the noise amplitude exceeds a second, higher critical threshold in n",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "small n regime"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "probabilistic transitions in T(n)",
+          "predicate": "do not introduce",
+          "object": "a critical threshold in n beyond which divergence is suppressed",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all n regimes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the specific structural invariants and boundary conditions required for the recursive map T(n) to produce infin",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "requires specific structural invariants and boundary conditions",
+          "object": "to produce infinitely many divergent orbits starting from positive integers",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd to produce infinitely many divergent orbits starting from positive integers]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "While the standard Collatz map is conjectured to have no divergent orbits, certain generalizations or parameterized variants (e.g., with different moduli or scaling factors) may exhibit divergence, but the exact structural invariants (e.g., Lyapunov exponents, modular constraints, or cycle conditions) that guarantee or forbid divergence remain unknown and are actively contested."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "requires specific structural invariants such as Lyapunov exponents exceeding 1",
+          "object": "to produce infinitely many divergent orbits starting from positive integers",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd to produce infinitely many divergent orbits starting from positive integers]"
+          ],
+          "scope": {
+            "domain": "dynamical systems and ergodic theory"
+          },
+          "qualifier": {
+            "assumption": "Lyapunov exponent is computed for the map over positive integers under a suitable invariant measure."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "may produce divergent orbits only if boundary conditions are violated, e.g., by allowing non-standard initial values or modular arithmetic over extensions",
+          "object": "to produce infinitely many divergent orbits starting from positive integers",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd to produce infinitely many divergent orbits starting from positive integers]"
+          ],
+          "scope": {
+            "domain": "number theory and modular constraints"
+          },
+          "qualifier": {
+            "tension": "This perspective implies that under standard integer arithmetic, the map is convergent, contradicting the need for structural invariants."
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "produces divergent orbits from positive integers if and only if the map can be embedded into a flow with a positive topological entropy",
+          "object": "that exceeds the Kolmogorov\u2013Sinai entropy of the shift on the 2-adic integers",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd that exceeds the Kolmogorov\u2013Sinai entropy of the shift on the 2-adic integers]",
+            "[PATH:theoretical] Study of the 2-adic extension of the Collatz map and its ergodic properties, specifically computing the measure-theoretic entropy of the shift on the 2-adic integers under the natural extension of T. \u2014 The hypothesis hinges on comparing the topological entropy of an embedded flow to the Kolmogorov\u2013Sinai entropy of the 2-adic shift. A rigorous calculation or bound on the latter entropy, using known results (e.g., from Lagarias or Terras), would provide a baseline to test whether divergent orbits imply entropy exceeding that value.",
+            "[PATH:theoretical] Construction of a continuous-time flow embedding the discrete Collatz map on the 2-adic integers, and computation of its topological entropy via symbolic dynamics or transfer operators. \u2014 To confirm or refute the hypothesis, one must first establish whether such an embedding exists (as assumed) and then compute the topological entropy of the resulting flow. If the entropy can be shown to be zero or less than the 2-adic shift entropy, the hypothesis would be refuted. This requires new theoretical work on suspension flows and entropy for adic transformations.",
+            "[PATH:empirical] Empirical computational search for divergent orbits (if any exist) in the Collatz map, combined with entropy estimation of the associated flow using numerical invariant measures. \u2014 Although the existence of divergent orbits is an open problem, computational experiments (e.g., checking very large integers or random 2-adic inputs) could detect candidates. If no divergent orbits are found despite a flow entropy exceeding the 2-adic shift entropy, the hypothesis would be weakened. Conversely, if such orbits are found and the entropy condition holds, it would provide supporting evidence."
+          ],
+          "scope": {
+            "domain": "dynamical systems and ergodic theory"
+          },
+          "qualifier": {
+            "assumption": "The embedding into a flow preserves the measure-theoretic structure of the 2-adic extension of the map."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "does not require specific structural invariants like Lyapunov exponents exceeding 1",
+          "object": "to produce infinitely many divergent orbits starting from positive integers",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd to produce infinitely many divergent orbits starting from positive integers]",
+            "[PATH:theoretical] Rigorous analysis of Lyapunov exponents for the 3x+1 map under the parity distribution of iterates, particularly testing whether there exist subsets of positive integers where the average Lyapunov exponent falls below 1, indicating possible divergence \u2014 The hypothesis claims that no specific structural invariants like Lyapunov exponents >1 are needed for divergent orbits. If one can prove that for any positive integer, the Lyapunov exponent is always <1, then divergent orbits become impossible, refuting the hypothesis. Conversely, constructing a set with exponent >1 would support it.",
+            "[PATH:empirical] Computational search for extremely long trajectories (e.g., up to 10^12) with heuristic stopping-time analysis, focusing on numbers with high 'residue classes' that might avoid eventual 1-4-2 cycle \u2014 Empirical evidence of a single divergent orbit would confirm the hypothesis. Systematic scanning of large integers for unbounded growth, combined with statistical models (e.g., random walk approximations), can suggest whether such orbits are plausible or ruled out by known constraints.",
+            "[PATH:literature] Literature review of results on the 3x+1 problem, especially those linking it to ergodic theory and invariant measures (e.g., Terras' theorem, Lagarias' surveys, and recent work on stochastic models) \u2014 Existing theoretical work may already imply that divergent orbits require specific invariants (e.g., measure-preserving properties or entropy conditions). A thorough review could either support the hypothesis by showing no such invariants are needed, or refute it by demonstrating necessary conditions that are not met."
+          ],
+          "scope": {
+            "domain": "dynamical systems and ergodic theory"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global mathematical literature"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "produces divergent orbits exactly when iterated over the 2-adic integers, but only for initial values that are not rational integers (i.e., non-standard 2-adic numbers)",
+          "object": "to produce infinitely many divergent orbits from non-standard 2-adic initial values",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd to produce infinitely many divergent orbits from non-standard 2-adic initial values]",
+            "[PATH:theoretical] Rigorous analysis of the 2-adic extension of the Collatz map using the concept of the '3x+1' function on the ring of 2-adic integers, as studied by Lagarias, Bernstein, and others, focusing on the ergodic properties of the map on non-standard elements. \u2014 This would involve proving or disproving the existence of divergent orbits by examining measure-preserving properties and invariant measures on the 2-adic integers. If the map is ergodic with respect to the Haar measure, then almost all 2-adic integers have bounded orbits, contradicting the hypothesis; if not, divergent orbits may exist for non-standard elements.",
+            "[PATH:empirical] Computational exploration of the map T(n) on a truncated 2-adic representation (e.g., using Hensel lifting or finite-length 2-adic expansions) to simulate orbits for non-integer 2-adic numbers and detect unbounded growth in the 2-adic valuation. \u2014 Empirical simulation on high-precision 2-adic numbers (e.g., using SAGE or custom code) can test whether certain non-standard initial values lead to sequences with decreasing 2-adic valuation without bound, indicating divergence. Such simulations could provide concrete counterexamples or support for the hypothesis.",
+            "[PATH:literature] Literature review of the 2-adic Collatz conjecture, particularly the works of J. H. Conway, K. Mahler, and recent preprints on the dynamics of the Collatz map over p-adic fields, focusing on results about periodic cycles and divergent trajectories. \u2014 A systematic review of existing theorems and conjectures (e.g., Mahler's theorem on the 3x+1 map over 2-adics, or results on the nonexistence of divergent orbits in certain p-adic settings) can clarify whether the hypothesis aligns with or contradicts established mathematical knowledge, potentially refuting or supporting it based on known constraints."
+          ],
+          "scope": {
+            "domain": "2-adic analysis and dynamical systems"
+          },
+          "qualifier": {
+            "temporal": "since the formulation of the 2-adic Collatz conjecture in the late 20th century",
+            "geographic": "within the field of 2-adic analysis and dynamical systems, with no specific geographic restriction"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "always produces convergent orbits under standard integer arithmetic",
+          "object": "leading to a cycle",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd leading to a cycle]",
+            "[PATH:empirical] Systematic computational verification for all n up to a very high bound (e.g., 2^68) using optimized algorithms to detect cycles and divergent trajectories, with results compared to known Collatz-like maps. \u2014 Empirical testing on a massive scale can reveal whether any counterexample (a number that does not converge to a cycle) exists within the tested range, providing strong statistical evidence to support or refute the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis of the map's ergodic properties and its relationship to the classic Collatz conjecture, using techniques from dynamical systems and modular arithmetic to prove that all orbits must eventually enter a cycle. \u2014 A rigorous proof or disproof of convergence would resolve the hypothesis. Studying the map's behavior modulo powers of 2 and 3, and exploring potential invariant measures, could yield a theoretical resolution.",
+            "[PATH:literature] Literature review of known results on generalized Collatz functions, particularly the work of Lagarias, Conway, and others on the undecidability and classification of such maps, to determine if this specific map falls into a known provable or unprovable category. \u2014 Existing research may classify this map as equivalent to a known case (e.g., one with proven convergence or known counterexample), or may show that its behavior is undecidable, directly informing the hypothesis's status."
+          ],
+          "scope": {
+            "domain": "number theory"
+          },
+          "qualifier": {
+            "temporal": "for all n >= 1 under standard integer arithmetic"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "produces infinitely many divergent orbits starting from positive integers",
+          "object": "under standard integer arithmetic without boundary violations",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd produces infinitely many divergent orbits starting from positive integers under standard integer arithmetic without boundary violations in domain 'number theory and modular constraints']"
+          ],
+          "scope": {
+            "domain": "number theory and modular constraints"
+          },
+          "qualifier": {
+            "temporal": "since the formulation of the Collatz conjecture",
+            "geographic": "global mathematical community"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "does not produce any divergent orbits starting from positive integers",
+          "object": "under standard integer arithmetic, as all orbits eventually enter the cycle 1\u21922\u21921",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd does not produce any divergent orbits starting from positive integers under standard integer arithmetic, as all orbits eventually enter the cycle 1\u21922\u21921 in domain 'number theory and modular constraints']"
+          ],
+          "scope": {
+            "domain": "number theory and modular constraints"
+          },
+          "qualifier": {
+            "temporal": "for all positive integer starting values, at all times under standard integer arithmetic",
+            "geographic": "universal, not geographically bounded"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C010": {
+          "id": "C010",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "produces divergent orbits for all positive integers that are congruent to 1 modulo 8 when iterated under a modified rule that replaces (3n+1)/2 with (3n+1)/4 for those inputs",
+          "object": "to produce infinitely many divergent orbits starting from positive integers",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "number theory and modular constraints"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "The recursive map T(n) = n/2 if n even, (3n+1)/2 if n odd",
+          "predicate": "will converge to a cycle for all positive integer initial values following the Collatz conjecture",
+          "object": "to produce orbits that eventually reach the cycle 4, 2, 1",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "number theory"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    },
+    {
+      "operator_id": "boundary_condition_analysis",
+      "question": "What structural properties and invariant conditions must the recursive map T(n) exhibit to ensure that contraction traje",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n)",
+          "predicate": "requires",
+          "object": "a global Lipschitz contraction condition that is uniform across all initial values and all structurally diverse fitness landscapes",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a global Lipschitz contraction condition that is uniform across all initial values and all structurally diverse fitness landscapes]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "condition": "when \u03b1 is below the critical threshold \u03b1\u2080",
+            "tension": "Existing results show that local contraction near fixed points is insufficient to guarantee global contraction trajectories across landscapes with multiple peaks, plateaus, or discontinuities, yet no unified invariant condition has been proven to separate the subcritical regime from the supercritical one for arbitrary landscapes."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n)",
+          "predicate": "satisfies",
+          "object": "a global Lipschitz contraction condition only when the fitness landscape is smooth and unimodal, even when \u03b1 is below the critical threshold \u03b1\u2080",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a global Lipschitz contraction condition only when the fitness landscape is smooth and unimodal, even when \u03b1 is below the critical threshold \u03b1\u2080]"
+          ],
+          "scope": {
+            "domain": "smooth, unimodal landscapes"
+          },
+          "qualifier": {
+            "condition": "when \u03b1 < \u03b1\u2080 and the landscape has continuous second derivatives"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n)",
+          "predicate": "fails to satisfy",
+          "object": "any uniform global Lipschitz contraction condition across landscapes with multiple peaks or discontinuities, regardless of \u03b1 being below \u03b1\u2080",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) any uniform global Lipschitz contraction condition across landscapes with multiple peaks or discontinuities, regardless of \u03b1 being below \u03b1\u2080]",
+            "[CONFLICT] The claim asserts that T(n) fails any uniform global Lipschitz contraction condition in multi-peak/discontinuous landscapes regardless of \u03b1 < \u03b1\u2080, but the low confidence (0.42) and lack of conclusive evidence suggest the claim is not well-supported, leading to dispute over whether such failure is guaranteed."
+          ],
+          "scope": {
+            "domain": "landscapes with multiple peaks, plateaus, or discontinuities"
+          },
+          "qualifier": {
+            "condition": "when the landscape lacks a single Lipschitz constant valid for all initial values"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T2",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the existence of a unified invariant condition",
+          "predicate": "is",
+          "object": "a necessary but not sufficient condition for separating subcritical from supercritical regimes in arbitrary landscapes",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: the existence of a unified invariant condition a necessary but not sufficient condition for separating subcritical from supercritical regimes in arbitrary landscapes]"
+          ],
+          "scope": {
+            "domain": "arbitrary structurally diverse fitness landscapes"
+          },
+          "qualifier": {
+            "tension": "while local contraction near fixed points is provable, global contraction may require additional topological constraints that are not yet characterized"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n)",
+          "predicate": "fails to satisfy",
+          "object": "a global Lipschitz contraction condition when the fitness landscape has any non-zero third derivative at the optimum, even if the landscape is smooth and unimodal and \u03b1 < \u03b1\u2080",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a global Lipschitz contraction condition when the fitness landscape has any non-zero third derivative at the optimum, even if the landscape is smooth and unimodal and \u03b1 < \u03b1\u2080]",
+            "[PATH:theoretical] Analytical derivation of the Lipschitz constant for T(n) on a family of smooth, unimodal test functions (e.g., quartic polynomials) with controlled third derivative at the optimum, comparing cases where third derivative is zero vs. non-zero. \u2014 Directly tests the hypothesis by computing the Lipschitz constant analytically for small n and generalizing; a non-zero third derivative should break the contraction if the hypothesis holds.",
+            "[PATH:empirical] Systematic numerical simulation of T(n) on randomly generated smooth, unimodal landscapes with prescribed non-zero third derivative at the optimum, measuring the Lipschitz constant via finite differences over many iterations and initial conditions. \u2014 Provides empirical confirmation or refutation across a wide parameter space (including \u03b1 < \u03b1\u2080) and can detect counterexamples where contraction still holds despite non-zero third derivative.",
+            "[PATH:literature] Review of known results on the convergence of evolutionary algorithms on landscapes with non-zero higher-order derivatives, particularly focusing on conditions for global contraction in gradient-like dynamics (e.g., from the literature on evolution strategies or natural gradient methods). \u2014 Existing theoretical work may already address or contradict the claim, offering a basis for refutation or supporting the need for new analysis."
+          ],
+          "scope": {
+            "domain": "smooth, unimodal landscapes with non-zero third derivative at the optimum"
+          },
+          "qualifier": {
+            "temporal": "for all n \u2265 1"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n)",
+          "predicate": "does not require",
+          "object": "a global Lipschitz contraction condition to be satisfied in a smooth, unimodal landscape, even when \u03b1 is below the critical threshold \u03b1\u2080",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a global Lipschitz contraction condition to be satisfied in a smooth, unimodal landscape, even when \u03b1 is below the critical threshold \u03b1\u2080]",
+            "[PATH:empirical] Conduct a parameterized numerical study of T(n) on a family of smooth, unimodal test functions (e.g., Rastrigin, Ackley, or custom C^2 functions) with \u03b1 varying below \u03b1\u2080, measuring the Lipschitz constant of T(n) iterates to check if contraction fails locally. \u2014 Directly tests the claim by generating simulated evidence under controlled conditions, quantifying whether a global Lipschitz contraction condition is unnecessary for convergence or stability.",
+            "[PATH:theoretical] Develop a theoretical analysis using the mean value theorem and properties of smooth unimodal functions (e.g., bounded second derivatives) to derive sufficient conditions for T(n) convergence without global Lipschitz contraction, focusing on local contraction near the optimum. \u2014 Provides a mathematical proof or counterexample to the hypothesis, clarifying the role of local vs. global Lipschitz conditions in the specified landscape.",
+            "[PATH:literature] Review existing literature on recursive maps in optimization (e.g., gradient descent with non-Lipschitz gradients, or contraction mappings in non-Euclidean metrics) and on convergence criteria for iterative methods in smooth unimodal landscapes. \u2014 Identifies prior results or counterexamples that either support or contradict the hypothesis, situating the claim within established knowledge and potentially revealing overlooked conditions."
+          ],
+          "scope": {
+            "domain": "smooth, unimodal landscapes"
+          },
+          "qualifier": {
+            "temporal": "for all n \u2265 1"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n)",
+          "predicate": "satisfies",
+          "object": "a local Lipschitz contraction condition on each connected component of the landscape, provided \u03b1 is below a component-specific threshold \u03b1_c",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a local Lipschitz contraction condition on each connected component of the landscape, provided \u03b1 is below a component-specific threshold \u03b1_c]",
+            "[PATH:empirical] Numerical simulation of T(n) over a family of synthetic landscapes with controlled peak/plateau geometry, varying \u03b1 and initial conditions confined to a single component, to measure local Lipschitz constants and identify thresholds \u03b1_c. \u2014 Directly tests the contraction condition by computing empirical Lipschitz constants across components and \u03b1 values, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Analytical derivation of the Lipschitz constant for T(n) on a piecewise smooth landscape, using tools from nonlinear analysis and contraction mapping theory, under the assumption that the landscape is a disjoint union of compact, path-connected components. \u2014 Establishes a rigorous mathematical condition relating \u03b1 to component-specific geometric properties (e.g., curvature, diameter), which can confirm the threshold existence or reveal counterexamples.",
+            "[PATH:literature] Review of existing literature on recursive maps on disconnected or multi-peaked domains, focusing on results about component-wise contraction and threshold behavior (e.g., in iterative function systems or dynamical systems on fractals). \u2014 Provides context and possibly prior proofs or disproofs of similar claims, helping to validate or refute the hypothesis by analogy or direct extension."
+          ],
+          "scope": {
+            "domain": "landscapes with multiple peaks, plateaus, or discontinuities"
+          },
+          "qualifier": {
+            "condition": "when the initial value is confined to a single connected component of the landscape"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n)",
+          "predicate": "can satisfy",
+          "object": "a local Lipschitz contraction condition on sub-domains of landscapes with multiple peaks or discontinuities",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) a local Lipschitz contraction condition on sub-domains of landscapes with multiple peaks or discontinuities]",
+            "[PATH:empirical] Construct test landscapes with controlled multiple peaks and discontinuities, then simulate T(n) iterations to measure local Lipschitz constants across sub-domains; compare against known contraction thresholds. \u2014 Direct simulation can provide quantitative evidence for or against the local Lipschitz contraction property, especially by isolating sub-domains where discontinuities or multiple peaks may cause expansion.",
+            "[PATH:theoretical] Analyze T(n) as a composition of piecewise-defined operators on a metric space with a non-smooth landscape; derive bounds on the Lipschitz constant using subgradient or Clarke generalized gradient techniques. \u2014 A theoretical analysis can establish necessary conditions for T(n) to be a local contraction, clarifying whether discontinuities or multiple peaks inherently break the contraction property.",
+            "[PATH:literature] Review literature on recursive maps in non-smooth dynamical systems (e.g., iterated function systems with overlaps, piecewise affine maps) for analogous results on local contraction in the presence of discontinuities. \u2014 Existing work on contraction in non-smooth landscapes may provide precedents or counterexamples that directly inform the status of this hypothesis."
+          ],
+          "scope": {
+            "domain": "sub-domains of landscapes with multiple peaks, plateaus, or discontinuities"
+          },
+          "qualifier": {
+            "temporal": "for all n \u2265 1",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 8
+    },
+    {
+      "operator_id": "recursive_modulation",
+      "question": "How do the initial conditions of an ecosystem influence the critical threshold at which species diversity shifts from ex",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "Initial conditions of an ecosystem (e.g., species richness, evenness, resource availability)",
+          "predicate": "modulate",
+          "object": "the critical threshold at which species diversity shifts from expansion to decline, with the effect depending on environmental landscape complexity",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Initial conditions of an ecosystem (e.g., species richness, evenness, resource availability) the critical threshold at which species diversity shifts from expansion to decline, with the effect depending on environmental landscape complexity]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "Initial species richness and evenness",
+          "predicate": "lower",
+          "object": "the critical threshold for diversity decline in homogeneous landscapes",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes]"
+          ],
+          "scope": {
+            "domain": "simple, low-complexity environments"
+          },
+          "qualifier": {
+            "temporal": "during initial community assembly",
+            "geographic": "not specified"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "High resource availability at the start",
+          "predicate": "raises",
+          "object": "the critical threshold for diversity decline, but only in heterogeneous landscapes",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline, but only in heterogeneous landscapes]"
+          ],
+          "scope": {
+            "domain": "complex, patchy environments"
+          },
+          "qualifier": {
+            "temporal": "initial phase of resource pulse, before competitive exclusion",
+            "geographic": "heterogeneous landscapes with high patch contrast"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "Landscape complexity itself",
+          "predicate": "overrides",
+          "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: Landscape complexity itself the effect of initial conditions on the diversity threshold, making initial richness irrelevant]"
+          ],
+          "scope": {
+            "domain": "highly fragmented or temporally variable landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": true,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "Initial species richness and evenness",
+          "predicate": "lower",
+          "object": "the critical threshold for diversity decline in homogeneous landscapes only when interspecific competition is weak",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes only when interspecific competition is weak]",
+            "[PATH:empirical] Field experiment manipulating initial species richness and evenness in replicated homogeneous grassland plots with weak interspecific competition (e.g., via nutrient limitation or disturbance), measuring diversity decline thresholds over early successional stages. \u2014 Directly tests whether initial community structure affects the critical threshold for diversity loss under controlled competition levels, matching the hypothesis's scope and temporal qualifier.",
+            "[PATH:literature] Meta-analysis of published biodiversity experiments comparing diversity decline rates in homogeneous landscapes, stratified by competition strength (e.g., using functional trait dissimilarity or phylogenetic distance as proxies). \u2014 Synthesizes existing data to assess whether the predicted interaction between initial richness/evenness and competition strength holds across multiple systems, providing broader support or refutation.",
+            "[PATH:theoretical] Individual-based simulation model parameterized for temperate/boreal homogeneous landscapes, systematically varying initial richness and evenness under weak vs. strong competition scenarios, with stochastic disturbance. \u2014 Allows precise testing of causal mechanisms and threshold behavior under controlled conditions, complementing empirical work and clarifying the role of competition intensity."
+          ],
+          "scope": {
+            "domain": "simple, low-complexity environments with weak competitive interactions"
+          },
+          "qualifier": {
+            "temporal": "during early successional stages or post-disturbance periods",
+            "geographic": "temperate and boreal homogeneous landscapes"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "Initial species richness and evenness",
+          "predicate": "raise",
+          "object": "the critical threshold for diversity decline in homogeneous landscapes",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes]",
+            "[PATH:empirical] Controlled mesocosm experiments with manipulated initial species richness and evenness in homogeneous microcosms (e.g., bacterial or plant communities), tracking diversity decline thresholds over early successional stages. \u2014 Directly tests the effect of initial community structure on the critical threshold where diversity begins to decline, under low-complexity conditions as specified.",
+            "[PATH:theoretical] Neutral theory simulations (e.g., Hubbell's unified neutral theory) parameterized for homogeneous landscapes, systematically varying initial richness and evenness to identify threshold dynamics in early succession. \u2014 Provides a formal mathematical framework to isolate the impact of initial conditions on diversity decline thresholds, complementing empirical tests.",
+            "[PATH:literature] Meta-analysis of published successional chronosequences in simple environments (e.g., old fields, early primary succession) that report initial species richness and evenness alongside subsequent diversity trajectories. \u2014 Synthesizes existing evidence across systems to assess whether the hypothesized relationship holds broadly, leveraging natural variation in initial conditions."
+          ],
+          "scope": {
+            "domain": "simple, low-complexity environments"
+          },
+          "qualifier": {
+            "temporal": "during simulated early successional stages",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "High resource availability at the start",
+          "predicate": "lowers",
+          "object": "the critical threshold for diversity decline in homogeneous landscapes",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline in homogeneous landscapes]",
+            "[PATH:empirical] Long-term grassland mesocosm experiments manipulating initial nitrogen and water availability in homogeneous soil substrates, tracking species richness over multiple generations \u2014 Directly tests whether high initial resource availability reduces the extinction threshold by promoting early dominant species that exclude others when resources decline.",
+            "[PATH:theoretical] Spatially explicit metacommunity models (e.g., Tilman's resource competition model) parameterized with homogeneous landscapes and variable initial resource levels, analyzing extinction debt \u2014 Provides mechanistic predictions for how initial resource pulses alter the critical diversity threshold, allowing comparison with empirical data.",
+            "[PATH:literature] Meta-analysis of published studies on initial resource enrichment effects on plant or microbial community diversity in uniform habitats (e.g., agricultural monocultures, chemostats) \u2014 Synthesizes existing evidence across systems to assess whether high initial resources consistently lower the threshold for diversity decline, controlling for confounding factors."
+          ],
+          "scope": {
+            "domain": "uniform, non-patchy environments"
+          },
+          "qualifier": {
+            "temporal": "initial establishment phase",
+            "geographic": "homogeneous landscapes"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "High resource availability at the start",
+          "predicate": "lowers",
+          "object": "the critical threshold for diversity decline, regardless of landscape heterogeneity",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline, regardless of landscape heterogeneity]",
+            "[PATH:empirical] Meta-analysis of long-term grassland fertilization experiments (e.g., Park Grass Experiment, Rothamsted) comparing initial nitrogen pulse effects on species richness decay rates across homogeneous vs. heterogeneous soil patches \u2014 Directly tests whether high initial resource availability consistently lowers the diversity decline threshold across varying landscape heterogeneity, providing real-world validation or refutation of the simulated evidence.",
+            "[PATH:theoretical] Theoretical modeling study using spatially explicit consumer-resource models (e.g., Tilman's resource-ratio theory extended with stochastic patch dynamics) to systematically vary initial resource pulse magnitude and landscape heterogeneity, measuring the critical threshold for local extinction \u2014 Allows isolation of the causal mechanism and quantifies the interaction effect between initial resource availability and heterogeneity, clarifying whether the relationship holds universally or depends on specific parameter regimes.",
+            "[PATH:literature] Re-analysis of published microcosm experiments (e.g., bacterial or protist communities) with controlled resource gradients and spatial structure, focusing on the initial phase of resource addition and subsequent diversity trajectories \u2014 Provides a broad empirical test across multiple studies, leveraging existing data to assess the generalizability of the hypothesis and identify potential confounding factors like community composition or dispersal rates."
+          ],
+          "scope": {
+            "domain": "all environmental types"
+          },
+          "qualifier": {
+            "temporal": "initial phase of resource pulse",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "High resource availability at the start",
+          "predicate": "raises",
+          "object": "the critical threshold for diversity decline in heterogeneous landscapes",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms High resource availability at the start raises the critical threshold for diversity decline in heterogeneous landscapes in domain 'complex, patchy environments']"
+          ],
+          "scope": {
+            "domain": "complex, patchy environments"
+          },
+          "qualifier": {
+            "temporal": "initial phase of resource pulse",
+            "geographic": "complex, patchy environments globally"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "High resource availability at the start",
+          "predicate": "does not raise",
+          "object": "the critical threshold for diversity decline in heterogeneous landscapes",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms High resource availability at the start does not raise the critical threshold for diversity decline in heterogeneous landscapes in domain 'complex, patchy environments']"
+          ],
+          "scope": {
+            "domain": "complex, patchy environments"
+          },
+          "qualifier": {
+            "temporal": "initial time step of simulation",
+            "geographic": "not specified"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "Landscape complexity itself",
+          "predicate": "overrides",
+          "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant, but only in landscapes where the temporal variability exceeds a critical autocorrelation threshold",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: Landscape complexity itself the effect of initial conditions on the diversity threshold, making initial richness irrelevant, but only in landscapes where the temporal variability exceeds a critical autocorrelation threshold]",
+            "[PATH:empirical] Long-term field experiments in fragmented grasslands with varying temporal variability, comparing diversity outcomes from high vs. low initial richness under different autocorrelation regimes \u2014 Directly tests whether landscape complexity (e.g., fragmentation and temporal variability) overrides initial richness effects on diversity thresholds, by manipulating initial richness and measuring diversity over time in landscapes with known autocorrelation.",
+            "[PATH:theoretical] Spatially explicit metacommunity models that systematically vary temporal autocorrelation and fragmentation while tracking the influence of initial species richness on equilibrium diversity \u2014 Allows controlled simulation to isolate the interaction between landscape complexity and initial conditions, testing the critical autocorrelation threshold predicted by the hypothesis.",
+            "[PATH:literature] Meta-analysis of existing empirical studies on diversity\u2013disturbance relationships, focusing on studies that report initial community composition and temporal variability metrics \u2014 Synthesizes available evidence across systems to see if initial richness becomes irrelevant when temporal variability exceeds a threshold, providing a broad test without new data collection."
+          ],
+          "scope": {
+            "domain": "highly fragmented or temporally variable landscapes with low temporal autocorrelation"
+          },
+          "qualifier": {
+            "temporal": "during periods of high temporal variability exceeding the critical autocorrelation threshold",
+            "geographic": "in highly fragmented or temporally variable landscapes with low temporal autocorrelation"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "Initial conditions",
+          "predicate": "significantly influence",
+          "object": "the diversity threshold, regardless of landscape complexity",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "highly fragmented or temporally variable landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "B003": {
+          "id": "B003",
+          "subject": "Landscape complexity itself",
+          "predicate": "overrides",
+          "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant",
+          "status": "hypothesis",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "highly fragmented or temporally variable landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "B004": {
+          "id": "B004",
+          "subject": "Initial richness",
+          "predicate": "modulates",
+          "object": "the diversity threshold even in highly fragmented or temporally variable landscapes, so landscape complexity does not fully override its effect",
+          "status": "hypothesis",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "highly fragmented or temporally variable landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "C015": {
+          "id": "C015",
+          "subject": "High resource availability at the start",
+          "predicate": "lowers",
+          "object": "the critical threshold for diversity decline in homogeneous landscapes",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "uniform, low-contrast environments"
+          },
+          "qualifier": {
+            "temporal": "initial phase of resource pulse, before competitive exclusion",
+            "geographic": "homogeneous landscapes with low patch contrast"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C016": {
+          "id": "C016",
+          "subject": "High resource availability at the start",
+          "predicate": "lowers",
+          "object": "the critical threshold for diversity decline, irrespective of landscape heterogeneity",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all ecological environments"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 10
+    },
+    {
+      "operator_id": "adaptive_variation_selection",
+      "question": "How does the interplay between the parameter \u03b1 and the initial values of the recursive map T(n) influence the dominance ",
+      "outcome": "BRANCH_COMPLETE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "determines the dominance of growth versus contraction trajectories",
+          "object": "across varying levels of fitness landscape ruggedness",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) across varying levels of fitness landscape ruggedness]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "determines the dominance of growth versus contraction trajectories",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is low",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) across varying levels of fitness landscape ruggedness when ruggedness is low]"
+          ],
+          "scope": {
+            "domain": "low-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "for initial generations of the recursive process",
+            "geographic": "in simulated fitness landscapes"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "is overwhelmed by stochastic effects, such that dominance of growth versus contraction trajectories becomes unpredictable",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is high",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) across varying levels of fitness landscape ruggedness when ruggedness is high]"
+          ],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "during periods of high environmental fluctuation",
+            "geographic": "in silico fitness landscapes with no spatial constraint"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the recursive map T(n)",
+          "predicate": "exhibits a threshold effect where the interplay between parameter \u03b1 and initial values only matters within a narrow band of ruggedness",
+          "object": "outside of which either growth or contraction dominates regardless of initial conditions",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) outside of which either growth or contraction dominates regardless of initial conditions]"
+          ],
+          "scope": {
+            "domain": "all ruggedness levels but with a nonlinear response"
+          },
+          "qualifier": {
+            "temporal": "for parameter \u03b1 values in the range [0.2, 0.8] and initial values between 0 and 1, based on simulations conducted prior to 2023",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n) when ruggedness is low",
+          "predicate": "determines the dominance of growth versus contraction trajectories only when the initial value of T(n) lies below a critical threshold",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is low",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) when ruggedness is low across varying levels of fitness landscape ruggedness when ruggedness is low]",
+            "[PATH:empirical] Systematic simulation experiments varying \u03b1 (e.g., 0.1 to 0.9) and initial T(0) values (both below and above a critical threshold) in low-ruggedness landscapes (ruggedness < 0.3), measuring growth vs. contraction trajectories over n \u2264 100. \u2014 Directly tests the hypothesized conditional dominance by generating controlled data across the specified parameter space, allowing detection of the threshold effect.",
+            "[PATH:theoretical] Analytical derivation of the stability conditions for the recursive map T(n) under low ruggedness, focusing on the fixed points and bifurcation behavior as a function of \u03b1 and initial conditions. \u2014 Provides a formal mathematical basis to confirm whether a critical threshold exists and under what parameter combinations growth or contraction dominates, independent of simulation noise."
+          ],
+          "scope": {
+            "domain": "low-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "for initial time steps n \u2264 100",
+            "geographic": "in simulated fitness landscapes with ruggedness parameter < 0.3"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "external stochastic influences",
+          "predicate": "override the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "object": "in determining the dominance of growth versus contraction trajectories",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: external stochastic influences in determining the dominance of growth versus contraction trajectories]",
+            "[PATH:empirical] Controlled simulation experiments manipulating the variance and frequency of external stochastic shocks (e.g., random perturbations to fitness values or selection pressure) across generations 1\u2013500 in low-ruggedness fitness landscapes, while recording the dominance of growth vs. contraction trajectories. \u2014 Directly tests whether external stochastic influences override the \u03b1-initial value interplay by systematically varying noise levels and observing trajectory outcomes; can confirm or refute the hypothesized override effect.",
+            "[PATH:theoretical] Analytical derivation of the recursive map T(n) under stochastic forcing, extending deterministic stability analysis to include noise terms that interact with parameter \u03b1 and initial conditions. \u2014 Provides a formal mathematical framework to determine conditions under which stochastic influences dominate the \u03b1-initial value interplay, offering refutable predictions for simulation verification.",
+            "[PATH:literature] Literature review of prior studies on stochastic effects in evolutionary dynamics on low-ruggedness landscapes, focusing on the early-to-mid generations (e.g., work by Kauffman, Weinberger, or recent NK-model extensions with noise). \u2014 Identifies existing empirical or theoretical evidence that may already confirm or contradict the hypothesis, guiding further experimentation and model refinement."
+          ],
+          "scope": {
+            "domain": "low-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "during the early to mid-stages of evolutionary search (generations 1\u2013500)",
+            "geographic": "in silico, under controlled simulation conditions with no spatial constraints"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "is dominated by initial value sensitivity rather than \u03b1, such that growth trajectories are fully determined by the parity of the initial seed",
+          "object": "across high-ruggedness fitness landscapes when the landscape is also neutral",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) across high-ruggedness fitness landscapes when the landscape is also neutral]",
+            "[PATH:empirical] Systematic simulation study varying \u03b1 across multiple orders of magnitude while controlling for initial seed parity in high-ruggedness neutral landscapes, measuring growth trajectory divergence \u2014 Directly tests whether \u03b1 or initial parity dominates by isolating each factor; if trajectories cluster by parity across \u03b1 values, hypothesis is supported; if \u03b1 causes significant within-parity variation, hypothesis is refuted.",
+            "[PATH:theoretical] Analytical derivation of the recursive map T(n) under high-ruggedness neutral conditions, focusing on the influence of \u03b1 on the Lyapunov exponent or sensitivity to initial conditions \u2014 Provides a formal understanding of whether \u03b1 can ever overcome parity-based determinism; if theory shows \u03b1's effect is bounded or negligible relative to parity, the hypothesis is confirmed; otherwise, it is refuted.",
+            "[PATH:literature] Literature review of prior work on recursive maps in neutral fitness landscapes, particularly studies contrasting parameter sensitivity vs. initial value effects \u2014 Identifies existing empirical or theoretical results that may already support or contradict the hypothesis, avoiding redundant effort and providing context for the disputed status."
+          ],
+          "scope": {
+            "domain": "high-ruggedness, neutral fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "under simulation conditions with discrete-time recursion up to 10^5 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "remains a decisive factor in determining growth versus contraction trajectories",
+          "object": "even across varying levels of fitness landscape ruggedness when ruggedness is high",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the interplay between parameter \u03b1 and initial values of the recursive map T(n) even across varying levels of fitness landscape ruggedness when ruggedness is high]",
+            "[PATH:empirical] Systematic simulation of T(n) across a grid of \u03b1 values and initial conditions on NK fitness landscapes with high ruggedness (K near N-1), tracking growth vs. contraction within the first 500 iterations \u2014 Directly tests the hypothesis by varying \u03b1 and initial values while controlling ruggedness, providing data to assess whether their interplay remains decisive under high ruggedness.",
+            "[PATH:theoretical] Analytical derivation of threshold conditions for \u03b1 and initial values in high-ruggedness regimes, possibly using mean-field approximations or Lyapunov exponent analysis of T(n) \u2014 A formal model can determine if the interplay is mathematically necessary or becomes dominated by stochastic effects at high ruggedness, offering a refutable prediction.",
+            "[PATH:literature] Review of existing literature on recursive maps in rugged fitness landscapes, focusing on studies that report the influence of \u03b1 and initial conditions on trajectory outcomes (e.g., in evolutionary computation or adaptive walks) \u2014 Synthesizing prior evidence may reveal whether the hypothesis is supported or contradicted by published results, especially in high-ruggedness contexts."
+          ],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "within the first 500 iterations of the recursive map T(n)"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "is overwhelmed by stochastic effects, making dominance of growth versus contraction trajectories unpredictable",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is high",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the interplay between parameter \u03b1 and initial values of the recursive map T(n) is overwhelmed by stochastic effects, making dominance of growth versus contraction trajectories unpredictable across varying levels of fitness landscape ruggedness when ruggedness is high in domain 'high-ruggedness fitness landscapes']"
+          ],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "during the late evolutionary stages of the simulation runs",
+            "geographic": "within the computational environment of the NK fitness landscape model"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "remains determinative despite stochastic effects, such that dominance of growth versus contraction trajectories is predictable",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is high",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the interplay between parameter \u03b1 and initial values of the recursive map T(n) remains determinative despite stochastic effects, such that dominance of growth versus contraction trajectories is predictable across varying levels of fitness landscape ruggedness when ruggedness is high in domain 'high-ruggedness fitness landscapes']"
+          ],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "during periods of sustained high ruggedness in simulated evolutionary dynamics",
+            "geographic": "applicable to abstract fitness landscapes in computational models, not tied to specific geographic regions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the recursive map T(n)",
+          "predicate": "exhibits a sharp phase transition at a critical \u03b1 value, below which initial conditions determine long-term behavior and above which they become irrelevant",
+          "object": "with the critical \u03b1 value itself depending on the initial value's distance from the map's fixed point",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) with the critical \u03b1 value itself depending on the initial value's distance from the map's fixed point]",
+            "[PATH:empirical] Systematic numerical bifurcation analysis of T(n) across \u03b1 in [0.2, 0.8] with multiple initial conditions at varying distances from the fixed point, measuring long-term orbit stability after 10^6 iterations \u2014 This would directly test whether a sharp phase transition exists and whether the critical \u03b1 shifts with initial distance, providing clear confirmatory or refutatory data.",
+            "[PATH:theoretical] Analytical derivation of the map's Lyapunov exponent as a function of \u03b1 and initial condition, using linearization around the fixed point \u2014 This would establish mathematically whether the transition is sharp and whether the critical \u03b1 depends on distance, offering a rigorous foundation for or against the hypothesis.",
+            "[PATH:literature] Review of existing literature on one-dimensional recursive maps with parameter-dependent stability transitions, particularly those with distance-dependent critical thresholds \u2014 This would place the hypothesis in the context of known phenomena (e.g., in logistic map variants) and identify analogous cases that either support or contradict the claimed distance dependence."
+          ],
+          "scope": {
+            "domain": "\u03b1 in [0.2, 0.8] and initial values in [0,1]"
+          },
+          "qualifier": {
+            "temporal": "for iteration counts up to 10^6",
+            "geographic": "in simulated computational environments"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the recursive map T(n)",
+          "predicate": "does not exhibit a threshold effect",
+          "object": "parameter \u03b1 and initial values influence outcomes across a broad range of ruggedness levels, without dominance of growth or contraction",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all ruggedness levels with a linear or complex nonlinear response"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "is deterministically controlled by the parity of initial values when \u03b1 is an integer multiple of \u03c0, eliminating stochastic dominance",
+          "object": "across varying levels of fitness landscape ruggedness when ruggedness is high",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {
+            "temporal": "during periods of high environmental fluctuation",
+            "geographic": "in silico fitness landscapes with no spatial constraint"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "the interplay between parameter \u03b1 and initial values of the recursive map T(n)",
+          "predicate": "remains a significant determinant of trajectory outcomes",
+          "object": "even when stochastic effects and high ruggedness are present",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "high-ruggedness fitness landscapes"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 10
+    }
+  ],
+  "n_branches": 6,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "exhibits deterministic blow-up for initial values exactly at non-differentiable boundary points",
+      "object": "because fractal escape corridors collapse into fixed repelling orbits that force divergence in finite iterations",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because fractal escape corridors collapse into fixed repelling orbits that force divergence in finite iterations]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "exhibits deterministic blow-up for initial values exactly at non-differentiable boundary points",
+      "object": "because the fractal escape corridors collapse into fixed repelling orbits",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the fractal escape corridors collapse into fixed repelling orbits]"
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems"
+      },
+      "qualifier": {
+        "condition": "initial values at non-differentiable boundary points"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "may instead show bounded oscillatory behavior for initial values near non-differentiable boundary points",
+      "object": "because the escape corridors could be partially stable under small perturbations",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the escape corridors could be partially stable under small perturbations]"
+      ],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "condition": "initial values near but not exactly at boundary points"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "might not have any blow-up for initial values exactly at non-differentiable boundary points",
+      "object": "because the map\u2019s non-differentiability could introduce measure-zero exceptions that prevent divergence in finite iterations",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the map\u2019s non-differentiability could introduce measure-zero exceptions that prevent divergence in finite iterations]"
+      ],
+      "scope": {
+        "domain": "measure-theoretic dynamics"
+      },
+      "qualifier": {
+        "condition": "if non-differentiable points form a set of zero Lebesgue measure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "exhibits deterministic blow-up for initial values exactly at non-differentiable boundary points",
+      "object": "because the collapse of fractal escape corridors into fixed repelling orbits is mediated by a codimension-one bifurcation that eliminates all nearby periodic windows",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the collapse of fractal escape corridors into fixed repelling orbits is mediated by a codimension-one bifurcation that eliminates all nearby periodic windows]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) for \u03b1 < \u03b1\u2080, scanning initial conditions at non-differentiable boundary points and tracking orbit divergence times \u2014 Direct computational evidence can confirm deterministic blow-up by verifying that trajectories diverge to infinity in finite time precisely at boundary points, while nearby points remain bounded, and that no periodic windows survive in the neighborhood.",
+        "[PATH:theoretical] Bifurcation analysis of the codimension-one event linking fractal escape corridors to repelling fixed points, using symbolic dynamics and renormalization techniques \u2014 A rigorous mathematical proof or analytical derivation showing that the collapse of escape corridors corresponds to a saddle-node or homoclinic bifurcation of codimension one would validate the causal mechanism and predict the elimination of periodic windows.",
+        "[PATH:literature] Literature review of known results on boundary crises and fractal basin boundaries in piecewise-smooth maps (e.g., work by Nusse, Yorke, and Lai) \u2014 Existing studies on boundary crises and the disappearance of chaotic attractors in piecewise-smooth systems may provide analogous mechanisms or counterexamples that support or refute the hypothesized blow-up behavior at non-differentiable points."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems"
+      },
+      "qualifier": {
+        "temporal": "for parameter values \u03b1 < \u03b1\u2080 and initial conditions exactly at non-differentiable boundary points"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "does not exhibit deterministic blow-up for initial values exactly at non-differentiable boundary points",
+      "object": "because the fractal escape corridors remain stable and do not collapse into fixed repelling orbits",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the fractal escape corridors remain stable and do not collapse into fixed repelling orbits]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) for \u03b1 values just below \u03b1\u2080, with initial conditions chosen exactly at non-differentiable boundary points of the fractal escape corridors, monitoring orbit behavior over long time horizons to detect any eventual blow-up or stability. \u2014 Direct simulation can test whether the claimed stability holds in practice, revealing if small numerical errors or chaotic sensitivity lead to blow-up, thereby confirming or refuting the hypothesis.",
+        "[PATH:theoretical] Rigorous analysis of the Lyapunov exponents and invariant measures for T(n) at non-differentiable points, using techniques from ergodic theory and symbolic dynamics to characterize the stability of escape corridors. \u2014 Theoretical computation of stability criteria (e.g., Lyapunov exponents) can determine if the fractal corridors are indeed stable and non-collapsing, providing a mathematical proof or counterexample to the claim.",
+        "[PATH:literature] Review of existing literature on piecewise smooth maps with fractal boundaries, particularly studies on the border-collision bifurcations and the behavior of orbits at critical points in similar recursive systems. \u2014 Comparing with known results on related maps (e.g., the logistic map with discontinuities or the Lozi map) can indicate whether stable escape corridors are typical or if non-differentiable points generically lead to blow-up, contextualizing the hypothesis."
+      ],
+      "scope": {
+        "domain": "discrete dynamical systems"
+      },
+      "qualifier": {
+        "temporal": "for all discrete time steps n \u2265 0",
+        "geographic": "in the phase space of the recursive map T(n)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "will converge to a periodic cycle for initial values lying exactly on non-differentiable boundary points",
+      "object": "because the escape corridors collapse to measure-zero attractors under exact boundary alignment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because the escape corridors collapse to measure-zero attractors under exact boundary alignment]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) for \u03b1 values just below \u03b1\u2080, with initial conditions on the non-differentiable boundary, tracking convergence to periodic cycles and measuring the basin of attraction size as a function of alignment precision. \u2014 Directly tests whether initial conditions on non-differentiable points lead to periodic cycles, and whether escape corridors indeed collapse to measure-zero attractors, by varying numerical precision and observing attractor structure.",
+        "[PATH:theoretical] Analytic derivation of the Lyapunov exponents and escape rates for trajectories starting on non-differentiable boundaries in T(n), using piecewise linear approximations or symbolic dynamics to characterize the collapse of escape corridors. \u2014 Provides a mathematical proof or disproof of whether boundary alignment forces convergence to periodic cycles, independent of numerical artifacts, and clarifies the measure-zero property.",
+        "[PATH:literature] Literature review of known results on the dynamics of recursive maps with non-differentiable boundaries, such as the logistic map with a cusp, or piecewise smooth maps with borderline parameters, focusing on attractor structure and sensitivity to initial conditions. \u2014 Contextualizes the hypothesis within existing theory, potentially confirming or refuting the plausibility of escape corridor collapse under exact boundary alignment based on analogous systems."
+      ],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "at the moment of exact boundary alignment",
+        "geographic": "within the parameter space of the recursive map T(n) with \u03b1 below \u03b1\u2080"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "will not exhibit bounded oscillatory behavior for initial values near non-differentiable boundary points",
+      "object": "because escape corridors are inherently unstable under any perturbations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recursive map T(n) with \u03b1 below \u03b1\u2080 because escape corridors are inherently unstable under any perturbations]",
+        "[PATH:empirical] High-precision numerical simulations of T(n) with \u03b1 just below \u03b1\u2080, systematically varying initial values near non-differentiable boundary points and measuring boundedness of orbits over extended finite time steps \u2014 Directly tests whether escape corridors remain unstable under perturbations; if bounded oscillatory behavior is observed for some initial conditions, the hypothesis is refuted; if absent, it is supported.",
+        "[PATH:theoretical] Rigorous stability analysis of escape corridors in one-dimensional piecewise smooth maps, using techniques from interval analysis or symbolic dynamics to bound the effect of perturbations on orbit behavior near non-differentiable points \u2014 Provides a mathematical proof or counterexample regarding the inherent instability claim, clarifying whether bounded oscillations are possible under any finite perturbations."
+      ],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "for all finite time steps n in numerical simulations",
+        "geographic": "in the domain of numerical sensitivity analysis"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "shows bounded oscillatory behavior for initial values near non-differentiable boundary points",
+      "object": "because the escape corridors are partially stable under small perturbations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) with \u03b1 below \u03b1\u2080 shows bounded oscillatory behavior for initial values near non-differentiable boundary points because the escape corridors are partially stable under small perturbations in domain 'numerical sensitivity analysis']"
+      ],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "during numerical simulations with step size \u2264 0.01",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "does not show bounded oscillatory behavior for initial values near non-differentiable boundary points",
+      "object": "because the escape corridors are not stable under small perturbations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recursive map T(n) with \u03b1 below \u03b1\u2080 does not show bounded oscillatory behavior for initial values near non-differentiable boundary points because the escape corridors are not stable under small perturbations in domain 'numerical sensitivity analysis']"
+      ],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "at all times during the numerical simulation runs",
+        "geographic": "in the computational domain of the study"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "exhibits a transition from bounded oscillatory behavior to chaotic escape when the initial value lies exactly on a non-differentiable boundary point",
+      "object": "because the partial stability of escape corridors collapses at the exact boundary due to a discontinuity in the derivative",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {
+        "condition": "initial value exactly at a non-differentiable boundary point"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the recursive map T(n) with \u03b1 below \u03b1\u2080",
+      "predicate": "will exhibit unbounded chaotic behavior even near non-differentiable boundary points",
+      "object": "because the escape corridors are not stable under any perturbations, however small",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "numerical sensitivity analysis"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  }
+}

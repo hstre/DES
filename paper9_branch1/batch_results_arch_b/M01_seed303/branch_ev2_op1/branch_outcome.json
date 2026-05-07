@@ -1,0 +1,476 @@
+{
+  "operator_id": "recursive_modulation",
+  "question": "How do the initial conditions of an ecosystem influence the critical threshold at which species diversity shifts from ex",
+  "outcome": "BRANCH_COMPLETE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Initial conditions of an ecosystem (e.g., species richness, evenness, resource availability)",
+      "predicate": "modulate",
+      "object": "the critical threshold at which species diversity shifts from expansion to decline, with the effect depending on environmental landscape complexity",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Initial conditions of an ecosystem (e.g., species richness, evenness, resource availability) the critical threshold at which species diversity shifts from expansion to decline, with the effect depending on environmental landscape complexity]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Initial species richness and evenness",
+      "predicate": "lower",
+      "object": "the critical threshold for diversity decline in homogeneous landscapes",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes]"
+      ],
+      "scope": {
+        "domain": "simple, low-complexity environments"
+      },
+      "qualifier": {
+        "temporal": "during initial community assembly",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "High resource availability at the start",
+      "predicate": "raises",
+      "object": "the critical threshold for diversity decline, but only in heterogeneous landscapes",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline, but only in heterogeneous landscapes]"
+      ],
+      "scope": {
+        "domain": "complex, patchy environments"
+      },
+      "qualifier": {
+        "temporal": "initial phase of resource pulse, before competitive exclusion",
+        "geographic": "heterogeneous landscapes with high patch contrast"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Landscape complexity itself",
+      "predicate": "overrides",
+      "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: Landscape complexity itself the effect of initial conditions on the diversity threshold, making initial richness irrelevant]"
+      ],
+      "scope": {
+        "domain": "highly fragmented or temporally variable landscapes"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": true,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Initial species richness and evenness",
+      "predicate": "lower",
+      "object": "the critical threshold for diversity decline in homogeneous landscapes only when interspecific competition is weak",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes only when interspecific competition is weak]",
+        "[PATH:empirical] Field experiment manipulating initial species richness and evenness in replicated homogeneous grassland plots with weak interspecific competition (e.g., via nutrient limitation or disturbance), measuring diversity decline thresholds over early successional stages. \u2014 Directly tests whether initial community structure affects the critical threshold for diversity loss under controlled competition levels, matching the hypothesis's scope and temporal qualifier.",
+        "[PATH:literature] Meta-analysis of published biodiversity experiments comparing diversity decline rates in homogeneous landscapes, stratified by competition strength (e.g., using functional trait dissimilarity or phylogenetic distance as proxies). \u2014 Synthesizes existing data to assess whether the predicted interaction between initial richness/evenness and competition strength holds across multiple systems, providing broader support or refutation.",
+        "[PATH:theoretical] Individual-based simulation model parameterized for temperate/boreal homogeneous landscapes, systematically varying initial richness and evenness under weak vs. strong competition scenarios, with stochastic disturbance. \u2014 Allows precise testing of causal mechanisms and threshold behavior under controlled conditions, complementing empirical work and clarifying the role of competition intensity."
+      ],
+      "scope": {
+        "domain": "simple, low-complexity environments with weak competitive interactions"
+      },
+      "qualifier": {
+        "temporal": "during early successional stages or post-disturbance periods",
+        "geographic": "temperate and boreal homogeneous landscapes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Initial species richness and evenness",
+      "predicate": "raise",
+      "object": "the critical threshold for diversity decline in homogeneous landscapes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Initial species richness and evenness the critical threshold for diversity decline in homogeneous landscapes]",
+        "[PATH:empirical] Controlled mesocosm experiments with manipulated initial species richness and evenness in homogeneous microcosms (e.g., bacterial or plant communities), tracking diversity decline thresholds over early successional stages. \u2014 Directly tests the effect of initial community structure on the critical threshold where diversity begins to decline, under low-complexity conditions as specified.",
+        "[PATH:theoretical] Neutral theory simulations (e.g., Hubbell's unified neutral theory) parameterized for homogeneous landscapes, systematically varying initial richness and evenness to identify threshold dynamics in early succession. \u2014 Provides a formal mathematical framework to isolate the impact of initial conditions on diversity decline thresholds, complementing empirical tests.",
+        "[PATH:literature] Meta-analysis of published successional chronosequences in simple environments (e.g., old fields, early primary succession) that report initial species richness and evenness alongside subsequent diversity trajectories. \u2014 Synthesizes existing evidence across systems to assess whether the hypothesized relationship holds broadly, leveraging natural variation in initial conditions."
+      ],
+      "scope": {
+        "domain": "simple, low-complexity environments"
+      },
+      "qualifier": {
+        "temporal": "during simulated early successional stages",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "High resource availability at the start",
+      "predicate": "lowers",
+      "object": "the critical threshold for diversity decline in homogeneous landscapes",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline in homogeneous landscapes]",
+        "[PATH:empirical] Long-term grassland mesocosm experiments manipulating initial nitrogen and water availability in homogeneous soil substrates, tracking species richness over multiple generations \u2014 Directly tests whether high initial resource availability reduces the extinction threshold by promoting early dominant species that exclude others when resources decline.",
+        "[PATH:theoretical] Spatially explicit metacommunity models (e.g., Tilman's resource competition model) parameterized with homogeneous landscapes and variable initial resource levels, analyzing extinction debt \u2014 Provides mechanistic predictions for how initial resource pulses alter the critical diversity threshold, allowing comparison with empirical data.",
+        "[PATH:literature] Meta-analysis of published studies on initial resource enrichment effects on plant or microbial community diversity in uniform habitats (e.g., agricultural monocultures, chemostats) \u2014 Synthesizes existing evidence across systems to assess whether high initial resources consistently lower the threshold for diversity decline, controlling for confounding factors."
+      ],
+      "scope": {
+        "domain": "uniform, non-patchy environments"
+      },
+      "qualifier": {
+        "temporal": "initial establishment phase",
+        "geographic": "homogeneous landscapes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "High resource availability at the start",
+      "predicate": "lowers",
+      "object": "the critical threshold for diversity decline, regardless of landscape heterogeneity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: High resource availability at the start the critical threshold for diversity decline, regardless of landscape heterogeneity]",
+        "[PATH:empirical] Meta-analysis of long-term grassland fertilization experiments (e.g., Park Grass Experiment, Rothamsted) comparing initial nitrogen pulse effects on species richness decay rates across homogeneous vs. heterogeneous soil patches \u2014 Directly tests whether high initial resource availability consistently lowers the diversity decline threshold across varying landscape heterogeneity, providing real-world validation or refutation of the simulated evidence.",
+        "[PATH:theoretical] Theoretical modeling study using spatially explicit consumer-resource models (e.g., Tilman's resource-ratio theory extended with stochastic patch dynamics) to systematically vary initial resource pulse magnitude and landscape heterogeneity, measuring the critical threshold for local extinction \u2014 Allows isolation of the causal mechanism and quantifies the interaction effect between initial resource availability and heterogeneity, clarifying whether the relationship holds universally or depends on specific parameter regimes.",
+        "[PATH:literature] Re-analysis of published microcosm experiments (e.g., bacterial or protist communities) with controlled resource gradients and spatial structure, focusing on the initial phase of resource addition and subsequent diversity trajectories \u2014 Provides a broad empirical test across multiple studies, leveraging existing data to assess the generalizability of the hypothesis and identify potential confounding factors like community composition or dispersal rates."
+      ],
+      "scope": {
+        "domain": "all environmental types"
+      },
+      "qualifier": {
+        "temporal": "initial phase of resource pulse",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "High resource availability at the start",
+      "predicate": "raises",
+      "object": "the critical threshold for diversity decline in heterogeneous landscapes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms High resource availability at the start raises the critical threshold for diversity decline in heterogeneous landscapes in domain 'complex, patchy environments']"
+      ],
+      "scope": {
+        "domain": "complex, patchy environments"
+      },
+      "qualifier": {
+        "temporal": "initial phase of resource pulse",
+        "geographic": "complex, patchy environments globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "High resource availability at the start",
+      "predicate": "does not raise",
+      "object": "the critical threshold for diversity decline in heterogeneous landscapes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms High resource availability at the start does not raise the critical threshold for diversity decline in heterogeneous landscapes in domain 'complex, patchy environments']"
+      ],
+      "scope": {
+        "domain": "complex, patchy environments"
+      },
+      "qualifier": {
+        "temporal": "initial time step of simulation",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Landscape complexity itself",
+      "predicate": "overrides",
+      "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant, but only in landscapes where the temporal variability exceeds a critical autocorrelation threshold",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Landscape complexity itself the effect of initial conditions on the diversity threshold, making initial richness irrelevant, but only in landscapes where the temporal variability exceeds a critical autocorrelation threshold]",
+        "[PATH:empirical] Long-term field experiments in fragmented grasslands with varying temporal variability, comparing diversity outcomes from high vs. low initial richness under different autocorrelation regimes \u2014 Directly tests whether landscape complexity (e.g., fragmentation and temporal variability) overrides initial richness effects on diversity thresholds, by manipulating initial richness and measuring diversity over time in landscapes with known autocorrelation.",
+        "[PATH:theoretical] Spatially explicit metacommunity models that systematically vary temporal autocorrelation and fragmentation while tracking the influence of initial species richness on equilibrium diversity \u2014 Allows controlled simulation to isolate the interaction between landscape complexity and initial conditions, testing the critical autocorrelation threshold predicted by the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on diversity\u2013disturbance relationships, focusing on studies that report initial community composition and temporal variability metrics \u2014 Synthesizes available evidence across systems to see if initial richness becomes irrelevant when temporal variability exceeds a threshold, providing a broad test without new data collection."
+      ],
+      "scope": {
+        "domain": "highly fragmented or temporally variable landscapes with low temporal autocorrelation"
+      },
+      "qualifier": {
+        "temporal": "during periods of high temporal variability exceeding the critical autocorrelation threshold",
+        "geographic": "in highly fragmented or temporally variable landscapes with low temporal autocorrelation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Initial conditions",
+      "predicate": "significantly influence",
+      "object": "the diversity threshold, regardless of landscape complexity",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "highly fragmented or temporally variable landscapes"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "Landscape complexity itself",
+      "predicate": "overrides",
+      "object": "the effect of initial conditions on the diversity threshold, making initial richness irrelevant",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "highly fragmented or temporally variable landscapes"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "Initial richness",
+      "predicate": "modulates",
+      "object": "the diversity threshold even in highly fragmented or temporally variable landscapes, so landscape complexity does not fully override its effect",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "highly fragmented or temporally variable landscapes"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C015": {
+      "id": "C015",
+      "subject": "High resource availability at the start",
+      "predicate": "lowers",
+      "object": "the critical threshold for diversity decline in homogeneous landscapes",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "uniform, low-contrast environments"
+      },
+      "qualifier": {
+        "temporal": "initial phase of resource pulse, before competitive exclusion",
+        "geographic": "homogeneous landscapes with low patch contrast"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C016": {
+      "id": "C016",
+      "subject": "High resource availability at the start",
+      "predicate": "lowers",
+      "object": "the critical threshold for diversity decline, irrespective of landscape heterogeneity",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all ecological environments"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 10
+}

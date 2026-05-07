@@ -1,0 +1,435 @@
+{
+  "operator_id": "adaptive_variation_selection",
+  "question": "What selection pressures and fitness landscape characteristics dictate whether growth trajectories or contraction trajec",
+  "outcome": "BRANCH_COMPLETE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "determine whether",
+      "object": "growth trajectories prevail over contraction trajectories in transformer-based language models under compute and data scaling",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics growth trajectories prevail over contraction trajectories in transformer-based language models under compute and data scaling]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "growth trajectories over contraction trajectories in transformer-based language models under compute scaling above a threshold",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics growth trajectories over contraction trajectories in transformer-based language models under compute scaling above a threshold]"
+      ],
+      "scope": {
+        "domain": "compute-constrained regimes with moderate data abundance"
+      },
+      "qualifier": {
+        "temporal": "during the period of increasing compute budgets from 2020 to 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold]"
+      ],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {
+        "temporal": "during the scaling phase above the threshold",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "are equally likely to favor",
+      "object": "neither growth nor contraction trajectories in transformer-based language models under balanced compute and data scaling",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics neither growth nor contraction trajectories in transformer-based language models under balanced compute and data scaling]"
+      ],
+      "scope": {
+        "domain": "balanced scaling regimes where compute and data are jointly abundant"
+      },
+      "qualifier": {
+        "temporal": "present-day transformer architectures and training regimes (as of 2025)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "reverse",
+      "object": "the relative advantage of growth trajectories over contraction trajectories in transformer-based language models when compute scaling exceeds a threshold and data abundance becomes extreme",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics the relative advantage of growth trajectories over contraction trajectories in transformer-based language models when compute scaling exceeds a threshold and data abundance becomes extreme]",
+        "[PATH:empirical] Controlled scaling experiments on transformer LMs with varying compute-to-data ratios, tracking validation loss and model parameter trajectories across training runs (e.g., scaling laws studies like Kaplan et al. 2020, Hoffmann et al. 2022). \u2014 Directly tests the hypothesis by measuring whether growth trajectories (e.g., increasing model size) outperform contraction trajectories (e.g., reducing parameters or using pruning) when compute scales beyond a threshold and data is extremely abundant. Extending such experiments to extreme data regimes can reveal inflection points.",
+        "[PATH:theoretical] Theoretical analysis using fitness landscape models from evolutionary biology or loss landscape geometry, applied to transformer training dynamics (e.g., studying the curvature and basins of attraction for different parameter sizes under high-data conditions). \u2014 Provides a mechanistic explanation for why growth may reverse advantage, e.g., due to diminishing returns from overparameterization or increased variance in gradient estimates. This can predict conditions for reversal that empirical tests can then verify.",
+        "[PATH:literature] Literature review of recent results on 'overfitting' vs. 'underfitting' in large-scale LMs, especially studies on compute-optimal training (Chinchilla scaling laws) and the effects of data repetition or synthetic data augmentation. \u2014 Synthesizes existing findings that may already indicate reversal patterns, e.g., where models with fewer parameters achieve better perplexity than larger ones when data is abundant but compute is limited. Such evidence can confirm or refute the hypothesized reversal."
+      ],
+      "scope": {
+        "domain": "compute-constrained regimes with extreme data abundance"
+      },
+      "qualifier": {
+        "temporal": "during the period of increasing compute budgets from 2020 to 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "contraction trajectories over growth trajectories in transformer-based language models under compute scaling above a threshold",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics contraction trajectories over growth trajectories in transformer-based language models under compute scaling above a threshold]",
+        "[PATH:empirical] Controlled scaling experiments comparing loss and performance of transformers trained with varying compute budgets (e.g., Chinchilla scaling laws replication studies), specifically measuring whether model contraction (e.g., pruning, distillation) yields better performance per unit compute than training larger models from scratch above a threshold. \u2014 Directly tests the hypothesis by comparing contraction vs. growth trajectories under compute-constrained regimes, using the same data and architecture to isolate the effect.",
+        "[PATH:theoretical] Theoretical analysis of fitness landscapes for neural network loss functions, focusing on the geometry of local minima and the cost of escaping them under compute scaling, e.g., using random matrix theory or spin-glass models of transformer loss landscapes. \u2014 Provides a mechanistic explanation for why contraction might be favored: if the fitness landscape becomes increasingly rugged above a compute threshold, contraction (staying in a deep basin) may be more efficient than growth (searching for new basins).",
+        "[PATH:literature] Survey of empirical results on model compression, pruning, and distillation in large language models (e.g., LLM-Pruner, SparseGPT, or knowledge distillation studies) with explicit compute cost comparisons to training equivalently sized dense models. \u2014 Synthesizes existing evidence on whether contraction-based methods consistently outperform growth-based methods under compute constraints, revealing the threshold and domain conditions where the hypothesis holds."
+      ],
+      "scope": {
+        "domain": "compute-constrained regimes with moderate data abundance"
+      },
+      "qualifier": {
+        "temporal": "during the period of transformer-based language model scaling from 2020 to 2024",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold, but only when the model's parameter count exceeds the inverse of the data scaling exponent",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold, but only when the model's parameter count exceeds the inverse of the data scaling exponent]",
+        "[PATH:empirical] Controlled scaling experiments on transformer LMs with varying parameter counts and data budgets, measuring loss landscape curvature and trajectory contraction metrics (e.g., gradient covariance spectrum, Hessian trace) \u2014 Directly tests the threshold condition (parameter count > 1/\u03b1) by systematically varying model size and data scaling exponent, observing whether contraction trajectories dominate growth trajectories above the predicted threshold.",
+        "[PATH:theoretical] Theoretical analysis of the neural tangent kernel (NTK) or mean-field limit for transformers in the overparameterized, data-constrained regime, deriving conditions under which the fitness landscape favors contraction over growth \u2014 Provides a formal framework to verify the inverse relationship between parameter count and data scaling exponent, and to identify the precise threshold, potentially confirming or refuting the hypothesis's core claim.",
+        "[PATH:literature] Meta-analysis of existing empirical studies on scaling laws and training dynamics of large language models (e.g., Kaplan et al., Hoffmann et al.), focusing on reported phase transitions in loss scaling and trajectory stability \u2014 Leverages prior work to check for indirect evidence of contraction/growth preference under different parameter-to-data ratios, and to assess whether the hypothesized threshold aligns with observed scaling breakpoints."
+      ],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance and overparameterized models"
+      },
+      "qualifier": {
+        "temporal": "during the training phase of transformer-based language models",
+        "geographic": "simulated environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "growth trajectories over contraction trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics growth trajectories over contraction trajectories in transformer-based language models under data scaling above a threshold]",
+        "[PATH:empirical] Longitudinal analysis of training dynamics in open-source transformer models (e.g., Pythia or OLMo) across varying data scales, tracking loss trajectories and parameter growth vs. contraction phases. \u2014 Directly tests whether growth trajectories (e.g., increasing model size or data volume) are favored over contraction (e.g., pruning or reducing parameters) under data scaling above a threshold, using controlled experimental data.",
+        "[PATH:theoretical] Theoretical scaling laws (e.g., Kaplan et al. 2020, Hoffmann et al. 2022) that model the relationship between compute, data, and model performance, extended to include fitness landscape concepts like local optima and selection gradients. \u2014 Provides a formal framework to predict whether growth trajectories are inherently favored in high-data regimes, allowing for mathematical confirmation or refutation of the hypothesis via derived conditions.",
+        "[PATH:literature] Meta-analysis of published results on model compression and expansion in transformer-based language models (e.g., papers on distillation, pruning, and scaling up), focusing on performance outcomes under data-rich conditions. \u2014 Synthesizes existing evidence to assess whether empirical trends consistently show growth trajectories outperforming contraction trajectories, thereby confirming or refuting the hypothesis across diverse studies."
+      ],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {
+        "temporal": "during the period of observed data scaling above threshold (2018\u20132023)",
+        "geographic": "simulated environment with no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms selection pressures and fitness landscape characteristics favor contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold in domain 'data-constrained regimes with moderate compute abundance']"
+      ],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {
+        "temporal": "during training runs up to 2024",
+        "geographic": "simulated environments with English-dominant text corpora"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "do not favor",
+      "object": "contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms selection pressures and fitness landscape characteristics do not favor contraction trajectories over growth trajectories in transformer-based language models under data scaling above a threshold in domain 'data-constrained regimes with moderate compute abundance']"
+      ],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {
+        "temporal": "during the period of data scaling above a threshold",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "systematically favor",
+      "object": "contraction trajectories in transformer-based language models under balanced compute and data scaling",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics contraction trajectories in transformer-based language models under balanced compute and data scaling]",
+        "[PATH:empirical] Controlled scaling experiments tracking the evolution of model loss and parameter norms across compute- and data-balanced training runs (e.g., scaling laws replication with varying batch sizes and model sizes) \u2014 Directly tests whether contraction trajectories (e.g., decreasing effective dimensionality or gradient flow) are systematically favored under balanced scaling, by measuring directional changes in the loss landscape curvature and Hessian eigenvalues.",
+        "[PATH:theoretical] Theoretical analysis of the fitness landscape in transformer training using random matrix theory or mean-field approximations to model the effect of balanced compute and data on the local minima structure \u2014 Provides a formal basis to predict whether contraction (e.g., converging to simpler, lower-rank solutions) is an attractor under balanced resource allocation, and can be compared against empirical observations.",
+        "[PATH:literature] Meta-analysis of existing scaling law studies (e.g., Kaplan et al., Hoffmann et al.) re-examining reported model size, data size, and performance trade-offs for signs of contraction trajectories \u2014 Leverages published results to identify consistent patterns of contraction (e.g., saturation of per-token improvement, reduction in effective parameter usage) in balanced regimes, offering indirect confirmation or refutation."
+      ],
+      "scope": {
+        "domain": "balanced scaling regimes where compute and data are jointly abundant"
+      },
+      "qualifier": {
+        "temporal": "present-day transformer architectures and training regimes (as of 2025)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "are more likely to favor",
+      "object": "growth trajectories over contraction trajectories in transformer-based language models under balanced compute and data scaling",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: selection pressures and fitness landscape characteristics growth trajectories over contraction trajectories in transformer-based language models under balanced compute and data scaling]"
+      ],
+      "scope": {
+        "domain": "balanced scaling regimes where compute and data are jointly abundant"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "structured pruning trajectories over contraction trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {
+        "temporal": "during the scaling phase above the threshold"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "selection pressures and fitness landscape characteristics",
+      "predicate": "favor",
+      "object": "growth trajectories over contraction trajectories in transformer-based language models under data scaling above a threshold",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "data-constrained regimes with moderate compute abundance"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 11
+}
