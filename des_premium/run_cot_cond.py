@@ -77,11 +77,11 @@ def _call_cot(model: str, provider: str, prompt: str,
     return content, reasoning, usage
 
 
-# ── CoT output parsing ────────────────────────────────────────────────────────
+# ── CoT output parsing ──────────────────────────────────────────────────────────────────────────────────
 
 def _count_reasoning_steps(text: str) -> int:
     """Count numbered steps or distinct paragraphs as proxy for reasoning depth."""
-    numbered = len(re.findall(r"^\s*\d+[\.\)]\s", text, re.MULTILINE))
+    numbered = len(re.findall(r"^\s*\d+[\.)\]\s", text, re.MULTILINE))
     if numbered >= 2:
         return numbered
     # Fall back: non-empty paragraphs
@@ -134,7 +134,7 @@ def _false_proof_scan_m01(text: str) -> dict:
     }
 
 
-# ── Main runner ───────────────────────────────────────────────────────────────
+# ── Main runner ───────────────────────────────────────────────────────────────────────────────────
 
 def run_cot_condition(
     domain_id:   str,
@@ -168,6 +168,11 @@ def run_cot_condition(
     except Exception as e:
         print(f"  ERROR: {e}")
         content, reasoning, usage = "", "", {}
+
+    # deepseek-reasoner returns answer in reasoning_content when content is empty
+    if not content and reasoning:
+        content  = reasoning
+        reasoning = ""
 
     elapsed   = round(time.time() - t_start, 1)
     sentences = _extract_claim_sentences(content)

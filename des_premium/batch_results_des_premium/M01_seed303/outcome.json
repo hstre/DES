@@ -1,0 +1,25 @@
+{
+  "domain_id": "M01",
+  "seed": 303,
+  "config": {
+    "builder_model": "deepseek-reasoner",
+    "builder_provider": "deepseek",
+    "falsifier_model": "openai/gpt-4o",
+    "falsifier_provider": "openrouter",
+    "tier": "premium"
+  },
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 1,
+  "elapsed_seconds": 142.6,
+  "false_proof_info": {
+    "false_proof_detected": true,
+    "false_proof_count": 1,
+    "error_types": ["unsupported_universal_convergence"]
+  },
+  "false_proof_detected": true,
+  "semantic_duplication_rate_mean": 0.6875,
+  "novel_claims_mean": 16.0,
+  "total_claims_final": 16,
+  "token_cost_proxy": 8000,
+  "token_cost_note": "proxy: loops × MAX_ITER × 200 tokens/iter"
+}
