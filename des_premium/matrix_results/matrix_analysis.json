@@ -1,0 +1,41 @@
+{
+  "cells": {
+    "DES_cheap": {
+      "depth": 5,
+      "dup_rate": 0.4456,
+      "novel_claims": 5.4867,
+      "false_proof_rate": null
+    },
+    "DES_premium": {
+      "depth": 2.5,
+      "dup_rate": 0.5243,
+      "novel_claims": 8.555,
+      "false_proof_rate": 0.3333
+    },
+    "CoT_cheap": {
+      "depth": 24.67,
+      "dup_rate": 0.0122,
+      "novel_claims": null,
+      "false_proof_rate": 0
+    },
+    "CoT_premium": {
+      "depth": 17.83,
+      "dup_rate": 0.0053,
+      "novel_claims": null,
+      "false_proof_rate": 0
+    }
+  },
+  "decomposition": {
+    "primary_metric": "semantic_duplication_rate (lower = better for DES)",
+    "arch_effect_cheap": 0.4334,
+    "arch_effect_premium": 0.519,
+    "model_effect_des": 0.0787,
+    "model_effect_cot": -0.0069,
+    "interaction": 0.0856,
+    "interaction_interpretation": "POSITIVE: DES advantage on duplication shrinks at premium tier (CoT narrows gap)"
+  },
+  "domains": [
+    "M01",
+    "N03"
+  ]
+}
