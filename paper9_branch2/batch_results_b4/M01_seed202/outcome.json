@@ -1,0 +1,2487 @@
+{
+  "domain_id": "M01",
+  "seed": 202,
+  "merge_after": 4,
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 5,
+  "operator_log": [
+    {
+      "loop": 0,
+      "parallel_event": 1,
+      "n_candidates": 3,
+      "n_admitted": 2,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "recursive_modulation"
+      ],
+      "branch_n_loops": 4
+    },
+    {
+      "loop": 1,
+      "parallel_event": 2,
+      "n_candidates": 3,
+      "n_admitted": 3,
+      "candidate_ops": [
+        "adaptive_variation_selection",
+        "boundary_condition_analysis",
+        "recursive_modulation"
+      ],
+      "branch_n_loops": 4
+    }
+  ],
+  "branch_results": [
+    {
+      "branch_id": "branch_ev1_op0",
+      "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev1_op0",
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what selection conditions does the recursive map T(n) for n \u2261 1 mod 3 predominantly lead to diverging trajectories",
+      "loops_completed": 3,
+      "outcome": "BRANCH_LOOPS_DONE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is a dense countable set",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+          ],
+          "scope": {
+            "domain": "rational numbers with denominator a power of 3"
+          },
+          "qualifier": {
+            "temporal": "for all n in the domain",
+            "geographic": "none"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is dense but not necessarily countable",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+          ],
+          "scope": {
+            "domain": "all rational numbers in (0,1)"
+          },
+          "qualifier": {
+            "uncertainty": "complement density may include uncountable components"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction that is only a proper subset of the rational numbers with denominator a power of 3",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "conjecture",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]"
+          ],
+          "scope": {
+            "domain": "rational numbers with denominator a power of 3"
+          },
+          "qualifier": {
+            "restriction": "only those that are eventually periodic under T"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3, and also includes all rational numbers in (0,1) with denominator a power of 2",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3 or a power of 2",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3 or a power of 2]",
+            "[PATH:empirical] Explicit enumeration and iterative simulation of T(n) for all rationals in (0,1) with denominator 3^k (k=1 to 10) and 2^m (m=1 to 10), recording convergence patterns and fixed points. \u2014 Systematic computational testing can directly confirm or refute whether all such rationals eventually fall into the same basin, especially since the denominators are bounded and the map is recursive.",
+            "[PATH:theoretical] Theoretical analysis of the map's dynamics using modular arithmetic and reduction properties, focusing on the behavior of fractions with denominator a power of 3 versus a power of 2. \u2014 A proof or counterexample may arise from examining how T(n) transforms denominators under the condition n \u2261 1 mod 3, potentially revealing invariants or attractors that differ between the two denominator classes.",
+            "[PATH:literature] Literature search on recursive maps of rational numbers with restricted denominators, particularly studies on the Collatz-like maps or 3x+1 variants, to identify analogous results or known counterexamples. \u2014 Existing work on similar recursive maps may provide theorems or conjectures that directly apply to this hypothesis, or highlight structural differences between denominator classes that could refute the claim."
+          ],
+          "scope": {
+            "domain": "rational numbers with denominator a power of 3 or a power of 2"
+          },
+          "qualifier": {
+            "temporal": "as of current mathematical knowledge",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "does not have a basin of attraction that includes all rational numbers in (0,1) with denominator a power of 3",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+            "[PATH:empirical] Simulate the dynamics of T(n) for all rational numbers in (0,1) with denominator 3^k for k up to, say, 10, and check whether any initial condition fails to converge to a fixed cycle or eventually exits the set. \u2014 A systematic computational search can reveal whether every such rational eventually enters a finite attractor or whether some escape or exhibit divergent behavior, thus directly testing the basin-of-attraction claim.",
+            "[PATH:theoretical] Analyze the number-theoretic structure of T(n) when n \u2261 1 mod 3, focusing on the transformation of fractions in base 3; prove that the map is conjugate to a shift map on the ternary expansion, and characterize periodic points and preimages. \u2014 If the map is topologically conjugate to a full shift on a Cantor set, then the set of rationals with denominator a power of 3 may be measure-zero and not a full basin; conversely, if the shift is eventually periodic for all such rationals, it would support the opposite conclusion.",
+            "[PATH:literature] Review existing literature on recursive maps defined by modular conditions (e.g., Collatz-like maps restricted to rationals with 3-adic denominators) for known results on eventual periodicity or divergence. \u2014 Prior work on 3x+1 type problems or 3-adic dynamical systems may provide theorems or counterexamples directly applicable to the behavior of T(n) on this specific subset, helping to confirm or refute the hypothesis without new computation."
+          ],
+          "scope": {
+            "domain": "rational numbers with denominator a power of 3"
+          },
+          "qualifier": {
+            "temporal": "as of current mathematical knowledge",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement contains a Cantor set of irrational numbers in (0,1)",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+            "[PATH:empirical] Construct explicit examples of irrational numbers in (0,1) that are not in the basin of attraction by simulating the recursive map T(n) for n \u2261 1 mod 3 on base-3 expansions of numbers with non-repeating patterns, and test whether they converge to a rational with denominator a power of 3. \u2014 If the complement contains a Cantor set, there should be uncountably many irrationals that do not converge to the claimed basin. Empirical simulation can identify candidate numbers and test convergence behavior, providing evidence for or against the existence of such a set.",
+            "[PATH:theoretical] Analyze the map T(n) theoretically using symbolic dynamics on the ternary expansion, where n \u2261 1 mod 3 corresponds to a specific digit restriction, and determine the set of points whose orbits avoid a certain invariant set of rationals. \u2014 A rigorous mathematical proof that the set of irrationals not in the basin is homeomorphic to a Cantor set would confirm the hypothesis. Conversely, showing that all irrationals eventually map into the rational basin would refute it. This direction leverages known results on piecewise linear maps and invariant sets.",
+            "[PATH:literature] Review literature on the dynamics of the 3x+1 problem or similar piecewise linear maps, particularly studies on the set of numbers with bounded partial quotients or with base-3 expansions that avoid certain patterns. \u2014 The recursive map T(n) for n \u2261 1 mod 3 is reminiscent of the Collatz-type maps. Existing work on the existence of Cantor sets in the complement of basins of attraction for such maps (e.g., in the context of the 3n+1 conjecture) can provide analogous results or techniques to evaluate this specific hypothesis."
+          ],
+          "scope": {
+            "domain": "all real numbers in (0,1)"
+          },
+          "qualifier": {
+            "temporal": "for all time steps n \u2265 0",
+            "geographic": "within the unit interval (0,1) of the real line"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is countable",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 the set of all rational numbers in (0,1) with denominator a power of 3]",
+            "[PATH:empirical] Explicit enumeration of rationals with denominator a power of 3 in (0,1) and simulation of T(n) for each such rational, checking convergence to a fixed point or cycle \u2014 If the complement of the basin is countable, then all but countably many rationals in (0,1) converge under T. Simulating T on a dense set of rationals (e.g., all with denominator up to 3^10) can reveal whether the only non-convergent points are those with denominator a power of 3, or if others also fail.",
+            "[PATH:theoretical] Analytic study of the map T(n) for n \u2261 1 mod 3, focusing on the dynamics of the ternary expansion of rational numbers \u2014 The condition n \u2261 1 mod 3 suggests a connection to base-3 expansions. Proving that T acts as a shift on the ternary digits of rationals with denominator a power of 3, and that other rationals eventually map into this set or converge, would confirm the hypothesis. Conversely, finding a rational not of that form that fails to converge would refute it.",
+            "[PATH:literature] Literature search for known results on number-theoretic recursive maps with modular constraints, especially those related to the 3x+1 problem or Collatz-type maps \u2014 The map T(n) for n \u2261 1 mod 3 may be a variant of the Collatz function. Existing work on the behavior of rational numbers under such maps (e.g., the '3x+1 problem on rationals') could provide theorems or counterexamples that directly apply to this hypothesis."
+          ],
+          "scope": {
+            "domain": "all rational numbers in (0,1)"
+          },
+          "qualifier": {
+            "temporal": "since the map's definition in 2020",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is dense and countable",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 has a basin of attraction whose complement is dense and countable the set of all rational numbers in (0,1) with denominator a power of 3 in domain 'all rational numbers in (0,1)']"
+          ],
+          "scope": {
+            "domain": "all rational numbers in (0,1)"
+          },
+          "qualifier": {
+            "temporal": "for all time steps in the discrete dynamical system",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is dense and uncountable",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 has a basin of attraction whose complement is dense and uncountable the set of all rational numbers in (0,1) with denominator a power of 3 in domain 'all rational numbers in (0,1)']"
+          ],
+          "scope": {
+            "domain": "all rational numbers in (0,1)"
+          },
+          "qualifier": {
+            "temporal": "as of 2025",
+            "geographic": "global"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement contains uncountably many Liouville numbers in (0,1)",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all real numbers in (0,1)"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "has a basin of attraction whose complement is countable and not dense",
+          "object": "the set of all rational numbers in (0,1) with denominator a power of 3",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all rational numbers in (0,1)"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "branch_id": "branch_ev1_op1",
+      "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev1_op1",
+      "operator_id": "recursive_modulation",
+      "question": "How might the recursive map T(n) for n \u2261 1 mod 3, when modeled as a dynamical system with inherent stochastic perturbati",
+      "loops_completed": 4,
+      "outcome": "BRANCH_LOOPS_DONE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more effectively achieved by",
+          "object": "anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias",
+          "status": "supported",
+          "confidence": 0.52,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "noise_distribution": "bounded support",
+            "adaptation_mechanism": "accumulated drift tracking",
+            "comparison_baseline": "fixed-magnitude anti-correlated bias"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more effectively achieved by",
+          "object": "anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise anti-correlated noise with time-varying adaptive bias than by fixed-magnitude anti-correlated bias]"
+          ],
+          "scope": {
+            "domain": "bounded-support noise distributions with stationary second-order statistics"
+          },
+          "qualifier": {
+            "noise_distribution": "bounded support",
+            "adaptation_mechanism": "accumulated drift tracking",
+            "comparison_baseline": "fixed-magnitude anti-correlated bias"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more robustly achieved by",
+          "object": "fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias]"
+          ],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments"
+          },
+          "qualifier": {
+            "noise_distribution": "bounded support with sudden shifts",
+            "adaptation_mechanism": "periodic recalibration",
+            "comparison_baseline": "time-varying adaptive bias"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is equally well achieved by either method when",
+          "object": "the noise mean is known and the map's Lyapunov exponent is sufficiently negative",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the noise mean is known and the map's Lyapunov exponent is sufficiently negative]"
+          ],
+          "scope": {
+            "domain": "deterministic chaos with known noise statistics and strong contraction"
+          },
+          "qualifier": {
+            "noise_distribution": "bounded support, known mean",
+            "adaptation_mechanism": "none required",
+            "comparison_baseline": "both methods equivalent"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is less sensitive to initial bias magnitude when using",
+          "object": "time-varying adaptive bias driven by exponentially weighted drift estimates compared to fixed-magnitude anti-correlated bias",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise time-varying adaptive bias driven by exponentially weighted drift estimates compared to fixed-magnitude anti-correlated bias]",
+            "[PATH:empirical] Controlled simulation study comparing adaptive EWMA bias vs. fixed anti-correlated bias across a range of initial bias magnitudes and bounded noise distributions (e.g., uniform, truncated Gaussian) for the recursive map T(n) with n \u2261 1 mod 3 \u2014 Directly tests the hypothesis by measuring residual drift variance after 10^5 iterations under varying initial biases. Can confirm or refute sensitivity differences by systematically varying bias magnitude and noise distribution parameters.",
+            "[PATH:theoretical] Theoretical analysis of convergence and drift cancellation in nonlinear recursive maps with additive Markovian noise, focusing on the role of exponentially weighted drift estimators vs. static bias compensation \u2014 Provides mathematical bounds on residual drift variance as a function of initial bias magnitude and adaptation rate. Can establish whether the adaptive mechanism inherently reduces sensitivity to initial conditions compared to fixed anti-correlated bias.",
+            "[PATH:literature] Literature review of adaptive bias correction techniques in iterative algorithms (e.g., stochastic approximation, online learning) with stationary noise, particularly studies comparing adaptive vs. fixed bias schemes \u2014 Surveys existing empirical and theoretical results on bias sensitivity in related domains. May reveal general principles or counterexamples that inform the plausibility of the hypothesis for the specific recursive map structure."
+          ],
+          "scope": {
+            "domain": "bounded-support noise distributions with stationary second-order statistics"
+          },
+          "qualifier": {
+            "adaptation_mechanism": "exponentially weighted moving average of accumulated drift",
+            "comparison_baseline": "fixed-magnitude anti-correlated bias",
+            "sensitivity_metric": "variance of residual drift after 10^5 iterations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more effectively achieved by",
+          "object": "fixed-magnitude anti-correlated bias than by anti-correlated noise with time-varying adaptive bias",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise fixed-magnitude anti-correlated bias than by anti-correlated noise with time-varying adaptive bias]",
+            "[PATH:empirical] Controlled simulation study comparing fixed-magnitude anti-correlated bias versus adaptive bias under bounded-support noise with stationary second-order statistics over 10^5 iterations, measuring drift cancellation in T(n) for n \u2261 1 mod 3 \u2014 Directly tests the hypothesis by systematically varying bias type and magnitude while holding noise distribution fixed, allowing quantitative comparison of drift cancellation efficacy.",
+            "[PATH:theoretical] Theoretical analysis of drift cancellation in recursive maps with anti-correlated perturbations, focusing on convergence rates and bias-variance trade-offs for fixed versus adaptive schemes \u2014 Provides mathematical grounding for whether fixed-magnitude anti-correlated bias can outperform adaptive methods, especially under stationary noise where adaptation may introduce unnecessary variance.",
+            "[PATH:literature] Literature review of prior work on bias injection for drift reduction in iterative algorithms (e.g., stochastic approximation, reinforcement learning with value function recursion) under correlated noise \u2014 Identifies existing evidence or counterexamples from related domains that can inform whether fixed anti-correlated bias is generally more effective than adaptive approaches for drift cancellation."
+          ],
+          "scope": {
+            "domain": "bounded-support noise distributions with stationary second-order statistics"
+          },
+          "qualifier": {
+            "temporal": "over simulation time steps up to 10^5 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more robustly achieved by",
+          "object": "a fixed-magnitude anti-correlated bias with periodic recalibration that uses a phase-locked window rather than a fixed schedule",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise a fixed-magnitude anti-correlated bias with periodic recalibration that uses a phase-locked window rather than a fixed schedule]",
+            "[PATH:empirical] Controlled simulation study comparing fixed-schedule vs. phase-locked recalibration under non-stationary noise with periodic shifts (e.g., square-wave modulation of noise mean). \u2014 Directly tests the hypothesis by measuring drift cancellation performance (e.g., residual bias variance) across multiple noise cycles, with the phase-locked window triggered by a phase detector on the noise shift signal.",
+            "[PATH:theoretical] Theoretical analysis of convergence bounds for recursive estimators with periodic recalibration, using Lyapunov drift arguments and stochastic approximation theory. \u2014 Provides formal conditions under which phase-locked recalibration reduces asymptotic bias compared to fixed schedules, especially when noise shifts are abrupt and periodic.",
+            "[PATH:literature] Literature review of adaptive filtering and phase-locked loop (PLL) methods applied to bias cancellation in recursive algorithms (e.g., LMS with periodic coefficient reset). \u2014 Identifies prior work on synchronization-based recalibration in non-stationary environments, which can be extended to the specific T(n) map with n \u2261 1 mod 3 structure."
+          ],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments with periodic structure"
+          },
+          "qualifier": {
+            "recalibration_trigger": "phase-locked to the noise shift cycle",
+            "comparison_baseline": "fixed-schedule periodic recalibration"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more effectively achieved by",
+          "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration]",
+            "[PATH:empirical] Controlled simulation study comparing time-varying adaptive bias (e.g., Kalman-filter-based drift correction) against fixed-magnitude anti-correlated bias with periodic recalibration under non-stationary noise regimes, measuring drift residual and convergence time for n \u2261 1 mod 3 steps in T(n). \u2014 Directly tests the hypothesis by generating quantitative performance metrics under the specified temporal and environmental conditions.",
+            "[PATH:theoretical] Theoretical analysis of bias update laws for recursive maps with nonzero-mean noise, deriving conditions under which adaptive bias achieves zero steady-state drift versus fixed-bias schemes when noise statistics change abruptly. \u2014 Provides formal guarantees or counterexamples that clarify the regimes where each method dominates, informing the disputed comparison."
+          ],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments"
+          },
+          "qualifier": {
+            "temporal": "during periods of non-stationary or abruptly changing noise conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more robustly achieved by",
+          "object": "fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise is more robustly achieved by fixed-magnitude anti-correlated bias with periodic recalibration than by time-varying adaptive bias in domain 'non-stationary or abruptly changing noise environments']"
+          ],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments"
+          },
+          "qualifier": {
+            "temporal": "for simulation durations up to 10^6 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more robustly achieved by",
+          "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise is more robustly achieved by time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration in domain 'non-stationary or abruptly changing noise environments']"
+          ],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments"
+          },
+          "qualifier": {
+            "temporal": "under simulated transient noise conditions lasting up to 10^4 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is strictly more robust to unknown noise-distribution shape when",
+          "object": "the map's Lyapunov exponent is sufficiently negative and the first-order moment is estimated online",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the map's Lyapunov exponent is sufficiently negative and the first-order moment is estimated online]",
+            "[PATH:empirical] Controlled simulation study comparing online moment estimation vs. fixed-threshold drift cancellation in the T(n) map for n \u2261 1 mod 3, with systematically varied noise distributions (e.g., uniform, asymmetric, multimodal) and Lyapunov exponents measured via finite-time Lyapunov exponent estimation. \u2014 Directly tests the hypothesis by manipulating noise-distribution shape and Lyapunov exponent sign/magnitude, isolating the effect of online moment estimation on drift robustness under distributional uncertainty.",
+            "[PATH:theoretical] Theoretical analysis of the stochastic contraction properties of the recursive map under online moment estimation, extending results from 'Stochastic Stability of Chaotic Systems with Unknown Noise' (e.g., L. Arnold, Random Dynamical Systems) and 'Adaptive Filtering for Chaotic Maps' (e.g., H. Kantz & T. Schreiber, Nonlinear Time Series Analysis). \u2014 Provides a formal justification for why sufficiently negative Lyapunov exponents combined with online first-order moment estimation can suppress drift regardless of noise shape, potentially confirming the hypothesis or revealing boundary conditions.",
+            "[PATH:literature] Literature review of drift-cancellation methods in chaotic maps with non-Gaussian noise, focusing on comparisons between online moment estimation and batch methods (e.g., in 'Robust Chaos Synchronization under Unknown Noise Distributions', Phys. Rev. E, 2018; 'Drift Compensation in Iterated Maps with Additive Noise', Chaos, 2020). \u2014 Synthesizes existing evidence on the comparative robustness of online vs. batch estimation against distributional uncertainty, identifying whether the hypothesis aligns with established findings or contradicts them."
+          ],
+          "scope": {
+            "domain": "deterministic chaos with unknown noise statistics and strong contraction"
+          },
+          "qualifier": {
+            "noise_distribution": "unknown shape, bounded support",
+            "adaptation_mechanism": "online moment estimation",
+            "comparison_baseline": "method A outperforms method B under distributional uncertainty"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is better achieved by a method that actively compensates for noise when",
+          "object": "the noise mean is known and the map's Lyapunov exponent is sufficiently negative",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise the noise mean is known and the map's Lyapunov exponent is sufficiently negative]",
+            "[PATH:empirical] Numerical simulation of T(n) with known nonzero-mean noise and varying Lyapunov exponents, comparing active compensation vs. passive methods for drift cancellation \u2014 Directly tests the hypothesis by systematically varying the Lyapunov exponent and noise mean, measuring drift magnitude in the n \u2261 1 mod 3 subsequence.",
+            "[PATH:theoretical] Analytical derivation of drift bounds for contracting maps with additive noise, using control-theoretic feedback to cancel the known mean \u2014 Provides a formal proof that active compensation reduces drift exactly when the Lyapunov exponent is sufficiently negative, clarifying the threshold and conditions.",
+            "[PATH:literature] Literature review on noise cancellation in chaotic maps (e.g., Ott\u2013Grebogi\u2013Yorke method, synchronization-based approaches) applied to maps with known noise statistics \u2014 Surveys existing methods and their known limitations, identifying whether active compensation with known mean has been studied in similar contracting regimes."
+          ],
+          "scope": {
+            "domain": "deterministic chaos with known noise statistics and strong contraction"
+          },
+          "qualifier": {
+            "temporal": "when the map's Lyapunov exponent remains sufficiently negative throughout the iteration"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more robustly achieved by",
+          "object": "fixed-magnitude anti-correlated bias with periodic recalibration only when the noise shift magnitude exceeds a threshold of 0.3 * bias magnitude",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments with bounded noise shifts"
+          },
+          "qualifier": {
+            "threshold_condition": "shift magnitude > 0.3 * bias magnitude",
+            "failure_mode": "time-varying adaptive bias outperforms when shifts are smaller than this threshold"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "drift cancellation in recursive map T(n) for n \u2261 1 mod 3 with nonzero-mean noise",
+          "predicate": "is more effectively achieved by",
+          "object": "time-varying adaptive bias than by fixed-magnitude anti-correlated bias with periodic recalibration",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "non-stationary or abruptly changing noise environments"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 13
+    },
+    {
+      "branch_id": "branch_ev2_op0",
+      "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev2_op0",
+      "operator_id": "adaptive_variation_selection",
+      "question": "Under what conditions does the nonlinear rescaling factor influence the dominance of diverging trajectories over contrac",
+      "loops_completed": 2,
+      "outcome": "BRANCH_LOOPS_DONE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is independent of",
+          "object": "the parity of the iteration index",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index]"
+          ],
+          "scope": {},
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "depends on",
+          "object": "the parity of the iteration index when the iteration count is low",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index when the iteration count is low]"
+          ],
+          "scope": {
+            "domain": "small iteration counts (< 10)"
+          },
+          "qualifier": {
+            "temporal": "during small iteration counts (< 10)"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is independent of",
+          "object": "the parity of the iteration index for all sufficiently large iterations",
+          "status": "disputed",
+          "confidence": 0.7000000000000001,
+          "modality": "assertion",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index for all sufficiently large iterations]"
+          ],
+          "scope": {
+            "domain": "asymptotic behavior (iteration index \u2192 \u221e)"
+          },
+          "qualifier": {
+            "temporal": "for all sufficiently large iterations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "shows a transient dependence on",
+          "object": "the parity of the iteration index only when the map is applied to non-optimal initial values",
+          "status": "disputed",
+          "confidence": 0.47,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index only when the map is applied to non-optimal initial values]"
+          ],
+          "scope": {
+            "domain": "specific initial conditions (n with high entropy)"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^5 iterations"
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T7",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is dominated by",
+          "object": "the parity of the iteration index regardless of iteration count magnitude",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index regardless of iteration count magnitude]",
+            "[PATH:empirical] High-precision numerical simulation of T(n) for n \u2261 1 mod 3 across a wide range of iteration counts, recording the nonlinear rescaling factor as a function of iteration index parity \u2014 Direct computational evidence can reveal whether the rescaling factor consistently depends on parity of the iteration index, independent of iteration count magnitude. Simulated data with rigorous statistical testing (e.g., permutation tests) can confirm or refute dominance by parity.",
+            "[PATH:theoretical] Analytical derivation of closed-form expressions for the rescaling factor in T(n) for n \u2261 1 mod 3, using modular arithmetic and number-theoretic properties \u2014 A theoretical proof that the rescaling factor is a function only of parity (or not) would settle the hypothesis. This could involve analyzing the map's structure under iteration modulo powers of 2 or 3.",
+            "[PATH:literature] Systematic review of literature on recursive maps with conditional rescaling (e.g., Collatz-like maps), focusing on parity-dependent behavior in residues modulo 3 \u2014 Existing studies may have already characterized similar rescaling factors for n \u2261 1 mod 3, providing evidence or counterexamples from known results on iteration-index parity effects."
+          ],
+          "scope": {
+            "domain": "all iteration counts"
+          },
+          "qualifier": {
+            "temporal": "for all iteration counts"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is independent of",
+          "object": "the parity of the iteration index when the iteration count is low",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index when the iteration count is low]",
+            "[PATH:empirical] Run systematic simulations of T(n) for n \u2261 1 mod 3 across all small iteration counts (<10), recording the nonlinear rescaling factor separately for even and odd iteration indices, then testing for statistical independence via chi-squared or permutation tests. \u2014 Direct empirical test can reveal whether parity of iteration index correlates with the rescaling factor in the low-count regime, confirming or refuting the claimed independence.",
+            "[PATH:theoretical] Derive an algebraic expression for the rescaling factor in T(n) for n \u2261 1 mod 3, analyzing its dependence on iteration index parity using modular arithmetic or dynamical systems theory. \u2014 A theoretical derivation can prove whether the factor is structurally independent of parity, providing a definitive answer that simulation alone may not guarantee due to limited sample sizes.",
+            "[PATH:literature] Survey existing literature on recursive maps (e.g., Collatz-like functions) for known results on parity-dependent rescaling, especially for small iteration counts and residues modulo 3. \u2014 Prior work may have already addressed this specific property, saving effort and providing theoretical context or counterexamples that directly inform the hypothesis."
+          ],
+          "scope": {
+            "domain": "small iteration counts (< 10)"
+          },
+          "qualifier": {
+            "temporal": "iteration count < 10"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is entirely independent of",
+          "object": "the parity of the iteration index for all initial values, including non-optimal ones, once the map is iterated beyond a transient threshold of 10 steps",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index for all initial values, including non-optimal ones, once the map is iterated beyond a transient threshold of 10 steps]",
+            "[PATH:empirical] High-precision computational simulation of T(n) for a stratified random sample of n \u2261 1 mod 3 with n < 10^6, recording the nonlinear rescaling factor at each iteration step beyond the 10-step transient threshold, and testing for correlation with parity of iteration index. \u2014 Direct empirical test can confirm or refute independence by measuring the relationship between the factor and parity across a large, representative set of initial values.",
+            "[PATH:theoretical] Analytical derivation of the closed-form expression for the nonlinear rescaling factor as a function of iteration index for n \u2261 1 mod 3, using algebraic properties of the map T(n) and modular arithmetic. \u2014 A rigorous mathematical proof or counterexample would settle the hypothesis definitively, showing whether parity dependence can arise from the map's structure.",
+            "[PATH:literature] Review of existing literature on recursive maps with modular constraints, particularly studies on the 3x+1 problem or similar Collatz-type maps, focusing on any reported parity dependencies or transient behavior. \u2014 Prior work may provide theorems, conjectures, or empirical patterns that either support or contradict the claimed independence, saving effort and contextualizing the hypothesis."
+          ],
+          "scope": {
+            "domain": "all initial values n \u2261 1 mod 3 with n < 10^6"
+          },
+          "qualifier": {
+            "temporal": "after 10 iterations beyond the transient threshold",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "demonstrates a consistent dependence on",
+          "object": "the parity of the iteration index regardless of initial value optimality",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 the parity of the iteration index regardless of initial value optimality]",
+            "[PATH:empirical] Systematic computational experiments tracking the rescaling factor across parity of iteration index for multiple random initial values satisfying n \u2261 1 mod 3, with convergence/divergence criteria \u2014 Direct simulation can test if the factor consistently depends on iteration parity across diverse initial conditions, providing clear confirmatory or refutatory data.",
+            "[PATH:theoretical] Analytical derivation of the rescaling factor's closed-form expression from the recursive map's structure, isolating parity-dependent terms \u2014 A formal mathematical proof can determine whether the parity dependence is inherent to the map's definition or an artifact of specific initial values, offering definitive theoretical resolution.",
+            "[PATH:literature] Review of existing literature on parity-dependent scaling in recursive maps (e.g., Collatz-type or piecewise linear maps) for patterns or counterexamples \u2014 Comparing with known results can reveal whether such parity dependence is a documented phenomenon or contradicts established behaviors, informing the hypothesis's plausibility."
+          ],
+          "scope": {
+            "domain": "all initial conditions"
+          },
+          "qualifier": {
+            "temporal": "for all iterations up to the point of convergence or divergence",
+            "geographic": "none"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "does exhibit a transient dependence on",
+          "object": "the parity of the iteration index when the map is applied to non-optimal initial values",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 does exhibit a transient dependence on the parity of the iteration index when the map is applied to non-optimal initial values in domain 'specific initial conditions (n with high entropy)']"
+          ],
+          "scope": {
+            "domain": "specific initial conditions (n with high entropy)"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^3 iterations",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "does not exhibit any dependence on",
+          "object": "the parity of the iteration index, even when the map is applied to non-optimal initial values",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3 does not exhibit any dependence on the parity of the iteration index, even when the map is applied to non-optimal initial values in domain 'specific initial conditions (n with high entropy)']"
+          ],
+          "scope": {
+            "domain": "specific initial conditions (n with high entropy)"
+          },
+          "qualifier": {
+            "temporal": "under all observed iteration counts in the study",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is entirely determined by",
+          "object": "the binary expansion of the initial n when the map is applied to non-optimal initial values",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "specific initial conditions (n with high entropy)"
+          },
+          "qualifier": {
+            "temporal": "during the first 10^5 iterations"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the nonlinear rescaling factor in the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is entirely independent of",
+          "object": "the parity of the iteration index regardless of initial values",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "all initial conditions"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T8"
+          ],
+          "parent_id": "C004"
+        }
+      },
+      "n_sealed": 12
+    },
+    {
+      "branch_id": "branch_ev2_op1",
+      "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev2_op1",
+      "operator_id": "boundary_condition_analysis",
+      "question": "What are the necessary structural invariants and boundary conditions required for the recursive map T(n) to converge to ",
+      "loops_completed": 3,
+      "outcome": "BRANCH_LOOPS_DONE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3",
+          "predicate": "is strictly necessary for ensuring",
+          "object": "the stability of the map as a discrete dynamical system with periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3 the stability of the map as a discrete dynamical system with periodic boundary conditions]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "While rescaling is commonly invoked to handle divergent orbits in mod-3 residue classes, it remains contested whether the rescaling step is an essential structural requirement for stability or merely a convenient computational artifact that can be replaced by alternative boundary-condition adjustments."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "is structurally required to prevent blow-up of orbits",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the rescaling step for n \u2261 1 mod 3 the stability of the map under periodic boundary conditions]"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with mod-3 residue constraints"
+          },
+          "qualifier": {
+            "temporal": "during the transient regime before steady-state convergence",
+            "geographic": "within bounded integer lattices with periodic boundary conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "can be replaced by alternative boundary-condition adjustments without loss of stability",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the rescaling step for n \u2261 1 mod 3 the stability of the map under periodic boundary conditions]"
+          ],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {
+            "tension": "This perspective challenges the necessity of rescaling, proposing that stability is maintained through other means, creating epistemic friction with the structural requirement view."
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3",
+          "predicate": "is contingent on the specific choice of boundary conditions",
+          "object": "the stability of the map as a discrete dynamical system",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3 the stability of the map as a discrete dynamical system]"
+          ],
+          "scope": {
+            "domain": "sensitivity of stability to boundary condition parameterization"
+          },
+          "qualifier": {
+            "temporal": "for the parameter regime studied in the simulation"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "is not only required to prevent blow-up but also induces a period-3 attractor",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the rescaling step for n \u2261 1 mod 3 the stability of the map under periodic boundary conditions]",
+            "[PATH:empirical] Numerical bifurcation analysis of the rescaling step's effect on the map's dynamics for n \u2261 1 mod 3 across varying system sizes in bounded integer lattices with periodic boundary conditions \u2014 Systematic simulations can detect whether the rescaling step induces a period-3 attractor in the steady-state regime, and whether its removal leads to blow-up or different asymptotic behavior, directly testing the hypothesis.",
+            "[PATH:theoretical] Analytical derivation of the map's Lyapunov exponents and invariant measures under the rescaling constraint for n \u2261 1 mod 3, using ergodic theory or symbolic dynamics \u2014 A theoretical proof that the rescaling step creates a stable period-3 cycle (or not) would confirm or refute the attractor claim, and clarify the necessity for blow-up prevention.",
+            "[PATH:literature] Review of known results on mod-3 residue-constrained maps and rescaling-induced periodicity in discrete dynamical systems with periodic boundaries (e.g., literature on coupled map lattices or cellular automata with conservation laws) \u2014 Existing studies may have characterized similar attractors or stability conditions, providing comparative evidence to validate or challenge the hypothesis without new experiments."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with mod-3 residue constraints"
+          },
+          "qualifier": {
+            "temporal": "after the transient regime and during steady-state convergence",
+            "geographic": "within bounded integer lattices with periodic boundary conditions"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "is unnecessary and potentially disrupts",
+          "object": "the natural stabilization of orbits",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the rescaling step for n \u2261 1 mod 3 the natural stabilization of orbits]",
+            "[PATH:empirical] Systematic computational comparison of orbit stabilization rates with and without the rescaling step for n \u2261 1 mod 3 across a range of initial conditions in discrete dynamical systems with mod-3 residue constraints \u2014 Direct simulation can quantify whether removing the rescaling step leads to faster or more consistent stabilization of orbits during the transient phase, providing empirical confirmation or refutation of the hypothesis.",
+            "[PATH:theoretical] Analytical proof or counterexample examining the effect of the rescaling step on Lyapunov exponents or stability measures in the restricted mod-3 residue phase space \u2014 A mathematical analysis can determine whether the rescaling step inherently introduces instability or is neutral, offering rigorous theoretical support for the claimed disruption of natural stabilization.",
+            "[PATH:literature] Review of existing literature on rescaling techniques in discrete dynamical systems with modular constraints, particularly studies on the Collatz-like maps or similar residue-based systems \u2014 Prior work may have addressed the role of rescaling steps in orbit stabilization, providing indirect evidence or theoretical frameworks that validate or contradict the hypothesis without requiring new simulations."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with mod-3 residue constraints"
+          },
+          "qualifier": {
+            "temporal": "during the transient phase before orbit periodicity is established"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "can be replaced by a specific non-uniform boundary damping layer that actively absorbs near-boundary energy",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the rescaling step for n \u2261 1 mod 3 the stability of the map under periodic boundary conditions]",
+            "[PATH:empirical] Controlled numerical experiments comparing the standard rescaling step for n \u2261 1 mod 3 against a non-uniform boundary damping layer in a 1D or 2D dynamical system under periodic boundary conditions, measuring long-term stability metrics (e.g., Lyapunov exponent, energy drift). \u2014 Direct simulation can reveal whether the damping layer actively absorbs near-boundary energy without destabilizing the map, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Analytical stability analysis of the modified map using linearized perturbation theory and energy methods, focusing on the effect of the non-uniform damping layer on mode growth/decay under periodic constraints. \u2014 A theoretical proof or counterexample would confirm whether the damping layer can replace the rescaling step while preserving stability, offering rigorous insight beyond empirical observation."
+          ],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {
+            "temporal": "during simulation runs with periodic boundary conditions",
+            "geographic": "in computational environments without spatial locality constraints"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "alternative boundary-condition adjustments",
+          "predicate": "cannot replace the rescaling step without compromising",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: alternative boundary-condition adjustments the stability of the map under periodic boundary conditions]",
+            "[PATH:empirical] Controlled numerical experiments comparing map stability under alternative boundary-condition adjustments (e.g., ghost cells, extrapolation, or flux modifications) versus standard rescaling in periodic systems, measuring Lyapunov exponents or variance over long simulation runs \u2014 Directly tests whether alternative adjustments maintain the same stability as rescaling under periodic boundaries, providing quantitative evidence for or against the hypothesis.",
+            "[PATH:theoretical] Theoretical analysis of spectral properties of the map's linearized operator under different boundary-condition adjustments, focusing on eigenvalue bounds and mode growth rates in periodic domains \u2014 A formal proof or counterexample showing that any alternative adjustment introduces unstable eigenmodes or violates conservation properties inherent to rescaling would confirm or refute the claim.",
+            "[PATH:literature] Literature review of computational fluid dynamics and dynamical systems studies that have applied alternative boundary treatments (e.g., immersed boundary methods, characteristic-based conditions) to periodic problems, with emphasis on documented stability issues or successes \u2014 Existing published results may already demonstrate cases where alternative adjustments succeeded or failed, providing indirect evidence to support or challenge the hypothesis without new experiments."
+          ],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {
+            "temporal": "for all time steps in a single forward simulation run",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "is necessary and cannot be replaced by alternative boundary-condition adjustments without loss of stability",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the rescaling step for n \u2261 1 mod 3 is necessary and cannot be replaced by alternative boundary-condition adjustments without loss of stability the stability of the map under periodic boundary conditions in domain 'computational artifacts in dynamical system implementations']"
+          ],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {
+            "temporal": "since the 2015 introduction of the rescaling protocol for n \u2261 1 mod 3 in computational dynamical systems",
+            "geographic": "global research community implementing periodic boundary conditions in computational artifacts"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "can be replaced by alternative boundary-condition adjustments without loss of stability",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the rescaling step for n \u2261 1 mod 3 can be replaced by alternative boundary-condition adjustments without loss of stability the stability of the map under periodic boundary conditions in domain 'computational artifacts in dynamical system implementations']"
+          ],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {
+            "temporal": "since the adoption of periodic boundary conditions in computational dynamical systems",
+            "geographic": "global in scope, applicable to any computational implementation"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3",
+          "predicate": "is independent of boundary condition choice when the rescaling factor is exactly 2",
+          "object": "the stability of the map as a discrete dynamical system",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3 the stability of the map as a discrete dynamical system]",
+            "[PATH:empirical] Systematic simulation of the discrete dynamical system under varying boundary conditions (e.g., periodic, fixed, reflecting) with rescaling factor exactly 2, focusing on n \u2261 1 mod 3 trajectories \u2014 Directly tests the hypothesis by comparing convergence behavior across a controlled set of boundary condition parameterizations, providing empirical evidence for or against independence.",
+            "[PATH:theoretical] Analytical derivation of the map's stability conditions using renormalization group or fixed-point analysis, specifically examining the effect of rescaling by factor 2 on the dynamics for the congruence class n \u2261 1 mod 3 \u2014 A theoretical proof that the rescaling factor 2 eliminates dependence on boundary conditions would confirm the hypothesis; conversely, a demonstration of sensitivity would refute it.",
+            "[PATH:literature] Survey of literature on similar discrete dynamical systems (e.g., cellular automata, iterated maps with rescaling) to identify known results on boundary condition independence under specific rescaling factors \u2014 Existing theoretical or empirical findings in related systems may provide indirect evidence or methodological insights relevant to the hypothesis, especially if analogous behavior has been documented."
+          ],
+          "scope": {
+            "domain": "sensitivity of stability to boundary condition parameterization"
+          },
+          "qualifier": {
+            "temporal": "for the parameter regime studied in the simulation"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3",
+          "predicate": "is independent of the specific choice of boundary conditions",
+          "object": "the stability of the map as a discrete dynamical system",
+          "status": "disputed",
+          "confidence": 0.55,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the role of rescaling in the convergence of T(n) for n \u2261 1 mod 3 the stability of the map as a discrete dynamical system]"
+          ],
+          "scope": {
+            "domain": "robustness of stability to varying boundary conditions"
+          },
+          "qualifier": {
+            "temporal": "for all time steps t \u2265 0",
+            "geographic": "in the context of the discrete dynamical system defined on the integers"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "the rescaling step for n \u2261 1 mod 3",
+          "predicate": "introduces a systematic bias that alternative boundary-condition adjustments eliminate",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "alternative boundary-condition adjustments",
+          "predicate": "cannot maintain stability without the rescaling step for n \u2261 1 mod 3",
+          "object": "the stability of the map under periodic boundary conditions",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "computational artifacts in dynamical system implementations"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    },
+    {
+      "branch_id": "branch_ev2_op2",
+      "_branch_dir": "paper9_branch2/batch_results_b4/M01_seed202/branch_ev2_op2",
+      "operator_id": "recursive_modulation",
+      "question": "How might the recursive map T(n) for n \u2261 1 mod 3 inform the stability of bounded cycles in complex systems when rescalin",
+      "loops_completed": 1,
+      "outcome": "BRANCH_LOOPS_DONE",
+      "final_claims": {
+        "C001": {
+          "id": "C001",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "informs the stability of bounded cycles in complex systems",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.45,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+          ],
+          "scope": {},
+          "qualifier": {
+            "tension": "While rescaling factors are often assumed necessary for cycle stability in recursive maps, there is contested evidence that removing or minimizing them may either destabilize bounded cycles or reveal hidden invariant structures, depending on the congruence class of n. The specific role of n \u2261 1 mod 3 in this context remains unresolved."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T4"
+          ],
+          "parent_id": null
+        },
+        "C002": {
+          "id": "C002",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "exhibits bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "tension": "This sub-claim assumes that minimizing rescaling factors can preserve or even reveal hidden invariant structures for this specific residue class."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C003": {
+          "id": "C003",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "loses bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "disputed",
+          "confidence": 0.42,
+          "modality": "suggestion",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "tension": "This sub-claim competes with the first by proposing that removal of rescaling factors introduces destabilization rather than revealing invariants, reflecting the unresolved role of n \u2261 1 mod 3."
+          },
+          "conflict": false,
+          "branch_open": true,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T5[anti-delphi]",
+            "T1",
+            "T9[anti-delphi]"
+          ],
+          "parent_id": "C001"
+        },
+        "C004": {
+          "id": "C004",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "is sensitive to the presence of rescaling factors in a way that differs qualitatively from other residue classes",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.82,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps across congruence classes"
+          },
+          "qualifier": {
+            "tension": "This sub-claim qualifies the debate by shifting focus to class-specific sensitivity, suggesting that neither full stability nor full destabilization may be generalizable without considering class-specific dynamics."
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T6[anti-delphi]",
+            "T8"
+          ],
+          "parent_id": "C001"
+        },
+        "C005": {
+          "id": "C005",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "converges to a single fixed point",
+          "object": "when rescaling factors are removed and the map is restricted to the 1 mod 3 residue class",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are removed and the map is restricted to the 1 mod 3 residue class]",
+            "[PATH:empirical] Systematic computational exploration of the restricted map on all residues congruent to 1 mod 3 up to a large bound (e.g., 10^6) with multiple random seeds, tracking whether all trajectories collapse to a single fixed point after removing rescaling factors. \u2014 Direct simulation can reveal counterexamples or confirm convergence patterns, providing empirical support or refutation for the hypothesis.",
+            "[PATH:theoretical] Analytic study of the map's dynamics using modular arithmetic and contraction mapping principles, focusing on the invariant set within the 1 mod 3 residue class and the effect of rescaling removal on fixed point uniqueness. \u2014 A rigorous mathematical proof or disproof of convergence to a single fixed point would settle the dispute, and theoretical insights can guide empirical checks.",
+            "[PATH:literature] Review of existing literature on similar recursive maps with congruence restrictions (e.g., Collatz-type maps, 3x+1 variants) to identify known fixed points, cycles, or divergence behaviors under analogous constraints. \u2014 Prior work may already contain relevant results or methods that can be directly applied to evaluate this specific hypothesis, saving effort and providing context."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "for all n in the domain at any iteration step",
+            "geographic": "no geographic restriction"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C006": {
+          "id": "C006",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "exhibits unbounded cycle instability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+            "[PATH:empirical] Direct numerical simulation of T(n) for n \u2261 1 mod 3 over a large range of initial conditions (e.g., n up to 10^9) with rescaling factors set to 1, recording cycle lengths and maximum values to detect unbounded growth. \u2014 Empirical evidence from exhaustive simulation can directly confirm or refute the presence of unbounded cycles by checking whether any trajectory escapes to infinity or enters a finite cycle of bounded length.",
+            "[PATH:theoretical] Analytic proof using modular arithmetic and Lyapunov-like functions to bound the iteration under minimized rescaling, comparing to known results for similar maps (e.g., Collatz-type dynamics). \u2014 A theoretical approach can establish necessary conditions for instability, such as existence of invariant measures or growth rates, and resolve whether the claimed instability is mathematically possible or ruled out by congruence constraints.",
+            "[PATH:literature] Literature review of studies on piecewise linear maps with congruence classes (e.g., the 3x+1 problem, generalized Syracuse maps) focusing on behavior when scaling factors are removed or minimized. \u2014 Existing results on similar recursive maps may provide analogous proofs or counterexamples, helping to determine whether unbounded cycle instability is a known phenomenon under the specified conditions."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "for all time steps t \u2265 0 in the discrete iteration",
+            "geographic": "none"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C002"
+        },
+        "C007": {
+          "id": "C007",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "exhibits unbounded growth for all initial values",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+            "[PATH:empirical] Systematic computational search over all residue classes modulo powers of 3 for T(n) = (n - 1)/3 when n \u2261 1 mod 3, with no rescaling, tracking maximum trajectory values up to large iteration counts (e.g., 10^6 steps). \u2014 Direct numerical simulation can reveal whether trajectories diverge to infinity or enter cycles, providing concrete evidence for or against unbounded growth under the specified conditions.",
+            "[PATH:theoretical] Theoretical analysis of the dynamical system as a random walk with drift, using martingale or Lyapunov function methods to bound expected growth rates. \u2014 If the map can be shown to have a positive drift on average for all initial values in the residue class, it would support unbounded growth; otherwise, a bounded drift or recurrent behavior could refute the hypothesis.",
+            "[PATH:literature] Review of known results on the 3x+1 problem and its variants, particularly studies of maps with restricted rescaling (e.g., the 'minimal' 3x+1 map or the '5x+1' problem) that exhibit unbounded trajectories. \u2014 The hypothesis parallels open questions in Collatz-type dynamics; existing literature on similar maps with minimized rescaling may provide analogies, counterexamples, or proof techniques that confirm or refute unbounded growth."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "over infinite time horizon"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C008": {
+          "id": "C008",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "gains bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]",
+            "[PATH:empirical] Systematic computational search for cycles in the reduced map T'(n) = n/3 for n \u2261 0 mod 3, T'(n) = (2n-1)/3 for n \u2261 1 mod 3, T'(n) = (4n+1)/3 for n \u2261 2 mod 3 (rescaling removed), with exhaustive testing up to large initial values \u2014 Direct simulation can reveal whether the map without rescaling factors produces bounded cycles or diverges, providing empirical confirmation or refutation of the hypothesis.",
+            "[PATH:theoretical] Analytic study of invariant densities or Lyapunov exponents for the map T(n) with minimized rescaling (e.g., using continued fraction expansions or ergodic theory for piecewise linear maps over integers) \u2014 Rigorous mathematical analysis of the map's dynamics can determine conditions for bounded cycle stability, especially if the map can be transformed into a known system with known stability properties.",
+            "[PATH:literature] Literature on the generalized Collatz problem and its variants (e.g., Lagarias' annotated bibliography on the 3x+1 problem and related maps with congruence constraints) \u2014 Existing theoretical results and known cycles from similar maps (e.g., the 3x+1 problem, 5x+1 problem, or maps with mod 3 constraints) may provide analogies or counterexamples that inform the stability of cycles under rescaling removal."
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "under iterated application of the map",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B001": {
+          "id": "B001",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "retains bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 retains bounded cycle stability when rescaling factors are minimized or removed in domain 'discrete dynamical systems with congruence constraints']"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "for all iterative steps under the given congruence condition",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "B002": {
+          "id": "B002",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "loses bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "supported",
+          "confidence": 0.9,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated: peer-reviewed source confirms the recursive map T(n) for n \u2261 1 mod 3 loses bounded cycle stability when rescaling factors are minimized or removed in domain 'discrete dynamical systems with congruence constraints']"
+          ],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {
+            "temporal": "under asymptotic iteration as n \u2192 \u221e"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": false,
+          "generated_by": "",
+          "history": [
+            "T3",
+            "T7",
+            "T8"
+          ],
+          "parent_id": "C003"
+        },
+        "C011": {
+          "id": "C011",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed",
+          "predicate": "exhibits a strictly higher average iteration count to convergence than maps for n \u2261 0 mod 3 or n \u2261 2 mod 3",
+          "object": "under identical rescaling factor minimization protocols",
+          "status": "supported",
+          "confidence": 0.8500000000000001,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed under identical rescaling factor minimization protocols]",
+            "[PATH:empirical] Systematic computational experiments comparing average iteration counts to convergence for T(n) under minimized rescaling factors across all congruence classes mod 3, using a fixed set of initial values and convergence criteria, with statistical significance testing \u2014 Directly tests the hypothesis by generating comparative data under controlled conditions, allowing confirmation or refutation of the claimed higher average iteration count for n \u2261 1 mod 3.",
+            "[PATH:theoretical] Analytic derivation of expected iteration counts for T(n) in each congruence class under the rescaling factor minimization protocol, using properties of modular arithmetic and dynamical systems theory \u2014 Provides a mathematical proof or counterexample that explains the observed differences, offering a foundation to confirm or refute the hypothesis beyond empirical variability.",
+            "[PATH:literature] Meta-analysis of published results from 2020-2024 on recursive maps and their convergence behavior, focusing on studies that report iteration counts by congruence class and rescaling protocol \u2014 Leverages existing evidence to assess consistency with the hypothesis, potentially revealing overlooked patterns or contradictions that support or undermine the claim."
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps across congruence classes"
+          },
+          "qualifier": {
+            "temporal": "as observed in computational experiments from 2020 to 2024",
+            "geographic": "across simulated environments with no geographic constraints"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": true,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [
+            "T3",
+            "T7",
+            "T6",
+            "T8"
+          ],
+          "parent_id": "C004"
+        },
+        "C012": {
+          "id": "C012",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "exhibits the same sensitivity to rescaling factors as other residue classes",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "disputed",
+          "confidence": 0.55,
+          "modality": "hypothesis",
+          "evidence_refs": [
+            "[Simulated evidence for: the recursive map T(n) for n \u2261 1 mod 3 when rescaling factors are minimized or removed]"
+          ],
+          "scope": {
+            "domain": "comparative analysis of recursive maps across congruence classes"
+          },
+          "qualifier": {
+            "temporal": "under simulated conditions with no specified time constraint",
+            "geographic": "not applicable"
+          },
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": false,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [
+            "T3",
+            "T7"
+          ],
+          "parent_id": "C004"
+        },
+        "C013": {
+          "id": "C013",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "exhibits monotonic divergence to infinity",
+          "object": "when rescaling factors are minimized or removed and initial values are drawn from a dense subset of the domain",
+          "status": "unknown",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "deepseek-chat[hypothesis_builder]",
+          "history": [],
+          "parent_id": "C003"
+        },
+        "C014": {
+          "id": "C014",
+          "subject": "the recursive map T(n) for n \u2261 1 mod 3",
+          "predicate": "gains bounded cycle stability",
+          "object": "when rescaling factors are minimized or removed",
+          "status": "disputed",
+          "confidence": 0.5,
+          "modality": "hypothesis",
+          "evidence_refs": [],
+          "scope": {
+            "domain": "discrete dynamical systems with congruence constraints"
+          },
+          "qualifier": {},
+          "conflict": false,
+          "branch_open": false,
+          "sealed": false,
+          "is_synthesis": true,
+          "is_role_generated": true,
+          "generated_by": "openai/gpt-4o[falsifier]",
+          "history": [],
+          "parent_id": "C003"
+        }
+      },
+      "n_sealed": 11
+    }
+  ],
+  "n_branches": 5,
+  "post_merge_results": [],
+  "n_post_merges": 0,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is fully determined by",
+      "object": "the density of consecutive 1-bits in the binary expansion of n, rather than by the total frequency of low-weight patterns",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the density of consecutive 1-bits in the binary expansion of n, rather than by the total frequency of low-weight patterns]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the density of consecutive 1-bits in the binary expansion of n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the density of consecutive 1-bits in the binary expansion of n]"
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "condition": "for n with high density of consecutive 1-bits"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the total frequency of low-weight patterns in the binary expansion of n",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the total frequency of low-weight patterns in the binary expansion of n]"
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "condition": "for n with sparse low-weight patterns"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is equally influenced by",
+      "object": "both the density of consecutive 1-bits and the total frequency of low-weight patterns, depending on the phase space region",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) both the density of consecutive 1-bits and the total frequency of low-weight patterns, depending on the phase space region]"
+      ],
+      "scope": {
+        "domain": "phase space of T(n) trajectories"
+      },
+      "qualifier": {
+        "condition": "when n exhibits mixed binary pattern characteristics"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the maximum run length of consecutive 1-bits in the binary expansion of n, rather than their density",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the maximum run length of consecutive 1-bits in the binary expansion of n, rather than their density]",
+        "[PATH:empirical] Systematic computational experiments varying binary run length and density independently for n with at least one run of three or more consecutive 1-bits, measuring the proportion of diverging vs. contracting trajectories under T(n) for large n \u2014 Directly tests whether maximum run length (e.g., runs of 3, 4, 5 bits) correlates more strongly with asymptotic dominance than overall density, by controlling for density while varying run length and vice versa.",
+        "[PATH:theoretical] Analytical derivation of the growth rate of T(n) in terms of the maximum run length of 1-bits, using the recursive map's dependence on bitwise operations (e.g., carry propagation or modular reductions) to prove a threshold effect \u2014 Provides a mathematical explanation if maximum run length determines whether trajectories diverge (e.g., due to exponential growth in certain patterns) while density alone does not capture such nonlinear effects.",
+        "[PATH:literature] Review of existing literature on recursive maps defined by binary expansions (e.g., Collatz-like maps, 3x+1 variants, or bit-count-based dynamics) for evidence that extreme run lengths, not average density, drive divergence \u2014 Identifies prior results or conjectures that support or contradict the primacy of maximum run length, contextualizing the hypothesis within known dynamical systems on binary strings."
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "condition": "for n with at least one run of three or more consecutive 1-bits"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the overall statistical distribution of bits in the binary expansion of n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the overall statistical distribution of bits in the binary expansion of n]",
+        "[PATH:empirical] Large-scale computational simulation of T(n) for n up to 2^40, recording binary expansion bit distributions (e.g., proportion of 1s, runs of 0s) and correlating with trajectory divergence/contraction rates \u2014 Directly tests whether statistical bit properties (e.g., density of 1s) predict asymptotic behavior, providing high-resolution data to confirm or refute the hypothesis.",
+        "[PATH:theoretical] Analytical derivation linking the map T(n) to a random walk or branching process on binary digits, using probabilistic methods (e.g., concentration inequalities, ergodic theory) to prove dominance of diverging trajectories under i.i.d. bit assumptions \u2014 Establishes a rigorous causal mechanism if the hypothesis holds; if contradictions arise (e.g., non-ergodicity), it refutes the explanation.",
+        "[PATH:literature] Existing literature on the 3x+1 (Collatz) problem and related iterated maps, particularly studies on binary expansion and trajectory statistics (e.g., Lagarias, Terras, Sinai) \u2014 Provides analogous frameworks and known results (e.g., stopping time distributions) to compare with T(n), helping isolate whether bit statistics are primary or merely correlated."
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "temporal": "in the limit as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the density of consecutive 1-bit pairs in the binary expansion of n, rather than the total frequency of all low-weight patterns",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the density of consecutive 1-bit pairs in the binary expansion of n, rather than the total frequency of all low-weight patterns]",
+        "[PATH:empirical] Systematic computational simulation varying only the density of consecutive 1-bit pairs while controlling for total low-weight pattern frequency, using T(n) trajectories for n up to 2^30 \u2014 Isolates the effect of consecutive 1-bit density from total low-weight count; if divergence correlates strongly with consecutive pairs, the hypothesis is supported; if not, refuted.",
+        "[PATH:theoretical] Analytical derivation of the expected trajectory length for T(n) based on Markov chain models of binary expansions, focusing on run-length distributions of 1s \u2014 Provides a mathematical proof linking divergence probability to consecutive 1-bit density, directly testing the causal mechanism proposed in the hypothesis.",
+        "[PATH:literature] Review of existing literature on Collatz-like maps and binary pattern analysis, specifically studies on the role of bit clusters versus total bit count in trajectory behavior \u2014 Identifies prior empirical or theoretical work that either supports or contradicts the primacy of consecutive 1-bit pairs, contextualizing the hypothesis within known results."
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "condition": "for n with sparse low-weight patterns but high consecutive 1-bit density"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the structural properties of T(n) rather than the binary expansion of n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: asymptotic dominance of diverging over contracting trajectories in recursive map T(n) the structural properties of T(n) rather than the binary expansion of n]",
+        "[PATH:empirical] Systematic computational enumeration of trajectories for T(n) across structurally varied recursive maps (e.g., maps with different growth rates, fixed-point structures, and periodicity) while controlling for binary expansion properties \u2014 By generating large-scale data on trajectory outcomes for many T(n) variants, one can test whether diverging trajectories dominate regardless of binary input features, isolating structural versus expansion-based explanations.",
+        "[PATH:theoretical] Formal analysis comparing ergodic or measure-theoretic properties of T(n) under random initial conditions, focusing on invariant measures that characterize divergence versus contraction \u2014 A theoretical derivation of the asymptotic ratio of diverging to contracting trajectories based solely on map structure (e.g., Lyapunov exponents, attractor topology) would directly confirm or refute the hypothesis without reliance on binary expansion details.",
+        "[PATH:literature] Literature review of known recursive maps (e.g., Collatz-type functions, logistic maps, or piecewise linear maps) where binary expansion effects have been previously studied, to compare dominance patterns \u2014 Existing studies on maps like the 3x+1 problem or binary shift maps often attribute trajectory behavior to base-2 properties; reanalyzing these results in light of structural invariants could reveal whether the binary expansion is a confound or a primary driver."
+      ],
+      "scope": {
+        "domain": "recursive map theory"
+      },
+      "qualifier": {
+        "temporal": "n\u2192\u221e",
+        "geographic": "mathematical domain of recursive map theory"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the total frequency of low-weight patterns in the binary expansion of n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms asymptotic dominance of diverging over contracting trajectories in recursive map T(n) is primarily explained by the total frequency of low-weight patterns in the binary expansion of n in domain 'binary expansion analysis of T(n)']"
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "temporal": "asymptotic limit as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is not primarily explained by",
+      "object": "the total frequency of low-weight patterns in the binary expansion of n",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms asymptotic dominance of diverging over contracting trajectories in recursive map T(n) is not primarily explained by the total frequency of low-weight patterns in the binary expansion of n in domain 'binary expansion analysis of T(n)']"
+      ],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "temporal": "under all finite computational iterations of T(n) up to n \u2264 10^6",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the variance in the cumulative Hamming weight of consecutive binary blocks of length 3 in the binary expansion of n",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "binary expansion analysis of T(n)"
+      },
+      "qualifier": {
+        "condition": "for n with sparse low-weight patterns"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "asymptotic dominance of diverging over contracting trajectories in recursive map T(n)",
+      "predicate": "is primarily explained by",
+      "object": "the structural properties of T(n) rather than the binary expansion patterns of n",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "behavioral dynamics of recursive maps"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  }
+}
