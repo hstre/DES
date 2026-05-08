@@ -169,6 +169,11 @@ def run_cot_condition(
         print(f"  ERROR: {e}")
         content, reasoning, usage = "", "", {}
 
+    # deepseek-reasoner returns answer in reasoning_content when content is empty
+    if not content and reasoning:
+        content  = reasoning
+        reasoning = ""
+
     elapsed   = round(time.time() - t_start, 1)
     sentences = _extract_claim_sentences(content)
     dup_rate  = _semantic_duplication_rate(sentences)

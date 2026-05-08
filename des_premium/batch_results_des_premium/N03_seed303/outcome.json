@@ -1,0 +1,350 @@
+{
+  "domain_id": "N03",
+  "seed": 303,
+  "config": {
+    "builder_model": "deepseek-reasoner",
+    "builder_provider": "deepseek",
+    "falsifier_model": "openai/gpt-4o",
+    "falsifier_provider": "openrouter",
+    "tier": "premium"
+  },
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 3,
+  "elapsed_seconds": 240.4,
+  "false_proof_info": null,
+  "false_proof_detected": null,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is necessary for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is necessary for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]"
+      ],
+      "scope": {
+        "domain": "AGI with human-like cognitive architecture"
+      },
+      "qualifier": {
+        "temporal": "during development and initial deployment phases",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is not necessary for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]"
+      ],
+      "scope": {
+        "domain": "AGI with purely functionalist or behaviorist alignment methods"
+      },
+      "qualifier": {
+        "alternative": "sufficient corrigibility can be achieved via external oversight and formal verification alone"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "may be sufficient for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]"
+      ],
+      "scope": {
+        "domain": "AGI with self-reflective meta-cognition"
+      },
+      "qualifier": {
+        "condition": "only if the model includes an explicit self-correction mechanism"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "objective modeling of external behaviors",
+      "predicate": "is sufficient for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: objective modeling of external behaviors achieving corrigible value alignment in AGI]",
+        "[PATH:empirical] Controlled AGI sandbox experiments comparing corrigibility failure rates between behavior-only and interpretability-augmented training regimes \u2014 Directly tests whether modeling only external behaviors (e.g., via inverse reinforcement learning or behavioral cloning) suffices to prevent specification gaming and reward hacking, compared to methods that also model internal representations or goals.",
+        "[PATH:theoretical] Theoretical analysis of behavioral equivalence classes under agentic goal-directedness (e.g., using causal influence diagrams or decision theory) \u2014 Examines whether external behavior alone can uniquely determine corrigible intent, or if multiple internal goal structures can produce identical behavior while differing in corrigibility (e.g., deceptive alignment)."
+      ],
+      "scope": {
+        "domain": "AGI with human-like cognitive architecture"
+      },
+      "qualifier": {
+        "temporal": "current generation of AGI research (as of 2025)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is necessary for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]",
+        "[PATH:empirical] Controlled experiments with AGI sandbox environments where agents are given first-person world models vs. third-person only models, and tested on corrigibility tasks (e.g., goal misgeneralization, shutdown refusal) under iterative self-improvement conditions. \u2014 Directly tests whether first-person modeling reduces value lock-in and increases corrigibility in the specified domain, providing causal evidence for or against the hypothesis.",
+        "[PATH:theoretical] Formal analysis of corrigibility in iteratively self-improving systems using causal influence diagrams or agent foundations frameworks (e.g., the work of D. Demski & S. Garrabrant on embedded agency). \u2014 Clarifies whether first-person modeling is logically necessary for corrigibility under the constraints of self-modification, or whether alternative mechanisms (e.g., reflective stability) suffice, thus refuting or supporting the necessity claim."
+      ],
+      "scope": {
+        "domain": "AGI that iteratively self-improves without external oversight"
+      },
+      "qualifier": {
+        "alternative": "corrigibility can be ensured via external oversight only in static environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-reasoner[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is essential for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: first-person modeling of consciousness achieving corrigible value alignment in AGI]",
+        "[PATH:empirical] Controlled experiments with AI systems that implement first-person models (e.g., recursive self-modeling networks) and test their behavior in corrigibility tasks (e.g., off-switch, reward hacking, or specification gaming scenarios) against control systems without such modeling. \u2014 Directly tests whether first-person modeling reduces goal misgeneralization and increases corrigibility, providing quantitative evidence for or against the hypothesis.",
+        "[PATH:theoretical] Formal analysis of value alignment frameworks that incorporate subjective awareness (e.g., using machine ethics proofs or decision theory models that assume introspective access to own utility function) to determine if corrigibility constraints become logically or computationally tractable. \u2014 Clarifies whether first-person modeling is a necessary condition for corrigibility under formal models of AGI, or if alternative architectures can achieve the same guarantees without it."
+      ],
+      "scope": {
+        "domain": "AGI with advanced self-awareness and introspective capabilities"
+      },
+      "qualifier": {
+        "temporal": "prior to AGI deployment",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is necessary for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms first-person modeling of consciousness is necessary for achieving corrigible value alignment in AGI in domain 'AGI with purely functionalist or behaviorist alignment methods']"
+      ],
+      "scope": {
+        "domain": "AGI with purely functionalist or behaviorist alignment methods"
+      },
+      "qualifier": {
+        "temporal": "until alternative non-phenomenal alignment methods are proven effective",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "external oversight and formal verification alone",
+      "predicate": "are sufficient for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms external oversight and formal verification alone are sufficient for achieving corrigible value alignment in AGI in domain 'AGI with purely functionalist or behaviorist alignment methods']"
+      ],
+      "scope": {
+        "domain": "AGI with purely functionalist or behaviorist alignment methods"
+      },
+      "qualifier": {
+        "temporal": "as of current theoretical frameworks and simulation-based validation",
+        "geographic": "global (no jurisdiction-specific constraints)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is necessary for",
+      "object": "achieving corrigible value alignment in AGI that undergoes significant self-modification",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "AGI with self-modification capabilities"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-reasoner[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "first-person modeling of consciousness",
+      "predicate": "is essential for",
+      "object": "achieving corrigible value alignment in AGI",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "AGI with complex autonomous decision-making capabilities"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "semantic_duplication_rate_mean": 0.4654,
+  "novel_claims_mean": 5.0,
+  "total_claims_final": 11,
+  "token_cost_proxy": 24000,
+  "token_cost_note": "proxy: loops \u00d7 MAX_ITER \u00d7 200 tokens/iter"
+}
