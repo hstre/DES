@@ -1,0 +1,439 @@
+{
+  "branch_id": "branch_ev2_op1",
+  "_branch_dir": "paper9_branch2/batch_results_b4/N03_seed101/branch_ev2_op1",
+  "operator_id": "boundary_condition_analysis",
+  "question": "What structural invariants and boundary conditions in deep learning architectures and data diversity must be satisfied t",
+  "loops_completed": 4,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "is achievable without sparse factorized representations",
+      "object": "under strong regularization or data augmentation, but only when task requires recombination of fewer than three primitive concepts",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks under strong regularization or data augmentation, but only when task requires recombination of fewer than three primitive concepts]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "is achievable without sparse factorized representations",
+      "object": "under strong regularization or data augmentation, but only when the task requires recombination of exactly two primitive concepts",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks under strong regularization or data augmentation, but only when the task requires recombination of exactly two primitive concepts]"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "requires sparse factorized representations",
+      "object": "when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation]"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "condition": "task complexity threshold"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "is achievable without sparse factorized representations",
+      "object": "under strong regularization or data augmentation, but only when the number of primitive concepts is held constant during training and testing",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks under strong regularization or data augmentation, but only when the number of primitive concepts is held constant during training and testing]"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks",
+        "limitation": "fixed primitive set size"
+      },
+      "qualifier": {
+        "temporal": "2021-2024",
+        "geographic": "simulated and benchmark environments (e.g., COGS, CFQ, SCAN)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "fails under strong regularization or data augmentation",
+      "object": "when the task requires recombination of three or more primitive concepts, even if each pairwise recombination is well-represented in the training data",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks when the task requires recombination of three or more primitive concepts, even if each pairwise recombination is well-represented in the training data]",
+        "[PATH:empirical] Controlled synthetic benchmarks (e.g., SCAN or COGS variants) with systematic manipulation of concept arity and data augmentation strength \u2014 Directly tests whether models fail on 3+ concept recombination under strong regularization, while controlling for pairwise representation in training data.",
+        "[PATH:theoretical] Theoretical analysis of compositional generalization bounds in transformer or MLP architectures under data augmentation (e.g., via information bottleneck or kernel methods) \u2014 Provides formal conditions under which regularization or augmentation disrupts multi-concept recombination, clarifying whether the failure is inherent or artifact-specific.",
+        "[PATH:literature] Meta-analysis of existing neural-symbolic and compositional generalization benchmarks (e.g., CLEVR, gSCAN, HINT) focusing on augmentation/regularization effects \u2014 Aggregates prior empirical results to identify patterns of failure with higher-arity compositions, potentially confirming or refuting the hypothesized limitation."
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "requires sparse factorized representations",
+      "object": "even under strong regularization or data augmentation, for any task requiring recombination of primitive concepts",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks even under strong regularization or data augmentation, for any task requiring recombination of primitive concepts]",
+        "[PATH:empirical] Controlled experiments on systematic generalization benchmarks (e.g., SCAN, COGS, CFQ) comparing sparse vs. dense representation learning under strong regularization (e.g., dropout, weight decay) and data augmentation (e.g., synonym replacement, input noise). Measure out-of-distribution accuracy for tasks requiring recombination of primitive concepts. \u2014 Directly tests the hypothesis by manipulating representation sparsity (via architecture or training objectives like L1 regularization) and observing whether sparse factorized representations are necessary for combinatorial generalization even under strong regularization/augmentation.",
+        "[PATH:theoretical] Theoretical analysis (e.g., from the disentanglement and compositional generalization literature) connecting the algebraic structure of learned representations to the capacity for systematic recombination, such as the 'disentanglement vs. generalization' trade-off studied in Higgins et al. (2018) or the 'compositional inductive bias' framework. \u2014 Provides formal justification for why sparse factorized representations might be necessary or sufficient for recombining primitive concepts, and whether regularization/augmentation could substitute for sparsity in achieving compositional generalization.",
+        "[PATH:literature] Meta-analysis of published results on compositional generalization in neural networks (e.g., from NeurIPS, ICLR, ICML proceedings 2020-2025), focusing on studies that explicitly vary regularization strength, data augmentation, and representation sparsity across multiple compositional benchmarks. \u2014 Aggregates existing evidence to assess whether the pattern holds across diverse settings, helping to confirm or refute the claim's generality and robustness to experimental variations."
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025 deep learning research",
+        "geographic": "laboratory settings with synthetic benchmarks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "is more robustly achieved by discrete symbol-like representations than by continuous sparse factorized representations",
+      "object": "when the task requires recombination of three or more primitive concepts under strong regularization or data augmentation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks when the task requires recombination of three or more primitive concepts under strong regularization or data augmentation]",
+        "[PATH:empirical] Controlled experiments comparing discrete vector-symbolic architectures (e.g., VSA or Neural Turing Machines) against continuous sparse autoencoders on the SCAN, COGS, or CFQ compositional generalization benchmarks, with explicit regularization (e.g., weight decay, dropout) and data augmentation (e.g., synonym replacement, reordering). \u2014 Directly tests the hypothesis by measuring out-of-distribution accuracy when recombining \u22653 primitives under strong regularization, isolating the effect of representation discreteness vs. continuous sparsity.",
+        "[PATH:theoretical] Theoretical analysis of the sample complexity and generalization bounds for compositional tasks using discrete symbolic representations (e.g., finite-state automata or grammars) versus continuous sparse representations (e.g., overcomplete dictionaries or sparse coding), focusing on the minimum required number of examples for reliable recombination. \u2014 Provides a formal framework to predict whether discrete symbols yield provably better robustness under strong regularization, which can be validated against empirical results.",
+        "[PATH:literature] Systematic literature review of recent neural-symbolic and connectionist approaches on compositional generalization (e.g., from NeurIPS, ICLR, ICML 2021-2023), specifically analyzing results on tasks requiring recombination of three or more concepts under varied regularization strengths. \u2014 Synthesizes existing evidence to identify patterns: if a majority of studies show discrete representations outperform continuous sparse ones under such conditions, the hypothesis is supported; otherwise, refuted or nuanced."
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2023",
+        "geographic": "simulated environments in machine learning research"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "can be achieved without sparse factorized representations",
+      "object": "by leveraging dense learned embeddings and advanced neural architectures",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks by leveraging dense learned embeddings and advanced neural architectures]",
+        "[PATH:empirical] Systematic evaluation of Transformer-based models (e.g., GPT, T5) on compositional generalization benchmarks like SCAN, COGS, and CFQ, comparing performance with and without explicit sparse factorization techniques \u2014 Directly tests whether dense embeddings in advanced architectures can achieve compositional generalization on out-of-distribution tasks, providing empirical confirmation or refutation of the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the role of embedding sparsity in compositional generalization, e.g., using insights from disentangled representation learning and the 'lottery ticket hypothesis' to derive bounds or conditions under which dense embeddings suffice \u2014 Establishes formal guarantees or limitations for dense embeddings in compositional tasks, helping to confirm or refute the hypothesis on logical grounds.",
+        "[PATH:literature] Meta-analysis of recent literature (2020-2025) on compositional generalization in neural networks, focusing on studies that compare sparse factorized representations (e.g., modular networks, sparse attention) with dense embeddings in architectures like transformers and graph neural networks \u2014 Synthesizes existing evidence across multiple studies to assess whether the weight of current research supports or contradicts the hypothesis."
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "2020-2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "requires sparse factorized representations",
+      "object": "when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms combinatorial generalization on out-of-distribution compositional tasks requires sparse factorized representations when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation in domain 'compositional generalization in neural networks']"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "does not require sparse factorized representations",
+      "object": "when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms combinatorial generalization on out-of-distribution compositional tasks does not require sparse factorized representations when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation in domain 'compositional generalization in neural networks']"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global research literature"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "is achievable without sparse factorized representations under strong regularization or data augmentation",
+      "object": "only when the number of primitive concepts is held constant during training and testing, and fails catastrophically if the training set omits certain pairwise co-occurrence patterns among primitives",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks only when the number of primitive concepts is held constant during training and testing, and fails catastrophically if the training set omits certain pairwise co-occurrence patterns among primitives]",
+        "[PATH:empirical] Replication study on COGS and CFQ benchmarks testing models with and without sparse factorized representations (e.g., VAEs with disentangled latents) under varying levels of data augmentation and regularization, systematically omitting pairwise co-occurrence patterns during training. \u2014 Directly tests the claim by manipulating the presence/absence of pairwise co-occurrence patterns and measuring generalization performance, while controlling for representation sparsity and regularization.",
+        "[PATH:theoretical] Theoretical analysis of compositional generalization in neural networks using the framework of latent causal models or structural equation models, examining conditions under which out-of-distribution generalization fails when primitive concept co-occurrence is limited. \u2014 Provides mathematical grounding for the hypothesis, potentially proving or disproving the necessity of sparse factorized representations or the catastrophic failure condition.",
+        "[PATH:literature] Meta-analysis of existing published results on SCAN, COGS, and CFQ from 2021-2024, focusing on studies that varied training set co-occurrence statistics and reported generalization outcomes, with and without explicit representation constraints. \u2014 Aggregates existing evidence to evaluate whether the hypothesized failure pattern holds across different model architectures and training regimes, increasing statistical power and generalizability."
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "temporal": "2021-2024",
+        "geographic": "simulated and benchmark environments (e.g., COGS, CFQ, SCAN)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "requires sparse factorized representations",
+      "object": "to effectively handle variations in the number of primitive concepts during training and testing, even under strong regularization or data augmentation",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: combinatorial generalization on out-of-distribution compositional tasks to effectively handle variations in the number of primitive concepts during training and testing, even under strong regularization or data augmentation]"
+      ],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "requires sparse factorized representations that are explicitly disentangled by a contrastive objective",
+      "object": "when the task requires recombination of three or more primitive concepts, even under strong regularization or data augmentation, but only if the representations are also trained with a temporal-context prediction loss",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {
+        "condition": "contrastive disentanglement plus temporal prediction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "combinatorial generalization on out-of-distribution compositional tasks",
+      "predicate": "does not require sparse factorized representations",
+      "object": "when the task requires recombination of three or more primitive concepts, as effective generalization can be achieved through alternative mechanisms such as extensive pre-training or architectural innovations",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "compositional generalization in neural networks"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 11
+}
