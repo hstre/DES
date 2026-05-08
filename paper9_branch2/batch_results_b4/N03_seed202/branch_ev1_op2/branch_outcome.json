@@ -1,0 +1,438 @@
+{
+  "branch_id": "branch_ev1_op2",
+  "_branch_dir": "paper9_branch2/batch_results_b4/N03_seed202/branch_ev1_op2",
+  "operator_id": "boundary_condition_analysis",
+  "question": "What are the invariant architectural features and boundary conditions of large language models that must be maintained o",
+  "loops_completed": 4,
+  "outcome": "BRANCH_LOOPS_DONE",
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare and the model's training data contains fewer than 1000 examples of such sub-step patterns",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare and the model's training data contains fewer than 1000 examples of such sub-step patterns]"
+      ],
+      "scope": {
+        "domain": "statistical frequency thresholds in training data"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "can simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, provided those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, provided those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations]"
+      ],
+      "scope": {
+        "domain": "semantic alignment with dominant reasoning templates"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "large language models with sparse mixture-of-experts architectures",
+      "predicate": "fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with sparse mixture-of-experts architectures when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare]"
+      ],
+      "scope": {
+        "domain": "architectural comparison: dense vs. sparse MoE"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global (English-language benchmarks)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "will also fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when the chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare, even if the training data contains more than 1000 but fewer than 10,000 examples of such sub-step patterns",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures when the chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare, even if the training data contains more than 1000 but fewer than 10,000 examples of such sub-step patterns]",
+        "[PATH:empirical] Controlled fine-tuning experiments on open-source LLMs (e.g., Llama, Mistral) with synthetic datasets where rare intermediate chain-of-thought sub-steps are inserted at varying frequencies (e.g., 500, 1000, 5000 examples), then testing on downstream reasoning tasks requiring those sub-steps. \u2014 Directly tests the hypothesis by manipulating the frequency of rare sub-step patterns in training data and measuring whether the model can simulate proxy causal reasoning for non-dominant patterns. A clear failure at frequencies below 10,000 would confirm the hypothesis; success would refute it.",
+        "[PATH:theoretical] Theoretical analysis using scaling laws and attention head specialization in dense transformers, specifically examining how the rank of the attention matrix or the number of distinct attention patterns scales with the frequency of rare sequential patterns in training data. \u2014 Provides a mechanistic explanation for why rare sub-step patterns might fail to be captured. If theory predicts a lower bound on frequency for reliable pattern completion (e.g., related to the model's capacity or the entropy of the sub-step distribution), it can either support or challenge the empirical threshold claimed in the hypothesis.",
+        "[PATH:literature] Literature review of prior work on chain-of-thought robustness to distributional shifts (e.g., 'Chain-of-Thought Reasoning without Prompting' by Wang et al., 2024, or studies on compositional generalization in transformers like 'Transforming the Output of Generative Models' by Keysers et al., 2020). \u2014 Existing studies on how LLMs handle rare or out-of-distribution sub-steps in reasoning chains can provide indirect evidence. If prior work shows that models fail on sub-step patterns with fewer than 10,000 examples, it corroborates the hypothesis; if it shows success, it suggests the threshold may be lower or that other factors dominate."
+      ],
+      "scope": {
+        "domain": "statistical frequency thresholds in training data"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "can accurately simulate proxy causal reasoning for non-dominant patterns",
+      "object": "even when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare and the model's training data contains fewer than 1000 examples of such sub-step patterns",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures even when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare and the model's training data contains fewer than 1000 examples of such sub-step patterns]",
+        "[PATH:empirical] Controlled experiments on rare sub-step chain-of-thought reasoning using synthetic datasets (e.g., generating arithmetic or logic problems with sub-step patterns appearing <1000 times in training and testing GPT-4, PaLM, or Llama 2 on proxy causal tasks) \u2014 Directly tests the hypothesis by manipulating the frequency of intermediate sub-steps in CoT decompositions and measuring accuracy on proxy causal reasoning, providing empirical confirmation or refutation under controlled conditions.",
+        "[PATH:theoretical] Mechanistic interpretability analysis of attention head and MLP contributions during rare sub-step processing in dense transformers (e.g., using activation patching or probing on models like GPT-2 or Llama 2 to identify whether non-dominant patterns are handled via compositional shortcuts or genuine causal simulation) \u2014 Reveals whether the model's internal computations actually implement causal reasoning for rare sub-steps or rely on spurious correlations, helping to confirm or refute the underlying capability claim.",
+        "[PATH:literature] Literature review of existing studies on chain-of-thought robustness to data sparsity (e.g., examining papers on 'reasoning under distribution shift' or 'low-resource reasoning' in LLMs, such as those by Wei et al., Kojima et al., or recent work on 'counterfactual reasoning in LLMs') \u2014 Synthesizes current evidence on whether dense transformers generalize to rare sub-steps in CoT, providing a broader context to assess the plausibility of the hypothesis and identify gaps for further empirical work."
+      ],
+      "scope": {
+        "domain": "capabilities of language models in low-data scenarios"
+      },
+      "qualifier": {
+        "temporal": "as of the current generation of dense transformer architectures (e.g., GPT-4, PaLM, Llama 2)",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare and semantically misaligned with dominant reasoning templates in the model's latent representations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare and semantically misaligned with dominant reasoning templates in the model's latent representations]",
+        "[PATH:empirical] Controlled behavioral experiments on GPT-4 or Llama-3 using synthetic chain-of-thought tasks with rare intermediate sub-steps (e.g., analogies from low-frequency cultural domains) and measuring proxy causal reasoning accuracy via counterfactual probes \u2014 Directly tests the hypothesis by comparing model performance on dominant vs. rare reasoning templates, isolating the effect of semantic misalignment.",
+        "[PATH:empirical] Mechanistic interpretability studies (e.g., activation patching, probing) on transformer layers to identify whether rare sub-steps fail to activate causal circuits that align with the model's dominant latent reasoning templates \u2014 Provides causal evidence for the failure mechanism at the representation level, confirming or refuting the hypothesized misalignment.",
+        "[PATH:theoretical] Theoretical analysis of transformer attention head capacity under distributional shift, building on results from the 'attention is off by one' literature and sparse coding models of circuit formation \u2014 Establishes formal bounds on when rare sub-steps cannot be integrated into existing causal chains, offering a refutable prediction about model behavior."
+      ],
+      "scope": {
+        "domain": "semantic misalignment with dominant reasoning templates"
+      },
+      "qualifier": {
+        "temporal": "during inference on out-of-distribution reasoning tasks",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "cannot reliably simulate proxy causal reasoning for non-dominant patterns",
+      "object": "even when chain-of-thought decomposition introduces intermediate sub-steps, due to the inherent bias towards statistically dominant patterns embedded in the model's training data",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with dense transformer architectures even when chain-of-thought decomposition introduces intermediate sub-steps, due to the inherent bias towards statistically dominant patterns embedded in the model's training data]",
+        "[PATH:empirical] Controlled experiments comparing LLM performance on causal reasoning tasks with rare vs. frequent causal patterns in the training distribution, using chain-of-thought prompting \u2014 Directly tests whether chain-of-thought decomposition mitigates bias toward dominant patterns by measuring accuracy on rare causal chains, providing empirical confirmation or refutation of the hypothesis.",
+        "[PATH:theoretical] Analysis of attention head gradients and token probability distributions during chain-of-thought reasoning on non-dominant causal patterns \u2014 Investigates the mechanistic bias within dense transformer architectures, revealing whether intermediate sub-steps still favor statistically dominant embeddings, which would support the inherent bias claim.",
+        "[PATH:literature] Survey of existing literature on causal reasoning limitations in LLMs, e.g., studies on spurious correlations and shortcut learning in transformer models \u2014 Synthesizes prior findings on how training data dominance shapes reasoning, contextualizing the hypothesis and identifying gaps that empirical or theoretical work can address."
+      ],
+      "scope": {
+        "domain": "bias towards dominant reasoning patterns"
+      },
+      "qualifier": {
+        "temporal": "as of 2025-01-01",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "can simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, provided those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms large language models with dense transformer architectures can simulate proxy causal reasoning for non-dominant patterns when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, provided those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations in domain 'semantic alignment with dominant reasoning templates']"
+      ],
+      "scope": {
+        "domain": "semantic alignment with dominant reasoning templates"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "cannot simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, even if those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms large language models with dense transformer architectures cannot simulate proxy causal reasoning for non-dominant patterns when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare, even if those sub-steps are semantically aligned with dominant reasoning templates in the model's latent representations in domain 'semantic alignment with dominant reasoning templates']"
+      ],
+      "scope": {
+        "domain": "semantic alignment with dominant reasoning templates"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "large language models with sparse mixture-of-experts architectures",
+      "predicate": "exhibit a stronger reliance on expert routing shortcuts that bypass rare intermediate sub-steps",
+      "object": "than dense transformers of equivalent total parameter count, when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with sparse mixture-of-experts architectures than dense transformers of equivalent total parameter count, when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare]",
+        "[PATH:empirical] Controlled experiments comparing MoE and dense transformers on chain-of-thought reasoning tasks with controlled rarity of intermediate sub-steps, e.g., using the GSM8K or MATH datasets with synthetic rare-step insertions. \u2014 Directly tests the hypothesis by measuring reliance on routing shortcuts vs. stepwise reasoning under varying sub-step rarity, enabling causal attribution.",
+        "[PATH:empirical] Analysis of expert activation patterns and attention distributions in MoE models during rare sub-step reasoning, using interpretability tools like probing or attribution patching. \u2014 Reveals whether the MoE router systematically bypasses rare sub-steps by routing to experts that shortcut the intermediate computation, providing mechanistic evidence.",
+        "[PATH:theoretical] Theoretical analysis of routing dynamics in sparse MoE under infrequent training signals, e.g., using gating function gradient properties and expert load balancing. \u2014 Explains why MoE might develop shortcut reliance due to sparse gradient updates for rare tokens, offering a formal basis for the hypothesized behavior."
+      ],
+      "scope": {
+        "domain": "architectural comparison: dense vs. sparse MoE"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global (English-language benchmarks)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "large language models with sparse mixture-of-experts architectures",
+      "predicate": "successfully simulate proxy causal reasoning for non-dominant patterns",
+      "object": "even when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: large language models with sparse mixture-of-experts architectures even when chain-of-thought decomposition introduces intermediate sub-steps that are themselves statistically rare]"
+      ],
+      "scope": {
+        "domain": "architectural comparison: dense vs. sparse MoE"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "fail to simulate proxy causal reasoning for non-dominant patterns",
+      "object": "when chain-of-thought decomposition introduces intermediate sub-steps that are statistically rare and semantically misaligned with dominant reasoning templates in the model's latent representations",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "semantic misalignment with dominant reasoning templates"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "large language models with dense transformer architectures",
+      "predicate": "cannot reliably simulate proxy causal reasoning for non-dominant patterns",
+      "object": "even when chain-of-thought decomposition introduces intermediate sub-steps, as these models lack the necessary semantic alignment with non-dominant reasoning templates in their latent representations",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "semantic misalignment with non-dominant reasoning templates"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "n_sealed": 11
+}
