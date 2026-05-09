@@ -160,7 +160,7 @@ def run_cot_condition(
     print(f"  {domain_id} [CoT-{tier} | seed{seed_n}] model={model}")
 
     random.seed(seed_n)
-    prompt = COT_PROMPT_TEMPLATE.format(seed_question=seed_question)
+    prompt = COT_PROMPT_TEMPLATE.format(seed_question=seed_question, seed_n=seed_n)
 
     t_start = time.time()
     try:
