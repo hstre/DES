@@ -1,0 +1,541 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "a strict linear asymptotic growth with slope exactly 1/2, due to deterministic phase-locking of cancellations after 10^7 iterations",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a strict linear asymptotic growth with slope exactly 1/2, due to deterministic phase-locking of cancellations after 10^7 iterations]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "a strict linear asymptotic growth with slope exactly 1/2",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a strict linear asymptotic growth with slope exactly 1/2]"
+      ],
+      "scope": {
+        "domain": "asymptotic analysis of iterated maps"
+      },
+      "qualifier": {
+        "time_scale": "after 10^7 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a transient artifact of finite simulation length, not a true asymptotic property",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed linear growth in the orbit from n=7 under T(n) a transient artifact of finite simulation length, not a true asymptotic property]"
+      ],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "mechanism": "possible drift in the phase-locking after longer iterations"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the deterministic phase-locking mechanism in the orbit from n=7",
+      "predicate": "may",
+      "object": "break down at iteration counts far beyond 10^7, leading to a different asymptotic slope",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: the deterministic phase-locking mechanism in the orbit from n=7 break down at iteration counts far beyond 10^7, leading to a different asymptotic slope]"
+      ],
+      "scope": {
+        "domain": "long-term dynamical stability"
+      },
+      "qualifier": {
+        "alternative_slope": "could approach 1 or 0 depending on hidden resonances"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "a strict linear asymptotic growth with slope exactly 1/3, due to a previously undetected periodic modulation that averages to a lower effective slope",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a strict linear asymptotic growth with slope exactly 1/3, due to a previously undetected periodic modulation that averages to a lower effective slope]",
+        "[PATH:empirical] High-precision numerical simulation of the orbit from n=7 under T(n) for at least 10^10 iterations, with spectral analysis of iteration counts to detect periodic modulations and compute the effective slope via linear regression on blocks. — Directly tests the claimed strict linear growth with slope 1/3 and the presence of a periodic modulation that would average to a lower effective slope; long runs are needed to distinguish asymptotic behavior from transient fluctuations.",
+        "[PATH:theoretical] Rigorous analysis of the 3-rule map T(n) using symbolic dynamics or renormalization techniques to derive the exact asymptotic growth rate and modulation structure for the orbit starting at n=7. — A theoretical proof or disproof of the linear growth and modulation would settle the dispute independently of simulation limitations, and could reveal whether the observed slope is exactly 1/3 or an artifact.",
+        "[PATH:literature] Literature survey of known results on the 3x+1 problem and related iterated maps, focusing on orbits with documented sub-exponential growth and periodic patterns (e.g., work by Lagarias, Terras, or Applegate & Lagarias). — Existing studies may already contain counterexamples or supporting evidence for periodic modulations in similar orbits, providing a benchmark or refutation for the claimed behavior without new computation."
+      ],
+      "scope": {
+        "domain": "asymptotic analysis of iterated maps"
+      },
+      "qualifier": {
+        "time_scale": "after 10^8 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "demonstrates",
+      "object": "non-linear growth with no constant slope",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) non-linear growth with no constant slope]",
+        "[PATH:empirical] Compute and analyze the orbit of n=7 under T(n) for at least 10^6 iterations, recording successive values and fitting local slopes over windows of varying size to detect systematic deviation from linearity. — Direct simulation provides the primary data to test the claim of non-linear growth. By examining the sequence of values and their differences, one can assess whether the growth rate changes systematically or remains approximately constant over the specified temporal scope.",
+        "[PATH:literature] Review known results on the asymptotic behavior of the 3x+1-like map T(n) (e.g., the Collatz map), particularly studies of orbits with low initial values and their scaling properties. — Existing theoretical and numerical work on similar iterated maps may provide proven bounds or typical growth patterns, helping to contextualize whether non-linear growth with no constant slope is a known phenomenon for such trajectories.",
+        "[PATH:theoretical] Develop a theoretical model of the orbit's growth using probabilistic heuristics (e.g., assuming random behavior of the parity of iterates) to derive expected scaling laws and compare with the empirical data. — A probabilistic analysis can yield predicted growth trends (e.g., exponential vs. sub-exponential) and indicate whether the observed non-linearity is consistent with randomness or suggests a deterministic structural property."
+      ],
+      "scope": {
+        "domain": "asymptotic analysis of iterated maps"
+      },
+      "qualifier": {
+        "temporal": "during the first 10^6 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a precursor to a chaotic regime that emerges after 10^6 iterations, masking an eventual nonlinear asymptotic scaling",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed linear growth in the orbit from n=7 under T(n) a precursor to a chaotic regime that emerges after 10^6 iterations, masking an eventual nonlinear asymptotic scaling]",
+        "[PATH:empirical] High-precision numerical simulation of T(n) from n=7 to beyond 10^6 iterations, tracking Lyapunov exponents and orbit growth rates in sliding windows — Directly tests whether linear growth persists up to 10^6 iterations, whether a Lyapunov exponent becomes positive indicating chaos, and whether asymptotic scaling deviates from linearity. This can confirm or refute the precursor-to-chaos claim.",
+        "[PATH:theoretical] Bifurcation analysis of the map T(n) using symbolic dynamics and renormalization group methods to identify period-doubling cascade structure — If the proposed period-doubling cascade after linear drift is correct, theoretical models should predict the onset of chaos near 10^6 iterations and the masking of nonlinear scaling. Comparing derived scaling laws with observed data validates the mechanism.",
+        "[PATH:literature] Literature search for similar maps (e.g., logistic map, Hénon map) exhibiting linear transients before chaotic regimes, with documented crossover times and scaling exponents — Established examples of transient chaos and pre-chaotic linear growth provide benchmarks. If analogous systems show comparable behavior (e.g., linear drift length scaling with parameter), it supports the hypothesis; absence weakens it."
+      ],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "mechanism": "transition to chaos via period-doubling cascade after the linear drift phase"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "represents",
+      "object": "a genuine asymptotic behavior rather than a transient artifact",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed linear growth in the orbit from n=7 under T(n) a genuine asymptotic behavior rather than a transient artifact]",
+        "[PATH:empirical] Extend the numerical simulation to 10^8 iterations and perform a sliding-window linear regression analysis on the orbit values for n ≥ 7, checking if the slope stabilizes or drifts. — If the linear growth is truly asymptotic, the slope should converge to a constant as the simulation length increases; a change in slope would indicate a transient artifact.",
+        "[PATH:theoretical] Derive an analytical bound or asymptotic expansion for T(n) using recurrence analysis or generating functions, focusing on the behavior for large n. — A theoretical proof that the orbit grows linearly (e.g., T(n) ~ c·n for n→∞) would confirm asymptotic behavior, while a sublinear or superlinear bound would refute it."
+      ],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "temporal": "during the first 10^6 iterations",
+        "geographic": "in the simulated numerical environment"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a true asymptotic property that persists indefinitely",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the observed linear growth in the orbit from n=7 under T(n) is a true asymptotic property that persists indefinitely in domain 'finite-time numerical analysis']"
+      ],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "temporal": "for n ≥ 7 observed up to the simulated time horizon",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a transient artifact of finite simulation length, not a true asymptotic property",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the observed linear growth in the orbit from n=7 under T(n) is a transient artifact of finite simulation length, not a true asymptotic property in domain 'finite-time numerical analysis']"
+      ],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "temporal": "for simulation durations up to 10^6 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the deterministic phase-locking mechanism in the orbit from n=7",
+      "predicate": "will",
+      "object": "transition to a chaotic, non-locked regime with asymptotic slope exactly 0.5 before iteration 10^9",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the deterministic phase-locking mechanism in the orbit from n=7 transition to a chaotic, non-locked regime with asymptotic slope exactly 0.5 before iteration 10^9]",
+        "[PATH:empirical] High-precision numerical simulation of the n=7 orbital dynamics using a symplectic integrator with adaptive step size, tracking the phase-locking parameter and asymptotic slope over 10^9 iterations, with statistical ensemble averaging over initial conditions within the locking basin. — Directly tests the predicted transition and slope value; ensemble averaging mitigates sensitivity to initial conditions and confirms reproducibility.",
+        "[PATH:theoretical] Analytical derivation of the Lyapunov exponent and scaling laws for the n=7 resonance using renormalization group methods or Melnikov analysis to determine whether a period-doubling cascade or intermittency route to chaos with slope 0.5 is theoretically required. — Provides a rigorous mathematical foundation to either support or refute the existence of a universal asymptotic slope before the iteration bound, independent of numerical artifacts.",
+        "[PATH:literature] Review of published literature on phase-locking breakdown in high-order orbital resonances (e.g., in celestial mechanics or driven oscillators), focusing on systems with n=7 symmetry and reported transitions to chaos with characteristic exponents. — Contextualizes the hypothesis within known dynamical systems; identifies prior evidence for or against a universal slope of 0.5 in similar systems, informing plausibility and potential mechanisms."
+      ],
+      "scope": {
+        "domain": "long-term dynamical stability"
+      },
+      "qualifier": {
+        "temporal": "before iteration 10^9"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the deterministic phase-locking mechanism in the orbit from n=7",
+      "predicate": "will",
+      "object": "maintain stability at iteration counts far beyond 10^7, preserving the original asymptotic slope",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the deterministic phase-locking mechanism in the orbit from n=7 maintain stability at iteration counts far beyond 10^7, preserving the original asymptotic slope]",
+        "[PATH:empirical] High-precision numerical integration of the orbit from n=7 using arbitrary-precision arithmetic (e.g., 128-bit or higher) to isolate floating-point error from true dynamical instability — Standard double-precision may accumulate rounding errors that mask or mimic phase-locking breakdown at high iteration counts. Arbitrary-precision runs can confirm whether the claimed stability is intrinsic or an artifact of finite precision.",
+        "[PATH:theoretical] Analytical derivation of Lyapunov exponents or rigorous bounds on the phase-locking mechanism using perturbation theory and normal form analysis for the n=7 orbit — A theoretical proof of exponential or polynomial stability bounds would directly confirm the hypothesis; conversely, identifying a mechanism for slow drift or instability would refute it, independent of simulation limits.",
+        "[PATH:literature] Review of published studies on long-term stability of deterministic phase-locking in high-order orbital resonances (e.g., in celestial mechanics or coupled oscillator networks), with emphasis on iteration counts beyond 10^7 — Existing literature may provide analogous cases where such mechanisms break down or persist, offering comparative evidence to assess the plausibility of the hypothesis for the n=7 orbit."
+      ],
+      "scope": {
+        "domain": "long-term dynamical stability"
+      },
+      "qualifier": {
+        "temporal": "for iteration counts up to at least 10^8",
+        "geographic": "in computational simulations with standard double-precision arithmetic"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "the deterministic phase-locking mechanism in the orbit from n=7",
+      "predicate": "will",
+      "object": "remain stable and maintain its asymptotic slope even at iteration counts far beyond 10^7",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term dynamical stability"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "the deterministic phase-locking mechanism in the orbit from n=7",
+      "predicate": "will",
+      "object": "break down at iteration counts far beyond 10^7, leading to a different asymptotic slope that could approach 1 or 0 depending on hidden resonances",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term dynamical stability"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C015": {
+      "id": "C015",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a precursor to a subharmonic bifurcation that manifests as a quasi-periodic modulation after 10^5 iterations",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "finite-time numerical analysis"
+      },
+      "qualifier": {
+        "mechanism": "the linear drift arises from a slow approach to a torus attractor, not from a transient artifact"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C016": {
+      "id": "C016",
+      "subject": "the observed linear growth in the orbit from n=7 under T(n)",
+      "predicate": "is",
+      "object": "a true asymptotic property that persists beyond the finite simulation length",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "mathematical dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C011",
+    "T5[falsifier] on C004 -> C012",
+    "T1 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C015",
+    "T9[falsifier] on C003 -> C016",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C015"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C016"
+    ]
+  }
+}

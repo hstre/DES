@@ -1,0 +1,425 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "demonstrates",
+      "object": "consistent exponential growth with fluctuations having negligible impact on overall trend",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) consistent exponential growth with fluctuations having negligible impact on overall trend]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "uncertainty": "Whether the observed exponential trend is robust over longer iteration counts, or whether small fluctuations eventually accumulate to alter the asymptotic growth rate, remains an open question."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "exponential growth over the first 10,000 iterations, with fluctuations that do not alter the fitted growth rate by more than 1%",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) exponential growth over the first 10,000 iterations, with fluctuations that do not alter the fitted growth rate by more than 1%]"
+      ],
+      "scope": {
+        "domain": "finite iteration count (≤ 10,000)"
+      },
+      "qualifier": {
+        "uncertainty": "The fit is sensitive to the chosen window and may not hold beyond this range."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "may experience",
+      "object": "cumulative phase cancellations that gradually suppress the exponential trend, leading to a sub-exponential or linear asymptotic growth",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) cumulative phase cancellations that gradually suppress the exponential trend, leading to a sub-exponential or linear asymptotic growth]"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {
+        "uncertainty": "This is based on analogy with other chaotic 3-rule orbits where small fluctuations compound over long timescales."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the observed exponential growth of the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "is",
+      "object": "an artifact of finite-precision simulation and would break down under exact rational arithmetic due to hidden periodicities",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "competing hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the observed exponential growth of the orbit starting from n=7 under the 3-rule T(n) an artifact of finite-precision simulation and would break down under exact rational arithmetic due to hidden periodicities]"
+      ],
+      "scope": {
+        "domain": "computational model vs. exact arithmetic"
+      },
+      "qualifier": {
+        "uncertainty": "No exact arithmetic verification exists for this orbit beyond modest iteration counts."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "a fitted growth rate that diverges by more than 5% from the initial exponential fit when the iteration window is shifted from 0–10,000 to 5,000–15,000",
+      "status": "supported",
+      "confidence": 0.9000000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a fitted growth rate that diverges by more than 5% from the initial exponential fit when the iteration window is shifted from 0–10,000 to 5,000–15,000]",
+        "[PATH:empirical] High-resolution numerical simulation of the 3-rule T(n) orbit from n=7, with iterative computation of growth rates over multiple shifted windows (e.g., 0–10,000, 5,000–15,000, 10,000–20,000) to detect systematic divergence beyond stochastic noise. — Direct simulation can quantify whether the fitted growth rate changes by more than 5% when the window shifts, controlling for transient effects and statistical fluctuations.",
+        "[PATH:theoretical] Analytical derivation of the asymptotic growth rate for the 3-rule T(n) orbit using dynamical systems theory (e.g., Lyapunov exponents or renormalization group analysis) to predict whether the growth rate is constant or varies with iteration window. — A theoretical model can determine if the observed divergence is an artifact of finite sampling or a genuine property of the orbit's long-term dynamics.",
+        "[PATH:literature] Review of published studies on the 3x+1-like problem (Collatz conjecture) and related iterative maps, focusing on data on growth rate stability or deviation in long orbits. — Existing literature may provide benchmarks or prior observations of growth rate shifts in similar orbits, helping to contextualize whether a >5% divergence is expected or anomalous."
+      ],
+      "scope": {
+        "domain": "shifted iteration window (5,000 to 15,000)"
+      },
+      "qualifier": {
+        "temporal": "during the iteration range 5,000 to 15,000"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "does not exhibit",
+      "object": "exponential growth over the first 10,000 iterations, with fluctuations significantly altering any fitted growth rate",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) exponential growth over the first 10,000 iterations, with fluctuations significantly altering any fitted growth rate]",
+        "[PATH:empirical] Simulate the orbit from n=7 under the 3-rule T(n) for 10,000 iterations, record the sequence values, and perform a regression on log-transformed data to estimate the growth rate; examine residuals for systematic fluctuations that may distort the fitted rate. — Direct simulation provides the primary data needed to test the hypothesis. If the fitted exponential rate is unstable or non-significant due to fluctuations, the hypothesis is supported; if a stable exponential trend emerges, it is refuted.",
+        "[PATH:theoretical] Analyze the theoretical properties of the 3-rule T(n) (e.g., known as the '3x+1' or Collatz-type map) to derive bounds on growth for orbits starting at small integers, using results from ergodic theory or random walk models for the map. — Theoretical analysis can establish whether exponential growth is possible or precluded for such an orbit over finite iterations, providing a rigorous basis to confirm or refute the empirical observation of fluctuation-dominated growth.",
+        "[PATH:literature] Review literature on the statistical behavior of Collatz-type orbits, focusing on studies that quantify growth rates and fluctuations over finite horizons (e.g., Lagarias' surveys or works on stochastic models for the 3x+1 map). — Existing research may contain analogous results or methods for detecting exponential trends in the presence of fluctuations, offering comparative evidence to validate the simulation findings or highlight methodological pitfalls."
+      ],
+      "scope": {
+        "domain": "finite iteration count (≤ 10,000)"
+      },
+      "qualifier": {
+        "temporal": "over the first 10,000 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "an eventual transition to strictly linear growth after a critical iteration threshold, due to deterministic phase locking in the cumulative cancellations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) an eventual transition to strictly linear growth after a critical iteration threshold, due to deterministic phase locking in the cumulative cancellations]",
+        "[PATH:empirical] High-precision numerical simulation of the orbit from n=7 under T(n) for >10^9 iterations, tracking cumulative cancellation counts and growth rate per iteration — Directly tests whether strictly linear growth emerges after a critical threshold, and allows measurement of phase-locking behavior in cancellations.",
+        "[PATH:theoretical] Analytical derivation of a closed-form expression for the cumulative cancellation function, using recurrence relations or generating functions for the 3-rule T(n) — Could prove or disprove deterministic phase locking by showing that cancellations become periodic or exactly linear after a finite number of steps, independent of simulation limits.",
+        "[PATH:literature] Review of literature on similar piecewise-linear maps (e.g., Collatz-like functions, 3x+1 variants) that exhibit eventual linear growth or periodicity, focusing on known results for orbits starting at small integers — Contextualizes whether such phase-locking phenomena have been observed or ruled out in related systems, informing the plausibility of the hypothesis."
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {
+        "temporal": "after a sufficiently large number of iterations (>> 10^6)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "will unequivocally maintain",
+      "object": "a persistent exponential growth pattern, as the inherent chaotic dynamics consistently reinforce the trend over extensive iterations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a persistent exponential growth pattern, as the inherent chaotic dynamics consistently reinforce the trend over extensive iterations]",
+        "[PATH:empirical] Long-term numerical simulations of the 3x+1-like map T(n) from n=7, tracking orbit values beyond 10^6 iterations with high-precision arithmetic to detect exponential growth or eventual divergence — Direct computational evidence can confirm whether the orbit from n=7 indeed exhibits persistent exponential growth or eventually enters a cycle, as the 3-rule dynamics are known to be chaotic but bounded for many starting values.",
+        "[PATH:theoretical] Rigorous mathematical analysis of the 3-rule T(n) using ergodic theory or symbolic dynamics to characterize the growth rate of orbits under the map, particularly for initial seeds like 7 — Theoretical work can determine if the map allows unbounded growth for any initial condition, or if the orbit from n=7 is constrained by invariant measures or eventual periodicity, thus refuting or supporting the exponential growth claim.",
+        "[PATH:literature] Survey of literature on generalized Collatz-type maps and known exceptional orbits (e.g., the original Collatz conjecture's behavior for n=7 under the 3n+1 rule), comparing with documented cases of exponential divergence — Existing studies may have already analyzed the fate of n=7 under similar maps; if the orbit is known to diverge or converge, this would directly confirm or refute the hypothesis, leveraging prior results."
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {
+        "temporal": "for iterations exceeding 10^6"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "cumulative phase cancellations that gradually suppress the exponential trend, leading to sub-exponential or linear asymptotic growth",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the orbit starting from n=7 under the 3-rule T(n) exhibits cumulative phase cancellations that gradually suppress the exponential trend, leading to sub-exponential or linear asymptotic growth in domain 'asymptotic behavior (iterations > 10^6)']"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {
+        "temporal": "observed for iterations > 10^6",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "does not exhibit",
+      "object": "any cumulative phase cancellations sufficient to suppress the exponential trend, maintaining exponential asymptotic growth",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the orbit starting from n=7 under the 3-rule T(n) does not exhibit any cumulative phase cancellations sufficient to suppress the exponential trend, maintaining exponential asymptotic growth in domain 'asymptotic behavior (iterations > 10^6)']"
+      ],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {
+        "temporal": "since initial observation through 10^6+ iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits",
+      "object": "a strict linear asymptotic growth with slope exactly 1/2, due to deterministic phase-locking of cancellations after 10^7 iterations",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^7)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "is unlikely to experience",
+      "object": "cumulative phase cancellations that suppress the exponential trend, maintaining its exponential growth indefinitely",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "asymptotic behavior (iterations > 10^6)"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 35,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
