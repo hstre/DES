@@ -1,0 +1,453 @@
+{
+  "domain_id": "M01",
+  "seed": 101,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "config": {
+    "builder_model": "deepseek-chat",
+    "builder_provider": "deepseek",
+    "falsifier_model": "openai/gpt-4o",
+    "falsifier_provider": "openrouter",
+    "tier": "cheap"
+  },
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 1,
+  "elapsed_seconds": 91.5,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "error_types": []
+  },
+  "false_proof_detected": false,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has a finite number of cycles",
+      "object": "for all positive integer starting values",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for all positive integer starting values]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has at least one nontrivial cycle",
+      "object": "for some positive integer starting values",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for some positive integer starting values]"
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has only the trivial fixed point 1 as a cycle",
+      "object": "for all positive integer starting values",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for all positive integer starting values]"
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "exhibits divergent behavior for almost all starting values",
+      "object": "for most positive integer starting values",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for most positive integer starting values]"
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration process",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has exactly one nontrivial cycle, which is of length 3",
+      "object": "for all positive integer starting values",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for all positive integer starting values]",
+        "[PATH:empirical] Extend computational verification to at least 10^12 with cycle detection algorithms, analyzing all starting values up to that bound for nontrivial cycles beyond the known length-3 cycle. \u2014 Current verification up to 10^9 is insufficient to rule out larger cycles; extending the bound significantly increases confidence in the hypothesis if no new cycles are found, or refutes it if a counterexample emerges.",
+        "[PATH:theoretical] Conduct a theoretical analysis of the functional graph structure using modular arithmetic and invariant theory, particularly studying the dynamics modulo powers of 3 and 2 to prove that any cycle must satisfy specific congruence conditions. \u2014 A rigorous proof that only one nontrivial cycle exists would require showing that the function's iterates are eventually periodic with a unique attractor; such analysis can identify constraints that eliminate the possibility of other cycles.",
+        "[PATH:literature] Search the literature for similar piecewise linear functions (e.g., Collatz-type maps) with three branches and known cycle structures, applying known results on functional graph classification or using automated theorem proving tools. \u2014 Analogous functions have been studied in the context of generalized Collatz problems; existing theorems or counterexamples may provide transferable insights or methods to confirm or refute the uniqueness of the cycle."
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current computational verification up to 10^9",
+        "geographic": "no geographic constraint"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "does not have any nontrivial cycle",
+      "object": "for all positive integer starting values",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for all positive integer starting values]",
+        "[PATH:empirical] Exhaustive computational search for cycles up to a very large bound (e.g., 10^12) using optimized memoization and cycle detection algorithms \u2014 If no nontrivial cycle is found up to a high starting value, it increases confidence in the hypothesis; discovery of a cycle would refute it directly.",
+        "[PATH:theoretical] Analytic study of the functional graph of T(n) using modular arithmetic and invariant theory (e.g., analyzing residues modulo powers of 3 and 2) \u2014 Proving that all trajectories eventually enter a known fixed point (likely 0 or 1) via monotonicity or contraction arguments would confirm the hypothesis; identifying a structural obstruction would refute it.",
+        "[PATH:literature] Literature review of similar piecewise linear Collatz-type functions (e.g., the 3n+1 problem and variants) to identify known cycle conditions or non-existence proofs \u2014 Existing results on related functions may provide techniques or counterexamples that directly apply to this T(n), helping to confirm or refute the claim without starting from scratch."
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has a nontrivial cycle",
+      "object": "for some positive integer starting value",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for some positive integer starting value]",
+        "[PATH:empirical] Computational search for cycles up to a large bound (e.g., 10^12) using modular arithmetic and graph traversal on the state space of residues modulo a power of 3 \u2014 Since T(n) is piecewise linear with modulus-based branching, exhaustive search for cycles in the Collatz-like function can be performed efficiently by tracking residues modulo powers of 3, which may reveal nontrivial cycles or prove their absence up to a bound, increasing or decreasing confidence.",
+        "[PATH:theoretical] Theoretical analysis of the function's dynamics via linear algebra over the 3-adic integers, examining whether the map is conjugate to a known contracting or expanding system \u2014 The function's definition suggests a connection to 3-adic dynamics; proving that all trajectories converge to a fixed point (e.g., 0 or 1) or that a nontrivial cycle exists would require understanding its behavior in the 3-adic metric, potentially using techniques from ergodic theory or number theory.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., generalized Collatz functions, 3x+1 variants) that have known cycles or are proven to have no nontrivial cycles \u2014 Comparing this function to well-studied maps like the 3x+1 problem or the 5x+1 problem may reveal analogous cycle structures or known proof techniques (e.g., using congruence conditions or stopping time analysis) that can be adapted to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all n"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has non-trivial cycles",
+      "object": "for some positive integer starting values",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for some positive integer starting values]",
+        "[PATH:empirical] Systematic computational search for cycles up to a large bound (e.g., 10^9) using modular arithmetic and cycle detection algorithms (e.g., Floyd's or Brent's algorithm) \u2014 A direct computational search can empirically confirm or refute the existence of non-trivial cycles for small starting values. Given the piecewise linear nature of T(n), exhaustive checking up to a high bound can reveal cycles or provide evidence against their existence.",
+        "[PATH:theoretical] Analytic study of the dynamical system via linear algebra and modular constraints (e.g., representing T as a linear map on residues modulo powers of 3 or 2, and analyzing invariant sets) \u2014 The function is defined by three linear branches. A theoretical analysis of possible cycle lengths and residue classes can yield necessary conditions for cycles, potentially proving that only trivial cycles (like fixed points) exist, or narrowing the search space.",
+        "[PATH:literature] Literature review of similar piecewise linear Collatz-type functions and known results on their cycle structures (e.g., work by Lagarias, Chamberland, or on generalized 3x+1 problems) \u2014 This function resembles generalized Collatz maps. Reviewing known results on cycle existence, ergodic behavior, and undecidability for such maps can provide theoretical context and potential proof techniques or counterexamples."
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has only the trivial fixed point 1 as a cycle",
+      "object": "for all positive integer starting values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 has only the trivial fixed point 1 as a cycle for all positive integer starting values in domain 'positive integers']"
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has at least one non-trivial cycle",
+      "object": "for some positive integer starting values",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 has at least one non-trivial cycle for some positive integer starting values in domain 'positive integers']"
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "exhibits divergent behavior for all starting values that are not powers of 3",
+      "object": "for all positive integer starting values except those of the form 3^k",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3 for all positive integer starting values except those of the form 3^k]",
+        "[PATH:empirical] Systematic computational simulation across a wide range of starting values (e.g., up to 10^6), recording iteration trajectories and checking for divergence (non-repetition and unbounded growth) versus convergence to cycles or fixed points, with special attention to values not of the form 3^k. \u2014 Direct simulation can reveal whether all non-3^k starting values diverge, or if some enter cycles or become periodic, thus confirming or refuting the hypothesis at scale.",
+        "[PATH:theoretical] Analytic study of the function's dynamics using modular arithmetic and invariant theory, e.g., analyzing the behavior of the function under repeated application in residue classes modulo powers of 3, to determine if any non-3^k starting value can be mapped to a power of 3 or enter a closed cycle. \u2014 A theoretical proof that the only fixed points or cycles involve powers of 3 would confirm the hypothesis; conversely, identifying a counterexample cycle would refute it.",
+        "[PATH:literature] Literature review of similar piecewise linear maps and Collatz-type problems, particularly those with multiple branches and known divergence/convergence criteria, to see if analogous functions exhibit known behavior patterns that can be applied to this case. \u2014 Existing results on related functions may provide proven theorems or heuristic evidence that could inform whether divergence for all non-3^k inputs is plausible or likely false."
+      ],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all time steps in the iteration process"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "exhibits convergent behavior for a significant subset of starting values",
+      "object": "for some positive integer starting values",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "has infinitely many distinct cycles",
+      "object": "for all positive integer starting values",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The function T(n) defined by n/3 for n\u22610 mod 3, 4n+2 for n\u22611 mod 3, and 2n-1 for n\u22612 mod 3",
+      "predicate": "admits non-trivial cycles",
+      "object": "for certain positive integer starting values",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "semantic_duplication_rate_mean": 0.9286,
+  "novel_claims_mean": 14.0,
+  "total_claims_final": 14,
+  "run_timestamp": "2026-05-09T05:41:19.949430+00:00",
+  "code_hash": "9b9adf3f354cd7a74689a049a92d24acce9fb167",
+  "model_versions": {
+    "builder": "deepseek-chat",
+    "falsifier": "openai/gpt-4o"
+  }
+}

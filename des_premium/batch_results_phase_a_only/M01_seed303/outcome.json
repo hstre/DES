@@ -1,0 +1,494 @@
+{
+  "domain_id": "M01",
+  "seed": 303,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "config": {
+    "builder_model": "deepseek-chat",
+    "builder_provider": "deepseek",
+    "falsifier_model": "openai/gpt-4o",
+    "falsifier_provider": "openrouter",
+    "tier": "cheap"
+  },
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 1,
+  "elapsed_seconds": 68.6,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "error_types": []
+  },
+  "false_proof_detected": false,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "exhibits a finite set of terminal cycles",
+      "object": "for all positive integer seeds n",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for all positive integer seeds n]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "converges to a single fixed cycle",
+      "object": "for all positive integer seeds n",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for all positive integer seeds n]"
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "as n \u2192 \u221e",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "depends on the seed's residue class modulo 3, leading to multiple distinct cycles",
+      "object": "for seeds n in certain residue classes",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for seeds n in certain residue classes]"
+      ],
+      "scope": {
+        "domain": "seeds with specific residue classes modulo 3"
+      },
+      "qualifier": {
+        "temporal": "over all time steps after initialization"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "may not be finite for all seeds, with some seeds showing unbounded growth or divergence",
+      "object": "for a sparse but non-empty set of positive integer seeds n",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for a sparse but non-empty set of positive integer seeds n]"
+      ],
+      "scope": {
+        "domain": "a sparse subset of positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": true,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "converges to exactly one of three distinct fixed cycles",
+      "object": "for all positive integer seeds n, with the specific cycle determined by the residue class of n modulo 9",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for all positive integer seeds n, with the specific cycle determined by the residue class of n modulo 9]",
+        "[PATH:empirical] Exhaustive computational simulation for all seed residues modulo 9 up to a large bound (e.g., n \u2264 10^6) and verification of eventual cycle membership under the recurrence T(n) defined piecewise by n mod 3 \u2014 Direct simulation can confirm whether each residue class modulo 9 leads to one of three distinct fixed cycles, or reveal counterexamples that refute the hypothesis.",
+        "[PATH:theoretical] Analytical proof using invariants or modular arithmetic to derive the mapping from seed residues modulo 9 to the claimed fixed cycles \u2014 A theoretical derivation can establish the deterministic relationship between n mod 9 and the long-term cycle, providing confirmatory evidence beyond finite simulation."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "diverges or enters multiple distinct cycles",
+      "object": "for some positive integer seeds n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for some positive integer seeds n]",
+        "[PATH:empirical] Exhaustive computational search for cycles and divergence patterns up to a large bound (e.g., 10^9) using the recurrence T(n) = n/3 if n \u2261 0 mod 3, T(n) = floor(n/3) + something? Exact definition needed, but simulate all seeds up to 10^9 to detect cycles and unbounded growth. \u2014 If the recurrence has multiple distinct cycles or divergence, empirical enumeration can reveal them directly, providing evidence for or against the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis using modular arithmetic and invariant theory: study the map T(n) in base 3 representation to characterize the long-term dynamics as a shift-and-add automaton. \u2014 A base-3 analysis can prove whether the recurrence is eventually periodic for all seeds (like the 3x+1 problem) or can diverge, thus refuting or supporting the existence of cycles or divergence.",
+        "[PATH:literature] Literature review of known piecewise linear recurrences mod k (e.g., generalized Collatz problems, Lagarias's work on 3x+1 variants) to compare with the structure of T(n) mod 3. \u2014 Existing results on similar recurrences may classify this map as ergodic or periodic, providing a theoretical framework to predict its behavior without exhaustive computation."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "for all positive integer seeds n, as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "is uniquely determined by the seed's residue class modulo 3 and converges to a single global attractor for all seeds",
+      "object": "for seeds in all residue classes, not only certain ones",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for seeds in all residue classes, not only certain ones]",
+        "[PATH:empirical] Exhaustive computational simulation of T(n) for all seeds up to a large bound (e.g., 10^6) across all residue classes modulo 3, tracking convergence to a fixed point or cycle. \u2014 Simulating the recurrence for a wide range of initial values can reveal whether the long-term behavior depends on the residue class or converges universally, providing direct evidence for or against the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the recurrence's dynamics using number theory and dynamical systems, focusing on modular invariants and potential Lyapunov functions. \u2014 A rigorous proof or counterexample regarding the existence of a single global attractor requires understanding the algebraic structure of the recurrence; such analysis can confirm the hypothesis if an invariant is found, or refute it by showing distinct attractors for different residue classes.",
+        "[PATH:literature] Literature review of known piecewise linear recurrences similar to T(n) (e.g., variants of the Collatz conjecture or 3x+1 problem) to identify analogous results or established methods. \u2014 Existing studies on related recurrences may offer insights into the behavior of T(n), including known attractors, periodic cycles, or proof techniques that can be adapted to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "all seeds in the domain of natural numbers"
+      },
+      "qualifier": {
+        "temporal": "over infinite time steps as n \u2192 \u221e",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "is independent of the seed's residue class modulo 3, converging to a single cycle",
+      "object": "for all seeds n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for all seeds n]",
+        "[PATH:empirical] Exhaustive computational simulation for all seeds up to a very large bound (e.g., 10^9) with statistical analysis of cycle lengths and attractors \u2014 Simulating the recurrence for a massive range of seeds can reveal whether different residue classes converge to distinct cycles or to the same cycle, providing direct empirical confirmation or refutation of the independence claim.",
+        "[PATH:theoretical] Analytic study of the recurrence as a piecewise linear map on the 3-adic integers, using techniques from dynamical systems and number theory \u2014 A theoretical analysis of the transformation in the 3-adic metric could prove that all seeds eventually fall into the same attractor, or conversely, that the dynamics depend on the seed's residue class modulo 3, thereby resolving the hypothesis.",
+        "[PATH:literature] Review of known results on similar piecewise linear recurrences (e.g., generalized Collatz-type maps) in the literature, focusing on residue-class dependence \u2014 Existing studies on related recurrences may offer proof techniques or counterexamples that directly apply to this specific T(n) defined by n mod 3, helping to confirm or refute the independence conjecture without starting from scratch."
+      ],
+      "scope": {
+        "domain": "all seeds"
+      },
+      "qualifier": {
+        "temporal": "as n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "does depend on the seed's residue class modulo 3, leading to multiple distinct cycles",
+      "object": "for seeds n in certain residue classes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 does depend on the seed's residue class modulo 3, leading to multiple distinct cycles for seeds n in certain residue classes in domain 'seeds with specific residue classes modulo 3']"
+      ],
+      "scope": {
+        "domain": "seeds with specific residue classes modulo 3"
+      },
+      "qualifier": {
+        "temporal": "over infinite time horizon",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "does not depend on the seed's residue class modulo 3, converging to a single cycle for all seeds",
+      "object": "for seeds n in all residue classes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 does not depend on the seed's residue class modulo 3, converging to a single cycle for all seeds for seeds n in all residue classes in domain 'seeds with specific residue classes modulo 3']"
+      ],
+      "scope": {
+        "domain": "seeds with specific residue classes modulo 3"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large n",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "diverges to infinity for all seeds that are congruent to 1 mod 3 and are not powers of 2",
+      "object": "for a dense subset of positive integer seeds n",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for a dense subset of positive integer seeds n]",
+        "[PATH:empirical] Systematic computational simulation of the recurrence T(n) for all seeds n \u2261 1 mod 3 up to a large bound (e.g., 10^9), tracking divergence indicators such as unbounded growth or entry into known cycles, with special attention to excluding powers of 2. \u2014 Direct computational evidence can confirm or refute the claim for a dense subset by checking whether most seeds in the congruence class diverge to infinity, and whether the exceptions (e.g., cycles) are rare or follow a pattern.",
+        "[PATH:theoretical] Analytic study of the recurrence's dynamics using number-theoretic invariants (e.g., parity of exponents, modular constraints) to prove that for seeds n \u2261 1 mod 3, the iterates cannot be bounded unless n is a power of 2, or to find a counterexample family that remains bounded. \u2014 A theoretical proof or disproof would settle the hypothesis definitively, clarifying the role of the modulus condition and the exclusion of powers of 2 in long-term behavior.",
+        "[PATH:literature] Literature review of known results on piecewise linear recurrences with modulus-based definitions, especially related to the Collatz conjecture or similar 3x+1 variants, to identify analogous proven divergence or convergence criteria. \u2014 Existing work on related recurrences may offer techniques or partial results that apply to this specific case, helping to validate or challenge the hypothesis without starting from scratch."
+      ],
+      "scope": {
+        "domain": "positive integers congruent to 1 mod 3, excluding powers of 2"
+      },
+      "qualifier": {
+        "temporal": "for all time steps n \u2192 \u221e"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "is finite for all seeds, showing bounded behavior or convergence",
+      "object": "for all positive integer seeds n",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The long-term behavior of the recurrence T(n) defined piecewise by n mod 3 for all positive integer seeds n]"
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3"
+      ],
+      "parent_id": "C004"
+    },
+    "B003": {
+      "id": "B003",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "is finite for all positive integer seeds n, with every seed eventually entering a cycle",
+      "object": "for all positive integer seeds n",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "a sparse subset of positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "B004": {
+      "id": "B004",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "is not finite for all seeds, with some seeds showing unbounded growth or divergence",
+      "object": "for a sparse but non-empty set of positive integer seeds n",
+      "status": "hypothesis",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "a sparse subset of positive integers"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C015": {
+      "id": "C015",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "converges to a single universal cycle for all seeds whose residue class is 0 or 1 modulo 3",
+      "object": "for seeds n in residue classes 0 and 1 modulo 3",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "seeds with residue classes 0 or 1 modulo 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C016": {
+      "id": "C016",
+      "subject": "The long-term behavior of the recurrence T(n) defined piecewise by n mod 3",
+      "predicate": "converges to a single cycle",
+      "object": "regardless of the seed's residue class modulo 3",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "seeds with any residue class modulo 3"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "semantic_duplication_rate_mean": 0.625,
+  "novel_claims_mean": 16.0,
+  "total_claims_final": 16,
+  "run_timestamp": "2026-05-09T05:43:57.418352+00:00",
+  "code_hash": "9b9adf3f354cd7a74689a049a92d24acce9fb167",
+  "model_versions": {
+    "builder": "deepseek-chat",
+    "falsifier": "openai/gpt-4o"
+  }
+}

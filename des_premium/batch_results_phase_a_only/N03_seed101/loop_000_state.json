@@ -1,0 +1,425 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Artificial general intelligence (AGI)",
+      "predicate": "is achievable within 20 years",
+      "object": "given current AI scaling approaches and known limitations",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Artificial general intelligence (AGI) given current AI scaling approaches and known limitations]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Scaling laws for large language models and transformers show diminishing returns for novel reasoning, while neuroscientific and cognitive architectures suggest fundamental gaps in current paradigms, making the timeline highly contested."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Large language model scaling",
+      "predicate": "will produce diminishing returns for novel reasoning tasks",
+      "object": "within the next 10 years",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Large language model scaling within the next 10 years]"
+      ],
+      "scope": {
+        "domain": "AI scaling research"
+      },
+      "qualifier": {
+        "tension": "Empirical evidence from transformer scaling shows performance plateaus on tasks requiring multi-step inference or causal reasoning."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Cognitive-architecture approaches",
+      "predicate": "could bridge the reasoning gap within 20 years",
+      "object": "given current neuroscientific insights",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Cognitive-architecture approaches given current neuroscientific insights]"
+      ],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {
+        "tension": "These approaches rely on incomplete models of human cognition and have not yet scaled to large-scale systems."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Hybrid AI systems combining scaling and cognitive architectures",
+      "predicate": "might achieve AGI within 20 years",
+      "object": "if integration challenges are resolved",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: Hybrid AI systems combining scaling and cognitive architectures if integration challenges are resolved]"
+      ],
+      "scope": {
+        "domain": "interdisciplinary AI research"
+      },
+      "qualifier": {
+        "tension": "The two paradigms have conflicting assumptions about representation and learning, creating substantial integration friction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Large language model scaling",
+      "predicate": "will produce negative returns for novel reasoning tasks",
+      "object": "within the next 5 years",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Large language model scaling within the next 5 years]",
+        "[PATH:empirical] Controlled benchmark studies comparing GPT-4, GPT-5-class models on truly novel reasoning tasks (e.g., counterfactual logic, out-of-distribution math problems, or adversarial puzzles) across different scales \u2014 Directly tests whether scaling degrades performance on novel reasoning by measuring accuracy and generalization gap as model size increases, controlling for training data overlap.",
+        "[PATH:theoretical] Theoretical analysis of scaling laws for generalization vs. memorization (e.g., work by Kaplan, Henighan, or recent papers on the 'bitter lesson' and the limits of pattern matching) \u2014 Provides a mathematical framework to predict when scaling shifts from generalization to memorization, enabling a falsifiable prediction about negative returns for novel tasks.",
+        "[PATH:literature] Meta-analysis of published results on model scaling and reasoning (e.g., from NeurIPS, ICLR, or arXiv preprints on emergent abilities and their saturation) \u2014 Synthesizes existing evidence on whether performance on novel reasoning tasks plateaus or declines with scale, identifying trends and methodological confounds."
+      ],
+      "scope": {
+        "domain": "AI scaling research"
+      },
+      "qualifier": {
+        "tension": "As models scale, they increasingly rely on memorized patterns from training data, which actively degrades performance on truly novel reasoning tasks that require generalization beyond the training distribution."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Large language model scaling",
+      "predicate": "will lead to breakthroughs in novel reasoning tasks",
+      "object": "within the next 10 years",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Large language model scaling within the next 10 years]",
+        "[PATH:empirical] Longitudinal benchmarking of LLM performance on novel reasoning tasks (e.g., ARC, MMLU, GSM8K) with controlled scaling of model size, data, and compute from 2024 to 2034 \u2014 Directly tests whether scaling correlates with improved performance on tasks requiring novel reasoning, controlling for data contamination and memorization.",
+        "[PATH:theoretical] Theoretical analysis of scaling laws for reasoning vs. pattern matching, e.g., examining whether emergent reasoning abilities follow power-law scaling or plateau \u2014 Provides a formal framework to predict whether scaling alone can yield breakthroughs in reasoning, or if architectural innovations are necessary."
+      ],
+      "scope": {
+        "domain": "AI scaling research"
+      },
+      "qualifier": {
+        "temporal": "by 2034",
+        "geographic": "global AI research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Cognitive-architecture approaches that incorporate predictive coding and active inference",
+      "predicate": "will bridge the reasoning gap within 10 years",
+      "object": "given current neuroscientific insights into cortical computation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Cognitive-architecture approaches that incorporate predictive coding and active inference given current neuroscientific insights into cortical computation]",
+        "[PATH:empirical] Longitudinal benchmarking of cognitive architectures (e.g., Free Energy Principle-based agents) on tasks requiring multi-step inference and causal reasoning, such as the Abstraction and Reasoning Corpus (ARC) or the ConceptARC benchmark, comparing performance to human baselines across 2025-2035. \u2014 Direct empirical testing of predictive coding and active inference architectures on reasoning tasks that are known to challenge current AI systems (e.g., compositional generalization, counterfactual reasoning) would provide concrete evidence for or against bridging the reasoning gap.",
+        "[PATH:literature] Systematic review and meta-analysis of neuroscientific studies on cortical predictive processing (e.g., hierarchical predictive coding in prefrontal cortex, hippocampal replay for active inference) published between 2020 and 2030, focusing on whether identified neural mechanisms are sufficient to implement explicit reasoning. \u2014 If neuroscientific insights reveal that cortical circuits for prediction and inference lack the necessary computational primitives for abstract reasoning (e.g., symbolic manipulation, recursive embedding), this would refute the hypothesis; conversely, strong evidence for such primitives would support it.",
+        "[PATH:theoretical] Theoretical analysis of the computational complexity and expressiveness of predictive coding and active inference frameworks, specifically examining whether they can implement reasoning operations (e.g., modus ponens, Bayesian belief revision, causal inference) without additional architectural components. \u2014 A formal proof or rigorous simulation showing that these frameworks are Turing-complete or provably limited in reasoning capacity would confirm or refute the bridging claim, independent of empirical implementation details."
+      ],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {
+        "temporal": "from 2025 to 2035",
+        "geographic": "global research communities"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Cognitive-architecture approaches",
+      "predicate": "will not bridge the reasoning gap within 20 years",
+      "object": "due to the complexity and unpredictability of human cognition",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Cognitive-architecture approaches due to the complexity and unpredictability of human cognition]",
+        "[PATH:empirical] Longitudinal study of cognitive architecture performance on complex reasoning tasks (e.g., ARC, Winograd schemas) over the next 5-10 years, with human expert performance as baseline. \u2014 Directly tests whether cognitive-architecture approaches can narrow the gap to human-level reasoning on challenging, open-ended tasks; if progress plateaus, it supports the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of computational complexity bounds for modeling full human cognitive dynamics (e.g., integrating perception, memory, and metacognition) under realistic resource constraints. \u2014 Provides formal arguments about fundamental limitations of architecture-based approaches due to combinatorial explosion and unpredictability, potentially confirming the hypothesis.",
+        "[PATH:literature] Systematic literature review of recent failures and breakthroughs in cognitive architecture research (e.g., Soar, ACT-R, Sigma, Nengo) focusing on reasoning transfer and generalization. \u2014 Synthesizes historical and current evidence to assess whether the field is converging on a solution or repeatedly hitting obstacles, informing the plausibility of a 20-year bridge."
+      ],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {
+        "temporal": "from 2025 to 2045",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Cognitive-architecture approaches",
+      "predicate": "can bridge the reasoning gap within 20 years",
+      "object": "by leveraging current neuroscientific insights to build scalable models",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Cognitive-architecture approaches can bridge the reasoning gap within 20 years by leveraging current neuroscientific insights to build scalable models in domain 'cognitive science and AI']"
+      ],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {
+        "temporal": "by 2044",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Cognitive-architecture approaches",
+      "predicate": "cannot bridge the reasoning gap within 20 years",
+      "object": "because current neuroscientific models are too incomplete and approaches have not scaled",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Cognitive-architecture approaches cannot bridge the reasoning gap within 20 years because current neuroscientific models are too incomplete and approaches have not scaled in domain 'cognitive science and AI']"
+      ],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Cognitive-architecture approaches that explicitly incorporate predictive coding and active inference",
+      "predicate": "will bridge the reasoning gap within 10 years, not 20",
+      "object": "given current neuroscientific insights into cortical feedback loops",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Cognitive-architecture approaches",
+      "predicate": "are unlikely to bridge the reasoning gap within 20 years",
+      "object": "given the current limitations of neuroscientific insights",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "cognitive science and AI"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

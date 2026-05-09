@@ -1,0 +1,35 @@
+{
+  "domain_id": "M01",
+  "seed": 202,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "condition": "COT_PREMIUM",
+  "config": {
+    "builder_model": "google/gemini-3.1-pro-preview",
+    "builder_provider": "openrouter",
+    "tier": "cot_premium_pb"
+  },
+  "outcome": "COT_COMPLETE",
+  "word_count": 70,
+  "reasoning_steps": 2,
+  "sentence_count": 3,
+  "semantic_duplication_rate": 0.0,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "patterns_matched": []
+  },
+  "false_proof_detected": false,
+  "elapsed_seconds": 23.7,
+  "token_usage": {
+    "prompt_tokens": 144,
+    "completion_tokens": 2996,
+    "total_tokens": 3140
+  },
+  "output": "This sequence is a fascinating variation of the Collatz conjecture, often studied in the context of generalized $3x+1$ mappings. To understand its long-term behavior, we can analyze the rules, track the sequence for different starting values, and look at the statistical growth rate.\n\n### 1. Step-by-Step Analysis of the Rules\nThe function is defined as:\n*   **Case 0:** If $n \\equiv 0 \\pmod 3$, $T(n) = n/3$\n*   **Case 1",
+  "run_timestamp": "2026-05-09T05:50:13.996741+00:00",
+  "code_hash": "9b9adf3f354cd7a74689a049a92d24acce9fb167",
+  "prompt_hash": "6973f3574f2dd7dd4a0fdd4a8b393a5b0d5715e36085dbef3feddc84496f94e5",
+  "model_versions": {
+    "builder": "google/gemini-3.1-pro-preview"
+  }
+}

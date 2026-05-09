@@ -1,0 +1,435 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has no cycles other than the trivial fixed point 0 and the 2-cycle (1, 6)",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has no cycles other than the trivial fixed point 0 and the 2-cycle (1, 6) for all n up to 10^6",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]"
+      ],
+      "scope": {
+        "domain": "n \u2264 10^6"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "may contain additional cycles for n > 10^6 or for certain residue classes when iterated backward",
+      "object": "the long-term behavior of the map",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]"
+      ],
+      "scope": {
+        "domain": "large n or backward dynamics"
+      },
+      "qualifier": {
+        "temporal": "for iterates computed up to 10^9 and backward steps limited to depth 50",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has a provably finite set of cycles (possibly only the known ones) under a modular arithmetic constraint",
+      "object": "the long-term behavior of the map",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "conjecture",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]"
+      ],
+      "scope": {
+        "domain": "all integers, with mod 3 invariance"
+      },
+      "qualifier": {
+        "temporal": "for all iterations of the map",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has no cycles other than the trivial fixed point 0 and the 2-cycle (1, 6) for all n up to 10^9",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]",
+        "[PATH:empirical] Extend computational verification to n up to 10^12 using optimized modular arithmetic and cycle detection algorithms (e.g., Floyd's or Brent's algorithm) to increase empirical coverage and reduce the likelihood of undiscovered cycles beyond 10^9. \u2014 The current hypothesis is limited to n \u2264 10^9; extending the bound significantly can either confirm the absence of new cycles or reveal counterexamples, thereby strengthening or refuting the claim.",
+        "[PATH:theoretical] Analyze the recurrence as a piecewise linear function on residues modulo powers of 3, seeking invariant structures or contraction properties that could theoretically prove the absence of nontrivial cycles except the known ones. \u2014 A theoretical proof of cycle confinement would resolve the dispute definitively. Studying the map's dynamics on 3-adic integers or using congruence constraints may reveal why only the 0 fixed point and (1,6) 2-cycle exist.",
+        "[PATH:literature] Search the literature for known results on similar piecewise linear Collatz-type recurrences with modulus-3 branching, particularly studies on the 3x+1 problem and its variants, to identify analogous cycle structures or proven theorems. \u2014 The recurrence resembles generalized Collatz maps; existing theoretical frameworks (e.g., Lagarias' surveys, Conway's undecidability results) may provide insights or tools to analyze cycle existence, potentially confirming or refuting the hypothesis without exhaustive computation."
+      ],
+      "scope": {
+        "domain": "n \u2264 10^9"
+      },
+      "qualifier": {
+        "temporal": "as of the computational verification conducted up to the present",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has cycles other than the trivial fixed point 0 and the 2-cycle (1, 6) for some n up to 10^6",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]",
+        "[PATH:empirical] Exhaustive computational search for cycles up to n \u2264 10^7 using hash-based detection and Floyd's cycle detection algorithm \u2014 Extending the computational range beyond 10^6 increases the chance of finding non-trivial cycles if they exist, and Floyd's algorithm efficiently detects cycles without storing all visited states.",
+        "[PATH:theoretical] Theoretical analysis of the recurrence as a piecewise linear map on integers, using modular arithmetic and invariant sets to prove the absence of cycles beyond known ones \u2014 A formal proof that all trajectories eventually enter the known attractors (0 or the 2-cycle) would definitively refute the hypothesis, while finding a contradiction would confirm it.",
+        "[PATH:literature] Existing literature on generalized Collatz-type problems and piecewise linear maps with modular conditions (e.g., Lagarias' 'The 3x+1 problem and its generalizations') \u2014 Similar recurrences often exhibit complex behavior; reviewing known results on cycle structures and termination proofs for such maps can provide insight or analogous methods to apply to this specific recurrence."
+      ],
+      "scope": {
+        "domain": "n \u2264 10^6"
+      },
+      "qualifier": {
+        "temporal": "until the computational verification up to n \u2264 10^6",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has no additional cycles for any n > 10^6 when iterated forward, but does have new cycles when iterated backward for n \u2261 1 mod 3",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]",
+        "[PATH:empirical] Exhaustive computational search for cycles in the forward iteration of T(n) for n up to, say, 10^9, using modular arithmetic and cycle detection algorithms (e.g., Floyd's or Brent's algorithm) to confirm absence of new cycles beyond 10^6. \u2014 Directly tests the forward claim by scaling computational verification far beyond the stated threshold, providing strong empirical confirmation or refutation of the no-new-cycles assertion.",
+        "[PATH:theoretical] Theoretical analysis of the backward iteration map restricted to n \u2261 1 mod 3, deriving the functional inverse branches and characterizing their fixed points and periodic orbits via number-theoretic methods (e.g., solving congruences and analyzing growth rates). \u2014 Explores the backward dynamics claim rigorously, potentially proving existence or non-existence of new cycles, and clarifying the structure of preimages for that residue class.",
+        "[PATH:literature] Literature review of known results on piecewise linear maps with modulus-based rules, especially those related to Collatz-type problems and generalized 3x+1 maps, to identify analogous cycle behavior or known theorems. \u2014 Places the hypothesis in context of existing research, potentially revealing proven constraints on cycle existence or providing methods applicable to this specific recurrence."
+      ],
+      "scope": {
+        "domain": "large n forward dynamics and backward dynamics for residue class n \u2261 1 mod 3"
+      },
+      "qualifier": {
+        "temporal": "under iteration for all time steps beyond initial forward/backward steps",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "does not exhibit any additional cycles for n > 10^6 or for certain residue classes when iterated backward",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 the long-term behavior of the map]",
+        "[PATH:empirical] Extended computational search for cycles in the forward iteration for n > 10^6, using random sampling and residue class stratification up to n = 10^12 \u2014 Directly tests the claim that no additional cycles exist beyond the known ones for large n; large-scale computation can detect cycles or provide counterexamples, increasing confidence or refuting the hypothesis.",
+        "[PATH:theoretical] Theoretical analysis of the backward iteration map, focusing on residue classes modulo powers of 3 and the structure of preimages, to characterize possible cycle attractors \u2014 A rigorous mathematical study of backward dynamics can determine whether certain residue classes lead to cycles or diverge, providing a proof or disproof of the hypothesis for backward iteration.",
+        "[PATH:literature] Literature review of similar piecewise linear maps (e.g., Collatz-type problems) with known cycle structures, particularly those with modulus-based rules \u2014 Comparing with established results on related maps can reveal patterns or invariants that either support the existence of additional cycles or suggest the map is cycle-free beyond a threshold, contextualizing the hypothesis within known dynamical systems theory."
+      ],
+      "scope": {
+        "domain": "large n or backward dynamics"
+      },
+      "qualifier": {
+        "temporal": "for all n > 10^6 in forward iteration and for certain residue classes in backward iteration, as tested up to the current computational limits"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "does contain additional cycles for n > 10^6 or for certain residue classes when iterated backward",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 does contain additional cycles for n > 10^6 or for certain residue classes when iterated backward the long-term behavior of the map in domain 'large n or backward dynamics']"
+      ],
+      "scope": {
+        "domain": "large n or backward dynamics"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "does not contain additional cycles for n > 10^6 or for certain residue classes when iterated backward",
+      "object": "the long-term behavior of the map",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2 does not contain additional cycles for n > 10^6 or for certain residue classes when iterated backward the long-term behavior of the map in domain 'large n or backward dynamics']"
+      ],
+      "scope": {
+        "domain": "large n or backward dynamics"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "has exactly one nontrivial cycle (other than the fixed point at 1) for all n \u2264 10^9, and that cycle is of length 3 starting at n=2",
+      "object": "the long-term behavior of the map",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "forward iteration for n up to 10^9"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the recurrence T(n) = n/3 if n mod 3 = 0, T(n) = 4n+2 if n mod 3 = 1, T(n) = 2n-1 if n mod 3 = 2",
+      "predicate": "does not contain additional cycles for any n or residue class when iterated backward",
+      "object": "the long-term behavior of the map",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "all n and backward dynamics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

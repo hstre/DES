@@ -1,0 +1,502 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "performs worse than",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "condition": "when noise distributions are non-stationary across training and test environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "performs worse than",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]"
+      ],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {
+        "condition": "when noise distributions are non-stationary across training and test environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "performs similarly to",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]"
+      ],
+      "scope": {
+        "domain": "causal learning under stationary noise distributions"
+      },
+      "qualifier": {
+        "condition": "when noise distributions are stationary across training and test environments"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "is more robust than",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]"
+      ],
+      "scope": {
+        "domain": "causal learning with limited training data"
+      },
+      "qualifier": {
+        "condition": "when training data is scarce and noise distributions are stationary"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "performs worse than",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]",
+        "[PATH:empirical] Controlled simulation study comparing explicit structural constraint (e.g., DAG-penalized causal discovery) vs. symbolic constraint layer (e.g., neural-symbolic causal encoder) under heteroscedastic noise where variance shifts but mean remains constant \u2014 Directly tests the hypothesis in the specified condition (variance shift non-stationarity) by measuring relative performance (e.g., SHD, structural Hamming distance, or downstream causal effect estimation error) across multiple random seeds and noise levels.",
+        "[PATH:theoretical] Theoretical analysis of identifiability conditions for causal discovery under non-stationary noise with variance shifts, comparing implicit structural constraints (e.g., sparsity priors) vs. explicit symbolic constraint layers (e.g., differentiable logic constraints) \u2014 Determines whether the symbolic augmentation layer provably exploits variance shift information that explicit structural constraints cannot capture, clarifying the fundamental advantage or lack thereof.",
+        "[PATH:literature] Literature review of benchmark results from recent causal learning competitions or repositories (e.g., Causality4Climate, Causal Discovery Benchmark) focusing on methods that handle heteroscedastic noise \u2014 Provides aggregated empirical evidence from prior work, potentially revealing systematic performance differences between the two approaches under variance-shift non-stationarity, and highlighting any confounding factors like sample size or graph density."
+      ],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {
+        "condition": "when the non-stationarity is caused by a shift in the variance of the noise, rather than a shift in the mean"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "predicate": "performs worse than",
+      "object": "explicit structural constraint approach to causal learning",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints explicit structural constraint approach to causal learning]",
+        "[PATH:empirical] Controlled simulation study comparing performance of separate statistical augmentation layer vs. explicit structural constraint under non-stationary noise distributions, varying noise types and shift magnitudes \u2014 Directly tests the hypothesis in the specified domain, providing quantitative evidence of relative performance.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and convergence guarantees for both approaches under distribution shift \u2014 Establishes formal bounds that can predict which method should perform worse, offering theoretical confirmation or refutation.",
+        "[PATH:literature] Systematic literature review of prior work comparing learned symbolic constraints vs. explicit structural constraints in causal discovery under non-stationarity \u2014 Aggregates existing empirical and theoretical findings to assess whether the hypothesis aligns with or contradicts established knowledge."
+      ],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {
+        "temporal": "during 2023-2024 simulation studies",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "outperforms",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]",
+        "[PATH:empirical] Controlled simulation study comparing explicit structural constraint (e.g., causal graph regularization) vs. statistical augmentation (e.g., invariant risk minimization) under synthetic non-stationary noise shifts in training/test environments, measuring out-of-distribution causal effect prediction accuracy. \u2014 Directly tests the hypothesis by isolating the key condition (noise distribution shifts) and comparing the two approaches head-to-head in a reproducible setting.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and generalization bounds for explicit structural constraint methods versus learned symbolic constraint layers under distribution shift, using tools from causal discovery and domain adaptation theory. \u2014 Provides formal guarantees or counterexamples that can confirm or refute the relative advantage of explicit structural constraints when noise distributions vary.",
+        "[PATH:literature] Systematic literature review of existing benchmarks in causal learning under non-stationarity (e.g., from NeurIPS, ICML, or UAI proceedings) that compare symbolic or structural causal models to neural augmentation approaches, focusing on reported performance gaps. \u2014 Aggregates prior empirical and theoretical results to assess whether the hypothesis is supported or contradicted by existing evidence, and identifies potential confounds or missing conditions."
+      ],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {
+        "condition": "when noise distributions shift between training and test environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "outperforms",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints]",
+        "[PATH:empirical] Benchmark comparison on causal structure recovery tasks (e.g., SynthCausal, CausalBench) with controlled stationary noise \u2014 Directly tests the hypothesis by comparing explicit structural constraint methods against learned symbolic constraint layers on standardized causal discovery benchmarks, measuring recovery accuracy and robustness under stationary noise.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and identifiability for explicit vs. learned symbolic constraints in linear and nonlinear causal models \u2014 Provides formal guarantees or limitations on when explicit structural constraints outperform learned symbolic layers, clarifying whether observed empirical differences are due to fundamental properties or implementation details.",
+        "[PATH:literature] Systematic literature review of recent (2020\u20132025) papers comparing structural causal learning approaches, particularly those using differentiable causal discovery vs. symbolic constraint injection \u2014 Synthesizes existing evidence across multiple studies to assess consensus, identify confounding factors (e.g., noise distribution assumptions), and evaluate reproducibility of claims regarding outperformance."
+      ],
+      "scope": {
+        "domain": "causal learning under stationary noise distributions"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "outperforms",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms explicit structural constraint approach to causal learning outperforms a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints in domain 'causal learning under stationary noise distributions']"
+      ],
+      "scope": {
+        "domain": "causal learning under stationary noise distributions"
+      },
+      "qualifier": {
+        "temporal": "as of 2023",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "predicate": "outperforms",
+      "object": "explicit structural constraint approach to causal learning",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints outperforms explicit structural constraint approach to causal learning in domain 'causal learning under stationary noise distributions']"
+      ],
+      "scope": {
+        "domain": "causal learning under stationary noise distributions"
+      },
+      "qualifier": {
+        "temporal": "post-2015",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "is less robust than",
+      "object": "a hybrid model that first learns a sparse causal graph via variational inference and then applies explicit structural constraints during fine-tuning",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: explicit structural constraint approach to causal learning a hybrid model that first learns a sparse causal graph via variational inference and then applies explicit structural constraints during fine-tuning]",
+        "[PATH:empirical] Conduct a controlled simulation study comparing the two approaches across multiple synthetic datasets with varying training set sizes and non-stationary noise distributions (e.g., heteroscedastic noise, distribution shifts). \u2014 Direct empirical comparison under the specified scope (limited data, non-stationary noise) would provide clear evidence on which method yields more robust causal graph recovery and downstream inference.",
+        "[PATH:literature] Review and meta-analyze existing literature on variational inference for causal discovery (e.g., DiBS, DECI) versus explicit constraint-based methods (e.g., NOTEARS, DAG-GNN) under distribution shift or small-sample regimes. \u2014 A systematic survey of published benchmarks and ablation studies can reveal whether the hybrid approach consistently outperforms the explicit constraint-only approach, or whether the advantage depends on specific noise or data characteristics.",
+        "[PATH:theoretical] Develop a theoretical analysis of sample complexity and stability for both methods under non-stationary noise, focusing on the bias-variance tradeoff introduced by the variational inference prior versus the hard constraints. \u2014 A theoretical characterization (e.g., PAC bounds or convergence guarantees) can confirm whether the hybrid model's two-stage design inherently reduces sensitivity to noise non-stationarity, or if the explicit constraint approach can be similarly robust with appropriate regularization."
+      ],
+      "scope": {
+        "domain": "causal learning with limited training data and non-stationary noise distributions"
+      },
+      "qualifier": {
+        "temporal": "under current research conditions (as of 2025)",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "predicate": "is more robust than",
+      "object": "explicit structural constraint approach to causal learning",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints explicit structural constraint approach to causal learning]",
+        "[PATH:empirical] Controlled benchmark experiments comparing a learned symbolic constraint layer (e.g., via neural-symbolic integration) against explicit structural equation models (e.g., DAG-GNN, NOTEARS) on limited-data causal discovery tasks, using metrics like SHD, F1, and downstream task accuracy. \u2014 Direct empirical comparison in the specified limited-data regime can reveal whether the statistical augmentation layer yields superior robustness by adapting constraints to data scarcity, whereas explicit structural approaches may over-constrain or fail to generalize.",
+        "[PATH:theoretical] Theoretical analysis of sample complexity and bias-variance trade-off for learned symbolic constraints vs. explicit structural priors in causal learning, drawing on results from statistical learning theory and causal inference. \u2014 A theoretical framework can clarify if the separate augmentation layer reduces variance without introducing excessive bias in small samples, providing a principled justification for or against the hypothesis.",
+        "[PATH:literature] Literature review of recent neural-symbolic methods (e.g., DeepProbLog, Neural Logic Machines) applied to causal structure learning, compared with classical constraint-based (e.g., PC algorithm) and score-based methods. \u2014 Surveying existing empirical and theoretical work can identify patterns of robustness in limited-data settings, and reveal whether the proposed approach has been implicitly tested or if gaps remain."
+      ],
+      "scope": {
+        "domain": "causal learning with limited training data"
+      },
+      "qualifier": {
+        "temporal": "in limited-data regimes typical of current benchmarks",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "outperforms",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {
+        "condition": "when noise distributions shift between training and test environments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "explicit structural constraint approach to causal learning",
+      "predicate": "outperforms",
+      "object": "a separate statistical augmentation layer that enforces causal structure through learned symbolic constraints",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "causal learning under non-stationary noise distributions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

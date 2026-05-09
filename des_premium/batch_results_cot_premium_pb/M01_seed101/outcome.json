@@ -1,0 +1,35 @@
+{
+  "domain_id": "M01",
+  "seed": 101,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "condition": "COT_PREMIUM",
+  "config": {
+    "builder_model": "google/gemini-3.1-pro-preview",
+    "builder_provider": "openrouter",
+    "tier": "cot_premium_pb"
+  },
+  "outcome": "COT_COMPLETE",
+  "word_count": 39,
+  "reasoning_steps": 1,
+  "sentence_count": 4,
+  "semantic_duplication_rate": 0.0,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "patterns_matched": []
+  },
+  "false_proof_detected": false,
+  "elapsed_seconds": 21.3,
+  "token_usage": {
+    "prompt_tokens": 144,
+    "completion_tokens": 2996,
+    "total_tokens": 3140
+  },
+  "output": "1/3)^{j-1} = \\frac{2}{9} \\frac{1}{(1 - 1/3)^2} = \\frac{2}{9} \\frac{9}{4} = \\frac{1}{2}$.\nSo $\\mathbb{E}[a] = 1.5$.\nLet's check this. The average number of times we divide by 3 is $1.5$.\nSo the expected logarithmic growth is:\n$\\frac{1}{2} \\ln(4) + \\frac{1}{",
+  "run_timestamp": "2026-05-09T05:49:52.710670+00:00",
+  "code_hash": "9b9adf3f354cd7a74689a049a92d24acce9fb167",
+  "prompt_hash": "e4086592a26ff1f8ba6592bf892f04676edb8a8365d18ea446829056f3798272",
+  "model_versions": {
+    "builder": "google/gemini-3.1-pro-preview"
+  }
+}

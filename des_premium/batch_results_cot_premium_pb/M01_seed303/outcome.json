@@ -1,0 +1,35 @@
+{
+  "domain_id": "M01",
+  "seed": 303,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "condition": "COT_PREMIUM",
+  "config": {
+    "builder_model": "google/gemini-3.1-pro-preview",
+    "builder_provider": "openrouter",
+    "tier": "cot_premium_pb"
+  },
+  "outcome": "COT_COMPLETE",
+  "word_count": 46,
+  "reasoning_steps": 1,
+  "sentence_count": 7,
+  "semantic_duplication_rate": 0.0,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "patterns_matched": []
+  },
+  "false_proof_detected": false,
+  "elapsed_seconds": 24.9,
+  "token_usage": {
+    "prompt_tokens": 144,
+    "completion_tokens": 2996,
+    "total_tokens": 3140
+  },
+  "output": "n=3 \\Rightarrow T(3)=1 \\Rightarrow T(1)=6 \\Rightarrow T(6)=2 \\Rightarrow T(2)=3$.\nThe multiples of 3 in this cycle are 3 and 6.\n$m=1$ corresponds to $n=3$. $C(1) = 2$ corresponds to $n=6$.\n$m=2$ corresponds to $n=6$. $C(2) = 1$ corresponds to $n=3$.\nSo $C(m)$ has cycle 1 ->",
+  "run_timestamp": "2026-05-09T05:50:37.710610+00:00",
+  "code_hash": "9b9adf3f354cd7a74689a049a92d24acce9fb167",
+  "prompt_hash": "a0642d43dcee96c426cc2a39b3bc7deb91006d1a3cc400d4c75a6ea927d4ad66",
+  "model_versions": {
+    "builder": "google/gemini-3.1-pro-preview"
+  }
+}
