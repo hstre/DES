@@ -1,0 +1,31 @@
+{
+  "claims": [
+    {"id": "C001", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has at least one genuine divergent orbit below 10^12", "status": "supported", "confidence": 0.5, "modality": "hypothesis", "parent_id": null, "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T4"]},
+    {"id": "C002", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has all orbits eventually periodic below 10^12", "status": "supported", "confidence": 0.82, "modality": "hypothesis", "parent_id": "C001", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T6[anti-delphi]", "T8"]},
+    {"id": "C003", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has at least one divergent orbit below 10^12", "status": "disputed", "confidence": 0.42, "modality": "suggestion", "parent_id": "C001", "sealed": true, "branch_open": true, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T5[anti-delphi]", "T1", "T9[anti-delphi]"]},
+    {"id": "C004", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has all orbits eventually periodic below 10^12, assuming a specific heuristic bound on escape probability", "status": "disputed", "confidence": 0.42, "modality": "speculation", "parent_id": "C001", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T8"]},
+    {"id": "C005", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has all orbits eventually periodic for all integers n ≥ 1", "status": "supported", "confidence": 0.82, "modality": "hypothesis", "parent_id": "C002", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T6", "T8"]},
+    {"id": "C006", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has at least one orbit that is not eventually periodic below 10^12", "status": "supported", "confidence": 0.8500000000000001, "modality": "hypothesis", "parent_id": "C002", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T7", "T6", "T8"]},
+    {"id": "C007", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has a divergent orbit starting from a number below 10^6", "status": "supported", "confidence": 0.8500000000000001, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T7", "T6", "T8"]},
+    {"id": "C008", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has no divergent orbits below 10^12", "status": "supported", "confidence": 0.8500000000000001, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T7", "T6", "T8"]},
+    {"id": "B001", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has at least one divergent orbit below 10^12", "status": "supported", "confidence": 0.9, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T7", "T8"]},
+    {"id": "B002", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 does not have any divergent orbit below 10^12", "status": "supported", "confidence": 0.9, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": false, "t_history": ["T3", "T7", "T8"]},
+    {"id": "C011", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has a divergent orbit that starts below 10^12 and eventually enters a strictly increasing exponential pattern below 10^12", "status": "unknown", "confidence": 0.5, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": true, "t_history": ["T8"]},
+    {"id": "C012", "text": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has no divergent orbit below 10^12", "status": "disputed", "confidence": 0.5, "modality": "hypothesis", "parent_id": "C003", "sealed": true, "branch_open": false, "conflict": false, "is_synthesis": true, "t_history": ["T8"]}
+  ],
+  "open_branches": ["C003"],
+  "contradictions": [],
+  "stats": {
+    "total_claims": 12,
+    "open_branches": 1,
+    "contradiction_count": 0,
+    "loops_in_state": 34,
+    "reframing_count": 1,
+    "t_transition_counts": {
+      "T3": 10, "T4": 1, "T6[hypothesis_builder]": 1, "T6[falsifier]": 1, "T8": 10,
+      "T5[hypothesis_builder]": 1, "T5[falsifier]": 1, "T1": 1, "T6": 4, "T7": 5,
+      "T9[hypothesis_builder]": 1, "T9[falsifier]": 1
+    }
+  },
+  "spl_metadata": null
+}
