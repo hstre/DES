@@ -1,0 +1,493 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "eventually exceeds any fixed polynomial bound and exhibits super-exponential growth in its maximum value over iterates",
+      "object": "super-exponential divergence",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) super-exponential divergence]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "displays an initial phase of erratic but bounded growth before transitioning to super-exponential divergence",
+      "object": "phase-transitional growth behavior",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) phase-transitional growth behavior]"
+      ],
+      "scope": {
+        "domain": "iterative dynamics of T(n) for small initial values"
+      },
+      "qualifier": {
+        "temporal": "over the first several hundred iterates"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "may eventually be absorbed into a periodic cycle or low-growth attractor, contradicting super-exponential divergence",
+      "object": "bounded or periodic eventual behavior",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) bounded or periodic eventual behavior]"
+      ],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {
+        "uncertainty": "based on limited numerical evidence and known sensitivity to initial conditions"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits super-exponential growth only in a statistical sense, with rare downward fluctuations masking the trend",
+      "object": "statistical super-exponential divergence with intermittent dips",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) statistical super-exponential divergence with intermittent dips]"
+      ],
+      "scope": {
+        "domain": "statistical analysis of maximum values over iterates"
+      },
+      "qualifier": {
+        "method": "using moving averages and rare-event theory"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits a deterministic, transient chaotic regime of length at most 200 iterations, after which the orbit enters a monotonic super-exponential growth phase without further erratic fluctuations",
+      "object": "a sharp transition from bounded chaos to unbounded monotonic growth",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) a sharp transition from bounded chaos to unbounded monotonic growth]",
+        "[PATH:empirical] Direct numerical simulation of the orbit from n=7 under T(n) for at least 500 iterations, recording the Lyapunov exponent and variance over sliding windows to detect the transition point. — Provides direct observational data to confirm whether erratic fluctuations cease within 200 iterations and whether super-exponential growth follows, testing the core claim.",
+        "[PATH:theoretical] Analytical study of the 3-rule T(n) map, focusing on fixed points, escape criteria, and the existence of a threshold beyond which iterates become monotonic increasing (e.g., via bounding arguments or monotonicity proofs for large n). — A theoretical proof or counterexample regarding the sharp transition from bounded chaos to unbounded monotonic growth would either confirm or refute the hypothesis independently of simulation limits.",
+        "[PATH:literature] Literature review of known behaviors of similar iterative maps (e.g., Collatz-like functions, piecewise linear maps) for small initial values, focusing on documented transient chaos and escape dynamics. — Existing studies may provide analogous cases or established theorems that predict or preclude the claimed transition, offering comparative evidence to strengthen or weaken the hypothesis."
+      ],
+      "scope": {
+        "domain": "iterative dynamics of T(n) for small initial values"
+      },
+      "qualifier": {
+        "temporal": "for the first 200 iterations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits consistent polynomial growth",
+      "object": "polynomial growth behavior",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) polynomial growth behavior]",
+        "[PATH:empirical] Extended computational simulation of the orbit from n=7 under T(n) for at least 10^6 iterations, recording logarithms of values to detect polynomial scaling — Direct empirical check of polynomial growth vs. exponential or other patterns; can confirm or refute the hypothesis by fitting growth rates to polynomial models.",
+        "[PATH:theoretical] Analytical derivation of closed-form or recurrence relations for T(n) when applied iteratively from n=7, using number-theoretic properties of the 3-rule (e.g., Collatz-type dynamics) — Theoretical analysis can prove whether polynomial growth is structurally inevitable or impossible, providing definitive confirmation or refutation beyond computational limits."
+      ],
+      "scope": {
+        "domain": "iterative dynamics of T(n) for small initial values"
+      },
+      "qualifier": {
+        "temporal": "for all observed iteration steps up to computational limit",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "will converge to a fixed point after at most 20 iterations, regardless of any intermediate excursions",
+      "object": "strictly bounded eventual behavior with a fixed-point attractor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) strictly bounded eventual behavior with a fixed-point attractor]",
+        "[PATH:empirical] Exhaustive computational enumeration of T(n) orbits for n=7 up to 10^6 iterations, with systematic recording of iteration counts to fixed point and any transient cycle lengths — Direct simulation provides the most straightforward test of the claim that convergence occurs within 20 iterations. Checking up to 10^6 iterations ensures that any rare long excursions are captured, and repeated trials can assess whether the bound holds robustly.",
+        "[PATH:theoretical] Analytical proof or counterexample using number-theoretic properties of the 3-rule T(n) (e.g., Collatz-type dynamics) to bound the maximum number of steps before a fixed point for n=7, possibly via invariant or Lyapunov function analysis — A theoretical bound would confirm the hypothesis with certainty, while a constructive counterexample (e.g., showing a cycle or divergence) would refute it. This direction addresses the 'regardless of any intermediate excursions' clause more rigorously than empirical sampling.",
+        "[PATH:literature] Literature review of known results on T(n) dynamics, particularly for small starting values like n=7, including any documented exceptions or fixed-point classifications in similar 3-rule maps — Existing studies may have already characterized the orbit of 7 under this specific rule, providing either confirmation or refutation without new computation. This also situates the hypothesis within broader known behavior of such maps."
+      ],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {
+        "temporal": "within finite computational time (tested up to 10^6 iterations)",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "will exhibit super-exponential growth without being absorbed into a periodic cycle or low-growth attractor",
+      "object": "unbounded long-term growth behavior",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) unbounded long-term growth behavior]",
+        "[PATH:empirical] High-precision numerical simulation of the orbit from n=7 under T(n) for at least 10^6 iterations, recording maximum values and growth rates to detect exponential or super-exponential scaling. — Direct simulation can reveal whether the orbit escapes to infinity or eventually enters a low-growth regime; super-exponential growth would be visible as a rapidly increasing sequence of record highs.",
+        "[PATH:theoretical] Analytical study of the 3-rule T(n) as a piecewise linear map, focusing on the dynamics of the binary expansion of n and the effect of the rule on digit patterns for seed 7. — Understanding the symbolic dynamics may prove that the orbit's growth is unbounded (e.g., by showing that the map acts like a shift on an infinite set of unbounded digits) or that it eventually cycles."
+      ],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {
+        "temporal": "as n → ∞",
+        "geographic": "null"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "will eventually be absorbed into a bounded or periodic cycle, consistent with low-growth attractor behavior",
+      "object": "bounded or periodic eventual behavior",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the orbit starting from n=7 under the 3-rule T(n) will eventually be absorbed into a bounded or periodic cycle, consistent with low-growth attractor behavior bounded or periodic eventual behavior in domain 'long-term asymptotic behavior of T(n) orbits']"
+      ],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {
+        "temporal": "asymptotic future (after finite transient steps)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "will exhibit super-exponential divergence, contradicting any eventual bounded or periodic behavior",
+      "object": "unbounded and divergent eventual behavior",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the orbit starting from n=7 under the 3-rule T(n) will exhibit super-exponential divergence, contradicting any eventual bounded or periodic behavior unbounded and divergent eventual behavior in domain 'long-term asymptotic behavior of T(n) orbits']"
+      ],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {
+        "temporal": "for all sufficiently large iterates"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "exhibits super-exponential growth in a statistical sense, with downward fluctuations that are bounded below by a deterministic power-law envelope",
+      "object": "statistical super-exponential divergence with power-law bounded dips",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) statistical super-exponential divergence with power-law bounded dips]",
+        "[PATH:empirical] Extensive numerical simulation of the 3-rule T(n) orbit from n=7 for at least 10^8 iterations, recording the sequence of minimum values and applying extreme value theory to estimate tail behavior and envelope exponents. — Directly tests the claimed super-exponential growth and power-law bounded dips by generating sufficient data to fit the envelope and assess statistical significance versus alternative models (e.g., subexponential or exponential).",
+        "[PATH:theoretical] Analytical derivation of the expected asymptotic growth rate and fluctuation bounds for the 3-rule T(n) using ergodic theory or probabilistic models (e.g., random multiplicative process with constraints), comparing to known results for the 3x+1 map. — Provides a rigorous framework to confirm or refute the super-exponential claim by establishing whether the iterates can diverge faster than exponential under the deterministic rule, and whether downward fluctuations are necessarily bounded by a power law.",
+        "[PATH:literature] Review of existing literature on the 3-rule T(n) (a variant of the Collatz map) for n=7, including any known bounds on orbit growth, records of minimum values, or statistical analyses published in number theory or dynamical systems journals. — May reveal prior evidence or counterexamples that confirm or contradict the hypothesis, avoiding redundant computation and situating the claim within established results."
+      ],
+      "scope": {
+        "domain": "statistical analysis of minimum values over iterates"
+      },
+      "qualifier": {
+        "method": "using extreme value theory and envelope fitting"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "demonstrates consistent exponential growth with fluctuations having negligible impact on overall trend",
+      "object": "consistent exponential trend with insignificant fluctuations",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the orbit starting from n=7 under the 3-rule T(n) consistent exponential trend with insignificant fluctuations]",
+        "[PATH:empirical] Generate the exact orbit from n=7 under T(n) for 10,000 iterations using high-precision arithmetic; compute the log values and fit a linear regression to measure the slope and residual variance, then test for serial correlation or heteroscedasticity in residuals to quantify deviation from pure exponential growth. — Direct simulation provides ground-truth data to assess whether the exponential trend is consistent and fluctuations are negligible, addressing the core claim with quantitative rigor.",
+        "[PATH:theoretical] Analyze the theoretical recurrence structure of T(n) (e.g., piecewise linear map with possible periodic or quasi-periodic behavior) using symbolic dynamics or ergodic theory to derive bounds on growth rates and fluctuation magnitudes. — Theoretical analysis can determine whether exponential growth is guaranteed or if non-trivial fluctuations (e.g., log-periodic oscillations) are inherent, providing a mathematical foundation to confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "statistical analysis of growth trends"
+      },
+      "qualifier": {
+        "temporal": "for the first 10,000 iterations",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "does not remain bounded but instead enters a chaotic regime with unbounded growth after a finite number of steps",
+      "object": "unbounded eventual behavior",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "the orbit starting from n=7 under the 3-rule T(n)",
+      "predicate": "inevitably diverges to infinity",
+      "object": "unbounded eventual behavior",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "long-term asymptotic behavior of T(n) orbits"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
