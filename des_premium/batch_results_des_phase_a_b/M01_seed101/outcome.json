@@ -1,0 +1,374 @@
+{
+  "domain_id": "M01",
+  "seed": 101,
+  "seed_question": "Investigate the long-term behavior of T(n): if n mod 3 = 0: T(n) = n/3, if n mod 3 = 1: T(n) = 4n+2, if n mod 3 = 2: T(n) = 2n-1. Identify cycles, divergence patterns, invariants, and plausible conjectures.",
+  "config": {
+    "builder_model": "deepseek-chat",
+    "builder_provider": "deepseek",
+    "falsifier_model": "openai/gpt-4o",
+    "falsifier_provider": "openrouter",
+    "tier": "cheap"
+  },
+  "outcome": "SEMANTIC_DUPLICATION",
+  "loops_completed": 9,
+  "elapsed_seconds": 517.7,
+  "false_proof_info": {
+    "false_proof_detected": false,
+    "false_proof_count": 0,
+    "error_types": []
+  },
+  "false_proof_detected": false,
+  "final_claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "converges to a universal value that depends only on the tail index of the noise distribution",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "converges to a universal value that depends only on the tail index of the noise distribution",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point]"
+      ],
+      "scope": {
+        "domain": "theoretical physics / stochastic processes"
+      },
+      "qualifier": {
+        "condition": "mapping function contains exactly one critical point"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "may depend on additional details of the mapping function (e.g., the critical exponent or the shape of the map near the critical point) beyond the tail index",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point]"
+      ],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {
+        "condition": "finite-size effects or non-universal corrections are present"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "is not universal but depends on the specific shape of the critical point's potential well",
+      "object": "when the noise distribution is heavy-tailed (e.g., log-normal) and the mapping function contains a single critical point with a non-quadratic local expansion",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise when the noise distribution is heavy-tailed (e.g., log-normal) and the mapping function contains a single critical point with a non-quadratic local expansion]",
+        "[PATH:empirical] Numerical simulations of random-mapping models with tunable potential-well shapes (e.g., quartic vs. cubic vs. logarithmic) and heavy-tailed multiplicative noise (log-normal, Pareto) to extract power-law exponents via maximum-likelihood estimation. \u2014 Directly tests whether the exponent varies systematically with the shape of the critical point's potential well, as predicted by the hypothesis.",
+        "[PATH:theoretical] Analytical derivation using renormalization-group or large-deviation theory for a general single-critical-point map under heavy-tailed multiplicative noise, focusing on the role of the potential's higher-order terms in determining the exponent. \u2014 Provides a mathematical proof or counterexample for the claimed non-universality, clarifying the mechanism linking potential shape to exponent.",
+        "[PATH:literature] Systematic literature review of published results on power-law exponents in heuristic random-mapping models (e.g., in econophysics, population dynamics) comparing reported exponents across studies with different assumed potential-well forms. \u2014 Aggregates existing evidence to assess whether observed exponents cluster around universal values or vary with model specifics, thereby corroborating or refuting the hypothesis."
+      ],
+      "scope": {
+        "domain": "theoretical physics / stochastic processes"
+      },
+      "qualifier": {
+        "temporal": "contemporary theoretical physics literature (circa 2000\u2013present)",
+        "geographic": "global research community (no geographic restriction)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "does not converge to a universal value but varies significantly",
+      "object": "even when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise even when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point]",
+        "[PATH:empirical] Systematic numerical simulations of the random-mapping model with multiplicative noise, varying the tail exponent of the noise distribution (e.g., log-normal with varying \u03c3, Pareto with varying \u03b1) and measuring the resulting power-law exponent of T(n) for a single critical point mapping function. \u2014 Directly tests the hypothesis by exploring whether the exponent remains constant or shifts with noise tail properties under controlled conditions.",
+        "[PATH:theoretical] Analytical derivation using renormalization group or large-deviation theory for the stochastic process defined by T_{n+1} = f(T_n) * \u03be_n, where f has a single critical point and \u03be_n is heavy-tailed, to determine if the exponent is universal or parameter-dependent. \u2014 Provides a rigorous mathematical foundation to confirm or refute the hypothesis by identifying the conditions under which universality breaks down.",
+        "[PATH:literature] Literature review of existing studies on multiplicative noise in random maps with critical points, focusing on papers that report power-law exponents in similar models (e.g., in econophysics or population dynamics) and comparing their results across different noise distributions. \u2014 Synthesizes prior evidence to assess whether the claimed variability has been observed or contradicted, and identifies gaps where new simulations or theory are needed."
+      ],
+      "scope": {
+        "domain": "theoretical physics / stochastic processes"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global / no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "is uniquely determined by the tail index of the noise distribution and is independent of the mapping function's critical exponent or shape near the critical point",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point, and finite-size effects are negligible",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point, and finite-size effects are negligible]",
+        "[PATH:empirical] Systematic simulation study varying the tail index of the noise distribution (e.g., Pareto with different shape parameters) while keeping the mapping function fixed (e.g., a simple quadratic map near its critical point) and measuring the resulting power-law exponent of T(n) under multiplicative noise with finite-size corrections applied. \u2014 Directly tests whether the exponent is uniquely determined by the tail index and independent of the mapping function. If the exponent varies with the mapping function for a fixed tail index, the hypothesis is refuted.",
+        "[PATH:theoretical] Analytical derivation using extreme value theory and renewal theory for random multiplicative processes, focusing on the asymptotic behavior of T(n) when the noise has heavy tails and the mapping has a single critical point. \u2014 Provides a mathematical foundation to confirm or refute the claimed independence. If the derivation shows dependence on the mapping function's critical exponent, the hypothesis is contradicted.",
+        "[PATH:literature] Literature review of published results on random-mapping models and multiplicative noise, particularly those studying the role of the mapping function's shape (e.g., logistic map, tent map) on the scaling of T(n) under heavy-tailed noise. \u2014 Surveys existing empirical and theoretical work to see if any prior studies have already demonstrated dependence on the mapping function, which would weaken the hypothesis, or if they support its independence."
+      ],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "simulation runs with finite-size corrections applied and noise samples drawn from heavy-tailed distributions",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "is solely determined by the tail index of the noise distribution",
+      "object": "even when the noise distribution has heavy tails and the mapping function contains a single critical point",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise even when the noise distribution has heavy tails and the mapping function contains a single critical point]",
+        "[PATH:empirical] Systematic simulation study varying the tail index of the noise distribution (e.g., Pareto-distributed multiplicative noise with tail index \u03b1 \u2208 (1,3)) and measuring the resulting power-law exponent of T(n) in a random-mapping model with a single critical point, under stationary asymptotic conditions \u2014 Directly tests whether changes in the noise tail index produce corresponding changes in the power-law exponent, or whether the exponent remains invariant, thus confirming or refuting the hypothesis.",
+        "[PATH:theoretical] Analytical derivation using extreme value theory and renormalization group methods for random multiplicative processes with a single critical point, focusing on the relationship between the noise tail index and the asymptotic power-law exponent \u2014 Provides a mathematical proof or counterexample to the claim that the exponent is solely determined by the tail index, independent of other details of the mapping function.",
+        "[PATH:literature] Literature review of prior results on multiplicative chaos, random energy models, and heuristic random-mapping systems (e.g., works by Derrida, Krug, or Fisher) that examine the universality of power-law exponents under heavy-tailed noise \u2014 Existing theoretical and numerical studies may already contain evidence or counterexamples regarding the sole dependence on the noise tail index, helping to contextualize and evaluate the disputed hypothesis without new simulations."
+      ],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "under stationary noise conditions in the asymptotic limit",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "does not depend on additional details of the mapping function (e.g., the critical exponent or the shape of the map near the critical point) beyond the tail index",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise does not depend on additional details of the mapping function (e.g., the critical exponent or the shape of the map near the critical point) beyond the tail index when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point in domain 'computational simulations / sensitivity analysis']"
+      ],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s",
+        "geographic": "global research community"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "depends on additional details of the mapping function (e.g., the critical exponent or the shape of the map near the critical point) beyond the tail index",
+      "object": "when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point, especially under finite-size effects or non-universal corrections",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise depends on additional details of the mapping function (e.g., the critical exponent or the shape of the map near the critical point) beyond the tail index when the noise distribution has heavy tails (e.g., log-normal or power-law tails) and the mapping function contains a single critical point, especially under finite-size effects or non-universal corrections in domain 'computational simulations / sensitivity analysis']"
+      ],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {
+        "temporal": "since the early 2010s, when heavy-tailed noise and finite-size scaling analyses became standard in computational complexity simulations",
+        "geographic": "global, primarily in research groups specializing in statistical physics of computation and algorithmic complexity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "is fully determined by the tail index of the noise distribution and is independent of the mapping function's critical exponent or shape near the critical point",
+      "object": "when the noise distribution has heavy tails and the mapping function contains a single critical point, even in the presence of finite-size effects",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "the power-law exponent in heuristic random-mapping models of T(n) under multiplicative noise",
+      "predicate": "is determined solely by the tail index of the noise distribution",
+      "object": "even when the noise distribution has heavy tails and the mapping function contains a single critical point",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "computational simulations / sensitivity analysis"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "semantic_duplication_rate_mean": 0.4168,
+  "novel_claims_mean": 2.11,
+  "total_claims_final": 11,
+  "run_timestamp": "2026-05-09T06:01:27.011029+00:00",
+  "code_hash": "96bb79389b3640b63fbf1122314f4c0d6ab1f57a",
+  "model_versions": {
+    "builder": "deepseek-chat",
+    "falsifier": "openai/gpt-4o"
+  },
+  "phase_b_variant": "premature_review",
+  "phase_b_synthesis": "While heuristic random-mapping models with multiplicative noise are proposed to study T(n), there is an unresolved theoretical debate over whether the resulting power-law exponent is universally determined by the noise's tail index or depends on local mapping details; crucially, this stochastic abstraction currently lacks grounding in the deterministic modular dynamics (cycles, invariants) of the specific T(n) sequence requested.",
+  "phase_b_meta": "contested",
+  "phase_b_graph_hash": "685d9de78326ff822964683496bcaf335fc2db2edf3f0ed51ed027208107192a",
+  "phase_b_elapsed": 21.0,
+  "phase_b_parse_error": false
+}

@@ -1,0 +1,346 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The function T(n) defined by the given piecewise rules",
+      "predicate": "has exactly one nontrivial cycle, and that cycle is the 1-4-2 loop",
+      "object": "the uniqueness and identity of the sole nontrivial cycle",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) defined by the given piecewise rules the uniqueness and identity of the sole nontrivial cycle]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While extensive computational evidence up to large n supports the 1-4-2 cycle as the only nontrivial cycle, no proof exists that other cycles cannot occur for larger unsearched numbers, and some heuristic arguments suggest the possibility of additional cycles under slight variations of the piecewise rules."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Extensive computational verification of T(n) up to n = 2^68",
+      "predicate": "confirms that the only nontrivial cycle observed is the 1-4-2 loop",
+      "object": "the empirical uniqueness of the 1-4-2 cycle within the searched range",
+      "status": "disputed",
+      "confidence": 0.92,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: Extensive computational verification of T(n) up to n = 2^68 the empirical uniqueness of the 1-4-2 cycle within the searched range]"
+      ],
+      "scope": {
+        "domain": "computational number theory, finite search"
+      },
+      "qualifier": {
+        "method": "exhaustive simulation up to 2^68, no counterexample found"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Heuristic random-mapping models of T(n)",
+      "predicate": "suggest that for sufficiently large n, the expected number of nontrivial cycles could be greater than one under slight variations of the piecewise rules",
+      "object": "the possibility of additional cycles beyond the 1-4-2 loop",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Heuristic random-mapping models of T(n) the possibility of additional cycles beyond the 1-4-2 loop]"
+      ],
+      "scope": {
+        "domain": "heuristic analysis, probabilistic models"
+      },
+      "qualifier": {
+        "tension": "These heuristics rely on assumptions that may not hold for the exact deterministic function T(n), but they indicate a non-zero probability of undiscovered cycles."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The function T(n) with the given piecewise rules",
+      "predicate": "is provably cycle-free for all n in certain residue classes due to modular constraints, but those constraints do not rule out cycles in other classes",
+      "object": "a partial proof of cycle absence that leaves open the possibility of cycles in unexamined residue classes",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The function T(n) with the given piecewise rules a partial proof of cycle absence that leaves open the possibility of cycles in unexamined residue classes]"
+      ],
+      "scope": {
+        "domain": "modular arithmetic, partial proof"
+      },
+      "qualifier": {
+        "friction": "While this partial result increases confidence in the 1-4-2 loop being unique overall, it also highlights that the proof is incomplete, creating epistemic friction with the computational evidence."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Heuristic random-mapping models of T(n)",
+      "predicate": "predict that for sufficiently large n, the expected number of nontrivial cycles is exactly zero unless the mapping is deliberately biased to preserve parity constraints",
+      "object": "the impossibility of additional nontrivial cycles under any unbiased random assignment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Heuristic random-mapping models of T(n) the impossibility of additional nontrivial cycles under any unbiased random assignment]",
+        "[PATH:empirical] Large-scale computational simulations of random mappings with n up to 10^8, systematically counting nontrivial cycles and comparing distributions to theoretical predictions under unbiased assignments. \u2014 Directly tests the hypothesis by measuring expected cycle counts across many random trials, revealing whether unbiased random mappings ever produce nontrivial cycles for large n.",
+        "[PATH:theoretical] Analytical derivation of the expected number of cycles in random mappings using combinatorial methods (e.g., Flajolet & Odlyzko, 'Random Mapping Statistics'), focusing on the limit as n \u2192 \u221e. \u2014 Provides a rigorous mathematical foundation to confirm or refute whether unbiased random assignments can yield nonzero expected nontrivial cycles, independent of simulation artifacts.",
+        "[PATH:literature] Review of existing literature on cycle structure in random mappings, particularly studies addressing parity constraints and biased mappings (e.g., work by Harris, Bollob\u00e1s, or Pittel). \u2014 Contextualizes the hypothesis within known results, clarifying whether the predicted zero expectation is consistent with established theorems or requires revision."
+      ],
+      "scope": {
+        "domain": "heuristic analysis, probabilistic models"
+      },
+      "qualifier": {
+        "temporal": "for sufficiently large n, under current heuristic analysis and probabilistic modeling assumptions",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Exact deterministic models of T(n)",
+      "predicate": "prove that for any n, the number of nontrivial cycles is exactly one",
+      "object": "the impossibility of additional cycles beyond the 1-4-2 loop",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Exact deterministic models of T(n) the impossibility of additional cycles beyond the 1-4-2 loop]",
+        "[PATH:empirical] Exhaustive computational verification of the Collatz conjecture for all n up to 2^68 (e.g., via distributed computing projects like BOINC) \u2014 If no counterexample cycle is found up to an extremely high bound, it would strongly support the hypothesis that only the 1-4-2 loop exists, though it cannot prove it for all n.",
+        "[PATH:theoretical] Theoretical analysis of linear forms in logarithms and Baker's theorem applied to the Collatz-type functional equations \u2014 This approach could bound the possible length and values of any nontrivial cycle, potentially proving that no such cycle can exist beyond the trivial one, thereby confirming the hypothesis.",
+        "[PATH:literature] Study of generalized Collatz functions (e.g., 3n+1 variants) and their known cycle structures in the literature (e.g., work by Lagarias, Terras, or Belaga) \u2014 Reviewing known results on related maps can reveal whether analogous constraints rule out additional cycles, providing indirect theoretical evidence for or against the uniqueness of the 1-4-2 loop."
+      ],
+      "scope": {
+        "domain": "deterministic analysis, mathematical proofs"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Heuristic random-mapping models of T(n)",
+      "predicate": "suggest that for sufficiently large n, the expected number of nontrivial cycles could be greater than one under slight variations of the piecewise rules",
+      "object": "the possibility of additional cycles beyond the 1-4-2 loop",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Heuristic random-mapping models of T(n) suggest that for sufficiently large n, the expected number of nontrivial cycles could be greater than one under slight variations of the piecewise rules the possibility of additional cycles beyond the 1-4-2 loop in domain 'heuristic analysis, probabilistic models']"
+      ],
+      "scope": {
+        "domain": "heuristic analysis, probabilistic models"
+      },
+      "qualifier": {
+        "temporal": "for sufficiently large n (asymptotic limit, n \u2192 \u221e)",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Deterministic analysis of T(n) and computational evidence",
+      "predicate": "indicate that the heuristic assumptions underlying random-mapping models do not apply, and that no additional cycles beyond the 1-4-2 loop exist",
+      "object": "the conclusion that the 1-4-2 loop is the only cycle",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Deterministic analysis of T(n) and computational evidence indicate that the heuristic assumptions underlying random-mapping models do not apply, and that no additional cycles beyond the 1-4-2 loop exist the conclusion that the 1-4-2 loop is the only cycle in domain 'heuristic analysis, probabilistic models']"
+      ],
+      "scope": {
+        "domain": "heuristic analysis, probabilistic models"
+      },
+      "qualifier": {
+        "temporal": "as of the latest computational verification up to 2^68",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Heuristic random-mapping models of T(n)",
+      "predicate": "predict that if the piecewise rules are perturbed by a multiplicative noise term of amplitude epsilon > 0, then for sufficiently large n the expected number of nontrivial cycles diverges to infinity",
+      "object": "the existence of infinitely many disjoint cycles in the perturbed dynamics",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "probabilistic perturbation analysis, random dynamical systems"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Heuristic random-mapping models of T(n)",
+      "predicate": "fail to provide conclusive evidence that any nontrivial cycles exist beyond the 1-4-2 loop",
+      "object": "the necessity of deterministic validation for claims of additional cycles",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "deterministic validation, rigorous mathematical proof"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C009",
+    "T9[falsifier] on C003 -> C010",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C009",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 26,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C010"
+    ]
+  }
+}

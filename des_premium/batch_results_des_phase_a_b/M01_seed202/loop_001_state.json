@@ -1,0 +1,493 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "diverges to infinity for a set of starting integers with positive natural density",
+      "object": "the set of starting integers for which the orbit diverges to infinity",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit diverges to infinity]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "diverges to infinity for a set of starting integers with positive natural density, under the assumption of uniform random behavior modulo 3",
+      "object": "the set of starting integers for which the orbit diverges to infinity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit diverges to infinity]"
+      ],
+      "scope": {
+        "domain": "heuristic probabilistic reasoning"
+      },
+      "qualifier": {
+        "temporal": "under the assumption of uniform random behavior modulo 3"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "may have a hidden invariant or mod constraint that forces almost all orbits into a bounded set, contradicting the positive density divergence claim",
+      "object": "the set of starting integers for which the orbit remains bounded",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit remains bounded]"
+      ],
+      "scope": {
+        "domain": "modular analysis and invariant theory"
+      },
+      "qualifier": {
+        "temporal": "future verification pending further analysis",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "diverges to infinity for a set of starting integers with zero natural density, because the map\u2019s growth is balanced by frequent divisions by 3",
+      "object": "the set of starting integers for which the orbit diverges to infinity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit diverges to infinity]"
+      ],
+      "scope": {
+        "domain": "asymptotic density and average-case analysis"
+      },
+      "qualifier": {
+        "temporal": "as of current computational simulations and heuristic analysis",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "has a positive proportion of starting integers whose orbits converge to a finite cycle, specifically the cycle 2 \u2192 3 \u2192 1 \u2192 6 \u2192 2, under the assumption of uniform random behavior modulo 3",
+      "object": "the set of starting integers for which the orbit converges to the cycle 2 \u2192 3 \u2192 1 \u2192 6 \u2192 2",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit converges to the cycle 2 \u2192 3 \u2192 1 \u2192 6 \u2192 2]",
+        "[PATH:empirical] Large-scale computational sampling of starting integers up to 10^12, tracking convergence to the cycle 2\u21923\u21921\u21926\u21922 under T \u2014 Simulating orbits for a massive range of starting values (e.g., up to 10^12) can provide statistical evidence on the proportion of integers that converge to the specified cycle, allowing comparison with the heuristic prediction of a positive proportion under uniform random behavior modulo 3.",
+        "[PATH:theoretical] Rigorous probabilistic analysis using Markov chain models on residue classes modulo 3^k, updating the heuristic to account for dependencies and potential bias \u2014 Developing a formal probabilistic model that tracks the distribution of residues under iteration of T can refine the heuristic assumption of uniform randomness, potentially confirming or refuting the predicted positive proportion of convergent starting integers.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps, specifically those with multiple branches and known cycles, such as the work of Lagarias or Matthews on generalized Collatz problems \u2014 Examining existing theoretical and empirical studies on similar piecewise linear maps may reveal whether positive proportions of convergent orbits are typical or exceptional, providing context and potential proof techniques for the specific cycle in question."
+      ],
+      "scope": {
+        "domain": "heuristic probabilistic reasoning"
+      },
+      "qualifier": {
+        "temporal": "under current heuristic probabilistic models",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "converges to a bounded set for a set of starting integers with positive natural density, under the assumption of uniform random behavior modulo 3",
+      "object": "the set of starting integers for which the orbit converges to a bounded set",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit converges to a bounded set]",
+        "[PATH:empirical] Large-scale computational experiment: simulate orbits for all starting integers up to, say, 10^9, record the proportion that appear to enter a bounded cycle (e.g., cycle detection up to a large iteration limit), and analyze density as a function of starting range. \u2014 Direct simulation can estimate the natural density of integers that converge to a bounded set, testing the heuristic prediction of positive density under uniform random modulo behavior.",
+        "[PATH:theoretical] Theoretical analysis of the Markov chain induced by the map T under the uniform random modulo assumption: compute the stationary distribution of the process on residue classes and derive the expected drift or escape probability to bound the set of converging starting values. \u2014 Rigorously modeling the heuristic as a random process can confirm whether the predicted positive density is mathematically consistent, or reveal contradictions that would refute the hypothesis.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps, particularly those with multiple branches and rational multipliers, e.g., work by Lagarias, Terras, or Allouche on generalized Collatz problems and probabilistic heuristics. \u2014 Existing theoretical frameworks and counterexamples for similar maps may provide insights into whether positive density is plausible or likely false, thereby contextualizing the heuristic claim."
+      ],
+      "scope": {
+        "domain": "heuristic probabilistic reasoning"
+      },
+      "qualifier": {
+        "temporal": "under the assumption of uniform random behavior modulo 3, which is a heuristic not proven to hold for all time",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "has a mod 9 invariant that forces every orbit starting from any integer not congruent to a specific residue class modulo 9 to eventually enter the cycle {1, 2, 4}",
+      "object": "the set of starting integers for which the orbit remains bounded",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit remains bounded]",
+        "[PATH:empirical] Systematic computational search over a large range of starting integers (e.g., up to 10^6) to record orbits and check mod 9 residue classes of bounded vs. unbounded trajectories \u2014 Direct numerical evidence can confirm whether the mod 9 invariant correctly predicts boundedness for all tested integers, or reveal counterexamples that refute the hypothesis.",
+        "[PATH:theoretical] Theoretical derivation of a Lyapunov function or a conserved quantity modulo 9 using algebraic methods, analyzing the map's action on residue classes \u2014 A rigorous invariant proof would confirm the hypothesis; failure to find such an invariant or detection of a counterexample in the modular arithmetic would refute it.",
+        "[PATH:literature] Review of existing literature on Collatz-like maps with piecewise linear rules, particularly those with mod 3 or mod 9 invariants (e.g., works by Lagarias, Chamberland, or Monks) \u2014 Prior results may contain analogous invariants or known behavior patterns that either support the existence of such a mod 9 invariant or show it is unlikely."
+      ],
+      "scope": {
+        "domain": "modular analysis and invariant theory"
+      },
+      "qualifier": {
+        "temporal": "as of the current state of research in dynamical systems",
+        "geographic": "within the mathematical community studying discrete dynamical systems"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "exhibits chaotic behavior with positive density of unbounded orbits, supporting the positive density divergence claim",
+      "object": "the set of starting integers for which the orbit becomes unbounded",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit becomes unbounded]",
+        "[PATH:empirical] Large-scale computational search for divergent orbits under the given Collatz-like map, extending to starting integers up to 10^12 or higher, with statistical analysis of orbit lengths and maximum values. \u2014 Direct simulation can detect unbounded orbits or establish bounds on their density, providing empirical confirmation or refutation of the positive density claim.",
+        "[PATH:theoretical] Rigorous analysis using ergodic theory and invariant measures on the 3-adic integers, modeling the map as a measure-preserving transformation and computing expected escape rates. \u2014 If the map is shown to be ergodic with a positive measure of points having unbounded orbits, this would theoretically support the hypothesis; otherwise, a zero-measure result would refute it.",
+        "[PATH:literature] Literature review comparing this map's behavior to known Collatz-type maps with proven divergence sets (e.g., the classic Collatz conjecture, the '3x+1' problem variants, or the '5x+1' problem), focusing on structural similarities and differences. \u2014 Analogous results for related maps can indicate whether positive density of divergent orbits is plausible or unlikely, guiding theoretical and computational efforts."
+      ],
+      "scope": {
+        "domain": "dynamical systems and chaos theory"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "possesses a hidden invariant or mod constraint that forces almost all orbits into a bounded set",
+      "object": "the set of starting integers for which the orbit remains bounded",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 possesses a hidden invariant or mod constraint that forces almost all orbits into a bounded set the set of starting integers for which the orbit remains bounded in domain 'modular analysis and invariant theory']"
+      ],
+      "scope": {
+        "domain": "modular analysis and invariant theory"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "does not possess any hidden invariant or mod constraint that forces almost all orbits into a bounded set; instead, a positive density of starting integers diverge",
+      "object": "the set of starting integers for which the orbit remains bounded",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 does not possess any hidden invariant or mod constraint that forces almost all orbits into a bounded set; instead, a positive density of starting integers diverge the set of starting integers for which the orbit remains bounded in domain 'modular analysis and invariant theory']"
+      ],
+      "scope": {
+        "domain": "modular analysis and invariant theory"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "has a positive proportion of starting integers whose orbits diverge to infinity, because the map\u2019s division by 3 occurs too infrequently to counteract the exponential growth from the other branches",
+      "object": "the set of starting integers for which the orbit diverges to infinity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3 the set of starting integers for which the orbit diverges to infinity]",
+        "[PATH:theoretical] Rigorous probabilistic modeling of the map's dynamics using a Markov chain or branching process that captures the frequencies of each residue class mod 3, and computing the expected growth rate of iterates to determine if it exceeds 1 almost surely. \u2014 The hypothesis hinges on the balance between division by 3 and multiplication by 4 or 2. A theoretical analysis of the expected multiplicative factor per step, conditional on residue classes, can confirm whether the map is expansive on average, which would support divergence for a positive proportion of starting integers.",
+        "[PATH:empirical] Large-scale computational simulation of the map for starting integers up to, say, 10^9, tracking the proportion that exceed a high threshold (e.g., 10^12) without looping, and analyzing the empirical density of divergent orbits as a function of starting value size. \u2014 Direct numerical evidence can estimate the asymptotic density of divergent orbits. If a stable positive proportion is observed to grow without bound, it would corroborate the hypothesis; if all tested numbers eventually enter cycles, it would refute it.",
+        "[PATH:literature] Literature review of analogous Collatz-type maps with three branches (e.g., the '3x+1' problem and its generalizations, such as the '5x+1' map) to identify known conditions under which a map has a positive measure of divergent orbits, and to compare the growth rates and ergodic properties. \u2014 Existing results on similar piecewise linear maps can provide theoretical benchmarks. For instance, maps where the average multiplier exceeds 1 often have divergent trajectories for almost all starting integers; this would contextualize the hypothesis and suggest whether the proposed map fits such a classification."
+      ],
+      "scope": {
+        "domain": "asymptotic density and average-case analysis"
+      },
+      "qualifier": {
+        "temporal": "asymptotic limit as n \u2192 \u221e",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "converges to a cyclic or fixed-point behavior for a significant portion of starting integers, due to its structured reduction and transformation rules",
+      "object": "the set of starting integers for which the orbit converges",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "asymptotic behavior and dynamical systems"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "has a mod-9 invariant that restricts the set of unbounded orbits to a single residue class modulo 9, contradicting the positive density divergence claim",
+      "object": "the set of starting integers for which the orbit remains bounded",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modular analysis and invariant theory"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "The Collatz-like map T(n) defined by T(n)=n/3 for n\u22610 mod 3, T(n)=4n+2 for n\u22611 mod 3, and T(n)=2n-1 for n\u22612 mod 3",
+      "predicate": "follows a pattern of divergence for almost all initial values, demonstrating positive density and undermining the claim of bounded orbits",
+      "object": "the set of starting integers for which the orbit diverges",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "modular analysis and dynamical systems"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C011",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}
