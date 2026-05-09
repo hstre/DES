@@ -82,9 +82,15 @@ def serialize_claim_graph(loop_states: list[dict], final_state: dict | None) -> 
             contradictions.append(cid)
 
     # Aggregate T-transition counts from operation history
+    # Items may be strings like "T3 on C001" or dicts
     t_counts: dict[str, int] = {}
     for op in op_history:
-        op_type = op.get("type") or op.get("operator_id") or "unknown"
+        if isinstance(op, str):
+            op_type = op.split()[0] if op else "unknown"
+        elif isinstance(op, dict):
+            op_type = op.get("type") or op.get("operator_id") or "unknown"
+        else:
+            op_type = str(op)
         t_counts[op_type] = t_counts.get(op_type, 0) + 1
 
     stats = {
@@ -109,8 +115,16 @@ def serialize_claim_graph(loop_states: list[dict], final_state: dict | None) -> 
 
 
 def _summarise_history(history: list) -> list[str]:
-    """Compact history into operator names only."""
-    return [h.get("operator") or h.get("type") or str(h) for h in history[-5:]]
+    """Compact history into operator names only. Items may be strings or dicts."""
+    result = []
+    for h in history[-5:]:
+        if isinstance(h, str):
+            result.append(h)
+        elif isinstance(h, dict):
+            result.append(h.get("operator") or h.get("type") or str(h))
+        else:
+            result.append(str(h))
+    return result
 
 
 def _extract_spl_meta(state: dict) -> dict | None:
