@@ -48,4 +48,47 @@ Please think through this carefully step by step. Consider:
 3. The most defensible conclusion given available evidence
 
 Provide a structured analysis with your reasoning visible.
-"""
+
+# run_seed: {seed_n}"""
+
+
+# ── Phase B (Review) Configuration ───────────────────────────────────────────
+
+REVIEW_CONFIG = {
+    "reviewer_model":       "google/gemini-3.1-pro-preview",
+    "reviewer_provider":    "openrouter",
+    "reviewer_temperature": 0.2,
+    "reviewer_max_tokens":  4000,
+    "graph_serialization_format": "json",
+    "include_spl_metadata": True,
+    "note": "Phase B reviewer; gemini-3.1-pro-preview = non-reasoning-RL premium model.",
+}
+
+PHASE_B_VARIANTS = {
+    "LOOP_COMPLETE":            "standard_review",
+    "SEMANTIC_DUPLICATION":     "premature_review",
+    "MAX_LOOPS_REACHED":        "unsaturated_review",
+    "CONTRADICTION_UNRESOLVED": "contradiction_review",
+}
+
+# ── Judge Configuration ───────────────────────────────────────────────────────
+
+JUDGE_CONFIG = {
+    "judge_model":       "anthropic/claude-opus-4.7",
+    "judge_provider":    "openrouter",
+    "judge_temperature": 0.1,
+    "judge_max_tokens":  2000,
+    "note": "External judge; must not be same model as Reviewer.",
+}
+
+# ── COT Premium config (Phase B reviewer model used as single-shot CoT) ──────
+
+COT_PREMIUM_CONFIG = {
+    "builder_model":    "google/gemini-3.1-pro-preview",
+    "builder_provider": "openrouter",
+    "tier": "cot_premium_pb",
+    "note": "COT_PREMIUM condition: same reviewer model as Phase B, single-shot.",
+}
+
+# Pilot: same scope as 2x2 matrix
+PILOT_DOMAINS = ["M01", "N03"]

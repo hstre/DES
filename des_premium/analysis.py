@@ -219,3 +219,241 @@ def write_matrix_md(analysis: dict, out_path: Path) -> None:
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         f.write("\n".join(lines))
+
+
+# ── Phase A+B review-quality metrics (architecture-agnostic) ─────────────────
+
+RESULTS_BASE_PB = Path("des_premium")
+DIR_PHASE_A_ONLY = RESULTS_BASE_PB / "batch_results_phase_a_only"
+DIR_PHASE_A_B    = RESULTS_BASE_PB / "batch_results_des_phase_a_b"
+DIR_COT_PREMIUM  = RESULTS_BASE_PB / "batch_results_cot_premium_pb"
+
+
+def load_judge_scores(results_dir: Path, domains: list, seeds: list) -> list[dict]:
+    """Load judge_eval.json from all domain/seed directories."""
+    records = []
+    for domain_id in domains:
+        for seed_n in seeds:
+            run_dir  = results_dir / f"{domain_id}_seed{seed_n}"
+            judge_p  = run_dir / "judge_eval.json"
+            outcome_p = run_dir / "outcome.json"
+            if not judge_p.exists():
+                continue
+            with open(judge_p) as f:
+                je = json.load(f)
+            outcome = {}
+            if outcome_p.exists():
+                with open(outcome_p) as f:
+                    outcome = json.load(f)
+            scores = je.get("scores", {})
+            records.append({
+                "results_dir":           str(results_dir.name),
+                "domain_id":             domain_id,
+                "seed":                  seed_n,
+                "condition":             outcome.get("condition", str(results_dir.name)),
+                "phase_a_termination":   outcome.get("outcome"),
+                "synthesis_quality":     scores.get("synthesis_quality"),
+                "branch_preservation":   scores.get("branch_preservation"),
+                "gap_acknowledgment":    scores.get("gap_acknowledgment"),
+                "calibration":           scores.get("calibration"),
+                "false_proof_avoidance": scores.get("false_proof_avoidance"),
+                "judge_model":           je.get("judge_model"),
+                "judge_parse_error":     scores.get("parse_error", False),
+            })
+    return records
+
+
+def _mean_metric(records: list[dict], metric: str) -> float | None:
+    vals = [r[metric] for r in records if r.get(metric) is not None]
+    return round(mean(vals), 3) if vals else None
+
+
+def compute_phase_b_analysis(domains: list, seeds: list) -> dict:
+    """
+    Load judge scores from all three condition directories and compute
+    per-condition means and H1–H4 effect estimates.
+    """
+    a_only_records  = load_judge_scores(DIR_PHASE_A_ONLY, domains, seeds)
+    a_b_records     = load_judge_scores(DIR_PHASE_A_B,    domains, seeds)
+    cot_records     = load_judge_scores(DIR_COT_PREMIUM,  domains, seeds)
+
+    metrics = ["synthesis_quality", "branch_preservation", "gap_acknowledgment", "calibration"]
+
+    def cell_means(records: list[dict]) -> dict:
+        return {m: _mean_metric(records, m) for m in metrics}
+
+    cells = {
+        "DES_PHASE_A_ONLY": cell_means(a_only_records),
+        "DES_PHASE_A_B":    cell_means(a_b_records),
+        "COT_PREMIUM":      cell_means(cot_records),
+    }
+
+    # H1: Phase A+B > Phase A alone (synthesis_quality)
+    h1_delta = _safe_diff(
+        cells["DES_PHASE_A_B"]["synthesis_quality"],
+        cells["DES_PHASE_A_ONLY"]["synthesis_quality"],
+    )
+
+    # H2: Phase A+B >= COT_PREMIUM (synthesis_quality) and A+B > COT on branch_preservation
+    h2_sq_delta = _safe_diff(
+        cells["DES_PHASE_A_B"]["synthesis_quality"],
+        cells["COT_PREMIUM"]["synthesis_quality"],
+    )
+    h2_bp_delta = _safe_diff(
+        cells["DES_PHASE_A_B"]["branch_preservation"],
+        cells["COT_PREMIUM"]["branch_preservation"],
+    )
+
+    # H3: Phase B value-add by termination type
+    premature_terms = {"SEMANTIC_DUPLICATION", "MAX_LOOPS_REACHED"}
+    a_only_premature = [r for r in a_only_records if r.get("phase_a_termination") in premature_terms]
+    a_b_premature    = [r for r in a_b_records    if r.get("phase_a_termination") in premature_terms]
+    a_only_complete  = [r for r in a_only_records if r.get("phase_a_termination") == "LOOP_COMPLETE"]
+    a_b_complete     = [r for r in a_b_records    if r.get("phase_a_termination") == "LOOP_COMPLETE"]
+
+    h3_premature_delta = _safe_diff(
+        _mean_metric(a_b_premature,   "synthesis_quality"),
+        _mean_metric(a_only_premature, "synthesis_quality"),
+    )
+    h3_complete_delta = _safe_diff(
+        _mean_metric(a_b_complete,    "synthesis_quality"),
+        _mean_metric(a_only_complete,  "synthesis_quality"),
+    )
+
+    # False-proof avoidance (M01 only)
+    def fp_rate(records):
+        m01 = [r for r in records if r.get("domain_id") == "M01"
+               and r.get("false_proof_avoidance") is not None]
+        if not m01:
+            return None
+        return round(mean([r["false_proof_avoidance"] for r in m01]), 3)
+
+    fp_rates = {
+        "DES_PHASE_A_ONLY": fp_rate(a_only_records),
+        "DES_PHASE_A_B":    fp_rate(a_b_records),
+        "COT_PREMIUM":      fp_rate(cot_records),
+    }
+
+    return {
+        "cells":   cells,
+        "effects": {
+            "H1_phase_b_value_sq":            h1_delta,
+            "H2_sq_delta_vs_cot":             h2_sq_delta,
+            "H2_bp_delta_vs_cot":             h2_bp_delta,
+            "H3_premature_sq_delta":          h3_premature_delta,
+            "H3_complete_sq_delta":           h3_complete_delta,
+        },
+        "false_proof_rates_M01": fp_rates,
+        "n_records": {
+            "DES_PHASE_A_ONLY": len(a_only_records),
+            "DES_PHASE_A_B":    len(a_b_records),
+            "COT_PREMIUM":      len(cot_records),
+        },
+        "domains": domains,
+        "seeds":   seeds,
+    }
+
+
+def _safe_diff(a: float | None, b: float | None) -> float | None:
+    if a is None or b is None:
+        return None
+    return round(a - b, 3)
+
+
+def write_phase_b_summary_md(analysis: dict, out_path: Path) -> None:
+    cells   = analysis["cells"]
+    effects = analysis["effects"]
+    fp      = analysis["false_proof_rates_M01"]
+    n       = analysis["n_records"]
+
+    def fmt(v):
+        return str(v) if v is not None else "N/A"
+
+    metrics = ["synthesis_quality", "branch_preservation", "gap_acknowledgment", "calibration"]
+    metric_labels = {
+        "synthesis_quality":   "Synthesis quality (1–5)",
+        "branch_preservation": "Branch preservation (1–5)",
+        "gap_acknowledgment":  "Gap acknowledgment (1–5)",
+        "calibration":         "Calibration (1–5)",
+    }
+
+    rows = []
+    for m in metrics:
+        row = f"| {metric_labels[m]} "
+        for cond in ["DES_PHASE_A_ONLY", "DES_PHASE_A_B", "COT_PREMIUM"]:
+            row += f"| {fmt(cells[cond].get(m))} "
+        rows.append(row + "|")
+
+    lines = [
+        "# DES Phase A+B — Pilot Results Summary",
+        "",
+        f"Domains: {', '.join(analysis['domains'])} | "
+        f"Seeds: {', '.join(str(s) for s in analysis['seeds'])}",
+        "",
+        "## Judge scores (mean across domain/seed combinations)",
+        "",
+        f"| Metric | DES_PHASE_A_ONLY (n={n['DES_PHASE_A_ONLY']}) "
+        f"| DES_PHASE_A_B (n={n['DES_PHASE_A_B']}) "
+        f"| COT_PREMIUM (n={n['COT_PREMIUM']}) |",
+        "|---|---|---|---|",
+    ] + rows + [
+        f"| False-proof avoidance (M01) "
+        f"| {fmt(fp['DES_PHASE_A_ONLY'])} "
+        f"| {fmt(fp['DES_PHASE_A_B'])} "
+        f"| {fmt(fp['COT_PREMIUM'])} |",
+        "",
+        "## Hypothesis results",
+        "",
+        f"**H1** (Phase B value): Δsynthesis_quality(A+B − A_only) = {fmt(effects['H1_phase_b_value_sq'])}",
+        f"**H2** (vs CoT): Δsynthesis_quality(A+B − CoT) = {fmt(effects['H2_sq_delta_vs_cot'])} | "
+        f"Δbranch_preservation = {fmt(effects['H2_bp_delta_vs_cot'])}",
+        f"**H3** (termination effect): Δsq (premature) = {fmt(effects['H3_premature_sq_delta'])} | "
+        f"Δsq (LOOP_COMPLETE) = {fmt(effects['H3_complete_sq_delta'])}",
+        "",
+        "## Interpretation",
+        "",
+        _interpret_h1(effects["H1_phase_b_value_sq"]),
+        _interpret_h2(effects["H2_sq_delta_vs_cot"], effects["H2_bp_delta_vs_cot"]),
+        _interpret_h3(effects["H3_premature_sq_delta"], effects["H3_complete_sq_delta"]),
+    ]
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w") as f:
+        f.write("\n".join(lines))
+
+
+def _interpret_h1(delta: float | None) -> str:
+    if delta is None:
+        return "H1: INDETERMINATE (insufficient data)"
+    if delta > 0.3:
+        return f"H1: CONFIRMED — Phase B adds +{delta} synthesis quality over Phase A alone."
+    if delta > 0:
+        return f"H1: WEAK — Phase B adds +{delta} synthesis quality (small effect)."
+    return f"H1: REJECTED — Phase B does not improve synthesis quality ({delta:+.3f})."
+
+
+def _interpret_h2(sq: float | None, bp: float | None) -> str:
+    if sq is None or bp is None:
+        return "H2: INDETERMINATE (insufficient data)"
+    if sq >= -0.1 and bp > 0.3:
+        return (
+            f"H2: CONFIRMED — A+B matches CoT on synthesis quality ({sq:+.3f}) "
+            f"and exceeds it on branch preservation ({bp:+.3f})."
+        )
+    if sq < -0.5:
+        return f"H2: REJECTED — CoT outperforms A+B on synthesis quality by {-sq:.3f}."
+    return f"H2: MIXED — synthesis_quality Δ={sq:+.3f}, branch_preservation Δ={bp:+.3f}."
+
+
+def _interpret_h3(premature: float | None, complete: float | None) -> str:
+    if premature is None or complete is None:
+        return "H3: INDETERMINATE (insufficient termination-type data)"
+    if premature > complete + 0.3:
+        return (
+            f"H3: CONFIRMED — Phase B adds more for premature terminations "
+            f"(Δ={premature:+.3f}) than for LOOP_COMPLETE (Δ={complete:+.3f})."
+        )
+    return (
+        f"H3: NOT CONFIRMED — premature Δ={premature:+.3f} "
+        f"vs LOOP_COMPLETE Δ={complete:+.3f} (difference not substantial)."
+    )
