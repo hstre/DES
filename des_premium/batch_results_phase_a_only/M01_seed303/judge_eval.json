@@ -1,0 +1,26 @@
+{
+  "judge_model": "anthropic/claude-opus-4.7",
+  "prompt_hash": "df4253c964daeb5a46d27eae324a7c8b7b55bea72fee61f9565c9aa51e4db7c5",
+  "elapsed_seconds": 7.1,
+  "token_usage": {
+    "prompt_tokens": 2220,
+    "completion_tokens": 412,
+    "total_tokens": 2632
+  },
+  "scores": {
+    "synthesis_quality": 2,
+    "branch_preservation": 4,
+    "gap_acknowledgment": 2,
+    "calibration": 1,
+    "false_proof_avoidance": 1,
+    "rationale": {
+      "sq": "The output is a raw claim graph dump listing many contradictory claims without integration into a coherent bridging analysis. No synthesis is offered.",
+      "bp": "Multiple competing positions (single cycle, multiple cycles, divergence, mod-9 determined) are explicitly retained as separate claims, preserving tension well.",
+      "ga": "While disputes are flagged via 'disputed/hypothesis' tags, the output does not specify what evidence or computation would resolve them, nor articulate the open questions in substantive terms.",
+      "cal": "Confidence values are wildly inconsistent: directly contradictory claims (C002 single cycle vs C005 three cycles vs C006 multiple/divergent vs C008 single cycle independent of residue) all carry confidences 0.82-0.85. This is grossly miscalibrated.",
+      "fpa": "No claim of proof is made; claims are tagged as supported/disputed/hypothesis rather than proven."
+    },
+    "parse_error": false
+  },
+  "raw_content": "{\n  \"synthesis_quality\": 2,\n  \"branch_preservation\": 4,\n  \"gap_acknowledgment\": 2,\n  \"calibration\": 1,\n  \"false_proof_avoidance\": 1,\n  \"rationale\": {\n    \"sq\": \"The output is a raw claim graph dump listing many contradictory claims without integration into a coherent bridging analysis. No synthesis is offered.\",\n    \"bp\": \"Multiple competing positions (single cycle, multiple cycles, divergence, mod-9 determined) are explicitly retained as separate claims, preserving tension well.\",\n    \"ga\": \"While disputes are flagged via 'disputed/hypothesis' tags, the output does not specify what evidence or computation would resolve them, nor articulate the open questions in substantive terms.\",\n    \"cal\": \"Confidence values are wildly inconsistent: directly contradictory claims (C002 single cycle vs C005 three cycles vs C006 multiple/divergent vs C008 single cycle independent of residue) all carry confidences 0.82-0.85. This is grossly miscalibrated.\",\n    \"fpa\": \"No claim of proof is made; claims are tagged as supported/disputed/hypothesis rather than proven.\"\n  }\n}"
+}

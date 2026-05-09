@@ -1,0 +1,26 @@
+{
+  "judge_model": "anthropic/claude-opus-4.7",
+  "prompt_hash": "07685fe51c6aef6ed2942da6c5822f8e28a424232fb45de0eebc6cf9f56cafef",
+  "elapsed_seconds": 16.6,
+  "token_usage": {
+    "prompt_tokens": 1694,
+    "completion_tokens": 368,
+    "total_tokens": 2062
+  },
+  "scores": {
+    "synthesis_quality": 1,
+    "branch_preservation": 2,
+    "gap_acknowledgment": 1,
+    "calibration": 1,
+    "false_proof_avoidance": null,
+    "rationale": {
+      "sq": "The output is a raw claim graph dump with no integration; contradictory claims sit side-by-side without any bridging synthesis. Also entirely off-topic from the seed question about AGI.",
+      "bp": "Multiple contradictory positions are listed (outperforms vs. performs worse vs. similar), but they are not named or framed as distinct positions in tension—just enumerated with conflicting confidences.",
+      "ga": "No explicit identification of unresolved questions or what evidence would resolve them; one 'unknown' tag and one 'disputed' tag appear but without elaboration.",
+      "cal": "Confidence values are wildly miscalibrated: directly contradictory claims (e.g., C005 and C006) both carry 0.85 confidence as 'supported', which is logically incoherent.",
+      "fpa": "Not applicable."
+    },
+    "parse_error": false
+  },
+  "raw_content": "{\n  \"synthesis_quality\": 1,\n  \"branch_preservation\": 2,\n  \"gap_acknowledgment\": 1,\n  \"calibration\": 1,\n  \"false_proof_avoidance\": null,\n  \"rationale\": {\n    \"sq\": \"The output is a raw claim graph dump with no integration; contradictory claims sit side-by-side without any bridging synthesis. Also entirely off-topic from the seed question about AGI.\",\n    \"bp\": \"Multiple contradictory positions are listed (outperforms vs. performs worse vs. similar), but they are not named or framed as distinct positions in tension—just enumerated with conflicting confidences.\",\n    \"ga\": \"No explicit identification of unresolved questions or what evidence would resolve them; one 'unknown' tag and one 'disputed' tag appear but without elaboration.\",\n    \"cal\": \"Confidence values are wildly miscalibrated: directly contradictory claims (e.g., C005 and C006) both carry 0.85 confidence as 'supported', which is logically incoherent.\",\n    \"fpa\": \"Not applicable.\"\n  }\n}"
+}

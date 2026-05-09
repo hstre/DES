@@ -1,0 +1,26 @@
+{
+  "judge_model": "anthropic/claude-opus-4.7",
+  "prompt_hash": "c483adac76fbabf4917acc29ded131a04e14ea16cc7c63204b00888969de41cb",
+  "elapsed_seconds": 5.7,
+  "token_usage": {
+    "prompt_tokens": 1717,
+    "completion_tokens": 424,
+    "total_tokens": 2141
+  },
+  "scores": {
+    "synthesis_quality": 2,
+    "branch_preservation": 4,
+    "gap_acknowledgment": 2,
+    "calibration": 1,
+    "false_proof_avoidance": null,
+    "rationale": {
+      "sq": "The output is a raw claim graph dump with contradictory claims listed side by side and no integrating bridging claim or synthesis. It enumerates positions without reconciling them.",
+      "bp": "Multiple distinct positions (sufficient, insufficient, conditional on world models, conditional on meta-learning) are preserved verbatim, though many are near-duplicates rather than cleanly named branches.",
+      "ga": "Some claims (C013 unknown, C012/C014 disputed) implicitly mark uncertainty, but the output does not articulate what evidence would resolve the disagreements or name the gaps explicitly.",
+      "cal": "Directly contradictory claims (e.g., C002 sufficient at 0.82 and C005 insufficient at 0.90, both 'supported') indicate incoherent confidence assignment. B001 and B002 both at 0.9 for opposing claims is grossly miscalibrated.",
+      "fpa": "Not applicable; not an M01 mathematical proof domain."
+    },
+    "parse_error": false
+  },
+  "raw_content": "{\n  \"synthesis_quality\": 2,\n  \"branch_preservation\": 4,\n  \"gap_acknowledgment\": 2,\n  \"calibration\": 1,\n  \"false_proof_avoidance\": null,\n  \"rationale\": {\n    \"sq\": \"The output is a raw claim graph dump with contradictory claims listed side by side and no integrating bridging claim or synthesis. It enumerates positions without reconciling them.\",\n    \"bp\": \"Multiple distinct positions (sufficient, insufficient, conditional on world models, conditional on meta-learning) are preserved verbatim, though many are near-duplicates rather than cleanly named branches.\",\n    \"ga\": \"Some claims (C013 unknown, C012/C014 disputed) implicitly mark uncertainty, but the output does not articulate what evidence would resolve the disagreements or name the gaps explicitly.\",\n    \"cal\": \"Directly contradictory claims (e.g., C002 sufficient at 0.82 and C005 insufficient at 0.90, both 'supported') indicate incoherent confidence assignment. B001 and B002 both at 0.9 for opposing claims is grossly miscalibrated.\",\n    \"fpa\": \"Not applicable; not an M01 mathematical proof domain.\"\n  }\n}"
+}

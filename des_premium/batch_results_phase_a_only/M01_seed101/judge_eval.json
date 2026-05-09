@@ -1,0 +1,26 @@
+{
+  "judge_model": "anthropic/claude-opus-4.7",
+  "prompt_hash": "9b452dfbd2b6e96c77771c275344efe8866567d5cd2074a4fdc071b942f0ac77",
+  "elapsed_seconds": 6.2,
+  "token_usage": {
+    "prompt_tokens": 2246,
+    "completion_tokens": 468,
+    "total_tokens": 2714
+  },
+  "scores": {
+    "synthesis_quality": 2,
+    "branch_preservation": 4,
+    "gap_acknowledgment": 2,
+    "calibration": 1,
+    "false_proof_avoidance": 1,
+    "rationale": {
+      "sq": "The output is a list of claims with confidence scores but no integration. Contradictory claims (e.g., C005 asserting a length-3 cycle and C006 asserting no nontrivial cycle) sit side by side without reconciliation or bridging analysis.",
+      "bp": "Multiple distinct positions are preserved (only trivial cycle, nontrivial cycle exists, divergence for almost all, etc.), so tension is visible — though many are near-duplicates rather than genuinely distinct branches.",
+      "ga": "Some claims are marked 'disputed' or 'unknown', which weakly signals uncertainty, but the output does not explicitly identify what evidence would resolve gaps or articulate open questions.",
+      "cal": "Confidences are grossly miscalibrated: directly contradictory claims (C005 vs C006, C003 vs C007/C008) are all assigned ~0.85 confidence as 'supported'. This is internally inconsistent and cannot reflect proportionate evidence.",
+      "fpa": "No claim of proof is made; claims are framed as supported/disputed conjectures, so no false proof is asserted."
+    },
+    "parse_error": false
+  },
+  "raw_content": "{\n  \"synthesis_quality\": 2,\n  \"branch_preservation\": 4,\n  \"gap_acknowledgment\": 2,\n  \"calibration\": 1,\n  \"false_proof_avoidance\": 1,\n  \"rationale\": {\n    \"sq\": \"The output is a list of claims with confidence scores but no integration. Contradictory claims (e.g., C005 asserting a length-3 cycle and C006 asserting no nontrivial cycle) sit side by side without reconciliation or bridging analysis.\",\n    \"bp\": \"Multiple distinct positions are preserved (only trivial cycle, nontrivial cycle exists, divergence for almost all, etc.), so tension is visible — though many are near-duplicates rather than genuinely distinct branches.\",\n    \"ga\": \"Some claims are marked 'disputed' or 'unknown', which weakly signals uncertainty, but the output does not explicitly identify what evidence would resolve gaps or articulate open questions.\",\n    \"cal\": \"Confidences are grossly miscalibrated: directly contradictory claims (C005 vs C006, C003 vs C007/C008) are all assigned ~0.85 confidence as 'supported'. This is internally inconsistent and cannot reflect proportionate evidence.\",\n    \"fpa\": \"No claim of proof is made; claims are framed as supported/disputed conjectures, so no false proof is asserted.\"\n  }\n}"
+}

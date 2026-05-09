@@ -1,0 +1,26 @@
+{
+  "judge_model": "anthropic/claude-opus-4.7",
+  "prompt_hash": "0af8e9bdcc444580826a3d15295bc2eddc9fbcfc73f79a9c9a328d2e0211c517",
+  "elapsed_seconds": 6.5,
+  "token_usage": {
+    "prompt_tokens": 2438,
+    "completion_tokens": 493,
+    "total_tokens": 2931
+  },
+  "scores": {
+    "synthesis_quality": 2,
+    "branch_preservation": 3,
+    "gap_acknowledgment": 2,
+    "calibration": 1,
+    "false_proof_avoidance": 1,
+    "rationale": {
+      "sq": "The output is a raw claim graph dump with contradictory claims (e.g., C002 vs C006, B001 vs B002) listed side by side without integration or bridging synthesis.",
+      "bp": "Multiple competing positions are listed (supported/disputed), so distinct branches are nominally preserved, but they are not named or framed as coherent alternatives—just enumerated.",
+      "ga": "There is no explicit articulation of what is unresolved or what evidence would resolve it; 'disputed' and 'unknown' tags hint at gaps but don't specify them.",
+      "cal": "Confidence values are wildly miscalibrated: directly contradictory claims (B001 and B002) both at 0.9; C006 claims additional cycles exist up to 10^6 at 0.85 while C002 claims none up to 10^6 at 0.82. Also the trivial fixed point claim is wrong: T(0)=0 yes, but (1,6): T(1)=4+2=6, T(6)=2, not back to 1—so the asserted 2-cycle is incorrect, yet given high confidence.",
+      "fpa": "No claim of proving an open conjecture is made; claims are bounded by computational ranges or hedged."
+    },
+    "parse_error": false
+  },
+  "raw_content": "{\n  \"synthesis_quality\": 2,\n  \"branch_preservation\": 3,\n  \"gap_acknowledgment\": 2,\n  \"calibration\": 1,\n  \"false_proof_avoidance\": 1,\n  \"rationale\": {\n    \"sq\": \"The output is a raw claim graph dump with contradictory claims (e.g., C002 vs C006, B001 vs B002) listed side by side without integration or bridging synthesis.\",\n    \"bp\": \"Multiple competing positions are listed (supported/disputed), so distinct branches are nominally preserved, but they are not named or framed as coherent alternatives—just enumerated.\",\n    \"ga\": \"There is no explicit articulation of what is unresolved or what evidence would resolve it; 'disputed' and 'unknown' tags hint at gaps but don't specify them.\",\n    \"cal\": \"Confidence values are wildly miscalibrated: directly contradictory claims (B001 and B002) both at 0.9; C006 claims additional cycles exist up to 10^6 at 0.85 while C002 claims none up to 10^6 at 0.82. Also the trivial fixed point claim is wrong: T(0)=0 yes, but (1,6): T(1)=4+2=6, T(6)=2, not back to 1—so the asserted 2-cycle is incorrect, yet given high confidence.\",\n    \"fpa\": \"No claim of proving an open conjecture is made; claims are bounded by computational ranges or hedged.\"\n  }\n}"
+}
