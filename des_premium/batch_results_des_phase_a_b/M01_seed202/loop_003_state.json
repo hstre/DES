@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has all orbits eventually converge to exactly one cycle for all integers up to 10^9",
+      "object": "because the map's modular constraints force a deterministic contraction on average that prevents unbounded growth within that range",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because the map's modular constraints force a deterministic contraction on average that prevents unbounded growth within that range]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has all orbits converge to exactly one cycle for all integers up to 10^9",
+      "object": "because empirical computation shows no counterexample in that range",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because empirical computation shows no counterexample in that range]"
+      ],
+      "scope": {
+        "domain": "numerical verification up to 10^9"
+      },
+      "qualifier": {
+        "condition": "if the map is applied iteratively without overflow"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "may have some orbits that escape to infinity or enter a different cycle beyond 10^9",
+      "object": "because the heuristic average contraction is only approximate and could fail for larger numbers due to rare modular alignments",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because the heuristic average contraction is only approximate and could fail for larger numbers due to rare modular alignments]"
+      ],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {
+        "uncertainty": "the contraction argument does not guarantee global convergence"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has a provably bounded growth rate for all n due to the modular constraints",
+      "object": "because each step reduces the average value by a factor less than 1, preventing divergence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because each step reduces the average value by a factor less than 1, preventing divergence]"
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "condition": "if the map is applied in a deterministic sequence without external perturbations"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has a specific infinite family of starting values, parametrized by k, that diverge to infinity",
+      "object": "because for numbers of the form n = 3^m * (2^t - 1) with certain modular constraints, the map repeatedly avoids the n/3 reduction step and instead applies the growth steps (4n+2) or (2n-1) in a periodic pattern, leading to exponential growth",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because for numbers of the form n = 3^m * (2^t - 1) with certain modular constraints, the map repeatedly avoids the n/3 reduction step and instead applies the growth steps (4n+2) or (2n-1) in a periodic pattern, leading to exponential growth]",
+        "[PATH:empirical] High-precision computational search for starting values of the form n = 3^m * (2^t - 1) with varying m, t, and modular constraints, tracking orbit lengths and growth rates up to 10^12 or beyond, using arbitrary-precision arithmetic to detect divergence indicators such as consistent exponential increase over thousands of iterations. — Direct simulation can verify whether the claimed parametric family indeed avoids the n/3 step in a periodic pattern and exhibits unbounded growth, or whether it eventually hits a reduction step and converges, thus confirming or refuting the existence of divergent trajectories.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using linear algebra over the integers modulo powers of 3 and 2, constructing a symbolic dynamics model that characterizes the sequence of residue classes modulo 3 for iterates of the parametric family, to prove whether the avoidance pattern is periodic and leads to exponential growth. — A rigorous mathematical proof or disproof of the claimed periodic avoidance pattern would settle the hypothesis. This approach can determine if the map's behavior on the specified numbers is deterministic and unbounded, or if constraints force eventual reduction, thereby providing a definitive theoretical answer.",
+        "[PATH:literature] Literature review of known results on Collatz-like maps with multiple branches, especially those with a rational scaling factor (here n/3) and affine growth branches, searching for analogous divergence families or proofs of boundedness (e.g., via ergodic theory or transcendence methods) that could inform or contradict the proposed mechanism. — Existing studies on similar piecewise linear maps may contain theorems or counterexamples relevant to this specific map. Identifying prior work on maps with a division-by-3 step and linear growth branches could provide constraints on possible divergent families or offer proof techniques applicable to this hypothesis."
+      ],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {
+        "temporal": "for all times",
+        "geographic": "no geographic restriction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has no orbits that escape to infinity or enter a different cycle beyond 10^9",
+      "object": "because extensive computational evidence shows consistent convergence patterns and no known exceptions for large numbers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because extensive computational evidence shows consistent convergence patterns and no known exceptions for large numbers]",
+        "[PATH:empirical] Extend computational verification to 10^12 using optimized modular arithmetic and cycle detection algorithms — Current evidence only covers up to 10^9; extending the range significantly would either confirm the pattern or reveal counterexamples, strengthening or refuting the hypothesis.",
+        "[PATH:theoretical] Analyze the map's dynamics using linear algebra and ergodic theory to prove boundedness of all orbits — A rigorous proof that the map is eventually periodic for all integers would settle the hypothesis conclusively, independent of computational limits.",
+        "[PATH:literature] Search literature for known results on similar piecewise linear maps with modulus 3, e.g., works by Lagarias or convergence studies of generalized Collatz functions — Existing theoretical frameworks or counterexamples for related maps may directly apply or provide insights into the behavior of this specific transformation."
+      ],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "none"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "likely has all orbits eventually reach a fixed point or small cycle for all integers, including those beyond 10^9",
+      "object": "because the heuristic average contraction is robust and rare modular alignments cannot overcome the overall contraction trend",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 likely has all orbits eventually reach a fixed point or small cycle for all integers, including those beyond 10^9 because the heuristic average contraction is robust and rare modular alignments cannot overcome the overall contraction trend in domain 'integers beyond 10^9']"
+      ],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "may have some orbits that escape to infinity or enter a different cycle beyond 10^9",
+      "object": "because the heuristic average contraction is only approximate and could fail for larger numbers due to rare modular alignments",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 may have some orbits that escape to infinity or enter a different cycle beyond 10^9 because the heuristic average contraction is only approximate and could fail for larger numbers due to rare modular alignments in domain 'integers beyond 10^9']"
+      ],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {
+        "temporal": "present understanding",
+        "geographic": "not applicable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has a provably bounded growth rate for all n due to the modular constraints",
+      "object": "because each step reduces the average value by a factor less than 1, preventing divergence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because each step reduces the average value by a factor less than 1, preventing divergence]",
+        "[PATH:empirical] Conduct a systematic computational survey of the map's trajectories for all n up to, say, 10^9, recording the maximum value reached and the number of steps to enter a presumed cycle, then analyze the average multiplicative factor per step across residue classes. — This would directly test whether the average reduction factor is indeed less than 1 for all n, as claimed, and whether any outliers diverge or grow unboundedly, providing empirical confirmation or refutation of the bounded growth hypothesis.",
+        "[PATH:theoretical] Develop a rigorous probabilistic model assuming uniform distribution of residues modulo 3 under iteration, compute the expected logarithmic growth rate (Lyapunov exponent) from the transition weights (log(1/3) for class 0, log(4) for class 1, log(2) for class 2), and check if the weighted average is negative. — This would provide a theoretical foundation for the claim that the average value decreases per step, and could be extended to prove boundedness if the model is validated, or refuted if the exponent is positive or zero.",
+        "[PATH:literature] Search the literature for known results on piecewise linear maps with modular constraints, particularly Collatz-like maps studied by Lagarias, Terras, or others, and compare the specific transition rules to known examples that are proven to have bounded trajectories or to diverge. — Existing work on generalized Collatz problems may offer theorems or counterexamples that directly apply to this map, helping to classify its behavior and assess the plausibility of uniform residue distribution assumptions."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "condition": "if the map is applied in a deterministic sequence without external perturbations, and if the residue classes modulo 3 are uniformly distributed in the long run"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "does not have a provably bounded growth rate for all n",
+      "object": "because the transformations applied to certain sequences of numbers can result in growth patterns that are not strictly decreasing, allowing for potential divergence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 because the transformations applied to certain sequences of numbers can result in growth patterns that are not strictly decreasing, allowing for potential divergence]",
+        "[PATH:empirical] Systematic computational search for divergent trajectories up to large bounds (e.g., 10^9 or 10^12) using optimized simulation — If the map has a provably bounded growth rate, then all trajectories should eventually enter a finite cycle or decrease monotonically after some point. A large-scale empirical search can detect any candidate divergent sequence or unusually long growth, providing evidence for or against unbounded growth.",
+        "[PATH:theoretical] Analytic study of the map's dynamics using linear algebra and modular arithmetic to characterize invariant sets or potential Lyapunov exponents — Deriving conditions under which the map is contracting or expanding in the average sense (e.g., via expectation of log growth under uniform random residues) can yield a rigorous bound on growth rate or show the possibility of divergence, depending on the distribution of residues.",
+        "[PATH:literature] Literature review of known results on generalized Collatz maps, especially those with three branches and rational coefficients — Existing theorems (e.g., by Lagarias, Kurtz, Simon) on undecidability or boundedness for similar maps may apply or provide techniques to prove boundedness or divergence for this specific map, saving effort and contextualizing the hypothesis."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "temporal": "as of current mathematical knowledge",
+        "geographic": "universal"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has exactly one divergent orbit starting from some integer below 10^12, and all other orbits eventually enter the known small cycle",
+      "object": "because the rare modular alignments that cause sustained expansion occur only for numbers in a specific arithmetic progression that first appears below that bound",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "integers up to 10^12"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "converges to a cycle for all large integers",
+      "object": "because extensive simulations show no evidence of divergence beyond 10^9 and modular alignments are statistically unlikely to sustain growth indefinitely",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "integers beyond 10^9"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T5[falsifier] on C003 -> C006",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C009",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C010",
+      "C012"
+    ]
+  }
+}

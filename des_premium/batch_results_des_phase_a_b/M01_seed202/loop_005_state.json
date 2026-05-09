@@ -1,0 +1,426 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has at least one genuine divergent orbit",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "description": "It remains unresolved whether all orbits starting below 10^12 are eventually periodic, or whether a divergent (non-periodic) orbit exists in that range, given that exhaustive computational checks have not yet been performed and heuristic arguments yield conflicting predictions about the likelihood of escape."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has all orbits eventually periodic",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12]"
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "description": "Based on heuristic density arguments and the absence of any observed divergent behavior in sampled random starts up to 10^10, it is plausible that all orbits in this range are eventually periodic."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has at least one divergent orbit",
+      "object": "below 10^12",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12]"
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "description": "Heuristic stochastic models and analogies with other Collatz-type maps that exhibit escape to infinity suggest that a divergent orbit may exist, though exhaustive search has not been performed and the probability is low."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has all orbits eventually periodic",
+      "object": "below 10^12, assuming a specific heuristic bound on escape probability",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "speculation",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12, assuming a specific heuristic bound on escape probability]"
+      ],
+      "scope": {
+        "domain": "theoretical bound on escape probability"
+      },
+      "qualifier": {
+        "description": "Some analytic models predict that the probability of a random starting value escaping to infinity is exponentially small for numbers below 10^12, making the existence of a divergent orbit extremely unlikely, but these models rely on unproven independence assumptions."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has all orbits eventually periodic",
+      "object": "for all integers n ≥ 1",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 for all integers n ≥ 1]",
+        "[PATH:empirical] Extend exhaustive computational verification to significantly higher ranges (e.g., up to 10^18) using optimized algorithms and possibly distributed computing, looking for divergent or novel periodic orbits. — Current evidence only covers up to 10^12. A much larger empirical search can increase confidence that no divergent orbits exist, or may reveal counterexamples that refute the hypothesis.",
+        "[PATH:theoretical] Analyze the map using dynamical systems and number theory to prove that all orbits are bounded, perhaps by constructing a suitable Lyapunov function or invariant measure, or by relating it to known Collatz-type problems with proven periodicity. — A rigorous theoretical proof of boundedness or eventual periodicity would confirm the hypothesis; conversely, identifying a mechanism for growth (e.g., a subset of numbers where the map consistently increases) could refute it.",
+        "[PATH:literature] Search the literature for known results on similar piecewise linear maps with modulus 3, especially those with known divergent orbits or proven periodicity, and compare the structural properties. — Understanding analogous maps may reveal whether this map's structure inherently prevents divergence or, alternatively, suggests a hidden mechanism for unbounded growth, guiding further theoretical or empirical work."
+      ],
+      "scope": {
+        "domain": "all positive integers"
+      },
+      "qualifier": {
+        "description": "The absence of divergent orbits up to 10^12, combined with the map's structure, suggests that all orbits are eventually periodic for all n, not just below 10^12."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has at least one orbit that is not eventually periodic",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12]",
+        "[PATH:empirical] Exhaustive computational simulation up to 10^12 with rigorous cycle detection (e.g., using Floyd's algorithm or hash-based tracking) to search for any non-periodic orbit, including divergent trajectories or those entering a transient cycle beyond typical bounds. — Directly tests the hypothesis within the specified range; if no non-periodic orbit is found, it refutes the claim; if one is found, it confirms existence of a non-periodic orbit below 10^12.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using number theory and dynamical systems, such as studying the structure of orbits under the three residue classes mod 3, examining potential invariants (e.g., modulo 3^k or 2-adic valuations), and searching for known results on similar piecewise linear maps (e.g., Collatz variants). — Provides a mathematical foundation to determine whether the map can have non-periodic orbits (e.g., divergence to infinity or aperiodic cycles) independent of computational limits, potentially proving or disproving existence below 10^12.",
+        "[PATH:literature] Literature review of published results on Collatz-like maps, specifically those with three-branch definitions and known non-periodic behavior (e.g., the '3x+1' problem and its generalizations, or maps with linear branches like the '5x+1' problem). — Contextualizes this specific map within broader research; existing proofs or counterexamples for similar maps may suggest analogous behavior (e.g., if all such maps are conjectured to have only periodic orbits, this would refute the hypothesis)."
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global computational simulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has a divergent orbit",
+      "object": "starting from a number below 10^6",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 starting from a number below 10^6]",
+        "[PATH:empirical] Exhaustive computational verification of all starting numbers below 10^6, tracking orbits until either entering a known cycle or exceeding a large bound (e.g., 10^9) to identify potential divergence. — Direct simulation can confirm or refute the existence of a divergent orbit within the specified range, as the map's behavior is deterministic and computable for finite starting values.",
+        "[PATH:theoretical] Theoretical analysis of the map's dynamics using ergodic theory or probabilistic heuristics, such as studying the distribution of residues modulo powers of 3 and the expected growth rate of iterates. — If the map has a divergent orbit, it may exhibit systematic growth patterns; theoretical models can predict whether such divergence is plausible or impossible for numbers below 10^6.",
+        "[PATH:literature] Literature review of known Collatz-like maps and their divergent orbits, focusing on maps with piecewise linear rules and similar mod-3 structure, to identify analogous cases or proven constraints. — Existing results on similar maps (e.g., the original Collatz conjecture, 3x+1 variants) may provide proof techniques or counterexamples that apply to this map, helping to assess the likelihood of divergence."
+      ],
+      "scope": {
+        "domain": "computational range up to 10^6"
+      },
+      "qualifier": {
+        "temporal": "as of 2025"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has no divergent orbits",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 below 10^12]",
+        "[PATH:empirical] Extend computational verification beyond 10^12 using optimized algorithms (e.g., residue class sieving or GPU-based iteration) to search for divergent orbits up to, say, 10^15 or higher — Current evidence only covers up to 10^12; extending the range could reveal counterexamples or increase confidence in the absence of divergent orbits.",
+        "[PATH:theoretical] Analyze the map's dynamics through a probabilistic model, such as treating iterates as a random walk with transition probabilities derived from the residue classes modulo 3, and estimate the expected growth rate or probability of divergence — A probabilistic heuristic can indicate whether divergent orbits are likely or impossible, providing a theoretical basis to support or challenge the empirical findings.",
+        "[PATH:theoretical] Search for invariant structures (e.g., periodic cycles, conserved quantities, or Lyapunov functions) by applying number-theoretic or combinatorial methods to the map's definition, possibly relating it to known Collatz-like systems — If an invariant can be proven to bound iterates for all starting numbers, it would confirm no divergent orbits; conversely, identifying a potential growth mechanism could refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "temporal": "as of 2025"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has at least one divergent orbit",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 has at least one divergent orbit below 10^12 in domain 'computational range up to 10^12']"
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "temporal": "as of 2025",
+        "geographic": "global computational simulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "does not have any divergent orbit",
+      "object": "below 10^12",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3 does not have any divergent orbit below 10^12 in domain 'computational range up to 10^12']"
+      ],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {
+        "temporal": "as of 2023",
+        "geographic": "global computational experiments"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has a divergent orbit that starts below 10^12 and eventually enters a strictly increasing exponential pattern",
+      "object": "below 10^12",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "computational range up to 10^12, with trajectory analysis extended to 10^18"
+      },
+      "qualifier": {
+        "description": "If a divergent orbit exists, it must eventually avoid repeated returns to small values; the most plausible escape mechanism is a sequence of steps dominated by the 4n+2 and 2n-1 rules, leading to exponential growth with a characteristic multiplier. Searching for orbits that exhibit a sustained upward trend beyond 10^18 would confirm divergence."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "The Collatz-like map T(n) = n/3 for n≡0 mod 3, 4n+2 for n≡1 mod 3, 2n-1 for n≡2 mod 3",
+      "predicate": "has no divergent orbit",
+      "object": "below 10^12",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "computational range up to 10^12"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}
