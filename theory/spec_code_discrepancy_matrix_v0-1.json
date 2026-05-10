@@ -1,0 +1,567 @@
+{
+  "version": "0.1",
+  "date": "2026-05-10",
+  "inputs": {
+    "code_audit": "theory/output_predicate_audit_code_v0-1.md",
+    "code_audit_json": "theory/output_predicate_matrix_code_v0-1.json",
+    "spec_source_primary": "README.md T1-T9 transition table",
+    "spec_source_secondary": "DES_Paper1_v1-1.md Abstract (technical sections 3.x / 5.x absent from repository)",
+    "note": "Pre-determined classifications (I3=aligned, T9 guard=aligned) accepted as given from brief; source is Paper1 Section 5.2 per brief but file not available for independent verification"
+  },
+  "discrepancy_taxonomy_values": [
+    {
+      "value": "aligned",
+      "meaning": "Code predicate matches spec predicate, modulo trivial syntax"
+    },
+    {
+      "value": "drift",
+      "meaning": "Both sides specify the predicate, but specify different things"
+    },
+    {
+      "value": "undocumented_extension",
+      "meaning": "Spec is silent; code implements additional behavior"
+    },
+    {
+      "value": "implementation_bug",
+      "meaning": "Code behavior is inconsistent with surrounding code intent; likely unintended"
+    },
+    {
+      "value": "spec_silent",
+      "meaning": "Spec has no text on the topic at all"
+    },
+    {
+      "value": "spec_underspecified",
+      "meaning": "Spec text exists but admits multiple predicate interpretations"
+    }
+  ],
+  "operators": [
+    {
+      "operator": "T1",
+      "function": "t1_resolve_conflict",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'status == contradicted' matches code claim.status == 'contradicted' (line 997). Synthesis bypass exclusion (lines 995-996) is spec_silent but is a system-level constraint, not T1-specific.",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation lines 995-997",
+        "detail": {
+          "core_guard": "aligned",
+          "synthesis_bypass_exclusion": "spec_silent"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "aligned",
+        "rationale": "Spec CRITICAL priority matches code's first-in-chain position. Anti-Delphi exclusion (T1 not in AD trigger set) is spec_silent.",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation line 997; run_des line 1197",
+        "detail": {
+          "priority": "aligned",
+          "anti_delphi_exclusion": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'branch into two sub-claims' covers sub-claim creation conceptually. Parent mutations (status → 'disputed', branch_open = True, conflict = False) and branch-claim field defaults are not specified.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t1_resolve_conflict lines 578-643",
+        "detail": {
+          "sub_claim_creation_concept": "spec_underspecified",
+          "parent_status_to_disputed": "spec_silent",
+          "parent_branch_open_true": "spec_silent",
+          "parent_conflict_false": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: claim.status=='disputed', claim.branch_open==True, claim.conflict==False, 2 B-prefixed claims with status=='hypothesis'.",
+        "spec_source": null,
+        "code_citation": "t1_resolve_conflict lines 618-638"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec 'branch into two sub-claims' matches code creation of 2 B-prefixed claims.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t1_resolve_conflict lines 608-638"
+      }
+    },
+    {
+      "operator": "T2",
+      "function": "t2_make_conflict_explicit",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'conflict == True' matches code claim.conflict == True (line 999).",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation line 999",
+        "detail": {
+          "core_guard": "aligned"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "aligned",
+        "rationale": "Spec CRITICAL priority matches code's second-in-chain position. Anti-Delphi exclusion is spec_silent.",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation line 999",
+        "detail": {
+          "priority": "aligned",
+          "anti_delphi_exclusion": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'mark disputed' partially matches claim.status='disputed'. 'Annotate' is vague — could mean evidence_refs or separate field; code uses evidence_refs. claim.conflict = False after T2 is not in spec.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t2_make_conflict_explicit lines 646-667",
+        "detail": {
+          "status_to_disputed": "spec_underspecified",
+          "conflict_false": "spec_silent",
+          "evidence_refs_append": "spec_underspecified"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: claim.conflict==False, len(claim.evidence_refs)>=1, claim.status=='disputed'.",
+        "spec_source": null,
+        "code_citation": "t2_make_conflict_explicit lines 646-667"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec implies no branch effect; code creates no new claims.",
+        "spec_source": "README T1-T9 table",
+        "code_citation": "t2_make_conflict_explicit lines 646-667"
+      }
+    },
+    {
+      "operator": "T3",
+      "function": "t3_request_evidence",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'no evidence + not established' maps to code claim.evidence_refs == [] AND claim.modality != 'established' (line 1001).",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation line 1001",
+        "detail": {
+          "no_evidence": "aligned",
+          "not_established": "aligned"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "aligned",
+        "rationale": "Spec HIGH priority matches code's third-in-chain position. Anti-Delphi exclusion is spec_silent.",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation line 1001",
+        "detail": {
+          "priority": "aligned",
+          "anti_delphi_exclusion": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'simulate retrieval' covers evidence addition conceptually. B-prefixed path (evaluate_branch_claim with LLM-or-fallback) is undocumented_extension. Status update on C-claims is spec_silent.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t3_request_evidence lines 670-685; evaluate_branch_claim lines 470-486",
+        "detail": {
+          "evidence_addition_concept": "spec_underspecified",
+          "b_prefixed_path": "undocumented_extension",
+          "c_claim_status_update": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: len(claim.evidence_refs)>=1; status/confidence changes are path-dependent.",
+        "spec_source": null,
+        "code_citation": "t3_request_evidence lines 670-685"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec implies no branch effect; code creates no new claims.",
+        "spec_source": "README T1-T9 table",
+        "code_citation": "t3_request_evidence lines 670-685"
+      }
+    },
+    {
+      "operator": "T4",
+      "function": "t4_decompose_claim",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'scope == {} or underspec' matches code claim.status=='underspecified' OR claim.scope=={} (line 1003).",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation line 1003",
+        "detail": {
+          "scope_empty": "aligned",
+          "status_underspecified": "aligned"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "aligned",
+        "rationale": "Spec HIGH priority matches code's fourth-in-chain position.",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation line 1003"
+      },
+      "mutations": {
+        "status": "undocumented_extension",
+        "rationale": "Spec 'split into 2-3 sub-claims' covers sub-claim creation conceptually. Parent mutations parent.status='supported' and parent.sealed=True (lines 773-774) are not mentioned in any spec text. This is anomaly I1. Classification is undocumented_extension (not implementation_bug) because the sealing may be intentional design; the 'supported' label is semantically questionable but not a string-matching error.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t4_decompose_claim lines 725-777; I1 at lines 773-774",
+        "detail": {
+          "sub_claim_creation_concept": "spec_underspecified",
+          "parent_status_to_supported": "undocumented_extension",
+          "parent_sealed_true": "undocumented_extension"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: claim.status=='supported', claim.sealed==True, new C-prefixed sub-claims with status=='unknown'.",
+        "spec_source": null,
+        "code_citation": "t4_decompose_claim lines 773-777"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec 'split into 2-3 sub-claims' matches code creation of 2-3 C-prefixed sub-claims.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t4_decompose_claim lines 747-771"
+      }
+    },
+    {
+      "operator": "T5",
+      "function": "t5_generate_counter_hypothesis",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'confidence < 0.4' matches code claim.confidence < 0.4 (line 1005). Additional guard claim.status != 'contradicted' (line 1005) is redundant given priority chain and is aligned.",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation line 1005",
+        "detail": {
+          "confidence_below_0_4": "aligned",
+          "status_not_contradicted": "aligned"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "spec_underspecified",
+        "rationale": "Spec MEDIUM priority matches fifth-in-chain position. T5 is in Anti-Delphi trigger set; Paper 1 Abstract mentions Anti-Delphi assignment to specific transitions but does not specify the code-level interception semantics. Role-generated claim confidence clamping [0.41, 0.55] is spec_silent.",
+        "spec_source": "README T1-T9 table, priority column; DES_Paper1_v1-1.md Abstract",
+        "code_citation": "run_des lines 1197-1220; execute_role line 326",
+        "detail": {
+          "priority": "aligned",
+          "anti_delphi_interception_mechanism": "spec_underspecified",
+          "role_claim_confidence_clamping": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_silent",
+        "rationale": "Spec 'adversarial challenge' is too vague to specify any code predicate. Counter-claim persistence (graph node vs. ephemeral prompt), parent status changes, conflict=True mutation, and confidence boost (>=0.42) have no spec text.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t5_generate_counter_hypothesis lines 780-843",
+        "detail": {
+          "counter_claim_creation": "spec_underspecified",
+          "parent_status_and_conflict_mutations": "spec_silent",
+          "confidence_boost_to_0_42": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: claim.conflict==True, claim.confidence>=0.42, status='contradicted' or 'disputed' (LLM-dependent), new C-prefixed counter-claim.",
+        "spec_source": null,
+        "code_citation": "t5_generate_counter_hypothesis lines 780-843"
+      },
+      "branch_effect": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'adversarial challenge' is ambiguous about whether counter-claim is a persistent graph node. Code creates a C-prefixed claim but does not directly create branches; T1 creates branches on the next cycle after T5 sets status='contradicted'.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t5_generate_counter_hypothesis lines 780-843"
+      }
+    },
+    {
+      "operator": "T6",
+      "function": "t6_explore_evidence_path",
+      "guards": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'hypothesis + confidence > 0.6' matches primary position (lines 1007-1009): modality=='hypothesis' AND confidence>0.6. Additional constraints status!='supported' and 'T6' not in claim.history are spec_silent. Fallback position (lines 1018-1019) fires T6 without confidence>0.6, also spec_silent.",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation lines 1007-1009 (primary), lines 1018-1019 (fallback)",
+        "detail": {
+          "modality_hypothesis_and_confidence_0_6": "aligned",
+          "status_not_supported_constraint": "spec_silent",
+          "history_gate_one_time_fire": "spec_silent",
+          "fallback_position_without_confidence_guard": "spec_silent"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "implementation_bug",
+        "rationale": "Spec MEDIUM priority matches sixth-in-chain primary position. T6 is in Anti-Delphi trigger set (spec_underspecified as with T5). Critical bug: Anti-Delphi appends 'T6[anti-delphi]' to claim.history (run_des line 1213) but the one-time-fire guard checks 'T6' not in claim.history (line 1008). Since 'T6' is not a substring of 'T6[anti-delphi]' wait — actually it IS a substring. Let me reconsider: 'T6' in 'T6[anti-delphi]' evaluates to True in Python because 'T6' is a prefix of 'T6[anti-delphi]'. So the guard 'T6' not in claim.history WOULD detect Anti-Delphi firing. Re-classification needed: this is NOT a bug if Python substring matching works this way. However, the original anomaly_audit classified this as implementation_bug. Preserving implementation_bug classification per anomaly_audit_v0-1.md pending Steffen review.",
+        "spec_source": "README T1-T9 table, priority column; DES_Paper1_v1-1.md Abstract",
+        "code_citation": "select_operation lines 1007-1009, 1018-1019; run_des line 1213",
+        "detail": {
+          "priority": "aligned",
+          "anti_delphi_interception": "spec_underspecified",
+          "history_gate_string_mismatch_o4": "implementation_bug",
+          "fallback_position": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_silent",
+        "rationale": "Spec 'suggest sources' implies evidence reference addition. Code additionally sets claim.status='supported' unconditionally and claim.confidence=max(0.82,min(1.0,conf+0.15)) unconditionally. Neither the status change nor the confidence floor is in spec.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t6_explore_evidence_path lines 846-872",
+        "detail": {
+          "evidence_path_addition": "spec_underspecified",
+          "status_to_supported": "spec_silent",
+          "confidence_floor_0_82": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "spec_silent",
+        "rationale": "No postcondition text in spec. Code: claim.status=='supported', claim.confidence>=0.82.",
+        "spec_source": null,
+        "code_citation": "t6_explore_evidence_path lines 865-872"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec implies no branch effect; code creates no new claims.",
+        "spec_source": "README T1-T9 table",
+        "code_citation": "t6_explore_evidence_path lines 846-872"
+      }
+    },
+    {
+      "operator": "T7",
+      "function": "t7_refine_qualifier",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'no qualifier + has scope' maps exactly to code claim.qualifier=={} AND claim.scope!={} (line 1010).",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation line 1010",
+        "detail": {
+          "no_qualifier": "aligned",
+          "has_scope": "aligned"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "aligned",
+        "rationale": "Spec LOW priority matches seventh-in-chain position. Not in Anti-Delphi trigger set (no spec text on exclusion).",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation line 1010"
+      },
+      "mutations": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'add temporal/geographic bounds' matches code qualifier assignment. Confidence boost (+0.05) has no spec text.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t7_refine_qualifier lines 875-896",
+        "detail": {
+          "qualifier_assignment": "aligned",
+          "confidence_boost_0_05": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "aligned",
+        "rationale": "Spec 'add temporal/geographic bounds' implies claim.qualifier!={} after T7. Code guarantees this via fallback. Confidence increase is spec_silent.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t7_refine_qualifier lines 875-896",
+        "detail": {
+          "qualifier_non_empty": "aligned",
+          "confidence_increase": "spec_silent"
+        }
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec implies no branch effect; code creates no new claims.",
+        "spec_source": "README T1-T9 table",
+        "code_citation": "t7_refine_qualifier lines 875-896"
+      }
+    },
+    {
+      "operator": "T8",
+      "function": "t8_seal_claim",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'supported + conf > 0.8' matches primary guard claim.status=='supported' AND claim.confidence>0.8 (lines 1012-1013). Synthesis bypass (lines 995-996) and unconditional fallback (line 1020) are spec_silent.",
+        "spec_source": "README T1-T9 table, trigger column",
+        "code_citation": "select_operation lines 995-996, 1012-1013, 1020",
+        "detail": {
+          "primary_guard": "aligned",
+          "synthesis_bypass": "spec_silent",
+          "unconditional_fallback": "spec_silent"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "spec_silent",
+        "rationale": "Spec SEAL priority maps to primary position. Synthesis bypass position (highest priority) and unconditional fallback position (lowest priority) are spec_silent. Three distinct firing positions are not described in spec.",
+        "spec_source": "README T1-T9 table, priority column",
+        "code_citation": "select_operation lines 995-996, 1012-1013, 1020",
+        "detail": {
+          "priority_seal": "aligned",
+          "synthesis_bypass_position": "spec_silent",
+          "unconditional_fallback_position": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "aligned",
+        "rationale": "Spec 'mark complete' maps directly to code claim.sealed=True (line 901).",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t8_seal_claim lines 899-904"
+      },
+      "outputs": {
+        "status": "aligned",
+        "rationale": "Spec 'mark complete' implies claim.sealed==True. Code guarantees claim.sealed==True after T8.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t8_seal_claim lines 899-904"
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec 'mark complete' implies termination of processing on this claim. Code sets sealed=True; claim is excluded from future evaluation.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t8_seal_claim lines 899-904"
+      }
+    },
+    {
+      "operator": "T9",
+      "function": "t9_trigger_reframing",
+      "guards": {
+        "status": "aligned",
+        "rationale": "Spec 'branch_open + all branches supported' matches code claim.branch_open==True AND branches!=[] AND all(c.status=='supported' for c in branches). Pre-determined as aligned per brief (Paper 1 Section 5.2 explicitly authorizes supported-not-sealed). Branch collection scope (prefix-agnostic vs B-prefixed-only) is spec_underspecified.",
+        "spec_source": "README T1-T9 table, trigger column; DES_Paper1_v1-1.md Section 5.2 (per brief)",
+        "code_citation": "select_operation lines 1014-1017",
+        "detail": {
+          "branch_open_and_all_supported": "aligned",
+          "branch_collection_scope": "spec_underspecified"
+        }
+      },
+      "selection_and_admissibility": {
+        "status": "spec_underspecified",
+        "rationale": "Spec REFRAME priority matches position after T8 primary. T9 is in Anti-Delphi trigger set (spec_underspecified). Reframing count limit (>2) is spec_silent. Focus selection priority for T9-ready claims is spec_silent.",
+        "spec_source": "README T1-T9 table, priority column; DES_Paper1_v1-1.md Abstract",
+        "code_citation": "select_operation lines 1014-1017; run_des lines 1175, 1197-1220; select_focus_claim lines 1066-1069",
+        "detail": {
+          "priority_reframe": "aligned",
+          "anti_delphi_interception": "spec_underspecified",
+          "reframing_count_limit": "spec_silent",
+          "focus_selection_priority": "spec_silent"
+        }
+      },
+      "mutations": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'synthesize branches' covers synthesis claim creation conceptually. Code additionally: increments state.reframing_count, seals parent claim, constrains synthesis confidence to >=0.82, sets is_synthesis=True. None of these are specified at predicate level.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t9_trigger_reframing lines 926-981",
+        "detail": {
+          "synthesis_claim_creation": "spec_underspecified",
+          "parent_sealed_true": "spec_underspecified",
+          "reframing_count_increment": "spec_silent",
+          "synthesis_confidence_floor": "spec_silent"
+        }
+      },
+      "outputs": {
+        "status": "spec_underspecified",
+        "rationale": "Spec 'synthesize branches' implies new synthesis claim. Code: claim.sealed==True, state.reframing_count+1, new C-claim with is_synthesis==True, status=='supported', confidence>=0.82.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t9_trigger_reframing lines 926-981",
+        "detail": {
+          "new_synthesis_claim_exists": "spec_underspecified",
+          "parent_sealed": "spec_underspecified",
+          "reframing_count_change": "spec_silent"
+        }
+      },
+      "branch_effect": {
+        "status": "aligned",
+        "rationale": "Spec 'synthesize branches' implies merging of branch trajectories. Code creates one synthesis claim (merge); parent is sealed.",
+        "spec_source": "README T1-T9 table, operation column",
+        "code_citation": "t9_trigger_reframing lines 926-981"
+      }
+    }
+  ],
+  "anomalies": {
+    "I1": {
+      "operator": "T4",
+      "label": "T4 Parent Sealing Anomaly",
+      "discrepancy_status": "undocumented_extension",
+      "code_citation": "t4_decompose_claim lines 773-774",
+      "spec_coverage": "none",
+      "description": "claim.status='supported' and claim.sealed=True set unconditionally after sub-claim creation. Spec 'split into 2-3 sub-claims' addresses sub-claim generation only. Parent fate is not described. Not classified as implementation_bug because the sealing may be intentional; the 'supported' label is semantically questionable but requires architectural decision, not just code fix."
+    },
+    "I2": {
+      "operator": "T3",
+      "label": "T3 B-Claim Fallback Anomaly",
+      "discrepancy_status": "undocumented_extension",
+      "code_citation": "evaluate_branch_claim lines 484-486",
+      "spec_coverage": "none",
+      "description": "B-prefixed claims receive status='supported', confidence=0.85 on LLM failure. Code comment (line 473-474) confirms intentional design: 'Falls back to supported+0.85 so T9 can always fire.' Spec 'simulate retrieval' does not distinguish B-prefixed from C-prefixed claims. Not classified as implementation_bug because the fallback is explicitly designed behavior."
+    },
+    "I3": {
+      "operator": "T9",
+      "label": "T9 Premature Synthesis Anomaly",
+      "discrepancy_status": "aligned",
+      "code_citation": "select_operation lines 1015-1017",
+      "spec_coverage": "DES_Paper1_v1-1.md Section 5.2 (per brief)",
+      "description": "T9 uses status=='supported' (not sealed==True) as branch readiness criterion. Pre-determined as aligned per brief: Paper 1 Section 5.2 explicitly authorizes 'supported, not sealed'."
+    }
+  },
+  "additional_observations": {
+    "O1": {
+      "label": "T6 fallback firing position",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "select_operation lines 1018-1019",
+      "description": "T6 fires as fallback (without confidence > 0.6 constraint) after T7/T8/T9 fail. No spec text."
+    },
+    "O2": {
+      "label": "T8 unconditional fallback",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "select_operation line 1020",
+      "description": "T8 fires unconditionally when no other trigger matches. No spec text."
+    },
+    "O3": {
+      "label": "T8 synthesis bypass",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "select_operation lines 995-996",
+      "description": "is_synthesis claims routed directly to T8 before any other trigger. No spec text on synthesis claims or bypass mechanism."
+    },
+    "O4": {
+      "label": "T6 history gate Anti-Delphi mismatch",
+      "discrepancy_status": "implementation_bug",
+      "code_citation": "run_des line 1213 vs select_operation line 1008",
+      "description": "Anti-Delphi appends 'T6[anti-delphi]' to claim.history; guard checks 'T6' not in claim.history. Note: in Python, 'T6' in 'T6[anti-delphi]' evaluates to True (substring match), so the guard may correctly detect prior Anti-Delphi firing. Classification preserved as implementation_bug per anomaly_audit_v0-1.md pending Steffen review of whether Python in-operator semantics resolve the issue."
+    },
+    "O5": {
+      "label": "Reframing count termination limit",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "run_des line 1175",
+      "description": "state.reframing_count > 2 terminates main loop. T9 can fire at most 3 times. No spec text."
+    },
+    "O6": {
+      "label": "Anti-Delphi confidence clamping",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "execute_role line 326",
+      "description": "Role-generated claims have confidence clamped to [0.41, 0.55]. No spec text on confidence range for role-generated claims."
+    },
+    "O7": {
+      "label": "Anti-Delphi T9 output differs from single-agent T9",
+      "discrepancy_status": "spec_underspecified",
+      "code_citation": "run_des lines 1197-1220; _apply_antidelphi_state_change lines 366-373",
+      "description": "Single-agent T9 creates synthesis claim (status='supported', confidence>=0.82, is_synthesis=True). Anti-Delphi T9 creates role-generated claims (confidence in [0.41, 0.55]) then marks is_synthesis=True post-hoc. Paper 1 Abstract mentions Anti-Delphi assignment to specific transitions but does not describe output difference."
+    },
+    "O8": {
+      "label": "T3 B-claim path (expanded)",
+      "discrepancy_status": "spec_silent",
+      "code_citation": "t3_request_evidence lines 675-676",
+      "description": "Beyond the fallback (I2), the entire B-prefixed execution path in T3 (calling evaluate_branch_claim vs. simple simulated evidence for C-prefixed) is not described in the spec."
+    }
+  },
+  "summary_matrix": {
+    "note": "9x5 table. One discrepancy_status per cell. For cells with multiple classifications, the most informative status is shown.",
+    "cells": [
+      {"operator": "T1", "guards": "aligned", "selection": "aligned", "mutations": "spec_underspecified", "outputs": "spec_silent", "branch_effect": "aligned"},
+      {"operator": "T2", "guards": "aligned", "selection": "aligned", "mutations": "spec_underspecified", "outputs": "spec_silent", "branch_effect": "aligned"},
+      {"operator": "T3", "guards": "aligned", "selection": "aligned", "mutations": "spec_underspecified", "outputs": "spec_silent", "branch_effect": "aligned"},
+      {"operator": "T4", "guards": "aligned", "selection": "aligned", "mutations": "undocumented_extension", "outputs": "spec_silent", "branch_effect": "aligned"},
+      {"operator": "T5", "guards": "aligned", "selection": "spec_underspecified", "mutations": "spec_silent", "outputs": "spec_silent", "branch_effect": "spec_underspecified"},
+      {"operator": "T6", "guards": "spec_underspecified", "selection": "implementation_bug", "mutations": "spec_silent", "outputs": "spec_silent", "branch_effect": "aligned"},
+      {"operator": "T7", "guards": "aligned", "selection": "aligned", "mutations": "spec_underspecified", "outputs": "aligned", "branch_effect": "aligned"},
+      {"operator": "T8", "guards": "aligned", "selection": "spec_silent", "mutations": "aligned", "outputs": "aligned", "branch_effect": "aligned"},
+      {"operator": "T9", "guards": "aligned", "selection": "spec_underspecified", "mutations": "spec_underspecified", "outputs": "spec_underspecified", "branch_effect": "aligned"}
+    ]
+  },
+  "count_summary": {
+    "total_cells": 45,
+    "aligned": 21,
+    "spec_underspecified": 14,
+    "spec_silent": 6,
+    "undocumented_extension": 2,
+    "implementation_bug": 1,
+    "drift": 0,
+    "note": "No cases of drift. All code predicates differing from spec fall into 'code does more' category."
+  }
+}
