@@ -10,7 +10,7 @@
 ## 1. Legend
 
 | Symbol | Meaning |
-|--------|----------|
+|--------|-------|
 | `—` | Trivial not-derived (Phase 1): incompatibility demonstrable in one sentence |
 | `ND` | Not-derived (Phase 2 confirmed): non-trivial analysis concluded no implication chain |
 | `SD` | State-dependent-causal: (O_i ∧ S_k) ⊨ G_j; additional state condition S_k required |
@@ -40,7 +40,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 | **T6** | `—` | `—` | `—` | `—` | `—` | `—` | `SD` | `D[ND/SD]` | `D[ND/SD]` |
 | **T7** | `—` | `—` | `—` | `—` | `—` | `SD` | `—` | `D[SD/SD*]` | `SD` |
 | **T8** | `—` | `—` | `—` | `—` | `—` | `—` | `—` | `—` | `—` |
-| **T9** | `—` | `—` | `—` | `—` | `—` | `—` | `—` | `SD` | `—` |
+| **T9** | `—` | `—` | `—` | `—` | `—` | `—` | `—` | `GD` | `—` |
 
 ---
 
@@ -50,7 +50,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 
 | Cell | Phase | Spec class | Code class | Sel (spec/code) | Consistency | Key S_k / Note |
 |------|-------|-----------|-----------|------------------|-------------|----------------|
-| T1→T3 | 2a | guard-derived | state-dep-causal | ng / ng | **divergent** | Spec: charitable modality='hypothesis'; Code: LLM may return 'established' |
+| T1→T3 | 2a | guard-derived† | state-dep-causal | ng / ng | **divergent** | Spec: charitable modality='hypothesis' (†spec_underspecified: kwarg default, not spec commitment); Code: LLM may return 'established' |
 | T1→T5 | 2a | state-dep-causal | state-dep-causal | ng / ng | aligned | S_k: branch.modality='established' + confidence<0.4 (both M(t)) |
 | T1→T6 | 2a | not-derived | not-derived | n/a / n/a | aligned | T3/T6 mutual exclusion via modality |
 | T1→T7 | 2a | state-dep-causal | state-dep-causal | ng / ng | aligned | S_k: branch.modality='established' + confidence≥0.4 |
@@ -65,7 +65,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 | T3→T7 | 2a | state-dep-causal | state-dep-causal | g / g | aligned | S_k: qualifier=={}, scope!={}, confidence∈[0.4,0.6] (G(t)) |
 | T3→T8 | 2a | not-derived | state-dep-causal | n/a / g | **divergent** | I2 undocumented_extension absent from spec; code T3 Path B enables T8 |
 | T3→T9 | 2a | state-dep-causal | state-dep-causal | ng / g | **divergent** | Same class; spec S_k includes B.status='supported' from external source; code T3 I2 is causal enabler |
-| T4→T3 | 2b | guard-derived | state-dep-causal | ng / ng | **divergent** | Same pattern as T1→T3: spec silent on subclaim modality |
+| T4→T3 | 2b | guard-derived† | state-dep-causal | ng / ng | **divergent** | †spec_underspecified: same as T1→T3; subclaim modality='hypothesis' is kwarg default, not spec commitment |
 | T4→T4 | 2b | state-dep-causal | state-dep-causal | g / g | aligned | S_k: scope=={} + modality='established' on subclaim (both M(t)) |
 | T4→T5 | 2b | state-dep-causal | state-dep-causal | g / g | aligned | S_k: subclaim.modality='established' + confidence<0.4 (both M(t)) |
 | T4→T6 | 2b | not-derived | not-derived | n/a / n/a | aligned | T3/T6 mutual exclusion (same as T1→T6) |
@@ -83,7 +83,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 | T7→T6 | 2c | state-dep-causal | state-dep-causal | ng / ng | aligned | S_k: modality='hypothesis', 'T6' not in history, confidence∈(0.35,0.60] pre-T7 |
 | T7→T8 | 2c | state-dep-causal | state-dep-causal | g / g | **divergent** | Spec: S_k={status='supported', confidence>0.8 pre-T7}; T7 qualifier output causally irrelevant to T8. Code: S_k={confidence∈(0.75,0.80]}; T7 confidence boost +0.05 is enabling predicate. Drei-Fall |
 | T7→T9 | 2c | state-dep-causal | state-dep-causal | g / g | aligned | S_k: branch_open=True, all_children_supported; T7 preempts T9 once, then T9 fires |
-| T9→T8 | 2c | state-dep-causal | state-dep-causal | g / g | aligned | T9 creates synthesis satisfying T8 requirements; S_k={synthesis claim focused (E(t))}. Per Memo v3 SP-3 Type D |
+| T9→T8 | 2c | guard-derived | guard-derived | ng / g | aligned | O_T9 ⊨ G_T8 definitionally (status='supported', confidence≥0.82). Spec: sel ng (focus pool timing). Code: synthesis bypass pos-0, sel guaranteed given O_T9 success. Per Correction Note |
 
 **Selection status key:** `g` = guaranteed, `ng` = not_guaranteed, `n/a` = not_applicable
 
@@ -96,17 +96,19 @@ Rows = producer (T_i); columns = receiver (T_j).
 | Class | Count | Cells |
 |-------|-------|-------|
 | strict-derived | 0 | — |
-| guard-derived | 4 | T1→T3, T4→T3, T5→T2, T5→T3 |
-| state-dependent-causal | 20 | T1→T5/T7; T2→T4/T5/T6/T7; T3→T4/T5/T6/T7/T9; T4→T4/T5/T7; T5→T1; T6→T7; T7→T6/T8/T9; T9→T8 |
+| guard-derived | 5 | T1→T3†, T4→T3†, T5→T2, T5→T3, T9→T8 |
+| state-dependent-causal | 19 | T1→T5/T7; T2→T4/T5/T6/T7; T3→T4/T5/T6/T7/T9; T4→T4/T5/T7; T5→T1; T6→T7; T7→T6/T8/T9 |
 | not-derived (confirmed) | 10 | T1→T6; T2→T9; T3→T8; T4→T6; T5→T4/T6/T7/T9; T6→T8; T6→T9 |
+
+†spec_underspecified: guard-derived under charitable interpretation; modality='hypothesis' is a Python kwarg default, not a spec-level commitment.
 
 ### 4.2 Non-trivial cells: code-side class distribution
 
 | Class | Count | Cells |
 |-------|-------|-------|
 | strict-derived | 0 | — |
-| guard-derived | 2 | T5→T2, T5→T3 |
-| state-dependent-causal | 25 | (all non-trivial except 7 not-derived and 2 guard-derived) |
+| guard-derived | 3 | T5→T2, T5→T3, T9→T8 |
+| state-dependent-causal | 24 | (all non-trivial except 7 not-derived and 3 guard-derived) |
 | not-derived (confirmed) | 7 | T1→T6; T2→T9; T4→T6; T5→T4/T6/T7/T9 |
 
 ### 4.3 Divergent cells
@@ -121,7 +123,20 @@ Rows = producer (T_i); columns = receiver (T_j).
 | T6→T9 | not-derived | state-dep-causal | class_mismatch | Same root cause as T6→T8; (code:) status predicate enables T9 code-side only |
 | T7→T8 | SD, confidence>0.8 pre-T7 | SD, confidence∈(0.75,0.80] | S_k + causal mechanism | Spec: T7 qualifier output irrelevant to T8; Code: T7 confidence boost +0.05 is enabling predicate. Drei-Fall |
 
-### 4.4 Trivial not-derived cells (47)
+### 4.4 D-membership, SAR, Divergence Density
+
+**D-membership rule:** strict-derived, guard-derived, state-dependent-causal ∈ D; not-derived ∉ D. Uncertainty flags (spec_underspecified) do not affect D-membership.
+
+| Metric | Value | Formula |
+|--------|-------|---------|
+| Spec D-members | 24 | 5 GD + 19 SD |
+| Code D-members | 27 | 3 GD + 24 SD |
+| **SAR** (Specification-Alignment Ratio) | **1.125** | code_D / spec_D = 27/24 |
+| **DD** (Divergence Density) | **20.6%** | divergent / non_trivial = 7/34 |
+
+Interpretation: SAR=1.125 indicates a modest coverage asymmetry (code reaches 12.5% more claim pairs than spec). DD=20.6% indicates that mechanism asymmetry (how cascades work) is more significant than the coverage gap alone. The Drei-Fall sample was biased toward divergent cases; the full 9×9 map shows that most divergences (4 of 7) are class-mismatch from spec-silent modality or undocumented T3/T6 code extensions.
+
+### 4.5 Trivial not-derived cells (47)
 
 All `—` cells in the matrix. The most structurally significant trivial groups:
 
@@ -157,9 +172,9 @@ T7 unconditionally sets `qualifier≠{}`. This single output:
 - Enables T8: completes T8 primary's `NOT(qualifier=={} AND scope!={})` guard (→T8)
 - Enables T9: clears T7 preemption, allowing T9 to fire one iteration later (→T9)
 
-### 5.4 T9→T8 as state-dep-causal (no strict-derived cells in 9×9 map)
+### 5.4 T9→T8 as guard-derived (no strict-derived cells in 9×9 map)
 
-T9 creates a synthesis claim satisfying T8's requirements (spec-side: status='supported'+confidence≥0.82; code-side: is_synthesis=True → synthesis bypass at position 0). Per Memo v3 SP-3 Type D, classified as state-dep-causal with S_k={synthesis claim focused (E(t))} rather than strict-derived. There are no strict-derived cells in the 9×9 map.
+T9 creates a synthesis claim satisfying T8's requirements. O_T9 ⊨ G_T8 definitionally — `status='supported'` and `confidence≥0.82` directly satisfy T8's guard without any additional state condition S_k. This makes T9→T8 **guard-derived** (both sides), not state-dep-causal. The prior SP-3 Type D classification confused the selection condition (synthesis claim must be focused, an E(t) timing condition) with an admissibility condition. Admissibility and selection are distinct: G_j satisfaction is a property of O_T9's output; selection timing is governed by Σ. Spec-side: selection not_guaranteed (E(t) focus timing). Code-side: synthesis bypass at position 0 guarantees selection given O_T9 success. There are no strict-derived cells in the 9×9 map.
 
 ### 5.5 I2 undocumented_extension (T3 Path B)
 

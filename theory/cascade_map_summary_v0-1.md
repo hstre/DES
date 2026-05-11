@@ -15,25 +15,29 @@ The 9×9 cascade map covers all 81 ordered operator pairs (T_i → T_j) in the D
 
 Of the 34 non-trivial cells:
 - **0 are strict-derived**: no cell in the 9×9 map is unconditionally derived.
-- **4 are guard-derived** (spec-side): T5→T2, T5→T3, and (spec only) T1→T3, T4→T3.
-- **2 are guard-derived** (code-side only): T5→T2, T5→T3.
-- **20 are state-dependent-causal** (spec-side), **25 code-side**: the majority of non-trivial cascades require additional state conditions.
+- **5 are guard-derived** (spec-side): T5→T2, T5→T3, T9→T8, and (spec-underspecified†) T1→T3, T4→T3.
+- **3 are guard-derived** (code-side): T5→T2, T5→T3, T9→T8.
+- **19 are state-dependent-causal** (spec-side), **24 code-side**: the majority of non-trivial cascades require additional state conditions.
 - **10 are confirmed not-derived** (spec-side), **7 code-side**: non-trivial pairs where full analysis ruled out any cascade.
 - **7 cells are spec/code divergent**: the spec and code reach different derivability classes or selection statuses.
 
----
+†`spec_underspecified`: guard-derived under charitable interpretation; `modality='hypothesis'` is a Python kwarg default (`b.get('modality','hypothesis')`), not a spec-level commitment.
 
-## 2. T9→T8: State-Dep-Causal (No Strict-Derived Cells in 9×9 Map)
-
-There are no strict-derived cells in the 9×9 map. **T9→T8**, previously classified as strict-derived, is correctly classified as **state-dependent-causal** with S_k={synthesis claim selected as focus (E(t))}.
-
-T9 (trigger_reframing) creates a synthesis claim with `is_synthesis=True` on every execution path (both single-agent and Anti-Delphi). The synthesis claim satisfies T8's requirements via two mechanisms: spec-side, the synthesis claim has `status='supported'` and `confidence≥0.82`, which satisfies T8's intrinsic guard directly; code-side, `select_operation` checks `claim.is_synthesis` at position 0 and routes any such claim to T8 before any other check.
-
-The S_k={synthesis claim focused} is an E(t) condition: the synthesis claim is created unsealed and enters the regular pool, but focus selection is an execution-state event. Per Memo v3 SP-3 Type D (relational shortcut), the E(t) focus selection condition prevents strict-derived classification. In practice, once in the focus pool, the synthesis claim is always eventually selected and T8 fires; this is why the cascade appears unconditional in practice. The spec-side has `uncertainty_flag=spec_underspecified` because the spec does not explicitly address whether synthesis claims automatically bypass other guards.
+**D-membership:** D = {strict-derived, guard-derived, state-dependent-causal}; not-derived ∉ D. Uncertainty flags do not affect D-membership. Spec D-members: 24 (5 GD + 19 SD). Code D-members: 27 (3 GD + 24 SD). **SAR = 1.125** (code_D/spec_D = 27/24). **Divergence Density = 20.6%** (7/34 non-trivial cells divergent).
 
 ---
 
-## 3. Guard-Derived Cells: T5→T2, T5→T3 (and T1→T3, T4→T3 spec-side)
+## 2. T9→T8: Guard-Derived (No Strict-Derived Cells in 9×9 Map)
+
+There are no strict-derived cells in the 9×9 map. **T9→T8** is correctly classified as **guard-derived** (both sides).
+
+T9 (trigger_reframing) creates a synthesis claim with `status='supported'` and `confidence≥0.82`. O_T9 ⊨ G_T8 definitionally: T8's guard is directly satisfied by T9's output without any additional state condition S_k. This makes T9→T8 guard-derived, not state-dep-causal. The key distinction: the condition “synthesis claim must be focused” governs *when* T8 fires (a selection condition under Σ), not *whether* G_T8 is satisfied (an admissibility condition). Guard-derived = O_i ⊨ G_j but selection not guaranteed.
+
+Spec-side: selection is `not_guaranteed` — the synthesis claim enters the regular focus pool unsealed, and which iteration selects it is an E(t) timing event. Code-side: `select_operation` checks `claim.is_synthesis` at position 0 and routes unconditionally to T8; selection is `guaranteed` given O_T9 success (synthesis claim must exist in G(t+1), which follows definitionally from O_T9). The selection_status divergence (not_guaranteed / guaranteed) is within the guard-derived class and does not constitute a consistency violation.
+
+---
+
+## 3. Guard-Derived Cells: T5→T2, T5→T3, T9→T8 (and T1→T3, T4→T3 spec-side)
 
 ### Code-side guard-derived cells (robust)
 
@@ -41,9 +45,13 @@ The S_k={synthesis claim focused} is an E(t) condition: the synthesis claim is c
 
 **T5→T3:** T5 creates a counter-claim (CC) with `modality='hypothesis'` hardcoded (line ~444). Combined with `evidence_refs=[]` (new claim default), T3's guard is directly satisfied. This hardcoding makes T5→T3 guard-derived at the code level, unlike T1→T4→T3 cascades where the modality is LLM-returned.
 
-### Spec-side only guard-derived cells (spec-silent ambiguity)
+### T9→T8 (guard-derived, both sides)
 
-**T1→T3 and T4→T3:** Under charitable interpretation (new claims default to `modality='hypothesis'`), T1 and T4 output directly satisfies T3's guard. This is the spec-side classification. At the code level, both are state-dependent-causal because `b.get('modality','hypothesis')` (T1) and `sc.get('modality','hypothesis')` (T4) allow the LLM to return `'established'`, which would block T3. The spec is silent on whether modality defaults to `'hypothesis'` for newly created claims.
+See Section 2. T9 output directly satisfies T8's guard (O_T9 ⊨ G_T8). Code-side synthesis bypass at position 0 guarantees selection given O_T9 success; spec-side selection not_guaranteed due to focus pool timing.
+
+### Spec-side only guard-derived cells with spec_underspecified flag
+
+**T1→T3 and T4→T3:** Under charitable interpretation (new claims default to `modality='hypothesis'`), T1 and T4 output directly satisfies T3's guard — guard-derived spec-side. This classification carries the `spec_underspecified` flag: `modality='hypothesis'` is a Python kwarg default (`b.get('modality','hypothesis')`) in the Claim constructor, not an explicit spec-level commitment. The spec is silent on branch/subclaim modality. At the code level, the LLM can return `'established'`, requiring M(t) S_k — state-dependent-causal.
 
 ---
 
@@ -54,7 +62,7 @@ The S_k={synthesis claim focused} is an E(t) condition: the synthesis claim is c
 T2 (make_conflict_explicit) clears `conflict=True`. T3 (request_evidence) fills `evidence_refs`. Both operators thereby clear their own guard conditions, which are HIGH/CRITICAL priority guards that were blocking lower-priority operators. The revealed downstream operators (T4 through T7) then fire based on pre-existing state:
 
 | Downstream | S_k required |
-|-----------|---------------|
+|-----------|______________|
 | →T4 | scope=={} (G(t)) |
 | →T5 | confidence<0.4, scope!={} (G(t)) |
 | →T6 | modality='hypothesis', confidence>0.6, status!='supported' (G(t)) |
@@ -174,7 +182,7 @@ T8 seals claims and creates no new claims. All 9 cells in the T8 producer row ar
 
 ### 7.2 T9 as a near-sink
 
-T9 seals the parent and creates only a synthesis claim satisfying T8's requirements. T9→T8 is state-dep-causal with S_k={synthesis claim focused (E(t))}; in practice the synthesis claim is always eventually selected and T8 fires. All other T9 producer cells are trivially not-derived. T9 produces a one-step continuation (to T8) and then terminates.
+T9 seals the parent and creates only a synthesis claim satisfying T8's requirements. T9→T8 is **guard-derived** (O_T9 ⊨ G_T8; no S_k needed for admissibility). Spec-side: selection not_guaranteed (focus pool timing, E(t)). Code-side: synthesis bypass at position 0, selection guaranteed given O_T9 success. In practice, the synthesis claim is always eventually selected and T8 fires. All other T9 producer cells are trivially not-derived. T9 produces a one-step continuation (to T8) and then terminates.
 
 ### 7.3 Longest plausible cascade chains
 
@@ -196,4 +204,4 @@ The cascade map directly maps to the `select_operation` priority chain (lines 98
 
 **OQ2 (T6 Anti-Delphi history bug):** Anti-Delphi T6 appends `"T6[anti-delphi]"` to history, not `"T6"`. The T6 history guard (`"T6" not in history`) does not detect Anti-Delphi firings. A claim could have T6 (Anti-Delphi) fire and then satisfy the T6 guard again in subsequent iterations, potentially enabling further T7→T6 and T6→T7/T8/T9 cascades. The cascade map counts T6 as having fired once per the standard path; the Anti-Delphi path may allow additional T6 cascade chains.
 
-**OQ3 (T9 branch collection):** T9 collects branches as all claims with `parent_id==claim.id`, including T5-created counter-claims. If T5 fired on a T1-parent before T9, the counter-claim participates in the T9 synthesis. This could affect T9→T8 cascade semantics (synthesis may include non-branch material) but does not affect the state-dep-causal classification.
+**OQ3 (T9 branch collection):** T9 collects branches as all claims with `parent_id==claim.id`, including T5-created counter-claims. If T5 fired on a T1-parent before T9, the counter-claim participates in the T9 synthesis. This could affect T9→T8 cascade semantics (synthesis may include non-branch material) but does not affect the strict-derived classification.
