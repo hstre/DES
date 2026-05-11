@@ -1,0 +1,239 @@
+{
+  "version": "0.1",
+  "date": "2026-05-11",
+  "task": "DES Composition Derivation Check v0.1",
+  "branch": "theory/composition-derivation-check",
+  "predicate_baseline": {
+    "spec_side": "Amendment Plan v1.1 (canonical predicates per task brief); predicates marked '(per code:)' or '(per I2 fallback)' are excluded from spec-side analysis",
+    "code_side": "output_predicate_audit_code_v0-1.md; des.py read directly"
+  },
+  "derivability_classes": [
+    {
+      "id": "strict-derived",
+      "definition": "O_i ⊨ G_j AND Σ(A) = T_j for all admissible sets A containing T_j"
+    },
+    {
+      "id": "guard-derived",
+      "definition": "O_i ⊨ G_j BUT Σ(A) does not guarantee T_j over alternatives"
+    },
+    {
+      "id": "state-dependent",
+      "definition": "(O_i ∧ S_k) ⊨ G_j for additional state condition S_k beyond T_i's direct output"
+    },
+    {
+      "id": "not-derived",
+      "definition": "No consistent implication chain exists"
+    }
+  ],
+  "cascades": [
+    {
+      "id": "T5_to_T1",
+      "producer": "T5",
+      "receiver": "T1",
+      "spec_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T5 output (spec): claim.status ∈ {'contradicted', 'disputed'} (disjunction)",
+          "T1 intrinsic: claim.status == 'contradicted' (specific element required)",
+          "Implication O_T5 ⊨ G_T1 fails: 'disputed' branch does not satisfy T1 intrinsic",
+          "Additional condition S_k1 required: T5 contradiction-check returned True (→ status='contradicted')",
+          "With S_k1: (O_T5 ∧ S_k1) ⊨ G_T1 — T1 intrinsic satisfied",
+          "Selection S_k2 required: original claim P is selected as focus in next iteration",
+          "select_focus_claim returns regular[0] (insertion-order in state.claims dict); P precedes counter-claim CC (CC was just created), but earlier-inserted unsealed claims may preempt P in multi-claim graphs",
+          "With S_k1 ∧ S_k2: select_operation(P) → status=='contradicted' at line 997 → T1 selected; no preemption possible (T1 is first non-bypass check)"
+        ],
+        "required_state_conditions": [
+          "S_k1: check_for_contradiction returned True (i.e., claim.status='contradicted', not 'disputed')",
+          "S_k2: original claim P is regular[0] in select_focus_claim (insertion-order and graph-topology dependent)"
+        ],
+        "selection_consideration": "T1 is highest-priority non-bypass operator in select_operation. Once P is selected as focus and status='contradicted', T1 fires without preemption. The weak link is focus selection (S_k2), not operator selection."
+      },
+      "code_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T5 code (lines 780-843): calls _llm_json for counter-generation; creates C-prefixed counter with parent_id=claim.id; calls check_for_contradiction(claim, counter)",
+          "check_for_contradiction (lines 404-435): Path A (LLM): bool(result.get('contradicts', False)) — LLM-dependent, non-deterministic",
+          "check_for_contradiction Path B (LLM fails, Fallback 1): checks counter_predicate for neg_markers = ('not','never','no ','cannot',\"can't\",'doesn't','does not') — deterministic given counter content",
+          "check_for_contradiction Path C (LLM fails, Fallback 2): checks _OPPOSING_PAIRS across predicate+object fields — content-dependent",
+          "T5 double-fallback sub-path: if T5 LLM fails → counter_predicate = 'does not ' + claim.predicate (line 810); if check_for_contradiction LLM also fails → Fallback 1 fires; 'does not' IS in neg_markers → returns True → status='contradicted' DETERMINISTICALLY",
+          "General path: S_k1 required (check_for_contradiction LLM result is non-deterministic)",
+          "After T5: P (original, status∈{'contradicted','disputed'}) and CC (counter, status='unknown') are both unsealed, non-weak, branch_open=False → both in regular pool",
+          "select_focus_claim (lines 1063-1071): iterates state.claims in insertion order; P was inserted before CC; in single-claim graph P is regular[0]; in multi-claim graph earlier claims may preempt",
+          "S_k2 required: P is regular[0]; if CC or another claim is selected first, T3 fires on CC (evidence_refs=[], modality='hypothesis') — not T1",
+          "With S_k1 ∧ S_k2: select_operation(P) at line 997 → T1 fires"
+        ],
+        "required_state_conditions": [
+          "S_k1: check_for_contradiction returns True (LLM-dependent in general; guaranteed in double-LLM-failure sub-path where counter_predicate='does not '+claim.predicate and Fallback 1 fires)",
+          "S_k2: P (original claim) is selected as focus in next iteration (insertion-order + graph-topology dependent)"
+        ],
+        "partial_determinism_finding": "In the double-LLM-failure sub-path (T5 counter-generation LLM fails AND check_for_contradiction LLM fails), status='contradicted' is guaranteed: counter_predicate='does not '+claim.predicate contains 'does not' which is in neg_markers. In this sub-path, S_k1 is satisfied deterministically. The cascade becomes guard-derived for S_k2 in this sub-path.",
+        "selection_consideration": "Focus selection after T5 is insertion-order dependent (regular[0] in state.claims). P precedes CC structurally, but multi-claim graphs may interpose other claims. If CC is selected first, T3 fires on CC, delaying the T5→T1 cascade. No priority mechanism favors P over other regular claims (unlike T9-ready priority for T3→T9)."
+      },
+      "consistency": "aligned",
+      "rationale": "Both spec-side and code-side classify T5→T1 as state-dependent with the same S_k structure (contradiction check → True; original claim focus-selected). Code analysis adds: (1) check_for_contradiction is confirmed LLM-dependent with heuristic fallbacks; (2) a deterministic sub-path exists (double-LLM-failure) where S_k1 is guaranteed. Neither predicate set produces strict or guard-derived classification."
+    },
+    {
+      "id": "T7_to_T8",
+      "producer": "T7",
+      "receiver": "T8",
+      "spec_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T7 output (spec-side only): claim.qualifier != {} (confidence boost is '(per code)' and excluded)",
+          "T8 intrinsic: claim.status == 'supported'",
+          "T8 admissibility: claim.confidence > 0.8",
+          "T7 spec output does NOT imply T8 intrinsic: T7 does not set status",
+          "T7 spec output does NOT imply T8 admissibility: T7 spec has no confidence effect",
+          "Implication O_T7_spec ⊨ G_T8 fails on both components",
+          "Required: S_k1 = claim.status == 'supported' (pre-existing); S_k2 = claim.confidence > 0.8 (pre-existing — no spec-side T7 confidence effect)",
+          "Key observation: if S_k1 ∧ S_k2 hold before T7, T8_primary (line 1012) would fire on the same iteration IF T7 (line 1010) did not preempt it in the priority chain",
+          "T7 fires at line 1010 before T8_primary at line 1012 → T7 preempts T8 on the iteration when T7's intrinsic holds",
+          "After T7: qualifier != {} → T7 intrinsic no longer holds; on next iteration T8_primary fires if S_k1 ∧ S_k2 still hold (T7 spec does not change status or confidence, so they do)",
+          "Mechanism: T7 'clears itself' by setting qualifier; T8 fires next because T8's guard was already satisfied before T7. T7's spec output (qualifier != {}) is causally irrelevant to T8's admissibility.",
+          "With S_k1 ∧ S_k2: on next iteration, T6_primary skips (status='supported'), T7 skips (qualifier set), T8_primary fires"
+        ],
+        "required_state_conditions": [
+          "S_k1: claim.status == 'supported' before T7 fires (not produced by T7 spec output)",
+          "S_k2: claim.confidence > 0.8 before T7 fires (not produced by T7 spec output — spec has no confidence effect for T7)",
+          "Note: (S_k1 ∧ S_k2) ⊨ G_T8 independently; O_T7_spec contributes trivially (qualifier != {} plays no role in T8's guard)"
+        ],
+        "selection_consideration": "After T7, same claim remains in graph (no new claim created). On next iteration, if the claim is selected as focus (insertion-order dependent): T6_primary skips (status='supported'), T7 skips (qualifier set), T8_primary fires at line 1012. No preemption. Selection deterministic given claim is focused."
+      },
+      "code_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T7 output (code): claim.qualifier != {} AND claim.confidence = min(1.0, claim.confidence + 0.05) (line 893)",
+          "T8 intrinsic: claim.status == 'supported'",
+          "T8 admissibility: claim.confidence > 0.8",
+          "T7 code output: qualifier != {} — does not imply T8 intrinsic (status unchanged)",
+          "T7 code output: confidence += 0.05 — participates in T8 admissibility if input confidence is in the right range",
+          "Narrow channel condition S_k2: 0.75 < confidence_pre_T7 ≤ 0.80",
+          "  Lower bound (>0.75): ensures confidence_post_T7 = confidence_pre_T7 + 0.05 > 0.80 (satisfying T8 strict admissibility)",
+          "  Upper bound (≤0.80): ensures T8_primary did NOT preempt T7 on previous iteration (T8_primary requires confidence > 0.8 strict; if confidence was ≤ 0.80, T8 didn't fire, T7 fired instead)",
+          "Verify T7 fired (not T6_primary): T6_primary requires status != 'supported'; with S_k1 (status='supported'), T6_primary skips; T7 fires at line 1010",
+          "After T7: confidence_post ∈ (0.80, 0.85]; status='supported' (S_k1); qualifier != {}",
+          "(O_T7_code ∧ S_k1 ∧ S_k2) ⊨ G_T8: status='supported' from S_k1; confidence > 0.8 from O_T7_code + S_k2",
+          "T7's confidence boost IS the enabling predicate that crosses T8's threshold in the narrow channel"
+        ],
+        "required_state_conditions": [
+          "S_k1: claim.status == 'supported' before T7 fires (not produced by T7)",
+          "S_k2: 0.75 < claim.confidence_pre_T7 ≤ 0.80 (narrow channel: T8 did not preempt T7, and T7's boost crosses T8's threshold)"
+        ],
+        "selection_consideration": "After T7 in narrow channel, same claim is in focus. On next iteration: T1-T5 skip (not contradicted, no conflict, has evidence, not underspecified, confidence > 0.4). T6_primary: status='supported' → skip. T7: qualifier set → skip. T8_primary: status='supported' AND confidence > 0.8 → fires. No preemption given S_k1 holds. Selection deterministic given claim focus.",
+        "key_difference_from_spec": "Code-side T7 output (confidence += 0.05) participates in satisfying T8 admissibility; spec-side T7 output (qualifier != {} only) does not. The narrow channel (0.75, 0.80] is a code-side phenomenon; spec-side requires confidence > 0.8 as a pre-existing condition."
+      },
+      "consistency": "divergent",
+      "rationale": "Both sides are state-dependent, but for different reasons. Spec-side: T7's output is causally irrelevant to T8's admissibility; the cascade is a priority-chain artifact where T7 fires before T8, clears itself, then T8's pre-existing guard fires. Code-side: T7's confidence boost (+0.05) is the enabling predicate in the narrow channel (0.75, 0.80]. The divergence corresponds to the spec_silent classification of T7's confidence boost in spec_code_discrepancy_matrix_v0-1.md."
+    },
+    {
+      "id": "T3_to_T9",
+      "producer": "T3",
+      "receiver": "T9",
+      "spec_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T3 output (spec-side only): |claim.evidence_refs| >= 1 (I2 fallback predicates are '(per I2 fallback)' and excluded from spec-side)",
+          "T9 intrinsic is evaluated on PARENT claim P, not on T3's target branch B_j",
+          "T9 intrinsic: P.branch_open == True AND |branches(P)| > 0 AND all c in branches(P): c.status == 'supported'",
+          "T3 spec output (evidence_refs >= 1) does not address B_j.status",
+          "Spec has no mechanism by which T3 produces status='supported' on B-prefixed branch claims (I2 fallback is undocumented_extension, absent from spec)",
+          "Implication O_T3_spec ⊨ G_T9 fails: evidence_refs growth does not imply 'all branches supported'",
+          "Required S_k: S_k1 = P.branch_open==True; S_k2 = B_j.parent_id==P.id; S_k3 = B_j.status=='supported' (not from T3 spec); S_k4 = all other branches of P have status=='supported'",
+          "With S_k1 ∧ S_k2 ∧ S_k3 ∧ S_k4: G_T9 is satisfied on P",
+          "But S_k3 (B_j.status=='supported') is not derivable from T3 spec output — must come from an unspecified other source",
+          "T3's spec output (evidence_refs >= 1) participates trivially; the cascade has no spec-side mechanism"
+        ],
+        "required_state_conditions": [
+          "S_k1: P.branch_open == True (set by T1 when branches were created)",
+          "S_k2: B_j.parent_id == P.id (B_j is a child of P)",
+          "S_k3: B_j.status == 'supported' (NOT derivable from T3 spec output; must come from other source)",
+          "S_k4: all other branches of P already have status == 'supported' (rest-graph condition)"
+        ],
+        "selection_consideration": "Spec-side has no mechanism for T3 to produce status='supported' on B_j. The cascade is formally state-dependent but causally empty at the spec level: T3's output does not contribute to T9's admissibility."
+      },
+      "code_side": {
+        "classification": "state-dependent",
+        "implication_chain": [
+          "T3 code output for B-prefixed claims (evaluate_branch_claim, lines 470-486):",
+          "  If LLM succeeds: claim.status = result.get('status', 'supported') — may be 'supported'",
+          "  If LLM fails (I2 fallback, lines 484-486): claim.status = 'supported', claim.confidence = 0.85 — guaranteed",
+          "Analysis uses I2 fallback as the clearest case: B_j.status = 'supported' is guaranteed",
+          "T9 intrinsic is on P: P.branch_open==True AND branches(P)!=[] AND all c in branches(P): c.status=='supported'",
+          "branches(P) = {c ∈ state.claims | c.parent_id == P.id} (prefix-agnostic per code OQ3; includes C-prefixed claims with parent_id=P.id if T5 ever fired on P)",
+          "After T3 on B_j: B_j.status = 'supported' (from O_T3_code)",
+          "Additional S_k required: S_k1 = P.branch_open==True; S_k2 = B_j.parent_id==P.id; S_k3 = all other branches of P already status=='supported'; S_k4 = no C-prefixed claim with parent_id==P.id has status!='supported'",
+          "With O_T3_code(I2) ∧ S_k1 ∧ S_k2 ∧ S_k3 ∧ S_k4: all branches of P are 'supported', G_T9 satisfied",
+          "T3's code output (status='supported') IS the enabling predicate for B_j's contribution — unlike spec-side",
+          "Focus-claim selection: select_focus_claim (lines 1063-1071) checks branch_open claims: if children exist AND all supported → t9_ready.append(claim)",
+          "If S_k3 holds and B_j is now 'supported': P enters t9_ready",
+          "select_focus_claim returns t9_ready[0] with EXPLICIT PRIORITY over all regular claims",
+          "P is selected as focus (guaranteed by T9-ready priority mechanism, stronger than insertion-order)",
+          "select_operation(P): line 1014-1016: branch_open==True AND all branches supported → T9 fires",
+          "T9 fires; P.status after T1 is 'disputed', not 'contradicted', not is_synthesis — no preemption by T1/T2/T8-bypass"
+        ],
+        "required_state_conditions": [
+          "S_k1: P.branch_open == True (set by T1)",
+          "S_k2: B_j.parent_id == P.id (B_j is a child of P)",
+          "S_k3: all other branches of P already have status == 'supported' (rest-graph condition; T3 on B_j is the LAST step, completing the 'all supported' condition)",
+          "S_k4: no interfering C-prefixed claims with parent_id==P.id (prefix-agnostic branch collection; edge case when T5 fires on P)"
+        ],
+        "selection_consideration": "T9-ready priority in select_focus_claim guarantees P is selected as focus once all branches are supported. This is structurally stronger than the insertion-order-based selection for T5→T1 and T7→T8. Once P is focused, T9 fires at line 1014 without preemption (P.status='disputed' means T1 and T2 skip; P is not is_synthesis so T8-bypass skips; T3-T7 skip for other reasons in typical graph state)."
+      },
+      "consistency": "divergent",
+      "rationale": "Code-side has a real cascade mechanism: T3's I2 fallback (status='supported') is the enabling predicate, and select_focus_claim's T9-ready priority guarantees selection. Spec-side has no mechanism: I2 fallback is an undocumented_extension absent from spec predicates; T3's spec output (evidence_refs >= 1) contributes nothing to T9's guard. The divergence corresponds to the undocumented_extension classification of T3's I2 fallback in spec_code_discrepancy_matrix_v0-1.md."
+    }
+  ],
+  "cross_cascade_observations": [
+    {
+      "id": "X1",
+      "title": "No cascade achieves strict-derived",
+      "observation": "All three tested cascades are state-dependent. None satisfy strict-derived (O_i ⊨ G_j AND Σ guarantees T_j). Additional state conditions (S_k) are required in all three cases. The conditions are non-trivial: they involve LLM execution outcomes (T5→T1), input-confidence range constraints (T7→T8), and rest-graph completeness conditions (T3→T9). This is a baseline finding for the pre-registered cascade set."
+    },
+    {
+      "id": "X2",
+      "title": "Spec/code divergence maps one-to-one to discrepancy audit findings",
+      "observation": "T7→T8 and T3→T9 show spec/code divergence in cascade mechanism. T7→T8 divergence corresponds to 'spec_silent' for T7's confidence boost (spec_code_discrepancy_matrix_v0-1.md, T7 mutations). T3→T9 divergence corresponds to 'undocumented_extension' for T3's I2 fallback (spec_code_discrepancy_matrix_v0-1.md, T3 mutations). The cascade derivability check is sensitive to the same predicate gaps identified in the discrepancy audit."
+    },
+    {
+      "id": "X3",
+      "title": "Selection guarantee strength varies by cascade",
+      "observation": "T3→T9 has the strongest selection guarantee: select_focus_claim implements explicit T9-ready priority (lines 1073-1074), guaranteeing P is selected once all branches are supported. T7→T8 is intermediate: no new claim is created, same claim remains in graph, T8 fires deterministically given claim is focused (no preemption in that state). T5→T1 is weakest: focus selection is insertion-order dependent in the regular list; multi-claim graphs may interpose other claims, causing the counter-claim to be processed by T3 first."
+    },
+    {
+      "id": "X4",
+      "title": "Partial determinism in T5→T1 double-fallback sub-path",
+      "observation": "When T5's counter-generation LLM fails, counter_predicate = 'does not ' + claim.predicate. When check_for_contradiction's LLM also fails, Fallback 1 fires and finds 'does not' in neg_markers → returns True → status='contradicted'. In this sub-path, S_k1 is satisfied deterministically. This code-side finding is not visible at spec level and is not reflected in the canonical predicates."
+    },
+    {
+      "id": "X5",
+      "title": "T9-ready priority as a structural cascade enabler",
+      "observation": "The T9-ready priority in select_focus_claim (lines 1073-1074) is a selection-policy feature that makes T3→T9 more reliable than the other two cascades. This priority prevents parent claims from competing with their own branches in focus selection. It is a selection-policy (SP-1) design choice with cascade-enabling consequences not described in any spec text."
+    }
+  ],
+  "summary_table": [
+    {
+      "cascade": "T5 → T1",
+      "spec_side_classification": "state-dependent",
+      "code_side_classification": "state-dependent",
+      "consistency": "aligned",
+      "key_Sk": "S_k1: contradiction check → True (LLM-dependent); S_k2: original claim selected as focus (insertion-order)",
+      "note": "Double-LLM-failure sub-path guarantees status='contradicted' deterministically; focus selection is the weak link"
+    },
+    {
+      "cascade": "T7 → T8",
+      "spec_side_classification": "state-dependent",
+      "code_side_classification": "state-dependent",
+      "consistency": "divergent",
+      "key_Sk": "Spec: S_k = status='supported' AND confidence>0.8 (pre-existing; T7 spec output irrelevant). Code: S_k = status='supported' AND 0.75<confidence≤0.80 (narrow channel; T7 confidence boost is enabling predicate)",
+      "note": "Spec/code divergence: T7 confidence boost absent from spec; changes S_k structure and causal relevance of T7 output"
+    },
+    {
+      "cascade": "T3 → T9",
+      "spec_side_classification": "state-dependent",
+      "code_side_classification": "state-dependent",
+      "consistency": "divergent",
+      "key_Sk": "Spec: T3 spec output contributes nothing to T9 guard; cascade mechanism absent from spec. Code: S_k = parent branch_open + all other branches supported; T3 I2 fallback (status='supported') is enabling predicate; T9-ready priority guarantees selection",
+      "note": "Strongest selection guarantee of the three (T9-ready priority); spec/code divergence corresponds to I2 undocumented_extension"
+    }
+  ]
+}
