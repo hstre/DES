@@ -21,12 +21,18 @@
     "aligned": "Spec-side and code-side reach same derivability class",
     "divergent": "Spec-side and code-side diverge in derivability class or selection_status"
   },
+  "d_membership_rule": {
+    "definition": "D = { (T_i, T_j) | derivability_class ∈ {strict-derived, guard-derived, state-dependent-causal} AND uncertainty_flag ∈ {null, spec_silent, spec_underspecified} }",
+    "in_D": ["strict-derived", "guard-derived", "state-dependent-causal"],
+    "not_in_D": ["not-derived", "trivial-not-derived"],
+    "uncertainty_handling": "uncertainty_flag is informational annotation; does not exclude from D if derivability_class is positive"
+  },
   "cells": [
     {"producer":"T1","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 outputs status='disputed'; T1 requires status='contradicted' — own output violates guard."},
     {"producer":"T1","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 sets conflict=False; T2 requires conflict=True — no T1 output produces conflict=True."},
     {
       "producer":"T1","receiver":"T3","phase1_triage":"non-trivial",
-      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified"},
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified","uncertainty_note":"Classification depends on the charitable interpretation that new B-prefixed branch claims default to modality='hypothesis'. Paper 1 Section 3.3 does not specify branch claim modality. Under the alternative interpretation that spec is silent on the modality of created branch claims, this cell would be not-derived (T3's intrinsic guard could not be confirmed satisfied spec-side). The code-side LLM-returned modality (via b.get('modality', 'hypothesis')) makes this divergent regardless of the spec interpretation choice."},
       "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality != 'established'"]},
       "consistency":"divergent","divergence_type":"class_mismatch",
       "source_phase":"2a",
@@ -149,7 +155,7 @@
     {"producer":"T4","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 doesn't set conflict=True on any claim; T2 requires conflict=True."},
     {
       "producer":"T4","receiver":"T3","phase1_triage":"non-trivial",
-      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified"},
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified","uncertainty_note":"Classification depends on the charitable interpretation that new C-prefixed subclaims default to modality='hypothesis'. Paper 1 Section 3.3 does not specify subclaim modality. Under the alternative interpretation that spec is silent on the modality of created subclaims, this cell would be not-derived (T3's intrinsic guard could not be confirmed satisfied spec-side). The code-side LLM-returned modality (via sc.get('modality', 'hypothesis')) makes this divergent regardless of the spec interpretation choice."},
       "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): subclaim.modality!='established' (LLM could return 'established')"]},
       "consistency":"divergent","divergence_type":"class_mismatch",
       "source_phase":"2b",
@@ -342,12 +348,17 @@
       "not-derived": 7,
       "trivial-not-derived": 47
     },
-    "d_membership": {
+    "composition_sar": {
       "spec_d_members": 24,
       "code_d_members": 27,
-      "sar": 1.125,
-      "dd": 0.206,
-      "note": "D = {strict-derived, guard-derived, state-dependent-causal}; not-derived ∉ D. SAR = code_d / spec_d = 27/24 = 1.125. DD = divergent / non_trivial = 7/34 ≈ 20.6%."
+      "value": 1.125,
+      "interpretation": "Coverage SAR: ratio of code-side cascade coverage to spec-side. code_D / spec_D = 27/24. Pilot value for DES."
+    },
+    "divergence_density": {
+      "divergent_cells": 7,
+      "non_trivial_cells": 34,
+      "value": 0.206,
+      "interpretation": "Rate of spec/code disagreement on non-trivial cells. divergent / non_trivial = 7/34 ≈ 20.6%. Pilot value for DES."
     },
     "divergent_cells": [
       {
