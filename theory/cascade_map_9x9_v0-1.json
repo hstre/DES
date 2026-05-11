@@ -26,11 +26,11 @@
     {"producer":"T1","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 sets conflict=False; T2 requires conflict=True — no T1 output produces conflict=True."},
     {
       "producer":"T1","receiver":"T3","phase1_triage":"non-trivial",
-      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified"},
       "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality != 'established'"]},
       "consistency":"divergent","divergence_type":"class_mismatch",
       "source_phase":"2a",
-      "brief_note":"Spec (charitable): T1 B-branches default to modality='hypothesis', satisfying T3 guard — guard-derived. Code: LLM could return 'established', requiring M(t) S_k — state-dep-causal."
+      "brief_note":"Spec (charitable): T1 B-branches default to modality='hypothesis', satisfying T3 guard — guard-derived (spec_underspecified: modality='hypothesis' is a Python kwarg default, not a spec-level commitment). Code: LLM could return 'established', requiring M(t) S_k — state-dep-causal."
     },
     {"producer":"T1","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 creates branches with non-empty scope and status='hypothesis'; T4 requires scope={} or underspecified — neither satisfied."},
     {
@@ -149,11 +149,11 @@
     {"producer":"T4","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 doesn't set conflict=True on any claim; T2 requires conflict=True."},
     {
       "producer":"T4","receiver":"T3","phase1_triage":"non-trivial",
-      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed","uncertainty_flag":"spec_underspecified"},
       "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): subclaim.modality!='established' (LLM could return 'established')"]},
       "consistency":"divergent","divergence_type":"class_mismatch",
       "source_phase":"2b",
-      "brief_note":"Spec (charitable): T4 subclaims default to modality='hypothesis', satisfying T3 guard — guard-derived. Code: LLM may return 'established', requiring M(t) S_k — state-dep-causal. Same pattern as T1→T3."
+      "brief_note":"Spec (charitable): T4 subclaims default to modality='hypothesis', satisfying T3 guard — guard-derived (spec_underspecified: modality='hypothesis' is a Python kwarg default, not a spec-level commitment). Code: LLM may return 'established', requiring M(t) S_k — state-dep-causal. Same pattern as T1→T3."
     },
     {
       "producer":"T4","receiver":"T4","phase1_triage":"non-trivial",
@@ -313,10 +313,10 @@
     {"producer":"T9","receiver":"T7","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis has is_synthesis=True; T8 synthesis bypass fires before T7 check."},
     {
       "producer":"T9","receiver":"T8","phase1_triage":"non-trivial",
-      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): synthesis claim selected as focus (unsealed, in regular pool)"],"uncertainty_flag":"spec_underspecified"},
-      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): synthesis claim selected as focus (unsealed, in regular pool)"]},
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "code_side":{"derivability_class":"guard-derived","selection_status":"guaranteed","uncertainty_note":"guaranteed conditional on O_T9 success; synthesis claim must exist in G(t+1), which follows definitionally from O_T9"},
       "consistency":"aligned","source_phase":"2c",
-      "brief_note":"T9 creates synthesis claim satisfying T8 requirements (spec: status='supported'+confidence>=0.82 → T8 intrinsic; code: is_synthesis=True → T8 synthesis bypass at position 0). S_k={synthesis claim focused (E(t))}. Per Memo v3 SP-3 Type D: state-dep-causal, not strict-derived. Aligned."
+      "brief_note":"O_T9 ⊨ G_T8 definitionally: T9 spec output includes status='supported', confidence≥0.82, directly satisfying T8 guard without additional S_k. guard-derived. Spec: selection not_guaranteed (synthesis claim must enter focus pool). Code: synthesis bypass at position 0 guarantees selection given O_T9 success. Aligned. Replaces SP-3 Type D state-dep-causal per Correction Note: S_k={synthesis claim focused} is a selection condition, not an admissibility condition."
     },
     {"producer":"T9","receiver":"T9","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 seals parent (the only branch_open claim); synthesis has is_synthesis=True (T8 bypass intercepts). No branch_open=True claim produced."}
   ],
@@ -330,17 +330,24 @@
     },
     "spec_side_class_distribution": {
       "strict-derived": 0,
-      "guard-derived": 4,
-      "state-dependent-causal": 20,
+      "guard-derived": 5,
+      "state-dependent-causal": 19,
       "not-derived": 10,
       "trivial-not-derived": 47
     },
     "code_side_class_distribution": {
       "strict-derived": 0,
-      "guard-derived": 2,
-      "state-dependent-causal": 25,
+      "guard-derived": 3,
+      "state-dependent-causal": 24,
       "not-derived": 7,
       "trivial-not-derived": 47
+    },
+    "d_membership": {
+      "spec_d_members": 24,
+      "code_d_members": 27,
+      "sar": 1.125,
+      "dd": 0.206,
+      "note": "D = {strict-derived, guard-derived, state-dependent-causal}; not-derived ∉ D. SAR = code_d / spec_d = 27/24 = 1.125. DD = divergent / non_trivial = 7/34 ≈ 20.6%."
     },
     "divergent_cells": [
       {
@@ -395,10 +402,10 @@
     ],
     "notable_patterns": [
       "T8 as producer: all 9 cells trivial-not-derived. T8 seals claims removing them from focus; no downstream cascade possible.",
-      "T9 as producer: 8 of 9 cells trivial-not-derived; only T9→T8 is non-trivial (state-dep-causal, aligned). T9 creates synthesis claim satisfying T8 requirements; S_k={synthesis claim focused}. Per Memo v3 SP-3 Type D, classified state-dep-causal not strict-derived.",
-      "T1/T4 as producers share identical divergence pattern (→T3): spec-silent modality of created claims causes guard-derived (spec) vs state-dependent-causal (code) mismatch.",
+      "T9 as producer: 8 of 9 cells trivial-not-derived; only T9→T8 is non-trivial (guard-derived, aligned). O_T9 ⊨ G_T8 definitionally — no S_k required for admissibility. Spec: selection not_guaranteed (focus pool timing); code: synthesis bypass guarantees selection given O_T9 success. Per Correction Note: S_k={synthesis claim focused} is a selection condition, not admissibility; reclassified from state-dep-causal.",
+      "T1/T4 as producers share identical divergence pattern (→T3): spec-silent modality of created claims causes guard-derived (spec, spec_underspecified) vs state-dependent-causal (code) mismatch. spec_underspecified: modality='hypothesis' is a Python kwarg default, not a spec-level commitment.",
       "T2/T3 as producers share the unlock pattern: they clear their own guard conditions (conflict=True, evidence_refs=[]), revealing pre-existing T4/T5/T6/T7 conditions.",
-      "T5 as producer: conflict=True (→T2 guard-derived) and hardcoded CC.modality='hypothesis' (→T3 guard-derived) are the only guard-derived cells aside from T1/T4→T3.",
+      "T5 as producer: conflict=True (→T2 guard-derived) and hardcoded CC.modality='hypothesis' (→T3 guard-derived). Together with T9→T8 (guard-derived, both sides), the 5 spec-side guard-derived cells are: T1→T3, T4→T3, T5→T2, T5→T3, T9→T8.",
       "T6 (code:) output divergence: T6 spec output = evidence_refs grew only; T6 code additionally produces status='supported'+confidence>=0.82. This causes T6→T8 and T6→T9 to be spec-not-derived vs code-state-dep-causal. T6→T7 remains aligned because spec-side T6 history gate and evidence growth are sufficient to enable T7.",
       "T7 qualifier-setter pattern: T7's unconditional qualifier!={} output enables three cascades (T6, T8, T9) via different mechanisms. T7→T8 is divergent (Drei-Fall): spec requires confidence>0.8 pre-T7; code exploits confidence boost in narrow channel.",
       "I2 undocumented_extension (T3 Path B fallback) is the root cause of both T3→T8 and T3→T9 divergences.",
