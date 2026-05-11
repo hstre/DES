@@ -1,0 +1,236 @@
+{
+  "version": "0.1-phase2c",
+  "date": "2026-05-11",
+  "phase": "non-trivial-analysis-T6T7T9",
+  "predicate_baseline": "Amendment Plan v1.1 canonical predicates; code from des.py",
+  "context_state_typing": {
+    "G(t)": "ClaimGraph state (claims, attributes, relations)",
+    "E(t)": "Deterministic execution state (insertion-order, focus history, phase)",
+    "M(t)": "Model-outcome state (LLM returns, nondeterministic)"
+  },
+  "cells_analyzed": [
+    {
+      "producer": "T6",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): qualifier=={} pre-T6 (T6 does not change qualifier)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 spec output (evidence_refs grew, 'T6' appended to history) removes T3's position-3 preemption (evidence_refs!=[] now blocks T3) and T6's own position-6 preemption (history gate blocks T6 primary re-fire). Spec-side T6 does not change status or confidence (those are (code:) predicates). T8 primary spec-side requires status='supported' — unchanged by T6 spec, so T8 primary does not fire. With S_k={qualifier=={}}: T7 fires at position 7 in next iteration. scope!={} is guaranteed by T6's own spec guard (T4 at position 4 would preempt T6 if scope=={}). state-dep-causal."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): qualifier=={} pre-T6 (T6 code does not write to claim.qualifier)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 code (lines 846–872) sets claim.status='supported' (line 868) and claim.confidence=max(0.82,...) (line 869); does not modify claim.qualifier. T8 primary (lines 1011–1013) blocked when qualifier=={} AND scope!={} (NOT-condition False). T7 guard (line 1010): qualifier=={} AND scope!={} — met given S_k. T7 fires at position 7 before T8 at position 8. Code refs: lines 846–872 (T6), 875–896 (T7), 1007–1013 (select_operation T6/T7/T8 region).",
+        "code_references": "lines 846–872 (T6), 875–896 (T7), 1007–1013 (select_operation T6/T7/T8)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T6 removes its own position-6 preemption (history gate) and T3's preemption (evidence_refs grew), revealing T7 at position 7 given qualifier=={}. Complementary to T6→T8."
+    },
+    {
+      "producer": "T6",
+      "receiver": "T8",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 spec output is evidence_refs grew only (canonical predicate notes status/confidence changes as (code:), explicitly excluded from spec). T8 spec intrinsic requires status='supported' AND confidence>0.8. Neither is produced by T6 spec output. T6 history gate prevents T6 re-fire, but this does not satisfy T8's intrinsic. No implication chain from T6 spec output to T8 spec intrinsic. Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): qualifier!={} pre-T6 (T6 code does not write to claim.qualifier)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 code sets status='supported' (line 868) and confidence=max(0.82,...) (line 869), satisfying T8 primary's core predicates. T8 primary guard (lines 1011–1013) also requires NOT(qualifier=={} AND scope!={}). After T6: qualifier unchanged; when qualifier!={}, this guard is satisfied. T7 (position 7, qualifier=={} guard) doesn't fire when qualifier!={}, so T8 primary fires directly at position 8. All other T8 primary guards met by T6 output (conflict==False, evidence_refs!={}, scope!={}, confidence>=0.82>0.4). With S_k, T8 primary fires in next iteration.",
+        "code_references": "lines 846–872 (T6), 899–904 (T8), 1011–1013 (T8 primary guard)"
+      },
+      "consistency": "divergent",
+      "rationale": "Spec-side: T6 spec output = evidence_refs grew; no mechanism to reach T8's status='supported' AND confidence>0.8 intrinsic — not-derived. Code-side: T6 code output includes status='supported' and confidence>=0.82 ((code:) predicates); enables T8 primary with S_k={qualifier!={}}. Root cause: (code:) T6 output predicates absent from spec."
+    },
+    {
+      "producer": "T6",
+      "receiver": "T9",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 spec output is evidence_refs grew only. T9's 'all branches status==supported' predicate requires status='supported' on each branch claim. T6 spec output does not change any claim's status. Even if T6 fires on a B-branch child (legitimate target), the child's status remains unchanged at spec level — no path from evidence_refs growth to status='supported'. T9's branch_open guard (requires T1 to have fired earlier) is also not addressed by T6 spec output. Not-derived spec-side."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "E(t): claim.parent_id == P.id for some parent P",
+          "E(t): P.branch_open==True (T1 must have fired on P earlier)",
+          "E(t): all c in state.claims where c.parent_id==P.id and c.id!=claim.id have c.status=='supported'"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T6 code (line 868) sets claim.status='supported'. If focus claim is a B-branch child of P (P.branch_open==True) and all other P-children are already status=='supported', then P becomes T9-ready. select_operation T9 check (lines 1014–1017): if all P.children.status=='supported', T9 fires on P. Parent P.status='disputed' (T1, line 633); T8 primary doesn't intercept P. select_focus_claim (lines 1067–1069) places P in t9_ready queue (priority over regular pool). S_k={branch_open, all_other_children_supported} not produced by T6. selection not_guaranteed: focus ordering E(t)-dependent.",
+        "code_references": "lines 846–872 (T6, line 868), 926–981 (T9), 1014–1017 (T9 guard), 1053–1077 (select_focus_claim T9-ready prioritization)"
+      },
+      "consistency": "divergent",
+      "rationale": "Spec-side: T6 spec cannot produce status='supported' on a branch child; T9 guard unmet — not-derived. Code-side: T6 code sets status='supported' on the focus claim; with S_k this enables T9 on parent — state-dep-causal. Root cause: (code:) status predicate absent from spec. Same root cause as T6→T8."
+    },
+    {
+      "producer": "T7",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "E(t)/M(t): claim.modality=='hypothesis' (T7 does not change modality)",
+          "E(t): 'T6' not in claim.history",
+          "E(t)/M(t): claim.status!='supported'",
+          "E(t)/M(t): claim.confidence<=0.6 AND claim.confidence>=0.4 (T6 primary blocked at <=0.6; T5 doesn't preempt at >=0.4)",
+          "E(t): claim.branch_open==False (T9 not triggered before T6 fallback at position 10)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T7 spec output (qualifier!={}) removes T7's position-7 preemption of T6 fallback (position 10). With qualifier!={}, T7 does not re-fire (T7 requires qualifier=={}). T6 fallback requires NOT(qualifier=={} AND scope!={}) — satisfied after T7. T6 primary (position 6) requires confidence>0.6; spec T7 has no confidence boost, so primary remains blocked unless confidence was already >0.6 (but T7 fires only when T6 primary failed, meaning confidence<=0.6 or another condition). With S_k: T6 fallback fires on next iteration. selection not_guaranteed: E(t) focus ordering."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "E(t)/M(t): claim.modality=='hypothesis'",
+          "E(t): 'T6' not in claim.history",
+          "E(t)/M(t): claim.status!='supported'",
+          "E(t)/M(t): claim.confidence∈(0.35,0.60] pre-T7 (post-T7 confidence>=0.40 above T5; >0.55 pre-T7 enables T6 primary via boost; >=0.35 pre-T7 enables T6 fallback)",
+          "E(t): claim.branch_open==False (for T6 fallback path)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T7 code (lines 875–896) unconditionally sets claim.qualifier!={} via fallback (lines 888–890: {'temporal':'present','geographic':'global'}). T6 primary guard (lines 1007–1009): confidence>0.6 — met when pre-T7 confidence∈(0.55,0.60] after +0.05 boost. T6 fallback (lines 1018–1019): NOT(qualifier=={} AND scope!={}) — True after T7 (qualifier!={}}). T5 (position 5, line 1005): confidence<0.4 preempts if post-T7 confidence<0.4; requires pre-T7 confidence>=0.35. With S_k: T6 fires (primary or fallback). selection not_guaranteed.",
+        "code_references": "lines 875–896 (T7), 846–872 (T6), 1005 (T5 guard), 1007–1009 (T6 primary guard), 1018–1019 (T6 fallback guard), 888–890 (T7 qualifier fallback)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T7 output (qualifier!={}) removes T7 position-7 preemption of T6 fallback. Code-side adds T6 primary path via confidence boost (broader S_k coverage) but same derivability class. No class mismatch."
+    },
+    {
+      "producer": "T7",
+      "receiver": "T8",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t)/M(t): claim.status=='supported' (T7 does not change status)",
+          "E(t)/M(t): claim.confidence>0.8 pre-T7 (T7 spec has no confidence boost; T8 confidence threshold must be pre-satisfied)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T7 fires at position 7 when qualifier=={}, preempting T8 primary at position 8. T7 spec output (qualifier!={}) plays no role in T8's admissibility (T8 spec intrinsic requires status='supported' AND confidence>0.8, neither produced by T7 spec). T7 is causally necessary (clears qualifier=={} block) but T7's qualifier output is causally IRRELEVANT to T8's guard. With S_k={status='supported', confidence>0.8 pre-T7}: after T7, T6 primary skips (status='supported'), T7 skips (qualifier!={}}), T8 primary fires. S_k includes confidence>0.8 as pre-existing (no spec-side boost). Reference: composition_derivation_check_v0-1.json spec-side chain, S_k2='claim.confidence > 0.8 before T7 fires (not produced by T7 spec)'."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t)/M(t): claim.status=='supported' (T7 does not change status)",
+          "E(t)/M(t): claim.confidence∈(0.75,0.80] pre-T7 (narrow channel: T8 did not preempt T7 on prior iteration since confidence<=0.80; T7 boost +0.05 crosses T8 threshold: post-T7 confidence∈(0.80,0.85])"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T7 code sets qualifier!={} AND boosts confidence by +0.05 (line 893). With S_k1={status='supported'}: T6 primary skips (status='supported'). T7 fires (qualifier=={}). In narrow channel S_k2={confidence∈(0.75,0.80]}: T8 primary did NOT fire before T7 (strict confidence>0.8 not yet met); after T7, confidence∈(0.80,0.85]>0.8 — T8 primary fires. T7 confidence boost IS the enabling predicate in the narrow channel. Reference: composition_derivation_check_v0-1.json code-side key_difference_from_spec.",
+        "code_references": "lines 875–896 (T7), 899–904 (T8), 893 (T7 confidence boost), 1011–1013 (T8 primary guard)"
+      },
+      "consistency": "divergent",
+      "rationale": "Both sides state-dep-causal, but S_k and causal mechanism diverge. Spec-side: T7 qualifier output is causally irrelevant to T8; S_k requires confidence>0.8 pre-existing (no boost). Code-side: T7 confidence boost is the enabling predicate in narrow channel; S_k requires only confidence∈(0.75,0.80]. Divergence maps to (code:) confidence boost in canonical predicates. Confirmed as canonical divergent cascade in composition_derivation_check_v0-1.json."
+    },
+    {
+      "producer": "T7",
+      "receiver": "T9",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): claim.branch_open==True (T1 must have fired earlier on this claim)",
+          "E(t): all children of claim have status=='supported' (T7 does not change child statuses)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "When qualifier=={} AND branch_open==True AND all_children_supported: T7 fires at position 7 before T9 at position 9. T7 spec output (qualifier!={}) removes T7 from the priority chain for the next iteration (T7 requires qualifier=={}; now qualifier!={}). T9 guard (branch_open AND all children supported) is unchanged by T7. With S_k: T9 fires on next iteration where claim is focused. select_focus_claim prioritizes T9-ready claims. Selection guaranteed given T9-ready priority and S_k intact."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): claim.branch_open==True",
+          "E(t): all c in state.claims where c.parent_id==claim.id have c.status=='supported'"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T7 code sets qualifier!={} (lines 888–890). T7 guard (line 1010) qualifier=={} no longer satisfied; T7 does not re-fire. T9 guard (lines 1014–1017): branch_open==True AND branches non-empty AND all branches status=='supported' — all unchanged by T7. Parent status='disputed' (from T1 line 633); T8 primary does not intercept. select_focus_claim (lines 1067–1069) places claim in t9_ready queue (priority over regular pool). T9 fires in next focused iteration given S_k. Code refs: lines 875–896 (T7), 926–981 (T9), 1010 (T7 guard), 1014–1017 (T9 guard), 1053–1077.",
+        "code_references": "lines 875–896 (T7), 926–981 (T9), 1010 (T7 guard), 1014–1017 (T9 guard), 1053–1077 (select_focus_claim T9-ready prioritization)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T7 fires first at position 7 (preempting T9 at position 9), sets qualifier!={}, then T9 fires on next iteration when S_k={branch_open==True, all_children_supported} holds. Spec-side mechanism (qualifier!={} removes T7 preemption) identical to code-side."
+    },
+    {
+      "producer": "T9",
+      "receiver": "T8",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): synthesis claim is selected as focus (unsealed, enters regular pool after T9)"
+        ],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec describes T9 as producing a synthesis claim (status='supported', confidence>=0.82). T8 spec intrinsic (status='supported' AND confidence>0.8) is directly satisfied by T9 spec output. Whether spec recognizes synthesis claims as automatically satisfying T8 independent of the code-side synthesis bypass is not explicitly stated. Per Memo v3 SP-3 Type D (relational shortcut), classified as state-dep-causal rather than strict-derived to acknowledge the E(t) focus selection condition.",
+        "implication_chain_summary": "T9 spec output (Path A): synthesis claim with status='supported' and confidence>=0.82>0.8 directly satisfies T8 spec intrinsic. T9 fires only after parent qualifier!={} is established (T7 fires at position 7 before T9 at position 9 when qualifier=={}), so synthesis inherits qualifier!={} — T7 does not preempt T8 on synthesis claim. After T9: synthesis claim is unsealed, enters focus pool. T8 fires when synthesis claim is focused. S_k={synthesis claim focused} is an E(t) condition. State-dep-causal per SP-3 Type D."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "E(t): synthesis claim is selected as focus (unsealed, in regular pool)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T9 Path A (lines 926–981): synthesis claim created with is_synthesis=True. T9 Path B (_apply_antidelphi_state_change lines 344–373): role-generated claims post-hoc set is_synthesis=True. select_operation synthesis bypass (lines 995–996): 'if claim.is_synthesis: return T8' — fires at position 0 before any other check. No operator preempts synthesis bypass (it is position 0). S_k={synthesis claim focused}: once in focus pool (unsealed, default sealed=False), claim is eventually selected; T8 fires unconditionally on it. Per SP-3 classification: state-dep-causal via T9 Output Contract. Code refs: lines 926–981 (T9), 899–904 (T8), 995–996 (synthesis bypass), 344–373 (_apply_antidelphi_state_change).",
+        "code_references": "lines 926–981 (T9), 899–904 (T8), 995–996 (synthesis bypass), 344–373 (_apply_antidelphi_state_change)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides state-dep-causal with S_k={synthesis claim focused}. Spec-side via T8 intrinsic (status='supported', confidence>=0.82); code-side via synthesis bypass (is_synthesis=True, position 0). Mechanisms differ but derivability class is the same. uncertainty_flag reflects spec_underspecified on synthesis bypass vs intrinsic distinction. Per Memo v3 SP-3 Type D."
+    }
+  ],
+  "summary": {
+    "cells_count": 7,
+    "spec_class_distribution": {
+      "strict-derived": 0,
+      "guard-derived": 0,
+      "state-dependent-causal": 5,
+      "not-derived": 2
+    },
+    "code_class_distribution": {
+      "strict-derived": 0,
+      "guard-derived": 0,
+      "state-dependent-causal": 7,
+      "not-derived": 0
+    },
+    "divergent_cells": ["T6→T8", "T6→T9", "T7→T8"],
+    "key_findings": [
+      "T6→T8 and T6→T9 are divergent: T6 spec output = evidence_refs grew only; the (code:) predicates (status='supported', confidence>=0.82) that enable T8 and T9 are absent from the spec. Spec-side: not-derived. Code-side: state-dep-causal.",
+      "T7→T8 is divergent (Drei-Fall canonical cascade): spec-side requires confidence>0.8 pre-T7 as a pre-existing condition (T7 qualifier output causally irrelevant to T8); code-side only requires confidence∈(0.75,0.80] because T7's confidence boost (+0.05) is the enabling predicate crossing the T8 threshold.",
+      "T9→T8 is state-dep-causal (not strict-derived): S_k={synthesis claim focused (E(t))}. Per Memo v3 SP-3 Type D (relational shortcut). Spec-side via T8 intrinsic; code-side via synthesis bypass at position 0. Both aligned.",
+      "T6→T7 is aligned: T6 spec output (evidence_refs grew, 'T6' in history) removes T6's own preemption and T3's preemption; T7 fires when qualifier=={} (E(t) S_k). Spec-side correctly excludes T6 status/confidence mutations.",
+      "T7→T6 and T7→T9 are aligned state-dep-causal: T7 qualifier output removes T7's position-7 preemption in both cases.",
+      "Phase 2c root cause of 3 divergences: canonical predicates for T6 and T7 explicitly bracket status/confidence mutations as (code:), making those predicates spec-excluded. The first-pass analysis incorrectly applied code-only predicates to spec-side chains."
+    ]
+  }
+}

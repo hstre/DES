@@ -1,0 +1,408 @@
+{
+  "version": "0.1",
+  "date": "2026-05-11",
+  "phase": "final-aggregation",
+  "source_phases": [
+    "cascade_map_triage_v0-1.json",
+    "cascade_map_phase2a_v0-1.json",
+    "cascade_map_phase2b_v0-1.json",
+    "cascade_map_phase2c_v0-1.json"
+  ],
+  "predicate_baseline": "Amendment Plan v1.1 canonical predicates; code from des.py",
+  "derivability_class_definitions": {
+    "strict-derived": "O_i ⊨ G_j AND Σ guarantees T_j selection",
+    "guard-derived": "O_i ⊨ G_j but selection not guaranteed",
+    "state-dependent-causal": "(O_i ∧ S_k) ⊨ G_j; requires additional state condition S_k",
+    "not-derived": "no consistent implication chain from O_i to G_j"
+  },
+  "selection_status_values": ["guaranteed", "not_guaranteed", "preempted", "unclear", "not_applicable"],
+  "consistency_values": {
+    "trivial": "Phase 1 triage: trivial-not-derived; no Phase 2 analysis needed",
+    "aligned": "Spec-side and code-side reach same derivability class",
+    "divergent": "Spec-side and code-side diverge in derivability class or selection_status"
+  },
+  "cells": [
+    {"producer":"T1","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 outputs status='disputed'; T1 requires status='contradicted' — own output violates guard."},
+    {"producer":"T1","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 sets conflict=False; T2 requires conflict=True — no T1 output produces conflict=True."},
+    {
+      "producer":"T1","receiver":"T3","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality != 'established'"]},
+      "consistency":"divergent","divergence_type":"class_mismatch",
+      "source_phase":"2a",
+      "brief_note":"Spec (charitable): T1 B-branches default to modality='hypothesis', satisfying T3 guard — guard-derived. Code: LLM could return 'established', requiring M(t) S_k — state-dep-causal."
+    },
+    {"producer":"T1","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 creates branches with non-empty scope and status='hypothesis'; T4 requires scope={} or underspecified — neither satisfied."},
+    {
+      "producer":"T1","receiver":"T5","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality=='established'","M(t): branch.confidence<0.4"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality=='established'","M(t): branch.confidence<0.4"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T1 B-branches: T3 preempts unless modality='established'; with established+confidence<0.4, T5 fires. Both M(t) conditions. state-dep-causal aligned."
+    },
+    {
+      "producer":"T1","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T3 structurally preempts T6 on T1 B-branches (evidence_refs=[]); escaping T3 requires modality='established', which blocks T6 (requires 'hypothesis'). Mutual exclusion."
+    },
+    {
+      "producer":"T1","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality=='established'","M(t): branch.confidence>=0.4"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): branch.modality=='established'","M(t): branch.confidence>=0.4 (default 0.5 satisfies)"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T1 B-branches have qualifier={} and scope!={} (satisfying T7 guard), but T3 preempts. S_k: modality='established' (blocks T3) + confidence>=0.4 (blocks T5). state-dep-causal aligned."
+    },
+    {"producer":"T1","receiver":"T8","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 outputs status='disputed'/'hypothesis'; T8 requires status='supported' — not produced."},
+    {"producer":"T1","receiver":"T9","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T1 creates branches with status='hypothesis'; T9 requires all branches status='supported' — not satisfied immediately after T1."},
+
+    {"producer":"T2","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T2 outputs status='disputed'; T1 requires status='contradicted' — not produced."},
+    {"producer":"T2","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T2 sets conflict=False; T2 requires conflict=True — self-cascade blocked by own output."},
+    {"producer":"T2","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T2 appends to evidence_refs (non-empty); T3 requires evidence_refs==[] — violated on same claim."},
+    {
+      "producer":"T2","receiver":"T4","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): claim.scope=={}"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): claim.scope=={}"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T2 clears conflict (unlock pattern); T4 fires on pre-existing scope=={} condition. Selection guaranteed given S_k. state-dep-causal aligned."
+    },
+    {
+      "producer":"T2","receiver":"T5","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): confidence<0.4","G(t): scope!={}"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): confidence<0.4","G(t): scope!={}","G(t): status!='underspecified'"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T2 clears conflict; T5 fires on pre-existing confidence<0.4 with evidence_refs!=[] (T3 blocked) and scope!={} (T4 blocked). state-dep-causal aligned."
+    },
+    {
+      "producer":"T2","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): modality=='hypothesis'","G(t): confidence>0.6","G(t): status!='supported'"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): modality=='hypothesis'","G(t): confidence>0.6","G(t): status!='supported'","G(t): 'T6' not in history"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T2 clears conflict (unlock); T6 primary fires on pre-existing modality='hypothesis'+confidence>0.6 conditions. state-dep-causal aligned."
+    },
+    {
+      "producer":"T2","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): qualifier=={}","G(t): scope!={}","G(t): confidence in [0.4,0.6]"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): qualifier=={}","G(t): scope!={}","G(t): confidence in [0.4,0.6] (prevents T6 primary preemption)"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T2 clears conflict; T7 fires on pre-existing qualifier=={}, scope!={}, confidence in range avoiding T5/T6 preemption. state-dep-causal aligned."
+    },
+    {"producer":"T2","receiver":"T8","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T2 outputs status='disputed'; T8 requires status='supported' — not produced."},
+    {
+      "producer":"T2","receiver":"T9","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T2 targets branch_open=False claims (select_focus_claim excludes T9-ready parents from T2); T9 requires branch_open=True. Structural incompatibility. not-derived aligned."
+    },
+
+    {"producer":"T3","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T3 outputs status='disputed'/'supported' (no path produces 'contradicted'); T1 requires status='contradicted'."},
+    {"producer":"T3","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T3 fires when conflict=False (T2 has higher priority); T3 does not set conflict=True; T2 requires conflict=True."},
+    {"producer":"T3","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T3 appends to evidence_refs; T3 requires evidence_refs==[] — self-cascade blocked."},
+    {
+      "producer":"T3","receiver":"T4","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): claim.scope=={}"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): claim.scope=={}"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T3 clears its own evidence guard (unlock pattern); T4 fires on pre-existing scope=={} condition. state-dep-causal aligned."
+    },
+    {
+      "producer":"T3","receiver":"T5","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): confidence<0.4","G(t): scope!={}"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): confidence<0.4","G(t): scope!={}","G(t): status!='underspecified'"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T3 grows evidence (T3 blocked); T5 fires on pre-existing confidence<0.4. state-dep-causal aligned."
+    },
+    {
+      "producer":"T3","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): modality=='hypothesis'","G(t): confidence>0.6","G(t): status!='supported'"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): modality=='hypothesis'","G(t): confidence>0.6","G(t): status!='supported'","G(t): 'T6' not in history"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T3 grows evidence (unlock); T6 primary fires on pre-existing modality='hypothesis'+confidence>0.6. state-dep-causal aligned."
+    },
+    {
+      "producer":"T3","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): qualifier=={}","G(t): scope!={}","G(t): confidence in [0.4,0.6]"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): qualifier=={}","G(t): scope!={}","G(t): confidence in [0.4,0.6] (prevents T6 primary preemption)"]},
+      "consistency":"aligned","source_phase":"2a",
+      "brief_note":"T3 grows evidence (unlock); T7 fires on pre-existing qualifier=={}, scope!={}, confidence range. state-dep-causal aligned."
+    },
+    {
+      "producer":"T3","receiver":"T8","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): branch.scope!={}","M(t): branch.qualifier!={} (prevents T7 preemption)"]},
+      "consistency":"divergent","divergence_type":"class_mismatch",
+      "source_phase":"2a",
+      "brief_note":"Spec: T3 spec output doesn't produce status='supported'; T8 guard unmet — not-derived. Code: T3 Path B I2 fallback (undocumented_extension) sets status='supported'+confidence=0.85 directly enabling T8 primary — state-dep-causal."
+    },
+    {
+      "producer":"T3","receiver":"T9","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["G(t): P.branch_open==True","G(t): all other P-branches status=='supported'","G(t): B_j.status=='supported' from external source (NOT from T3 spec output)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["G(t): P.branch_open==True","G(t): all other P-branches status=='supported'"]},
+      "consistency":"divergent","divergence_type":"selection_status_and_s_k_attribution",
+      "source_phase":"2a",
+      "brief_note":"Code: T3 I2 fallback is the enabling predicate (sets B.status='supported'); T9-ready priority guarantees selection. Spec: I2 absent — T3 spec doesn't produce the enabling predicate; cascade causally empty spec-side."
+    },
+
+    {"producer":"T4","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 creates subclaims with status='unknown' and seals parent as 'supported'; T1 requires 'contradicted' — not produced."},
+    {"producer":"T4","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 doesn't set conflict=True on any claim; T2 requires conflict=True."},
+    {
+      "producer":"T4","receiver":"T3","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): subclaim.modality!='established' (LLM could return 'established')"]},
+      "consistency":"divergent","divergence_type":"class_mismatch",
+      "source_phase":"2b",
+      "brief_note":"Spec (charitable): T4 subclaims default to modality='hypothesis', satisfying T3 guard — guard-derived. Code: LLM may return 'established', requiring M(t) S_k — state-dep-causal. Same pattern as T1→T3."
+    },
+    {
+      "producer":"T4","receiver":"T4","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.scope=={}","M(t): subclaim.modality=='established' (blocks T3 preemption)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.scope=={}","M(t): subclaim.modality=='established'"]},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T4 subclaims have status='unknown' (never 'underspecified'); self-cascade requires scope=={} AND modality='established' (blocks T3). Both M(t). state-dep-causal aligned."
+    },
+    {
+      "producer":"T4","receiver":"T5","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.modality=='established'","M(t): subclaim.confidence<0.4"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.modality=='established'","M(t): subclaim.confidence<0.4 (default 0.5 fails)"]},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T4 subclaims: T3 preempts unless modality='established'; with confidence<0.4, T5 fires. Both M(t) (non-default values). state-dep-causal aligned."
+    },
+    {
+      "producer":"T4","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T3/modality mutual exclusion: T3 preempts T6 on evidence_refs=[]; escaping T3 requires modality='established', which blocks T6 (requires 'hypothesis'). not-derived aligned."
+    },
+    {
+      "producer":"T4","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.modality=='established'","M(t): subclaim.confidence>=0.4 (default 0.5 satisfies)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["M(t): subclaim.modality=='established'","M(t): subclaim.confidence>=0.4 (default 0.5 satisfies)"]},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T4 subclaims have qualifier={} and non-empty scope; T3 preempts unless modality='established'. With established+confidence>=0.4, T7 fires. state-dep-causal aligned."
+    },
+    {"producer":"T4","receiver":"T8","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 subclaims have status='unknown'; T8 requires status='supported'. Parent sealed by T4 (I1); synthesis bypass fires on is_synthesis=False claims but T4 parent is sealed."},
+    {"producer":"T4","receiver":"T9","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T4 does not set branch_open=True; T9 requires branch_open=True."},
+
+    {
+      "producer":"T5","receiver":"T1","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): check_for_contradiction returns True (status='contradicted')"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["M(t): check_for_contradiction(claim, counter) returns True → claim.status='contradicted'"]},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 sets status='contradicted' when check_for_contradiction passes (M(t)), enabling T1 in next iteration. state-dep-causal aligned. Previously analyzed in composition_derivation_check_v0-1.json."
+    },
+    {
+      "producer":"T5","receiver":"T2","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "code_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 unconditionally sets conflict=True (code: line 457), directly satisfying T2 guard. T1 preempts when status='contradicted'; selection not_guaranteed. guard-derived aligned."
+    },
+    {
+      "producer":"T5","receiver":"T3","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "code_side":{"derivability_class":"guard-derived","selection_status":"not_guaranteed"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 hardcodes CC.modality='hypothesis' (code: line ~444); CC.evidence_refs=[] (new claim). T3 guard (evidence_refs==[] AND modality!='established') directly satisfied. guard-derived aligned."
+    },
+    {
+      "producer":"T5","receiver":"T4","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 priority invariant: T5 fires only when scope!={} (T4 fires first when scope=={}). T4 requires scope=={}: T5 existence implies scope!={}, blocking T4. not-derived aligned."
+    },
+    {"producer":"T5","receiver":"T5","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T5 boosts confidence to >=0.42; T5 requires confidence<0.4 — self-cascade blocked."},
+    {
+      "producer":"T5","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 sets conflict=True; T6 requires conflict=False. T2 at CRITICAL priority immediately preempts T6. not-derived aligned."
+    },
+    {
+      "producer":"T5","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 sets conflict=True; T7 requires conflict=False. T2 preempts T7. not-derived aligned."
+    },
+    {"producer":"T5","receiver":"T8","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T5 outputs status='contradicted'/'disputed'; T8 requires status='supported' — not produced."},
+    {
+      "producer":"T5","receiver":"T9","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},
+      "consistency":"aligned","source_phase":"2b",
+      "brief_note":"T5 sets conflict=True; T9 requires branch_open=True (T1-parent type). T2 CRITICAL preempts all operators when conflict=True. T9 cannot fire on T5-modified claim. not-derived aligned."
+    },
+
+    {"producer":"T6","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 outputs status='supported'; T1 requires status='contradicted'."},
+    {"producer":"T6","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 fires when conflict=False; T6 doesn't set conflict=True; T2 requires conflict=True."},
+    {"producer":"T6","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 adds to evidence_refs; T3 requires evidence_refs==[] — violated."},
+    {"producer":"T6","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 fires when scope!={} (T4 preempts when scope=={}); after T6, status='supported'!='underspecified' and scope!={}. T4 guard fails."},
+    {"producer":"T6","receiver":"T5","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 outputs confidence>=0.82; T5 requires confidence<0.4 — strictly violated."},
+    {"producer":"T6","receiver":"T6","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T6 appends 'T6' to history; T6 requires 'T6' not in history — self-cascade blocked."},
+    {
+      "producer":"T6","receiver":"T7","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): qualifier=={} pre-T6 (T6 does not change qualifier)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): qualifier=={} pre-T6"]},
+      "consistency":"aligned","source_phase":"2c",
+      "brief_note":"T6 removes its own history-gate preemption and T3's evidence preemption. Spec-side: T6 does not produce status='supported' — T8 primary spec-blocked; T7 fires when qualifier=={}. Code-side: T6 sets status='supported'+confidence>=0.82; T8 primary code-blocked when qualifier=={} AND scope!={} (NOT-condition false); T7 fires. S_k={qualifier=={}}. state-dep-causal aligned."
+    },
+    {
+      "producer":"T6","receiver":"T8","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable","s_k_components":null},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): qualifier!={} pre-T6 (T6 code does not write qualifier)"]},
+      "consistency":"divergent","divergence_type":"class_mismatch","source_phase":"2c",
+      "brief_note":"Spec: T6 spec output = evidence_refs grew only; (code:) status='supported'+confidence>=0.82 absent from spec. T8 spec intrinsic (status='supported' AND confidence>0.8) not reachable from T6 spec output — not-derived. Code: T6 sets status='supported'+confidence>=0.82; T8 primary fires with S_k={qualifier!={}}. Root cause: (code:) predicates absent from spec."
+    },
+    {
+      "producer":"T6","receiver":"T9","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable","s_k_components":null},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["E(t): claim.parent_id set","E(t): P.branch_open==True","E(t): all other P-children status=='supported'"]},
+      "consistency":"divergent","divergence_type":"class_mismatch","source_phase":"2c",
+      "brief_note":"Spec: T6 spec output (evidence_refs grew) does not produce status='supported' on branch child; T9 'all branches supported' predicate unmet — not-derived. Code: T6 sets child.status='supported'; with S_k, parent becomes T9-ready — state-dep-causal. Same root cause as T6→T8: (code:) status predicate absent from spec."
+    },
+
+    {"producer":"T7","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 fires when status!='contradicted'; T7 doesn't change status; T1 requires 'contradicted' — cannot hold after T7."},
+    {"producer":"T7","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 fires when conflict=False; T7 doesn't set conflict; T2 requires conflict=True."},
+    {"producer":"T7","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 fires when evidence_refs!=[]; T7 doesn't modify evidence_refs; T3 requires evidence_refs==[] — cannot hold after T7."},
+    {"producer":"T7","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 requires scope!={}; T4 preempts when scope=={}; after T7, scope remains non-empty and status unchanged. T4 fails."},
+    {"producer":"T7","receiver":"T5","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 fires when confidence>=0.4; T7 boosts by +0.05; after T7, confidence>=0.45, violating T5's confidence<0.4."},
+    {
+      "producer":"T7","receiver":"T6","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["E(t)/M(t): modality=='hypothesis'","E(t): 'T6' not in history","E(t)/M(t): status!='supported'","E(t)/M(t): confidence∈(0.35,0.60] pre-T7","E(t): branch_open==False (for T6 fallback path)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"not_guaranteed","s_k_components":["E(t)/M(t): modality=='hypothesis'","E(t): 'T6' not in history","E(t)/M(t): status!='supported'","E(t)/M(t): confidence∈(0.35,0.60] pre-T7","E(t): branch_open==False (for T6 fallback path)"]},
+      "consistency":"aligned","source_phase":"2c",
+      "brief_note":"T7 sets qualifier!={}, removing T7 preemption of T6 fallback. Confidence boost can enable T6 primary when pre-T7 confidence∈(0.55,0.60]. state-dep-causal aligned."
+    },
+    {"producer":"T7","receiver":"T7","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T7 sets qualifier!={}; T7 requires qualifier=={} — self-cascade blocked."},
+    {
+      "producer":"T7","receiver":"T8","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t)/M(t): status=='supported'","E(t)/M(t): confidence>0.8 pre-T7 (no spec boost; T8 threshold pre-satisfied)"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t)/M(t): status=='supported'","E(t)/M(t): confidence∈(0.75,0.80] pre-T7 (narrow channel: T7 confidence boost +0.05 crosses T8 threshold)"]},
+      "consistency":"divergent","divergence_type":"s_k_and_causal_mechanism","source_phase":"2c",
+      "brief_note":"Both sides state-dep-causal; S_k and causal mechanism diverge. Spec: T7 qualifier output causally irrelevant to T8; S_k requires confidence>0.8 pre-existing (T7 has no spec-side boost). Code: T7 confidence boost (+0.05) is the enabling predicate in narrow channel confidence∈(0.75,0.80]. Confirmed in composition_derivation_check_v0-1.json as canonical divergent cascade (Drei-Fall)."
+    },
+    {
+      "producer":"T7","receiver":"T9","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): branch_open==True","E(t): all children of claim status=='supported'"]},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): branch_open==True","E(t): all children status=='supported'"]},
+      "consistency":"aligned","source_phase":"2c",
+      "brief_note":"T7 fires at position 7 preempting T9 (position 9) when qualifier=={} AND branch_open. T7 sets qualifier!={}, clears own preemption; T9 fires on next iteration. state-dep-causal aligned."
+    },
+
+    {"producer":"T8","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim (sealed=True); sealed claims excluded from focus by select_focus_claim — no further operator fires."},
+    {"producer":"T8","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T5","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T6","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T7","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T8","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+    {"producer":"T8","receiver":"T9","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T8 seals claim; sealed claims excluded from focus — no further operator fires."},
+
+    {"producer":"T9","receiver":"T1","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 seals parent and creates synthesis with status='supported'; T1 requires 'contradicted' — not produced."},
+    {"producer":"T9","receiver":"T2","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 creates synthesis with conflict=False; T2 requires conflict=True — not produced."},
+    {"producer":"T9","receiver":"T3","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis claim has non-empty evidence_refs; T3 requires evidence_refs==[] — violated."},
+    {"producer":"T9","receiver":"T4","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis claim has is_synthesis=True; T8 synthesis bypass fires before T4 check. Parent sealed."},
+    {"producer":"T9","receiver":"T5","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis has confidence>=0.82; T5 requires confidence<0.4 — strictly violated."},
+    {"producer":"T9","receiver":"T6","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis has modality='suggestion'; T6 requires modality='hypothesis'."},
+    {"producer":"T9","receiver":"T7","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 synthesis has is_synthesis=True; T8 synthesis bypass fires before T7 check."},
+    {
+      "producer":"T9","receiver":"T8","phase1_triage":"non-trivial",
+      "spec_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): synthesis claim selected as focus (unsealed, in regular pool)"],"uncertainty_flag":"spec_underspecified"},
+      "code_side":{"derivability_class":"state-dependent-causal","selection_status":"guaranteed","s_k_components":["E(t): synthesis claim selected as focus (unsealed, in regular pool)"]},
+      "consistency":"aligned","source_phase":"2c",
+      "brief_note":"T9 creates synthesis claim satisfying T8 requirements (spec: status='supported'+confidence>=0.82 → T8 intrinsic; code: is_synthesis=True → T8 synthesis bypass at position 0). S_k={synthesis claim focused (E(t))}. Per Memo v3 SP-3 Type D: state-dep-causal, not strict-derived. Aligned."
+    },
+    {"producer":"T9","receiver":"T9","phase1_triage":"trivial-not-derived","spec_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"code_side":{"derivability_class":"not-derived","selection_status":"not_applicable"},"consistency":"trivial","source_phase":"1","brief_note":"T9 seals parent (the only branch_open claim); synthesis has is_synthesis=True (T8 bypass intercepts). No branch_open=True claim produced."}
+  ],
+  "summary": {
+    "total_cells": 81,
+    "trivial_not_derived_cells": 47,
+    "non_trivial_cells": 34,
+    "non_trivial_breakdown": {
+      "aligned": 27,
+      "divergent": 7
+    },
+    "spec_side_class_distribution": {
+      "strict-derived": 0,
+      "guard-derived": 4,
+      "state-dependent-causal": 20,
+      "not-derived": 10,
+      "trivial-not-derived": 47
+    },
+    "code_side_class_distribution": {
+      "strict-derived": 0,
+      "guard-derived": 2,
+      "state-dependent-causal": 25,
+      "not-derived": 7,
+      "trivial-not-derived": 47
+    },
+    "divergent_cells": [
+      {
+        "cell": "T1→T3",
+        "spec_class": "guard-derived",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "class_mismatch",
+        "root_cause": "Spec silent on branch modality; charitable interpretation assumes 'hypothesis' default. Code: LLM may return 'established'."
+      },
+      {
+        "cell": "T3→T8",
+        "spec_class": "not-derived",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "class_mismatch",
+        "root_cause": "T3 I2 fallback (undocumented_extension) enables T8 at code level; entirely absent from spec."
+      },
+      {
+        "cell": "T3→T9",
+        "spec_class": "state-dependent-causal",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "selection_status_and_s_k_attribution",
+        "root_cause": "Code: T3 I2 is the causal enabler; T9-ready priority guarantees selection. Spec: I2 absent; T3 spec doesn't produce enabling predicate; cascade causally empty spec-side."
+      },
+      {
+        "cell": "T4→T3",
+        "spec_class": "guard-derived",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "class_mismatch",
+        "root_cause": "Same pattern as T1→T3. Spec silent on subclaim modality; code LLM modality is M(t)."
+      },
+      {
+        "cell": "T6→T8",
+        "spec_class": "not-derived",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "class_mismatch",
+        "root_cause": "T6 spec output = evidence_refs grew only; (code:) status='supported'+confidence>=0.82 absent from spec. T8 spec intrinsic not reachable spec-side."
+      },
+      {
+        "cell": "T6→T9",
+        "spec_class": "not-derived",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "class_mismatch",
+        "root_cause": "Same root cause as T6→T8: (code:) status='supported' predicate absent from spec; T9 'all branches supported' unmet spec-side."
+      },
+      {
+        "cell": "T7→T8",
+        "spec_class": "state-dependent-causal",
+        "code_class": "state-dependent-causal",
+        "divergence_type": "s_k_and_causal_mechanism",
+        "root_cause": "Spec: T7 qualifier output causally irrelevant to T8; confidence>0.8 must be pre-existing. Code: T7 confidence boost (+0.05) is the enabling predicate in narrow channel confidence∈(0.75,0.80]. Drei-Fall canonical cascade in composition_derivation_check_v0-1.json."
+      }
+    ],
+    "notable_patterns": [
+      "T8 as producer: all 9 cells trivial-not-derived. T8 seals claims removing them from focus; no downstream cascade possible.",
+      "T9 as producer: 8 of 9 cells trivial-not-derived; only T9→T8 is non-trivial (state-dep-causal, aligned). T9 creates synthesis claim satisfying T8 requirements; S_k={synthesis claim focused}. Per Memo v3 SP-3 Type D, classified state-dep-causal not strict-derived.",
+      "T1/T4 as producers share identical divergence pattern (→T3): spec-silent modality of created claims causes guard-derived (spec) vs state-dependent-causal (code) mismatch.",
+      "T2/T3 as producers share the unlock pattern: they clear their own guard conditions (conflict=True, evidence_refs=[]), revealing pre-existing T4/T5/T6/T7 conditions.",
+      "T5 as producer: conflict=True (→T2 guard-derived) and hardcoded CC.modality='hypothesis' (→T3 guard-derived) are the only guard-derived cells aside from T1/T4→T3.",
+      "T6 (code:) output divergence: T6 spec output = evidence_refs grew only; T6 code additionally produces status='supported'+confidence>=0.82. This causes T6→T8 and T6→T9 to be spec-not-derived vs code-state-dep-causal. T6→T7 remains aligned because spec-side T6 history gate and evidence growth are sufficient to enable T7.",
+      "T7 qualifier-setter pattern: T7's unconditional qualifier!={} output enables three cascades (T6, T8, T9) via different mechanisms. T7→T8 is divergent (Drei-Fall): spec requires confidence>0.8 pre-T7; code exploits confidence boost in narrow channel.",
+      "I2 undocumented_extension (T3 Path B fallback) is the root cause of both T3→T8 and T3→T9 divergences.",
+      "Phase 2c root cause of 3 divergences (T6→T8, T6→T9, T7→T8): canonical predicate (code:) brackets mark T6 status/confidence and T7 confidence boost as code-only, excluded from spec-side analysis."
+    ]
+  }
+}
