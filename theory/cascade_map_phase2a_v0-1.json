@@ -1,0 +1,382 @@
+{
+  "version": "0.1-phase2a",
+  "date": "2026-05-11",
+  "phase": "non-trivial-analysis-T1T2T3",
+  "predicate_baseline": "Amendment Plan v1.1 canonical predicates; code from des.py",
+  "context_state_typing": {
+    "G(t)": "ClaimGraph state (claims, attributes, relations)",
+    "E(t)": "Deterministic execution state (insertion-order, focus history, phase)",
+    "M(t)": "Model-outcome state (LLM returns, nondeterministic)"
+  },
+  "cells_analyzed": [
+    {
+      "producer": "T1",
+      "receiver": "T3",
+      "spec_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Classification depends on the charitable interpretation that new B-prefixed branch claims default to modality='hypothesis'. Paper 1 Section 3.3 does not specify branch claim modality. Under the alternative interpretation that spec is silent on the modality of created branch claims, this cell would be not-derived (T3's intrinsic guard could not be confirmed satisfied spec-side). The code-side LLM-returned modality (via b.get('modality', 'hypothesis')) makes this divergent regardless of the spec interpretation choice.",
+        "implication_chain_summary": "T1 spec creates two B-branches with empty evidence (new claims). T3 spec guard: no evidence + not established. Under charitable interpretation (branch modality defaults to 'hypothesis'), T1's output directly implies T3's guard on each B-branch — guard-derived. Selection is not_guaranteed: parent is excluded from focus (branch_open=True, branches not all supported); B-branches compete with other regular claims in insertion order (E(t))."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): branch.modality != 'established' (LLM-returned or default 'hypothesis')"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T1 code (lines 578–643) creates B-branches with modality=b.get('modality','hypothesis'). LLM could return 'established', blocking T3 (line 1001 requires modality!='established'). S_k = {M(t): branch.modality!='established'} required. In the common case (LLM returns 'hypothesis'), T3 fires on the first focused B-branch. Selection not_guaranteed: focus assignment to a specific B-branch depends on E(t) insertion order and graph size.",
+        "code_references": "lines 578–643 (T1), 670–685 (T3), 1001 (select_operation T3 guard), 1063–1071 (select_focus_claim)"
+      },
+      "consistency": "divergent",
+      "rationale": "Spec-side guard-derived (charitable: new branches default to modality='hypothesis'); code-side state-dependent-causal (LLM may return 'established', requiring M(t) S_k). Divergence maps to spec_silent on branch modality in discrepancy matrix."
+    },
+    {
+      "producer": "T1",
+      "receiver": "T5",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): branch.modality == 'established' (blocks T3 preemption)", "M(t): branch.confidence < 0.4"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on branch modality and confidence. Both S_k conditions require M(t) state not specifiable from canonical predicates.",
+        "implication_chain_summary": "T1 creates B-branches; T3 (HIGH) preempts T5 (MEDIUM) on all branches with evidence_refs=[]. Spec guard escape: branch.modality='established' blocks T3 (T3 requires modality!='established'). With modality='established' and confidence<0.4, T5 fires. Both S_k conditions are M(t) and spec-silent. Selection not_guaranteed: depends on E(t) focus assignment among B-branches and other regular claims."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): branch.modality == 'established' (LLM-returned non-default)", "M(t): branch.confidence < 0.4 (LLM-returned; default 0.5 fails this)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T1 creates branches with modality=LLM/'hypothesis' (default) and confidence=LLM/0.5 (default). Default confidence 0.5 ≥ 0.4; T5 guard requires <0.4. For T5 to fire before T3: LLM must return modality='established' (blocks T3 at line 1001) AND confidence<0.4. With both: T4 blocked (status='hypothesis', scope≠{}), T5 fires (line 1005). Both conditions are LLM-dependent M(t) state.",
+        "code_references": "lines 578–643 (T1 branch creation), 601–612 (branch confidence/modality), 1001 (T3 guard), 1005 (T5 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides require identical M(t) S_k (modality='established' + confidence<0.4). Spec uncertainty reflects spec silence on branch properties; code confirms LLM-dependence of both conditions."
+    },
+    {
+      "producer": "T1",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T1 creates B-branches with evidence_refs=[]. T3 (HIGH) always preempts T6 (MEDIUM) on these branches because evidence_refs=[]. Escaping T3 requires branch.modality='established', which simultaneously blocks T6 (T6 requires modality='hypothesis'). Parent is excluded from focus (branch_open=True). No implication chain from T1's output to T6. Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T1 creates B-branches with evidence_refs=[] (default). T3 guard (line 1001) fires on evidence_refs=[] at priority HIGH (3rd). T6 primary (line 1007–1009) is 6th. To avoid T3: modality='established'; but T6 requires modality='hypothesis' — mutually exclusive. Parent excluded from focus (select_focus_claim lines 1063–1071). Not-derived on both T1-created claims and parent.",
+        "code_references": "lines 578–643 (T1), 1001 (T3 guard), 1007–1009 (T6 primary), 1063–1071 (focus exclusion)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T3 structurally preempts T6 on T1 B-branches; modality escape blocks T6 simultaneously. Phase 1 conservative classification; Phase 2 concludes not-derived."
+    },
+    {
+      "producer": "T1",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): branch.modality == 'established' (blocks T3 preemption)", "M(t): branch.confidence >= 0.4 (blocks T5 preemption)"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on branch modality and confidence. T7 guard predicates (qualifier={}, scope≠{}) are structurally satisfied by T1 output, but T3 preempts unless modality='established'.",
+        "implication_chain_summary": "T1 spec branches create claims with no qualifier (implied: new claims) and scope≠{} (inherited). T7 spec guard: no qualifier + has scope — structurally satisfied by T1 output. However T3 spec (HIGH) preempts T7 (LOW) on evidence_refs=[]. S_k = {modality='established' (blocks T3), confidence≥0.4 (blocks T5)}. Both are M(t)/spec_silent. State-dependent-causal."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): branch.modality == 'established' (LLM-returned, non-default)", "M(t): branch.confidence >= 0.4 (default 0.5 satisfies; LLM could return <0.4)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T1 creates B-branches with qualifier={} (Claim default) and scope≠{} (lines 580–582). T7 guard (line 1010): qualifier=={} AND scope!={} — both guaranteed by T1. T3 (line 1001) preempts T7; bypass: LLM returns modality='established'. With modality='established' and confidence≥0.4 (default 0.5 satisfies): T4 blocked (status='hypothesis', scope≠{}), T6 blocked (requires 'hypothesis'), T7 fires. Focus assignment E(t)-dependent.",
+        "code_references": "lines 578–643 (T1), 580–582 (branch scope guarantee), 1001 (T3 guard), 1010 (T7 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: same M(t) S_k (modality='established', confidence≥0.4). Default branch confidence (0.5) satisfies the confidence condition; modality='established' is the sole non-default requirement."
+    },
+    {
+      "producer": "T2",
+      "receiver": "T4",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): claim.scope == {} (pre-existing, unchanged by T2)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 spec clears conflict annotation and marks claim disputed. T4 spec guard: scope={} or underspec. T2 does not produce scope={} or underspecified status; it clears conflict=True, removing T2's own preemption. With S_k={scope=={}}: after T2, T3 blocked (evidence_refs≠[]), T4 fires. Selection guaranteed: no higher-priority operator preempts T4 in this state."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): claim.scope == {} (pre-existing)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 code (lines 646–667) sets conflict=False (line 664), appends to evidence_refs (line 662), sets status='disputed'. T4 guard (line 1003): status=='underspecified' OR scope=={}. After T2: T1 blocked (not contradicted), T2 blocked (conflict=False), T3 blocked (evidence_refs≠[]), T4 fires if scope=={} pre-existing. Selection guaranteed.",
+        "code_references": "lines 646–667 (T2), 1003 (T4 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T2 clears conflict (unlock), T4 fires on pre-existing G(t) scope={}. Uniform unlock pattern; no divergence."
+    },
+    {
+      "producer": "T2",
+      "receiver": "T5",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): confidence < 0.4 (pre-existing)", "G(t): scope != {} (prevents T4 preemption)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 clears conflict. T5 spec guard: confidence<0.4. T2 doesn't change confidence; pre-existing confidence<0.4 remains. After T2: T3 blocked (evidence_refs≠[]), T4 blocked (scope≠{}), T5 fires. Selection guaranteed given S_k."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): confidence < 0.4 (pre-existing)", "G(t): scope != {}", "G(t): status != 'underspecified'"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 code sets conflict=False (line 664), adds evidence_refs (line 662). T5 guard (line 1005): confidence<0.4 AND status!='contradicted'. After T2: status='disputed' (not contradicted); confidence unchanged (T2 doesn't mutate confidence); T3 blocked (evidence_refs≠[]); T4 blocked (scope≠{}); T5 fires deterministically.",
+        "code_references": "lines 646–667 (T2), 1005 (T5 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Identical unlock pattern in spec and code. T2 clears conflict; T5's pre-existing confidence<0.4 guard fires."
+    },
+    {
+      "producer": "T2",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): modality == 'hypothesis'", "G(t): confidence > 0.6", "G(t): status != 'supported'"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "T6 status!='supported' constraint and 'T6' not in history gate are spec_silent. Under charitable interpretation these are satisfied (claim is 'disputed', T6 hasn't fired).",
+        "implication_chain_summary": "T2 clears conflict. T6 spec guard: hypothesis + confidence>0.6. T2 doesn't change modality or confidence; pre-existing conditions remain. After T2: T3 blocked (evidence_refs≠[]), T4/T5 blocked (confidence>0.6≥0.4, scope≠{}), T6 fires. Spec uncertainty: status!='supported' and history gate spec_silent but charitably satisfied."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): modality == 'hypothesis'", "G(t): confidence > 0.6", "G(t): status != 'supported'", "G(t): 'T6' not in history"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 sets conflict=False (line 664), adds evidence_refs (line 662). T6 primary (lines 1007–1009): modality=='hypothesis' AND confidence>0.6 AND status!='supported' AND 'T6' not in history. T2 doesn't modify modality, confidence, or history. After T2: T3 blocked; T4/T5 blocked; T6 primary fires. Selection guaranteed.",
+        "code_references": "lines 646–667 (T2), 1007–1009 (T6 primary)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T2 unlocks T6's pre-existing G(t) conditions. Code adds 'T6 not in history' to S_k (spec_silent); tightening, not contradiction."
+    },
+    {
+      "producer": "T2",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): qualifier == {}", "G(t): scope != {}", "G(t): confidence in [0.4, 0.6] (avoids T5 and T6 primary)"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "T6 priority and confidence thresholds are spec_silent; cannot determine from spec whether T6 preempts T7 when confidence>0.6.",
+        "implication_chain_summary": "T2 clears conflict. T7 spec guard: no qualifier + has scope. T2 doesn't change qualifier or scope; pre-existing conditions remain. After T2: T3 blocked (evidence_refs≠[]); T4 blocked (scope≠{}); T5 blocked (confidence≥0.4); T6 blocked (confidence≤0.6); T7 fires. Spec uncertainty: T6/T7 priority relationship spec_silent."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): qualifier == {}", "G(t): scope != {}", "G(t): confidence in [0.4, 0.6] (or modality!='hypothesis' or status=='supported', to prevent T6 primary)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 sets conflict=False (line 664), adds evidence_refs (line 662). T7 guard (line 1010): qualifier=={} AND scope!={} — unchanged by T2. After T2: T3 blocked (evidence_refs≠[]); T4 blocked (scope≠{}); T5 blocked (confidence≥0.4); T6 primary blocked (confidence≤0.6); T7 fires. Selection guaranteed.",
+        "code_references": "lines 646–667 (T2), 1007–1009 (T6 primary check), 1010 (T7 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Identical S_k structure on both sides. Spec uncertainty about T6 priority resolved by code confidence range; no functional divergence."
+    },
+    {
+      "producer": "T2",
+      "receiver": "T9",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T2 spec fires on conflict claims and marks them disputed. T9 spec guard requires branch_open==True. T2 does not set branch_open=True. No T2-produced predicate satisfies T9's guard on the same claim. Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "select_focus_claim (lines 1063–1071) excludes branch_open=True parents from focus unless all branches supported; if all supported, T9 fires directly (t9_ready priority). Thus T2 cannot fire on a branch_open=True parent. T2 fires on branch_open=False claims and does not mutate branch_open. After T2: branch_open=False → T9 guard fails. Not-derived.",
+        "code_references": "lines 646–667 (T2), 1014–1017 (T9 guard), 1063–1071 (focus exclusion)"
+      },
+      "consistency": "aligned",
+      "rationale": "Structural incompatibility: T2 targets branch_open=False claims; T9 requires branch_open=True. Phase 1 conservative; Phase 2 concludes not-derived."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T4",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): claim.scope == {} (pre-existing, unchanged by T3)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 spec fires on no-evidence claims, adding evidence. T4 spec guard: scope={} or underspec. T3 doesn't produce scope={} or underspecified status; it clears its own guard (evidence_refs grows). With S_k={scope=={}}: after T3, T3 blocked (evidence_refs≠[]), T4 fires. Selection guaranteed."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): claim.scope == {} (pre-existing)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path A (lines 670–685) appends to evidence_refs (line 673). T4 guard (line 1003): status=='underspecified' OR scope=={}. After T3: T3 blocked (evidence_refs≠[]); T4 fires if scope=={} pre-existing. T3 doesn't change scope. Selection guaranteed given S_k.",
+        "code_references": "lines 670–685 (T3 Path A), 1003 (T4 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "T3 clears its own evidence preemption, revealing T4's scope={} condition. Structurally identical to T2→T4 unlock pattern."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T5",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): confidence < 0.4", "G(t): scope != {} (prevents T4 preemption)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 grows evidence. T5 spec guard: confidence<0.4. T3 doesn't change confidence; if confidence<0.4 existed, it remains. After T3: T3 blocked (evidence_refs≠[]), T4 blocked (scope≠{}), T5 fires. Selection guaranteed given S_k."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): confidence < 0.4", "G(t): scope != {}", "G(t): status != 'underspecified'"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path A (lines 670–685) appends evidence. simulate_evidence (lines 458–467) does not change confidence. T5 guard (line 1005): confidence<0.4 AND status!='contradicted'. After T3: evidence_refs≠[] (T3 blocked); T4 blocked (scope≠{}); T5 fires if confidence<0.4 pre-existed.",
+        "code_references": "lines 670–685 (T3 Path A), 458–467 (simulate_evidence — no confidence mutation), 1005 (T5 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "T3 clears evidence preemption; T5's pre-existing confidence<0.4 fires. Identical unlock pattern."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): modality == 'hypothesis'", "G(t): confidence > 0.6", "G(t): status != 'supported'"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "T6 history gate and status!='supported' constraint spec_silent; charitably assumed satisfied.",
+        "implication_chain_summary": "T3 grows evidence. T6 spec guard: hypothesis + confidence>0.6. T3 doesn't change modality or confidence. After T3: T3 blocked (evidence_refs≠[]), T4/T5 blocked, T6 fires. Spec uncertainty: status!='supported' and history gate spec_silent."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): modality == 'hypothesis'", "G(t): confidence > 0.6", "G(t): status != 'supported'", "G(t): 'T6' not in history"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path A (lines 670–685) grows evidence_refs. T6 primary (lines 1007–1009): modality=='hypothesis' AND confidence>0.6 AND status!='supported' AND 'T6' not in history. T3 doesn't modify modality, confidence, or history. After T3: T3 blocked; T4/T5 blocked; T6 primary fires. Selection guaranteed.",
+        "code_references": "lines 670–685 (T3), 1007–1009 (T6 primary)"
+      },
+      "consistency": "aligned",
+      "rationale": "T3 clears evidence preemption; T6's pre-existing G(t) conditions fire. Code adds history gate to S_k (spec_silent); tightening, not contradiction."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): qualifier == {}", "G(t): scope != {}", "G(t): confidence in [0.4, 0.6]"],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "T6 vs T7 priority relationship spec_silent; confidence range that allows T7 to fire before T6 is not derivable from spec.",
+        "implication_chain_summary": "T3 grows evidence. T7 spec guard: no qualifier + has scope. T3 doesn't change qualifier or scope. After T3: T3 blocked; T4 blocked (scope≠{}); T5 blocked (confidence≥0.4); T6 blocked (confidence≤0.6); T7 fires. Spec uncertainty: T6/T7 priority spec_silent."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): qualifier == {}", "G(t): scope != {}", "G(t): confidence in [0.4, 0.6] (or modality!='hypothesis' or status=='supported' to avoid T6 primary)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path A grows evidence_refs. T7 guard (line 1010): qualifier=={} AND scope!={} — T3 doesn't modify. After T3: evidence_refs≠[] (T3 blocked); T4 blocked (scope≠{}); T5 blocked (confidence≥0.4); T6 primary blocked (confidence≤0.6); T7 fires. Selection guaranteed.",
+        "code_references": "lines 670–685 (T3), 1007–1009 (T6 primary check), 1010 (T7 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T3 clears evidence preemption; T7's pre-existing conditions fire. Confidence range in S_k resolves T6/T7 priority question."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T8",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": "spec_silent",
+        "uncertainty_note": "T3's B-branch path (I2 fallback: status='supported', confidence=0.85) is classified undocumented_extension in the discrepancy matrix. It is entirely absent from canonical spec predicates. T3 spec output (evidence_refs grew) does not satisfy T8's guard (status='supported' AND confidence>0.8).",
+        "implication_chain_summary": "T3 spec 'simulate retrieval' does not produce status='supported' on any claim. T8 spec guard: supported + conf>0.8. T3's spec-side output (evidence grew) does not satisfy T8's guard on any path. The I2 fallback enabling T8 is an undocumented_extension entirely absent from spec. Not-derived spec-side."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": ["G(t): branch.scope != {} (guaranteed for all T1-created B-branches)", "M(t): branch.qualifier != {} (LLM-returned from T1; prevents T7 preemption at line 1010)"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path B (B-prefixed claims, line 675–676) calls evaluate_branch_claim (lines 470–486). I2 fallback (lines 484–486) sets status='supported' and confidence=0.85 on LLM failure. T8 primary (lines 1012–1013): status=='supported' AND confidence=0.85>0.8 → fires. T7 (line 1010) preempts if qualifier=={}: S_k requires qualifier≠{} (LLM-returned from T1). With qualifier≠{}: T7 skips, T8 fires. Selection guaranteed given S_k.",
+        "code_references": "lines 470–486 (evaluate_branch_claim), 675–676 (T3 Path B call), 1010 (T7 guard), 1012–1013 (T8 primary)"
+      },
+      "consistency": "divergent",
+      "rationale": "Code-side has a real cascade mechanism (T3 I2 → status='supported' → T8). Spec-side has no mechanism (I2 is undocumented_extension, absent from canonical spec predicates). Divergence maps to I2 undocumented_extension in spec_code_discrepancy_matrix_v0-1.md."
+    },
+    {
+      "producer": "T3",
+      "receiver": "T9",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "G(t): P.branch_open == True (set by T1)",
+          "G(t): B_j.parent_id == P.id",
+          "G(t): all other branches of P already status == 'supported'",
+          "G(t): B_j.status == 'supported' — NOT from T3 spec output; must come from unspecified other source"
+        ],
+        "uncertainty_flag": "spec_silent",
+        "uncertainty_note": "T3 spec output (evidence_refs grew) contributes nothing to T9's guard. I2 fallback (the enabling predicate on code-side) is undocumented_extension, absent from spec. Cascade mechanism entirely absent from spec.",
+        "implication_chain_summary": "T3 spec output does not produce status='supported' on B_j. T9 spec guard requires all branches status='supported'. T3's spec-side output cannot satisfy this. The cascade is formally state-dependent-causal but causally empty at spec level: S_k conditions (including B_j.status='supported') must all come from external sources not attributable to T3. Previously analyzed in composition_derivation_check_v0-1.json."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "G(t): P.branch_open == True (set by T1)",
+          "G(t): B_j.parent_id == P.id",
+          "G(t): all other branches of P already status == 'supported' (T3 on B_j is the last step)",
+          "G(t): no interfering C-prefixed claims with parent_id==P.id having status != 'supported'"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T3 Path B I2 fallback (lines 484–486) sets B_j.status='supported' — the enabling predicate. With S_k (all other branches already supported), P becomes T9-ready. select_focus_claim (lines 1073–1074) implements explicit T9-ready priority, guaranteeing P is selected as focus. T9 fires at line 1014–1017. Selection guaranteed by T9-ready priority. Previously analyzed in composition_derivation_check_v0-1.json.",
+        "code_references": "lines 470–486 (evaluate_branch_claim), 675–676 (T3 Path B), 1014–1017 (T9 guard), 1063–1077 (select_focus_claim T9-ready priority)"
+      },
+      "consistency": "divergent",
+      "rationale": "Code-side: T3 I2 provides enabling status='supported'; T9-ready priority guarantees selection. Spec-side: I2 is undocumented_extension; T3 spec output contributes nothing to T9 guard. Divergence maps to I2 undocumented_extension in discrepancy matrix. Previously analyzed in composition_derivation_check_v0-1.json."
+    }
+  ],
+  "summary": {
+    "cells_analyzed": 15,
+    "spec_class_distribution": {
+      "guard-derived": 1,
+      "state-dependent-causal": 9,
+      "not-derived": 5
+    },
+    "code_class_distribution": {
+      "state-dependent-causal": 10,
+      "not-derived": 5
+    },
+    "divergent_cells": ["T1→T3", "T3→T8", "T3→T9"],
+    "uncertainty_flagged_cells": ["T1→T3", "T1→T5", "T1→T7", "T2→T6", "T2→T7", "T3→T6", "T3→T7", "T3→T8", "T3→T9"]
+  }
+}

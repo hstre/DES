@@ -1,0 +1,329 @@
+{
+  "version": "0.1-phase2b",
+  "date": "2026-05-11",
+  "phase": "non-trivial-analysis-T4T5",
+  "predicate_baseline": "Amendment Plan v1.1 canonical predicates; code from des.py",
+  "context_state_typing": {
+    "G(t)": "ClaimGraph state (claims, attributes, relations)",
+    "E(t)": "Deterministic execution state (insertion-order, focus history, phase)",
+    "M(t)": "Model-outcome state (LLM returns, nondeterministic)"
+  },
+  "cells_analyzed": [
+    {
+      "producer": "T4",
+      "receiver": "T3",
+      "spec_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Classification depends on the charitable interpretation that new C-prefixed subclaims default to modality='hypothesis'. Paper 1 Section 3.3 does not specify subclaim modality. Under the alternative interpretation that spec is silent on the modality of created subclaims, this cell would be not-derived (T3's intrinsic guard could not be confirmed satisfied spec-side). The code-side LLM-returned modality (via sc.get('modality', 'hypothesis')) makes this divergent regardless of the spec interpretation choice.",
+        "implication_chain_summary": "T4 spec creates sub-claims with no evidence. T3 spec guard: no evidence + not established. Under charitable interpretation (modality='hypothesis' default), T4 output directly satisfies T3 guard — guard-derived. Spec silent on subclaim modality. Parent excluded from focus (sealed). Selection not_guaranteed: subclaims compete with other regular claims in E(t) insertion order."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": ["M(t): subclaim.modality != 'established' (sc.get('modality','hypothesis'); LLM could return 'established')"],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 code (lines 725–777) creates subclaims with modality=sc.get('modality','hypothesis'). LLM could return 'established', blocking T3 (line 1001 requires modality!='established'). S_k = {M(t): subclaim.modality!='established'} required. With default 'hypothesis', T3 fires on first focused subclaim. Parent sealed (line 774), excluded from focus. Selection not_guaranteed: E(t) insertion order.",
+        "code_references": "lines 725–777 (T4), ~362–369 (subclaim creation), 670–685 (T3), 1001 (T3 guard)"
+      },
+      "consistency": "divergent",
+      "rationale": "Spec-side guard-derived (charitable modality default); code-side state-dependent-causal (LLM modality is M(t)). Same divergence pattern as T1→T3."
+    },
+    {
+      "producer": "T4",
+      "receiver": "T4",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.scope == {} (LLM-returned; default {'domain':'general'} is non-empty)",
+          "M(t): subclaim.modality == 'established' (blocks T3 preemption at position 3)"
+        ],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on subclaim scope and modality. Both S_k conditions require M(t) state not derivable from spec.",
+        "implication_chain_summary": "T4 spec creates sub-claims; spec silent on scope. T4 spec guard: scope=={} or underspec. Subclaims have status='unknown' (hardcoded, not 'underspecified'), so only scope=={} enables T4 re-fire. T3 (position 3) preempts T4 (position 4) unless modality='established'. With S_k={scope=={}, modality='established'}: T3 blocked, T4 fires. Selection guaranteed given S_k."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.scope == {} (LLM must return {} explicitly; sc.get('scope',{'domain':'general'}) defaults to non-empty)",
+          "M(t): subclaim.modality == 'established' (LLM-returned non-default)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 code (lines 362–369) sets subclaim status='unknown' (hardcoded) and scope=sc.get('scope',{'domain':'general'}). T4 guard (line 1003): scope=={} OR status=='underspecified' — only scope=={} reachable. T3 guard (line 1001): fires on evidence_refs==[] if modality!='established'. Both M(t) conditions required. Given S_k, T4 fires at position 4. Selection guaranteed.",
+        "code_references": "lines 725–777 (T4), ~362–369 (subclaim creation), 1001 (T3 guard), 1003 (T4 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides require identical M(t) S_k (scope=={}, modality='established'). Spec uncertainty reflects spec silence on subclaim fields."
+    },
+    {
+      "producer": "T4",
+      "receiver": "T5",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.modality == 'established' (blocks T3 preemption)",
+          "M(t): subclaim.confidence < 0.4 (LLM-returned; default 0.5 fails T5 guard)"
+        ],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on subclaim confidence and modality. Both S_k conditions are spec-silent M(t) requirements.",
+        "implication_chain_summary": "T4 spec creates sub-claims; spec silent on confidence. T5 spec guard: confidence<0.4. Default confidence 0.5 fails; LLM must return <0.4. T3 preempts on evidence_refs=[]; blocked by modality='established'. Default scope non-empty prevents T4 re-fire. With S_k: T5 fires. Selection guaranteed."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.modality == 'established'",
+          "M(t): subclaim.confidence < 0.4 (sc.get('confidence',0.5); default 0.5 >= 0.4)",
+          "G(t): subclaim.scope != {} (typical via default {'domain':'general'}; LLM could return {})"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 creates subclaims with confidence=sc.get('confidence',0.5) and modality=sc.get('modality','hypothesis') (lines 366–368). T3 guard (line 1001) preempts T5 (line 1005) unless modality='established'. T4 re-fire (line 1003) preempts only if scope=={}; default scope non-empty prevents this. With S_k, T5 fires. Selection guaranteed.",
+        "code_references": "lines 725–777 (T4), ~362–369 (subclaim fields), 1001 (T3 guard), 1003 (T4 guard), 1005 (T5 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides require identical M(t) S_k pair. Parallel to T1→T5 and T4→T7 patterns."
+    },
+    {
+      "producer": "T4",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 creates sub-claims with evidence_refs=[]. T3 (HIGH) preempts T6 (MEDIUM) on all sub-claims. Escaping T3 requires modality='established', which simultaneously blocks T6 (requires modality='hypothesis') — mutually exclusive. Parent excluded from focus (sealed). Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 creates subclaims with evidence_refs=[] (default). T3 guard (line 1001) fires at position 3. Blocking T3 requires modality='established'; both T6 primary (line 1007–1009) and fallback (line 1018–1019) require modality='hypothesis' — mutually exclusive. Parent sealed (line 774), excluded from focus. Not-derived.",
+        "code_references": "lines 725–777 (T4), 774 (parent sealed), 1001 (T3 guard), 1007–1009 (T6 primary)"
+      },
+      "consistency": "aligned",
+      "rationale": "Structural modality deadlock (T3 requires not-'established'; T6 requires 'hypothesis'; 'hypothesis' != 'established' but 'established' != 'hypothesis' blocks T6). Identical on both sides."
+    },
+    {
+      "producer": "T4",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.modality == 'established' (blocks T3 preemption)",
+          "M(t): subclaim.confidence >= 0.4 (blocks T5; default 0.5 satisfies)"
+        ],
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on subclaim modality and confidence. T7 guard predicates (qualifier={}, scope≠{}) are structurally satisfied by T4 output; blocking T3 requires M(t) S_k.",
+        "implication_chain_summary": "T4 spec creates sub-claims with implied qualifier={} and scope≠{}. T7 spec guard: no qualifier + has scope — structurally satisfied by T4 output. T3 preempts T7 on evidence_refs=[]. S_k = {modality='established' blocks T3; confidence≥0.4 blocks T5}. Default confidence 0.5 satisfies T5 condition; modality='established' is the sole non-default M(t) requirement. Selection guaranteed given S_k."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "guaranteed",
+        "s_k_components": [
+          "M(t): subclaim.modality == 'established' (LLM-returned non-default)",
+          "M(t): subclaim.confidence >= 0.4 (default 0.5 satisfies)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T4 creates subclaims with qualifier={} (Claim default) and scope={'domain':'general'} (default non-empty, lines 362–369). T7 guard (line 1010): qualifier=={} AND scope!={} — both satisfied. T3 (line 1001) preempts; bypass: modality='established'. T4 re-fire: status='unknown'≠'underspecified', scope≠{} → T4 skips. T6 blocked (modality≠'hypothesis'). T7 fires. Selection guaranteed.",
+        "code_references": "lines 725–777 (T4), ~362–369 (subclaim defaults), 1001 (T3 guard), 1010 (T7 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: same M(t) S_k. Identical pattern to T1→T7. Default confidence satisfies T5-blocking condition."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T1",
+      "spec_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "M(t): check_for_contradiction returns True → parent.status = 'contradicted'",
+          "E(t): parent is selected as focus in next iteration (not CC)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 spec output: parent.status ∈ {contradicted, disputed} (disjunction). T1 spec guard: status=='contradicted'. S_k1 = {status='contradicted'} required; 'disputed' branch fails T1. S_k2 = {parent focused, not CC}; parent precedes CC in insertion order in single-claim graphs. Selection not_guaranteed in multi-claim graphs or when t9_ready claims exist. Pre-analyzed in composition_derivation_check_v0-1.json."
+      },
+      "code_side": {
+        "derivability_class": "state-dependent-causal",
+        "selection_status": "not_guaranteed",
+        "s_k_components": [
+          "M(t): check_for_contradiction(claim, counter) returns True (LLM-dependent; deterministic in double-LLM-failure sub-path where counter_predicate='does not '+claim.predicate and Fallback 1 fires on 'does not' in neg_markers)",
+          "E(t): parent is regular[0] in select_focus_claim (insertion-order; parent precedes CC in state.claims)"
+        ],
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 code (lines 780–843) calls check_for_contradiction (lines 404–435); result determines parent.status. T1 fires (line 997) when status='contradicted'. Parent precedes CC in state.claims insertion order; in single-claim graphs parent = regular[0]. Double-LLM-failure sub-path guarantees S_k1 deterministically. Selection not_guaranteed in multi-claim graphs. Pre-analyzed in composition_derivation_check_v0-1.json.",
+        "code_references": "lines 780–843 (T5), 404–435 (check_for_contradiction), 997 (T1 guard), 1063–1071 (select_focus_claim)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: state-dependent-causal with same S_k structure. Code adds double-fallback deterministic sub-path detail not visible at spec level; class unchanged."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T2",
+      "spec_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 spec output includes setting conflict (implied by 'adversarial challenge creates conflict'). T2 spec guard: conflict==True — directly implied by T5's canonical output. T5 guarantees conflict=True. T1 (CRITICAL, position 1) fires before T2 (position 2) when status='contradicted', preempting T2 in that sub-path. In 'disputed' sub-path, T2 fires. Guard-derived; selection not_guaranteed due to T1 preemption risk."
+      },
+      "code_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 code (line 457) sets claim.conflict=True unconditionally. T2 guard (line 999): claim.conflict==True — directly satisfied by T5's output, no S_k needed. T1 guard (line 997): fires before T2 when status='contradicted'. In 'disputed' sub-path (check_for_contradiction=False): T1 skips, T2 fires. Parent is regular[0] in single-claim graph. Selection not_guaranteed due to T1 preemption.",
+        "code_references": "lines 780–843 (T5), 457 (conflict=True), 997 (T1 guard), 999 (T2 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides guard-derived: T5 unconditionally produces conflict=True satisfying T2's guard. Selection not_guaranteed on both sides due to T1 preemption in 'contradicted' sub-path."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T3",
+      "spec_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": "spec_underspecified",
+        "uncertainty_note": "Spec silent on CC fields (evidence_refs, modality). Charitable: CC has evidence_refs=[] (new claim) and modality!='established'. Under this interpretation, guard-derived. Code confirms modality='hypothesis' is hardcoded.",
+        "implication_chain_summary": "T5 spec creates a counter-claim; spec silent on CC fields. Charitable: CC has evidence_refs=[] and modality!='established'. T3 guard: no evidence + not established — satisfied under charitable interpretation. Guard-derived. Selection not_guaranteed: parent precedes CC in insertion order; T1 or T2 fires on parent first; CC receives focus subsequently."
+      },
+      "code_side": {
+        "derivability_class": "guard-derived",
+        "selection_status": "not_guaranteed",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 code (lines 780–843) creates CC with modality='hypothesis' (hardcoded, ~line 444) and evidence_refs=[] (Claim default). T3 guard (line 1001): evidence_refs==[] AND modality!='established' — both guaranteed by T5's CC creation, no S_k needed. Key distinction from T1→T3 and T4→T3: modality is hardcoded 'hypothesis' (not LLM-determined), making code-side guard-derived definitively. Selection not_guaranteed: parent inserted before CC; parent focused first.",
+        "code_references": "lines 780–843 (T5), ~444 (CC modality hardcoded 'hypothesis'), 670–685 (T3), 1001 (T3 guard)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides guard-derived. T5 hardcodes CC.modality='hypothesis' (unlike T1/T4 which use LLM-returned modality), making code-side definitively guard-derived. Spec-side guard-derived under charitable interpretation."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T4",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 spec guard: confidence<0.4. T4 spec guard: scope=={} or underspec. T4 (HIGH, position 4) precedes T5 (MEDIUM, position 5) in priority chain: if scope=={}, T4 fires instead of T5. When T5 fires, scope≠{} is guaranteed by priority. After T5: parent.scope≠{}, CC.scope=parent.scope≠{}. T4 cannot fire. Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 guard (line 1005) fires only after T4 (line 1003) is checked. If scope=={}: T4 fires first; T5 never fires. When T5 fires, scope≠{} is guaranteed. T5 copies scope to CC: scope=claim.scope.copy() (line ~447) → CC.scope≠{}. parent.status∈{'contradicted','disputed'}≠'underspecified'. T4 guard fails on both. Not-derived.",
+        "code_references": "lines 1003 (T4 guard), 1005 (T5 guard), 780–843 (T5), ~447 (CC scope copy)"
+      },
+      "consistency": "aligned",
+      "rationale": "Both sides: T5 priority chain invariant guarantees scope≠{} when T5 fires. T4 unreachable after T5."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T6",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "Parent after T5: status∈{contradicted,disputed}, conflict=True. T1 preempts T6 when contradicted (CRITICAL); T2 preempts T6 when disputed+conflict=True (CRITICAL). CC: evidence_refs=[], modality='hypothesis'; T3 preempts T6 (HIGH before MEDIUM). No path from T5 output to T6 firing."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "Parent: T1 fires (line 997) when status='contradicted'; T2 fires (line 999) when conflict=True+status='disputed'. CC: T3 fires (line 1001) on evidence_refs=[]+modality='hypothesis'. T6 primary (line 1007–1009) is position 6. No T5-produced claim escapes T1/T2/T3 preemption. Not-derived.",
+        "code_references": "lines 997 (T1), 999 (T2), 1001 (T3), 1007–1009 (T6 primary)"
+      },
+      "consistency": "aligned",
+      "rationale": "Double preemption: T1/T2 on parent (conflict=True), T3 on CC (evidence_refs=[], hardcoded 'hypothesis'). No escape path."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T7",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "Parent after T5: conflict=True. T1 (contradicted) or T2 (conflict=True) preempts T7 (position 7). CC: evidence_refs=[], modality='hypothesis'; T3 preempts T7. No path to T7 from T5 output."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 sets claim.conflict=True (line 457); T2 guard (line 999) fires before T7 (line 1010). CC modality hardcoded 'hypothesis' (no 'established' escape): T3 guard (line 1001) fires before T7 on evidence_refs=[]. T7 cannot fire on any T5-produced claim state. Not-derived.",
+        "code_references": "lines 457 (conflict=True), 999 (T2), 1001 (T3), 1010 (T7)"
+      },
+      "consistency": "aligned",
+      "rationale": "T2 preempts T7 on parent (conflict=True); T3 preempts T7 on CC (hardcoded modality='hypothesis', no 'established' escape). Not-derived."
+    },
+    {
+      "producer": "T5",
+      "receiver": "T9",
+      "spec_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "T5 spec output does not include branch_open=True on any claim. T9 guard requires branch_open=True. T5 fires on branch_open=False claims (branch_open=True parents are focus-excluded). No T5 output predicate satisfies T9's guard. Not-derived."
+      },
+      "code_side": {
+        "derivability_class": "not-derived",
+        "selection_status": "not_applicable",
+        "s_k_components": null,
+        "uncertainty_flag": null,
+        "uncertainty_note": null,
+        "implication_chain_summary": "select_focus_claim (lines 1063–1071) excludes branch_open=True parents from focus unless all children supported; if all supported, T9 fires directly (t9_ready priority, not T5). T5 fires on branch_open=False claims; T5 code (lines 780–843) has no branch_open assignment. CC branch_open=False by default. T9 guard (lines 1014–1017) requires branch_open=True. Not-derived.",
+        "code_references": "lines 780–843 (T5), 1014–1017 (T9 guard), 1063–1071 (focus exclusion)"
+      },
+      "consistency": "aligned",
+      "rationale": "T5 cannot fire on branch_open=True claims and does not produce branch_open=True. Structurally identical to T2→T9."
+    }
+  ],
+  "summary": {
+    "cells_analyzed": 12,
+    "spec_class_distribution": {
+      "guard-derived": 3,
+      "state-dependent-causal": 4,
+      "not-derived": 5
+    },
+    "code_class_distribution": {
+      "guard-derived": 2,
+      "state-dependent-causal": 5,
+      "not-derived": 5
+    },
+    "divergent_cells": ["T4→T3"],
+    "uncertainty_flagged_cells": ["T4→T3", "T4→T4", "T4→T5", "T4→T7", "T5→T3"]
+  }
+}
