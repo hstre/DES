@@ -10,7 +10,7 @@
 ## 1. Legend
 
 | Symbol | Meaning |
-|--------|-------|
+|--------|---------|
 | `—` | Trivial not-derived (Phase 1): incompatibility demonstrable in one sentence |
 | `ND` | Not-derived (Phase 2 confirmed): non-trivial analysis concluded no implication chain |
 | `SD` | State-dependent-causal: (O_i ∧ S_k) ⊨ G_j; additional state condition S_k required |
@@ -100,7 +100,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 | state-dependent-causal | 19 | T1→T5/T7; T2→T4/T5/T6/T7; T3→T4/T5/T6/T7/T9; T4→T4/T5/T7; T5→T1; T6→T7; T7→T6/T8/T9 |
 | not-derived (confirmed) | 10 | T1→T6; T2→T9; T3→T8; T4→T6; T5→T4/T6/T7/T9; T6→T8; T6→T9 |
 
-†spec_underspecified: guard-derived under charitable interpretation; modality='hypothesis' is a Python kwarg default, not a spec-level commitment.
+†spec_underspecified: guard-derived under charitable interpretation; modality='hypothesis' is a Python kwarg default, not a spec-level commitment. Under the alternative interpretation (spec silent on modality of created claims), these cells would be not-derived. T1→T3: Paper 1 Section 3.3 does not specify branch claim modality; b.get('modality','hypothesis') makes the code divergent regardless of spec interpretation. T4→T3: same pattern for subclaims via sc.get('modality','hypothesis').
 
 ### 4.2 Non-trivial cells: code-side class distribution
 
@@ -125,7 +125,7 @@ Rows = producer (T_i); columns = receiver (T_j).
 
 ### 4.4 D-membership, SAR, Divergence Density
 
-**D-membership rule:** strict-derived, guard-derived, state-dependent-causal ∈ D; not-derived ∉ D. Uncertainty flags (spec_underspecified) do not affect D-membership.
+**D-membership rule** (top-level `d_membership_rule` in `cascade_map_9x9_v0-1.json`): strict-derived, guard-derived, state-dependent-causal ∈ D; not-derived ∉ D. Uncertainty flags (spec_underspecified) are informational annotation and do not exclude from D.
 
 | Metric | Value | Formula |
 |--------|-------|---------|
