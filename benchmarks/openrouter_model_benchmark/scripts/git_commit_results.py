@@ -22,12 +22,19 @@ def _run(cmd: list[str]) -> tuple[int, str, str]:
     return result.returncode, result.stdout.strip(), result.stderr.strip()
 
 
-def commit_results(run_count: int, error_count: int, label: str = "") -> bool:
+def commit_results(
+    run_count: int,
+    error_count: int,
+    label: str = "",
+    data_files: list | None = None,
+) -> bool:
     """
     Stage data files and create a local git commit.
     Returns True on success (including nothing-to-commit).
+    data_files overrides TRACKED_FILES when provided.
     """
-    for fpath in TRACKED_FILES:
+    files_to_stage = data_files if data_files is not None else TRACKED_FILES
+    for fpath in [Path(p) for p in files_to_stage]:
         if fpath.exists():
             code, _, err = _run(["git", "add", str(fpath)])
             if code != 0:

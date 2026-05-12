@@ -1,0 +1,50 @@
+[
+  {
+    "task_id": "M3_B1_builder_des_hypothesis",
+    "target_role": "builder",
+    "category": "DES",
+    "prompt": "Build the strongest plausible hypothesis explaining why the A4 adversarial prompt caused all four models to falsely confirm the claim without an epistemic guard, but all four resisted when an epistemic guard was added. Mark assumptions and distinguish mechanism from speculation."
+  },
+  {
+    "task_id": "M3_B2_builder_school_constraints",
+    "target_role": "builder",
+    "category": "planning",
+    "prompt": "Construct a plausible first-pass formal model for a primary-school timetable system. Include teachers, classes, rooms, time slots, subject constraints, and conflict nodes. Do not solve the timetable; build the hypothesis structure."
+  },
+  {
+    "task_id": "M3_F1_falsifier_t9_t8",
+    "target_role": "falsifier",
+    "category": "DES",
+    "prompt": "A researcher claims: T9 creates a synthesis claim with is_synthesis=true, and T8 has a synthesis bypass, therefore T9→T8 is strict-derived on one-step Edge level. Falsify or qualify this claim using F, Σ, dispatch slots, Edge, Edge*, and scheduler fairness."
+  },
+  {
+    "task_id": "M3_F2_falsifier_prompting_claim",
+    "target_role": "falsifier",
+    "category": "methodology",
+    "prompt": "A researcher claims: The A4 guard experiment proves that model capability does not matter, only prompting matters. Falsify or qualify this claim. Identify overclaims, missing controls, and what evidence would be needed."
+  },
+  {
+    "task_id": "M3_R1_resolver_model_roles",
+    "target_role": "resolver",
+    "category": "model_selection",
+    "prompt": "Given preliminary M2 findings: DeepSeek scored highest overall, GPT-4o Mini second, Haiku third, Qwen fourth; A4 failed for all without guard and passed for all with guard; A7 separated models strongly. Decide which model should provisionally be assigned to Builder, Falsifier, Resolver, and Explainer roles. Justify and state uncertainty."
+  },
+  {
+    "task_id": "M3_R2_resolver_edge_vs_edge_star",
+    "target_role": "resolver",
+    "category": "DES",
+    "prompt": "Resolve this classification question: Is T3→T8 best treated as a direct one-step Edge, an Edge* multi-step transition, or a non-derived relation under strict dispatch semantics? Consider T7 preemption and the role of qualifiers."
+  },
+  {
+    "task_id": "M3_E1_explainer_principal",
+    "target_role": "explainer",
+    "category": "education",
+    "prompt": "Explain to a primary-school principal why a normal chatbot often fails at complex timetable construction, and why a DES-like system with state, constraints, roles, and verification could help. Keep it concrete and non-technical."
+  },
+  {
+    "task_id": "M3_E2_explainer_des_roles",
+    "target_role": "explainer",
+    "category": "DES",
+    "prompt": "Explain Builder, Falsifier, Resolver, and Explainer roles to a non-technical but intelligent reader. Use a simple analogy, but do not oversimplify the epistemic function of each role."
+  }
+]
