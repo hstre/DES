@@ -144,6 +144,14 @@ def call_model(
                 f"Network error: {exc} (attempt {attempt + 1})",
             )
             continue
+        except Exception as exc:
+            # Catches http.client.IncompleteRead and other unexpected transport errors
+            latency_ms = int((time.monotonic() - t_start) * 1000)
+            last_error = OpenRouterError(
+                "network_timeout",
+                f"Transport error: {type(exc).__name__}: {exc} (attempt {attempt + 1})",
+            )
+            continue
 
         try:
             data = json.loads(raw_body)
