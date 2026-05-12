@@ -1,0 +1,64 @@
+{
+  "qid": "A2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 962,
+    "completion_tokens": 549,
+    "total_tokens": 1511,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A is more structured and easier to follow with clear sections and confidence scores, while Output B is more narrative but less immediately scannable."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B makes a clear directional claim (0.7 confidence) and then a clear counter-claim, whereas Output A hedges with multiple competing hypotheses and lower confidence on the main claim."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly maintains two competing hypotheses with equal support, revealing a deeper structural contradiction, while Output B identifies a surface-level contradiction but resolves it too quickly."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Output A provides two separate syntheses with explicit confidence but lacks precision in scope-bounding, while Output B offers a single synthesis with moderate precision but does not bound scope conditions."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A surfaces non-obvious tensions (e.g., short-term vs. long-term effects, sector-specific effectiveness) that a domain expert would value, whereas Output B's synthesis is more predictable."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with equal confidence, while Output B collapses the contradiction into a single synthesis without preserving branches."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A provides a detailed claim history with confidence scores and epistemic operations count, while Output B only shows a linear three-step process with no recoverable intermediate states."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly includes scope conditions (e.g., sub-Saharan Africa, health infrastructure, cash transfers) and evidence status, while Output B mentions general issues without specifying scope."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A demonstrates superior epistemic structure with branch preservation, traceability, and scope discipline, outweighing Output B's clearer directional commitment."
+    }
+  }
+}

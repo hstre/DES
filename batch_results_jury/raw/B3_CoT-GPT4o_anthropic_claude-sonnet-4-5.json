@@ -1,0 +1,64 @@
+{
+  "qid": "B3",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1037,
+    "completion_tokens": 557,
+    "total_tokens": 1594,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A uses clear narrative prose with explicit step labels, while Output B's structured format with nested claims and technical notation requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B makes specific falsifiable claims about algorithmic curation and exposure patterns, while Output A retreats to 'it depends' without specifying testable conditions."
+    },
+    "contradiction_depth": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A identifies only surface-level opposition (harmful vs. enhancing), while Output B explores structural tensions like how moderation affects minority expression and confounding variables."
+    },
+    "synthesis_quality": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B bounds its synthesis with specific mechanisms (algorithmic curation, moderation policies) and confidence levels, while Output A lists vague factors without operationalization."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B surfaces non-obvious tensions like the confounding of pre-existing polarization and the paradox of moderation suppressing minority views, while Output A rehearses common talking points."
+    },
+    "branch_preservation": {
+      "DES": 0.85,
+      "CoT": 0.15,
+      "reason": "Output B explicitly maintains competing hypotheses in parallel with equal confidence (0.90 each), while Output A collapses alternatives into a single synthesized position."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides claim counts and operation counts enabling audit of reasoning steps, though Output A's step labels offer some sequential tracking."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output B explicitly marks confidence levels per claim and identifies confounding variables and causal limitations, while Output A makes unqualified assertions about 'factors' without scope conditions."
+    },
+    "overall": {
+      "DES": 0.72,
+      "CoT": 0.28,
+      "reason": "Output B demonstrates superior epistemic rigor through parallel hypothesis maintenance, specific mechanistic claims, and explicit uncertainty quantification, despite lower readability."
+    }
+  }
+}

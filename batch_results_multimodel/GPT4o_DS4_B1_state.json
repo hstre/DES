@@ -1,0 +1,436 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a good measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "is a good measure of",
+      "object": "material output",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material output]"
+      ],
+      "scope": {
+        "domain": "national accounts"
+      },
+      "qualifier": {
+        "temporal": "since 1944",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "neglects to capture",
+      "object": "income inequality and unpaid labor",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality and unpaid labor]"
+      ],
+      "scope": {
+        "domain": "distributional and non-market dimensions"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global, especially in developed economies"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "correlates weakly with",
+      "object": "self-reported life satisfaction in developed nations",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP self-reported life satisfaction in developed nations]"
+      ],
+      "scope": {
+        "domain": "subjective wellbeing"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "underestimates",
+      "object": "environmental degradation costs",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP environmental degradation costs]",
+        "[PATH:empirical] World Bank's Adjusted Net Savings (ANS) data series, which accounts for resource depletion and pollution damages as a percentage of GNI \u2014 ANS directly adjusts GDP-like aggregates for environmental degradation costs, providing a quantitative benchmark to test whether standard GDP underestimates these costs globally since 1990.",
+        "[PATH:literature] Review of national accounts satellite environmental-economic accounts (SEEA) published by UN and national statistical agencies for countries with long time series (e.g., EU, Canada, Australia) \u2014 These accounts compile environmental degradation costs in monetary terms; comparing their reported costs to GDP growth trends can empirically confirm or refute the magnitude of underestimation since 1990.",
+        "[PATH:theoretical] Meta-analysis of empirical studies valuing ecosystem service losses (e.g., Costanza et al., 2014; Dasgupta Review, 2021) and their correlation with GDP changes \u2014 Synthesizing existing valuations of natural capital depreciation provides a theoretical framework to assess whether GDP systematically omits these costs, and to estimate the gap over the specified temporal and geographic scope."
+      ],
+      "scope": {
+        "domain": "national accounts"
+      },
+      "qualifier": {
+        "temporal": "since 1990",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP",
+      "predicate": "is a poor measure of",
+      "object": "material output",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material output]",
+        "[PATH:empirical] World Bank national accounts data on GDP and physical output indices (e.g., industrial production, agricultural yield) from 1970 to present across multiple countries \u2014 Correlating GDP growth with material output indices over time can reveal divergence patterns, testing whether GDP increasingly fails to track physical production since the 1970s.",
+        "[PATH:theoretical] Daly, H. (1996). Beyond Growth: The Economics of Sustainable Development. Beacon Press. \u2014 This foundational work argues GDP conflates throughput and welfare, providing theoretical grounds for why GDP is a poor measure of material output, especially in post-industrial economies.",
+        "[PATH:literature] Meta-analysis of empirical studies on decoupling GDP from resource use (e.g., Wiedmann et al., 2015, 'The material footprint of nations', PNAS) \u2014 Such literature reviews quantify the gap between GDP growth and material footprint, offering evidence for or against the hypothesis that GDP misrepresents material output."
+      ],
+      "scope": {
+        "domain": "national accounts"
+      },
+      "qualifier": {
+        "temporal": "since the 1970s",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP",
+      "predicate": "underestimates",
+      "object": "economic contributions of unpaid labor",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic contributions of unpaid labor]",
+        "[PATH:empirical] Time-use surveys from OECD countries (e.g., American Time Use Survey, UK Time Use Survey) combined with national accounts satellite accounts for household production \u2014 These surveys provide direct measurement of unpaid labor hours, which can be imputed with market wage rates to estimate the value of unpaid contributions. Comparing these imputed values to official GDP figures would empirically quantify the degree of underestimation.",
+        "[PATH:literature] System of National Accounts (SNA) manuals and critiques from feminist economics literature (e.g., Marilyn Waring's 'If Women Counted', or recent UN reports on unpaid care work) \u2014 This literature examines the theoretical and methodological assumptions behind GDP that exclude non-market labor. Reviewing these sources can confirm or refute whether the exclusion is inherent to the GDP construct and how it biases economic measurement.",
+        "[PATH:empirical] Cross-country panel data on GDP per capita and alternative welfare indices (e.g., Genuine Progress Indicator, Inclusive Wealth Index) that include unpaid labor \u2014 By correlating GDP growth with these alternative indices over time and across economies, one can test whether the gap between GDP and more inclusive measures widens in contexts with high unpaid labor, thus providing evidence for the hypothesis."
+      ],
+      "scope": {
+        "domain": "non-market economic activities"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "globally, especially in developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "does capture",
+      "object": "income inequality and unpaid labor through their downstream market effects",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality and unpaid labor through their downstream market effects]",
+        "[PATH:empirical] National time-use surveys and household production satellite accounts (e.g., from the U.S. Bureau of Labor Statistics or OECD) \u2014 These data directly measure unpaid labor (e.g., childcare, housework) and can be correlated with GDP growth to test whether market-based proxies (e.g., increased demand for paid services) capture the economic value of unpaid work.",
+        "[PATH:empirical] Panel studies linking GDP per capita to Gini coefficients and top income shares (e.g., World Inequality Database, Piketty-Saez series) \u2014 Analyzing long-run co-movement between GDP and income inequality measures can reveal whether GDP growth tracks or obscures distributional shifts, indicating how well GDP captures downstream market effects of inequality.",
+        "[PATH:theoretical] Theoretical literature on national accounting and welfare measurement (e.g., Nordhaus and Tobin's 'Measure of Economic Welfare', Stiglitz-Sen-Fitoussi Commission report) \u2014 This body of work critiques GDP's scope and proposes alternative metrics; reviewing it clarifies the conceptual mechanisms by which GDP might or might not reflect distributional and non-market dimensions through market spillovers."
+      ],
+      "scope": {
+        "domain": "distributional and non-market dimensions"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP",
+      "predicate": "captures",
+      "object": "income inequality and unpaid labor indirectly through market distortions",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP captures income inequality and unpaid labor indirectly through market distortions in domain 'distributional and non-market dimensions']"
+      ],
+      "scope": {
+        "domain": "distributional and non-market dimensions"
+      },
+      "qualifier": {
+        "temporal": "post-1950s national accounting era",
+        "geographic": "global, with emphasis on OECD economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP",
+      "predicate": "systematically excludes",
+      "object": "income inequality and unpaid labor from its measurement framework",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP systematically excludes income inequality and unpaid labor from its measurement framework in domain 'distributional and non-market dimensions']"
+      ],
+      "scope": {
+        "domain": "distributional and non-market dimensions"
+      },
+      "qualifier": {
+        "temporal": "since the 1950s",
+        "geographic": "globally, as per standard national accounting practices"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "GDP",
+      "predicate": "fails to account for",
+      "object": "environmental degradation and resource depletion",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "sustainability metrics"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP",
+      "predicate": "can be adjusted to capture",
+      "object": "income inequality and unpaid labor through distributional national accounts and time-use satellite accounts",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "distributional and non-market dimensions"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

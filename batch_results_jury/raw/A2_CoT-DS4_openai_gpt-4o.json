@@ -1,0 +1,64 @@
+{
+  "qid": "A2",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1041,
+    "completion_tokens": 411,
+    "total_tokens": 1452,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B is clearer and more concise, making it easier to understand."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a more direct claim with higher confidence, while A presents more hedged conclusions."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B identifies deeper contradictions between claims and counter-claims, while A presents parallel hypotheses without resolving them."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B offers a more precise and condition-bound synthesis, while A's synthesis is less clearly defined."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs present valuable tensions, with A exploring dependency and B focusing on governance conditions."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A maintains competing hypotheses more explicitly in parallel, while B focuses on synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B provides a clearer step-by-step reasoning process, while A's reasoning is less transparent."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly defines scope conditions and evidence status more clearly than A."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B generally provides clearer reasoning and synthesis, though A excels in maintaining parallel hypotheses."
+    }
+  }
+}

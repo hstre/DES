@@ -1,0 +1,424 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Economic growth",
+      "predicate": "is compatible with",
+      "object": "ecological sustainability",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Economic growth ecological sustainability]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Green technological innovation",
+      "predicate": "enables",
+      "object": "decoupling of economic growth from resource use",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Green technological innovation decoupling of economic growth from resource use]"
+      ],
+      "scope": {
+        "domain": "high-income, post-industrial economies"
+      },
+      "qualifier": {
+        "temporal": "since the late 20th century",
+        "geographic": "high-income, post-industrial economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Unchecked economic growth",
+      "predicate": "undermines",
+      "object": "long-term ecological carrying capacity",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "assertion",
+      "evidence_refs": [
+        "[Simulated evidence for: Unchecked economic growth long-term ecological carrying capacity]"
+      ],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {
+        "temporal": "over the next 50 years"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Selective economic growth in low-income regions",
+      "predicate": "is compatible with",
+      "object": "ecological sustainability",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Selective economic growth in low-income regions ecological sustainability]"
+      ],
+      "scope": {
+        "domain": "developing nations with low per-capita emissions"
+      },
+      "qualifier": {
+        "condition": "if paired with strict environmental regulation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Green technological innovation in high-income, post-industrial economies",
+      "predicate": "only achieves decoupling of economic growth from resource use",
+      "object": "when accompanied by strict regulatory carbon pricing mechanisms",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Green technological innovation in high-income, post-industrial economies when accompanied by strict regulatory carbon pricing mechanisms]",
+        "[PATH:empirical] Comparative econometric analysis of EU ETS (Emissions Trading System) carbon price levels vs. sectoral resource productivity and GDP growth in Nordic countries (2005-2025) \u2014 Directly tests the causal claim that strict carbon pricing is necessary for decoupling, using panel data across multiple high-income post-industrial economies with varying carbon price stringency.",
+        "[PATH:literature] Review of counterfactual case studies (e.g., Switzerland's voluntary CO2 agreements, California's cap-and-trade) where green innovation occurred without strict regulatory carbon pricing, examining resource decoupling outcomes \u2014 Provides comparative evidence to refute the necessity condition by identifying cases of decoupling under alternative policy mixes, testing the hypothesis' 'only when' claim."
+      ],
+      "scope": {
+        "domain": "high-income, post-industrial economies with carbon pricing regimes"
+      },
+      "qualifier": {
+        "temporal": "since 2005",
+        "geographic": "European Union and Nordic countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Green technological innovation",
+      "predicate": "merely shifts rather than reduces",
+      "object": "total resource use across global supply chains",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Green technological innovation total resource use across global supply chains]",
+        "[PATH:empirical] Comparative material flow analysis (MFA) of high-income economies (e.g., EU, Japan, US) tracking domestic and imported resource footprints from 2000 to 2025, using datasets like UNEP IRP Global Material Flows. \u2014 Directly tests whether green innovations in these economies correlate with absolute reductions in total resource use or merely with displacement to lower-income supply chain stages.",
+        "[PATH:literature] Systematic review of case studies on 'green' technologies (e.g., renewable energy, electric vehicles, circular economy) in post-industrial contexts, focusing on rebound effects and outsourcing of resource-intensive production. \u2014 Synthesizes existing evidence on whether technological efficiency gains are offset by increased consumption or shifted extraction/processing abroad, clarifying the 'shift vs. reduce' mechanism.",
+        "[PATH:theoretical] Multi-regional input-output (MRIO) modeling of green technology adoption scenarios (e.g., wind turbines, solar panels) in high-income nations, tracing embodied resources through global supply chains. \u2014 Provides counterfactual simulations to isolate the net effect of green innovation on total resource use, accounting for trade-mediated displacement and structural economic changes."
+      ],
+      "scope": {
+        "domain": "high-income, post-industrial economies"
+      },
+      "qualifier": {
+        "temporal": "since the early 2000s",
+        "geographic": "high-income, post-industrial economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Unchecked economic growth in high-consumption nations",
+      "predicate": "accelerates the decline of",
+      "object": "long-term ecological carrying capacity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Unchecked economic growth in high-consumption nations long-term ecological carrying capacity]",
+        "[PATH:empirical] Long-term empirical datasets on national GDP growth rates vs. biophysical indicators (e.g., ecological footprint, material footprint, or planetary boundary transgressions) from sources like the Global Footprint Network and the UN IRP \u2014 Directly tests the correlation between sustained high-consumption growth and declines in ecological carrying capacity proxies over decadal timescales.",
+        "[PATH:theoretical] Integrated assessment models (IAMs) such as REMIND or IMAGE that simulate coupled economic-growth and Earth-system dynamics under business-as-usual scenarios \u2014 Provides mechanistic, counterfactual projections of carrying capacity decline over the next 30 years, allowing controlled comparison with alternative growth pathways.",
+        "[PATH:literature] Meta-analysis of case studies on resource depletion and ecosystem degradation in rapidly growing high-consumption nations (e.g., post-2000 China, USA, EU) from journals like Ecological Economics or Global Environmental Change \u2014 Synthesizes existing empirical evidence across multiple contexts to assess whether the hypothesized causal relationship holds consistently or is moderated by other factors."
+      ],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {
+        "temporal": "over the next 30 years"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Unchecked economic growth",
+      "predicate": "enhances",
+      "object": "long-term ecological carrying capacity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Unchecked economic growth long-term ecological carrying capacity]",
+        "[PATH:empirical] Long-term empirical dataset on global GDP growth vs. biophysical indicators (e.g., Global Footprint Network's Ecological Footprint and biocapacity time series, 1960-present) \u2014 Directly tests whether historical periods of unchecked economic growth correlate with increases or decreases in global ecological carrying capacity, controlling for technological change and resource substitution.",
+        "[PATH:theoretical] Integrated assessment models (e.g., IMAGE, MESSAGE-GLOBIOM) that simulate scenarios of high vs. low economic growth with explicit ecological feedbacks, including carrying capacity thresholds \u2014 Provides counterfactual simulations to isolate the causal effect of growth rate on long-term carrying capacity under different assumptions about substitution, innovation, and planetary boundaries.",
+        "[PATH:literature] Meta-analysis of empirical studies on the Environmental Kuznets Curve (EKC) for aggregate ecological indicators (e.g., biodiversity intactness, soil fertility, freshwater availability) at global scale \u2014 Synthesizes existing evidence on whether economic growth beyond a certain point consistently leads to ecological regeneration or instead to irreversible degradation, testing the hypothesis's core claim."
+      ],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {
+        "temporal": "over the next 50-100 years",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Unchecked economic growth",
+      "predicate": "erodes",
+      "object": "long-term ecological carrying capacity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Unchecked economic growth erodes long-term ecological carrying capacity in domain 'global, aggregate scale']"
+      ],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {
+        "temporal": "post-industrial era (c. 1950\u2013present)",
+        "geographic": "global, aggregate scale"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Unchecked economic growth",
+      "predicate": "does not undermine",
+      "object": "long-term ecological carrying capacity",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Unchecked economic growth does not undermine long-term ecological carrying capacity in domain 'global, aggregate scale']"
+      ],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {
+        "temporal": "industrial era (post-1800)",
+        "geographic": "global, aggregate scale"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Unchecked economic growth",
+      "predicate": "accelerates the depletion of",
+      "object": "critical mineral reserves essential for renewable energy transition",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Unchecked economic growth",
+      "predicate": "expands",
+      "object": "long-term ecological carrying capacity",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global, aggregate scale"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

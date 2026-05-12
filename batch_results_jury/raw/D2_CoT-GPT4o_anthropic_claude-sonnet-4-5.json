@@ -1,0 +1,64 @@
+{
+  "qid": "D2",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1018,
+    "completion_tokens": 573,
+    "total_tokens": 1591,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B presents a clear linear narrative with labeled steps, while Output A's fragmented structure with duplicate claims and unclear organization impedes comprehension."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A maintains specific directional claims about teacher training vs. class size and grade-level effects, while Output B retreats to vague 'depends on context' hedging."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A identifies substantive tensions between grade levels and resource allocation trade-offs, while Output B only surfaces the obvious 'works vs. doesn't work' contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A bounds synthesis with specific scope conditions (early grades, novice teachers, resource allocation), while Output B offers generic 'it depends on quality' without operational precision."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A surfaces non-obvious tensions like novice teacher interaction effects and cost-effectiveness comparisons, while Output B identifies only the most obvious confound."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with confidence scores, while Output B collapses to a single synthesized position."
+    },
+    "process_traceability": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A provides operation counts and multiple confidence-tracked claims showing reasoning evolution, while Output B shows only a simple four-step linear progression."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A specifies conditions like 'elementary grades with high proportions of novice teachers' and 'per dollar' comparisons, while Output B uses unspecified 'contexts where factors are optimized.'"
+    },
+    "overall": {
+      "DES": 0.72,
+      "CoT": 0.28,
+      "reason": "Output A demonstrates superior epistemic structure through parallel hypothesis maintenance, specific scope-bounding, and non-obvious tensions despite organizational weaknesses, while Output B prioritizes narrative clarity over epistemic rigor."
+    }
+  }
+}

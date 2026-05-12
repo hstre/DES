@@ -1,0 +1,388 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "is a measure of",
+      "object": "material output and consumption",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP material output and consumption]"
+      ],
+      "scope": {
+        "domain": "macroeconomic performance"
+      },
+      "qualifier": {
+        "temporal": "post-1945",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "fails to capture",
+      "object": "income inequality and non-market welfare",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality and non-market welfare]",
+        "[CONFLICT] The claim asserts that GDP fails to capture income inequality and non-market welfare, but this is a widely debated topic in economics; some argue GDP measures aggregate output, not distribution or non-market activities, while others contend that alternative metrics (e.g., Gini coefficient, HDI) address these gaps, leading to disagreement on the adequacy of GDP for such purposes."
+      ],
+      "scope": {
+        "domain": "distributional and social wellbeing"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "globally"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "GDP",
+      "predicate": "is an indicator of",
+      "object": "economic activity that may correlate with wellbeing only in certain contexts",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic activity that may correlate with wellbeing only in certain contexts]"
+      ],
+      "scope": {
+        "domain": "comparative development studies"
+      },
+      "qualifier": {
+        "condition": "when adjusted for purchasing power and environmental costs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "systematically undervalues",
+      "object": "non-market care work and household production",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market care work and household production]",
+        "[PATH:empirical] Time-use surveys from the Multinational Time Use Study (MTUS) and national statistical offices (e.g., U.S. Bureau of Labor Statistics American Time Use Survey, UK Office for National Statistics) \u2014 Directly measures hours spent on unpaid care work and household production across countries and time periods. Comparing these data with GDP growth rates can reveal systematic discrepancies, offering quantitative evidence for or against the hypothesis.",
+        "[PATH:literature] Feminist economics literature, e.g., Marilyn Waring's 'If Women Counted' (1988) and subsequent work by scholars like Nancy Folbre, Diane Elson, and Lourdes Bener\u00eda \u2014 Provides theoretical frameworks and historical analysis arguing that GDP's exclusion of non-market care work systematically undervalues women's contributions. Reviewing this literature can clarify the conceptual basis and identify empirical tests used to support or challenge the claim.",
+        "[PATH:empirical] Satellite accounts for household production (e.g., U.S. Bureau of Economic Analysis, Statistics Canada, Eurostat) and their valuation methods (e.g., replacement cost, opportunity cost) \u2014 These accounts impute monetary values for unpaid labor. Comparing GDP with and without these imputations across decades (post-1945) and regions tests whether GDP systematically undervalues such work relative to market production, and whether gender equity is affected."
+      ],
+      "scope": {
+        "domain": "macroeconomic measurement"
+      },
+      "qualifier": {
+        "temporal": "post-1945",
+        "geographic": "global",
+        "dimension": "gender equity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP",
+      "predicate": "is primarily a measure of",
+      "object": "monetary transactions regardless of material reality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP monetary transactions regardless of material reality]",
+        "[PATH:empirical] National accounts data comparing GDP growth with physical resource consumption (e.g., material footprint, energy use) from sources like UNEP or World Bank \u2014 If GDP increases while material throughput declines or stagnates, it suggests GDP tracks monetary transactions rather than material reality. Conversely, a strong correlation would refute the hypothesis.",
+        "[PATH:theoretical] Herman Daly's 'Beyond Growth' and other ecological economics literature on the decoupling of GDP from biophysical indicators \u2014 This literature explicitly argues that GDP measures market activity, not well-being or material throughput, providing theoretical grounding to confirm the hypothesis.",
+        "[PATH:empirical] Historical case studies of GDP accounting in war or disaster recovery (e.g., post-WWII Europe, Hurricane Katrina) from economic history journals \u2014 Analyzing periods where physical destruction boosts GDP via reconstruction spending can test whether GDP primarily reflects monetary exchange rather than material welfare."
+      ],
+      "scope": {
+        "domain": "macroeconomic performance"
+      },
+      "qualifier": {
+        "temporal": "post-1945",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Gini-adjusted GDP per capita",
+      "predicate": "correlates more strongly with",
+      "object": "self-reported life satisfaction than unadjusted GDP per capita",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Gini-adjusted GDP per capita self-reported life satisfaction than unadjusted GDP per capita]",
+        "[PATH:empirical] World Values Survey (WVS) and OECD Income Distribution Database (IDD) \u2013 cross-country panel data for 2000-2020 \u2014 Directly test the correlation between self-reported life satisfaction and both Gini-adjusted GDP per capita and unadjusted GDP per capita across OECD countries over the specified period, controlling for confounders like health and employment.",
+        "[PATH:literature] Systematic review or meta-analysis of studies linking income inequality and subjective well-being in OECD countries \u2014 Synthesize existing findings to determine whether adjusting for inequality (via Gini) consistently improves the predictive power of GDP on life satisfaction, and to identify any moderators like cultural or institutional factors.",
+        "[PATH:theoretical] Theoretical modeling of distributional preferences in utility functions (e.g., Fehr-Schmidt or inequality-aversion models) applied to life satisfaction data \u2014 Provide a causal framework explaining why Gini-adjusted GDP should correlate more strongly with life satisfaction if individuals are averse to inequality, and derive testable predictions for OECD countries."
+      ],
+      "scope": {
+        "domain": "distributional and social wellbeing"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP",
+      "predicate": "successfully captures aggregate welfare capacity that enables",
+      "object": "income inequality reduction and non-market welfare expansion",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP income inequality reduction and non-market welfare expansion]",
+        "[PATH:empirical] OECD Income Distribution Database (IDD) linked with GDP per capita time series from OECD National Accounts, post-2008 \u2014 Directly tests the hypothesis by analyzing whether GDP growth in advanced OECD economies after 2008 correlates with reductions in Gini coefficients and expansions in non-market welfare indicators (e.g., public health spending, social transfers). Cross-national panel regressions can confirm or refute the claimed causal capacity.",
+        "[PATH:literature] Literature review of post-2008 studies on 'inclusive growth' and 'beyond GDP' frameworks (e.g., Stiglitz-Sen-Fitoussi Commission follow-ups, Piketty's inequality research, and OECD 'How's Life?' reports) \u2014 Synthesizes existing empirical and theoretical findings on whether GDP growth has enabled inequality reduction and non-market welfare expansion in advanced economies. The disputed status of the hypothesis suggests conflicting evidence; a systematic review can clarify the weight of evidence and identify contextual conditions.",
+        "[PATH:theoretical] Theoretical model linking GDP growth to redistributive capacity and public goods provision (e.g., extensions of the Meltzer-Richard model with endogenous fiscal policy and non-market welfare) \u2014 Provides a formal causal mechanism to evaluate the hypothesis. If the model predicts that GDP growth only enables inequality reduction under specific political or institutional conditions (e.g., progressive taxation, strong welfare states), it can explain why the hypothesis is disputed and guide empirical testing for the post-2008 OECD context."
+      ],
+      "scope": {
+        "domain": "distributional and social wellbeing"
+      },
+      "qualifier": {
+        "temporal": "post-2008 period",
+        "geographic": "advanced OECD economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "GDP",
+      "predicate": "correlates positively with wellbeing",
+      "object": "only below $15,000 per capita PPP, after which diminishing returns eliminate the relationship",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP only below $15,000 per capita PPP, after which diminishing returns eliminate the relationship]",
+        "[PATH:empirical] World Happiness Report longitudinal data (e.g., Cantril ladder life evaluations merged with World Bank GDP per capita, PPP) \u2014 Provides annual country-level wellbeing scores and GDP data, enabling piecewise regression or spline analysis to test for a threshold effect at $15,000 and diminishing returns above it.",
+        "[PATH:literature] Easterlin Paradox meta-analyses and follow-up studies (e.g., Easterlin, 1974; Stevenson & Wolfers, 2008; Sacks, Stevenson, & Wolfers, 2012) \u2014 Directly addresses the GDP-wellbeing relationship, with some studies supporting satiation at moderate incomes and others finding a linear log-linear association; reviewing these can clarify whether the $15,000 threshold is empirically supported or refuted.",
+        "[PATH:empirical] Micro-level panel data on subjective well-being and income (e.g., German Socio-Economic Panel, BHPS, or Gallup World Poll individual responses) \u2014 Allows testing of satiation mechanisms at the individual level across income distributions, controlling for country fixed effects, to see if the relationship flattens around $15,000 per capita PPP or if it is an artifact of aggregation."
+      ],
+      "scope": {
+        "domain": "comparative development studies"
+      },
+      "qualifier": {
+        "threshold": "15000 USD per capita PPP",
+        "mechanism": "satiation of material needs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "GDP",
+      "predicate": "is an indicator of",
+      "object": "economic activity that robustly predicts wellbeing across all development contexts",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic activity that robustly predicts wellbeing across all development contexts]",
+        "[PATH:empirical] Cross-national panel data comparing GDP per capita growth with multidimensional wellbeing indices (e.g., HDI, OECD Better Life Index) across low-, middle-, and high-income countries over 30+ years \u2014 Directly tests the hypothesis by examining whether GDP predicts wellbeing consistently across development contexts when measured without adjustment, revealing potential threshold effects or context-dependent divergence.",
+        "[PATH:literature] Systematic review of literature on the Easterlin Paradox and subjective wellbeing (e.g., Kahneman & Deaton, 2010; Stevenson & Wolfers, 2013) \u2014 Synthesizes existing evidence on whether GDP growth robustly correlates with life satisfaction across nations and over time, especially in non-WEIRD contexts, to assess the hypothesis's generalizability.",
+        "[PATH:theoretical] Theoretical models of welfare economics critiquing GDP as a proxy for wellbeing (e.g., Sen's capabilities approach, Stiglitz-Sen-Fitoussi Commission report) \u2014 Provides foundational arguments for why GDP may fail to predict wellbeing in diverse development settings due to missing dimensions (inequality, non-market goods, sustainability), offering a framework to interpret empirical findings."
+      ],
+      "scope": {
+        "domain": "comparative development studies"
+      },
+      "qualifier": {
+        "condition": "when measured at both cross-national and longitudinal scales without adjustment"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T7 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 34,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}

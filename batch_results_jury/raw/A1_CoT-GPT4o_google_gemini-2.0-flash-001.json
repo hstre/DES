@@ -1,0 +1,64 @@
+{
+  "qid": "A1",
+  "judge_model": "google/gemini-2.0-flash-001",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "google/gemini-2.0-flash-001",
+    "prompt_tokens": 1027,
+    "completion_tokens": 537,
+    "total_tokens": 1564,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A is more structured and presents its findings in a clearer, more organized manner, while Output B is more conversational."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A makes more specific directional claims with confidence levels, while Output B's claims are more general and hedged."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A identifies more nuanced contradictions related to labor market concentration, while Output B focuses on a more basic contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A's synthesis is more specific, mentioning prime-age workers and labor market concentration, while Output B's synthesis is more general and less informative."
+    },
+    "epistemic_novelty": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A's consideration of labor market concentration and its impact on different age groups offers more epistemic novelty than Output B's more conventional arguments."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A explicitly maintains competing hypotheses in parallel, while Output B presents a counter-claim but doesn't maintain it as a parallel hypothesis."
+    },
+    "process_traceability": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A provides more information about the number of claims generated and epistemic operations applied, making its process more traceable, while Output B's steps are high-level."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A includes scope conditions like 'low-unemployment urban areas' and 'counties with above-median labor market concentration,' demonstrating better scope discipline than Output B."
+    },
+    "overall": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A demonstrates a more thorough and nuanced analysis of the research question, with better branch preservation, process traceability, and scope discipline, making it the stronger output overall."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1037,
+    "completion_tokens": 550,
+    "total_tokens": 1587,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A uses clear, narrative prose with step-by-step reasoning, while Output B is more fragmented and technical, making it harder to follow."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B makes more precise directional claims (e.g., specific confidence for net welfare gains vs. distributional harms), whereas Output A hedges broadly with 'depending on conditions'."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B identifies a deeper contradiction by maintaining competing hypotheses with high confidence (0.90 each), while Output A only notes a surface-level contradiction between benefit and harm."
+    },
+    "synthesis_quality": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides more precise, scope-bounded syntheses (e.g., conditional on social safety nets, time horizons), whereas Output A offers a generic conditional statement."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B surfaces non-obvious tensions (e.g., gender wage gaps, net welfare losses for lowest income quintile) that a domain expert would find valuable, while Output A stays with standard textbook trade-offs."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output B explicitly maintains two competing hypotheses in parallel with high confidence, while Output A collapses the tension into a single synthesis without preserving branches."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides a recoverable reasoning state with 14 claims and 49 epistemic operations, whereas Output A only shows a linear 4-step process without detailed traceability."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly attaches confidence levels to claims and includes scope conditions (e.g., weak labor protections, 10+ years), while Output A lacks such discipline."
+    },
+    "overall": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B demonstrates superior epistemic structure, contradiction handling, and scope discipline, despite lower readability, making it more robust for the research question."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "D1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1073,
+    "completion_tokens": 434,
+    "total_tokens": 1507,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A is more structured and easier to follow, while Output B is fragmented and less coherent."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clear directional synthesis, whereas Output B presents multiple conflicting claims without clear resolution."
+    },
+    "contradiction_depth": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A identifies a fundamental contradiction between claims, while Output B lists contradictions but does not deeply resolve them."
+    },
+    "synthesis_quality": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A offers a more precise and bounded synthesis, whereas Output B's conclusions are less focused and more ambiguous."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs present common tensions in the literature, with no significant novel insights."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B maintains competing hypotheses more explicitly, while Output A focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A has a clearer reasoning process with identifiable steps, whereas Output B's reasoning is less transparent."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A more explicitly defines the scope and conditions of its claims, while Output B is less disciplined in scope definition."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clearer, more structured analysis with a well-defined synthesis, whereas Output B is less coherent and more fragmented."
+    }
+  }
+}

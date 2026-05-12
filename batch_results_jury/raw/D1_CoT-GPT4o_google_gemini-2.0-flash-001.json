@@ -1,0 +1,64 @@
+{
+  "qid": "D1",
+  "judge_model": "google/gemini-2.0-flash-001",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "google/gemini-2.0-flash-001",
+    "prompt_tokens": 1030,
+    "completion_tokens": 504,
+    "total_tokens": 1534,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A is easier to follow due to its concise, step-by-step approach, while Output B presents information in a more fragmented manner."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B makes more specific claims, even if the confidence is low, while Output A is more general."
+    },
+    "contradiction_depth": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A directly addresses the contradiction between the initial claim and the counter-claim, while Output B presents competing hypotheses without explicitly highlighting the core contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A's synthesis is more concise and directly addresses the research question, while Output B's synthesis is more fragmented and less focused."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B identifies more nuanced relationships, such as the impact of protein intake and baseline insulin resistance, which are more valuable to a domain expert."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains competing hypotheses in parallel, while Output A primarily focuses on a single claim and its counter-claim."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides more information about the claims generated and epistemic operations applied, making the reasoning process more traceable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B includes scope conditions (e.g., timeframes) and confidence levels for each claim, demonstrating better evidence scope discipline."
+    },
+    "overall": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "While Output A is more readable, Output B demonstrates a more comprehensive and nuanced approach to the research question, particularly in terms of branch preservation, epistemic novelty, and evidence scope discipline."
+    }
+  }
+}

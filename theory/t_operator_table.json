@@ -1,0 +1,171 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-05-10",
+  "axes": {
+    "mode": {
+      "description": "Epistemic mode of the operation: does it open new semantic space (divergent), close/refine existing space (convergent), neither (neutral), or context-dependent (mixed)?",
+      "values": ["divergent", "convergent", "neutral", "mixed"]
+    },
+    "branch_effect": {
+      "description": "Effect on ClaimGraph branch topology: does it create new branches, preserve existing ones, merge branches, or terminate a branch? 'unspecified' means the operator does not directly alter branch topology.",
+      "values": ["create", "preserve", "merge", "terminate", "unspecified"]
+    }
+  },
+  "operators": [
+    {
+      "id": "T1",
+      "name": "resolve_conflict",
+      "trigger": "status == 'contradicted'",
+      "priority": "CRITICAL",
+      "operation": "branch into two sub-claims",
+      "mode": "divergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Creates two new B-prefixed claims representing opposing positions on the contradiction; parent.branch_open=True; parent.status='disputed'. Structural forcing of two distinct semantic directions from a single contradiction point.",
+      "branch_effect": "create",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:578 — explicitly creates B{n:03d} and B{n+1:03d} claims; sets parent.branch_open=True; these are the canonical 'branches' tracked by T9's recombination trigger.",
+      "des_py_line": 578,
+      "notes": "The only operator that creates B-prefixed claims. B-claims are the unit of branch topology in DES. T9 specifically checks branch_open+all_branches_supported to detect when T1-created branches are ready for synthesis."
+    },
+    {
+      "id": "T2",
+      "name": "make_conflict_explicit",
+      "trigger": "conflict == True",
+      "priority": "CRITICAL",
+      "operation": "annotate and mark disputed",
+      "mode": "neutral",
+      "mode_confidence": "high",
+      "mode_evidence": "Appends a CONFLICT evidence_ref and sets status='disputed', conflict=False. No new claims generated; no semantic space explored or closed. Pure bookkeeping on existing claim state.",
+      "branch_effect": "unspecified",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:646 — no new claims created; no claims sealed or merged. Operates entirely within the existing claim's metadata fields.",
+      "des_py_line": 646,
+      "notes": "T2 is a precursor to T1: it marks conflict=False (thus satisfying T1's trigger condition on next cycle if status becomes 'contradicted'). The two-step CRITICAL sequence is T2→T1 when both trigger conditions are met sequentially."
+    },
+    {
+      "id": "T3",
+      "name": "request_evidence",
+      "trigger": "no evidence AND status != 'established'",
+      "priority": "HIGH",
+      "operation": "simulate retrieval",
+      "mode": "mixed",
+      "mode_confidence": "medium",
+      "mode_evidence": "For regular C-claims: adds simulated evidence and may raise confidence — convergent (narrows epistemic uncertainty). For B-prefixed claims: calls evaluate_branch_claim() which forces status='supported', confidence=0.85 — functionally convergent and closure-forcing. However, evidence injection can also raise new questions (divergent side-effect at the loop level). Classified as mixed because the B-claim path has qualitatively different semantics than the C-claim path.",
+      "branch_effect": "unspecified",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:670 — no new claims created, no claims sealed or merged. For B-claims, status is updated but the branch itself is not terminated (sealed=False).",
+      "des_py_line": 670,
+      "notes": "UNCERTAIN CELL — see uncertain_cells_report.md. The B-claim path of T3 (evaluate_branch_claim fallback: status='supported', confidence=0.85) is functionally a forced convergence that bypasses the normal evidence-weighting pathway. This may be a latent inconsistency: T3 can resolve a branch claim to 'supported' without human-readable evidence reasoning.",
+      "implementation_inconsistency": "B-claim fallback in evaluate_branch_claim() forces status='supported' and confidence=0.85 regardless of claim content. All branch claims that pass through T3 without an LLM call available will be automatically resolved as supported."
+    },
+    {
+      "id": "T4",
+      "name": "decompose_claim",
+      "trigger": "scope == {} OR underspecified",
+      "priority": "HIGH",
+      "operation": "split into 2-3 sub-claims",
+      "mode": "divergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Creates 2-3 new C-prefixed sub-claims from a single underspecified parent; each sub-claim targets a distinct scope. Structurally expands the semantic surface the DES loop must cover.",
+      "branch_effect": "create",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:725 — creates new C{n:03d} sub-claims; parent.sealed=True; parent.status='supported'. Creates new active claims for the loop to process.",
+      "des_py_line": 725,
+      "notes": "DOCUMENTED INCONSISTENCY: parent claim is set to sealed=True and status='supported' upon decomposition, despite the trigger being scope=={} (underspecified). Underspecified != supported. This means the parent claim is effectively silenced with a false positive epistemic status. The sub-claims inherit the research obligation, but the parent's status label becomes semantically incorrect.",
+      "implementation_inconsistency": "Parent sealed as 'supported' on trigger 'underspecified'. These are logically incompatible: a claim is sealed-as-supported when evidence confirms it; sealing an underspecified claim as supported bypasses that requirement."
+    },
+    {
+      "id": "T5",
+      "name": "generate_counter_hypothesis",
+      "trigger": "confidence < 0.4",
+      "priority": "MEDIUM",
+      "operation": "adversarial challenge",
+      "mode": "divergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Generates a counter-claim that contradicts the target claim; sets parent.conflict=True; parent.status='contradicted' or 'disputed'. Opens a new line of epistemic tension. Anti-Delphi mode assigns this to the falsifier role — explicitly adversarial.",
+      "branch_effect": "unspecified",
+      "branch_effect_confidence": "medium",
+      "branch_effect_evidence": "des.py:780 — creates one new C-prefixed counter-claim; sets parent.conflict=True. Does NOT create B-prefixed branches directly. However, T5 reliably triggers T1 on the next cycle (by setting status='contradicted'), which does create branches. T5's branch-effect is therefore indirect: it is the upstream cause of branch creation, not the creator itself.",
+      "des_py_line": 780,
+      "notes": "UNCERTAIN CELL for branch_effect — see uncertain_cells_report.md. If we count indirect causation (T5→T1 cascade), T5 is effectively branch_effect=create. If we count only direct ClaimGraph mutations, T5 is branch_effect=unspecified. The results.md trace confirms the T5→T1 cascade empirically (iter 8-9: T5 on C003, iter 9: T1 creates B001/B002).",
+      "cascade_evidence": "results.md iter 8: T5 fires on C003 (confidence 0.35→0.42, status='contradicted'); iter 9: T1 fires on C003, creates B001/B002."
+    },
+    {
+      "id": "T6",
+      "name": "explore_evidence_path",
+      "trigger": "status == 'hypothesis' AND confidence > 0.6",
+      "priority": "MEDIUM",
+      "operation": "suggest sources",
+      "mode": "convergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Appends evidence paths to an existing hypothesis; status→'supported'; confidence→max(0.82, conf+0.15). Moves a hypothesis toward a supported state by grounding it in evidence references. Narrows epistemic uncertainty on a specific claim.",
+      "branch_effect": "unspecified",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:846 — no new claims created; no claims sealed or merged. Modifies only evidence_refs and confidence of the target claim.",
+      "des_py_line": 846,
+      "notes": "In Anti-Delphi mode, T6 is assigned to the hypothesis_builder role. This is noteworthy: T6 is convergent (evidence-grounding) but assigned to the builder role. The builder role is constrained to conf in [0.41, 0.55], which may suppress the confidence boost T6 normally applies (→0.82)."
+    },
+    {
+      "id": "T7",
+      "name": "refine_qualifier",
+      "trigger": "no qualifier AND has scope",
+      "priority": "LOW",
+      "operation": "add temporal/geographic bounds",
+      "mode": "convergent",
+      "mode_confidence": "medium",
+      "mode_evidence": "Adds a temporal or geographic qualifier to a scoped claim; confidence+=0.05. Refines the claim's precision rather than expanding its scope. Convergent in the sense of narrowing applicability. However, qualifier addition can be seen as a minor semantic expansion (adding a new dimension), hence medium confidence.",
+      "branch_effect": "unspecified",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:875 — modifies qualifier field and confidence only. No claims created, sealed, or merged.",
+      "des_py_line": 875,
+      "notes": "UNCERTAIN CELL for mode — see uncertain_cells_report.md. T7's mode classification depends on whether 'adding a qualifier' is interpreted as convergent (scope narrowing: claim now applies to a more specific domain) or mixed (adding a temporal/geographic dimension can expose new questions about the specified period/region). The confidence boost (+0.05) suggests the system treats qualification as a convergent epistemic move."
+    },
+    {
+      "id": "T8",
+      "name": "seal_claim",
+      "trigger": "status == 'supported' AND confidence > 0.8",
+      "priority": "SEAL",
+      "operation": "mark complete",
+      "mode": "convergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Irrevocably marks a claim as sealed. No further operations will be applied to it. This is the terminal convergent operation: it closes epistemic processing on a specific claim.",
+      "branch_effect": "terminate",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:898 — claim.sealed=True. Sealed claims are excluded from all future transition-table evaluation. The claim's epistemic trajectory is terminated.",
+      "des_py_line": 898,
+      "notes": "T8 also functions as an explicit fallback (des.py:1020): if no other transition fires and a supported+high-confidence claim exists, T8 seals it. This means T8 has dual roles: primary seal trigger and loop-progression fallback. The fallback use is important for loop termination dynamics."
+    },
+    {
+      "id": "T9",
+      "name": "trigger_reframing",
+      "trigger": "branch_open == True AND all branches status == 'supported'",
+      "priority": "REFRAME",
+      "operation": "synthesize branches",
+      "mode": "convergent",
+      "mode_confidence": "high",
+      "mode_evidence": "Creates a synthesis claim (is_synthesis=True, status='supported', conf≥0.82) from two or more branch claims; parent.sealed=True; reframing_count++. The synthesis integrates multiple divergent trajectories into a single supported position — the canonical convergent operation in the DES.",
+      "branch_effect": "merge",
+      "branch_effect_confidence": "high",
+      "branch_effect_evidence": "des.py:926 — creates synthesis claim from branch claims; parent.sealed=True. This is the only operator that explicitly combines multiple branch trajectories into a unified claim. Branch topology collapses from multiple open branches to one synthesis node.",
+      "des_py_line": 926,
+      "notes": "T9 fires when all branches are status=='supported', NOT when all are sealed. The results.md trace confirms: T9 fires on iter 23 when B001 is sealed and B002 is supported-but-not-sealed. T7→T8 on B002 fires AFTER T9. This means the synthesis can precede the formal sealing of its input branches — a potential sequencing inconsistency. Also: is_synthesis claims bypass T3-T7 evaluation (des.py synthesis_bypass check), which prevents synthesis claims from being decomposed or counter-hypothesized. The reframing_count>2 hard limit (des.py) means at most 3 T9 firings per session."
+    }
+  ],
+  "grid_summary": {
+    "populated_cells": [
+      {"mode": "divergent", "branch_effect": "create", "operators": ["T1", "T4"]},
+      {"mode": "convergent", "branch_effect": "merge", "operators": ["T9"]},
+      {"mode": "convergent", "branch_effect": "terminate", "operators": ["T8"]},
+      {"mode": "divergent", "branch_effect": "unspecified", "operators": ["T5"]},
+      {"mode": "convergent", "branch_effect": "unspecified", "operators": ["T6", "T7"]},
+      {"mode": "neutral", "branch_effect": "unspecified", "operators": ["T2"]},
+      {"mode": "mixed", "branch_effect": "unspecified", "operators": ["T3"]}
+    ],
+    "empty_cells": [
+      {"mode": "divergent", "branch_effect": "merge", "note": "Structurally constrained — see divergent_merge_analysis.md"},
+      {"mode": "divergent", "branch_effect": "preserve", "note": "No operator; preservation achieved passively by NOT firing T9"},
+      {"mode": "divergent", "branch_effect": "terminate", "note": "No operator; divergent claims can only be terminated via convergent path (T6→T8)"},
+      {"mode": "convergent", "branch_effect": "create", "note": "No operator; convergent operations do not open new semantic space"}
+    ]
+  }
+}

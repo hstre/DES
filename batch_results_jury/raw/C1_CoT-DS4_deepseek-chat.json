@@ -1,0 +1,64 @@
+{
+  "qid": "C1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 895,
+    "completion_tokens": 481,
+    "total_tokens": 1376,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A is more clearly structured and easier to follow, while Output B is fragmented and less coherent."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A makes a clear initial directional claim then synthesizes, whereas Output B remains hedged and non-committal throughout."
+    },
+    "contradiction_depth": {
+      "DES": 0.2,
+      "CoT": 0.8,
+      "reason": "Output A explicitly identifies and checks a fundamental contradiction between opposing normative claims, while Output B does not surface any contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A provides a bounded, conditional synthesis with scope conditions, whereas Output B offers only a vague net-effect statement without synthesis."
+    },
+    "epistemic_novelty": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A highlights non-obvious tensions (existential risks vs. benefits), while Output B's claims are more conventional and less surprising."
+    },
+    "branch_preservation": {
+      "DES": 0.2,
+      "CoT": 0.8,
+      "reason": "Output A explicitly preserves and weighs competing hypotheses (good vs. not good) in parallel, while Output B collapses into a single hedged claim."
+    },
+    "process_traceability": {
+      "DES": 0.1,
+      "CoT": 0.9,
+      "reason": "Output A provides a fully recoverable reasoning state with labeled steps, while Output B lacks any process history or step tracking."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A explicitly bounds its synthesis with conditions (governance, access, context), while Output B provides no scope conditions for its claims."
+    },
+    "overall": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A demonstrates superior epistemic structure, contradiction handling, and synthesis, while Output B is fragmented and lacks depth."
+    }
+  }
+}

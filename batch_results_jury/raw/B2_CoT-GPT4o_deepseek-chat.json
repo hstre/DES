@@ -1,0 +1,64 @@
+{
+  "qid": "B2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 811,
+    "completion_tokens": 519,
+    "total_tokens": 1330,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more concise and easier to follow, while Output B is more fragmented and harder to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A makes a clear directional claim (remote work more productive) with a confidence of 0.7, whereas Output B's main claim is hedged with low confidence and includes contradictory sub-claims."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B surfaces a deeper contradiction between self-perceived productivity and objective metrics, while Output A only notes a surface-level opposition."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs offer a synthesis, but Output A's is more precise and scope-bounded, while Output B's is more fragmented and less integrated."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B reveals a non-obvious tension (high self-perceived productivity negatively correlated with objective metrics), which a domain expert would value more than Output A's generic synthesis."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explicitly maintains multiple competing sub-claims (both positive and negative self-perceived productivity), whereas Output A collapses into a single synthesized claim."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides a structured list of claims and counts of epistemic operations, making the reasoning state more recoverable than Output A's stepwise but less detailed process."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs mention scope conditions (task type, collaboration needs in A; self-perceived vs. objective metrics in B), but neither fully specifies evidence status."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output B edges ahead due to its deeper contradiction handling, epistemic novelty, and better branch preservation, despite lower readability."
+    }
+  }
+}

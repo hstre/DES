@@ -1,0 +1,428 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "context": "The effect varies by skill level, time horizon, and local labor market conditions; some studies find small negative effects on low-skilled natives, while others find negligible or positive effects overall."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Immigration of low-skilled workers",
+      "predicate": "reduces",
+      "object": "wages for low-skilled native workers in the short term",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of low-skilled workers wages for low-skilled native workers in the short term]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets, short time horizon"
+      },
+      "qualifier": {
+        "context": "Studies show small negative effects, particularly in local markets with high immigrant concentration."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Immigration of high-skilled workers",
+      "predicate": "increases",
+      "object": "wages for native workers overall through complementarity and innovation",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of high-skilled workers wages for native workers overall through complementarity and innovation]"
+      ],
+      "scope": {
+        "domain": "high-skilled labor markets, long time horizon"
+      },
+      "qualifier": {
+        "context": "High-skilled immigrants often fill gaps in specialized fields, boosting productivity and demand for native labor."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration",
+      "predicate": "has",
+      "object": "negligible or positive net effect on average native wages when accounting for macroeconomic adjustments",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration negligible or positive net effect on average native wages when accounting for macroeconomic adjustments]"
+      ],
+      "scope": {
+        "domain": "aggregate economy, medium to long term"
+      },
+      "qualifier": {
+        "context": "Some meta-analyses find that immigration's overall wage impact is near zero or slightly positive due to increased demand and capital adjustments."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Immigration of low-skilled workers",
+      "predicate": "increases",
+      "object": "job displacement risk for low-skilled native workers in the short term",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of low-skilled workers job displacement risk for low-skilled native workers in the short term]",
+        "[PATH:empirical] Meta-analysis of quasi-experimental studies on labor market effects of low-skilled immigration (e.g., Card (1990) Mariel Boatlift replications, or Borjas (2003) skill-cell approach) updated with recent data from flexible labor markets (e.g., US, UK, Canada) \u2014 Directly tests short-run displacement effects by comparing native employment/wage outcomes across skill groups and time periods, controlling for local demand shocks. A systematic review or updated meta-analysis would clarify effect size and heterogeneity across contexts.",
+        "[PATH:theoretical] Structural labor market simulation model incorporating search frictions and job competition (e.g., Amior & Manning (2018) or Beaudry, Green & Sand (2012)) \u2014 Models can isolate the mechanism of short-term job displacement by varying immigration inflow and labor market flexibility, showing conditions under which displacement is significant vs. offset by firm adjustments or native mobility. Useful for confirming or refuting the causal chain implied by the hypothesis.",
+        "[PATH:empirical] Longitudinal microdata from high-income countries with flexible labor markets (e.g., German IAB-SOEP linked data, US SIPP) tracking individual native low-skilled workers' employment transitions before and after local immigration shocks \u2014 Provides individual-level evidence on job displacement risk, controlling for worker fixed effects and local economic trends. Such data can reveal whether observed displacement is temporary or persistent, and whether it is concentrated among specific subgroups (e.g., dropouts, young workers)."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets, short time horizon"
+      },
+      "qualifier": {
+        "temporal": "short term (1\u20133 years)",
+        "geographic": "high-income countries with flexible labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Immigration of low-skilled workers",
+      "predicate": "stimulates",
+      "object": "economic growth leading to increased demand for labor, which can raise wages for low-skilled native workers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration of low-skilled workers economic growth leading to increased demand for labor, which can raise wages for low-skilled native workers]",
+        "[PATH:empirical] Panel data analysis of U.S. metropolitan areas with varying low-skilled immigration inflows (e.g., using CPS or ACS data) to estimate short-run wage effects on native low-skilled workers, controlling for local labor demand shocks. \u2014 Directly tests the causal claim that immigration stimulates economic growth and labor demand, leading to wage increases for native low-skilled workers in the short term, within flexible labor markets.",
+        "[PATH:literature] Review of quasi-experimental studies on the Mariel Boatlift or similar natural experiments (e.g., Card, 1990; more recent replications) that examine wage and employment outcomes for low-skilled natives over 1-3 year horizons. \u2014 Provides established empirical evidence from a canonical case in a developed economy with flexible labor markets, allowing assessment of whether the hypothesized positive wage effect holds or is refuted by subsequent analyses.",
+        "[PATH:theoretical] Theoretical model of a segmented labor market with endogenous firm entry and skill complementarities (e.g., extension of Ottaviano & Peri, 2012) calibrated to developed economy data, simulating short-run dynamics of low-skilled immigration on native wages. \u2014 Clarifies the mechanisms linking immigration to increased labor demand and wage effects, and identifies conditions under which the hypothesis would be confirmed or refuted, guiding empirical testing."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets, short time horizon"
+      },
+      "qualifier": {
+        "temporal": "short-term (1-3 years)",
+        "geographic": "developed economies with flexible labor markets"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Immigration's effect on wages for native-born workers without a college degree",
+      "predicate": "is",
+      "object": "negative in the short run but fully offset within five years by firm entry and capital deepening",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration's effect on wages for native-born workers without a college degree negative in the short run but fully offset within five years by firm entry and capital deepening]",
+        "[PATH:empirical] Borjas, G. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics. \u2014 Provides foundational empirical evidence on short-run negative wage effects for low-skilled natives, useful for confirming the initial impact.",
+        "[PATH:empirical] Peri, G. (2012). 'The Effect of Immigration on Productivity: Evidence from U.S. States.' Review of Economics and Statistics. \u2014 Shows that immigration can induce firm entry and capital deepening, potentially offsetting wage effects over time, directly testing the medium-run adjustment mechanism.",
+        "[PATH:theoretical] Ottaviano, G. & Peri, G. (2012). 'Rethinking the Effect of Immigration on Wages.' Journal of the European Economic Association. \u2014 Develops a theoretical model incorporating capital adjustment and firm dynamics, which can be used to derive testable predictions for the five-year offset hypothesis."
+      ],
+      "scope": {
+        "domain": "local labor markets, short to medium term"
+      },
+      "qualifier": {
+        "context": "Prior research suggests short-run wage pressures for low-skilled natives, but macroeconomic adjustments may neutralize them over time."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Immigration",
+      "predicate": "has",
+      "object": "a negative net effect on average native wages due to labor market competition without sufficient macroeconomic adjustments",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration a negative net effect on average native wages due to labor market competition without sufficient macroeconomic adjustments]",
+        "[PATH:empirical] Meta-analysis of quasi-experimental studies on immigration's wage effects (e.g., Card (1990) Mariel Boatlift, Borjas (2003) skill-cell approach, and recent replication studies) \u2014 Directly tests the causal effect of immigrant labor supply shocks on native wages, controlling for macroeconomic adjustments, and can confirm or refute the net negative effect claimed.",
+        "[PATH:theoretical] Dynamic stochastic general equilibrium (DSGE) models with heterogeneous labor markets and endogenous capital adjustment \u2014 Simulates medium- to long-run wage outcomes under different assumptions about capital mobility, technology, and demand adjustments, clarifying whether labor market competition dominates or macroeconomic adjustments offset negative effects.",
+        "[PATH:empirical] Longitudinal panel studies using administrative data from high-income countries (e.g., US Current Population Survey, UK Labour Force Survey) with difference-in-differences or instrumental variable designs \u2014 Provides robust evidence on native wage trajectories over 5\u201320 years in regions with varying immigration inflows, allowing detection of net effects after accounting for regional economic adjustments."
+      ],
+      "scope": {
+        "domain": "aggregate economy, medium to long term"
+      },
+      "qualifier": {
+        "temporal": "medium to long term (5\u201320 years)",
+        "geographic": "high-income immigrant-receiving countries (e.g., US, UK, Canada, Australia)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Immigration",
+      "predicate": "has",
+      "object": "a negligible or slightly positive net effect on average native wages in the medium to long term due to demand and capital adjustments",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration has a negligible or slightly positive net effect on average native wages in the medium to long term due to demand and capital adjustments in domain 'aggregate economy, medium to long term']"
+      ],
+      "scope": {
+        "domain": "aggregate economy, medium to long term"
+      },
+      "qualifier": {
+        "temporal": "medium to long term (typically 5\u201310 years or more)",
+        "geographic": "high-income countries with flexible labor markets and capital mobility"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Immigration",
+      "predicate": "has",
+      "object": "a negative net effect on average native wages in the medium to long term, as increased labor supply outweighs demand and capital adjustments",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Immigration has a negative net effect on average native wages in the medium to long term, as increased labor supply outweighs demand and capital adjustments in domain 'aggregate economy, medium to long term']"
+      ],
+      "scope": {
+        "domain": "aggregate economy, medium to long term"
+      },
+      "qualifier": {
+        "temporal": "medium to long term (typically 5\u201320 years)",
+        "geographic": "developed economies with flexible labor markets, e.g., United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Immigration",
+      "predicate": "reduces",
+      "object": "native wages in local labor markets with low capital mobility and rigid housing supply, even while aggregate effects remain neutral",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "local labor markets, short to medium term"
+      },
+      "qualifier": {
+        "context": "Macroeconomic adjustments (capital inflow, demand shifts) may mask localized negative wage effects where firms cannot quickly expand capital or housing supply constrains labor mobility."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Immigration",
+      "predicate": "has",
+      "object": "negative net effect on average native wages due to increased labor supply and competition",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "aggregate economy, medium to long term"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C007",
+    "T5[falsifier] on C004 -> C008",
+    "T1 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C011",
+    "T9[falsifier] on C004 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 34,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "B1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1034,
+    "completion_tokens": 592,
+    "total_tokens": 1626,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B presents a clear linear narrative with labeled steps, while Output A's fragmented structure with multiple confidence scores and categories requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A hedges with 0.45 confidence on main claim and presents contradictory 0.50 synthesis conclusions, while Output B moves from 0.7 to 0.6 with clearer directional evolution."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A identifies the fundamental tension between GDP as poor measure of subjective satisfaction versus good proxy for it, while Output B only addresses surface-level omissions like inequality and environmental factors."
+    },
+    "synthesis_quality": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A bounds its synthesis with specific scope conditions (high income inequality contexts) and distinguishes material consumption from subjective satisfaction, while Output B offers a vaguer 'useful but limited' conclusion."
+    },
+    "epistemic_novelty": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A surfaces the non-obvious tension that GDP can simultaneously be both poor and good proxy for life satisfaction depending on context, while Output B rehearses standard textbook critiques."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with equal confidence (0.90 each), while Output B collapses to a single synthesis without preserving alternative branches."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A provides metadata on total claims (14), operations (49), and maintains structured claim categories with confidence scores, while Output B shows only a simple four-step linear progression."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A explicitly tracks confidence levels per claim and distinguishes between material consumption measures versus subjective satisfaction proxies, while Output B makes assertions without explicit evidence status markers."
+    },
+    "overall": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A demonstrates superior epistemic structure through parallel hypothesis maintenance, deeper contradiction identification, and traceable reasoning state, despite lower readability."
+    }
+  }
+}

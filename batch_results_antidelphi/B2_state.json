@@ -1,0 +1,492 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Self-reported productivity gains from surveys conflict with objective metrics from firms that show declining collaboration and innovation under full remote models"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "remote work",
+      "predicate": "increases",
+      "object": "individual task productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work individual task productivity]"
+      ],
+      "scope": {
+        "domain": "self-reported measures, individual tasks"
+      },
+      "qualifier": {
+        "tension": "Based on surveys where employees report fewer distractions and more focus time."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "full remote work",
+      "predicate": "reduces",
+      "object": "collaboration and innovation",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: full remote work collaboration and innovation]"
+      ],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {
+        "tension": "Objective firm metrics show decline in spontaneous interactions and novel idea generation."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "remote work",
+      "predicate": "yields",
+      "object": "lower overall organizational productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work lower overall organizational productivity]"
+      ],
+      "scope": {
+        "domain": "aggregate firm performance, including collaboration costs"
+      },
+      "qualifier": {
+        "tension": "Combines self-reported gains with objective collaboration losses, net effect uncertain."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "remote work",
+      "predicate": "increases",
+      "object": "individual task productivity only for workers with high intrinsic motivation and low need for social interaction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work individual task productivity only for workers with high intrinsic motivation and low need for social interaction]",
+        "[PATH:empirical] Longitudinal field experiment measuring productivity (e.g., task completion rate, error rate) of remote workers with pre-screened intrinsic motivation and need for social interaction, using validated instruments like the Work Extrinsic and Intrinsic Motivation Scale (WEIMS) and the Need for Social Interaction Scale. \u2014 Directly tests the hypothesis by manipulating or measuring the moderators and comparing individual task productivity between remote and in-office conditions, addressing the causal claim's specificity.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity (e.g., from organizational psychology journals) that includes subgroup analyses based on personality traits (e.g., self-motivation, introversion) and social need moderators. \u2014 Synthesizes prior evidence to assess the consistency and effect size of the moderated relationship, confirming or refuting the hypothesis across multiple contexts while controlling for confounding variables.",
+        "[PATH:theoretical] Theoretical framework from self-determination theory (SDT) and person-environment fit theory, applied to model how intrinsic motivation and social need interact with remote work autonomy to affect task performance. \u2014 Provides a mechanistic explanation for the hypothesized conditional effect, enabling derivation of testable predictions and identifying boundary conditions that could refute the hypothesis if predictions fail."
+      ],
+      "scope": {
+        "domain": "self-reported measures, individual tasks, personality/work-style moderators"
+      },
+      "qualifier": {
+        "temporal": "during the COVID-19 pandemic (2020\u20132022)",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "remote work",
+      "predicate": "decreases",
+      "object": "individual task productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work individual task productivity]",
+        "[PATH:empirical] Bloom, N., Liang, J., Roberts, J., & Ying, Z. J. (2015). Does Working from Home Work? Evidence from a Chinese Experiment. Quarterly Journal of Economics, 130(1), 165-218. \u2014 A randomized controlled trial of remote work at a Chinese travel agency that measured individual task productivity (calls per minute) and could reveal whether reduced incidental collaboration slows performance.",
+        "[PATH:literature] Meta-analysis of remote work productivity studies pre-2024 (e.g., from the National Bureau of Economic Research or Journal of Organizational Behavior), focusing on objective metrics like task completion time and error rates in collaborative vs. independent tasks. \u2014 Synthesizes multiple experiments to evaluate the generalizability of the claim that remote work decreases individual task productivity, particularly under varied feedback and collaboration conditions.",
+        "[PATH:empirical] Controlled laboratory experiment manipulating feedback delay and incidental collaboration frequency in simulated remote vs. co-located settings, using objective time-on-task and quality metrics. \u2014 Directly tests the causal mechanism (delayed feedback, reduced incidental collaboration) hypothesized to slow individual task completion in remote work, providing high internal validity."
+      ],
+      "scope": {
+        "domain": "objective performance metrics, collaborative tasks"
+      },
+      "qualifier": {
+        "tension": "Controlled experiments show remote workers complete individual tasks more slowly due to reduced incidental collaboration and delayed feedback loops."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "full remote work with structured cross-team serendipity protocols",
+      "predicate": "increases",
+      "object": "long-term radical innovation outcomes beyond in-office baselines",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: full remote work with structured cross-team serendipity protocols long-term radical innovation outcomes beyond in-office baselines]",
+        "[PATH:empirical] Controlled field experiment comparing long-term innovation metrics across matched teams: one fully remote with structured cross-team serendipity protocols, one co-located with standard interaction patterns. \u2014 Directly tests the hypothesis by measuring radical innovation outcomes over time, controlling for team composition and task complexity.",
+        "[PATH:empirical] Longitudinal analysis of patent filings or product launches from organizations that have implemented formal virtual serendipity systems (e.g., random coffee chats, cross-project idea forums) versus those without. \u2014 Provides real-world evidence on whether structured serendipity in remote work correlates with higher rates of breakthrough innovation compared to in-office baselines.",
+        "[PATH:theoretical] Review of network theory and creativity literature on diversity of weak ties versus physical proximity effects on novel idea recombination. \u2014 Evaluates the theoretical underpinning that diverse, algorithmically facilitated interactions in remote settings may outperform colocated but homophilous networks for radical innovation."
+      ],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {
+        "tension": "Standard remote work reduces spontaneous interactions, but intentional virtual serendipity mechanisms may yield more diverse idea recombination than physical co-location."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "full remote work",
+      "predicate": "increases",
+      "object": "collaboration and innovation",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: full remote work collaboration and innovation]",
+        "[PATH:empirical] Longitudinal field study of distributed Agile teams in global tech firms, measuring collaboration frequency and innovation output via digital trace data (e.g., Slack messages, code commits, patent filings) over 2+ years \u2014 Directly addresses the disputed causal claim by tracking objective metrics of collaboration and innovation in fully remote settings, controlling for hybrid and in-office baselines, with temporal scope matching post-2020 adoption phases.",
+        "[PATH:literature] Meta-analysis of peer-reviewed studies on remote work and team innovation (e.g., from journals like Organization Science, Journal of Management, or MIS Quarterly), focusing on moderators such as team size, task complexity, and communication tool maturity \u2014 Synthesizes existing evidence to determine overall direction and effect size, and identifies conditions under which remote work may increase or decrease collaboration/innovation, thus refining the hypothesis's scope conditions.",
+        "[PATH:empirical] Controlled experiment with randomized assignment of short-term project teams to fully remote vs. co-located conditions, measuring creative idea generation, cross-functional collaboration, and solution novelty via standardized tasks \u2014 Provides causal inference by isolating the remote-work treatment effect on innovation outcomes, though limited to short-term projects; results can be compared to the hypothesis's long-term focus to assess generalizability."
+      ],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during hybrid and fully remote adoption phases",
+        "geographic": "global, but primarily studied in North American and Western European tech companies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "full remote work",
+      "predicate": "reduces",
+      "object": "spontaneous interactions and serendipitous idea generation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms full remote work reduces spontaneous interactions and serendipitous idea generation in domain 'team-level outcomes, long-term projects']"
+      ],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {
+        "temporal": "since early 2020s",
+        "geographic": "global knowledge economy"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "full remote work",
+      "predicate": "enables",
+      "object": "deeper focus and structured collaboration that sustains innovation",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms full remote work enables deeper focus and structured collaboration that sustains innovation in domain 'team-level outcomes, long-term projects']"
+      ],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "remote work in organizations with high task interdependence",
+      "predicate": "yields",
+      "object": "lower overall organizational productivity than remote work in organizations with low task interdependence",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work in organizations with high task interdependence lower overall organizational productivity than remote work in organizations with low task interdependence]",
+        "[PATH:empirical] Meta-analysis of field experiments on remote work productivity, stratified by team task interdependence (e.g., using the Job Characteristics Model measure). \u2014 Directly tests the moderator effect by comparing productivity outcomes for high vs. low interdependence teams under remote work conditions, controlling for industry and time period.",
+        "[PATH:empirical] Longitudinal case studies of software development teams (high task interdependence) vs. customer support teams (low interdependence) transitioning to mandatory remote work post-2020. \u2014 Provides granular, within-organization comparisons that isolate the impact of task interdependence on productivity decay or gain, addressing causal direction and contextual confounds.",
+        "[PATH:theoretical] Simulation models of organizational coordination costs under remote work, parameterized by task interdependence and communication latency (e.g., based on Thompson's interdependence typology). \u2014 Offers a formal mechanism to predict when and why high interdependence leads to productivity losses, helping to refine the hypothesis and identify boundary conditions for empirical tests."
+      ],
+      "scope": {
+        "domain": "firm performance, moderated by task interdependence"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during the widespread adoption of mandatory remote work",
+        "geographic": "primarily in knowledge-intensive sectors in developed economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "remote work",
+      "predicate": "yields",
+      "object": "higher overall organizational productivity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: remote work higher overall organizational productivity]",
+        "[PATH:empirical] Bloom, N., Han, R., & Liang, J. (2022). 'How Firm Performance and Productivity Are Affected by Remote Work: Evidence from a Large Tech Firm.' Working paper, Stanford University. \u2014 Provides firm-level productivity data from a randomized controlled trial within a large tech firm, directly addressing aggregate organizational productivity and collaboration costs pre- and post-remote adoption.",
+        "[PATH:empirical] Choudhury, P., Foroughi, C., & Larson, B. (2021). 'Work-from-anywhere: The productivity effects of geographic flexibility.' Strategic Management Journal, 42(4), 655-683. \u2014 Examines productivity changes in a context of widespread hybrid and remote models (post-2020), with data from U.S. firms, allowing assessment of overall organizational output and coordination frictions.",
+        "[PATH:empirical] Gibbs, M., Mengel, F., & Siemroth, C. (2023). 'Work from Home and Productivity: Evidence from a Survey of Professionals.' Journal of Labor Economics, 41(S1), S123-S158. \u2014 Combines survey and administrative data from Western Europe to measure net productivity effects, including collaboration costs, relevant to the geographic scope and disputed status of the hypothesis."
+      ],
+      "scope": {
+        "domain": "aggregate firm performance, including collaboration costs"
+      },
+      "qualifier": {
+        "temporal": "post-2020, during widespread adoption of hybrid models",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "full remote work with structured cross-functional serendipity tools",
+      "predicate": "restores",
+      "object": "spontaneous cross-team idea generation to levels observed in co-located settings",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects, R&D teams"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "full remote work",
+      "predicate": "increases",
+      "object": "focused deep work and cross-functional knowledge sharing via digital tools",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "team-level outcomes, long-term projects"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 42,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Free trade",
+      "predicate": "is both beneficial and harmful to",
+      "object": "developing economies",
+      "status": "supported",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade developing economies]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Free trade agreements",
+      "predicate": "boost export-led growth in",
+      "object": "developing economies with diversified industrial bases",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade agreements developing economies with diversified industrial bases]"
+      ],
+      "scope": {
+        "domain": "economic growth"
+      },
+      "qualifier": {
+        "condition": "diversified industrial base"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Free trade",
+      "predicate": "increases vulnerability to external shocks and deindustrialization in",
+      "object": "developing economies reliant on a narrow range of primary commodities",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade developing economies reliant on a narrow range of primary commodities]"
+      ],
+      "scope": {
+        "domain": "economic stability"
+      },
+      "qualifier": {
+        "condition": "reliance on primary commodities"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Free trade policies",
+      "predicate": "may improve consumer welfare through lower prices but simultaneously widen income inequality within",
+      "object": "developing economies",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade policies developing economies]"
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "aspect": "trade-off between consumer welfare and inequality"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Free trade agreements",
+      "predicate": "accelerate structural transformation from low to high-value manufacturing in",
+      "object": "developing economies with pre-existing intermediate goods production capacity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade agreements developing economies with pre-existing intermediate goods production capacity]",
+        "[PATH:empirical] World Bank Enterprise Surveys panel data on manufacturing firms in developing economies (e.g., Vietnam, Bangladesh) before and after FTA implementation, stratified by pre-existing intermediate goods capacity \u2014 Allows difference-in-differences or instrumental variable analysis to test whether FTAs causally accelerate upgrading from low to high-value manufacturing, conditional on initial intermediate goods production capacity.",
+        "[PATH:theoretical] Gereffi, G., Humphrey, J., & Sturgeon, T. (2005). 'The governance of global value chains.' Review of International Political Economy, 12(1), 78-104. \u2014 Provides theoretical framework linking global value chain integration (the proposed mechanism) to industrial upgrading, which can be used to derive testable predictions about the conditional effect of FTAs on structural transformation.",
+        "[PATH:literature] UNCTAD Trade and Development Report chapters on 'Global Value Chains and Industrial Policy' (e.g., 2013, 2020 editions) \u2014 Offers cross-country comparative evidence and case studies on how trade agreements interact with existing production capabilities to shape manufacturing trajectories, directly addressing the hypothesized condition."
+      ],
+      "scope": {
+        "domain": "industrial upgrading"
+      },
+      "qualifier": {
+        "condition": "pre-existing intermediate goods production capacity",
+        "mechanism": "global value chain integration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Free trade agreements",
+      "predicate": "accelerate deindustrialization and export concentration in",
+      "object": "developing economies with diversified industrial bases",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade agreements developing economies with diversified industrial bases]",
+        "[PATH:empirical] World Bank Trade Integration and Manufacturing Employment datasets (e.g., WITS, WDI) combined with country-level industrial output and export concentration indices (e.g., Herfindahl-Hirschman Index) for a panel of developing economies with diversified industrial bases pre- and post-FTA implementation. \u2014 Provides quantitative, longitudinal data to test whether FTAs correlate with declining manufacturing share and rising export concentration, controlling for other factors like exchange rates and global demand.",
+        "[PATH:literature] Rodrik, D. (2016). 'Premature deindustrialization.' Journal of Economic Growth, 21(1), 1-33. \u2014 Establishes theoretical and empirical framework linking trade liberalization to deindustrialization in developing economies; can be extended to examine FTAs specifically and their differential impact on diversified vs. undiversified bases.",
+        "[PATH:theoretical] Melitz, M. J. (2003). 'The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity.' Econometrica, 71(6), 1695-1725. \u2014 Provides micro-founded trade model predicting that exposure to advanced economy competition forces less productive firms to exit, potentially concentrating exports in a few surviving sectors; testable via firm-level data from FTA-affected economies."
+      ],
+      "scope": {
+        "domain": "economic growth"
+      },
+      "qualifier": {
+        "condition": "exposure to advanced economy competition"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Strategic export diversification policies coupled with selective tariff protection",
+      "predicate": "reduces vulnerability to external shocks by enabling industrial upgrading in",
+      "object": "developing economies transitioning from primary commodity dependence",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Strategic export diversification policies coupled with selective tariff protection developing economies transitioning from primary commodity dependence]",
+        "[PATH:empirical] Panel data analysis of export diversification indices and tariff structures across 30 developing economies (1990-2020), controlling for commodity price volatility and terms-of-trade shocks. \u2014 Directly tests the causal link between strategic diversification/tariff protection and reduced vulnerability to external shocks, using econometric methods to isolate the effect of active state intervention over the specified timeframe.",
+        "[PATH:empirical] Comparative case studies of successful industrial upgrading (e.g., South Korea, Malaysia) versus failed attempts (e.g., import-substitution in Latin America), focusing on the role of selective tariff protection and export diversification. \u2014 Provides qualitative and historical evidence on the conditions under which such policies succeed or fail, addressing the disputed nature of the hypothesis and the qualifier of active state intervention.",
+        "[PATH:theoretical] Formal model of structural change in a small open economy with learning-by-doing externalities and dynamic comparative advantage, incorporating tariff policy and export diversification as endogenous variables. \u2014 Clarifies the mechanisms by which selective tariffs and diversification could enable industrial upgrading and reduce shock vulnerability, offering a testable framework for empirical validation."
+      ],
+      "scope": {
+        "domain": "economic stability"
+      },
+      "qualifier": {
+        "condition": "active state intervention in industrial policy",
+        "timeframe": "10-20 year transition period"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Free trade",
+      "predicate": "provides the essential capital, technology transfer, and market access necessary to escape",
+      "object": "commodity dependence and achieve industrial diversification in developing economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade commodity dependence and achieve industrial diversification in developing economies]",
+        "[PATH:empirical] Panel data analysis of developing countries' trade liberalization episodes (e.g., from the World Bank's World Development Indicators) and subsequent changes in export concentration indices (e.g., Herfindahl-Hirschman Index) over 1980-2020 \u2014 Directly tests whether free trade (via FDI and export-led growth) reduces commodity dependence and promotes industrial diversification, controlling for other factors like institutional quality and initial conditions.",
+        "[PATH:empirical] Comparative case studies of East Asian economies (e.g., South Korea, Taiwan) versus resource-rich Latin American economies (e.g., Venezuela, Nigeria) that adopted free trade policies, examining the role of complementary industrial policies and FDI composition \u2014 Provides qualitative and quantitative evidence on the conditions under which free trade facilitates escape from commodity dependence, highlighting potential confounders such as state capacity and targeted industrial policy.",
+        "[PATH:theoretical] Theoretical models of structural transformation and trade (e.g., Matsuyama's agricultural productivity model or the 'Dutch disease' literature) extended to include FDI spillovers and learning-by-exporting effects \u2014 Clarifies the mechanisms and assumptions underlying the hypothesis, identifying conditions (e.g., absorptive capacity, market failures) under which free trade may fail to deliver diversification or may even reinforce commodity dependence."
+      ],
+      "scope": {
+        "domain": "economic development"
+      },
+      "qualifier": {
+        "mechanism": "through foreign direct investment and export-led growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Progressive taxation mechanisms coupled with free trade policies",
+      "predicate": "reduce income inequality while preserving consumer welfare gains in",
+      "object": "developing economies with strong institutional capacity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Progressive taxation mechanisms coupled with free trade policies developing economies with strong institutional capacity]",
+        "[PATH:empirical] Cross-country panel data analysis of developing economies with strong institutional capacity (e.g., Chile, South Korea) examining the combined effects of progressive tax reforms and trade liberalization on Gini coefficients and consumer price indices \u2014 Directly tests the hypothesis by comparing inequality and welfare outcomes in countries that implemented both policies, controlling for institutional strength.",
+        "[PATH:theoretical] Computable general equilibrium (CGE) models calibrated to a representative developing economy with high tax compliance, simulating progressive tax schedules and free trade scenarios to isolate distributional and welfare effects \u2014 Provides counterfactual analysis to assess whether the policy combination can simultaneously reduce inequality and preserve consumer surplus under strong institutional conditions.",
+        "[PATH:literature] Literature review of studies on fiscal capacity and trade policy complementarity in developing countries, focusing on evidence from Latin America and East Asia \u2014 Synthesizes existing findings on the conditional role of tax infrastructure and redistribution systems, clarifying whether the hypothesis is supported or contradicted by prior research."
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "condition": "requires effective tax collection infrastructure and redistribution systems"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Free trade policies",
+      "predicate": "reduce income inequality within developing economies by creating wage premiums in export sectors that disproportionately benefit lower-income workers",
+      "object": "developing economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Free trade policies developing economies]",
+        "[PATH:empirical] World Bank's micro-level household survey data (e.g., LSMS) from developing economies that underwent trade liberalization, comparing wage premiums and income distribution before and after policy changes \u2014 Provides direct evidence on whether export sector wage premiums disproportionately benefit lower-income workers and reduce overall income inequality, allowing for causal identification via difference-in-differences or panel methods.",
+        "[PATH:literature] Goldberg and Pavcnik (2007) review article on trade liberalization and inequality in developing countries, Journal of Economic Literature \u2014 Synthesizes existing empirical findings and theoretical models to assess the conditions under which free trade reduces or increases inequality, highlighting mechanisms like skill-biased technical change and labor market frictions that could refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "aspect": "inequality-reducing mechanism through labor market integration"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Free trade policies in developing economies",
+      "predicate": "improve consumer welfare through lower prices more than they widen income inequality, resulting in net social benefit",
+      "object": "developing economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Free trade policies in developing economies improve consumer welfare through lower prices more than they widen income inequality, resulting in net social benefit developing economies in domain 'distributional effects']"
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "temporal": "since the late 20th century",
+        "geographic": "developing economies in Latin America, Southeast Asia, and Sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Free trade policies in developing economies",
+      "predicate": "widen income inequality more than they improve consumer welfare through lower prices, resulting in net social harm",
+      "object": "developing economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Free trade policies in developing economies widen income inequality more than they improve consumer welfare through lower prices, resulting in net social harm developing economies in domain 'distributional effects']"
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "Progressive taxation mechanisms implemented alongside free trade policies",
+      "predicate": "can reduce income inequality by 15-25% while preserving consumer welfare gains from lower prices in",
+      "object": "developing economies with manufacturing export sectors",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "policy intervention effectiveness"
+      },
+      "qualifier": {
+        "timeframe": "within 5-7 years of implementation",
+        "mechanism": "redistribution through targeted social transfers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "Free trade policies",
+      "predicate": "reduce income inequality by creating employment opportunities for low-skilled workers that outweigh any consumer price effects in",
+      "object": "developing economies",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "aspect": "employment-driven inequality reduction"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T6[hypothesis_builder] on C003 -> C007",
+    "T6[falsifier] on C003 -> C008",
+    "T8 on C003",
+    "T3 on C004",
+    "T5[hypothesis_builder] on C004 -> C009",
+    "T5[falsifier] on C004 -> C010",
+    "T1 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T6 on C010",
+    "T8 on C010",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C004 -> C013",
+    "T9[falsifier] on C004 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010",
+      "C014"
+    ]
+  }
+}

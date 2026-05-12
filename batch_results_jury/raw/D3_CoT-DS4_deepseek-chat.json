@@ -1,0 +1,64 @@
+{
+  "qid": "D3",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1115,
+    "completion_tokens": 570,
+    "total_tokens": 1685,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B is more readable due to clear step-by-step structure and plain language, while Output A is fragmented and harder to follow."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B makes a clear directional claim about ethical justifiability, whereas Output A presents multiple competing claims with varying confidence without a clear commitment."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A identifies deep contradictions between competing empirical hypotheses about off-target mutations, while Output B's contradiction is more surface-level (permissible vs. never permissible)."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs produce syntheses that bound scope conditions, but Output A's synthesis is more precise about detection methods while Output B's is broader about ethical conditions."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A presents non-obvious tensions about off-target mutations being clinically indistinguishable and detection limits, which a domain expert would value more than the standard ethical debate in Output B."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains multiple competing hypotheses in parallel with confidence scores, while Output B discards the counter-claim after synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A provides a recoverable reasoning state with claim history, confidence levels, and epistemic operations count, whereas Output B only shows a linear step sequence."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly bounds claims with detection methods and confidence levels, while Output B's scope conditions (e.g., 'negligible risks') are vague and unqualified."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output A demonstrates superior epistemic structure, branch preservation, and evidence discipline, despite lower readability, which outweighs Output B's rhetorical clarity."
+    }
+  }
+}

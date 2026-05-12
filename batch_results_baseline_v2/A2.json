@@ -1,0 +1,53 @@
+{
+  "qid": "A2",
+  "question": "Is foreign aid effective at reducing poverty?",
+  "des_report": "Research question: Is foreign aid effective at reducing poverty?\n\nInitial claim: Foreign aid is effective at reducing poverty in recipient countries (confidence: 0.45)\n\n\nCompeting hypotheses explored: 2\n  - Foreign aid is effective at reducing poverty in recipient countries with weak governance when targeted at basic needs and local capacity building [supported, conf: 0.90]\n  - Foreign aid is ineffective at reducing poverty in recipient countries with weak governance due to corruption, misallocation, and lack of institutional absorption capacity [supported, conf: 0.90]\n\nSynthesis conclusions: 2\n  - Foreign aid is effective at reducing poverty in recipient countries with weak governance only when channeled through non-governmental organizations and local civil society (confidence: 0.50)\n  - Foreign aid is effective at reducing poverty in recipient countries with weak governance (confidence: 0.50)\n\n\nTotal claims generated: 14\nEpistemic operations applied: 49",
+  "cot_output": "STEP 1 \u2014 INITIAL CLAIM:\nClaim: Foreign aid reduces poverty in recipient countries.\nConfidence: 0.65\n\nSTEP 2 \u2014 FALSIFICATION:\nCounter-claim: Foreign aid perpetuates poverty by fostering dependency, corruption, and misallocation of resources that undermine local economic development.\n\nSTEP 3 \u2014 CONTRADICTION CHECK:\nAnswer: YES\nExplanation: The initial claim asserts that foreign aid reduces poverty, while the counter-claim asserts that it perpetuates poverty; these are mutually exclusive outcomes for the same general phenomenon.\n\nSTEP 4 \u2014 SYNTHESIS:\nSynthesis: Foreign aid reduces poverty only when it is delivered to countries with strong institutional governance, transparent accountability mechanisms, and targeted toward productive capacity building; otherwise, it can perpetuate poverty by enabling corruption and dependency.\nConfidence: 0.80",
+  "cot_parsed": {
+    "raw": "STEP 1 \u2014 INITIAL CLAIM:\nClaim: Foreign aid reduces poverty in recipient countries.\nConfidence: 0.65\n\nSTEP 2 \u2014 FALSIFICATION:\nCounter-claim: Foreign aid perpetuates poverty by fostering dependency, corruption, and misallocation of resources that undermine local economic development.\n\nSTEP 3 \u2014 CONTRADICTION CHECK:\nAnswer: YES\nExplanation: The initial claim asserts that foreign aid reduces poverty, while the counter-claim asserts that it perpetuates poverty; these are mutually exclusive outcomes for the same general phenomenon.\n\nSTEP 4 \u2014 SYNTHESIS:\nSynthesis: Foreign aid reduces poverty only when it is delivered to countries with strong institutional governance, transparent accountability mechanisms, and targeted toward productive capacity building; otherwise, it can perpetuate poverty by enabling corruption and dependency.\nConfidence: 0.80",
+    "has_claim": true,
+    "has_counter": true,
+    "has_contradiction_check": true,
+    "has_synthesis": true,
+    "contradiction_detected": true,
+    "steps_complete": true
+  },
+  "evaluation": {
+    "directional_commitment": {
+      "winner": "A",
+      "reason": "Output A makes a clear directional claim that foreign aid reduces poverty only under specific conditions, whereas Output B hedges with multiple low-confidence conclusions.",
+      "actual_winner": "CoT"
+    },
+    "contradiction_depth": {
+      "winner": "A",
+      "reason": "Output A explicitly identifies and checks the direct contradiction between the claim and counter-claim, while Output B lists separate hypotheses without recognizing a fundamental contradiction.",
+      "actual_winner": "CoT"
+    },
+    "synthesis_quality": {
+      "winner": "A",
+      "reason": "Output A provides a single, precise synthesis with a clear scope condition (strong institutions), whereas Output B offers two vague, low-confidence syntheses without resolving the tension.",
+      "actual_winner": "CoT"
+    },
+    "epistemic_novelty": {
+      "winner": "B",
+      "reason": "Output B surfaces the non-obvious insight that aid effectiveness in weak governance contexts depends on channeling through NGOs and local civil society, which is a nuanced perspective not present in Output A.",
+      "actual_winner": "DES"
+    },
+    "overall": {
+      "winner": "A",
+      "justification": "Output A is superior on directional commitment, contradiction depth, and synthesis quality, outweighing B's slight edge in epistemic novelty; A's focused, resolved synthesis is more epistemically robust overall."
+    },
+    "assignment": {
+      "A": "CoT",
+      "B": "DES"
+    },
+    "raw_winner": "A",
+    "actual_winner": "CoT"
+  },
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "raw_winner": "A",
+  "actual_winner": "CoT"
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "E2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1180,
+    "completion_tokens": 598,
+    "total_tokens": 1778,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more concise and linearly structured, making it easier to follow, while Output B's list format and multiple parallel claims are more fragmented."
+    },
+    "directional_commitment": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A makes a clearer directional claim (incompatible under current structures) with a bounded synthesis, whereas Output B's main claim has low confidence (0.45) and is heavily hedged."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both identify fundamental contradictions: Output A explicitly checks and names the contradiction between physical limits and decoupling, while Output B implicitly maintains competing hypotheses about rebound effects."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A provides a more precise scope-bounded synthesis (conditional compatibility, weak global evidence), whereas Output B's synthesis conclusions are split with low confidence (0.50 each)."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B surfaces non-obvious tensions (e.g., offshoring masking global rebound effects, necessity vs. sufficiency of decoupling) that a domain expert would find more valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B explicitly maintains two competing hypotheses in parallel with high confidence (0.90 each), while Output A collapses into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output B provides a more recoverable reasoning state with 14 claims and 49 epistemic operations listed, whereas Output A only shows a 4-step linear process."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A explicitly bounds its synthesis to current structures and notes weak global evidence, while Output B's scope conditions are implicit and its confidence levels vary widely."
+    },
+    "overall": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have complementary strengths: Output A excels in readability and synthesis precision, while Output B excels in branch preservation and epistemic novelty, resulting in a balanced overall score."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1121,
+    "completion_tokens": 622,
+    "total_tokens": 1743,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A presents a clear linear narrative with labeled steps, while Output B uses technical formatting with nested lists that requires more cognitive effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B makes specific quantified claims (e.g., 'lowest income quintile over 10+ years', 'gender-based wage gaps') while Output A remains at the level of general categories like 'growth' and 'exploitation'."
+    },
+    "contradiction_depth": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B identifies the fundamental tension between aggregate welfare gains and distributional harms with specific mechanisms, while Output A only notes surface-level opposition between 'beneficial' and 'harmful'."
+    },
+    "synthesis_quality": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output B bounds its synthesis with specific scope conditions (weak labor protections, social safety nets, time horizons) whereas Output A offers vague conditionals like 'if not managed carefully'."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B surfaces non-obvious tensions like simultaneous long-term benefits and short-term distributional harms for the same workers, and gender-specific effects, while Output A presents standard textbook trade-offs."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output B explicitly maintains competing hypotheses in parallel with equal confidence scores (0.90 for contradictory claims about distributional harms), while Output A collapses to a single hedged position."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides metadata on total claims generated and epistemic operations applied, enabling reconstruction of the reasoning process, while Output A shows only final step outputs without intermediate state."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.85,
+      "CoT": 0.15,
+      "reason": "Output B explicitly marks confidence levels for each claim, specifies temporal scope (10+ years, short-term vs long-term), and identifies institutional conditions (labor protections, safety nets), while Output A provides only two aggregate confidence scores."
+    },
+    "overall": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output B demonstrates substantially stronger epistemic structure through parallel hypothesis maintenance, specific scope-bounding, and granular confidence tracking, despite lower readability."
+    }
+  }
+}

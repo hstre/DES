@@ -1,0 +1,195 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Policy effectiveness",
+      "predicate": "is indeterminable when",
+      "object": "every available study contradicts every other study and all measures are biased",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Policy effectiveness every available study contradicts every other study and all measures are biased]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Policy effectiveness",
+      "predicate": "is indeterminable when",
+      "object": "every available study contradicts every other study",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Policy effectiveness every available study contradicts every other study]"
+      ],
+      "scope": {
+        "domain": "methodological inconsistency"
+      },
+      "qualifier": {
+        "temporal": "as of the latest systematic review date",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Policy effectiveness",
+      "predicate": "is still inferable when",
+      "object": "measures are biased but systematic bias can be modeled and corrected",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Policy effectiveness measures are biased but systematic bias can be modeled and corrected]",
+        "[CONFLICT] The claim suggests policy effectiveness is inferable despite biased measures if bias is systematic and correctable, but the low confidence (0.42) and disputed status indicate uncertainty about whether such correction is always sufficient, especially when bias patterns are not perfectly stable or fully known."
+      ],
+      "scope": {
+        "domain": "measurement correction techniques"
+      },
+      "qualifier": {
+        "condition": "if bias patterns are stable and known"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Policy effectiveness",
+      "predicate": "is determinable when",
+      "object": "contradictory studies are meta-analyzed using a shared causal model that controls for contextual confounders",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Policy effectiveness contradictory studies are meta-analyzed using a shared causal model that controls for contextual confounders]",
+        "[PATH:empirical] Systematic review of meta-analyses in social policy that compare traditional meta-analytic methods (e.g., random-effects) with causal-model-based meta-analyses controlling for contextual confounders, focusing on consistency of effect estimates across contradictory studies. \u2014 Directly tests whether a shared causal model reduces or resolves contradictions in policy effectiveness findings, providing confirmatory or refutatory evidence for the hypothesis.",
+        "[PATH:theoretical] Simulation studies that generate synthetic data with known policy effects and varying degrees of confounding, then compare the accuracy and convergence of meta-analyses with and without causal model controls. \u2014 Allows controlled testing of the hypothesis under ideal conditions, clarifying whether the method itself is sufficient or if additional assumptions (e.g., correct model specification) are critical.",
+        "[PATH:empirical] Re-analysis of a well-known contradictory policy literature (e.g., minimum wage effects on employment) using a shared causal DAG and confounder control, with results compared to prior conflicting meta-analyses. \u2014 Provides a concrete, high-stakes test case; if the shared causal model yields consistent estimates across studies, it supports the hypothesis; if not, it suggests the method is insufficient."
+      ],
+      "scope": {
+        "domain": "methodological synthesis"
+      },
+      "qualifier": {
+        "temporal": "post-2020",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Policy effectiveness",
+      "predicate": "is inferable only when",
+      "object": "bias correction uses a causal model of the bias-generating process, not just statistical pattern matching",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Policy effectiveness bias correction uses a causal model of the bias-generating process, not just statistical pattern matching]",
+        "[PATH:empirical] Comparative simulation study: apply causal-model-based bias correction (e.g., structural causal models with known bias mechanisms) vs. statistical-only methods (e.g., propensity score matching without causal graph) to synthetic policy evaluation data with known ground truth effects. \u2014 Directly tests the hypothesis by comparing bias correction accuracy under controlled conditions where the causal structure of bias is known, isolating the role of causal modeling.",
+        "[PATH:empirical] Re-analysis of existing policy evaluations that used statistical bias correction (e.g., difference-in-differences with matching) but lacked a causal model of the bias-generating process; evaluate whether residual bias remains and whether adding a causal model would alter conclusions. \u2014 Provides real-world evidence on whether purely statistical methods are sufficient or whether causal models are necessary for reliable inference in policy settings.",
+        "[PATH:theoretical] Formal theoretical comparison: derive conditions under which statistical pattern matching alone can yield unbiased policy effect estimates (e.g., under exchangeability or ignorability) versus conditions requiring a causal model of the bias process. \u2014 Clarifies the logical boundaries of the hypothesis and identifies when it holds or fails, strengthening the evidential basis beyond simulation."
+      ],
+      "scope": {
+        "domain": "measurement correction techniques"
+      },
+      "qualifier": {
+        "temporal": "when bias correction is applied in policy evaluation settings",
+        "geographic": "generalizable across contexts where causal structure of bias is identifiable"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C005",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 18,
+  "focus_claim_id": "C005",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C005"
+    ]
+  }
+}

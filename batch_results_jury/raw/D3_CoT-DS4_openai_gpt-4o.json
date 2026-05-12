@@ -1,0 +1,64 @@
+{
+  "qid": "D3",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 1103,
+    "completion_tokens": 433,
+    "total_tokens": 1536,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is clearer and more straightforward in its presentation, while Output A is more technical and complex."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B makes clear directional claims about ethical justifiability, whereas Output A is more tentative and hedged."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs identify contradictions, but Output B explicitly addresses them, while Output A implies contradictions through competing hypotheses."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B provides a more bounded synthesis with specific conditions, whereas Output A's synthesis is less precise."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explores non-obvious tensions in gene editing outcomes, which a domain expert might find valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A maintains competing hypotheses in parallel more explicitly than Output B."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a traceable reasoning process, though Output B is more linear and Output A is more complex."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B more explicitly defines scope conditions and evidence status, while Output A is less clear on these aspects."
+    },
+    "overall": {
+      "DES": 0.48,
+      "CoT": 0.52,
+      "reason": "Output B slightly edges out due to its clarity and synthesis, though Output A provides valuable epistemic insights."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "qid": "E2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1088,
+    "completion_tokens": 465,
+    "total_tokens": 1553,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A is more structured and easier to follow with clear sections, while Output B is simpler but less organized."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A makes specific directional claims with confidence levels, whereas Output B's synthesis is more hedged and general."
+    },
+    "contradiction_depth": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A identifies a fundamental contradiction between decoupling and rebound effects, while Output B only notes a surface-level contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A provides precise, bounded syntheses with confidence scores, whereas Output B's synthesis is broad and lacks specificity."
+    },
+    "epistemic_novelty": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A reveals non-obvious tensions like offshoring masking rebound effects, which a domain expert would value, while Output B states a common compromise."
+    },
+    "branch_preservation": {
+      "DES": 0.9,
+      "CoT": 0.1,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel, while Output B collapses into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A shows a recoverable reasoning state with claim history and operations, whereas Output B has minimal traceability."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output A explicitly states scope conditions (e.g., high-income economies, planetary boundaries) and evidence status, while Output B lacks such discipline."
+    },
+    "overall": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A demonstrates superior epistemic structure, contradiction handling, and branch preservation, outweighing Output B's simpler approach."
+    }
+  }
+}

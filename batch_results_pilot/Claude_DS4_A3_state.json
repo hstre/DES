@@ -1,0 +1,503 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration wages for native workers]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "varies by skill level and local labor market conditions",
+        "temporal_context": "short-run vs. long-run effects remain contested"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "reduces",
+      "object": "wages for native workers with similar skills in local labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers wages for native workers with similar skills in local labor markets]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with high immigrant concentration"
+      },
+      "qualifier": {
+        "effect_size": "negative but small, typically less than 1% over a decade"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases",
+      "object": "average wages for native workers through complementarity and innovation spillovers",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers average wages for native workers through complementarity and innovation spillovers]"
+      ],
+      "scope": {
+        "domain": "high-skill sectors and technology hubs"
+      },
+      "qualifier": {
+        "temporal_context": "long-run effects dominate after 5\u201310 years"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "immigration",
+      "predicate": "has neutral or positive net effect on",
+      "object": "native workers' wages when accounting for demand-side responses and capital adjustment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers' wages when accounting for demand-side responses and capital adjustment]"
+      ],
+      "scope": {
+        "domain": "aggregate economy over multi-decade horizons"
+      },
+      "qualifier": {
+        "effect_size": "near zero or slightly positive, with distributional winners and losers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "immigration of low-skilled workers in occupations with high task specialization and licensing requirements",
+      "predicate": "produces negligible wage effects on",
+      "object": "native workers due to reduced labor market substitutability",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers in occupations with high task specialization and licensing requirements native workers due to reduced labor market substitutability]",
+        "[PATH:empirical] Longitudinal wage data from licensed occupations (e.g., healthcare aides, cosmetology) matched with local immigrant inflows, using a difference-in-differences or instrumental variable approach. \u2014 Directly tests whether wage changes for native workers in these occupations are negligible when immigrant supply increases, controlling for local demand shifts and licensing stringency.",
+        "[PATH:empirical] Cross-state or cross-country comparisons of occupational licensing laws and their interaction with immigration policy, exploiting variation in licensing requirements to estimate labor market substitutability. \u2014 Leverages natural experiments to isolate the effect of licensing barriers on wage outcomes, addressing endogeneity concerns and providing causal evidence on the hypothesized segmentation mechanism.",
+        "[PATH:theoretical] Labor market search-and-matching models incorporating occupational licensing and task-specific human capital, calibrated with data from specialized service occupations. \u2014 Formalizes the mechanism of reduced substitutability and generates testable predictions about wage effects, helping to interpret empirical findings and identify conditions under which the hypothesis holds or fails."
+      ],
+      "scope": {
+        "domain": "licensed trades and specialized service occupations such as healthcare aides, cosmetology, and food safety certified positions"
+      },
+      "qualifier": {
+        "mechanism": "occupational licensing and task-specific training create barriers that segment labor markets and prevent direct competition between immigrant and native workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "immigration of low-skilled workers",
+      "predicate": "raises",
+      "object": "wages for native workers with similar skills in local labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of low-skilled workers wages for native workers with similar skills in local labor markets]",
+        "[PATH:literature] Meta-analysis of local labor market studies on the wage effects of low-skilled immigration (e.g., Card, 2009; Ottaviano & Peri, 2012) \u2014 A systematic review of existing empirical studies can clarify whether the average effect is positive or negative, and under what conditions (e.g., high immigrant concentration) the predicted positive wage effect due to complementary service demand is observed.",
+        "[PATH:empirical] Quasi-experimental analysis using variation in immigration flows (e.g., natural experiments from policy changes or refugee resettlement) with matched employer-employee data to estimate wage changes for native low-skilled workers in high-concentration local markets \u2014 This would provide causal evidence on the direction and magnitude of wage effects, directly testing the hypothesis that increased demand for complementary services outweighs labor supply competition.",
+        "[PATH:theoretical] General equilibrium model incorporating local labor markets, consumer demand for services, and firm production functions to simulate the impact of low-skilled immigration on native wages \u2014 A calibrated model can isolate the mechanisms (e.g., complementarity vs. substitution) and test the plausibility of the positive wage effect under realistic parameter assumptions, especially in high-immigration districts."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets with high immigrant concentration"
+      },
+      "qualifier": {
+        "effect_size": "positive due to increased demand for complementary services and local economic growth"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "immigration of high-skilled workers in STEM fields",
+      "predicate": "increases",
+      "object": "native worker wages most strongly in occupations requiring collaborative problem-solving rather than routine technical tasks",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers in STEM fields native worker wages most strongly in occupations requiring collaborative problem-solving rather than routine technical tasks]",
+        "[PATH:empirical] Quasi-experimental analysis of H-1B visa lotteries linked to patent and wage data at the MSA-occupation level over 10-15 year panels \u2014 Leverages exogenous variation in high-skilled immigration to isolate causal effects on native wages, and can test whether effects are larger in occupations with high collaborative problem-solving intensity (e.g., R&D managers, systems architects) versus routine STEM tasks (e.g., coding, testing), matching the 7-12 year lag.",
+        "[PATH:empirical] Task-content indices from O*NET combined with patent citation data to measure collaborative problem-solving intensity per occupation \u2014 Enables construction of a continuous measure of non-routine interactive task exposure, allowing direct test of the hypothesis that wage effects are strongest where complementarity with high-skilled immigrants is highest, rather than in routine technical roles.",
+        "[PATH:theoretical] Firm-level productivity and wage spillover models in patent-intensive technology hubs (e.g., Silicon Valley, Seattle) \u2014 Builds on models of knowledge spillovers and team production to predict that high-skilled immigrants boost native wages primarily through collaborative innovation rather than simple labor substitution, providing a formal mechanism consistent with the proposed complementarity effect."
+      ],
+      "scope": {
+        "domain": "technology hubs with patent-intensive firms"
+      },
+      "qualifier": {
+        "temporal_context": "effects emerge after 7-12 years",
+        "mechanism": "complementarity effects concentrated in non-routine interactive tasks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases",
+      "object": "average wages for native workers through increased labor supply competition and skill redundancy",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration of high-skilled workers average wages for native workers through increased labor supply competition and skill redundancy]",
+        "[PATH:empirical] Longitudinal wage panel data from the Bureau of Labor Statistics (BLS) matched with H-1B visa issuance records at the metropolitan level (e.g., Silicon Valley, Seattle, Austin) for 2010-2025 \u2014 Directly tests whether increases in high-skilled immigration correlate with declines in native average wages in specific tech hubs, controlling for industry composition and productivity shocks.",
+        "[PATH:literature] Quasi-experimental studies using variation from H-1B visa lotteries or cap changes (e.g., Peri, Shih, & Sparber 2015; Kerr & Lincoln 2010) to isolate causal effects on native wages in high-skill occupations \u2014 Existing peer-reviewed research provides natural experiments that can confirm or refute causal claims about labor supply competition and wage effects, especially where skill redundancy is plausible.",
+        "[PATH:empirical] Firm-level productivity and wage data from technology companies (e.g., Compustat or proprietary HR datasets) to assess complementarity vs. substitution between native and immigrant high-skilled workers \u2014 If high-skilled immigrants are complements rather than substitutes, native wages may rise; this source directly tests the skill redundancy mechanism underlying the hypothesis."
+      ],
+      "scope": {
+        "domain": "high-skill sectors and technology hubs"
+      },
+      "qualifier": {
+        "temporal": "2010-2025",
+        "geographic": "United States technology hubs (e.g., Silicon Valley, Seattle, Austin)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "increases",
+      "object": "average wages for native workers through complementarity and innovation spillovers",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers increases average wages for native workers through complementarity and innovation spillovers in domain 'high-skill sectors and technology hubs']"
+      ],
+      "scope": {
+        "domain": "high-skill sectors and technology hubs"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "decreases or leaves unchanged",
+      "object": "average wages for native workers due to labor market competition and wage compression",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms immigration of high-skilled workers decreases or leaves unchanged average wages for native workers due to labor market competition and wage compression in domain 'high-skill sectors and technology hubs']"
+      ],
+      "scope": {
+        "domain": "high-skill sectors and technology hubs"
+      },
+      "qualifier": {
+        "temporal": "post-2000 period",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "immigration-induced expansion of consumer markets",
+      "predicate": "creates disproportionate wage gains for",
+      "object": "native workers in non-tradable service sectors through localized demand shocks",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration-induced expansion of consumer markets native workers in non-tradable service sectors through localized demand shocks]",
+        "[PATH:empirical] Longitudinal matched employer-employee datasets (e.g., LEHD in the U.S.) linked to local immigrant inflow data at the metropolitan level \u2014 Allows estimation of wage changes for native workers in non-tradable sectors (e.g., retail, personal services) relative to tradable sectors, controlling for individual fixed effects and local demand shocks, directly testing the 2-4% premium.",
+        "[PATH:empirical] Quasi-experimental studies exploiting exogenous variation in immigrant inflows (e.g., refugee resettlement policies or historical settlement patterns) to isolate localized demand shocks from supply-side effects \u2014 Provides causal identification of the mechanism by comparing wage outcomes in high-immigration metro areas with those in comparable low-immigration areas, addressing endogeneity concerns.",
+        "[PATH:theoretical] General equilibrium models incorporating heterogeneous consumption baskets and sectoral labor demand (e.g., calibrated to U.S. metro areas with immigration shocks) \u2014 Tests whether the hypothesized mechanism (immigrant consumption patterns driving asymmetric demand in non-tradables) is quantitatively plausible under realistic parameter values, and predicts conditions under which the wage premium might be larger or smaller."
+      ],
+      "scope": {
+        "domain": "metropolitan labor markets with high immigrant concentration over 10-15 year periods"
+      },
+      "qualifier": {
+        "mechanism": "immigrant consumption patterns generate asymmetric labor demand increases in housing, retail, and personal services",
+        "expected_magnitude": "2-4% wage premium relative to tradable sector workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "immigration",
+      "predicate": "has significant negative net effect on",
+      "object": "native workers' wages even when accounting for demand-side responses and capital adjustment",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: immigration native workers' wages even when accounting for demand-side responses and capital adjustment]",
+        "[PATH:empirical] Natural experiment studies of sudden immigration inflows (e.g., Mariel Boatlift, Venezuelan exodus to Colombia) that measure wage effects on native high school dropouts and younger workers while controlling for demand shifts and capital adjustment. \u2014 These quasi-experimental designs isolate exogenous variation in immigrant supply, allowing for causal estimation of wage effects even when demand and capital respond.",
+        "[PATH:theoretical] Structural labor market models incorporating endogenous capital adjustment and firm-level demand responses (e.g., Borjas-style spatial equilibrium models or search-and-matching frameworks calibrated to local labor markets). \u2014 Such models can simulate the net effect of immigration on native wages under various assumptions about capital mobility and demand elasticity, testing whether negative effects persist for specific subgroups.",
+        "[PATH:literature] Meta-analysis of recent empirical studies (post-2010) that explicitly account for demand-side responses and capital adjustment in high-immigration local labor markets, focusing on effect heterogeneity by education and age. \u2014 A systematic review can aggregate evidence across contexts, assess publication bias, and determine whether the hypothesized negative effect for high school dropouts and younger workers is robustly supported."
+      ],
+      "scope": {
+        "domain": "local labor markets with high immigrant concentration over short to medium horizons"
+      },
+      "qualifier": {
+        "effect_size": "negative and persistent for native high school dropouts and younger workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "immigration of high-skilled workers in AI and software engineering",
+      "predicate": "increases",
+      "object": "wage inequality between native workers with graduate degrees and those with only undergraduate degrees by accelerating skill-biased technological change",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "technology hubs with concentrated AI research activity"
+      },
+      "qualifier": {
+        "temporal_context": "effects emerge within 3-7 years of immigration surges",
+        "mechanism": "innovation spillovers disproportionately benefit workers with advanced technical training"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "immigration of high-skilled workers",
+      "predicate": "depresses",
+      "object": "average wages for native workers through increased labor supply competition in specific subfields",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high-skill sectors and technology hubs"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 39,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

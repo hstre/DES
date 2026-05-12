@@ -1,0 +1,265 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Intermittent fasting",
+      "predicate": "is effective for",
+      "object": "long-term weight loss",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting long-term weight loss]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "description": "While some trials show short-term weight loss comparable to continuous calorie restriction, sustained weight loss beyond 12 months remains poorly documented, and adherence often declines over time, creating a tension between initial efficacy and long-term practicality."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Intermittent fasting",
+      "predicate": "produces",
+      "object": "short-term weight loss comparable to continuous calorie restriction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting short-term weight loss comparable to continuous calorie restriction]",
+        "[PATH:empirical] Head-to-head randomized controlled trial comparing time-restricted eating (e.g., 16:8) with daily calorie restriction over 12 months, including post-intervention follow-up \u2014 Directly tests the hypothesis in the relevant time domain and assesses whether short-term weight loss equivalence persists or diverges under longer observation.",
+        "[PATH:literature] Systematic review and meta-analysis of all randomized trials with \u22658-week interventions comparing intermittent fasting protocols to continuous calorie restriction, with subgroup analysis by intervention duration and adherence \u2014 Aggregates existing evidence to increase statistical power, assess heterogeneity, and identify potential moderators like protocol type or dropout rates.",
+        "[PATH:theoretical] Mechanistic study comparing hormonal and metabolic adaptations (e.g., insulin sensitivity, ghrelin, leptin, and resting energy expenditure) between intermittent fasting and continuous calorie restriction over 8\u201312 weeks \u2014 Tests the underlying premise that physiological responses might differ between the two regimens, which could explain or challenge the observed equivalence in weight loss."
+      ],
+      "scope": {
+        "domain": "short-term (\u226412 months) intervention trials"
+      },
+      "qualifier": {
+        "description": "Multiple randomized controlled trials demonstrate similar reductions in body weight during the active intervention period, typically 8-24 weeks."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Adherence to intermittent fasting regimens",
+      "predicate": "declines significantly after",
+      "object": "6 to 12 months of practice",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Adherence to intermittent fasting regimens 6 to 12 months of practice]"
+      ],
+      "scope": {
+        "domain": "long-term behavioral maintenance"
+      },
+      "qualifier": {
+        "description": "Participant dropout rates increase and self-reported compliance decreases after the initial novelty phase, reducing the practical sustainability of the protocol."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Intermittent fasting",
+      "predicate": "may lead to",
+      "object": "metabolic adaptations that undermine sustained weight loss beyond 12 months",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Intermittent fasting metabolic adaptations that undermine sustained weight loss beyond 12 months]",
+        "[PATH:empirical] Long-term randomized controlled trial (RCT) comparing alternate-day fasting vs. daily caloric restriction with objective metabolic hormone measurements (ghrelin, leptin, insulin) and body composition at 12, 18, 24 months \u2014 Directly tests the hypothesis by tracking hormonal adaptations and weight trajectory beyond 12 months, capturing the proposed biological-behavioral friction.",
+        "[PATH:literature] Systematic review and meta-analysis of intermittent fasting studies with \u226512-month follow-up, examining effect modification by compensatory eating behavior (e.g., post-fast caloric overshoot) \u2014 Synthesizes existing evidence to assess whether metabolic adaptation or behavioral rebound consistently undermines long-term weight loss, addressing the disputed status.",
+        "[PATH:empirical] Controlled feeding study with fixed energy intake during alternate-day fasting to isolate metabolic compensation (e.g., reduced resting metabolic rate) from behavioral rebound \u2014 Distinguishes biological (hormonal/metabolic) from behavioral mechanisms, clarifying the primary driver of weight loss attenuation beyond 12 months."
+      ],
+      "scope": {
+        "domain": "long-term metabolic physiology"
+      },
+      "qualifier": {
+        "description": "Alternate-day fasting patterns can trigger compensatory hormonal responses (e.g., increased ghrelin, reduced leptin) and behavioral rebound eating, potentially offsetting initial calorie deficits and creating a biological versus behavioral friction."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Adherence to intermittent fasting regimens",
+      "predicate": "stabilizes or increases after",
+      "object": "6 to 12 months of practice",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Adherence to intermittent fasting regimens 6 to 12 months of practice]",
+        "[PATH:empirical] Longitudinal cohort study tracking self-reported compliance, dropout, and weight outcomes in intermittent fasting participants at 0, 3, 6, 12, and 18 months \u2014 Directly measures adherence trajectories over the critical 6\u201312 month window, providing quantitative evidence whether stabilization or decline occurs.",
+        "[PATH:literature] Meta-analysis of randomized controlled trials comparing intermittent fasting to continuous calorie restriction, with subgroup analysis by duration (0\u20136 vs. 6\u201312 months) \u2014 Synthesizes existing data to detect overall patterns in adherence sustainability and identifies study-level moderators (e.g., diet type, support structure) that affect long-term compliance.",
+        "[PATH:theoretical] Theoretical modeling of behavioral maintenance using the Habit Formation and Self-Determination Theory frameworks, applied to intermittent fasting \u2014 Provides mechanistic predictions about when novelty effects wane and intrinsic motivation must replace external cues, generating testable hypotheses about adherence plateaus or declines around 6 months."
+      ],
+      "scope": {
+        "domain": "long-term behavioral maintenance"
+      },
+      "qualifier": {
+        "description": "Participant dropout rates increase and self-reported compliance decreases after the initial novelty phase, reducing the practical sustainability of the protocol."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Adherence to intermittent fasting regimens",
+      "predicate": "declines significantly after",
+      "object": "6 to 12 months of practice",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Adherence to intermittent fasting regimens declines significantly after 6 to 12 months of practice in domain 'long-term behavioral maintenance']"
+      ],
+      "scope": {
+        "domain": "long-term behavioral maintenance"
+      },
+      "qualifier": {
+        "temporal": "within 6 to 12 months after initiation",
+        "geographic": "not specified"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Adherence to intermittent fasting regimens",
+      "predicate": "remains stable or improves after",
+      "object": "6 to 12 months of practice",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Adherence to intermittent fasting regimens remains stable or improves after 6 to 12 months of practice in domain 'long-term behavioral maintenance']"
+      ],
+      "scope": {
+        "domain": "long-term behavioral maintenance"
+      },
+      "qualifier": {
+        "temporal": "studies from the past 15 years",
+        "geographic": "global, predominantly North America and Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Adherence to intermittent fasting regimens",
+      "predicate": "exhibits a bimodal pattern after 6 to 12 months",
+      "object": "where some individuals stabilize or increase adherence while others decline significantly",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] The apparent contradiction between stable/increasing adherence and declining adherence can be resolved by recognizing that different subpopulations respond differently\u2014possibly due to individual differences in metabolic adaptation, psychological factors, or lifestyle compatibility\u2014so both trends coexist depending on context."
+      ],
+      "scope": {
+        "domain": "long-term behavioral maintenance"
+      },
+      "qualifier": {
+        "description": "Participant dropout rates increase and self-reported compliance decreases after the initial novelty phase, reducing the practical sustainability of the protocol."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 22,
+  "focus_claim_id": "C008"
+}

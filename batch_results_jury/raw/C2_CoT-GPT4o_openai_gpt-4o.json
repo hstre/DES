@@ -1,0 +1,64 @@
+{
+  "qid": "C2",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 893,
+    "completion_tokens": 408,
+    "total_tokens": 1301,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A is clearer and more straightforward, while Output B is more complex and harder to follow."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B provides more specific claims and confidence levels, whereas Output A is more general."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A explicitly identifies and addresses a fundamental contradiction, while Output B presents competing hypotheses without resolving them."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a more bounded synthesis by suggesting conditions under which globalization can be beneficial."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs present common tensions in the globalization debate, with neither offering particularly novel insights."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B maintains multiple competing hypotheses in parallel, whereas Output A focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide a traceable reasoning process, though in different formats."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs mention scope conditions, but neither provides detailed evidence status."
+    },
+    "overall": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A is slightly favored for its clarity and synthesis quality, though both have strengths in different areas."
+    }
+  }
+}

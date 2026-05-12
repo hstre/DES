@@ -1,0 +1,64 @@
+{
+  "qid": "E1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1145,
+    "completion_tokens": 612,
+    "total_tokens": 1757,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A presents a clear narrative flow through numbered steps, while Output B's fragmented list structure with technical notation requires more cognitive effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B makes specific quantified claims (e.g., 'lowest income quintile over 10+ years', 'gender-based wage gaps') while Output A uses vaguer qualifiers like 'sufficient institutional capacity'."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A identifies the fundamental tension between growth acceleration and dependency entrenchment, while Output B focuses more on distributional effects within a welfare framework."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A provides explicit scope conditions (institutional capacity, diversification, state intervention) for when each outcome occurs, while Output B's synthesis conclusions remain at 0.50 confidence without clear resolution."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B surfaces non-obvious tensions like simultaneous welfare gains and distributional harms, and gender-specific effects that a domain expert would find more granular than Output A's standard institutional capacity argument."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains competing hypotheses in parallel with equal confidence (0.90 for both), while Output A collapses branches into a single conditional synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides explicit metadata (14 claims generated, 49 operations, confidence scores for 11 supported claims) enabling reconstruction of reasoning state, while Output A shows only final step outputs."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B specifies temporal scope ('10+ years', 'short-term'), population segments ('lowest income quintile', 'vulnerable workers'), and institutional conditions ('weak labor protections') more precisely than Output A's general categories."
+    },
+    "overall": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B demonstrates superior epistemic rigor through explicit branch preservation, quantified confidence tracking, and granular scope specification, despite lower readability, making it more valuable for epistemic evaluation."
+    }
+  }
+}

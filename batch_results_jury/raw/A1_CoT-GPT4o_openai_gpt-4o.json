@@ -1,0 +1,64 @@
+{
+  "qid": "A1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 970,
+    "completion_tokens": 428,
+    "total_tokens": 1398,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is clearer and more concise, making it easier to comprehend."
+    },
+    "directional_commitment": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides more specific claims with confidence levels, while Output B hedges with context-dependence."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly identifies contradictions between claims and counter-claims, while Output A presents competing hypotheses without direct contradiction analysis."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide context-dependent synthesis, but neither clearly bounds the scope of their synthesis."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A introduces novel tensions related to labor market concentration that experts might find valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A maintains multiple competing hypotheses in parallel, whereas Output B focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have traceable reasoning, but Output A provides more detailed claim history while Output B has a clearer step-by-step process."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explicitly mentions scope conditions and confidence levels for claims, while Output B is more general."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A demonstrates stronger epistemic structure and novelty, though Output B excels in readability and contradiction handling."
+    }
+  }
+}

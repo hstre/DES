@@ -1,0 +1,277 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "Self-reported productivity gains conflict with objective metrics like promotion rates and collaboration frequency"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote workers",
+      "predicate": "report higher",
+      "object": "self-perceived productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers self-perceived productivity]"
+      ],
+      "scope": {
+        "domain": "individual perception"
+      },
+      "qualifier": {
+        "tension": "Subjective satisfaction may not align with organizational outcomes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote workers",
+      "predicate": "experience lower",
+      "object": "promotion rates and collaboration frequency",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers promotion rates and collaboration frequency]",
+        "[CONFLICT] Objective metrics indicate remote workers have lower promotion rates and collaboration frequency, but subjective reports may not reflect these hidden costs, creating a tension between empirical data and perceived experiences."
+      ],
+      "scope": {
+        "domain": "career advancement and team interaction"
+      },
+      "qualifier": {
+        "tension": "Objective metrics point to hidden costs of remote work that subjective reports may overlook"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Remote workers who report high self-perceived productivity",
+      "predicate": "show a negative correlation with",
+      "object": "objective output metrics measured by the organization",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers who report high self-perceived productivity objective output metrics measured by the organization]",
+        "[PATH:empirical] Longitudinal field study comparing self-reported productivity surveys with objective performance metrics (e.g., output per hour, task completion rates) from a large U.S. tech firm using remote work tracking software (2020-2023). \u2014 Directly tests the correlation between self-perceived productivity and objective output within the specified temporal and geographic scope, providing quantitative evidence to confirm or refute the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing peer-reviewed studies on remote work productivity, focusing on discrepancies between self-reported and objective measures (e.g., Bloom et al., 2015; Choudhury et al., 2021). \u2014 Synthesizes prior findings across multiple contexts to assess the generalizability of the negative correlation, addressing the disputed status and moderate confidence level.",
+        "[PATH:theoretical] Theoretical framework from organizational behavior (e.g., self-enhancement bias, social desirability bias) explaining why self-perceived productivity may diverge from objective metrics in remote settings. \u2014 Provides causal mechanisms to interpret empirical results and refine the hypothesis, particularly relevant given the disputed status and need for explanatory depth."
+      ],
+      "scope": {
+        "domain": "organizational performance evaluation"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132023",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote workers",
+      "predicate": "report lower",
+      "object": "self-perceived productivity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers self-perceived productivity]",
+        "[PATH:empirical] Longitudinal survey study comparing self-reported productivity metrics of remote vs. on-site workers across multiple industries (e.g., using validated scales like the Individual Work Performance Questionnaire). \u2014 Directly measures self-perceived productivity over the 2020-2023 period, allowing for temporal and geographic comparisons to confirm or refute the hypothesis.",
+        "[PATH:literature] Meta-analysis of existing literature on remote work and productivity perceptions (e.g., from journals like Journal of Vocational Behavior or Journal of Organizational Behavior). \u2014 Synthesizes prior findings to assess overall effect size and consistency across studies, addressing the disputed status of the hypothesis.",
+        "[PATH:empirical] Experimental study using experience sampling method (ESM) to capture real-time self-perceived productivity fluctuations in remote vs. office settings, controlling for confounds like task type and autonomy. \u2014 Provides high-resolution temporal data on individual perception, reducing recall bias and clarifying causal direction."
+      ],
+      "scope": {
+        "domain": "individual perception"
+      },
+      "qualifier": {
+        "temporal": "2020-2023",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote workers who engage in high-frequency synchronous video communication",
+      "predicate": "experience lower",
+      "object": "promotion rates despite maintaining or increasing collaboration frequency",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers who engage in high-frequency synchronous video communication promotion rates despite maintaining or increasing collaboration frequency]",
+        "[PATH:empirical] Longitudinal study of promotion rates and communication modality in remote tech teams (e.g., using internal HR and Slack/Teams metadata from a large US-based consulting firm) \u2014 Directly tests the core claim by correlating synchronous video frequency with actual promotion outcomes over 18 months, controlling for collaboration frequency and other confounds.",
+        "[PATH:empirical] Experimental or quasi-experimental analysis of visibility bias in remote performance evaluations (e.g., comparing managers' promotion recommendations for video-heavy vs. asynchronous-heavy workers in a controlled setting) \u2014 Tests whether high video communication reduces perceived autonomy or increases surveillance, potentially leading to lower promotion rates independently of collaboration quality."
+      ],
+      "scope": {
+        "domain": "career advancement and team interaction"
+      },
+      "qualifier": {
+        "temporal": "during the first 18 months of remote work adoption",
+        "geographic": "in technology and consulting sectors headquartered in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote workers",
+      "predicate": "achieve higher",
+      "object": "productivity and job satisfaction",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote workers productivity and job satisfaction]",
+        "[PATH:literature] Meta-analysis of remote work productivity studies (e.g., from journals like Journal of Applied Psychology or Harvard Business Review) covering 2020-2024 in the US and Western Europe \u2014 A systematic review of existing empirical studies would aggregate effect sizes across contexts, clarifying whether the disputed claim holds consistently or varies by industry, team structure, or measurement method.",
+        "[PATH:empirical] Longitudinal field experiment with matched samples of remote and in-office teams in tech and consulting firms (2023-2024) measuring both self-reported job satisfaction and objective productivity metrics (e.g., output per hour, project completion rates) \u2014 Controlled empirical data can isolate causal effects of remote work on productivity and satisfaction, addressing confounding factors like self-selection bias and temporal trends in the post-pandemic period.",
+        "[PATH:empirical] Qualitative interview study with remote workers and their managers in US and Western European companies, focusing on career advancement barriers and team interaction dynamics \u2014 Given the scope domain of career advancement and team interaction, in-depth qualitative evidence can uncover mechanisms (e.g., visibility, mentorship access) that moderate the relationship between remote work and the claimed outcomes, explaining the disputed status."
+      ],
+      "scope": {
+        "domain": "career advancement and team interaction"
+      },
+      "qualifier": {
+        "temporal": "2020-2024",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C004",
+    "T6[falsifier] on C002 -> C005",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C006",
+    "T5[falsifier] on C003 -> C007",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 25,
+  "focus_claim_id": "C007",
+  "anti_delphi_activations": 2,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C004",
+      "C006"
+    ],
+    "falsifier": [
+      "C005",
+      "C007"
+    ]
+  }
+}

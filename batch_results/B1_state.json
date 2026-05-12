@@ -1,0 +1,265 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a reliable measure of",
+      "object": "economic wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP economic wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "tension": "While GDP captures market output, it ignores income distribution, non-market activities, and environmental costs, leading to contested evidence on whether rising GDP correlates with improved life satisfaction across diverse populations."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP",
+      "predicate": "captures",
+      "object": "market output that strongly correlates with basic material living standards in industrialized economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP market output that strongly correlates with basic material living standards in industrialized economies]",
+        "[PATH:empirical] Maddison Historical Statistics and Penn World Tables \u2014 These datasets provide long-run GDP per capita series alongside non-market indicators (e.g., life expectancy, nutrition, infant mortality) for industrialized economies. Cross-sectional and time-series correlations can test the strength and stability of the claimed relationship across different historical periods and levels of formal market development.",
+        "[PATH:literature] Stiglitz-Sen-Fitoussi Commission Report (2009) and related literature on beyond-GDP metrics \u2014 This work systematically critiques GDP's ability to capture material living standards, discussing multidimensional poverty, inequality, and non-market production. Reviewing its evidence and counterarguments clarifies whether the correlation is robust or confounded by unmeasured factors (e.g., public goods, household labor) even in industrialized economies.",
+        "[PATH:empirical] Controlled microeconomic studies on market activity and welfare in dual-economy contexts (e.g., Eastern European transition economies) \u2014 Studying periods of rapid marketization (e.g., post-1990 Eastern Europe) allows comparison of GDP growth with direct measures of material living standards (consumption baskets, health outcomes). A weak or lagged correlation would refute the hypothesis; a strong and immediate correlation would support it."
+      ],
+      "scope": {
+        "domain": "industrialized economies with formal markets"
+      },
+      "qualifier": {
+        "tension": "This sub-claim focuses on the domain where GDP measurement infrastructure is most developed and market transactions dominate economic activity."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP",
+      "predicate": "systematically excludes",
+      "object": "non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing in developing and informal economies",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing in developing and informal economies]"
+      ],
+      "scope": {
+        "domain": "developing economies with large informal sectors"
+      },
+      "qualifier": {
+        "tension": "This sub-claim challenges the universal applicability implied in the first sub-claim by identifying structural blind spots in GDP measurement."
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T5",
+        "T1",
+        "T9"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Rising GDP",
+      "predicate": "is accompanied by",
+      "object": "increased environmental degradation and inequality that offset wellbeing gains for middle and lower income groups",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Rising GDP increased environmental degradation and inequality that offset wellbeing gains for middle and lower income groups]",
+        "[PATH:empirical] Longitudinal panel data on GDP growth, Gini coefficients, and ecological footprint (e.g., World Bank, OECD, Global Footprint Network) for 30+ countries over 1990\u20132020, with wellbeing measured by subjective life satisfaction and objective health/income metrics from Gallup World Poll and WHO. \u2014 Directly tests whether periods of rising GDP co-occur with increasing inequality and environmental degradation, and whether these offset wellbeing gains for middle and lower income groups. A multilevel regression model can estimate net effects.",
+        "[PATH:literature] Systematic review of the 'Easterlin Paradox' and 'threshold hypothesis' literature, focusing on studies that specifically examine the mediating role of inequality and environmental damage in the GDP-wellbeing relationship (e.g., work by Easterlin, Kahneman, Deaton, and recent ecological economics critiques). \u2014 Synthesizes existing theoretical and empirical evidence on the conditions under which GDP growth fails to translate into wellbeing gains, providing a weighted assessment for or against the hypothesis.",
+        "[PATH:theoretical] Formal theoretical model incorporating environmental externalities and inequality into a utility-based welfare function, calibrated with parameters from ecological economics and distributional national accounts (e.g., Piketty, Stiglitz, and Arrow's sustainability models). \u2014 Explores the causal mechanisms and counterfactual scenarios: e.g., if environmental degradation and inequality are accounted for, under what parameter ranges does GDP growth become net-negative for wellbeing? This can identify conditions that confirm or refute the hypothesis."
+      ],
+      "scope": {
+        "domain": "populations experiencing GDP growth alongside rising Gini coefficients and ecological footprint"
+      },
+      "qualifier": {
+        "tension": "This creates epistemic friction with the first sub-claim by suggesting that even where GDP works as a market measure, the net effect on wellbeing may be negative due to overlooked costs."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP",
+      "predicate": "does not systematically exclude",
+      "object": "non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing in developing and informal economies",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing in developing and informal economies]",
+        "[PATH:empirical] Time-use surveys and satellite accounts for unpaid care work (e.g., from national statistical offices in India, Mexico, or South Africa) \u2014 Quantifies the magnitude of non-market activities excluded from GDP and compares their contribution to measured GDP, directly testing whether exclusion is systematic and significant for wellbeing.",
+        "[PATH:empirical] Comparative welfare indices (e.g., GPI, HDI, U-index) versus GDP per capita in a panel of developing economies with large informal sectors \u2014 Assesses whether alternative wellbeing measures diverge systematically from GDP, indicating structural blind spots in GDP's coverage of non-market activities.",
+        "[PATH:literature] Literature on 'Ghana's subsistence agriculture' or 'Sub-Saharan African informal economies' (e.g., studies by Jerven or Deaton on GDP underestimation) \u2014 Reviews documented cases where GDP fails to capture subsistence farming or unpaid labor, providing theoretical and contextual support for the hypothesis."
+      ],
+      "scope": {
+        "domain": "developing economies with large informal sectors"
+      },
+      "qualifier": {
+        "tension": "This sub-claim challenges the universal applicability implied in the first sub-claim by identifying structural blind spots in GDP measurement."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP in developing economies with large informal sectors",
+      "predicate": "systematically excludes",
+      "object": "non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP in developing economies with large informal sectors systematically excludes non-market activities (e.g., unpaid care work, subsistence farming) that significantly affect wellbeing in domain 'developing economies with large informal sectors']"
+      ],
+      "scope": {
+        "domain": "developing economies with large informal sectors"
+      },
+      "qualifier": {
+        "temporal": "since 1990s",
+        "geographic": "Sub-Saharan Africa and South Asia"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP in developing economies with large informal sectors",
+      "predicate": "does not systematically exclude",
+      "object": "non-market activities (e.g., unpaid care work, subsistence farming) in a way that significantly affects wellbeing",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP in developing economies with large informal sectors does not systematically exclude non-market activities (e.g., unpaid care work, subsistence farming) in a way that significantly affects wellbeing in domain 'developing economies with large informal sectors']"
+      ],
+      "scope": {
+        "domain": "developing economies with large informal sectors"
+      },
+      "qualifier": {
+        "temporal": "post-2000 to present",
+        "geographic": "low- and lower-middle-income countries in Sub-Saharan Africa, South Asia, and parts of Latin America"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP's inclusion of non-market activities affecting wellbeing in developing and informal economies",
+      "predicate": "depends on how national statistical offices define the production boundary and whether they adjust for informal sector output, meaning",
+      "object": "GDP may partially include some non-market activities (e.g., subsistence farming counted as output) while systematically excluding others (e.g., unpaid care work), with the net effect varying by country",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[synthesized from branches: C005, B001]",
+        "[SYNTHESIS] Branch A notes that GDP does not systematically exclude all non-market activities, as some (like subsistence farming) are often imputed in national accounts. Branch B highlights that large informal sectors still face systematic exclusion of key activities (e.g., unpaid care work). The synthesis reconciles these by specifying that the pattern is not uniform: inclusion varies by activity type and country practice, making the contradiction productive by focusing attention on which non-market activities are omitted and why."
+      ],
+      "scope": {
+        "domain": "developing economies with large informal sectors"
+      },
+      "qualifier": {
+        "tension": "This sub-claim challenges the universal applicability implied in the first sub-claim by identifying structural blind spots in GDP measurement."
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6 on C002",
+    "T8 on C002",
+    "T3 on C003",
+    "T5 on C003",
+    "T1 on C003",
+    "T3 on C004",
+    "T6 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9 on C003",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C008"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 22,
+  "focus_claim_id": "C008"
+}

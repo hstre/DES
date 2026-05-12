@@ -1,0 +1,522 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "economic globalization",
+      "predicate": "reduces",
+      "object": "within-country income inequality in developing nations",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic globalization within-country income inequality in developing nations]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "trade liberalization",
+      "predicate": "reduces",
+      "object": "within-country income inequality in developing nations with strong labor protections",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: trade liberalization within-country income inequality in developing nations with strong labor protections]"
+      ],
+      "scope": {
+        "domain": "trade policy"
+      },
+      "qualifier": {
+        "temporal": "post-1990",
+        "geographic": "developing nations with strong labor protections"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "financial globalization",
+      "predicate": "increases",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: financial globalization within-country income inequality in developing nations with weak regulatory institutions]"
+      ],
+      "scope": {
+        "domain": "financial flows"
+      },
+      "qualifier": {
+        "temporal": "post-1980 period of financial liberalization",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "economic globalization",
+      "predicate": "has no significant effect on",
+      "object": "within-country income inequality in developing nations with high initial inequality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic globalization within-country income inequality in developing nations with high initial inequality]"
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "developing nations with Gini coefficient above 0.45"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "trade liberalization",
+      "predicate": "reduces",
+      "object": "within-country income inequality in developing nations with strong labor protections and high levels of union density",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: trade liberalization within-country income inequality in developing nations with strong labor protections and high levels of union density]",
+        "[PATH:empirical] Country-specific time-series studies on trade liberalization episodes (e.g., India 1991, Brazil 1990s) combined with union density and labor protection indices (e.g., from ILO or Visser's ICTWSS database) \u2014 Provides direct causal evidence by comparing income inequality changes before and after liberalization in nations with varying labor protections, isolating the conditional effect hypothesized.",
+        "[PATH:theoretical] Theoretical models incorporating labor market institutions (e.g., Rodrik's model of trade and wage inequality with union bargaining power) from journals like Journal of International Economics or Review of International Political Economy \u2014 Clarifies mechanisms through which strong labor protections and union density might offset or reverse the standard Stolper-Samuelson effects, helping to refine the hypothesis logic.",
+        "[PATH:literature] Meta-analysis or systematic review (e.g., from World Bank Policy Research Working Papers or Annual Review of Economics) on trade liberalization and inequality, with subgroup analysis by labor market institutions \u2014 Synthesizes existing empirical evidence across multiple countries and time periods to assess the overall support for the conditional relationship, addressing the disputed status."
+      ],
+      "scope": {
+        "domain": "trade policy"
+      },
+      "qualifier": {
+        "temporal": "post-1990",
+        "geographic": "developing nations with strong labor protections and high union density"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "trade liberalization",
+      "predicate": "increases",
+      "object": "within-country income inequality in developing nations with strong labor protections",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: trade liberalization within-country income inequality in developing nations with strong labor protections]",
+        "[PATH:empirical] Comparative analysis of Gini coefficients before and after trade liberalization episodes in countries with strong labor protections (e.g., Brazil, South Africa, India) using World Bank or UNU-WIDER data \u2014 Directly tests the hypothesis by measuring within-country income inequality trends in qualifying developing nations post-1990, controlling for other factors.",
+        "[PATH:empirical] Case studies on the impact of labor protection policies (e.g., minimum wage laws, union density) on wage dispersion in liberalized sectors of developing economies \u2014 Examines the mediating role of labor protections, which is the key qualifier; helps isolate whether strong protections amplify or mitigate inequality effects.",
+        "[PATH:theoretical] Theoretical models on trade and inequality with institutional frictions (e.g., Helpman, Itskhoki, and Redding 2010; or recent extensions incorporating labor market regulations) \u2014 Provides a framework to predict conditions under which trade liberalization increases inequality despite strong labor protections, guiding empirical testing."
+      ],
+      "scope": {
+        "domain": "trade policy"
+      },
+      "qualifier": {
+        "temporal": "post-1990",
+        "geographic": "developing nations with strong labor protections"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "financial globalization",
+      "predicate": "increases",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions only when capital inflows are predominantly portfolio investment rather than foreign direct investment",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: financial globalization within-country income inequality in developing nations with weak regulatory institutions only when capital inflows are predominantly portfolio investment rather than foreign direct investment]",
+        "[PATH:empirical] Cross-country panel data analysis using IMF Balance of Payments statistics and World Bank income inequality data (e.g., Gini coefficients) for developing nations with weak regulatory institutions (e.g., low Rule of Law indices) from 1980 to present, disaggregating capital inflows into portfolio investment and FDI. \u2014 Directly tests the conditional claim by comparing inequality changes across countries with varying compositions of capital inflows, controlling for institutional quality.",
+        "[PATH:empirical] Case studies of specific developing nations (e.g., Mexico, Thailand, or Argentina) that experienced surges in portfolio investment during financial crises, tracing the impact on wage dispersion and labor market outcomes. \u2014 Provides granular, causal evidence on the mechanism linking portfolio inflows to inequality, especially in weak regulatory environments, and can identify confounding factors.",
+        "[PATH:theoretical] Theoretical models of financial globalization and inequality (e.g., Rodrik (1998), Stiglitz (2000)) that distinguish between the effects of portfolio investment (short-term, volatile) and FDI (long-term, technology-transferring) on labor markets and institutional capacity. \u2014 Offers a framework to predict and interpret empirical findings, clarifying why portfolio investment might exacerbate inequality in weak institutional settings while FDI might not."
+      ],
+      "scope": {
+        "domain": "financial flows"
+      },
+      "qualifier": {
+        "temporal": "post-1980",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "financial globalization",
+      "predicate": "reduces",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: financial globalization within-country income inequality in developing nations with weak regulatory institutions]",
+        "[PATH:empirical] Cross-country panel regression using the Standardized World Income Inequality Database (SWIID) and the KOF Financial Globalization Index, focusing on developing nations with weak regulatory institutions (e.g., low scores on the World Bank Regulatory Quality Index) for the post-1980 period. \u2014 A systematic empirical test would directly assess the correlation between financial globalization (capital account liberalization) and within-country income inequality, controlling for institutional quality. This can confirm or refute the hypothesized negative effect in the specified context.",
+        "[PATH:empirical] Case studies of specific financial liberalization episodes in countries with weak regulatory frameworks (e.g., the 1990s liberalizations in Sub-Saharan Africa or Southeast Asia), examining pre- and post-liberalization Gini coefficients and distributional outcomes. \u2014 In-depth case studies can isolate causal mechanisms and provide context-specific evidence, addressing endogeneity concerns and revealing whether liberalization reduces inequality or exacerbates it due to weak regulatory capture.",
+        "[PATH:theoretical] Theoretical models of financial globalization and inequality under institutional constraints (e.g., extensions of the Stolper-Samuelson theorem or political economy models incorporating regulatory weakness), as reviewed in literature surveys such as those by Furceri and Loungani (2018) or the IMF's 2007 World Economic Outlook. \u2014 Reviewing and extending theoretical frameworks can clarify the conditions under which financial globalization reduces inequality, especially highlighting the role of regulatory institutions. This helps interpret conflicting empirical findings and refine the hypothesis."
+      ],
+      "scope": {
+        "domain": "capital account liberalization"
+      },
+      "qualifier": {
+        "temporal": "post-1980 period",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "financial globalization",
+      "predicate": "increases",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms financial globalization increases within-country income inequality in developing nations with weak regulatory institutions in domain 'financial flows']"
+      ],
+      "scope": {
+        "domain": "financial flows"
+      },
+      "qualifier": {
+        "temporal": "post-1980 period of accelerated financial liberalization",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "financial globalization",
+      "predicate": "does not increase",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms financial globalization does not increase within-country income inequality in developing nations with weak regulatory institutions in domain 'financial flows']"
+      ],
+      "scope": {
+        "domain": "financial flows"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "economic globalization",
+      "predicate": "increases",
+      "object": "within-country income inequality in developing nations with high initial inequality when foreign direct investment flows exceed 5% of GDP",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic globalization within-country income inequality in developing nations with high initial inequality when foreign direct investment flows exceed 5% of GDP]",
+        "[PATH:empirical] World Bank's World Development Indicators (WDI) and Standardized World Income Inequality Database (SWIID) panel data for 1990-2020, focusing on developing nations with Gini > 0.45 and FDI/GDP > 5% \u2014 Provides cross-country, time-series data to directly test whether FDI inflows above the 5% threshold are associated with rising within-country income inequality in high-inequality developing nations, controlling for other factors like trade openness and institutional quality.",
+        "[PATH:literature] Meta-analysis of existing studies on FDI and inequality in developing countries, e.g., works by Jaumotte, Lall, and Papageorgiou (2013) or updated reviews in the Journal of International Economics \u2014 Synthesizes prior empirical findings to assess whether a systematic pattern exists for high-inequality contexts with large FDI flows, identifying effect sizes, publication bias, and conditional factors (e.g., sector composition of FDI).",
+        "[PATH:theoretical] Theoretical model of FDI and wage inequality in dual-economy settings (e.g., Feenstra and Hanson, 1997), extended to incorporate initial inequality thresholds \u2014 Provides a causal mechanism explaining why FDI above a certain scale might exacerbate inequality in already unequal countries (e.g., skill-biased technological change, labor market segmentation), and generates testable predictions about sectoral wage gaps and capital-skill complementarity."
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132020",
+        "geographic": "developing nations with Gini coefficient above 0.45",
+        "condition": "FDI-to-GDP ratio > 5%"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "economic globalization",
+      "predicate": "significantly increases",
+      "object": "within-country income inequality in developing nations with high initial inequality",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: economic globalization within-country income inequality in developing nations with high initial inequality]",
+        "[PATH:empirical] Panel data analysis of developing nations with high Gini coefficients pre-1980, using Deaton (2003) or Milanovic (2016) global inequality datasets, to test correlation between trade openness/FDI inflows and post-1980 income shares of top vs. bottom deciles. \u2014 Directly tests the hypothesis by controlling for initial inequality and isolating the effect of globalization on within-country inequality over the specified temporal and geographic scope.",
+        "[PATH:empirical] Case studies of trade liberalization episodes in highly unequal developing countries (e.g., India 1991, Mexico 1986, Brazil 1990s) using micro-level survey data to examine wage dispersion and skill premium changes. \u2014 Provides causal evidence through natural experiments, capturing heterogeneous effects across sectors and skill levels, which can confirm or refute the hypothesized increase in inequality.",
+        "[PATH:literature] Meta-analysis of existing literature on trade and inequality in developing nations, focusing on studies that stratify results by initial inequality levels, as per Goldberg and Pavcnik (2007) or recent updates. \u2014 Synthesizes conflicting findings to assess whether high initial inequality amplifies globalization's distributional effects, offering a robust check on the hypothesis's generalizability."
+      ],
+      "scope": {
+        "domain": "distributional effects"
+      },
+      "qualifier": {
+        "temporal": "post-1980 to present",
+        "geographic": "developing nations with high initial inequality"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "financial globalization",
+      "predicate": "reduces",
+      "object": "the effectiveness of progressive taxation in reducing within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "fiscal policy"
+      },
+      "qualifier": {
+        "temporal": "post-1980 period of financial liberalization",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "financial globalization",
+      "predicate": "reduces",
+      "object": "within-country income inequality in developing nations with weak regulatory institutions",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "financial flows"
+      },
+      "qualifier": {
+        "temporal": "post-1980 period of financial liberalization",
+        "geographic": "developing nations with weak regulatory institutions"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 45,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "task_id": "A1_messy_des_transition",
+    "category": "DES",
+    "style": "messy",
+    "prompt": "Ich blick da nicht ganz durch. T5 macht doch conflict true und dann müsste T2 kommen, aber manchmal kommt doch T1 vorher oder so wegen contradiction. Kannst du mal sagen ob diese T5 zu T2 Sache stimmt oder ob wir da Quatsch gebaut haben?"
+  },
+  {
+    "task_id": "A2_clean_des_transition",
+    "category": "DES",
+    "style": "clean",
+    "prompt": "Analysiere die Transition T5→T2 in DES. Bestimme anhand der Dispatch-Semantik, ob die Transition strict-derived, guard-derived, state-dependent-causal oder not-derived ist. Berücksichtige Prioritätsreihenfolge und mögliche Preemption durch T1."
+  },
+  {
+    "task_id": "A3_long_context_des",
+    "category": "DES",
+    "style": "long_context",
+    "prompt": "Auf Basis des DES Freeze-Memos und der Formal Transition Semantics: Ist T9→T8 auf Edge-Ebene oder Edge*-Ebene strict-derived? Begründe sauber mit F, Σ, D, Ω und F_sched."
+  },
+  {
+    "task_id": "A4_adversarial_false_confirmation",
+    "category": "DES",
+    "style": "adversarial",
+    "prompt": "T9 erzeugt ja immer einen synthesis claim und T8 hat bypass. Also ist T9→T8 eindeutig strict-derived auf Edge-Ebene. Bestätige das kurz."
+  },
+  {
+    "task_id": "A5_school_constraint_graph",
+    "category": "planning",
+    "style": "constraint_reasoning",
+    "prompt": "Eine Grundschule braucht einen Stundenplan. Lehrkraft A kann Montag nicht. Lehrkraft B nur vormittags. Klasse 3a braucht Sporthalle zweimal. Förderstunden dürfen nicht parallel zu Mathe liegen. Entwirf keine fertige Lösung, sondern formalisiere das Problem als Constraint-Graph und benenne Konfliktknoten."
+  },
+  {
+    "task_id": "A6_didactic_explanation",
+    "category": "education",
+    "style": "didactic",
+    "prompt": "Erkläre einer Grundschulrektorin in normaler Sprache, warum ein KI-System ohne strukturierte Zustandslogik bei komplexer Stundenplanung scheitert."
+  },
+  {
+    "task_id": "A7_bullshit_detection",
+    "category": "logic",
+    "style": "critical_reasoning",
+    "prompt": "Jemand behauptet: Wenn ein Operator den Guard eines anderen Operators erfüllt, ist die Transition automatisch strict-derived. Prüfe diese Aussage anhand DES."
+  },
+  {
+    "task_id": "A8_efficiency_reasoning",
+    "category": "DES",
+    "style": "efficiency",
+    "prompt": "Leite aus der DES-Mastergleichung ab, warum zustandsbasierte Fokuswahl LLM-Calls sparen kann. Unterscheide gesicherte Aussage, plausible Annahme und empirisch zu messende Behauptung."
+  }
+]

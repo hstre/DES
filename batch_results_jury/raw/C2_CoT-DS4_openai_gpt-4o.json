@@ -1,0 +1,64 @@
+{
+  "qid": "C2",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 946,
+    "completion_tokens": 416,
+    "total_tokens": 1362,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A is clearer and more structured, while Output B is repetitive and less coherent."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clear initial claim and synthesis, whereas Output B presents conflicting claims with low confidence."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs identify contradictions, but neither delves deeply into resolving them."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A offers a more precise synthesis with conditions for net benefit, while Output B lacks a coherent synthesis."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explores non-obvious tensions in economic inequality, which a domain expert might find valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B maintains competing hypotheses in parallel, whereas Output A focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clearer process from claim to synthesis, while Output B's reasoning is less traceable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A sets clearer scope conditions and evidence status, whereas Output B is more ambiguous."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more coherent and structured, providing a clearer synthesis and process traceability."
+    }
+  }
+}

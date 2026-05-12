@@ -1,0 +1,64 @@
+{
+  "qid": "E2",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1305,
+    "completion_tokens": 618,
+    "total_tokens": 1923,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.25,
+      "CoT": 0.75,
+      "reason": "Output A presents a clear narrative flow through numbered steps, while Output B uses technical formatting with nested lists that requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output A makes clear directional claims at each step with specific confidence levels, while Output B's main claim has low confidence (0.45) and relies heavily on hedged conditional statements."
+    },
+    "contradiction_depth": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output A identifies the fundamental tension between infinite growth and finite resources versus decoupling, while Output B surfaces the rebound effects versus efficiency gains tension, both substantive but A's is more foundational."
+    },
+    "synthesis_quality": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides precise scope-bounding (current structures vs. specific contexts, global vs. local scale) with explicit feasibility caveats, while Output B's synthesis conclusions remain at 0.50 confidence without clear resolution."
+    },
+    "epistemic_novelty": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B surfaces the non-obvious offshoring mechanism that masks apparent decoupling and explicitly maintains the rebound effects paradox, while Output A covers more standard arguments in the debate."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains two competing hypotheses in parallel with equal high confidence (0.90 each), while Output A collapses branches into a single synthesis without preserving the tension."
+    },
+    "process_traceability": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output B provides explicit metadata (14 claims generated, 49 operations applied) and structured claim tracking, while Output A shows step progression but less granular operation history."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explicitly distinguishes relative vs. absolute decoupling, specifies high-income economies post-1990, and notes 'not yet proven at scale,' while Output A mentions empirical weakness but with less precision."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output B demonstrates superior epistemic structure through branch preservation, process traceability, and scope discipline despite lower readability, while Output A excels in narrative clarity but prematurely resolves tensions."
+    }
+  }
+}

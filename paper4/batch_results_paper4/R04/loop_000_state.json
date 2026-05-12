@@ -1,0 +1,499 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "GDP",
+      "predicate": "is a valid proxy for",
+      "object": "human wellbeing",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP human wellbeing]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "GDP per capita",
+      "predicate": "correlates with",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]"
+      ],
+      "scope": {
+        "domain": "developed economies, market-based systems"
+      },
+      "qualifier": {
+        "temporal": "short-term, pre-2020"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "GDP growth",
+      "predicate": "fails to capture",
+      "object": "inequality, environmental degradation, and subjective well-being",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth inequality, environmental degradation, and subjective well-being]"
+      ],
+      "scope": {
+        "domain": "global, cross-national comparisons"
+      },
+      "qualifier": {
+        "caveat": "especially in contexts with high inequality or ecological damage"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "alternative metrics (e.g., HDI, GPI, subjective well-being surveys)",
+      "predicate": "may offer",
+      "object": "a more comprehensive proxy for human wellbeing than GDP alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: alternative metrics (e.g., HDI, GPI, subjective well-being surveys) a more comprehensive proxy for human wellbeing than GDP alone]"
+      ],
+      "scope": {
+        "domain": "multidimensional wellbeing assessment"
+      },
+      "qualifier": {
+        "data_quality": "dependent on measurement consistency and cultural comparability"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "GDP per capita growth driven by top-decile income capture",
+      "predicate": "negatively correlates with",
+      "object": "median household material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita growth driven by top-decile income capture median household material living standards in developed economies]",
+        "[PATH:empirical] Panel data analysis of OECD countries (2000-2020) linking top-decile income share (from World Inequality Database) to real median household income growth (from national statistical offices), controlling for GDP per capita growth and other covariates. \u2014 Directly tests the hypothesis by measuring whether periods of top-decile-driven GDP growth are associated with lower or negative growth in median household material living standards, using cross-country time-series data.",
+        "[PATH:theoretical] Review of theoretical models on income inequality and economic growth, e.g., Stiglitz (2012) 'The Price of Inequality' and Piketty (2014) 'Capital in the Twenty-First Century', focusing on mechanisms such as rent-seeking, reduced aggregate demand, and political capture. \u2014 Provides causal mechanisms that could explain a negative correlation between top-decile income capture and median living standards, helping to interpret empirical findings and identify confounding factors.",
+        "[PATH:empirical] Micro-level studies using household panel surveys (e.g., PSID, EU-SILC) to track changes in consumption and non-monetary well-being indicators (e.g., housing quality, health access) relative to top income shares at the regional or national level. \u2014 Material living standards extend beyond income; this approach captures broader welfare effects and reduces measurement error from median income data, offering a more robust test of the hypothesis."
+      ],
+      "scope": {
+        "domain": "developed economies, market-based systems"
+      },
+      "qualifier": {
+        "temporal": "post-2000"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "GDP per capita",
+      "predicate": "does not correlate with",
+      "object": "material living standards in developed economies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP per capita material living standards in developed economies]",
+        "[PATH:empirical] OECD Better Life Index (BLI) time-series data (2000-2020) correlated with GDP per capita \u2014 Directly tests the hypothesis by comparing GDP per capita with a multi-dimensional measure of material living standards (housing, income, jobs) across OECD members post-2000.",
+        "[PATH:literature] Meta-analysis of studies on the Easterlin Paradox and subjective well-being vs. GDP per capita in high-income countries \u2014 Reviews existing evidence on whether rising GDP per capita in developed economies translates into improved material living standards, controlling for diminishing marginal returns.",
+        "[PATH:theoretical] Theoretical model of satiation effects in consumption and non-market goods (e.g., leisure, health, environment) in developed economies \u2014 Explores mechanisms why GDP per capita may decouple from material living standards beyond a threshold, providing a causal framework to interpret empirical correlations."
+      ],
+      "scope": {
+        "domain": "developed economies, market-based systems"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "OECD member states"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "GDP growth",
+      "predicate": "systematically underestimates",
+      "object": "the negative impact of environmental degradation on subjective well-being in high-inequality contexts",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth the negative impact of environmental degradation on subjective well-being in high-inequality contexts]",
+        "[PATH:empirical] Re-analysis of World Values Survey and European Social Survey data merged with national GDP growth rates and environmental degradation indices (e.g., Environmental Performance Index) for high-inequality countries (Gini > 0.4) from 2000\u20132020, using multilevel models that interact GDP growth with environmental degradation to predict subjective well-being. \u2014 Directly tests whether the negative effect of environmental degradation on well-being is larger in high-inequality contexts and whether GDP growth fails to capture this moderation, potentially confirming systematic underestimation.",
+        "[PATH:theoretical] Theoretical review of the 'Easterlin Paradox' and environmental Kuznets curve literature, focusing on how inequality moderates the relationship between economic growth, environmental quality, and life satisfaction. \u2014 Provides a conceptual framework to explain why GDP growth might systematically underestimate well-being losses from environmental degradation under high inequality, supporting the hypothesis or identifying boundary conditions.",
+        "[PATH:empirical] New empirical study using panel data from the Gallup World Poll combined with satellite-based measures of air pollution and deforestation, specifically analyzing within-country variation in high-inequality nations over 2000\u20132020, with fixed effects for country and year. \u2014 Offers a robust test of the hypothesis by isolating the interaction between GDP growth and environmental degradation on subjective well-being at the individual level, controlling for unobserved heterogeneity."
+      ],
+      "scope": {
+        "domain": "cross-national comparisons, high-inequality nations"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "high-inequality nations (Gini coefficient > 0.4)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "GDP growth",
+      "predicate": "provides a comprehensive indicator of",
+      "object": "overall economic health",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP growth overall economic health]",
+        "[PATH:empirical] OECD Better Life Index and World Bank GDP growth data (post-2000) \u2014 Cross-national regression analysis comparing GDP growth rates with composite well-being indicators (e.g., health, education, income inequality) can test whether GDP growth alone captures overall economic health in the post-2000 era.",
+        "[PATH:literature] Stiglitz-Sen-Fitoussi Commission Report (2009) on 'Mismeasuring Our Lives' \u2014 This seminal report critiques GDP as a measure of economic well-being and proposes alternative metrics, providing theoretical and empirical arguments that can refute the hypothesis that GDP growth is a comprehensive indicator.",
+        "[PATH:empirical] Panel data from IMF World Economic Outlook and UN Human Development Index (2000-2020) \u2014 A time-series analysis of countries before and after the 2008 financial crisis can test whether GDP growth correlates with improvements in health, education, and environmental sustainability, thereby confirming or refuting its comprehensiveness."
+      ],
+      "scope": {
+        "domain": "global, cross-national comparisons"
+      },
+      "qualifier": {
+        "temporal": "post-2000 global financial crisis era",
+        "geographic": "global, cross-national comparisons"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "GDP growth",
+      "predicate": "fails to capture",
+      "object": "inequality, environmental degradation, and subjective well-being",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth fails to capture inequality, environmental degradation, and subjective well-being in domain 'global, cross-national comparisons']"
+      ],
+      "scope": {
+        "domain": "global, cross-national comparisons"
+      },
+      "qualifier": {
+        "temporal": "2000\u20132020",
+        "geographic": "global, cross-national comparisons"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "GDP growth",
+      "predicate": "adequately captures",
+      "object": "overall economic progress, including indirect effects on inequality, environment, and well-being",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms GDP growth adequately captures overall economic progress, including indirect effects on inequality, environment, and well-being in domain 'global, cross-national comparisons']"
+      ],
+      "scope": {
+        "domain": "global, cross-national comparisons"
+      },
+      "qualifier": {
+        "temporal": "post-2000",
+        "geographic": "global, cross-national comparisons"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "subjective well-being surveys",
+      "predicate": "predict",
+      "object": "long-term national resilience to economic shocks more accurately than GDP per capita",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: subjective well-being surveys long-term national resilience to economic shocks more accurately than GDP per capita]",
+        "[PATH:empirical] World Happiness Report longitudinal dataset (2005-2023) combined with OECD economic shock recovery metrics (e.g., GDP growth volatility, employment rebound post-2008/COVID) \u2014 Directly tests whether subjective well-being survey averages precede or correlate with faster recovery from economic shocks across OECD countries, controlling for GDP per capita.",
+        "[PATH:literature] Kahneman & Krueger (2006) 'Developments in the Measurement of Subjective Well-Being' and subsequent meta-analyses on SWB as leading economic indicator \u2014 Reviews existing theoretical and empirical foundations for SWB predicting economic resilience, identifying gaps in longitudinal shock-specific studies.",
+        "[PATH:theoretical] Simulated agent-based models of national economies incorporating heterogeneous well-being feedback loops (e.g., consumption, social trust, labor supply) \u2014 Tests causal mechanisms: if high SWB buffers against demand-side collapses during shocks, this would confirm the hypothesis; if not, refutes it."
+      ],
+      "scope": {
+        "domain": "multidimensional wellbeing assessment"
+      },
+      "qualifier": {
+        "temporal": "longitudinal (10+ years)",
+        "geographic": "OECD countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "GDP",
+      "predicate": "provides",
+      "object": "the most reliable and universally applicable metric for assessing economic health and indirectly human wellbeing",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: GDP the most reliable and universally applicable metric for assessing economic health and indirectly human wellbeing]",
+        "[PATH:empirical] Systematic review of empirical correlations between GDP growth and multidimensional wellbeing indices (e.g., HDI, OECD Better Life Index, Gallup-Sharecare Well-Being Index) across countries and decades. \u2014 Directly tests the claim that GDP is the most reliable and universally applicable metric for assessing economic health and indirectly human wellbeing by comparing its predictive power against alternative composite measures.",
+        "[PATH:literature] Critical literature review on the limitations of GDP in informal economies and developing countries (e.g., studies by J. Stiglitz, A. Sen, or the Commission on the Measurement of Economic Performance and Social Progress). \u2014 Addresses the geographic scope qualifier by assessing whether GDP's applicability is truly universal or systematically fails in contexts with large informal sectors, subsistence agriculture, or non-market transactions.",
+        "[PATH:theoretical] Theoretical analysis using a formal economic model that tests GDP's sensitivity to non-market externalities (e.g., environmental degradation, unpaid labor, inequality) versus alternative metrics like the Genuine Progress Indicator. \u2014 Evaluates the theoretical claim that GDP is the 'most reliable and universally applicable' metric by comparing its robustness to omitted variables and its ability to capture welfare-relevant economic activity."
+      ],
+      "scope": {
+        "domain": "economic and wellbeing assessment"
+      },
+      "qualifier": {
+        "temporal": "since mid-20th century until present, with declining consensus after 2000s",
+        "geographic": "primarily market economies, with limited applicability in developing and informal economies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "GDP growth",
+      "predicate": "actively misaligns with",
+      "object": "national subjective well-being in countries with high ecological debt",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "cross-national comparisons of high-inequality, high-pollution economies"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "GDP growth",
+      "predicate": "captures",
+      "object": "overall economic health and potential for addressing inequality and environmental issues",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "global, cross-national comparisons"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": false,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T7 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 40,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

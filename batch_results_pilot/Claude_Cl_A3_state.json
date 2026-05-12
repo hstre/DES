@@ -1,0 +1,381 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Immigration",
+      "predicate": "reduces",
+      "object": "wages for native workers with less than high school education",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers with less than high school education]"
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Immigration",
+      "predicate": "increases",
+      "object": "overall economic productivity and demand for native labor",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration overall economic productivity and demand for native labor]",
+        "[CONFLICT] The claim that immigration increases overall economic productivity and demand for native labor is disputed because evidence is mixed; some studies show positive effects on productivity and labor demand, while others find wage suppression or displacement effects for certain native workers, leading to uncertainty (confidence 0.42)."
+      ],
+      "scope": {
+        "domain": "macroeconomic effects"
+      },
+      "qualifier": {
+        "temporal": "long-term"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Immigration",
+      "predicate": "has no significant effect on",
+      "object": "average wages for native workers across all skill levels",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration average wages for native workers across all skill levels]"
+      ],
+      "scope": {
+        "domain": "aggregate labor market"
+      },
+      "qualifier": {
+        "condition": "when controlling for regional variation"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Immigration from countries with vocational training systems similar to the U.S.",
+      "predicate": "reduces wages less than immigration from countries with dissimilar training systems",
+      "object": "for native workers with less than high school education",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration from countries with vocational training systems similar to the U.S. for native workers with less than high school education]",
+        "[PATH:empirical] Panel data from the Current Population Survey (CPS) merged with origin-country vocational training indicators (e.g., from OECD PIAAC or UNESCO classification) to estimate wage effects by education and origin-country training system similarity \u2014 Directly tests the hypothesis by comparing wage outcomes for low-skilled native workers across immigrant groups categorized by the similarity of their home country's vocational training system to that of the U.S., controlling for immigrant skill composition and local labor market conditions.",
+        "[PATH:literature] Literature review of studies on immigrant-native substitutability and skill transferability, focusing on how vocational training system design affects task-specific human capital (e.g., work by George Borjas, Giovanni Peri, or Ethan Lewis on imperfect substitutability) \u2014 Provides theoretical grounding and empirical precedents for whether training system similarity moderates wage effects, helping to identify mechanisms (e.g., complementarity in specific tasks) and potential confounders.",
+        "[PATH:empirical] Quasi-experimental analysis using variation in immigration flows from countries that reformed their vocational training systems during 1990-2010 (e.g., Germany's dual system expansion) to isolate causal effects on U.S. low-skilled native wages \u2014 Exploits exogenous shifts in the 'similarity' of training systems over time, offering stronger causal identification than cross-sectional comparisons, and directly addresses the disputed status of the hypothesis."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "1990-2010",
+        "geographic": "United States",
+        "mechanism": "skill complementarity based on origin country education system"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Immigration",
+      "predicate": "increases",
+      "object": "wages for native workers with less than high school education through complementarity effects and economic expansion",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers with less than high school education through complementarity effects and economic expansion]",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This seminal study provides a negative estimate of the wage impact of immigration on native high school dropouts, directly challenging the complementarity hypothesis. Replicating its methodology with updated data (1990\u20132010) can test whether the hypothesized positive effect holds.",
+        "[PATH:empirical] Ottaviano, G.I.P., & Peri, G. (2012). 'Rethinking the Effect of Immigration on Wages.' Journal of the European Economic Association, 10(1), 152-197. \u2014 This paper argues for positive wage effects on less-educated natives via complementarity and capital adjustments. Using their nested CES production function framework with U.S. data from 1990\u20132010 would directly test the hypothesis's core mechanism.",
+        "[PATH:theoretical] Acemoglu, D. (2002). 'Directed Technical Change.' Review of Economic Studies, 69(4), 781-809. \u2014 This theory predicts that immigration can induce technological change that raises demand for low-skilled labor, potentially increasing wages. Applying this framework to the low-skilled labor market in the U.S. during 1990\u20132010 could provide a theoretical foundation for the hypothesized complementarity effect."
+      ],
+      "scope": {
+        "domain": "low-skilled labor markets"
+      },
+      "qualifier": {
+        "temporal": "1990\u20132010",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "High-skilled immigration",
+      "predicate": "increases",
+      "object": "wage growth for native workers in complementary occupations while suppressing wages in directly competing roles",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: High-skilled immigration wage growth for native workers in complementary occupations while suppressing wages in directly competing roles]",
+        "[PATH:empirical] Borjas, G. J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market.' Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 This seminal study provides a direct empirical test of wage effects of immigration on native workers, distinguishing between substitution and complementarity effects by skill group. Replicating or extending its methodology with recent high-skilled immigration data could confirm or refute the hypothesized wage suppression in competing roles and gains in complementary occupations.",
+        "[PATH:empirical] Peri, G. (2012). 'The Effect of Immigration on Productivity: Evidence from U.S. States.' Review of Economics and Statistics, 94(1), 348-358. \u2014 Peri's work examines how high-skilled immigration boosts productivity and wages for native workers in complementary roles through innovation and task specialization. Analyzing this mechanism with occupation-level panel data would directly test the complementary wage growth aspect of the hypothesis.",
+        "[PATH:theoretical] Acemoglu, D., & Autor, D. H. (2011). 'Skills, Tasks and Technologies: Implications for Employment and Earnings.' Handbook of Labor Economics, Vol. 4, Part B, 1043-1171. \u2014 This theoretical framework models labor market segmentation by task and skill, predicting how immigration shifts relative supply and demand across occupations. Applying this model to high-skilled immigration scenarios can formally derive conditions under which wage effects are positive for complements and negative for substitutes, offering a rigorous theoretical check on the hypothesis."
+      ],
+      "scope": {
+        "domain": "labor market segmentation"
+      },
+      "qualifier": {
+        "temporal": "medium-term",
+        "skill_level": "differentiated by occupation type"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Immigration",
+      "predicate": "decreases",
+      "object": "wages and employment opportunities for native workers in directly competing skill segments",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages and employment opportunities for native workers in directly competing skill segments]",
+        "[PATH:empirical] Card, D. (1990). 'The Impact of the Mariel Boatlift on the Miami Labor Market'. Industrial and Labor Relations Review, 43(2), 245-257. \u2014 This seminal natural experiment directly examines the effect of a large, unexpected influx of low-skilled immigrants on wages and employment of low-skilled native workers, providing a key empirical test for the hypothesis in a short-to-medium-term context.",
+        "[PATH:empirical] Borjas, G.J. (2003). 'The Labor Demand Curve Is Downward Sloping: Reexamining the Impact of Immigration on the Labor Market'. Quarterly Journal of Economics, 118(4), 1335-1374. \u2014 Borjas uses a skill-cell approach to estimate substitution effects across education and experience groups, offering robust evidence on whether immigration decreases wages and employment for native workers in directly competing segments, particularly low-skilled ones.",
+        "[PATH:empirical] Peri, G. & Sparber, C. (2009). 'Task Specialization, Immigration, and Wages'. American Economic Journal: Applied Economics, 1(3), 135-169. \u2014 This study investigates how natives reallocate to communication-intensive tasks in response to immigrant labor supply, providing a theoretical and empirical rationale for why the hypothesized negative effects might be mitigated or absent in the short-to-medium term."
+      ],
+      "scope": {
+        "domain": "labor market substitution effects"
+      },
+      "qualifier": {
+        "temporal": "short-to-medium-term",
+        "population": "low-skilled native workers"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "Immigration",
+      "predicate": "decreases wages by 3-7% for",
+      "object": "native workers without high school diplomas in construction and food service sectors",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration native workers without high school diplomas in construction and food service sectors]",
+        "[PATH:empirical] Meta-analysis of natural experiments on low-skilled immigration shocks (e.g., Mariel Boatlift, 1980 Miami labor market studies) using CPS or ACS microdata to estimate wage effects specifically for native workers without high school diplomas in construction and food service within high-concentration metro areas over 5-year windows. \u2014 Provides causal evidence from exogenous immigration events, directly testing the short-run wage effect on the specified demographic and sectors, with controls for local demand shifts.",
+        "[PATH:empirical] Longitudinal panel data from the Survey of Income and Program Participation (SIPP) or National Longitudinal Survey of Youth (NLSY) tracking native high school dropouts in construction and food service, linked to MSA-level immigration inflows from decennial censuses or American Community Survey (ACS). \u2014 Allows within-worker wage comparisons over time as immigration concentration changes, isolating the effect from individual fixed effects and local economic trends, matching the short-run timeframe and occupational scope.",
+        "[PATH:theoretical] Theoretical labor market model with skill heterogeneity, job search frictions, and sector-specific production functions (e.g., Borjas\u2019s nested CES framework or more recent spatial equilibrium models) calibrated to US metro-level data. \u2014 Tests whether predicted wage effects for this subgroup under high immigration concentration fall within the 3-7% range, and identifies necessary assumptions (e.g., elasticity of substitution, labor mobility) that could explain conflicting empirical findings."
+      ],
+      "scope": {
+        "domain": "occupation-specific labor markets"
+      },
+      "qualifier": {
+        "condition": "in metropolitan areas with high immigrant concentration",
+        "timeframe": "short-run effects within 5 years"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "Immigration",
+      "predicate": "significantly depresses",
+      "object": "wages for native workers in low-skill occupations by 3-8%",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Immigration wages for native workers in low-skill occupations by 3-8%]",
+        "[PATH:empirical] Meta-analysis of natural experiments on immigration shocks (e.g., Mariel Boatlift, Soviet Jewish resettlement in Israel) \u2014 These quasi-experimental studies provide causal estimates of wage effects on low-skill native workers by comparing labor markets before and after sudden immigration inflows, directly testing the 3-8% depression range.",
+        "[PATH:empirical] Longitudinal microdata from the Current Population Survey (CPS) or American Community Survey (ACS) stratified by education and occupation \u2014 Replicating the analysis with recent data and controlling for local demand shocks can confirm whether the wage depression persists, varies by region, or is offset by other factors like labor market adjustments.",
+        "[PATH:theoretical] Theoretical models of labor market competition with skill heterogeneity and imperfect substitution \u2014 Simulating the predicted wage effects under different elasticity assumptions (e.g., between native and immigrant labor) can clarify the plausibility of the 3-8% range and identify conditions under which it holds or fails."
+      ],
+      "scope": {
+        "domain": "skill-stratified labor market analysis"
+      },
+      "qualifier": {
+        "condition": "when disaggregating by education level and examining high-immigration periods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T2 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 31,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}

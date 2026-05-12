@@ -1,0 +1,64 @@
+{
+  "qid": "B1",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 976,
+    "completion_tokens": 435,
+    "total_tokens": 1411,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A is clearer and more concise, while Output B is more fragmented and less coherent."
+    },
+    "directional_commitment": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clearer directional stance in its synthesis, whereas Output B presents multiple competing hypotheses without a clear commitment."
+    },
+    "contradiction_depth": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs identify fundamental contradictions between GDP as a measure of wellbeing and its limitations."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output A offers a more precise synthesis by clearly bounding the scope of GDP's utility, while Output B's synthesis is less focused."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explores more nuanced tensions and alternative indices, which may be valued by domain experts."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B maintains multiple competing hypotheses in parallel, whereas Output A focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A provides a clearer trace of reasoning steps, while Output B's reasoning state is less recoverable."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide explicit scope conditions and evidence status, though Output B explores alternative indices more."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more coherent and provides a clearer synthesis, while Output B offers more epistemic novelty and branch preservation."
+    }
+  }
+}

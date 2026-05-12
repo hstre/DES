@@ -1,0 +1,64 @@
+{
+  "qid": "D1",
+  "judge_model": "anthropic/claude-sonnet-4-5",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "anthropic/claude-sonnet-4-5",
+    "prompt_tokens": 1239,
+    "completion_tokens": 615,
+    "total_tokens": 1854,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B presents a clear linear narrative with labeled steps, while Output A's fragmented structure with confidence scores and operation counts requires more effort to parse."
+    },
+    "directional_commitment": {
+      "DES": 0.35,
+      "CoT": 0.65,
+      "reason": "Output B makes clear directional claims (short-term yes, long-term not superior), while Output A hedges with low confidence (0.45) and multiple competing claims without resolution."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B identifies fundamental mechanistic contradictions (sustained effectiveness vs. metabolic adaptation and adherence failure), while Output A lists surface-level competing hypotheses about weight regain without exploring underlying tensions."
+    },
+    "synthesis_quality": {
+      "DES": 0.45,
+      "CoT": 0.55,
+      "reason": "Output B provides a scope-bounded synthesis distinguishing short-term from long-term outcomes and individual vs. population effects, while Output A's synthesis conclusions are vague and contradictory (both 0.50 confidence on opposing claims)."
+    },
+    "epistemic_novelty": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A surfaces the non-obvious conditional claim about baseline insulin resistance and protein intake effects, while Output B covers more standard adherence and metabolic adaptation arguments."
+    },
+    "branch_preservation": {
+      "DES": 0.75,
+      "CoT": 0.25,
+      "reason": "Output A explicitly maintains two competing hypotheses in parallel with equal support (both 0.90 confidence), while Output B collapses to a single synthesis without preserving alternative branches."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A provides metadata on total claims generated (14) and epistemic operations applied (48), enabling reasoning state recovery, while Output B shows only a linear four-step process without claim tracking."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A explicitly marks temporal scope (\u22646 months, 12 months) and conditional factors (baseline insulin resistance, protein intake), while Output B mentions timeframes but with less systematic scope specification."
+    },
+    "overall": {
+      "DES": 0.55,
+      "CoT": 0.45,
+      "reason": "Output A better preserves epistemic structure through branch maintenance, traceability, and scope discipline despite lower readability, while Output B prioritizes narrative coherence over recoverable reasoning state."
+    }
+  }
+}

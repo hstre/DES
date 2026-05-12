@@ -1,0 +1,520 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]"
+      ],
+      "scope": {},
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "extreme poverty in sub-Saharan Africa",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid extreme poverty in sub-Saharan Africa]"
+      ],
+      "scope": {
+        "domain": "geographic"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "foreign aid",
+      "predicate": "is effective at reducing",
+      "object": "poverty",
+      "status": "disputed",
+      "confidence": 0.47,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]"
+      ],
+      "scope": {
+        "domain": "temporal",
+        "timeframe": "short-term (under 5 years)"
+      },
+      "qualifier": {
+        "temporal": "short-term (under 5 years)",
+        "geographic": "developing countries"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T7",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "foreign aid",
+      "predicate": "is counterproductive for sustained poverty reduction due to dependency",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]"
+      ],
+      "scope": {
+        "domain": "mechanism"
+      },
+      "qualifier": {
+        "temporal": "post-1970s to present",
+        "geographic": "sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "foreign aid directed at health infrastructure",
+      "predicate": "is more effective at reducing",
+      "object": "extreme poverty in sub-Saharan Africa than aid for general budget support",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid directed at health infrastructure extreme poverty in sub-Saharan Africa than aid for general budget support]",
+        "[PATH:literature] Systematic review and meta-analysis of health aid vs. budget support effectiveness on poverty reduction in sub-Saharan Africa (e.g., studies from 3ie, Cochrane, or World Bank Independent Evaluation Group) \u2014 A comprehensive meta-analysis would aggregate existing empirical findings, directly comparing the two aid modalities' impacts on extreme poverty, controlling for confounders like governance and baseline health.",
+        "[PATH:empirical] Quasi-experimental panel data analysis using DHS and World Bank data on health outcomes and poverty indicators across sub-Saharan African countries (2000-2020) \u2014 Leveraging country-year variation in aid composition and health infrastructure investments allows causal identification of differential poverty reduction effects, addressing endogeneity via fixed effects and instrumental variables.",
+        "[PATH:theoretical] Theoretical modeling of aid allocation and poverty dynamics (e.g., dynamic stochastic general equilibrium models tailored to low-income settings) \u2014 A formal model can clarify mechanisms: health aid may reduce poverty through human capital and productivity channels, while budget support might have broader but less targeted effects. Sensitivity analysis under different governance scenarios can highlight conditions for effectiveness."
+      ],
+      "scope": {
+        "domain": "geographic"
+      },
+      "qualifier": {
+        "temporal": "2000-2020",
+        "geographic": "sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "foreign aid",
+      "predicate": "is ineffective at reducing",
+      "object": "extreme poverty in sub-Saharan Africa",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid extreme poverty in sub-Saharan Africa]",
+        "[PATH:empirical] World Bank Development Indicators and AidData dataset on official development assistance (ODA) to sub-Saharan Africa, combined with DHS or LSMS household surveys measuring consumption poverty headcount ratios \u2014 A panel-data econometric analysis controlling for conflict, governance, and initial conditions can test whether per capita aid flows from 2000 onward correlate with changes in extreme poverty rates ($2.15/day PPP) across countries in sub-Saharan Africa, directly addressing the causal claim.",
+        "[PATH:literature] Systematic review and meta-analysis of randomized controlled trials (RCTs) of specific aid-funded interventions (e.g., cash transfers, agricultural extension, health programs) in sub-Saharan Africa, as compiled by organizations like 3ie or the Campbell Collaboration \u2014 Aggregating micro-level experimental evidence can isolate which types of aid have shown measurable poverty reduction effects, testing whether the aggregate ineffectiveness hypothesis holds or is driven by averaging over heterogeneous programs."
+      ],
+      "scope": {
+        "domain": "geographic"
+      },
+      "qualifier": {
+        "temporal": "since 2000",
+        "geographic": "sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "foreign aid delivered as direct cash transfers",
+      "predicate": "is more effective at reducing",
+      "object": "extreme poverty than in-kind aid in the short term",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid delivered as direct cash transfers extreme poverty than in-kind aid in the short term]",
+        "[PATH:empirical] Randomized controlled trials (RCTs) comparing unconditional cash transfers to in-kind food aid in Sub-Saharan Africa (e.g., GiveDirectly studies in Kenya, 2015-2020) \u2014 Direct causal evidence from RCTs in the specified region and time frame can measure short-term poverty reduction outcomes (e.g., consumption, asset accumulation) for cash versus in-kind aid.",
+        "[PATH:literature] Systematic review or meta-analysis of cash transfer vs. in-kind aid effectiveness in low-income countries (e.g., Cochrane or 3ie reviews) \u2014 Synthesizing multiple studies provides a broader evidence base to assess consistency of findings across contexts, addressing the disputed status and moderate confidence.",
+        "[PATH:theoretical] Theoretical models of household utility and market efficiency under cash vs. in-kind transfers in constrained economies \u2014 Economic theory can clarify mechanisms (e.g., transaction costs, local market effects) that predict short-term poverty reduction, helping to interpret empirical results and identify boundary conditions."
+      ],
+      "scope": {
+        "domain": "temporal"
+      },
+      "qualifier": {
+        "temporal": "since 2015",
+        "geographic": "low-income countries in Sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "foreign aid",
+      "predicate": "can exacerbate",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]",
+        "[PATH:empirical] A systematic review of randomized controlled trials (RCTs) and quasi-experimental studies on the short-term effects of unconditional cash transfers versus conditional aid in Sub-Saharan Africa \u2014 RCTs can isolate causal effects of specific aid modalities on household poverty indicators (e.g., consumption, asset accumulation) within 1-3 years, directly testing whether aid exacerbates poverty in the short term.",
+        "[PATH:empirical] Panel data analysis of aid dependency ratios and poverty headcounts in 20 low-income countries (e.g., from World Bank Development Indicators and AidData) over 1990-2020 \u2014 Longitudinal cross-country data can reveal temporal correlations between high aid inflows and short-term poverty trends, controlling for conflict, governance, and economic shocks, to confirm or refute the hypothesized exacerbation.",
+        "[PATH:theoretical] Theoretical literature on 'Dutch disease' and aid volatility (e.g., models by Rajan & Subramanian, 2011; Collier & Dollar, 2002) \u2014 These models predict that large aid inflows can appreciate real exchange rates and reduce competitiveness of tradable sectors, potentially increasing poverty in the short term. Reviewing their empirical tests and assumptions provides a framework to interpret causal mechanisms."
+      ],
+      "scope": {
+        "domain": "temporal"
+      },
+      "qualifier": {
+        "temporal": "short-term",
+        "geographic": "in aid-dependent developing countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "foreign aid",
+      "predicate": "reduces",
+      "object": "poverty in the short term",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms foreign aid reduces poverty in the short term in domain 'temporal']"
+      ],
+      "scope": {
+        "domain": "temporal",
+        "timeframe": "short-term (under 5 years)"
+      },
+      "qualifier": {
+        "temporal": "short-term (under 5 years)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "foreign aid",
+      "predicate": "does not reduce",
+      "object": "poverty in the short term",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms foreign aid does not reduce poverty in the short term in domain 'temporal']"
+      ],
+      "scope": {
+        "domain": "temporal",
+        "timeframe": "short-term (under 5 years)"
+      },
+      "qualifier": {
+        "temporal": "short-term (under 5 years)",
+        "geographic": "global"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "foreign aid",
+      "predicate": "is counterproductive for sustained poverty reduction due to dependency only when aid is channeled through corrupt or unaccountable recipient governments",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]",
+        "[PATH:empirical] A cross-country panel regression analysis of aid disbursements to sub-Saharan African governments, controlling for corruption indices (e.g., CPI) and poverty headcount ratios over 1970\u20132020 \u2014 Directly tests the conditional effect of aid on poverty reduction when recipient governments are corrupt vs. accountable, providing quantitative evidence for the dependency mechanism.",
+        "[PATH:empirical] Case studies of aid programs in selected sub-Saharan African countries with contrasting governance quality (e.g., Rwanda vs. South Sudan), examining long-term poverty trends and aid dependency indicators \u2014 Allows qualitative comparison of how aid channeled through corrupt vs. accountable institutions affects sustained poverty reduction, addressing causal mechanisms and context-specific factors.",
+        "[PATH:literature] Literature review synthesizing randomized controlled trials and quasi-experimental studies on foreign aid effectiveness, focusing on governance moderation effects in sub-Saharan Africa \u2014 Aggregates existing causal evidence to assess whether the hypothesized conditional effect holds consistently, and identifies gaps in current research on dependency dynamics."
+      ],
+      "scope": {
+        "domain": "mechanism"
+      },
+      "qualifier": {
+        "temporal": "post-1970s to present",
+        "geographic": "sub-Saharan Africa"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "foreign aid",
+      "predicate": "is essential for sustained poverty reduction by providing critical resources and infrastructure",
+      "object": "poverty",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: foreign aid poverty]",
+        "[PATH:empirical] Randomized controlled trials (RCTs) of large-scale infrastructure aid projects in low-income countries (e.g., road-building or electrification programs in Sub-Saharan Africa), with long-term poverty outcome data (e.g., consumption, asset indices) from sources like the World Bank's Development Impact Evaluation (DIME) or the Abdul Latif Jameel Poverty Action Lab (J-PAL). \u2014 RCTs provide causal evidence on whether foreign aid-funded infrastructure directly reduces poverty, addressing the hypothesis's mechanism claim. Long-term follow-up is crucial to test sustained effects, given the temporal qualifier.",
+        "[PATH:literature] Systematic review or meta-analysis of quasi-experimental studies on foreign aid and poverty reduction in weak-infrastructure settings, e.g., from the Cochrane Collaboration or Campbell Collaboration, or a comprehensive literature review in journals like World Development or Journal of Development Economics. \u2014 A meta-synthesis can aggregate evidence across diverse contexts to assess the generalizability of the 'essential' claim, controlling for confounding factors like governance or aid type, and identify conditions under which aid is effective.",
+        "[PATH:theoretical] Theoretical modeling of aid effectiveness under institutional constraints, such as a general equilibrium model incorporating weak infrastructure, aid fungibility, and poverty dynamics, published in journals like American Economic Review or Journal of Public Economics. \u2014 Theoretical work can clarify the causal mechanisms and boundary conditions (e.g., when aid is essential vs. insufficient) for sustained poverty reduction, providing a framework to interpret empirical findings and test the hypothesis's core assumption."
+      ],
+      "scope": {
+        "domain": "mechanism"
+      },
+      "qualifier": {
+        "temporal": "since the mid-20th century",
+        "geographic": "low-income countries with weak infrastructure"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "foreign aid delivered as direct cash transfers",
+      "predicate": "is more effective at reducing",
+      "object": "poverty than aid tied to infrastructure projects",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "temporal"
+      },
+      "qualifier": {
+        "temporal": "short-term (under 5 years)",
+        "geographic": "developing countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "deepseek-chat[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "foreign aid",
+      "predicate": "hinders",
+      "object": "long-term economic independence",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "economic development"
+      },
+      "qualifier": {},
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T7 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T7 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T7 on C003",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T7 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 45,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

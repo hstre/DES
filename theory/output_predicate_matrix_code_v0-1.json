@@ -1,0 +1,486 @@
+{
+  "version": "0.1",
+  "date": "2026-05-10",
+  "source_file": "des.py",
+  "extraction_note": "All predicates derived from static reading of des.py only. No paper references, design memos, or summaries were used.",
+  "operators": [
+    {
+      "operator": "T1",
+      "name": "resolve_conflict",
+      "function_name": "t1_resolve_conflict",
+      "source_lines": "578-643",
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status == \"contradicted\""
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: CRITICAL (first in select_operation after synthesis bypass, line 997)",
+        "not in Anti-Delphi trigger set (Anti-Delphi intercepts only T5, T6, T9)",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": [
+        "state.claims[bid1] = new B-prefixed Claim(status='hypothesis', parent_id=claim.id, branch_open=False, sealed=False, qualifier={})",
+        "state.claims[bid2] = new B-prefixed Claim(status='hypothesis', parent_id=claim.id, branch_open=False, sealed=False, qualifier={})",
+        "claim.branch_open = True",
+        "claim.status = 'disputed'",
+        "claim.conflict = False",
+        "claim.history.append('T1')",
+        "state.operation_history.append('T1 on {claim.id}')"
+      ],
+      "outputs": [
+        "claim.status == \"disputed\"",
+        "claim.branch_open == True",
+        "claim.conflict == False",
+        "new_branch_1.status == \"hypothesis\"",
+        "new_branch_1.parent_id == claim.id",
+        "new_branch_1.sealed == False",
+        "new_branch_1.branch_open == False",
+        "new_branch_1.scope != {}",
+        "new_branch_2.status == \"hypothesis\"",
+        "new_branch_2.parent_id == claim.id",
+        "new_branch_2.sealed == False",
+        "new_branch_2.branch_open == False",
+        "new_branch_2.scope != {}",
+        "count(state.claims where id.startswith('B') and parent_id == claim.id) >= 2",
+        "UNCLEAR: new_branch.confidence (LLM-dependent; default 0.5)",
+        "UNCLEAR: new_branch.modality (LLM-dependent; default 'hypothesis')"
+      ],
+      "branch_effect": "create",
+      "creation_type": "branch",
+      "extraction_confidence": "high"
+    },
+    {
+      "operator": "T2",
+      "name": "make_conflict_explicit",
+      "function_name": "t2_make_conflict_explicit",
+      "source_lines": "646-667",
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status != \"contradicted\"",
+        "claim.conflict == True"
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: CRITICAL second (line 999, after T1)",
+        "not in Anti-Delphi trigger set",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": [
+        "claim.evidence_refs.append('[CONFLICT] {reason}')",
+        "claim.status = result.get('suggested_status', 'disputed') if result else 'disputed'",
+        "claim.conflict = False",
+        "claim.history.append('T2')",
+        "state.operation_history.append('T2 on {claim.id}')"
+      ],
+      "outputs": [
+        "claim.conflict == False",
+        "len(claim.evidence_refs) >= 1",
+        "UNCLEAR: claim.status in LLM-success path (result.get('suggested_status', 'disputed'); LLM can return any string)",
+        "claim.status == \"disputed\" [fallback path only]"
+      ],
+      "branch_effect": "none",
+      "creation_type": null,
+      "extraction_confidence": "medium"
+    },
+    {
+      "operator": "T3",
+      "name": "request_evidence",
+      "function_name": "t3_request_evidence",
+      "source_lines": "670-685",
+      "helper_functions": [
+        "simulate_evidence (lines 458-467)",
+        "evaluate_branch_claim (lines 470-486)"
+      ],
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status != \"contradicted\"",
+        "claim.conflict == False",
+        "claim.evidence_refs == []",
+        "claim.modality != \"established\""
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: HIGH (line 1001, third after T1/T2)",
+        "not in Anti-Delphi trigger set",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": {
+        "path_A_non_B_prefixed": [
+          "claim.evidence_refs.append('[Simulated evidence for: {claim.subject} {claim.object}]')",
+          "IF claim.status in ('unknown', 'hypothesis'): claim.status = 'disputed'",
+          "ELSE: claim.status unchanged",
+          "claim.history.append('T3')",
+          "state.operation_history.append('T3 on {claim.id}')"
+        ],
+        "path_B_B_prefixed": [
+          "claim.evidence_refs.append('[Simulated: peer-reviewed source confirms ... in domain]')",
+          "evaluate_branch_claim(claim) called:",
+          "  IF _llm_json succeeds: claim.status = result.get('status', 'supported'); claim.confidence = float(result.get('confidence', 0.85))",
+          "  ELSE (fallback): claim.status = 'supported'; claim.confidence = 0.85",
+          "claim.history.append('T3')",
+          "state.operation_history.append('T3 on {claim.id}')"
+        ]
+      },
+      "outputs": {
+        "path_A": [
+          "len(claim.evidence_refs) >= 1",
+          "IF prior status was 'unknown' or 'hypothesis': claim.status == \"disputed\"",
+          "UNCLEAR: claim.status if prior status was other value"
+        ],
+        "path_B_llm_success": [
+          "len(claim.evidence_refs) >= 1",
+          "UNCLEAR: claim.status (LLM-dependent; default key-missing value: 'supported')",
+          "UNCLEAR: claim.confidence (LLM-dependent; default key-missing value: 0.85)"
+        ],
+        "path_B_llm_fallback": [
+          "len(claim.evidence_refs) >= 1",
+          "claim.status == \"supported\"",
+          "claim.confidence == 0.85"
+        ]
+      },
+      "branch_effect": "none",
+      "creation_type": null,
+      "extraction_confidence": "medium"
+    },
+    {
+      "operator": "T4",
+      "name": "decompose_claim",
+      "function_name": "t4_decompose_claim",
+      "source_lines": "725-777",
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status != \"contradicted\"",
+        "claim.conflict == False",
+        "NOT (claim.evidence_refs == [] AND claim.modality != \"established\")",
+        "claim.status == \"underspecified\" OR claim.scope == {}"
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: HIGH (line 1003, fourth after T1/T2/T3)",
+        "not in Anti-Delphi trigger set",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": [
+        "FOR EACH sc IN raw_sub_claims[:3]: state.claims[new_cid] = new C-prefixed Claim(status='unknown', parent_id=claim.id, sealed=False, branch_open=False, is_synthesis=False)",
+        "claim.status = 'supported'",
+        "claim.sealed = True",
+        "claim.history.append('T4')",
+        "state.operation_history.append('T4 on {claim.id}')"
+      ],
+      "outputs": [
+        "claim.status == \"supported\"",
+        "claim.sealed == True",
+        "count(new C-prefixed claims with parent_id == claim.id) >= 1",
+        "new_subclaim.status == \"unknown\"",
+        "new_subclaim.parent_id == claim.id",
+        "new_subclaim.sealed == False",
+        "UNCLEAR: new_subclaim.confidence (LLM-dependent; default 0.5)",
+        "UNCLEAR: count of new sub-claims (1-3 from LLM; 2 from fallback)"
+      ],
+      "branch_effect": "create",
+      "creation_type": "subclaim",
+      "extraction_confidence": "high"
+    },
+    {
+      "operator": "T5",
+      "name": "generate_counter_hypothesis",
+      "function_name": "t5_generate_counter_hypothesis",
+      "source_lines": "780-843",
+      "helper_functions": [
+        "check_for_contradiction (lines 404-435)",
+        "execute_role (lines 284-341) [Anti-Delphi path]",
+        "_apply_antidelphi_state_change (lines 344-373) [Anti-Delphi path]"
+      ],
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status != \"contradicted\"",
+        "claim.conflict == False",
+        "NOT (claim.evidence_refs == [] AND claim.modality != \"established\")",
+        "NOT (claim.status == \"underspecified\" OR claim.scope == {})",
+        "claim.confidence < 0.4"
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: MEDIUM (line 1005, fifth after T1-T4)",
+        "Anti-Delphi interception: fires when anti_delphi==True AND trigger=='T5' AND NOT focus.is_role_generated",
+        "role-generated claims bypass Anti-Delphi (is_role_generated==True blocks interception)",
+        "no phase gate or loop-budget gate observed"
+      ],
+      "mutations": {
+        "path_A_single_agent": [
+          "state.claims[new_cid] = new C-prefixed Claim(status='unknown', modality='hypothesis', confidence=LLM_value_or_0.6, scope=claim.scope.copy(), qualifier=claim.qualifier.copy(), parent_id=claim.id, sealed=False, branch_open=False)",
+          "IF check_for_contradiction(claim, counter) == True: claim.status = 'contradicted'",
+          "ELSE: claim.status = 'disputed'",
+          "claim.conflict = True",
+          "claim.confidence = max(claim.confidence, 0.42)",
+          "claim.history.append('T5')",
+          "state.operation_history.append('T5 on {claim.id}')"
+        ],
+        "path_B_anti_delphi": [
+          "FOR EACH role in ('hypothesis_builder', 'falsifier'): IF execute_role succeeds: state.claims[new_cid] = new C-prefixed Claim(is_role_generated=True, confidence=max(0.41, min(0.55, raw_conf)), parent_id=focus.id)",
+          "state.anti_delphi_activations += 1",
+          "focus.history.append('T5[anti-delphi]')",
+          "_apply_antidelphi_state_change('T5', focus, state, role_claim_ids):",
+          "  IF role_claim_ids non-empty: check_for_contradiction(focus, state.claims[role_claim_ids[-1]]); focus.status = 'contradicted' or 'disputed'",
+          "  ELSE: focus.status = 'disputed'",
+          "  focus.conflict = True",
+          "  focus.confidence = max(focus.confidence, 0.42)"
+        ]
+      },
+      "outputs": {
+        "path_A": [
+          "claim.conflict == True",
+          "claim.confidence >= 0.42",
+          "claim.status == \"contradicted\" OR claim.status == \"disputed\"",
+          "UNCLEAR: which of 'contradicted' or 'disputed' (LLM-dependent via check_for_contradiction)",
+          "count(new C-prefixed claims with parent_id == claim.id) == 1",
+          "new_counter.status == \"unknown\"",
+          "new_counter.modality == \"hypothesis\"",
+          "new_counter.parent_id == claim.id",
+          "UNCLEAR: new_counter.confidence (LLM-dependent or 0.6; no clamping)"
+        ],
+        "path_B": [
+          "focus.conflict == True",
+          "focus.confidence >= 0.42",
+          "focus.status == \"contradicted\" OR focus.status == \"disputed\"",
+          "UNCLEAR: which of 'contradicted' or 'disputed'",
+          "IF role_claim_ids empty: focus.status == \"disputed\"",
+          "count(new role-generated claims) in {0, 1, 2}",
+          "new_role_claim.is_role_generated == True",
+          "new_role_claim.confidence in [0.41, 0.55]"
+        ]
+      },
+      "branch_effect": "none",
+      "creation_type": null,
+      "extraction_confidence": "medium"
+    },
+    {
+      "operator": "T6",
+      "name": "explore_evidence_path",
+      "function_name": "t6_explore_evidence_path",
+      "source_lines": "846-872",
+      "helper_functions": [
+        "_apply_antidelphi_state_change (lines 344-373) [Anti-Delphi path]"
+      ],
+      "guards": {
+        "primary_position_lines_1007_1009": [
+          "claim.is_synthesis == False",
+          "claim.status != \"contradicted\"",
+          "claim.conflict == False",
+          "NOT (claim.evidence_refs == [] AND claim.modality != \"established\")",
+          "NOT (claim.status == \"underspecified\" OR claim.scope == {})",
+          "NOT (claim.confidence < 0.4 AND claim.status != \"contradicted\")",
+          "claim.modality == \"hypothesis\"",
+          "claim.confidence > 0.6",
+          "claim.status != \"supported\"",
+          "\"T6\" not in claim.history"
+        ],
+        "fallback_position_lines_1018_1019": [
+          "claim.is_synthesis == False",
+          "claim.modality == \"hypothesis\"",
+          "\"T6\" not in claim.history",
+          "NOT (claim.qualifier == {} AND claim.scope != {})",
+          "NOT (claim.status == \"supported\" AND claim.confidence > 0.8)",
+          "NOT (claim.branch_open AND all_children_status == \"supported\")"
+        ]
+      },
+      "selection_and_admissibility_constraints": [
+        "priority: MEDIUM (primary, line 1007); also fallback before unconditional T8 (line 1018)",
+        "Anti-Delphi interception: fires when anti_delphi==True AND trigger=='T6' AND NOT focus.is_role_generated",
+        "history gate: '\"T6\" not in claim.history' — IMPORTANT: Anti-Delphi appends 'T6[anti-delphi]' not 'T6'; this gate does not detect prior Anti-Delphi T6 firings",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": {
+        "path_A_single_agent": [
+          "IF LLM returns result with 'evidence_paths': FOR EACH ep IN result['evidence_paths'][:3]: claim.evidence_refs.append('[PATH:{type}] {source} — {rationale}')",
+          "IF LLM success with evidence_paths: claim.confidence = min(1.0, claim.confidence + 0.15)  [line 866]",
+          "claim.status = 'supported'  [line 868, unconditional]",
+          "claim.confidence = max(0.82, min(1.0, claim.confidence + 0.15))  [line 869, unconditional]",
+          "claim.history.append('T6')",
+          "state.operation_history.append('T6 on {claim.id}')"
+        ],
+        "path_B_anti_delphi": [
+          "focus.status = 'supported'",
+          "focus.confidence = max(0.82, min(1.0, focus.confidence + 0.15))",
+          "focus.history.append('T6[anti-delphi]')"
+        ]
+      },
+      "outputs": {
+        "both_paths": [
+          "claim.status == \"supported\"",
+          "claim.confidence >= 0.82"
+        ],
+        "path_A_with_evidence_paths": [
+          "len(claim.evidence_refs) increased by 1-3"
+        ]
+      },
+      "branch_effect": "none",
+      "creation_type": null,
+      "extraction_confidence": "high"
+    },
+    {
+      "operator": "T7",
+      "name": "refine_qualifier",
+      "function_name": "t7_refine_qualifier",
+      "source_lines": "875-896",
+      "guards": [
+        "claim.is_synthesis == False",
+        "claim.status != \"contradicted\"",
+        "claim.conflict == False",
+        "NOT (claim.evidence_refs == [] AND claim.modality != \"established\")",
+        "NOT (claim.status == \"underspecified\" OR claim.scope == {})",
+        "NOT (claim.confidence < 0.4 AND claim.status != \"contradicted\")",
+        "NOT (claim.modality == \"hypothesis\" AND claim.confidence > 0.6 AND claim.status != \"supported\" AND \"T6\" not in claim.history)",
+        "claim.qualifier == {}",
+        "claim.scope != {}"
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: LOW (line 1010, seventh after T1-T6 primary)",
+        "not in Anti-Delphi trigger set",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": [
+        "IF LLM returns result with 'qualifier': claim.qualifier = {k: v for k, v in result['qualifier'].items() if v}",
+        "IF claim.qualifier == {}: claim.qualifier = {'temporal': 'present', 'geographic': 'global'}",
+        "claim.confidence = min(1.0, claim.confidence + 0.05)",
+        "claim.history.append('T7')",
+        "state.operation_history.append('T7 on {claim.id}')"
+      ],
+      "outputs": [
+        "claim.qualifier != {}",
+        "claim.confidence == min(1.0, prior_confidence + 0.05)",
+        "UNCLEAR: exact qualifier content (LLM-dependent; fallback: {'temporal': 'present', 'geographic': 'global'})"
+      ],
+      "branch_effect": "none",
+      "creation_type": null,
+      "extraction_confidence": "high"
+    },
+    {
+      "operator": "T8",
+      "name": "seal_claim",
+      "function_name": "t8_seal_claim",
+      "source_lines": "899-904",
+      "guards": {
+        "path_A_synthesis_bypass_lines_995_996": [
+          "claim.is_synthesis == True"
+        ],
+        "path_B_primary_trigger_lines_1012_1013": [
+          "claim.is_synthesis == False",
+          "claim.status != \"contradicted\"",
+          "claim.conflict == False",
+          "NOT (claim.evidence_refs == [] AND claim.modality != \"established\")",
+          "NOT (claim.status == \"underspecified\" OR claim.scope == {})",
+          "NOT (claim.confidence < 0.4 AND claim.status != \"contradicted\")",
+          "NOT (claim.modality == \"hypothesis\" AND claim.confidence > 0.6 AND claim.status != \"supported\" AND \"T6\" not in claim.history)",
+          "NOT (claim.qualifier == {} AND claim.scope != {})",
+          "claim.status == \"supported\"",
+          "claim.confidence > 0.8"
+        ],
+        "path_C_unconditional_fallback_line_1020": [
+          "no guard predicates — fires when no other trigger in select_operation has returned"
+        ]
+      },
+      "selection_and_admissibility_constraints": [
+        "priority: SEAL (primary trigger); also synthesis bypass; also unconditional fallback",
+        "not in Anti-Delphi trigger set",
+        "no phase gate, confidence cap, or loop-budget gate observed"
+      ],
+      "mutations": [
+        "claim.sealed = True",
+        "claim.history.append('T8')",
+        "state.operation_history.append('T8 on {claim.id}')"
+      ],
+      "outputs": [
+        "claim.sealed == True"
+      ],
+      "branch_effect": "terminate",
+      "creation_type": null,
+      "extraction_confidence": "high"
+    },
+    {
+      "operator": "T9",
+      "name": "trigger_reframing",
+      "function_name": "t9_trigger_reframing",
+      "source_lines": "926-981",
+      "helper_functions": [
+        "execute_role (lines 284-341) [Anti-Delphi path]",
+        "_apply_antidelphi_state_change (lines 344-373) [Anti-Delphi path]"
+      ],
+      "guards": [
+        "claim.sealed == False [enforced by select_focus_claim at line 1064, not select_operation]",
+        "claim.branch_open == True",
+        "count(c in state.claims where c.parent_id == claim.id) >= 1",
+        "all(c.status == \"supported\" for c in state.claims where c.parent_id == claim.id)"
+      ],
+      "selection_and_admissibility_constraints": [
+        "priority: after T8-primary (line 1014); before fallback T6 and fallback T8",
+        "Anti-Delphi interception: fires when anti_delphi==True AND trigger=='T9' AND NOT focus.is_role_generated",
+        "reframing count gate: state.reframing_count > 2 terminates the main loop (run_des line 1175); T9 can fire at most 3 times per session",
+        "focus selection priority: T9-ready claims are selected before regular claims (select_focus_claim lines 1073-1074)",
+        "branch collection scope: ALL claims with parent_id == claim.id are included (not only B-prefixed)"
+      ],
+      "mutations": {
+        "path_A_single_agent": [
+          "state.claims[new_cid] = new C-prefixed Claim(status='supported', modality='suggestion', confidence=max(0.82, ...), is_synthesis=True, parent_id=claim.id, scope=claim.scope.copy(), qualifier=claim.qualifier.copy(), evidence_refs=[2 entries])",
+          "state.reframing_count += 1",
+          "claim.sealed = True",
+          "claim.history.append('T9')",
+          "state.operation_history.append('T9 on {claim.id}')"
+        ],
+        "path_B_anti_delphi": [
+          "FOR EACH role in ('hypothesis_builder', 'falsifier'): IF execute_role succeeds: state.claims[new_cid] = new C-prefixed Claim(is_role_generated=True, confidence=max(0.41, min(0.55, raw_conf)), parent_id=focus.id)",
+          "state.anti_delphi_activations += 1",
+          "focus.history.append('T9[anti-delphi]')",
+          "_apply_antidelphi_state_change('T9', focus, state, role_claim_ids):",
+          "  focus.sealed = True",
+          "  state.reframing_count += 1",
+          "  FOR EACH cid IN role_claim_ids: state.claims[cid].is_synthesis = True"
+        ]
+      },
+      "outputs": {
+        "path_A": [
+          "claim.sealed == True",
+          "state.reframing_count == prior_reframing_count + 1",
+          "new_synth.status == \"supported\"",
+          "new_synth.modality == \"suggestion\"",
+          "new_synth.confidence >= 0.82",
+          "new_synth.is_synthesis == True",
+          "new_synth.parent_id == claim.id",
+          "count(new C-prefixed synth claims added) == 1"
+        ],
+        "path_B": [
+          "claim.sealed == True",
+          "state.reframing_count == prior_reframing_count + 1",
+          "count(new C-prefixed role-generated claims with is_synthesis == True) in {0, 1, 2}",
+          "new_role_claim.confidence in [0.41, 0.55]",
+          "NOTE: path B does NOT guarantee any claim with status=='supported' and confidence>=0.82"
+        ]
+      },
+      "branch_effect": "merge",
+      "creation_type": null,
+      "extraction_confidence": "medium"
+    }
+  ],
+  "candidate_anomalies": [
+    {
+      "id": "I1",
+      "operator": "T4",
+      "status": "confirmed",
+      "code_citation": "function t4_decompose_claim, lines 773-774: claim.status = 'supported'; claim.sealed = True",
+      "observed_behavior": "T4 fires when claim.scope == {} or claim.status == 'underspecified'. At lines 773-774, the parent claim's status is unconditionally set to 'supported' and sealed=True immediately after sub-claims are created. No LLM call evaluates the parent's epistemic status; the LLM is called only to generate sub-claim content. A claim with scope=={} (the standard trigger, since initial claims are generated with scope={}) is sealed as 'supported' regardless of prior status, confidence, or evidence_refs content.",
+      "extraction_confidence": "high"
+    },
+    {
+      "id": "I2",
+      "operator": "T3",
+      "status": "confirmed",
+      "code_citation": "function evaluate_branch_claim, lines 484-486: else: claim.status = 'supported'; claim.confidence = 0.85",
+      "observed_behavior": "For B-prefixed claims, t3_request_evidence calls evaluate_branch_claim(claim). If _llm_json returns None (LLM API failure, JSON parse failure on both first and retry attempts, or any exception), the else branch unconditionally sets claim.status = 'supported' and claim.confidence = 0.85. Code comment at line 473-474 states: 'Falls back to supported+0.85 so T9 can always fire.' The simulated evidence string is appended before evaluate_branch_claim is called, but LLM evaluation failure produces supported+0.85 regardless of claim content.",
+      "extraction_confidence": "high"
+    },
+    {
+      "id": "I3",
+      "operator": "T9",
+      "status": "confirmed",
+      "code_citation": "select_operation lines 1015-1017: all(c.status == 'supported' for c in branches); select_focus_claim lines 1067-1069: all(c.status == 'supported' for c in children)",
+      "observed_behavior": "Both select_operation and select_focus_claim use c.status == 'supported' as the T9 readiness criterion, not c.sealed == True. Branch claims receive status='supported' from T6 (line 868) or T3's evaluate_branch_claim (line 482 or 485). Neither T6 nor T3 sets sealed=True; that requires a subsequent T8 firing. Therefore T9 can fire while all branches have status='supported' but sealed=False. T8 on the branch claims fires in a subsequent iteration after T9 has already executed.",
+      "extraction_confidence": "high"
+    }
+  ]
+}

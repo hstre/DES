@@ -1,0 +1,55 @@
+{
+  "version": "v1",
+  "note": "Deferred scoring reference only. No scoring is computed during data collection.",
+  "collection_phase": "runs.jsonl records contain raw response text. No keyword scores, no LLM scores.",
+  "nested_schema": {
+    "run_id": "UUID string. Primary key.",
+    "timestamp_utc": "ISO 8601 UTC timestamp at API call completion.",
+    "model": {
+      "id": "OpenRouter model identifier.",
+      "vendor": "Vendor name as in models config.",
+      "label": "Human-readable model label."
+    },
+    "task": {
+      "task_id": "Task identifier from tasks config.",
+      "category": "Task category (DES, planning, education, logic).",
+      "style": "Prompt style tag."
+    },
+    "request": {
+      "prompt": "Exact user-facing prompt text sent to model.",
+      "prompt_sha256": "SHA-256 hex digest of prompt for deduplication and integrity."
+    },
+    "response": {
+      "text": "Raw completion text, stripped of leading/trailing whitespace.",
+      "finish_reason": "stop | length | content_filter | null.",
+      "raw": "Full API response object as returned by OpenRouter."
+    },
+    "usage": {
+      "prompt_tokens": "Integer or null.",
+      "completion_tokens": "Integer or null.",
+      "total_tokens": "Integer or null.",
+      "cost_usd": "Float or null. From OpenRouter usage.cost if provided.",
+      "latency_ms": "Integer. Wall-clock ms from request send to response received."
+    },
+    "status": "success | error"
+  },
+  "error_schema": {
+    "run_id": "UUID",
+    "timestamp_utc": "ISO 8601",
+    "model": "same as above",
+    "task": "same as above",
+    "request": "same as above",
+    "error_type": "network_timeout | http_error_4xx | http_error_5xx | rate_limit | invalid_model | unavailable_model | json_decode_error | malformed_response | provider_error | unknown",
+    "error_detail": "String. Exception message or HTTP response body.",
+    "http_status": "Integer or null.",
+    "latency_ms": "Integer.",
+    "status": "error"
+  },
+  "deferred_scoring_fields": [
+    "Relevance score (human or LLM)",
+    "Contradiction detection (yes/no)",
+    "Refusal detection (yes/no — for A4)",
+    "Formalization quality (A5)",
+    "Keyword presence (deferred, not automated)"
+  ]
+}

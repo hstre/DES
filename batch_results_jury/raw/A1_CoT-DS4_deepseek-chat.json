@@ -1,0 +1,64 @@
+{
+  "qid": "A1",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "CoT",
+    "B": "DES"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1082,
+    "completion_tokens": 506,
+    "total_tokens": 1588,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output A is more narratively coherent and easier to follow, while Output B is more fragmented and list-like."
+    },
+    "directional_commitment": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B makes more precise directional claims with explicit confidence levels and scope conditions, whereas Output A hedges broadly."
+    },
+    "contradiction_depth": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explicitly maintains contradictory hypotheses in parallel (monopsony vs. labor demand), while Output A only notes a surface-level contradiction."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both syntheses are context-dependent, but Output A's is more concise and Output B's is more granular with multiple synthesized conclusions."
+    },
+    "epistemic_novelty": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B surfaces non-obvious tensions (e.g., labor market concentration moderating effects) that a domain expert would find valuable, while Output A states a more standard view."
+    },
+    "branch_preservation": {
+      "DES": 0.8,
+      "CoT": 0.2,
+      "reason": "Output B explicitly maintains multiple competing hypotheses in parallel with separate confidence scores, while Output A collapses them into a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output B provides a recoverable reasoning state with claim counts and epistemic operations, whereas Output A offers only a linear step sequence."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output B explicitly ties claims to scope conditions (e.g., 'low-unemployment urban areas', 'above-median concentration'), while Output A uses vaguer terms like 'strong labor markets'."
+    },
+    "overall": {
+      "DES": 0.65,
+      "CoT": 0.35,
+      "reason": "Output B demonstrates superior epistemic structure with parallel branches, precise scope conditions, and recoverable reasoning, outweighing Output A's readability advantage."
+    }
+  }
+}

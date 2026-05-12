@@ -1,0 +1,393 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment",
+      "status": "supported",
+      "confidence": 0.48,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "debate": "empirical findings vary by time frame, market structure, and wage floor level; recent meta-analyses show near-zero average effect but with significant heterogeneity across studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "raising the minimum wage",
+      "predicate": "increases",
+      "object": "unemployment among low-skilled teenagers",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment among low-skilled teenagers]",
+        "[CONFLICT] The claim that raising the minimum wage increases unemployment among low-skilled teenagers is disputed because empirical evidence is mixed; while some studies show a negative employment effect when the wage floor is set significantly above market equilibrium, others find minimal or no impact, leading to low confidence (0.42) and a hypothesis modality."
+      ],
+      "scope": {
+        "domain": "short-term labor market in low-wage sectors"
+      },
+      "qualifier": {
+        "condition": "when the wage floor is set significantly above market equilibrium"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T2",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "raising the minimum wage",
+      "predicate": "has",
+      "object": "a near-zero average effect on aggregate unemployment",
+      "status": "disputed",
+      "confidence": 0.52,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage a near-zero average effect on aggregate unemployment]"
+      ],
+      "scope": {
+        "domain": "overall employment in developed economies"
+      },
+      "qualifier": {
+        "source": "recent meta-analyses",
+        "caveat": "but with significant heterogeneity across studies"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "raising the minimum wage",
+      "predicate": "may reduce",
+      "object": "unemployment in monopsonistic labor markets",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment in monopsonistic labor markets]"
+      ],
+      "scope": {
+        "domain": "local labor markets with few employers"
+      },
+      "qualifier": {
+        "mechanism": "by increasing labor demand when firms have wage-setting power"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employee turnover rates among low-skilled teenagers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover rates among low-skilled teenagers]",
+        "[PATH:empirical] Longitudinal analysis of payroll data from fast-food and retail chains in urban counties (e.g., Bureau of Labor Statistics Quarterly Workforce Indicators) \u2014 Directly measures turnover rates among low-skilled teenagers before and after minimum wage increases, controlling for seasonal and local economic factors, to test the hypothesized short-term effect.",
+        "[PATH:empirical] Controlled quasi-experimental study comparing turnover in treated (minimum wage increase) vs. matched control urban counties, using synthetic control methods \u2014 Provides causal identification of the policy effect on teenage turnover, addressing confounding factors like local labor demand and demographic shifts.",
+        "[PATH:theoretical] Review of theoretical labor economics models (e.g., efficiency wage theory, monopsony models) applied to low-wage teenage labor markets \u2014 Clarifies mechanisms by which a wage floor could reduce turnover (e.g., increased job attractiveness, reduced quits) and identifies conditions under which the effect might be null or reversed, guiding empirical design."
+      ],
+      "scope": {
+        "domain": "short-term labor market in low-wage sectors"
+      },
+      "qualifier": {
+        "temporal": "during the first 12 months after implementation",
+        "geographic": "urban counties in the United States with a high concentration of fast-food and retail employment"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "raising the minimum wage",
+      "predicate": "reduces",
+      "object": "employee turnover and increases productivity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee turnover and increases productivity]",
+        "[PATH:empirical] Quasi-experimental studies comparing turnover rates and productivity metrics in U.S. states that increased minimum wage versus neighboring states that did not, using administrative payroll or employer-employee matched data. \u2014 Provides causal estimates within the specified geographic and temporal scope, directly testing the hypothesis in low-wage sectors.",
+        "[PATH:literature] Meta-analysis of existing literature on minimum wage effects on firm-level outcomes, focusing on turnover and labor productivity in low-wage industries. \u2014 Synthesizes evidence across multiple studies to assess overall effect size and consistency, addressing the disputed status.",
+        "[PATH:theoretical] Theoretical models of efficiency wages and monopsonistic labor markets, predicting that wage increases reduce turnover and may raise productivity through improved worker morale and retention. \u2014 Provides a causal mechanism explaining why the hypothesis might hold, and identifies boundary conditions (e.g., labor market concentration) that could be tested empirically."
+      ],
+      "scope": {
+        "domain": "short-term labor market in low-wage sectors"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1\u20132 years of implementation)",
+        "geographic": "low-wage labor markets in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "raising the minimum wage",
+      "predicate": "decreases",
+      "object": "employment turnover among low-skilled teenagers",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment turnover among low-skilled teenagers]",
+        "[PATH:empirical] Quarterly Workforce Indicators (QWI) data from the U.S. Census Bureau, focusing on low-wage teenage workers in urban areas before and after minimum wage increases \u2014 This longitudinal dataset provides granular, establishment-level employment and turnover metrics, allowing for a difference-in-differences analysis to isolate the causal effect of minimum wage changes on teenage turnover within the specified geographic and temporal scope.",
+        "[PATH:literature] Meta-analysis of minimum wage studies examining labor turnover, such as those reviewed in the Journal of Economic Literature or by the National Bureau of Economic Research \u2014 A systematic synthesis of existing empirical studies can aggregate effect sizes across different contexts, identifying whether the hypothesized decrease in turnover is consistently observed or if results are heterogeneous, thus providing a broader evidentiary base.",
+        "[PATH:empirical] Survey of low-skilled teenage workers in urban areas, administered pre- and post-minimum wage hike, capturing job tenure and reasons for leaving \u2014 Primary survey data can directly measure turnover intentions and actual separations among the target demographic, controlling for confounding factors like seasonal employment and school schedules, thereby offering high internal validity for the causal mechanism."
+      ],
+      "scope": {
+        "domain": "short-term labor market in low-wage sectors"
+      },
+      "qualifier": {
+        "temporal": "during the first year after implementation",
+        "geographic": "urban areas in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "raising the minimum wage",
+      "predicate": "boosts",
+      "object": "employment and economic activity",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employment and economic activity]",
+        "[PATH:empirical] Card and Krueger (1994) study of New Jersey's minimum wage increase on fast-food employment \u2014 This classic natural experiment directly tests the short-term employment effect in a low-wage sector, providing a key empirical benchmark for the hypothesis.",
+        "[PATH:empirical] Cengiz et al. (2019) meta-analysis of US minimum wage changes using a 'bunching' estimator \u2014 This modern, high-quality analysis aggregates evidence across many state-level changes, specifically focusing on low-wage sectors and short-term employment outcomes, offering broader statistical power.",
+        "[PATH:theoretical] Monopsony labor market models (e.g., Manning, 2003) \u2014 These models predict that minimum wage increases can boost employment under imperfect competition, providing a theoretical mechanism that could explain or refute the observed empirical patterns."
+      ],
+      "scope": {
+        "domain": "short-term labor market in low-wage sectors"
+      },
+      "qualifier": {
+        "temporal": "short-term (within 1\u20132 years)",
+        "geographic": "low-wage sectors in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C009": {
+      "id": "C009",
+      "subject": "raising the minimum wage",
+      "predicate": "will increase",
+      "object": "employee retention in monopsonistic labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage employee retention in monopsonistic labor markets]",
+        "[PATH:empirical] Quasi-experimental studies of minimum wage increases in rural U.S. counties with concentrated employer markets (e.g., using county-level employment and retention data from the Quarterly Workforce Indicators) \u2014 Directly tests the hypothesis in the specified geographic and market scope, leveraging natural variation in minimum wage policies across low-mobility rural areas to estimate causal effects on employee retention.",
+        "[PATH:theoretical] Monopsony labor market models with search frictions (e.g., Manning's 'Monopsony in Motion' framework, extended to include minimum wage floors and worker mobility costs) \u2014 Provides formal predictions about retention under low labor mobility, which can be compared to empirical findings to confirm or refute the hypothesized mechanism.",
+        "[PATH:literature] Meta-analysis of minimum wage effects on turnover in low-wage sectors (e.g., reviews by Dube, Lester, and Reich or related IZA World of Labor reports) \u2014 Synthesizes existing evidence across multiple contexts to assess whether the predicted positive retention effect holds specifically in monopsonistic settings, and identifies gaps in current research."
+      ],
+      "scope": {
+        "domain": "local labor markets with few employers"
+      },
+      "qualifier": {
+        "temporal": "during periods of low labor mobility",
+        "geographic": "rural areas and small towns in developed countries"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C010": {
+      "id": "C010",
+      "subject": "raising the minimum wage",
+      "predicate": "may increase",
+      "object": "unemployment in monopsonistic labor markets",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: raising the minimum wage unemployment in monopsonistic labor markets]",
+        "[PATH:empirical] Panel data analysis of county-level minimum wage changes in the U.S. from 2000-2020, focusing on labor markets with fewer than 5 employers per industry, measuring employment effects within 1-2 years using difference-in-differences methods. \u2014 Directly tests the hypothesis in the specified scope (local monopsonistic markets) and temporal window, providing causal estimates of minimum wage impacts on unemployment.",
+        "[PATH:literature] Meta-analysis of existing studies on minimum wage and employment in monopsonistic settings, e.g., Card & Krueger (1994) and subsequent replications, stratified by market concentration and time horizon. \u2014 Synthesizes evidence from multiple contexts to assess the robustness of the predicted positive relationship, identifying conditions under which unemployment does or does not rise.",
+        "[PATH:theoretical] Theoretical modeling of dynamic monopsony with search frictions, incorporating worker heterogeneity and firm wage-setting power, to derive predictions for short-run employment responses to wage floors. \u2014 Clarifies the mechanisms (e.g., reduced hiring vs. increased labor supply) that could produce unemployment, and identifies boundary conditions (e.g., degree of monopsony power) that the hypothesis depends on."
+      ],
+      "scope": {
+        "domain": "local labor markets with few employers"
+      },
+      "qualifier": {
+        "temporal": "short-run (within 1-2 years of wage increase)",
+        "geographic": "local labor markets with few employers in the United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "openai/gpt-4o[falsifier]",
+      "history": [
+        "T3",
+        "T7",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T5[hypothesis_builder] on C002 -> C005",
+    "T5[falsifier] on C002 -> C006",
+    "T2 on C002",
+    "T6[hypothesis_builder] on C002 -> C007",
+    "T6[falsifier] on C002 -> C008",
+    "T8 on C002",
+    "T3 on C003",
+    "T8 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C009",
+    "T6[falsifier] on C004 -> C010",
+    "T8 on C004",
+    "T3 on C005",
+    "T7 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T7 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T7 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T7 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on C009",
+    "T7 on C009",
+    "T6 on C009",
+    "T8 on C009",
+    "T3 on C010",
+    "T7 on C010",
+    "T6 on C010",
+    "T8 on C010"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 0,
+  "iteration": 36,
+  "focus_claim_id": "C010",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C009"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C010"
+    ]
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "caveat": "Effect depends on task type, individual differences, and measurement method; self-reported gains often conflict with objective metrics and firm-level studies show mixed results"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "self-reported productivity",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work self-reported productivity]"
+      ],
+      "scope": {
+        "domain": "individual perception studies"
+      },
+      "qualifier": {
+        "caveat": "Based on surveys where employees report fewer distractions and greater focus at home"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective productivity metrics (e.g., output per hour)",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work objective productivity metrics (e.g., output per hour)]"
+      ],
+      "scope": {
+        "domain": "firm-level and objective measurement studies"
+      },
+      "qualifier": {
+        "caveat": "Firm-level data often show slower collaboration, reduced innovation, and lower output for complex tasks"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "Remote work",
+      "predicate": "is more productive than",
+      "object": "office work",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work office work]"
+      ],
+      "scope": {
+        "domain": "routine, independent tasks"
+      },
+      "qualifier": {
+        "caveat": "Effect reverses for collaborative or creative tasks; individual differences and management practices moderate outcomes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "Remote work productivity gains",
+      "predicate": "are mediated by",
+      "object": "introversion personality traits and pre-existing home environment quality",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work productivity gains introversion personality traits and pre-existing home environment quality]",
+        "[PATH:empirical] Longitudinal field study comparing productivity metrics (e.g., task completion, self-report focus) of introverted vs. extroverted employees transitioning from office to remote work, with pre- and post-measures of home environment quality (e.g., dedicated workspace, noise level, internet reliability). \u2014 Directly tests the mediating role of introversion and home environment by measuring individual differences in personality and workspace conditions before and after the remote work shift, allowing causal inference about productivity changes.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work productivity, focusing on effect sizes for introversion/extroversion and home office ergonomics as moderators. \u2014 Synthesizes available evidence to determine whether the proposed mediation pattern is consistently observed across contexts, sample sizes, and measurement tools, providing a robust test of the hypothesis against publication bias or small-sample effects.",
+        "[PATH:empirical] Experimental vignette or simulation study where participants (scored for introversion/extroversion) complete standardized tasks under conditions of low vs. high social stimulation (simulated remote vs. office) and with vs. without adequate home workspace cues (e.g., noise, desk setup). \u2014 Isolates the causal mechanisms by manipulating both the social stimulation level and workspace quality, enabling direct observation of the interaction effects on productivity, thereby confirming or refuting the proposed mediating pathways."
+      ],
+      "scope": {
+        "domain": "differential psychology and work environment studies"
+      },
+      "qualifier": {
+        "mechanism": "Introverts experience greater focus benefits from reduced social stimulation while extroverts show productivity decline; adequate home workspace infrastructure is necessary precondition"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "Remote work",
+      "predicate": "inflates",
+      "object": "self-reported productivity through social desirability bias",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work self-reported productivity through social desirability bias]",
+        "[PATH:empirical] A field experiment comparing self-reported productivity with objective metrics (e.g., keystroke logs, task completion times, and peer-reviewed output) across remote and on-site employees, with randomized return-to-office mandates. \u2014 Directly tests the discrepancy between subjective and objective productivity under varying levels of social pressure to justify remote work, controlling for confounding factors.",
+        "[PATH:literature] Meta-analysis of existing studies on social desirability bias in self-reported work performance, focusing on remote versus office settings, with moderator analysis for organizational culture and mandate threats. \u2014 Aggregates available evidence to quantify the effect size and consistency of overreporting, identifying conditions that amplify or mitigate the bias.",
+        "[PATH:empirical] Longitudinal survey study measuring self-reported productivity, perceived job security, and attitudes toward return-to-office policies, paired with objective performance data from company HR systems. \u2014 Captures temporal dynamics of social desirability bias as mandates loom, establishing causal links between threat perception and overreporting."
+      ],
+      "scope": {
+        "domain": "behavioral psychology and organizational measurement"
+      },
+      "qualifier": {
+        "mechanism": "Employees overreport productivity to justify remote arrangements and avoid return-to-office mandates, while objective metrics show decreased output, longer task completion times, and reduced collaborative efficiency"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "Remote work productivity decline",
+      "predicate": "is mediated by",
+      "object": "reduced spontaneous knowledge transfer between senior and junior employees",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work productivity decline reduced spontaneous knowledge transfer between senior and junior employees]",
+        "[PATH:empirical] Longitudinal field study comparing knowledge transfer metrics (e.g., project handoff quality, mentorship frequency) between co-located and remote teams in knowledge-intensive firms \u2014 Directly measures the hypothesized mediating mechanism (spontaneous knowledge transfer) under controlled conditions, allowing causal inference about its role in productivity decline.",
+        "[PATH:literature] Meta-analysis of existing studies on remote work, informal mentoring, and organizational learning in hierarchical expertise structures \u2014 Synthesizes available evidence to assess whether reduced observational learning and informal mentorship consistently correlate with productivity loss, helping to confirm or refute the generalizability of the mechanism.",
+        "[PATH:theoretical] Agent-based simulation modeling the effects of physical proximity on knowledge diffusion rates between senior and junior employees in knowledge-intensive firms \u2014 Tests the plausibility of the causal pathway by simulating how changes in spontaneous transfer rates impact aggregate productivity, providing theoretical validation or refutation when empirical data are limited."
+      ],
+      "scope": {
+        "domain": "knowledge-intensive firms with hierarchical expertise structures"
+      },
+      "qualifier": {
+        "mechanism": "Loss of observational learning and informal mentorship opportunities that occur in physical proximity"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "objective productivity metrics (e.g., output per hour)",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: Remote work objective productivity metrics (e.g., output per hour)]",
+        "[PATH:empirical] A randomized controlled trial (RCT) comparing output-per-hour of matched employees performing routine tasks (e.g., data entry, coding) in remote vs. on-site settings, with objective tracking via keystroke logs or task completion rates. \u2014 An RCT would provide causal evidence by controlling for selection bias and confounding variables (e.g., task difficulty, manager effects). Objective metrics avoid self-report biases, directly testing the claim that remote work increases per-hour productivity for routine and focused tasks.",
+        "[PATH:empirical] Longitudinal analysis of firm-level administrative data (e.g., from a large tech company) tracking individual output per hour before and after a mandatory shift to remote work, using time-stamped project management tools. \u2014 Longitudinal within-subject data can isolate the effect of remote work on productivity while controlling for individual differences. The caveat about reduced interruptions and flexible scheduling can be tested by comparing periods with high vs. low synchronous meeting demands.",
+        "[PATH:literature] Meta-analysis of existing time-use diary studies and experimental literature on interruptions, commute time, and task focus in remote vs. office settings. \u2014 A systematic review would aggregate evidence across multiple studies to assess the generalizability of the claim. It can also identify moderators (e.g., task complexity, team interdependence) that may limit the effect, addressing the disputed status and moderate confidence level."
+      ],
+      "scope": {
+        "domain": "individual-level time-use studies and task completion data"
+      },
+      "qualifier": {
+        "caveat": "Elimination of commute time, reduced workplace interruptions, and flexible scheduling consistently show higher per-hour output for routine and focused tasks"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "Remote work",
+      "predicate": "reduces",
+      "object": "objective productivity metrics (e.g., output per hour) for complex, collaborative tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work reduces objective productivity metrics (e.g., output per hour) for complex, collaborative tasks in domain 'firm-level and objective measurement studies']"
+      ],
+      "scope": {
+        "domain": "firm-level and objective measurement studies"
+      },
+      "qualifier": {
+        "temporal": "2020\u20132023",
+        "geographic": "United States and Western Europe"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "objective productivity metrics (e.g., output per hour) for independent, routine tasks",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms Remote work increases objective productivity metrics (e.g., output per hour) for independent, routine tasks in domain 'firm-level and objective measurement studies']"
+      ],
+      "scope": {
+        "domain": "firm-level and objective measurement studies"
+      },
+      "qualifier": {
+        "temporal": "2019-2023",
+        "geographic": "global (primarily United States and Europe)"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "Remote work productivity decline",
+      "predicate": "is mediated by",
+      "object": "reduced synchronous communication frequency, specifically unscheduled interactions below 5 minutes",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "knowledge work requiring cross-functional coordination"
+      },
+      "qualifier": {
+        "mechanism": "Loss of spontaneous problem-solving exchanges that occur in physical proximity",
+        "measurement": "Communication logs comparing scheduled vs. unscheduled interaction patterns"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "Remote work",
+      "predicate": "increases",
+      "object": "objective productivity metrics (e.g., output per hour)",
+      "status": "disputed",
+      "confidence": 0.55,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "individual-level performance studies and time-use data"
+      },
+      "qualifier": {
+        "caveat": "Individual workers show measurably higher output per hour due to eliminated commute time, fewer interruptions, and flexible scheduling that aligns with peak cognitive performance periods"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C011",
+    "T9[falsifier] on C003 -> C012",
+    "T7 on B002",
+    "T8 on B002",
+    "T8 on C011",
+    "T8 on C012"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 31,
+  "focus_claim_id": "C012",
+  "anti_delphi_activations": 3,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012"
+    ]
+  }
+}

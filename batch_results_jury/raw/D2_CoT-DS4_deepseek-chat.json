@@ -1,0 +1,64 @@
+{
+  "qid": "D2",
+  "judge_model": "deepseek-chat",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-DS4",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "deepseek-chat",
+    "prompt_tokens": 1051,
+    "completion_tokens": 516,
+    "total_tokens": 1567,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is more readable due to its clear narrative flow and explicit steps, while Output A is more fragmented and list-like."
+    },
+    "directional_commitment": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B makes a clear directional synthesis claim with specific conditions, whereas Output A presents conflicting claims with equal confidence, reducing commitment."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly identifies a fundamental contradiction between the initial claim and counter-claim, while Output A merely lists competing hypotheses without deep contradiction analysis."
+    },
+    "synthesis_quality": {
+      "DES": 0.3,
+      "CoT": 0.7,
+      "reason": "Output B provides a precise, scope-bounded synthesis with specific conditions and cost-effectiveness considerations, whereas Output A offers two vague, equally confident contradictory syntheses."
+    },
+    "epistemic_novelty": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs capture non-obvious tensions (e.g., fade-out effects, grade-level differences), but neither presents a truly novel insight beyond standard research findings."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A explicitly maintains multiple competing hypotheses in parallel with confidence levels, while Output B collapses them into a single synthesis without preserving branches."
+    },
+    "process_traceability": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A provides a traceable list of claims and epistemic operations, whereas Output B has a clearer step-by-step process but lacks the same level of granular claim tracking."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly bounds its synthesis to early grades, high-need populations, and cost-effectiveness, while Output A includes scope conditions but in a more scattered manner."
+    },
+    "overall": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B achieves a better balance of readability, directional commitment, contradiction handling, and synthesis precision, despite Output A's superior branch preservation."
+    }
+  }
+}

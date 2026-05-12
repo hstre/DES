@@ -1,0 +1,515 @@
+{
+  "claims": {
+    "C001": {
+      "id": "C001",
+      "subject": "class size reduction",
+      "predicate": "improves",
+      "object": "educational outcomes",
+      "status": "supported",
+      "confidence": 0.45,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction educational outcomes]"
+      ],
+      "scope": {},
+      "qualifier": {
+        "effect_size": "small to moderate",
+        "conditions": "depends on teacher adaptation and grade level"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T4"
+      ],
+      "parent_id": null
+    },
+    "C002": {
+      "id": "C002",
+      "subject": "class size reduction",
+      "predicate": "improves",
+      "object": "educational outcomes in early elementary grades",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction educational outcomes in early elementary grades]"
+      ],
+      "scope": {
+        "domain": "early elementary education"
+      },
+      "qualifier": {
+        "effect_size": "small to moderate",
+        "conditions": "teacher adaptation to smaller class sizes"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C003": {
+      "id": "C003",
+      "subject": "class size reduction",
+      "predicate": "fails to improve",
+      "object": "educational outcomes for older students without concurrent instructional changes",
+      "status": "disputed",
+      "confidence": 0.42,
+      "modality": "suggestion",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction educational outcomes for older students without concurrent instructional changes]"
+      ],
+      "scope": {
+        "domain": "middle and high school"
+      },
+      "qualifier": {
+        "effect_size": "negligible",
+        "conditions": "no change in teaching methods"
+      },
+      "conflict": false,
+      "branch_open": true,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T5[anti-delphi]",
+        "T1",
+        "T9[anti-delphi]"
+      ],
+      "parent_id": "C001"
+    },
+    "C004": {
+      "id": "C004",
+      "subject": "teacher adaptation",
+      "predicate": "is a stronger mediator of",
+      "object": "educational outcomes than class size reduction alone",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: teacher adaptation educational outcomes than class size reduction alone]"
+      ],
+      "scope": {
+        "domain": "general education"
+      },
+      "qualifier": {
+        "effect_size": "moderate",
+        "conditions": "professional development support"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T6[anti-delphi]",
+        "T8"
+      ],
+      "parent_id": "C001"
+    },
+    "C005": {
+      "id": "C005",
+      "subject": "class size reduction from 25 to 15 students",
+      "predicate": "produces larger improvements in",
+      "object": "reading comprehension outcomes for English language learners in grades K-2",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction from 25 to 15 students reading comprehension outcomes for English language learners in grades K-2]",
+        "[PATH:empirical] Tennessee Student/Teacher Achievement Ratio (STAR) project re-analysis stratified by English language learner status \u2014 This large-scale randomized experiment on class size effects in K-3 provides a strong basis to test whether ELL students show differential reading gains at class sizes near 15 versus 25, directly addressing the hypothesis.",
+        "[PATH:empirical] Longitudinal study of dual-language immersion programs with varying class sizes in grades K-2 \u2014 Tracking reading comprehension outcomes in programs that naturally vary class size within the 13-17 range compared to 25+ can isolate the effect of size on ELL-specific outcomes, while controlling for instructional approach.",
+        "[PATH:literature] Meta-analysis of class size reduction interventions focusing on at-risk and language-minority populations \u2014 Synthesizing existing studies that report effect sizes for ELL subgroups can determine whether the hypothesized benefit (and optimal threshold) is consistently observed across contexts, or is confounded by other factors."
+      ],
+      "scope": {
+        "domain": "early elementary education",
+        "population": "English language learners",
+        "grade_levels": "K-2"
+      },
+      "qualifier": {
+        "mechanism": "increased one-on-one teacher-student interaction time",
+        "threshold": "optimal class size between 13-17 students"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C006": {
+      "id": "C006",
+      "subject": "class size reduction",
+      "predicate": "has no causal effect on",
+      "object": "educational outcomes in early elementary grades",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction educational outcomes in early elementary grades]",
+        "[PATH:empirical] Randomized controlled trial (e.g., Project STAR) re-analyzed with instrumental variable methods to isolate class size from teacher quality and resource confounds \u2014 Project STAR provides experimental variation in class size; re-analysis using IV or propensity score matching can disentangle selection bias and resource confounding, directly testing the claim that observed effects are spurious.",
+        "[PATH:empirical] Longitudinal administrative data from multiple districts tracking teacher assignment, curriculum changes, and parental involvement alongside class size reductions \u2014 By controlling for simultaneous improvements in teacher quality, curricula, and parental programs, this dataset can quantify whether class size reduction retains any independent effect on early elementary outcomes.",
+        "[PATH:literature] Meta-analysis of quasi-experimental studies that explicitly adjust for school-level confounders (e.g., fixed effects, difference-in-differences) \u2014 A systematic review focusing on studies that address selection bias and resource confounding can synthesize existing evidence to determine whether the correlation vanishes after proper adjustment."
+      ],
+      "scope": {
+        "domain": "early elementary education"
+      },
+      "qualifier": {
+        "mechanism": "observed correlations are entirely explained by selection bias and resource confounding",
+        "evidence": "schools implementing class size reduction simultaneously introduce better teachers, curricula, and parental involvement programs"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C002"
+    },
+    "C007": {
+      "id": "C007",
+      "subject": "class size reduction combined with peer-assisted learning protocols",
+      "predicate": "significantly improves",
+      "object": "academic achievement in high school mathematics and science courses",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction combined with peer-assisted learning protocols academic achievement in high school mathematics and science courses]",
+        "[PATH:empirical] A randomized controlled trial (RCT) comparing high school math/science classrooms with reduced class sizes (15-20 students) using structured peer-assisted learning protocols versus standard-size classes with traditional instruction, measuring standardized test scores over two academic years. \u2014 An RCT would provide causal evidence on the combined intervention's effect, controlling for confounding variables and directly testing the hypothesis with high internal validity.",
+        "[PATH:literature] Meta-analysis of existing studies on class size reduction and peer-assisted learning in secondary STEM education, focusing on effect sizes and interaction effects. \u2014 A meta-analysis can synthesize available evidence to assess whether the combined approach yields moderate-to-large effects, identify heterogeneity across studies, and evaluate the proposed mechanism of increased structured peer interaction.",
+        "[PATH:empirical] Longitudinal observational study tracking student achievement in schools that have implemented the combined intervention, using propensity score matching to compare with similar schools without the intervention. \u2014 This design would provide real-world evidence of the intervention's effectiveness in diverse high school settings, addressing external validity and potential implementation challenges, while using matching to reduce selection bias."
+      ],
+      "scope": {
+        "domain": "high school STEM education"
+      },
+      "qualifier": {
+        "effect_size": "moderate to large",
+        "mechanism": "increased opportunities for structured peer interaction",
+        "class_size_range": "15-20 students"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C008": {
+      "id": "C008",
+      "subject": "class size reduction",
+      "predicate": "automatically enables",
+      "object": "improved educational outcomes for older students through increased individualized attention and participation opportunities",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction improved educational outcomes for older students through increased individualized attention and participation opportunities]",
+        "[PATH:empirical] Tennessee STAR (Student/Teacher Achievement Ratio) project reanalysis focusing on older student cohorts \u2014 This large-scale randomized experiment provides longitudinal data that can be re-analyzed to isolate effects of class size reduction on middle and high school outcomes, testing whether structural affordances alone improve participation and attention without pedagogical changes.",
+        "[PATH:literature] Meta-analysis of class size effects on secondary education (e.g., Hattie's Visible Learning or the What Works Clearinghouse) \u2014 A systematic review of existing studies can quantify the effect size and identify whether the mechanism of increased individualized attention holds for older students, helping to confirm or refute the disputed claim.",
+        "[PATH:empirical] Observational study comparing student participation metrics (e.g., question-asking, task engagement) in reduced vs. standard-size secondary classrooms, controlling for teacher practices \u2014 Direct measurement of behavioral changes in response to class size reduction, without explicit pedagogical reform, can test the hypothesized structural affordance mechanism and its impact on educational outcomes."
+      ],
+      "scope": {
+        "domain": "middle and high school"
+      },
+      "qualifier": {
+        "mechanism": "structural affordances create behavioral changes without explicit pedagogical reform",
+        "effect_size": "moderate"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B001": {
+      "id": "B001",
+      "subject": "class size reduction",
+      "predicate": "improves",
+      "object": "educational outcomes for older students when instructional changes are implemented",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms class size reduction improves educational outcomes for older students when instructional changes are implemented in domain 'middle and high school']"
+      ],
+      "scope": {
+        "domain": "middle and high school"
+      },
+      "qualifier": {
+        "temporal": "post-2000 studies",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "B002": {
+      "id": "B002",
+      "subject": "class size reduction",
+      "predicate": "fails to improve",
+      "object": "educational outcomes for older students even with concurrent instructional changes",
+      "status": "supported",
+      "confidence": 0.9,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated: peer-reviewed source confirms class size reduction fails to improve educational outcomes for older students even with concurrent instructional changes in domain 'middle and high school']"
+      ],
+      "scope": {
+        "domain": "middle and high school"
+      },
+      "qualifier": {
+        "temporal": "1990s to 2020s",
+        "geographic": "United States"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": false,
+      "generated_by": "",
+      "history": [
+        "T3",
+        "T7",
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C011": {
+      "id": "C011",
+      "subject": "teacher adaptation frequency in the first semester",
+      "predicate": "predicts",
+      "object": "sustained student achievement gains throughout the academic year independent of initial class size",
+      "status": "supported",
+      "confidence": 0.82,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: teacher adaptation frequency in the first semester sustained student achievement gains throughout the academic year independent of initial class size]",
+        "[PATH:empirical] Longitudinal classroom observation study tracking weekly instructional adjustments (e.g., differentiated instruction, pacing changes) and linking them to end-of-year standardized test gains, controlling for initial class size, baseline achievement, and SES. \u2014 Directly tests the causal claim by measuring adaptation frequency in the first 12 weeks and student achievement over the full year, with class size as a covariate.",
+        "[PATH:literature] Meta-analysis of experimental or quasi-experimental studies on teacher professional development programs that emphasize frequent formative assessment and instructional adaptation, examining effect sizes on student achievement across class sizes. \u2014 Synthesizes existing evidence to assess whether the adaptation-achievement link holds independent of class size, providing statistical power and generalizability."
+      ],
+      "scope": {
+        "domain": "primary and secondary education"
+      },
+      "qualifier": {
+        "measurement_window": "first 12 weeks",
+        "minimum_adaptation_events": "weekly instructional adjustments",
+        "control_variables": "baseline achievement, socioeconomic status"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C012": {
+      "id": "C012",
+      "subject": "class size reduction",
+      "predicate": "produces larger and more replicable gains in",
+      "object": "educational outcomes than teacher adaptation strategies",
+      "status": "supported",
+      "confidence": 0.8500000000000001,
+      "modality": "hypothesis",
+      "evidence_refs": [
+        "[Simulated evidence for: class size reduction educational outcomes than teacher adaptation strategies]",
+        "[PATH:empirical] Project STAR (Student Teacher Achievement Ratio) longitudinal data reanalysis with modern causal inference methods \u2014 Project STAR is the landmark randomized controlled trial on class size reduction. Reanalyzing its data using current techniques (e.g., instrumental variables, sensitivity analysis) can directly test whether gains from reducing class size below 18 students per class replicate and exceed those from typical teacher adaptation strategies.",
+        "[PATH:literature] Meta-analysis of teacher professional development interventions vs. class size reduction RCTs \u2014 A systematic meta-analysis comparing effect sizes from high-quality studies of teacher adaptation strategies (e.g., coaching, formative assessment training) with those from class size reduction RCTs would quantify the relative magnitude and replicability of gains, addressing the hypothesis directly.",
+        "[PATH:empirical] Cost-effectiveness modeling study using data from multiple school districts implementing both interventions \u2014 Empirical cost-effectiveness analysis comparing class size reduction (below 18 students) and teacher adaptation strategies (e.g., targeted PD) in real-world settings can confirm whether the hypothesized larger gains are practically significant when accounting for resource constraints and implementation fidelity."
+      ],
+      "scope": {
+        "domain": "general education"
+      },
+      "qualifier": {
+        "effect_size": "large",
+        "conditions": "reductions below 18 students per class",
+        "evidence_basis": "randomized controlled trials show direct causal mechanisms"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": false,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T3",
+        "T6",
+        "T8"
+      ],
+      "parent_id": "C004"
+    },
+    "C013": {
+      "id": "C013",
+      "subject": "class size reduction combined with peer-led discussion protocols",
+      "predicate": "significantly improves",
+      "object": "critical thinking outcomes for high school students in humanities courses",
+      "status": "unknown",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "high school humanities education"
+      },
+      "qualifier": {
+        "effect_size": "moderate to large",
+        "mechanism": "increased opportunity for substantive peer dialogue",
+        "optimal_class_size": "12-15 students"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[hypothesis_builder]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    },
+    "C014": {
+      "id": "C014",
+      "subject": "class size reduction",
+      "predicate": "automatically enables",
+      "object": "differentiated instruction and increased student participation that measurably improve outcomes for older students",
+      "status": "disputed",
+      "confidence": 0.5,
+      "modality": "hypothesis",
+      "evidence_refs": [],
+      "scope": {
+        "domain": "middle and high school"
+      },
+      "qualifier": {
+        "mechanism": "reduced classroom management burden creates natural instructional changes",
+        "effect_size": "moderate"
+      },
+      "conflict": false,
+      "branch_open": false,
+      "sealed": true,
+      "is_synthesis": true,
+      "is_role_generated": true,
+      "generated_by": "anthropic/claude-sonnet-4-5[falsifier]",
+      "history": [
+        "T8"
+      ],
+      "parent_id": "C003"
+    }
+  },
+  "operation_history": [
+    "T3 on C001",
+    "T4 on C001",
+    "T3 on C002",
+    "T6[hypothesis_builder] on C002 -> C005",
+    "T6[falsifier] on C002 -> C006",
+    "T8 on C002",
+    "T3 on C003",
+    "T5[hypothesis_builder] on C003 -> C007",
+    "T5[falsifier] on C003 -> C008",
+    "T1 on C003",
+    "T3 on C004",
+    "T6[hypothesis_builder] on C004 -> C011",
+    "T6[falsifier] on C004 -> C012",
+    "T8 on C004",
+    "T3 on C005",
+    "T6 on C005",
+    "T8 on C005",
+    "T3 on C006",
+    "T6 on C006",
+    "T8 on C006",
+    "T3 on C007",
+    "T6 on C007",
+    "T8 on C007",
+    "T3 on C008",
+    "T6 on C008",
+    "T8 on C008",
+    "T3 on B001",
+    "T7 on B001",
+    "T8 on B001",
+    "T3 on B002",
+    "T9[hypothesis_builder] on C003 -> C013",
+    "T9[falsifier] on C003 -> C014",
+    "T7 on B002",
+    "T8 on B002",
+    "T3 on C011",
+    "T6 on C011",
+    "T8 on C011",
+    "T3 on C012",
+    "T6 on C012",
+    "T8 on C012",
+    "T8 on C013",
+    "T8 on C014"
+  ],
+  "discarded_hypotheses": [],
+  "weak_candidates": [],
+  "reframing_count": 1,
+  "iteration": 38,
+  "focus_claim_id": "C014",
+  "anti_delphi_activations": 4,
+  "roles_generated": {
+    "hypothesis_builder": [
+      "C005",
+      "C007",
+      "C011",
+      "C013"
+    ],
+    "falsifier": [
+      "C006",
+      "C008",
+      "C012",
+      "C014"
+    ]
+  }
+}

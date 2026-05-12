@@ -1,0 +1,64 @@
+{
+  "qid": "D2",
+  "judge_model": "openai/gpt-4o",
+  "des_combo": "DS4_GPT4o",
+  "cot_model": "CoT-GPT4o",
+  "assignment": {
+    "A": "DES",
+    "B": "CoT"
+  },
+  "cost": {
+    "model": "openai/gpt-4o",
+    "prompt_tokens": 920,
+    "completion_tokens": 390,
+    "total_tokens": 1310,
+    "cost_measured": true
+  },
+  "dimensions": {
+    "readability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B is clearer and easier to comprehend due to its structured step-by-step format."
+    },
+    "directional_commitment": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide directional claims but hedge with varying confidence levels."
+    },
+    "contradiction_depth": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B explicitly addresses contradictions between claims and counter-claims."
+    },
+    "synthesis_quality": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide synthesis but with different scopes; Output A offers competing conclusions."
+    },
+    "epistemic_novelty": {
+      "DES": 0.6,
+      "CoT": 0.4,
+      "reason": "Output A presents more nuanced competing hypotheses that a domain expert might find valuable."
+    },
+    "branch_preservation": {
+      "DES": 0.7,
+      "CoT": 0.3,
+      "reason": "Output A maintains multiple competing hypotheses in parallel, while Output B focuses on a single synthesis."
+    },
+    "process_traceability": {
+      "DES": 0.4,
+      "CoT": 0.6,
+      "reason": "Output B's step-by-step format allows for clearer traceability of reasoning."
+    },
+    "evidence_scope_discipline": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs provide scope conditions but differ in how explicitly they state evidence status."
+    },
+    "overall": {
+      "DES": 0.5,
+      "CoT": 0.5,
+      "reason": "Both outputs have strengths and weaknesses across different dimensions, leading to a balanced overall evaluation."
+    }
+  }
+}
