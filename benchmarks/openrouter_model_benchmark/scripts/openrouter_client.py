@@ -128,8 +128,8 @@ def call_model(
             err_type = _classify_http_error(http_status, body)
             last_error = OpenRouterError(err_type, f"HTTP {http_status}: {body}", http_status=http_status)
             if err_type in ("rate_limit", "http_error_5xx", "provider_error"):
-                continue
-            break
+                continue  # retriable
+            break  # non-retriable 4xx
         except TimeoutError:
             latency_ms = int((time.monotonic() - t_start) * 1000)
             last_error = OpenRouterError(

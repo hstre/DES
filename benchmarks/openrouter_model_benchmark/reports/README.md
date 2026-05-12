@@ -90,5 +90,3 @@ No keyword scoring, no LLM scoring during collection. Scoring is deferred — se
 | v2 --limit 2 (2026-05-12) | 2 real (claude-3-5-haiku × A1, A2) |
 
 Full 7×8=56 run set: pending approval.
-
-**Note:** `dry_runs.jsonl` (112 records, 78KB) is tracked in local git only; too large for single MCP push.
