@@ -1,0 +1,37 @@
+{
+  "version": "v1",
+  "description": "Scoring schema for automated keyword-based evaluation. All scoring is mechanical — no interpretation.",
+  "fields": {
+    "run_id": "UUID string. Primary key per run.",
+    "timestamp_utc": "ISO 8601 UTC timestamp of API call completion.",
+    "model_id": "Model identifier as in models config.",
+    "task_id": "Task identifier as in tasks config.",
+    "task_style": "Style tag from tasks config.",
+    "prompt_tokens": "Integer. Token count reported by API for prompt.",
+    "completion_tokens": "Integer. Token count reported by API for completion.",
+    "latency_ms": "Integer. Wall-clock ms from request send to response received.",
+    "http_status": "Integer. HTTP status code returned by API.",
+    "response_text": "String. Raw completion text, stripped of leading/trailing whitespace.",
+    "keyword_hits": "List of strings. Which expected_keywords were found (substring match, case-sensitive).",
+    "keyword_hit_count": "Integer. len(keyword_hits).",
+    "keyword_total": "Integer. len(expected_keywords) from task config.",
+    "keyword_score": "Float. keyword_hit_count / keyword_total if keyword_total > 0, else null.",
+    "response_line_count": "Integer. Number of non-empty lines in response_text.",
+    "error": "null if success. String error type if failed (see error_types).",
+    "error_detail": "null if success. String with exception message or HTTP body on failure.",
+    "dry_run": "Boolean. True if --dry-run flag was set."
+  },
+  "error_types": [
+    "network_timeout",
+    "http_error_4xx",
+    "http_error_5xx",
+    "json_decode_error",
+    "missing_field",
+    "unknown"
+  ],
+  "notes": [
+    "keyword_score is null for tasks where expected_keywords is empty (e.g., t03, t08).",
+    "Scoring fields are populated by dataset_writer.py at write time.",
+    "No model comparison or ranking is derived from this schema — raw data only."
+  ]
+}
