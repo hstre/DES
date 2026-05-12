@@ -1,37 +1,55 @@
 {
   "version": "v1",
-  "description": "Scoring schema for automated keyword-based evaluation. All scoring is mechanical — no interpretation.",
-  "fields": {
-    "run_id": "UUID string. Primary key per run.",
-    "timestamp_utc": "ISO 8601 UTC timestamp of API call completion.",
-    "model_id": "Model identifier as in models config.",
-    "task_id": "Task identifier as in tasks config.",
-    "task_style": "Style tag from tasks config.",
-    "prompt_tokens": "Integer. Token count reported by API for prompt.",
-    "completion_tokens": "Integer. Token count reported by API for completion.",
-    "latency_ms": "Integer. Wall-clock ms from request send to response received.",
-    "http_status": "Integer. HTTP status code returned by API.",
-    "response_text": "String. Raw completion text, stripped of leading/trailing whitespace.",
-    "keyword_hits": "List of strings. Which expected_keywords were found (substring match, case-sensitive).",
-    "keyword_hit_count": "Integer. len(keyword_hits).",
-    "keyword_total": "Integer. len(expected_keywords) from task config.",
-    "keyword_score": "Float. keyword_hit_count / keyword_total if keyword_total > 0, else null.",
-    "response_line_count": "Integer. Number of non-empty lines in response_text.",
-    "error": "null if success. String error type if failed (see error_types).",
-    "error_detail": "null if success. String with exception message or HTTP body on failure.",
-    "dry_run": "Boolean. True if --dry-run flag was set."
+  "note": "Deferred scoring reference only. No scoring is computed during data collection.",
+  "collection_phase": "runs.jsonl records contain raw response text. No keyword scores, no LLM scores.",
+  "nested_schema": {
+    "run_id": "UUID string. Primary key.",
+    "timestamp_utc": "ISO 8601 UTC timestamp at API call completion.",
+    "model": {
+      "id": "OpenRouter model identifier.",
+      "vendor": "Vendor name as in models config.",
+      "label": "Human-readable model label."
+    },
+    "task": {
+      "task_id": "Task identifier from tasks config.",
+      "category": "Task category (DES, planning, education, logic).",
+      "style": "Prompt style tag."
+    },
+    "request": {
+      "prompt": "Exact user-facing prompt text sent to model.",
+      "prompt_sha256": "SHA-256 hex digest of prompt for deduplication and integrity."
+    },
+    "response": {
+      "text": "Raw completion text, stripped of leading/trailing whitespace.",
+      "finish_reason": "stop | length | content_filter | null.",
+      "raw": "Full API response object as returned by OpenRouter."
+    },
+    "usage": {
+      "prompt_tokens": "Integer or null.",
+      "completion_tokens": "Integer or null.",
+      "total_tokens": "Integer or null.",
+      "cost_usd": "Float or null. From OpenRouter usage.cost if provided.",
+      "latency_ms": "Integer. Wall-clock ms from request send to response received."
+    },
+    "status": "success | error"
   },
-  "error_types": [
-    "network_timeout",
-    "http_error_4xx",
-    "http_error_5xx",
-    "json_decode_error",
-    "missing_field",
-    "unknown"
-  ],
-  "notes": [
-    "keyword_score is null for tasks where expected_keywords is empty (e.g., t03, t08).",
-    "Scoring fields are populated by dataset_writer.py at write time.",
-    "No model comparison or ranking is derived from this schema — raw data only."
+  "error_schema": {
+    "run_id": "UUID",
+    "timestamp_utc": "ISO 8601",
+    "model": "same as above",
+    "task": "same as above",
+    "request": "same as above",
+    "error_type": "network_timeout | http_error_4xx | http_error_5xx | rate_limit | invalid_model | unavailable_model | json_decode_error | malformed_response | provider_error | unknown",
+    "error_detail": "String. Exception message or HTTP response body.",
+    "http_status": "Integer or null.",
+    "latency_ms": "Integer.",
+    "status": "error"
+  },
+  "deferred_scoring_fields": [
+    "Relevance score (human or LLM)",
+    "Contradiction detection (yes/no)",
+    "Refusal detection (yes/no — for A4)",
+    "Formalization quality (A5)",
+    "Keyword presence (deferred, not automated)"
   ]
 }

@@ -1,6 +1,6 @@
 """
-OpenRouter API client. Reads OPENROUTER_API_KEY from environment — never from code.
-Timeout: 120s. Max retries: 2. Backoff: 4s, 8s.
+OpenRouter API client. OPENROUTER_API_KEY from environment only — never hardcoded.
+Timeout: 120s. Retries: 2. Backoff: 4s, 8s.
 """
 
 import os
@@ -14,6 +14,8 @@ OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 TIMEOUT_SECONDS = 120
 MAX_RETRIES = 2
 BACKOFF_SECONDS = [4, 8]
+
+SYSTEM_PROMPT = "You are a precise and honest research assistant."
 
 
 class OpenRouterError(Exception):
@@ -34,27 +36,47 @@ def _get_api_key() -> str:
     return key
 
 
+def _classify_http_error(status: int, body: str) -> str:
+    if status == 429:
+        return "rate_limit"
+    if status == 400 and ("model" in body.lower() or "invalid" in body.lower()):
+        return "invalid_model"
+    if status in (503, 502) and "provider" in body.lower():
+        return "provider_error"
+    if status == 404:
+        return "invalid_model"
+    if 400 <= status < 500:
+        return "http_error_4xx"
+    return "http_error_5xx"
+
+
 def call_model(
     model_id: str,
-    system_prompt: str,
-    user_prompt: str,
-    max_tokens: int = 256,
+    prompt: str,
+    max_tokens: int = 1024,
     dry_run: bool = False,
 ) -> dict[str, Any]:
     """
-    Returns dict with keys: response_text, prompt_tokens, completion_tokens,
-    latency_ms, http_status, error, error_detail.
+    Returns dict with keys matching the nested runs.jsonl schema:
+      response_text, finish_reason, raw,
+      prompt_tokens, completion_tokens, total_tokens, cost_usd,
+      latency_ms, http_status, error_type, error_detail.
 
-    On dry_run=True, skips the actual HTTP request and returns a stub response.
+    error_type is None on success.
+    On dry_run=True, returns stub with no HTTP call.
     """
     if dry_run:
         return {
             "response_text": "[DRY RUN — no API call made]",
+            "finish_reason": "dry_run",
+            "raw": {},
             "prompt_tokens": 0,
             "completion_tokens": 0,
+            "total_tokens": 0,
+            "cost_usd": None,
             "latency_ms": 0,
             "http_status": 200,
-            "error": None,
+            "error_type": None,
             "error_detail": None,
         }
 
@@ -63,8 +85,8 @@ def call_model(
     payload = json.dumps({
         "model": model_id,
         "messages": [
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt},
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
         ],
         "max_tokens": max_tokens,
     }).encode("utf-8")
@@ -84,6 +106,7 @@ def call_model(
     )
 
     last_error: OpenRouterError | None = None
+    latency_ms = 0
 
     for attempt in range(MAX_RETRIES + 1):
         if attempt > 0:
@@ -102,25 +125,16 @@ def call_model(
                 body = exc.read().decode("utf-8")
             except Exception:
                 body = str(exc)
-            if 400 <= http_status < 500:
-                last_error = OpenRouterError(
-                    "http_error_4xx",
-                    f"HTTP {http_status}: {body}",
-                    http_status=http_status,
-                )
-                break  # 4xx errors are not retriable
-            else:
-                last_error = OpenRouterError(
-                    "http_error_5xx",
-                    f"HTTP {http_status}: {body}",
-                    http_status=http_status,
-                )
-            continue
+            err_type = _classify_http_error(http_status, body)
+            last_error = OpenRouterError(err_type, f"HTTP {http_status}: {body}", http_status=http_status)
+            if err_type in ("rate_limit", "http_error_5xx", "provider_error"):
+                continue
+            break
         except TimeoutError:
             latency_ms = int((time.monotonic() - t_start) * 1000)
             last_error = OpenRouterError(
                 "network_timeout",
-                f"Request timed out after {TIMEOUT_SECONDS}s (attempt {attempt + 1})",
+                f"Timed out after {TIMEOUT_SECONDS}s (attempt {attempt + 1})",
             )
             continue
         except OSError as exc:
@@ -131,48 +145,58 @@ def call_model(
             )
             continue
 
-        # Parse JSON response
         try:
             data = json.loads(raw_body)
         except json.JSONDecodeError as exc:
             last_error = OpenRouterError(
                 "json_decode_error",
-                f"JSON parse failed: {exc}. Body: {raw_body[:200]}",
+                f"JSON parse failed: {exc}. Body prefix: {raw_body[:200]}",
                 http_status=http_status,
             )
-            break  # malformed response is not retriable
+            break
 
         try:
-            response_text = data["choices"][0]["message"]["content"].strip()
+            choice = data["choices"][0]
+            response_text = choice["message"]["content"].strip()
+            finish_reason = choice.get("finish_reason")
             usage = data.get("usage", {})
-            prompt_tokens = usage.get("prompt_tokens", 0)
-            completion_tokens = usage.get("completion_tokens", 0)
+            prompt_tokens = usage.get("prompt_tokens")
+            completion_tokens = usage.get("completion_tokens")
+            total_tokens = usage.get("total_tokens")
+            cost_usd = usage.get("cost")
         except (KeyError, IndexError, TypeError) as exc:
             last_error = OpenRouterError(
-                "missing_field",
-                f"Unexpected response structure: {exc}. Keys: {list(data.keys())}",
+                "malformed_response",
+                f"Unexpected structure: {exc}. Keys: {list(data.keys())}",
                 http_status=http_status,
             )
             break
 
         return {
             "response_text": response_text,
+            "finish_reason": finish_reason,
+            "raw": data,
             "prompt_tokens": prompt_tokens,
             "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens,
+            "cost_usd": cost_usd,
             "latency_ms": latency_ms,
             "http_status": http_status,
-            "error": None,
+            "error_type": None,
             "error_detail": None,
         }
 
-    # All attempts exhausted or non-retriable error
     assert last_error is not None
     return {
         "response_text": "",
-        "prompt_tokens": 0,
-        "completion_tokens": 0,
+        "finish_reason": None,
+        "raw": {},
+        "prompt_tokens": None,
+        "completion_tokens": None,
+        "total_tokens": None,
+        "cost_usd": None,
         "latency_ms": latency_ms,
         "http_status": last_error.http_status,
-        "error": last_error.error_type,
+        "error_type": last_error.error_type,
         "error_detail": last_error.detail,
     }
